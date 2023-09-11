@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mandelbrot Image</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div style="">
+        <input type="text" class="minReal" id="minReal" placeholder="min real">
+        <input type="text" class="maxReal" id="maxReal" placeholder="max real">
+        <input type="text" class="minIm" id="minIm" placeholder="min imaginary">
+        <input type="text" class="maxIm" id="maxIm" placeholder="max Imaginary">
+        <input type="text" class="width" id="width" placeholder="width">
+        <input type="text" class="height" id="height" placeholder="height">
+        <input type="text" class="iterations" id="iterations" placeholder="iterations">
+        <input type="submit" class="submit" id="button">
+
+    </div>
+    <div class="preview">
+        <h1>Hello</h1>
+        <img id="imagePreview" src="">
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(function() {
+        $('#button').click(function() {
+            getPicture();
+        });
+    })
+
+    function getPicture() {
+        var picture = [];
+        minReal = $('#minReal').val();
+        maxReal = $('#maxReal').val();
+        minIm = $('#minIm').val();
+        maxIm = $('#maxIm').val();
+        width = $('#width').val();
+        height = $('#height').val();
+        iterations = $('#iterations').val();
+        console.log(minReal, maxReal, minIm, maxIm, width, height, iterations)
+        $.ajax({
+            headers: {
+                "Accept": "image/jpeg"
+            },
+            contentType: "application/json; charset=utf-8",
+            type: 'GET',
+            // url: 'http://localhost:8080/mandelbrot/' + minReal + '/' + minIm + '/' + maxReal + '/' + maxIm + '/' + width + '/' + height + '/' + iterations,
+            url: 'http://localhost:8080/mandelbrot' + '/' + width + '/' + height + '/' + iterations,
+            // url: 'http://localhost:8080/mandelbrot/test',
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                console.log(data)
+                picture = data;
+                var buffer = new Buffer(picture.length);
+                for (var i = 0; i < picture.length; i++) {
+                    buffer[i] = data[i];
+                }
+                console.log(buffer);
+            }
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+.customer-info {
+  padding: 15px;
+  background-color: rgba(181, 181, 181, 0.1);
+
+  h3 {
+    margin: 0;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+
+  .mat-icon {
+    vertical-align: middle;
+    margin: 0 5px 0 20px;
+  }
+}
+
+.shippingAddress {
+  width: 50%;
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

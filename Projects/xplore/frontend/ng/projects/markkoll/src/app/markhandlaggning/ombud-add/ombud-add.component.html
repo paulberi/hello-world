@@ -1,0 +1,88 @@
+<form [formGroup]="form" autocomplete="off">
+  <h2>{{ "mk.fastighetsinformation.addOmbud" | transloco }}</h2>
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input id="namn"
+             matInput
+             type="text"
+             formControlName="namn"
+             placeholder="{{ 'mk.agareinformation.name' | transloco }}"/>
+      <mat-error *ngIf="form.controls.namn.hasError('invalidName')">
+        {{"xp.common.fieldMandatory" | transloco}}
+      </mat-error>
+
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput
+             type="text"
+             formControlName="adress"
+             placeholder="{{ 'mk.agareinformation.address' | transloco }}"/>
+    </mat-form-field>
+  </div>
+
+  <div id="postnummer-ort">
+
+    <mat-form-field>
+      <input matInput
+             type="text"
+             formControlName="postnummer"
+             placeholder="{{ 'mk.agareinformation.postalCode' | transloco }}"/>
+      <mat-error>{{ 'mk.agareinformation.invalidPostalCode' | transloco }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="ort" placeholder="{{ 'mk.agareinformation.location' | transloco }}"/>
+    </mat-form-field>
+
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput
+             type="text"
+             formControlName="telefon"
+             placeholder="{{ 'mk.agareinformation.telephoneNumber' | transloco }}"/>
+      <mat-error>{{ 'mk.agareinformation.invalidTelephone' | transloco }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput type="ePost" formControlName="ePost" placeholder="{{ 'mk.agareinformation.eMail' | transloco }}"/>
+      <mat-error>{{ 'mk.agareinformation.invalidEMail' | transloco }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput
+             type="text"
+             formControlName="bankkonto"
+             placeholder="{{ 'mk.agareinformation.accountNumber' | transloco }}"/>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput
+             type="text"
+             formControlName="andel"
+             placeholder="{{ 'mk.agareinformation.ownerShare' | transloco }}"/>
+      <mat-error *ngIf="form?.controls.andel.hasError('pattern')">{{ 'mk.agareinformation.invalidAndel' | transloco }}</mat-error>
+      <mat-error *ngIf="form?.controls.andel.hasError('invalidAndel')">{{ 'mk.agareinformation.invalidAndelValue' | transloco }}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-12 d-flex justify-end" id="buttons">
+      <button type="button" mat-button class="button-remove-focus-overlay ombud-cancel" disableRipple="true" (click)="onCancel()">
+        {{ 'xp.common.cancel' | transloco }}
+      </button>
+      <button type="button" class="ombud-save" mat-raised-button (click)="save()" color="primary" [disabled]="!canSave()">
+        {{ 'mk.agareinformation.save' | transloco }}
+      </button>
+    </div>
+  </div>
+</form>

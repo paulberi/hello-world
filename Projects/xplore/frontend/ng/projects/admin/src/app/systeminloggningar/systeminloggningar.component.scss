@@ -1,0 +1,36 @@
+adm-system-settings {
+  margin: auto;
+  width: 75%;
+}
+
+.credentials-form {
+  width: 100%;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0px;
+}
+
+td.mat-cell:last-of-type {
+  padding-right: 0px;
+}
+
+.mat-column-edit {
+  width: 30px;
+}
+
+.mat-column-hasCredentials {
+  width: 20px;
+}
+
+.mat-column-_details {
+  padding-left: 0px;
+}
+
+.checkbox-container {
+  float: right;
+}
+
+.geoserver {
+  margin-top: 20px;
+}

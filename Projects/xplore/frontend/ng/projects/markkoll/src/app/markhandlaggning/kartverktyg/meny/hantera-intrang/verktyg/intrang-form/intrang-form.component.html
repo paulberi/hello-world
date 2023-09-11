@@ -1,0 +1,36 @@
+<p>{{ remarkMessage }}</p>
+<div style="margin-bottom: 20px;" *ngIf="intrangOptions?.length > 0">
+  <h3 class="m0"><b>{{ "mk.kartverktyg.hanteraIntrang.yourSelection" | transloco }}</b></h3>
+  <span *ngFor="let typ of selectedIntrangTypes() | keyvalue">{{ typ.key | prefix:"mk.intrangstyp." | transloco }} ({{ typ.value }}) </span>
+</div>
+
+<form [formGroup]="form">
+  <div class="row">
+    <mat-form-field>
+      <mat-label>{{ "mk.kartverktyg.hanteraIntrang.intrangstyp" | transloco }}</mat-label>
+      <mat-select formControlName="intrangstyp">
+        <mat-option value="-" class="hidden-option">-</mat-option>
+        <mat-option *ngFor="let typ of filterIntrangstyper()" [value]="typ">{{ typ | prefix:"mk.intrangstyp." | transloco }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ "mk.kartverktyg.hanteraIntrang.intrangsSubtyp" | transloco }}</mat-label>
+      <mat-select formControlName="subtyp">
+        <mat-option value="-" class="hidden-option">-</mat-option>
+        <mat-option *ngFor="let typ of filterSubtyper()" [value]="typ">{{ typ | prefix:"mk.intrangsSubtyp." | transloco }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ "mk.kartverktyg.hanteraIntrang.avtalstyp" | transloco }}</mat-label>
+      <mat-select formControlName="avtalstyp">
+        <mat-option value="-" class="hidden-option">-</mat-option>
+        <mat-option *ngFor="let typ of avtalstyper" [value]="typ">{{ typ | prefix:"mk.avtalsTyp." | transloco }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
+<div class="col-12 actions">
+  <button mat-button (click)="addChange()" color="accent" [disabled]="isAddDisabled()">
+    {{ "xp.common.add" | transloco }}
+  </button>
+</div>

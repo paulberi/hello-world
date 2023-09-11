@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="header">
+    <h4>{{header}}</h4>
+    <div class="price">
+      <p>{{price}}</p>&nbsp;<p>{{currency}}</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div>
+      <div *ngFor="let attr of displayAttributes">
+        {{attr.displayName}}: {{attr.value}}
+      </div>
+    </div>
+    <div>
+      <button mat-flat-button color="accent" [disabled]="disableButton" (click)="addToCart.emit()">Lägg i varukorg
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

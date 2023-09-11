@@ -1,0 +1,17 @@
+<layer>
+  <name>klass_1_150_400_s5_test</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-2ac2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--16ee1b80:174d9943373:-2ac3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-11-16 18:04:46.476 UTC</dateCreated>
+  <dateModified>2020-11-16 18:14:30.85 UTC</dateModified>
+</layer>

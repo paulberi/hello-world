@@ -1,0 +1,13 @@
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/dt/client/CustomerClient.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/vo/Order.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/to/OrderTO.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/vo/Customer.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/vo/Product.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/ft/beans/OrderBean.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/dt/client/JaxrsClient.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/ft/beans/ProductBean.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/to/CustomerTO.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/bt/to/ProductTO.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/ft/beans/CustomerBean.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/dt/client/ProductClient.java
+/Users/paulberinyuylukong/eclipse-workspaceJavaEE/three-tier-eshop/eshop-FE/src/main/java/com/eshop/dt/client/OrderClient.java

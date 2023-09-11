@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_hamn</name>
+  <id>LayerInfoImpl-b8a01116:88f7a8257b6:-965c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-d5c73a16:bab4bce4fb6:-3517</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

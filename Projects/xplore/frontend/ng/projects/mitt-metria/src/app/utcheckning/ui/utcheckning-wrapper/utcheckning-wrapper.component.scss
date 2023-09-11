@@ -1,0 +1,41 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.process-wrapper {
+  padding-top: 2rem;
+  max-width: 528px;
+  margin: 0 auto;
+}
+
+.custom-wrapper {
+  padding: 0 0 2rem 0;
+  background-color: var(--background);
+  min-height: calc(100vh - 200px);
+}
+
+.background-image {
+  background-image: url(../../../../assets/metria_bakgrund.png);
+  height: 100%;
+  min-height: calc(100vh - 200px);
+  background-position: center;
+}
+
+.container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+
+  * {
+    cursor: pointer;
+  }
+}
+
+@media screen and #{$xp-breakpoints-large-mobile-max} {
+  .container {
+    padding: 24px 0;
+  }
+
+  .process-wrapper {
+    padding: 2rem 1rem;
+  }
+}

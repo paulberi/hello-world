@@ -1,0 +1,6 @@
+What is your name
+My name is : Lukong
+What is your date of birth
+Date of Birth: 271083
+Where do you live
+I live in Umeå

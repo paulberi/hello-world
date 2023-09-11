@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_kommunkontor</name>
+  <id>LayerInfoImpl-22181d01:fd7909a1381:-d189</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-7135a448:b0e71afbe55:-9b58</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

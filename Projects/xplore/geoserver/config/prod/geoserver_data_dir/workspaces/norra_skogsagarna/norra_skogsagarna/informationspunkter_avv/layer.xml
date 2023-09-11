@@ -1,0 +1,16 @@
+<layer>
+  <name>informationspunkter_avv</name>
+  <id>LayerInfoImpl--dac4a42:16a01c8aa52:-7f90</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--dac4a42:16a01c8aa52:-7f91</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateModified>2021-05-26 11:44:29.911 UTC</dateModified>
+</layer>

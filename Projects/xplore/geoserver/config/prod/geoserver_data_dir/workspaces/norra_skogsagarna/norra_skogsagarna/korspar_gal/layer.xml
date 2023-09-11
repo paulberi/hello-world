@@ -1,0 +1,16 @@
+<layer>
+  <name>korspar_gal</name>
+  <id>LayerInfoImpl--dac4a42:16a01c8aa52:-7f84</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--76836d4a:16b88b21634:b57</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--dac4a42:16a01c8aa52:-7f85</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateModified>2021-05-26 11:43:15.727 UTC</dateModified>
+</layer>

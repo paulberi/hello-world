@@ -1,0 +1,486 @@
+Last login: Sat Sep 11 20:47:34 on ttys000
+paulberinyuylukong@31-208-220-163 echoklient % git init
+Initialized empty Git repository in /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/.git/
+paulberinyuylukong@31-208-220-163 echoklient % ls la
+ls: la: No such file or directory
+paulberinyuylukong@31-208-220-163 echoklient % ls -la
+total 16
+drwxr-xr-x@  6 paulberinyuylukong  staff   192 Sep 11 20:59 .
+drwxr-xr-x   4 paulberinyuylukong  staff   128 Sep 11 20:32 ..
+-rw-------@  1 paulberinyuylukong  staff  6148 Sep 11 00:36 .DS_Store
+drwxr-xr-x  10 paulberinyuylukong  staff   320 Sep 11 20:59 .git
+drwxr-xr-x@  8 paulberinyuylukong  staff   256 Sep  5 10:14 EJBEcho
+drwxr-xr-x@  8 paulberinyuylukong  staff   256 Sep  3 14:00 EchoClient
+paulberinyuylukong@31-208-220-163 echoklient % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	EJBEcho/
+	EchoClient/
+
+nothing added to commit but untracked files present (use "git add" to track)
+paulberinyuylukong@31-208-220-163 echoklient % ls -al   
+total 16
+drwxr-xr-x@  6 paulberinyuylukong  staff   192 Sep 11 20:59 .
+drwxr-xr-x   4 paulberinyuylukong  staff   128 Sep 11 20:32 ..
+-rw-------@  1 paulberinyuylukong  staff  6148 Sep 11 00:36 .DS_Store
+drwxr-xr-x  14 paulberinyuylukong  staff   448 Sep 11 21:15 .git
+drwxr-xr-x@  8 paulberinyuylukong  staff   256 Sep  5 10:14 EJBEcho
+drwxr-xr-x@  8 paulberinyuylukong  staff   256 Sep  3 14:00 EchoClient
+paulberinyuylukong@31-208-220-163 echoklient % git status
+On branch master
+nothing to commit, working tree clean
+paulberinyuylukong@31-208-220-163 echoklient % cd EJBEcho
+paulberinyuylukong@31-208-220-163 EJBEcho % git status
+On branch master
+nothing to commit, working tree clean
+paulberinyuylukong@31-208-220-163 EJBEcho % ls -la
+total 24
+drwxr-xr-x@ 8 paulberinyuylukong  staff   256 Sep  5 10:14 .
+drwxr-xr-x@ 6 paulberinyuylukong  staff   192 Sep 11 20:59 ..
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1308 Sep  5 10:06 .classpath
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1386 Sep  5 10:06 .project
+drwxrwxr-x@ 9 paulberinyuylukong  staff   288 Sep 12  2020 .settings
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1571 Sep 12  2020 pom.xml
+drwxrwxr-x@ 3 paulberinyuylukong  staff    96 Sep 12  2020 src
+drwxr-xr-x@ 8 paulberinyuylukong  staff   256 Sep  5 10:12 target
+paulberinyuylukong@31-208-220-163 EJBEcho % cat pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yajava</groupId>
+  <artifactId>EJBEcho</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>ejb</packaging>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-web-api</artifactId>
+      <version>8.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>EJBEcho</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <ejbVersion>3.2</ejbVersion>
+        </configuration>
+      </plugin>
+        <plugin>
+          <groupId>org.wildfly.plugins</groupId>
+          <artifactId>wildfly-maven-plugin</artifactId>
+          <version>1.2.1.Final</version>
+          <configuration>
+             <filename>${project.build.finalName}.jar</filename>
+          </configuration>
+       </plugin>
+    </plugins>
+  </build>
+</project>
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn package
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn package
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % package
+zsh: command not found: package
+paulberinyuylukong@31-208-220-163 EJBEcho % pwd
+/Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn package
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn package
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn install
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn install
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn --version
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn install
+zsh: command not found: mvn
+paulberinyuylukong@31-208-220-163 EJBEcho % mvn install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.yajava:EJBEcho >-------------------------
+[INFO] Building EJBEcho 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ ejb ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ EJBEcho ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ EJBEcho ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ EJBEcho ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ EJBEcho ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ EJBEcho ---
+[INFO] 
+[INFO] --- maven-ejb-plugin:3.0.1:ejb (default-ejb) @ EJBEcho ---
+[INFO] Building EJB EJBEcho with EJB version 3.2
+[INFO] Building jar: /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho/target/EJBEcho.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ EJBEcho ---
+[INFO] Installing /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho/target/EJBEcho.jar to /Users/paulberinyuylukong/.m2/repository/com/yajava/EJBEcho/0.0.1-SNAPSHOT/EJBEcho-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient/EJBEcho/pom.xml to /Users/paulberinyuylukong/.m2/repository/com/yajava/EJBEcho/0.0.1-SNAPSHOT/EJBEcho-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.547 s
+[INFO] Finished at: 2021-09-11T22:21:25+02:00
+[INFO] ------------------------------------------------------------------------
+paulberinyuylukong@31-208-220-163 EJBEcho % cd
+paulberinyuylukong@31-208-220-163 ~ % ls -la
+total 272
+drwxr-xr-x+  72 paulberinyuylukong  staff   2304 Sep 11 21:33 .
+drwxr-xr-x    5 root                admin    160 Jan  1  2020 ..
+-r--------    1 paulberinyuylukong  staff      7 Sep 12  2020 .CFUserTextEncoding
+-rw-r--r--@   1 paulberinyuylukong  staff  22532 Sep 10 22:31 .DS_Store
+drwxr-xr-x    6 paulberinyuylukong  staff    192 Apr  6 19:51 .IdentityService
+drwx------    6 paulberinyuylukong  staff    192 Sep 11 00:21 .Trash
+drwxr-xr-x   18 paulberinyuylukong  staff    576 Apr  6 19:37 .android
+-rw-r--r--    1 paulberinyuylukong  staff    113 Aug  7 23:33 .angular-config.json
+-rw-r--r--@   1 paulberinyuylukong  staff    306 Sep 10 23:42 .bash_profile
+drwxr-xr-x    4 paulberinyuylukong  staff    128 Jun 18 01:07 .cache
+drwxr-xr-x    5 paulberinyuylukong  staff    160 Apr 19 10:30 .config
+-rw-------    1 paulberinyuylukong  staff    203 Apr 21 11:44 .dbshell
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Apr 19 18:43 .dotnet
+drwxr-xr-x    9 paulberinyuylukong  staff    288 Nov 15  2020 .eclipse
+-rw-------    1 paulberinyuylukong  staff     16 Nov 18  2020 .emulator_console_auth_token
+drwxr-xr-x    9 paulberinyuylukong  staff    288 Sep 10 11:43 .git
+-rw-r--r--    1 paulberinyuylukong  staff    554 Sep 11 21:05 .gitconfig
+-rw-r--r--@   1 paulberinyuylukong  staff     82 Sep 11 21:05 .gitflow_export
+-rw-r--r--    1 paulberinyuylukong  staff     13 Aug 11 22:33 .gitignore_global
+drwxr-xr-x    8 paulberinyuylukong  staff    256 Nov 19  2020 .gradle
+-rw-r--r--    1 paulberinyuylukong  staff     27 Aug 11 22:33 .hgignore_global
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Mar 10  2021 .lemminx
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Jun  3 10:34 .local
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Nov 15  2020 .m2
+-rw-------    1 paulberinyuylukong  staff      0 Apr 20 10:21 .mongorc.js
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Apr  6 19:35 .mono
+-rw-r--r--    1 paulberinyuylukong  staff    343 Apr  6 19:51 .ms_openjdk_config
+-rw-------    1 paulberinyuylukong  staff  15299 Mar 26 14:40 .mysql_history
+-rw-------    1 paulberinyuylukong  staff    196 Jun 27 20:44 .netrc
+drwxr-xr-x    8 paulberinyuylukong  staff    256 Sep 10 06:50 .npm
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Mar 26 11:36 .openjfx
+drwxr-xr-x    6 paulberinyuylukong  staff    192 Sep  9 18:49 .oracle_jre_usage
+drwxr-xr-x    8 paulberinyuylukong  staff    256 Sep 11 20:27 .p2
+-rw-r--r--    1 paulberinyuylukong  staff      0 Jun 23 07:30 .rvmrc
+drwxr-xr-x    6 paulberinyuylukong  staff    192 Sep 10 12:01 .ssh
+-rw-r--r--@   1 paulberinyuylukong  staff      0 Sep 11 00:32 .stCommitMsg
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Apr  6 19:52 .templateengine
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Sep 12  2020 .tooling
+drwxr-xr-x    4 paulberinyuylukong  staff    128 Apr  6 20:07 .vscode
+-rw-------    1 paulberinyuylukong  staff  18080 Sep 11 20:57 .zsh_history
+drwx------  189 paulberinyuylukong  staff   6048 Sep 11 21:33 .zsh_sessions
+drwxr-xr-x    7 paulberinyuylukong  staff    224 Nov 19  2020 AndroidStudioProjects
+drwx------@   5 paulberinyuylukong  staff    160 Sep 12  2020 Applications
+drwx------@   5 paulberinyuylukong  staff    160 Sep 11 00:35 Desktop
+drwx------@  12 paulberinyuylukong  staff    384 Jun 15 11:51 Documents
+drwx------@  15 paulberinyuylukong  staff    480 Sep 11 20:31 Downloads
+drwxr-xr-x    5 paulberinyuylukong  staff    160 May  5 15:57 IdeaProjects
+drwx------@  75 paulberinyuylukong  staff   2400 Sep 10 10:20 Library
+drwx------+   6 paulberinyuylukong  staff    192 Nov 27  2020 Movies
+drwx------+   4 paulberinyuylukong  staff    128 Nov 26  2020 Music
+drwx------@  15 paulberinyuylukong  staff    480 Sep 11 20:25 OneDrive
+drwx------+   5 paulberinyuylukong  staff    160 Sep 12  2020 Pictures
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Apr 20 17:52 Postman
+drwxr-xr-x+   4 paulberinyuylukong  staff    128 Sep 12  2020 Public
+drwxr-xr-x    3 paulberinyuylukong  staff     96 Sep 10 10:26 VirtualBox VMs
+drwxr-xr-x    8 paulberinyuylukong  staff    256 Apr 26 09:44 VisualStudioProjects
+-rw-r--r--    1 paulberinyuylukong  staff      0 Sep 10 19:56 add.user.bat
+lrwxr-xr-x    1 root                staff     30 Feb 20  2021 bin -> /usr/local/mysql/usr/local/bin
+drwxr-xr-x    6 paulberinyuylukong  staff    192 Sep 10 21:28 eclipse
+drwxr-xr-x   53 paulberinyuylukong  staff   1696 Apr 12 12:52 eclipse-workspace
+drwxr-xr-x    4 paulberinyuylukong  staff    128 Sep  9 19:07 eclipse-workspaceJavaEE
+drwxr-xr-x   17 paulberinyuylukong  staff    544 Jun 20 20:06 git
+drwxr-xr-x    2 paulberinyuylukong  staff     64 Sep 10 12:13 gitLabSSHKey
+drwxr-xr-x@   5 paulberinyuylukong  staff    160 May  5 15:58 javafx-sdk-15.0.1
+drwxr-xr-x    2 paulberinyuylukong  staff     64 Oct 17  2020 javatxt
+drwxr-xr-x   78 paulberinyuylukong  staff   2496 Jul 23 12:51 node_modules
+-rw-r--r--    1 paulberinyuylukong  staff  26354 Jun 21 12:44 package-lock.json
+-rw-r--r--    1 paulberinyuylukong  staff     81 Jun 21 11:39 package.json
+drwxr-xr-x   15 paulberinyuylukong  staff    480 Sep 10 09:39 wildfly-20.0.1.Final
+drwxr-xr-x   15 paulberinyuylukong  staff    480 Sep  9 19:51 wildfly-23.0.0.Final
+drwxr-xr-x   15 paulberinyuylukong  staff    480 Sep 10 06:32 wildfly-23.0.2.Final
+drwxr-xr-x   15 paulberinyuylukong  staff    480 Sep  9 19:41 wildfly-24.0.1.Final
+paulberinyuylukong@31-208-220-163 ~ % cd .m2
+paulberinyuylukong@31-208-220-163 .m2 % ls -la
+total 0
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Nov 15  2020 .
+drwxr-xr-x+ 72 paulberinyuylukong  staff  2304 Sep 11 21:33 ..
+drwxr-xr-x  24 paulberinyuylukong  staff   768 Apr  8 21:17 repository
+paulberinyuylukong@31-208-220-163 .m2 % cd repository
+paulberinyuylukong@31-208-220-163 repository % ls -al
+total 0
+drwxr-xr-x  24 paulberinyuylukong  staff   768 Apr  8 21:17 .
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Nov 15  2020 ..
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Apr  8 21:17 1
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 26 10:50 SakilaGUI-grp4
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Apr  8 21:10 am
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 antlr
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 backport-util-concurrent
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Apr  8 21:15 ch
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 classworlds
+drwxr-xr-x  10 paulberinyuylukong  staff   320 Sep 11 22:21 com
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 commons-cli
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Apr  8 21:15 commons-io
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 commons-lang
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 commons-logging
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 31 23:48 dom4j
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Nov 15  2020 index
+drwxr-xr-x   6 paulberinyuylukong  staff   192 Sep 10 12:51 io
+drwxr-xr-x   7 paulberinyuylukong  staff   224 Sep 10 12:51 jakarta
+drwxr-xr-x   6 paulberinyuylukong  staff   192 Sep 10 12:51 javax
+drwxr-xr-x   5 paulberinyuylukong  staff   160 Apr  9 00:35 junit
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 log4j
+drwxr-xr-x   3 paulberinyuylukong  staff    96 Mar 10  2021 mysql
+drwxr-xr-x   6 paulberinyuylukong  staff   192 Apr  8 21:15 net
+drwxr-xr-x  34 paulberinyuylukong  staff  1088 Sep 10 12:51 org
+paulberinyuylukong@31-208-220-163 repository % cd com
+paulberinyuylukong@31-208-220-163 com % ls -al
+total 0
+drwxr-xr-x  10 paulberinyuylukong  staff  320 Sep 11 22:21 .
+drwxr-xr-x  24 paulberinyuylukong  staff  768 Apr  8 21:17 ..
+drwxr-xr-x   5 paulberinyuylukong  staff  160 Apr  8 21:14 fasterxml
+drwxr-xr-x   6 paulberinyuylukong  staff  192 Mar 10  2021 google
+drwxr-xr-x   3 paulberinyuylukong  staff   96 Apr  8 21:15 jayway
+drwxr-xr-x   6 paulberinyuylukong  staff  192 Sep 10 12:51 sun
+drwxr-xr-x   3 paulberinyuylukong  staff   96 Apr  8 21:15 thoughtworks
+drwxr-xr-x   3 paulberinyuylukong  staff   96 Apr  8 21:16 vaadin
+drwxr-xr-x   3 paulberinyuylukong  staff   96 Mar 31 23:48 vividsolutions
+drwxr-xr-x   3 paulberinyuylukong  staff   96 Sep 11 22:21 yajava
+paulberinyuylukong@31-208-220-163 com % cd ..
+paulberinyuylukong@31-208-220-163 repository % cd .
+paulberinyuylukong@31-208-220-163 repository % cd ..
+paulberinyuylukong@31-208-220-163 .m2 % cd ..
+paulberinyuylukong@31-208-220-163 ~ % cd/Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient
+zsh: no such file or directory: cd/Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient
+paulberinyuylukong@31-208-220-163 ~ % cd /Users/paulberinyuylukong/OneDrive/Desktop/java20-22/java-EE/Övningar/echoklient
+paulberinyuylukong@31-208-220-163 echoklient % git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   EJBEcho/target/EJBEcho.jar
+	modified:   EJBEcho/target/classes/com/yajava/ejb/Hello.class
+	modified:   EJBEcho/target/classes/com/yajava/ejb/HelloBean.class
+	modified:   EJBEcho/target/maven-archiver/pom.properties
+	modified:   EJBEcho/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+no changes added to commit (use "git add" and/or "git commit -a")
+paulberinyuylukong@31-208-220-163 echoklient % vi .gitignore
+paulberinyuylukong@31-208-220-163 echoklient % git status   
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   EJBEcho/target/EJBEcho.jar
+	modified:   EJBEcho/target/classes/com/yajava/ejb/Hello.class
+	modified:   EJBEcho/target/classes/com/yajava/ejb/HelloBean.class
+	modified:   EJBEcho/target/maven-archiver/pom.properties
+	modified:   EJBEcho/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+paulberinyuylukong@31-208-220-163 echoklient % vi .gitignore
+paulberinyuylukong@31-208-220-163 echoklient % git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   EJBEcho/target/EJBEcho.jar
+	modified:   EJBEcho/target/classes/com/yajava/ejb/Hello.class
+	modified:   EJBEcho/target/classes/com/yajava/ejb/HelloBean.class
+	modified:   EJBEcho/target/maven-archiver/pom.properties
+	modified:   EJBEcho/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+paulberinyuylukong@31-208-220-163 echoklient % cd EJBEcho/
+paulberinyuylukong@31-208-220-163 EJBEcho % rm -rf target
+paulberinyuylukong@31-208-220-163 EJBEcho % ls -la
+total 24
+drwxr-xr-x@ 7 paulberinyuylukong  staff   224 Sep 12 13:34 .
+drwxr-xr-x@ 7 paulberinyuylukong  staff   224 Sep 11 22:50 ..
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1308 Sep  5 10:06 .classpath
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1386 Sep  5 10:06 .project
+drwxrwxr-x@ 9 paulberinyuylukong  staff   288 Sep 12  2020 .settings
+-rw-rw-r--@ 1 paulberinyuylukong  staff  1571 Sep 12  2020 pom.xml
+drwxrwxr-x@ 3 paulberinyuylukong  staff    96 Sep 12  2020 src
+paulberinyuylukong@31-208-220-163 EJBEcho % cd ..
+paulberinyuylukong@31-208-220-163 echoklient % ls -al
+total 24
+drwxr-xr-x@  7 paulberinyuylukong  staff   224 Sep 11 22:50 .
+drwxr-xr-x   5 paulberinyuylukong  staff   160 Sep 11 22:42 ..
+-rw-------@  1 paulberinyuylukong  staff  6148 Sep 11 00:36 .DS_Store
+drwxr-xr-x  14 paulberinyuylukong  staff   448 Sep 12 13:04 .git
+-rw-------   1 paulberinyuylukong  staff    30 Sep 11 22:50 .gitignore
+drwxr-xr-x@  7 paulberinyuylukong  staff   224 Sep 12 13:34 EJBEcho
+drwxr-xr-x@  8 paulberinyuylukong  staff   256 Sep  3 14:00 EchoClient
+paulberinyuylukong@31-208-220-163 echoklient % rm -rf .git/
+paulberinyuylukong@31-208-220-163 echoklient % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../../../../../.CFUserTextEncoding
+	../../../../../../.IdentityService/
+	../../../../../../.android/
+	../../../../../../.angular-config.json
+	../../../../../../.bash_profile
+	../../../../../../.cache/
+	../../../../../../.config/
+	../../../../../../.dbshell
+	../../../../../../.dotnet/
+	../../../../../../.eclipse/
+	../../../../../../.emulator_console_auth_token
+	../../../../../../.gitconfig
+	../../../../../../.gitflow_export
+	../../../../../../.gitignore_global
+	../../../../../../.gradle/
+	../../../../../../.hgignore_global
+	../../../../../../.lemminx/
+	../../../../../../.local/
+	../../../../../../.m2/
+	../../../../../../.mongorc.js
+	../../../../../../.mono/
+	../../../../../../.ms_openjdk_config
+	../../../../../../.mysql_history
+	../../../../../../.netrc
+	../../../../../../.npm/
+	../../../../../../.openjfx/
+	../../../../../../.oracle_jre_usage/
+	../../../../../../.p2/
+	../../../../../../.rvmrc
+	../../../../../../.ssh/
+	../../../../../../.stCommitMsg
+	../../../../../../.templateengine/
+	../../../../../../.tooling/
+	../../../../../../.viminfo
+	../../../../../../.vscode/
+	../../../../../../.zsh_history
+	../../../../../../.zsh_sessions/
+	../../../../../../AndroidStudioProjects/
+	../../../../../../Applications/
+	../../../../../../Desktop/
+	../../../../../../Documents/
+	../../../../../../Downloads/
+	../../../../../../IdeaProjects/
+	../../../../../../Library/
+	../../../../../../Movies/
+	../../../../../../Music/
+	../../../../../
+	../../../../../../Pictures/
+	../../../../../../Public/
+	../../../../../../VirtualBox VMs/
+	../../../../../../VisualStudioProjects/
+	../../../../../../add.user.bat
+	../../../../../../bin
+	../../../../../../eclipse-workspace/
+	../../../../../../eclipse-workspaceJavaEE/
+	../../../../../../eclipse/
+	../../../../../../git/
+	../../../../../../javafx-sdk-15.0.1/
+	../../../../../../node_modules/
+	../../../../../../package-lock.json
+	../../../../../../package.json
+	../../../../../../wildfly-20.0.1.Final/
+	../../../../../../wildfly-23.0.0.Final/
+	../../../../../../wildfly-23.0.2.Final/
+	../../../../../../wildfly-24.0.1.Final/
+
+nothing added to commit but untracked files present (use "git add" to track)
+paulberinyuylukong@31-208-220-163 echoklient % ls -al
+total 24
+drwxr-xr-x@ 6 paulberinyuylukong  staff   192 Sep 12 13:36 .
+drwxr-xr-x  5 paulberinyuylukong  staff   160 Sep 11 22:42 ..
+-rw-------@ 1 paulberinyuylukong  staff  6148 Sep 11 00:36 .DS_Store
+-rw-------  1 paulberinyuylukong  staff    30 Sep 11 22:50 .gitignore
+drwxr-xr-x@ 7 paulberinyuylukong  staff   224 Sep 12 13:34 EJBEcho
+drwxr-xr-x@ 8 paulberinyuylukong  staff   256 Sep  3 14:00 EchoClient
+paulberinyuylukong@31-208-220-163 echoklient % rm .gitignore
+paulberinyuylukong@31-208-220-163 echoklient % ls -al
+total 16
+drwxr-xr-x@ 5 paulberinyuylukong  staff   160 Sep 12 13:37 .
+drwxr-xr-x  5 paulberinyuylukong  staff   160 Sep 11 22:42 ..
+-rw-------@ 1 paulberinyuylukong  staff  6148 Sep 11 00:36 .DS_Store
+drwxr-xr-x@ 7 paulberinyuylukong  staff   224 Sep 12 13:34 EJBEcho
+drwxr-xr-x@ 8 paulberinyuylukong  staff   256 Sep  3 14:00 EchoClient
+paulberinyuylukong@31-208-220-163 echoklient % notepad .gitignore
+zsh: command not found: notepad
+paulberinyuylukong@31-208-220-163 echoklient % notes .gitignore
+zsh: command not found: notes
+paulberinyuylukong@31-208-220-163 echoklient % notepad .gitignore
+zsh: command not found: notepad
+paulberinyuylukong@31-208-220-163 echoklient % notepad .gitignore
+zsh: command not found: notepad
+paulberinyuylukong@31-208-220-163 echoklient % vi .gitignore
+
+*/target/**
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+

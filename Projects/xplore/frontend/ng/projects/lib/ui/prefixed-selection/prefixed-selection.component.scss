@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+mat-form-field {
+ flex-grow: 1;
+}
+
+p {
+  padding-right: 1rem;
+  margin-bottom: 5px;
+}
+
+.disabled {
+  color: rgba(0, 0, 0, 0.38);;
+}
+
+::ng-deep .disabled .mat-select-value{
+  color: rgba(0, 0, 0, 0.38);;
+}

@@ -1,0 +1,22 @@
+<div [formGroup]="dynamicForm">
+  <div *ngIf="!fileUploaded" class="dropzone-wrapper">
+    <mm-dropzone [acceptedFiles]="['.txt']" [label]="dropzoneLabel" [property]="property" [dynamicForm]="dynamicForm"
+      (onChanges)="onChanges($event)">
+    </mm-dropzone>
+    <div *ngIf="isLoading" class="spinner">
+      <mat-spinner [diameter]="24"></mat-spinner>
+      <span>{{ "mm.createOrder.loadingFile" | transloco }}</span>
+    </div>
+    <mat-error class="error" *ngIf="conversionError">{{ conversionErrorMsg }}</mat-error>
+  </div>
+
+  <div class="custom-file-upload dropzone-wrapper" *ngIf="fileUploaded">
+    <p>
+      <mat-icon class="file-icon">attach_file</mat-icon>{{ "mm.createOrder.fileUploaded" | transloco: { fileName:
+      fileName } }}
+    </p>
+    <button *ngIf="fileUploaded" mat-raised-button (click)="changeFile()">
+      {{ "mm.createOrder.changeFile" | transloco }}
+    </button>
+  </div>
+</div>

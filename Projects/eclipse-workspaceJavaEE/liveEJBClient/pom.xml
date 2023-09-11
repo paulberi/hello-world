@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.EJBFirstProjectFromEclipse.ejb</groupId>
+  <artifactId>liveEJBClient</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>liveEJBClient</name>
+      <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <!-- other plugin versions -->
+      <version.compiler.plugin>3.1</version.compiler.plugin>
+      <version.exec.plugin>1.2.1</version.exec.plugin>
+      <version.war.plugin>2.1.1</version.war.plugin>
+      <!-- maven-compiler-plugin -->
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <version.server.bom>20.0.1.Final</version.server.bom>
+   </properties>
+	<repositories>
+      <repository>
+         <id>JBoss Repository</id>
+         <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+      </repository>
+   </repositories>
+  <dependencyManagement>
+  <dependencies>
+        <!-- We depend on the EJB remote business interfaces of this application -->
+      <dependency>
+         <groupId>com.EJBFirstProjectFromEclipse.ejb</groupId>
+         <artifactId>liveEJB</artifactId>
+         <type>ejb-client</type>
+         <version>${project.version}</version>
+      </dependency>
+  
+       <dependency>
+           <groupId>org.wildfly.bom</groupId>
+           <artifactId>wildfly-jakartaee8-with-tools</artifactId>
+           <version>${version.server.bom}</version>
+           <type>pom</type>
+           <scope>import</scope>
+        </dependency>
+    </dependencies>
+   </dependencyManagement>
+  <dependencies>
+	<dependency>
+	    <groupId>javax</groupId>
+	    <artifactId>javaee-api</artifactId>
+	    <version>7.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-ejb-client-bom -->
+	<dependency>
+	    <groupId>org.wildfly</groupId>
+	    <artifactId>wildfly-ejb-client-bom</artifactId>
+	    <version>20.0.1.Final</version>
+	    <type>pom</type>
+	</dependency>
+	</dependencies>
+</project>

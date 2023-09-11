@@ -1,0 +1,17 @@
+<mat-chip-list class="no-outline-on-focus" [selectable]="false">
+
+  <ng-container *ngFor="let opt of visibleNoteringar()">
+    <mk-outlined-notering-chip *ngIf="opt.type === 'outlined'" [icon]="opt.icon" [color]="opt.color">
+      {{ opt.property | prefix:"mk.noteringar." | transloco }}
+    </mk-outlined-notering-chip>
+
+    <mk-filled-notering-chip *ngIf="opt.type === 'filled'" [icon]="opt.icon" [color]="opt.color">
+      {{ opt.property | prefix:"mk.noteringar." | transloco }}
+    </mk-filled-notering-chip>
+  </ng-container>
+
+  <mk-additional-noteringar-chip *ngIf="numOfNoteringar() > maxVisibleNoteringar" [tooltip]="additionalNoteringarTooltip()">
+    + {{numOfNoteringar() - maxVisibleNoteringar}}
+  </mk-additional-noteringar-chip>
+
+</mat-chip-list>

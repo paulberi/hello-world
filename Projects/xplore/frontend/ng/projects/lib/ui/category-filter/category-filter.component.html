@@ -1,0 +1,22 @@
+<div id="xp-category-filter-expansion-panel">
+    <mat-expansion-panel *ngFor="let item of items;">
+        <mat-expansion-panel-header>
+            <mat-panel-title *ngIf="titleCaseOnCategory">
+                {{ item.name | titlecase }}
+            </mat-panel-title>
+            <mat-panel-title *ngIf="!titleCaseOnCategory">
+                {{ item.name }}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <ul class="filter-list">
+            <li *ngFor="let value of item.values;">
+                <mat-label>
+                    <mat-checkbox type="checkbox" [checked]="isActive(value.id)"
+                        (change)="this.filterUpdated.emit(value.id)" class="checkbox">{{value.name}}
+                    </mat-checkbox>
+                </mat-label>
+            </li>
+        </ul>
+    </mat-expansion-panel>
+</div>

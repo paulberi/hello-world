@@ -1,0 +1,74 @@
+
+<div class="title-background row mat-typography justify-center align-center">
+  <h1 class="mat-display-1">{{"mk.createProjekt.pageTitle" | transloco}}</h1>
+</div>
+
+<div class="row justify-center">
+  <div class="col-11 main-content">
+
+    <div class="row">
+      <xp-message class="col-12 onboarding" severity="information" [isClosable]="false">
+        <h3>{{"mk.createProjekt.onboardingLabel" | transloco}}</h3>
+        <p>{{"mk.createProjekt.onboardingText" | transloco}}</p>
+      </xp-message>
+    </div>
+
+    <h1>{{"mk.createProjekt.pageTitle" | transloco}}</h1>
+
+    <mat-vertical-stepper color="accent" orientation="vertical" [linear]="true" #stepper>
+
+      <!-- Generell projektinformation -->
+      <mat-step [completed]="isProjektInfoValid">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8">
+            <ng-template matStepLabel>{{"mk.createProjekt.generalInformation" | transloco}}</ng-template>
+            <mk-projekt-info (valid)="isProjektInfoValid = $event" (formChange)="updateProjektInfo($event)" [nisKalla]="nisKalla"></mk-projekt-info>
+            <div class="actions">
+              <button mat-button matStepperNext color="accent">{{"xp.paginator.nextPageLabel" | transloco}}</button>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+
+      <!-- Fiber eller Elnätsinformation -->
+      <mat-step [completed]="isUploadFileValid">
+
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8">
+            <ng-template matStepLabel>{{"mk.createProjekt.moreInformation" | transloco}}</ng-template>
+
+            <ng-container *ngIf="isFiberProjekt">
+              <mk-fiber-info (formChange)="updateFiberInfo($event)" [ledningsagare]="ledningsagare"></mk-fiber-info>
+            </ng-container>
+            <ng-container *ngIf="isElnatProjekt">
+              <mk-elnat-info (formChange)="updateElnatInfo($event)" [ledningsagare]="ledningsagare"></mk-elnat-info>
+            </ng-container>
+
+            <mk-upload-file (validChange)="isUploadFileValid=$event" [projektTyp]="selectedProjekttyp" (filesChange)="updateUploadFile($event)" [nisKalla]="nisKalla"></mk-upload-file>
+
+            <div class="actions">
+              <button mat-button matStepperPrevious>{{"xp.paginator.previousPageLabel" | transloco}}</button>
+              <button mat-button matStepperNext color="accent">{{"xp.paginator.nextPageLabel" | transloco}}</button>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+
+      <!-- Slutför -->
+      <mat-step>
+        <ng-template matStepLabel>{{"mk.createProjekt.finalizeProjekt" | transloco}}</ng-template>
+        <div class="col-5 add-users">
+          <mk-projekt-behorighet createProjekt="true" (formChange)="updateUserSelection($event)"></mk-projekt-behorighet>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>{{"xp.paginator.previousPageLabel" | transloco}}</button>
+          <button class="spinner" (click)="createProjekt()" mat-button color="accent">
+            <mat-spinner *ngIf="isCreatingProjekt" [diameter]="24" ></mat-spinner>
+            {{"xp.common.saveAndShow" | transloco}}
+          </button>
+       </div>
+      </mat-step>
+    </mat-vertical-stepper>
+
+  </div>
+</div>

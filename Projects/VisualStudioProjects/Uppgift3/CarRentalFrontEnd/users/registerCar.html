@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        .createLabel {
+            padding: 10px;
+        }
+        
+        select {
+            margin: 5px;
+            margin-left: 105px;
+        }
+        
+        .modelText {
+            margin: 5px;
+            margin-left: 102px;
+        }
+        
+        .priceText {
+            margin: 5px;
+            margin-left: 60px;
+        }
+        
+        .createButtonSubmit {
+            margin-top: 20px;
+            margin-left: 212px;
+            background-image: linear-gradient(to left, white, cyan);
+            border: 0ch;
+        }
+        
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transactionPage">
+
+        <div class="createAccountForm" id="createAccountForm">
+            <label class="createLabel">Brand</label>
+            <select name="carText" id="carDropdown">
+                    <option >Volvo</option>
+                    <option >Toyota</option>
+                    <option >Mercedes</option>
+                    <option >Mitsubishi</option>
+            </select>
+            <br>
+            <label class="createLabel">Model</label>
+            <input type="text" class="modelText" name="model" id="model">
+            <br>
+            <label class="createLabel">Number of Passengers</label>
+            <input type="text" class="passengerText" name="passengers" id="passengers">
+            <br>
+            <label class="createLabel">Price per day</label>
+            <input type="text" class="priceText" name="price" id="price">
+            <br>
+            <input type="submit" class="createButtonSubmit" id="createButtonSubmit" value="Submit">
+        </div>
+
+    </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(function() {
+        $('#createButtonSubmit').click(function() {
+            registerACar();
+        });
+    })
+
+    function registerACar() {
+        var carData = {
+            carBrands: $('#carDropdown option:selected').text(),
+            name: $('#model').val(),
+            passengers: $('#passengers').val(),
+            price: $('#price').val()
+        }
+        console.log(carData);
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "http://localhost:8081/api/v1/addcar",
+            data: JSON.stringify(carData),
+            dataType: 'json',
+            success: function(result) {
+                if (result.responseText == 200) {
+                    alert("" + result.data.car.model +
+                        "ordered Successful! <br>" +
+                        "---> Congrats !!"
+                    );
+                } else {
+                    alert("Error");
+                }
+                console.log(result);
+            },
+            error: function(e) {
+                alert("Error")
+                console.log("ERROR", e);
+            }
+        });
+    }
+</script>
+
+</html>

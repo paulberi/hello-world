@@ -1,0 +1,66 @@
+INSERT INTO markkoll.projekt (id, namn, ort, projektTyp, organisation, beskrivning, skapad_av, skapad_datum, start_datum) VALUES ('ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'Test 28 april', 'Torsby', 'FIBER', null, null, 'Pirkko Marklund', '2021-04-28 09:07:50.965729', null);
+INSERT INTO fiber.projekt (id, ledningsagare, bidragsprojekt, ledningsstracka, bestallare) VALUES ('ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'Fiberfirman AB', false, 'A till B', 'Beställare');
+
+INSERT INTO markkoll.importversion (id, filnamn, projekt_id, skapad_datum) VALUES ('851fd90a-ac2c-4579-adeb-c94080a4718d', 'HJS, 2021-04-08.zip', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', '2021-04-28 09:37:22.367767');
+INSERT INTO markkoll.current_version (projekt_id, version_id) VALUES ('ab1db75b-caac-4350-a0ff-fa0c97993ad6', '851fd90a-ac2c-4579-adeb-c94080a4718d');
+
+-- med markägare --
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('909a6a72-38a7-90ec-e040-ed8f66444c3f', 'HÖLJES 1:194', 'FASTIGHET', null, 'TORSBY', 'HÖLJES', '1:194', '1737>HÖLJES>1:194>1>>>>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('0deda477-0832-49d9-968f-50580158dcb3', '909a6a72-38a7-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, true);
+INSERT INTO markkoll.person (id, adress, postnummer, postort, telefon, bankkonto, e_post, namn, personnummer, kund_id) VALUES ('486ef2ef-7780-40e6-abe9-5b2dbed9885d', 'Adress', '12345', 'Postort', null, null, null, 'Förnamn Efternman', '19750404-9292', 'kundId');
+INSERT INTO markkoll.markagare (id, andel, person_id, fastighet_id, agartyp, kund_id) VALUES ('8b4233ac-1b1b-4b1a-b730-09ff30ae3666', '1/2', '486ef2ef-7780-40e6-abe9-5b2dbed9885d', '909a6a72-38a7-90ec-e040-ed8f66444c3f', 'LF', 'kundId');
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('b85b7b54-7cd6-438e-a9eb-3cd565061717', '0deda477-0832-49d9-968f-50580158dcb3', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('0deda477-0832-49d9-968f-50580158dcb3', '909a6a72-38a7-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+-- outredd --
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('909a6a72-25bb-90ec-e040-ed8f66444c3f', 'HÖLJES 1:234', 'FASTO', null, 'TORSBY', 'ASPBERGET', '1:107', '1737>ASPBERGET>1:107>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('1197c906-8a70-49f5-8d50-1facf8103a70', '909a6a72-25bb-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, false);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('ec69ae17-0b84-4d52-9bd8-242b307ad74f', '1197c906-8a70-49f5-8d50-1facf8103a70', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('1197c906-8a70-49f5-8d50-1facf8103a70', '909a6a72-25bb-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+-- med markägare, avtalsstatus signerad --
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('00ac1d50-861c-4e34-acad-8fa34d9502e4', 'HÖLJES 3:457', 'FASTIGHET', null, 'TORSBY', 'ASPBERGET', '1:107', '1737>ASPBERGET>1:107>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('3245ed8b-4480-4cef-822f-138f5bb104ff', '00ac1d50-861c-4e34-acad-8fa34d9502e4', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, false);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('edd1cbc5-05af-4fb2-a319-1b3f30b8257a', '3245ed8b-4480-4cef-822f-138f5bb104ff', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.person (id, adress, postnummer, postort, telefon, bankkonto, e_post, namn, personnummer, kund_id) VALUES ('a1ba9e17-7ba4-43ed-bc12-283db0783435', 'Adress', '12345', 'Postort', null, null, null, 'Förnamn Efternman', '19850404-9292', 'kundId');
+INSERT INTO markkoll.markagare (id, andel, person_id, fastighet_id, agartyp, kund_id) VALUES ('304ce584-b77f-4629-a1e8-ca4b5ebba70b', '1/2', 'a1ba9e17-7ba4-43ed-bc12-283db0783435', '00ac1d50-861c-4e34-acad-8fa34d9502e4', 'LF', 'kundId');
+INSERT INTO markkoll.avtalspart (avtal_id, signatar, markagare_id, avtalsstatus, inkludera_i_avtal) VALUES ('3245ed8b-4480-4cef-822f-138f5bb104ff', false, '304ce584-b77f-4629-a1e8-ca4b5ebba70b', 'AVTAL_SIGNERAT', true);
+INSERT INTO markkoll.fastighet_omrade (fastighet_id, omrade_nr, geom) VALUES ('00ac1d50-861c-4e34-acad-8fa34d9502e4', 1, '0106000020BE0B00000100000001030000000100000010000000324060E5D1B116410893439B27C25941E608D7A3CFB11641033D353E28C25941E8335E3ABBB116414D4937E92DC25941D5B09DEFB2B11641A9D8F99E2FC25941E8335EBAA6B116413DF1FD6431C25941AF7F954386B1164162F77E3A35C25941EC896CE726B116419980C0B23FC2594148192FDD66B016414D49374154C25941BB81C0CA99B01641A7AD721058C259418A79142E69B01641724FB89E5BC25941F0DF7A94EBAF1641AF598F7250C25941E0874160A8AF164122C2206844C25941F660105840AF16418928877E30C259418CA49B44AFAE164163F9A9492AC25941C9AE72E89EAF16417024319812C25941324060E5D1B116410893439B27C25941');
+INSERT INTO markkoll.fastighet_omrade (fastighet_id, omrade_nr, geom) VALUES ('00ac1d50-861c-4e34-acad-8fa34d9502e4', 2, '0106000020BE0B0000010000000103000000010000001F00000092253108108E164104FBD470AAC05941324060E5DA911641CD9AEFD7DAC05941A27D6ABCC39F164120F553E313C159414C6F3D8ABBAC1641136C129347C25941AF7F95430CAF1641AD2E084C7FC25941679E1A2FD2AE16415922060189C25941611D856BADAE1641424937F98CC25941EEB4F3FD94AE1641F09018348FC2594113BB749370AE1641FB67BC6C91C25941D5B09DEF27AE1641C1B3F3DD94C25941A052E325DFAD1641EC3A0A0F99C259410038B4C8AEAD1641053F60059BC2594175CBCC4C4CAD1641C83489B19DC25941D8DB2406ECAC1641E263665E9FC2594109E4D0A295AC1641CEB51E8DA1C259411B6791ED7BAC1641D763661EA3C259412313AE476DAC1641674FB86EA1C25941058EC2750CAD164124C44BCF9CC259416F4A370961AC1641CA5F10188AC25941B9563934C0AB1641FC69E7038FC25941BB81C04A6AAB164192AD72A884C2594148192F5DD6AB16419FD8F9BE7FC259412994430B47AB1641A205AC8C70C25941E8335E3ADEAA16415F7A3F1D75C25941FAB61E05BCAA1641DCB974BB71C259411D921804B7AA16413ECACC3C71C259417B4C62108FAA1641B5886C0F6DC2594169C9A1C5219F1641A5E0A5CB26C15941862306814891164186B974E3EEC05941EEB4F3FD578C164166E2D04AB5C0594192253108108E164104FBD470AAC05941');
+INSERT INTO markkoll.omradesintrang (id, fastighet_id, omrade_nr, version_id, geom, type, subtype) VALUES ('15a6e007-1283-466b-97e8-d9c1c5dd3788', '00ac1d50-861c-4e34-acad-8fa34d9502e4', 1, '851fd90a-ac2c-4579-adeb-c94080a4718d', '0102000020BE0B000002000000DBA364CFFAB01641F017682140C25941EA4AE76711B1164158E8B89A3DC25941', 'MARKSKAP', 'NONE');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('3245ed8b-4480-4cef-822f-138f5bb104ff', '00ac1d50-861c-4e34-acad-8fa34d9502e4', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+-- med markägare, avtalsstatus AVTAL_SKICKAT, loggad avtalsstatus längre än en vecka tillbaka (försenad)
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('64ac1d50-861c-4e34-acad-8fa34d9502a1', 'HÖLJES 3:557', 'FASTIGHET', null, 'TORSBY', 'HÖLJES', '3:557', '1>ASPBERGET>3:557>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('9215ed8b-4480-4cef-822f-138f5bb103dd', '64ac1d50-861c-4e34-acad-8fa34d9502a1', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, true);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('faa1cbc5-05af-4fb2-a319-1b3f30b8231b', '9215ed8b-4480-4cef-822f-138f5bb103dd', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.person (id, adress, postnummer, postort, telefon, bankkonto, e_post, namn, personnummer, kund_id) VALUES ('b5ba9e17-7ba4-43ed-bc12-283db0783123', 'Adress', '12345', 'Postort', null, null, null, 'Förnamn Efternman', '19501201-9190', 'kundId');
+INSERT INTO markkoll.markagare (id, andel, person_id, fastighet_id, agartyp, kund_id) VALUES ('432ce584-b77f-4629-a1e8-ca4b5ebba30a', '1/2', 'b5ba9e17-7ba4-43ed-bc12-283db0783123', '64ac1d50-861c-4e34-acad-8fa34d9502a1', 'LF', 'kundId');
+INSERT INTO markkoll.avtalspart (id, avtal_id, signatar, markagare_id, avtalsstatus, inkludera_i_avtal) VALUES ('543ce584-b77f-4629-a1e8-ca4b5ebba99b', '9215ed8b-4480-4cef-822f-138f5bb103dd', false, '432ce584-b77f-4629-a1e8-ca4b5ebba30a', 'AVTAL_SKICKAT', false);
+INSERT INTO markkoll.log_avtalsstatus (avtalspart_id, avtalsstatus, skapad_av, skapad_datum) VALUES ('543ce584-b77f-4629-a1e8-ca4b5ebba99b', 'AVTAL_SIGNERAT', 'Pirkko Marklund', '2021-05-16 07:28:18.079444');
+INSERT INTO markkoll.log_avtalsstatus (avtalspart_id, avtalsstatus, skapad_av, skapad_datum) VALUES ('543ce584-b77f-4629-a1e8-ca4b5ebba99b', 'AVTAL_SKICKAT', 'Pirkko Marklund', '2021-06-16 07:28:18.079444');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('9215ed8b-4480-4cef-822f-138f5bb103dd', '64ac1d50-861c-4e34-acad-8fa34d9502a1', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+-- samfälligheter
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('109a6a72-25bb-90ec-e040-ed8f66444c3f', 'SAMF 1', 'SAMF', null, 'TORSBY', 'ASPBERGET', '1:107', '1737>ASPBERGET>1:107>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('0b4e417d-1ae8-41d9-bdc2-76eac35958f5', '109a6a72-25bb-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, false);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('3e33e580-d979-4003-893b-fd2188b2e9a3', '0b4e417d-1ae8-41d9-bdc2-76eac35958f5', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('0b4e417d-1ae8-41d9-bdc2-76eac35958f5', '109a6a72-25bb-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('109a6a72-384c-90ec-e040-ed8f66444c3f', 'SAMF 2', 'SAMF', null, 'TORSBY', 'HÖLJES', '1:103', '1737>HÖLJES>1:103>2', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('d795849e-d955-4499-9d6e-e50eac0d7dce', '109a6a72-384c-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, true);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('83f967c5-26bd-4dd7-bb22-874f69769b67', 'd795849e-d955-4499-9d6e-e50eac0d7dce', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('d795849e-d955-4499-9d6e-e50eac0d7dce', '109a6a72-384c-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+INSERT INTO markkoll.fastighet (id, fastighetsbeteckning, detaljtyp, kommunnamn, trakt, blockenhet, extern_id, fnr_fds, ytkval, adat, omrtyp) VALUES ('109a6a72-387e-90ec-e040-ed8f66444c3f', 'SAMF 3', 'SAMFO', null, 'TORSBY', 'HÖLJES', '1:153', '1737>HÖLJES>1:153>1>>>>1', null, null, null);
+INSERT INTO markkoll.avtal (id, fastighet_id, projekt_id, anteckning, ersattning, skogsfastighet) VALUES ('6564bc3a-689a-4fec-bfdd-47ea7465d5fe', '109a6a72-387e-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', null, 0, false);
+INSERT INTO markkoll.avtal_geometristatus (id, avtal_id, version_id, geometristatus) VALUES ('b641ea20-4c71-4318-beda-c9482ee25828', '6564bc3a-689a-4fec-bfdd-47ea7465d5fe', '851fd90a-ac2c-4579-adeb-c94080a4718d', 'OFORANDRAD');
+INSERT INTO markkoll.fastighetsforteckning (avtal_id, fastighet_id, projekt_id, anledning) VALUES ('6564bc3a-689a-4fec-bfdd-47ea7465d5fe', '109a6a72-387e-90ec-e040-ed8f66444c3f', 'ab1db75b-caac-4350-a0ff-fa0c97993ad6', 'IMPORTVERSION');
+
+INSERT INTO markkoll.samfallighet (fastighet_id) VALUES
+    ('109a6a72-387e-90ec-e040-ed8f66444c3f');
+    
+INSERT INTO markkoll.samfallighet_fastighet (fastighet_id, samfallighet_id, fastighetsbeteckning) VALUES
+    ('909a6a72-38a7-90ec-e040-ed8f66444c3f', '109a6a72-387e-90ec-e040-ed8f66444c3f', 'FAST 1'),
+    ('909a6a72-25bb-90ec-e040-ed8f66444c3f', '109a6a72-387e-90ec-e040-ed8f66444c3f', 'FAST 2'),
+    ('6e131579-93e2-42b8-8044-8d8f3e4d7e48', '109a6a72-387e-90ec-e040-ed8f66444c3f', 'FAST 3');

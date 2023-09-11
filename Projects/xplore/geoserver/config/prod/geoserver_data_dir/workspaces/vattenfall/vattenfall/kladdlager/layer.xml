@@ -1,0 +1,16 @@
+<layer>
+  <name>kladdlager</name>
+  <id>LayerInfoImpl--6027819f:1790d807346:-331a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:1790d807346:-331b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-26 09:37:31.932 UTC</dateCreated>
+</layer>

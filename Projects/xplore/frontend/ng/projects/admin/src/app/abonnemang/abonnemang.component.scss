@@ -1,0 +1,42 @@
+.actions {
+  float: right;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: auto auto;
+}
+
+.vertical-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.horizontal-center {
+  text-align: center;
+}
+
+.mat-column-edit {
+  width: 30px;
+}
+
+.mat-column-delete {
+  width: 50px;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0px;
+}
+
+td.mat-cell:last-of-type {
+  padding-right: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 2em;
+  width: 40vw;
+}
+
+.ta-bort {
+  color: var(--error);
+}

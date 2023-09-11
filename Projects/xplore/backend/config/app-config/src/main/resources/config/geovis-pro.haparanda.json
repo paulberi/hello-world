@@ -1,0 +1,2198 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.haparanda.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+
+      "sok": {
+        "allowedModes": [
+          "Address"
+        ]
+      },
+
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/haparanda/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": ""
+  },
+  "zoom": 3.5,
+  "center": [
+    180650,
+    7301011
+  ],
+  "extent": [
+    -849059.91,
+    6181490.21,
+    376266.58,
+    7861589.03
+  ],
+  "thumbnailCoordinates": [
+    189956,
+    7305108
+  ],
+  "groups": [
+    {
+      "name": "fastighetsdata",
+      "title": "Fastighetsdata",
+      "expanded": true
+    },
+    {
+      "name": "kommundata",
+      "title": "Kommundata",
+      "groups": [
+        {
+          "name": "ledningar",
+          "title": "Ledningar",
+          "expanded": false
+        },
+        {
+          "name": "verksamhetsomradenVA",
+          "title": "Verksamhetsområden VA",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "pbr",
+      "title": "PBR",
+      "expanded": false
+    },
+    {
+      "name": "strandskydd_vattenflode",
+      "title": "Strandskydd, Vattenflöden mm",
+      "groups": [
+        {
+          "name": "skydd",
+          "title": "Skydd",
+          "expanded": false
+        },
+        {
+          "name": "hojdkurvor",
+          "title": "Höjdkurvor",
+          "expanded": false
+        },
+        {
+          "name": "arsflode",
+          "title": "Årsflöde",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "oversiktsplaner",
+      "title": "Översiktsplaner",
+      "expanded": false
+    },
+    {
+      "name": "vagochjarnvag",
+      "title": "Väg och järnväg",
+      "expanded": false
+    },
+    {
+      "name": "riksintressen",
+      "title": "Riksintressen",
+      "groups": [
+        {
+          "name": "havs_kap_3",
+          "title": "Havs - och Vattenmyndigheten (Kap 3)",
+          "expanded": false
+        },
+        {
+          "name": "sametinget_kap_3",
+          "title": "Sametinget (Kap 3)",
+          "expanded": false
+        },
+        {
+          "name": "nv_kap_3_och_4",
+          "title": "Naturvårdsverket (Kap 3 och 4)",
+          "expanded": false
+        },
+        {
+          "name": "raa_kap_3",
+          "title": "RAÄ (Kap 3)",
+          "expanded": false
+        },
+        {
+          "name": "energimyndigheten_kap_3",
+          "title": "Energimyndigheten (Kap 3)",
+          "expanded": false
+        },
+        {
+          "name": "lanstyrelserna_kap_4",
+          "title": "Länsstyrelserna (Kap 4)",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "ortofoton",
+      "title": "Ortofoton",
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "haparanda:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Adresspunkter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Adresspunkt",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "adresstext@mm-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_fkadm/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Administrativa_gränser60670",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastighetsdata",
+      "visible": true
+    },
+    {
+      "id": "granslinjerkvalite",
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Gränslinjer, kvalité",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetgranser_kvalite",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "granspunkterkvalite",
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Gränspunkter, kvalité",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Granspunkter_kvalite",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "US_civilProtectionSite@inspire-msb-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Primärkartan",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_pk/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,44,45,46,47,48,49,51,52,53,54,55,56,57,58,59,60,61",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Dagvatten_Nod",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "12",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Dagvattenledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "8",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Dataledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Elledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Fjärrvärmeledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "KabelTVledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Ledningsnod",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Spillvatten_Nod",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "11",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Spillvattenledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "7",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Teleledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "VA_anläggning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "9",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Vatten_Nod",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "10",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ledningar",
+      "title": "Vattenledning",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/haparanda_ledningar/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Detaljplaner",
+      "source": {
+        "url": "/maps/gawms/haparanda_detaljplan/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,2,3,4,5,6,7",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Kommunägd mark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:KommunagdaFastigheter_FK",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla",
+      "opacity": 0.7
+    },
+    {
+      "group": "kommundata",
+      "style": "karta_hundlatrin",
+      "title": "Hundlatriner",
+      "source": {
+        "type": "wfs",
+        "typeName": "haparanda:karta_hundlatrin"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradenVA",
+      "title": "Vatten",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "153",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradenVA",
+      "title": "Spillvatten",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "152",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradenVA",
+      "title": "Dagvatten",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "151",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skydd",
+      "title": "Utökat Strandskydd 2014-12-12",
+      "queryable": true,
+      "infoTemplate": "alla",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "149",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "skydd",
+      "title": "Landskapsbildsskydd",
+      "infoTemplate": "alla",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "150",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "skydd",
+      "title": "Primärt Vattenskyddsområde",
+      "infoTemplate": "alla",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "148",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "skydd",
+      "title": "Sekundärt Vattenskyddsområde",
+      "infoTemplate": "alla",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "147",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 5 text",
+      "infoTemplate": "alla",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "146",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 5 linje",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "143",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 1 text",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "145",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 1 linje",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "142",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 0.2 text",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "144",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Nivå 0.2 linje",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "141",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojdkurvor",
+      "title": "Strandlinje",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "140",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "arsflode",
+      "title": "Vattennivå vid 100-årsflöde, punkt",
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "139",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "MAXZ",
+            "label": "m.ö.h."
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "arsflode",
+      "title": "Vattennivå vid 100-årsflöde, linje",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "138",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "arsflode",
+      "title": "100-årsflöde",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "137",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "arsflode",
+      "title": "250-årsflöde",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "136",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "arsflode",
+      "title": "10 000-årsflöde",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "135",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Haparanda",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Haparanda skärgård",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4,5,6,7,8,9,10,11,12,13,14,15,16",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Karungi",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Kommuntäckande",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "128,129,130,131,132,133,134",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Nikkala by",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Seskarö",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Säivis by",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "40,41,42,43,44,45,46,47,48,49",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Torne älvdal",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "18,19,20,21,22,23,24,25,26",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "oversiktsplaner",
+      "title": "Vuono Salmis",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "28,29,30,31,32,33,34,35,36,37,38",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "vagochjarnvag",
+      "title": "Väghållare",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghallare_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "vagochjarnvag",
+      "title": "Järnvägsdata",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "url": "/maps/trafikverket/BanInfo",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Infrastrukturforvaltare",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "havs_kap_3",
+      "title": "Yrkefiske Hav",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseYrkesfiskehav_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "sametinget_kap_3",
+      "title": "Rennäringen",
+      "infoTemplate": "alla",
+      "queryable": false,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseRennaringen_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "nv_kap_3_och_4",
+      "title": "Naturvård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "*"
+          },
+          {
+            "name": "beskrivnin",
+            "label": "BESKRIVNIN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "beskrivnin",
+            "type": "url",
+            "template": "{{beskrivnin}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nv_kap_3_och_4",
+      "title": "Natura2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Natura2000_SNV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "queryable": true,
+      "infoTemplate": "alla",
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "raa_kap_3",
+      "title": "Kulturmiljövård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "*"
+          },
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          }
+        ]
+      }
+    },
+    {
+      "import": "lst_lst_riksintressen_3_8@lansstyrelse-export",
+      "group": "energimyndigheten_kap_3",
+      "title": "Energiproduktion mm"
+    },
+    {
+      "type": "tile",
+      "group": "lanstyrelserna_kap_4",
+      "title": "Rörligt Friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseRorligtFriluftsliv_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "*"
+          },
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Grankullen (2017-06-08, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "14",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda (2009)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "13",
+          "TRANSPARENT": true,
+          "BGCOLOR": "040005"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda hamn (2019-05-21, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "12",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda Strand (2016-05-09, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "10",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda/Torneå (2011)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "11",
+          "TRANSPARENT": true,
+          "BGCOLOR": "040004"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda/Torneå (2014-07-06)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "6",
+          "TRANSPARENT": true,
+          "BGCOLOR": "050005"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda/Torneå (2017-07-01)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Haparanda/Torneå (2022-06-10)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto_geovis/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Haparanda_Tornea220610",
+          "TRANSPARENT": true,
+          "BGCOLOR": "040004"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Karungi (2018-05-15, 6cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "9",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Kukkola (2019-05-21, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "8",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Nikkala (2017-05-24, 6cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "7",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Ortofoto_LM",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "queryable": false,
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Salmis (2020-05, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "15",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Sandskär (2017-08-07, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Santasaari (2018-04-18, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Seskarö (2017-10-17, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Skyddsvallen (2016-05-09, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Sotisviken (2019-08-23, 5cm)",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true,
+          "BGCOLOR": "ffffff"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Tulvaortot Norr",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "18",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Tulvaortot Mitt",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "17",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoton",
+      "title": "Tulvaortot Syd",
+      "infoTemplate": null,
+      "source": {
+        "url": "/maps/gawms/Haparanda_orto/MapServer/WMSServer?",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "16",
+          "TRANSPARENT": true,
+          "BGCOLOR": "000000"
+        }
+      },
+      "visible": false
+    },
+    {
+      "import": "metria:Hillshade_multi@mm-export",
+      "group": "hojddata",
+      "visible": false
+    },
+    {
+      "import": "metria:NMD_markfuktighetsindex@mm-export",
+      "group": "hojddata",
+      "visible": false
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background",
+      "visible": false
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.5)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "karta_hundlatrin": [
+      [
+        {
+          "icon": {
+            "src": "karta_hundpasar.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3018",
+      "alias": "urn:ogc:def:crs:EPSG:3018",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=23.25 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -849059.91,
+        6181490.21,
+        376266.58,
+        7861589.03
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    },
+    "skyddade-omraden": {
+      "properties": [
+        {
+          "name": "NAMN",
+          "label": "Namn"
+        },
+        {
+          "name": "SKYDDSTYP",
+          "label": "Skyddstyp"
+        },
+        {
+          "name": "ORIGIN",
+          "label": "Källa"
+        },
+        {
+          "name": "AREA_HA",
+          "label": "Area",
+          "template": "{{AREA_HA}} ha"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "Shape",
+          "visible": false
+        },
+        {
+          "name": "SHAPE",
+          "visible": false
+        },
+        {
+          "name": "SHAPE.len",
+          "visible": false
+        },
+        {
+          "name": "SHAPE.LEN",
+          "visible": false
+        },
+        {
+          "name": "SHAPE.area",
+          "visible": false
+        },
+        {
+          "name": "SHAPE.AREA",
+          "visible": false
+        },
+        {
+          "name": "geometry",
+          "visible": false
+        },
+        {
+          "name": "bbox",
+          "visible": false
+        },
+        {
+          "name": "*"
+        },
+        {
+          "name": "Ursprungligtkoordinatsystemplan",
+          "label": "Ursprkordsysplan"
+        },
+        {
+          "name": "Ursprungligtkoordinatsystemhöjd",
+          "label": "Ursprkordsyshöjd"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3018",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

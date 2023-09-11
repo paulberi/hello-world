@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="uppgift5.Kunder" id="Kunder0">
+    <void property="dob">
+     <string>asd</string>
+    </void>
+    <void property="kontoNr">
+     <string>asd</string>
+    </void>
+    <void property="name">
+     <string>asd</string>
+    </void>
+    <void property="passWord">
+     <string>1234</string>
+    </void>
+    <void property="userName">
+     <string>admin</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object idref="Kunder0"/>
+  </void>
+ </object>
+</java>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped myTable">
+                    <tr>
+                        <th>Id</th>
+                        <th>Namn</th>
+                        <th>Address</th>
+                        <th>Stad</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th style="min-width: 50pxpx;">Ladbox</th>
+                        <th>Last balansering</th>
+                        <th>Huvud säkring</th>
+                        <th>Kabel längd</th>
+                        <th>status</th>
+                        <th>Tilldelning</th>
+                        <th>Kommentär</th>
+                    </tr>
+                    <script>
+                    </script>
+                    <tbody>
+                        <tr *ngFor="let order of orders">
+                            <td>{{order.orderId}}</td>
+                            <td>{{order.name}}</td>
+                            <td>{{order.address}}</td>
+                            <td>{{order.town}}</td>
+                            <td>{{order.telefon}}</td>
+                            <td>{{order.email}}</td>
+                            <td>{{order.chargingBox}}</td>
+                            <td>{{order.loadBalancing}}</td>
+                            <td>{{order.fuse}}</td>
+                            <td>{{order.cableLength}}</td>
+                            <td class="select">
+                                <select style="border: transparent; max-width: 100px;">
+                                <option value="Ny">Ny</option>
+                                <option value="Mottagen av entreprenör">Mottagen av entreprenör</option>
+                                <option value="Godkänd av entreprenör">Godkänd av entreprenör</option>
+                                <option value="Installation inbokad">Installation inbokad</option>
+                                <option value="Inväntar information från kund">Inväntar information från kund</option>
+                                <option value="Klar">klar</option>
+                        </select>
+                            </td>
+                            <td>
+                                <select style="border: transparent;">
+                                <option *ngFor="let user of users" [value]="user.firstName+' '+user.lastName" >
+                                  {{user.firstName+' '+user.lastName}}
+                                </option>
+                            </select>
+                            </td>
+                            <td><button class="comments">Kommentär</button></td>
+                            <td><button class="edit">Detaljer</button></td>
+                            <td><button class="delete">Radera</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="settings">
+        <button class="admin">Inställningar</button>
+    </div>
+</body>
+<!-- <script>
+    console.log("hello")
+    var orders = [];
+    var users = [];
+    $(function() {
+        console.log("hello")
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: "GET",
+            url: "http://localhost:8080/rejlers/allorders",
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                console.log(data)
+                for (var i = 0; i < data.length; i++) {
+                    var row = $('<tr><td>' + data[i].orderId + '<td>' + data[i].name + '<td>' + data[i].address + '<td>' + data[i].town + '<td>' + data[i].telefon + '<td>' + data[i].email + '<td>' + data[i].chargingBox + '<td>' + data[i].loadBalancing + '<td>' + data[i].fuse + '<td>' + data[i].cableLength + '<td>' + data[i].status + '<td>' + data[i].userId + '<td>' + data[i].commentId + '<tr>');
+                    $('#myTable').append(row);
+                }
+            }
+        });
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: "GET",
+            url: "http://localhost:8080/rejlers/allUsers",
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                console.log(data)
+                data.forEach(user => {
+                    this.users.push(user);
+                    console.log(this.users)
+                })
+            }
+        });
+    })
+</script> -->
+
+</html>

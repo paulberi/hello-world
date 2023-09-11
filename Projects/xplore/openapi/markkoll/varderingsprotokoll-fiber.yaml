@@ -1,0 +1,469 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: "Värderingsprotokoll Fiber"
+  description: "Endpoints och modeller för allt som rör värderingsprotokoll för fiberprojekt"
+
+paths:
+  '/projekt/fiber/{projektId}/varderingsprotokoll/{fiberVpId}':
+    put:
+      tags:
+        - fiberVarderingsprotokoll
+      summary: Uppdatera ett fibernätsvärderingsprotokoll
+      operationId: "updateFiberVarderingsprotokoll"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/fiberVpId"
+      requestBody:
+        description: Värderingsprotokollet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FiberVarderingsprotokoll"
+      respones:
+        200:
+          description: Värderingsprotokollet uppdaterades
+  '/projekt/fiber/{projektId}/varderingsprotokoll/{fiberVpId}/varderingconfig':
+    get:
+      tags:
+        - fiberVarderingsprotokoll
+      summary: Hämta beräkningskonfiguration för ett avtal
+      operationId: "getFiberVarderingConfig"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/fiberVpId"
+      responses:
+        200:
+          description: Beräkningskonfigurationen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingConfig"
+  '/kund/{kundId}/varderingconfig':
+    get:
+      tags:
+        - kund
+      summary: Hämta beräkningskonfiguration för ett avtal
+      operationId: "getAllFiberVarderingConfigsForKund"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      responses:
+        200:
+          description: Beräkningskonfigurationen
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/FiberVarderingConfigNamnAgare"
+    post:
+      tags:
+        - kund
+      summary: Hämta beräkningskonfiguration för ett avtal
+      operationId: "createFiberVarderingConfig"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: Värderingsprotokollet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FiberVarderingConfigCreate"
+      responses:
+        200:
+          description: Beräkningskonfigurationen har skapats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingConfigNamnAgare"
+    put:
+      tags:
+        - kund
+      summary: Uppdatera beräkningskonfiguration för en avtalspart
+      operationId: "updateFiberVarderingConfig"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: Beräkningskonfigurationen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FiberVarderingConfigNamnAgare"
+      responses:
+        200:
+          description: Beräkningskonfigurationen har uppdaterats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingConfigNamnAgare"
+  '/kund/{kundId}/varderingconfig/{varderingConfigId}':
+    delete:
+      tags:
+        - kund
+      summary: Ta bort beräkningskonfiguration för en avtalspart
+      operationId: "deleteFiberVarderingConfig"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+        - $ref: "#/components/parameters/varderingConfigId"
+      responses:
+        200:
+          description: "Konfigurationen togs bort"
+  '/kund/{kundId}/varderingconfig/default':
+    get:
+      tags:
+        - kund
+      summary: Hämta beräkningskonfiguration för ett avtal
+      operationId: "getDefaultFiberVarderingConfigForKund"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      responses:
+        200:
+          description: Beräkningskonfigurationen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingConfig"
+    put:
+      tags:
+        - kund
+      summary: Uppdatera FiberVärderingConfig
+      operationId: "updateDefaultFiberVarderingConfigForKund"
+      parameters:
+        - $ref: '#/components/parameters/kundId'
+      requestBody:
+        description: Beräkningskonfigurationen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FiberVarderingConfig"
+
+      responses:
+        200:
+          description: Fastigheterna blev borttagna från projektet.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingConfig"
+  '/projekt/fiber/{projektId}/avtal/{avtalId}/varderingsprotokoll':
+    get:
+      tags:
+        - avtal
+      summary: Hämta ett värderingsprotokoll för ett projekt med avtalId
+      operationId: "getFiberVarderingsprotokollWithAvtalId"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "./models/avtal.yaml#/components/parameters/avtalId"
+      responses:
+        200:
+          description: Värderingsprotokoll
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FiberVarderingsprotokoll"
+        204:
+          description: Avtalet saknade ett värderingsprotokoll
+
+components:
+  #-------------------------------
+  # Schemas (datamodell)
+  #-------------------------------
+  schemas:
+    FiberPunktersattning:
+      type: object
+      properties:
+        antal:
+          type: integer
+        beskrivning:
+          type: string
+        typ:
+          $ref: "#/components/schemas/FiberPunktersattningTyp"
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+    FiberMarkledning:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        langd:
+          type: number
+          format: double
+        bredd:
+          type: integer
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+    FiberIntrangAkerOchSkogsmark:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        ersattning:
+          type: integer
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+    FiberOvrigIntrangsersattning:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        ersattning:
+          type: integer
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+    FiberVarderingsprotokollMetadata:
+      type: object
+      properties:
+        varderingstidpunkt:
+          type: string
+          format: date-time
+        varderingsmanOchForetag:
+          type: string
+          default: ""
+    FiberVarderingsprotokollConfig:
+      type: object
+      properties:
+        sarskildErsattning:
+          type: number
+          format: double
+    FiberVarderingsprotokoll:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        config:
+          $ref: "#/components/schemas/FiberVarderingsprotokollConfig"
+        metadata:
+          $ref: "#/components/schemas/FiberVarderingsprotokollMetadata"
+        punktersattning:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/FiberPunktersattning"
+        markledning:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/FiberMarkledning"
+        intrangAkerOchSkogsmark:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/FiberIntrangAkerOchSkogsmark"
+        ovrigIntrangsersattning:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/FiberOvrigIntrangsersattning"
+    FiberVarderingConfigNamnAgare:
+      type: object
+      properties:
+        fiberVarderingConfig:
+          $ref: "#/components/schemas/FiberVarderingConfig"
+        namn:
+          type: string
+        personnummer:
+          type: string
+    FiberVarderingConfig:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        markskap:
+          $ref: "#/components/schemas/VarderingConfigMarkskap"
+        optobrunn:
+          $ref: "#/components/schemas/VarderingConfigOptobrunn"
+        teknikbod:
+          $ref: "#/components/schemas/VarderingConfigTeknikbod"
+        schablonersattning:
+          $ref: "#/components/schemas/VarderingConfigSchablonersattning"
+        grundersattning:
+          type: integer
+          default: 0
+        minimiersattning:
+          type: integer
+          default: 0
+        tillaggExpropriationslagen:
+          type: integer
+          default: 0
+        sarskildErsattning:
+          type: integer
+          default: 0
+        sarskildErsattningMaxbelopp:
+          type: integer
+          default: 0
+        minimiersattningEnbartMarkledning:
+          type: boolean
+          default: true
+      required:
+        - markskap
+        - optobrunn
+        - teknikbod
+        - schablonersattning
+        - grundersattning
+        - minimiersattning
+        - tillaggExpropriationslagen
+        - sarskildErsattning
+        - sarskildErsattningMaxbelopp
+        - minimiersattningEnbartMarkledning
+    FiberVarderingConfigCreate:
+      type: object
+      properties:
+        namn:
+          type: string
+        personEllerOrgNummer:
+          type: string
+      required:
+        - namn
+        - personEllerOrgNummer
+    VarderingConfigMarkskap:
+      type: object
+      properties:
+        skog:
+          type: integer
+          default: 0
+        jordbruksimpediment:
+          type: integer
+          default: 0
+        ovrigMark:
+          type: integer
+          default: 0
+      required:
+        - skog
+        - jordbruksimpediment
+        - ovrigMark
+    VarderingConfigOptobrunn:
+      type: object
+      properties:
+        skog:
+          type: integer
+          default: 0
+        jordbruksimpediment:
+          type: integer
+          default: 0
+        ovrigMark:
+          type: integer
+          default: 0
+      required:
+        - skog
+        - jordbruksimpediment
+        - ovrigMark
+    VarderingConfigTeknikbod:
+      type: object
+      properties:
+        skog6x6m:
+          type: integer
+          default: 0
+        skog8x8m:
+          type: integer
+          default: 0
+        skog10x10m:
+          type: integer
+          default: 0
+        jordbruksimpediment6x6m:
+          type: integer
+          default: 0
+        jordbruksimpediment8x8m:
+          type: integer
+          default: 0
+        jordbruksimpediment10x10m:
+          type: integer
+          default: 0
+        ovrigMark6x6m:
+          type: integer
+          default: 0
+        ovrigMark8x8m:
+          type: integer
+          default: 0
+        ovrigMark10x10m:
+          type: integer
+          default: 0
+      required:
+        - skog6x6m
+        - skog8x8m
+        - skog10x10m
+        - jordbruksimpediment6x6m
+        - jordbruksimpediment8x8m
+        - jordbruksimpediment10x10m
+        - ovrigMark6x6m
+        - ovrigMark8x8m
+        - ovrigMark10x10m
+    VarderingConfigSchablonersattning:
+      type: object
+      properties:
+        optoror1m:
+          type: number
+          format: double
+          default: 0.0
+        optoror2m:
+            type: number
+            format: double
+            default: 0.0
+      required:
+        - optoror1m
+        - optoror2m
+    FiberPunktersattningTyp:
+      type: string
+      enum: [
+          MARKSKAP_JORDBRUKSIMPEDIMENT,
+          MARKSKAP_OVRIGMARK,
+          MARKSKAP_SKOG,
+          MARKSKAP_EJ_KLASSIFICERAD,
+          OPTOBRUNN_JORDBRUKSIMPEDIMENT,
+          OPTOBRUNN_OVRIGMARK,
+          OPTOBRUNN_SKOG,
+          OPTOBRUNN_EJ_KLASSIFICERAD,
+          SITE_JORDBRUKSIMPEDIMENT_6X6M,
+          SITE_JORDBRUKSIMPEDIMENT_8X8M,
+          SITE_JORDBRUKSIMPEDIMENT_10X10M,
+          SITE_OVRIGMARK_6X6M,
+          SITE_OVRIGMARK_8X8M,
+          SITE_OVRIGMARK_10X10M,
+          SITE_SKOG_6X6M,
+          SITE_SKOG_8X8M,
+          SITE_SKOG_10X10M,
+          SITE_EJ_KLASSIFICERAD
+      ]
+  parameters:
+    fiberVpId:
+      name: fiberVpId
+      in: path
+      description: UUID för fiberVärderingsprotokoll.
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "b17bfc5e-460c-4d0b-964b-3fe8dfa93cf7"
+    kundId:
+      name: kundId
+      in: path
+      description: "Kundnamnet (organisationsnummer)"
+      schema:
+        type: string
+      required: true
+      example: "556799-2242"
+    varderingConfigId:
+      name: varderingConfigId
+      in: path
+      description: UUID för fiberVärderingsConfig.
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "b17bfc5e-460c-4d0b-964b-3fe8dfa93cf7"

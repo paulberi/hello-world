@@ -1,0 +1,39 @@
+.tab-pane .tab-header-area .tab {
+-fx-pref-height: 100.0;
+-fx-pref-width: 55.0;}
+
+.table-column {
+    -fx-alignment: 	CENTER;
+}
+.table-row-cell{
+	-fx-cursor: hand;
+}
+.table-row-cell:selected{
+	-fx-background-color: linear-gradient(to right, #1c70014D, #1c70014D, #1c70014D);
+}
+.table-row-cell:hover {
+    -fx-background-color: linear-gradient(to right, #fc00044D, #fc00044D, #fc00044D);
+    
+}
+
+.button{
+	-fx-background-radius: 5.0em;
+	-fx-min-width: 70.0px;
+	-fx-min-height: 50.0px;
+	-fx-max-width: 70.0px;
+	-fx-max-height: 50.0px;
+}
+
+#imageButton{
+  	-fx-background-radius: 0.0em;
+	-fx-min-width: 50.0px;
+	-fx-min-height: 30.0px;
+	-fx-max-width: 50.0px;
+	-fx-max-height: 30.0px;
+}
+#test{
+	-fx-background-color: #DDD;
+	/*-fx-border-color: grey;
+    /* -fx-border-width: 1;
+  /*  -fx-border-style: segments(10, 15, 15, 15)  line-cap round;*/
+}

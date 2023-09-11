@@ -1,0 +1,41 @@
+<div class="choices-content">
+  <form class="add-content">
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{chosenMunicipalityTitleToAdd}}
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item" *ngFor="let municipality of municipalities" (click)="chooseMunicipalityToAdd(municipality)">
+          <p>{{ municipality.municipalityName }}</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{chosenSchoolTitleToAdd}}
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item" *ngFor="let school of municipalityToAdd.schools" (click)="chooseSchoolToAdd(school)">
+          <p>{{ school.schoolName }}</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{chosenMenuTitle}}
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item menuDropDown" *ngFor="let menu of menus" (click)="chooseMenuToAdd(menu)">
+          <p>{{ menu.menuName }}</p>
+        </a>
+      </div>
+    </div>
+
+  </form>
+  <button class="manage-menu-button" (click)="addMenuToSchool(menuToAdd, schoolToAdd)">
+    Lägg till/ uppdatera matsedeln till skolan
+  </button>
+</div>

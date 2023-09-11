@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id='toc'>
+        TOC
+        <a id="imp" href='#Implementation'>Implementation</a>
+        <a id="ins" href='#Insticksmoduler'>Insticksmoduler</a>
+    </div>
+
+
+    <a name='Implementation' />
+    <div id='implementhjalp'>
+        <h2>
+            <span class="mw-headline" id="Implementation">Implementation</span>
+        </h2>
+        <p>jQuery-biblioteket laddas vanligen med en enda JavaScript-fil innehållande all funktionalitet. Filen kan inkluderas på en
+            <a href="/wiki/Webbsida" title="Webbsida">webbsida</a> med följande kodrad:
+        </p>
+        <div class="mw-highlight mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;jquery.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        </pre>
+        </div>
+        <p>Det finns två sätt att använda jQuery:
+        </p>
+        <ul>
+            <li>via metoden
+                <code lang="jquery">$</code> som är en "genvägsmetod" (eng.
+                <i>factory method</i>) för jQuery-objektet och returnerar ett sådant.</li>
+            <li>via metoder med prefixet
+                <code lang="jquery">$.</code> som är bruksmetoder (eng.
+                <i>utility functions</i>) och som inte är direkt applicerbara på ett jQuery-objekt.</li>
+        </ul>
+        <p>Ett typiskt sätt att modifiera (multipla) DOM-element är att anropa metoden
+            <code lang="jquery">$</code> där en textsträng med CSS-identifiering skickas med som parameter. Metoden returnerar då ett jQuery-objekt som refererar till inget, ett eller flera element i HTML-koden. Man kan sedan modifiera dessa element genom
+            att anropa olika metoder hos jQuery-objektet - antingen direkt eller senare om man lagrar objektet i en variabel. Till exempel:
+        </p>
+        <div class="mw-highlight mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.test&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;wide_element&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;Nytt textinnehåll&quot;</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+        </pre>
+        </div>
+        <p>eller
+        </p>
+        <div class="mw-highlight mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="kd">var</span> <span class="nx">$link</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#nav a&quot;</span><span class="p">);</span>
+        <span class="nx">$link</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;mouseover&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+           <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Inte nudda länk!&quot;</span><span class="p">);</span>
+        <span class="p">});</span>
+        </pre>
+        </div>
+        <p>Ett exempel på metoder med prefixet
+            <code lang="jquery">$.</code> är
+            <code lang="jquery">each()</code>. Vill man till exempel summera talen 1 till 4 kan man skriva:
+        </p>
+        <div class="mw-highlight mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">value</span><span class="p">){</span>
+           <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">value</span><span class="p">;</span>
+           <span class="cm">/* Notering: </span>
+        <span class="cm">   index är det n:te elementet i samlingen tal, med start från 0. */</span>
+        <span class="p">});</span>
+        </pre>
+        </div>
+        <p>Ett annat exempel är metoden
+            <code lang="jQuery">ajax()</code>, som kan användas till att ladda eller skicka data från eller till en extern webbsida eller script. Den anropas på detta sätt:
+        </p>
+        <div class="mw-highlight mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+           <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+           <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;comment.php&quot;</span><span class="p">,</span>
+           <span class="nx">data</span><span class="o">:</span> <span class="s2">&quot;author=Karl&amp;message=Goddag&quot;</span><span class="p">,</span>
+           <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span>
+              <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Kommentaren har sparats: &quot;</span> <span class="o">+</span> <span class="nx">msg</span><span class="p">);</span>
+           <span class="p">}</span>
+        <span class="p">});</span>
+        </pre>
+        </div>
+    </div>
+    <a name='Insticksmoduler' />
+    <div id='instickshjalp'>
+        <h2>
+            <span class="mw-headline" id="Insticksmoduler">Insticksmoduler</span>
+        </h2>
+        <p>
+            Då jQuery är öppen källkod har användare och utvecklare använt dess syntax för att skapa egna insticksmoduler för att utöka funktionaliteten på mer specifika användningsfall och effekter.
+        </p>
+    </div>
+
+</body>
+<script>
+    $(function() {
+        $('html').css('background-color', 'green');
+        $('#implementhjalp').hide();
+        $('#instickshjalp').hide();
+        $('#imp').click(function() {
+            $('#implementhjalp').toggle();
+        })
+        $('#ins').click(function() {
+            $('#instickshjalp').toggle();
+        })
+
+        // $ajax({
+        //     type: 'GET',
+        //     url: 'http://localhost:8081/api/cars',
+        //     dataType: 'json',
+        //     success: (data) => {
+        //         console.log(data);
+        //         $('#cars').load('http://localhost:8081/api/cars');
+        //     },
+        //     error: (xhr, status, error) => {
+        //         console.log(error);
+        //     }
+        // })
+    })
+</script>
+
+</html>

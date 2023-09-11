@@ -1,0 +1,19 @@
+<layer>
+  <name>avtalsstatus_konflikt</name>
+  <id>LayerInfoImpl--6027819f:179a4079e31:2a4b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6027819f:179a4079e31:2a56</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:179a4079e31:2a4a</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-31 11:14:59.462 UTC</dateCreated>
+  <dateModified>2021-04-08 06:59:28.411 UTC</dateModified>
+</layer>

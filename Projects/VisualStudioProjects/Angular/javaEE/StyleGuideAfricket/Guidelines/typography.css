@@ -1,0 +1,28 @@
+.type-header {
+    width: 100%;
+    height: 130px;
+    background-image: url(../logo.jpeg);
+    background-size: unset;
+    border: 1px solid orange;
+    ;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.type {
+    margin-left: 50px;
+    margin-right: 70px;
+}
+
+.weight {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.symbol {
+    margin-left: 100px;
+    margin-right: 50px;
+}

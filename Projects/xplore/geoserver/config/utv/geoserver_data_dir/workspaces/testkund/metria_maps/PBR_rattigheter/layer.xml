@@ -1,0 +1,15 @@
+<layer>
+  <name>PBR_rattigheter</name>
+  <id>LayerInfoImpl-1977b029:171d4d67e8c:-61cb</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffb</id>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl-1977b029:171d4d67e8c:-61cc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

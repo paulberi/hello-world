@@ -1,0 +1,8 @@
+.spinner ::ng-deep .mat-spinner {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.spinner.mat-primary ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: white;
+}

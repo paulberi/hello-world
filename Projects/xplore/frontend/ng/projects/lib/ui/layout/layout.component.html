@@ -1,0 +1,121 @@
+<div class="container">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="row first-row">
+      <div class="col-9 row">
+        <button mat-icon-button [routerLink]="['/']" routerLinkActive="router-link-active" id="logo-button"
+          tabindex="-1" [attr.aria-label]="'xp.layout.goToStartpage' | transloco">
+          <mat-icon *ngIf="appName" id="logo" inline="true" svgIcon="logo_white" class="header-icon"></mat-icon>
+        </button>
+        <h1 id="app-name">
+          <a [routerLink]="['/']">{{ appName }}</a>
+        </h1>
+      </div>
+      <span class="spacer"></span>
+      <div class="col-3 row">
+        <span class="spacer"></span>
+
+        <!-- User meny -->
+        <button id="user-menu-button" mat-icon-button [matMenuTriggerFor]="menu" [attr.aria-label]="'xp.layout.userMenu' | transloco">
+          <mat-icon class="material-icons md-36 header-icon">account_circle</mat-icon>
+        </button>
+
+        <mat-menu id="user-menu" #menu="matMenu">
+          <div id="user-menu-details" class="justify-center" *ngIf="loggedInUserInfo">
+            <div class="row justify-center">
+              <h3 id="user-menu-title">
+                {{loggedInUserInfo.fornamn}} {{loggedInUserInfo.efternamn}}
+              </h3>
+            </div>
+            <div class="row justify-center">
+              <p id="user-menu-email" class="mat-body-2">{{loggedInUserInfo.email}}</p>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+          
+          <button mat-menu-item *ngIf="isHelpVisible" (click)="helpClick.emit()" id="help-button">
+            <mat-icon color="primary">help</mat-icon>
+            <span>{{ "xp.common.help" | transloco }}</span>
+          </button>
+          <button *ngIf="loggedInUserInfo" mat-menu-item (click)="logoutClick.emit(loggedInUserInfo.id)" id="logout-button">
+            <mat-icon color="primary">exit_to_app</mat-icon>
+            <span>{{ "xp.common.logOut" | transloco }}</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+
+    <!-- Main menu-->
+    <!-- WCAG: 1) tabindex=-1 på undermenyn för att endast navigera i huvudmenyn med tab -->
+    <ng-template [ngIf]="menuItems">
+      <nav class="row xp-main-menu" id="main-menu">
+        <ul>
+          <li *ngFor="let item of menuItems">
+
+            <!-- Utan undermeny -->
+            <ng-template [ngIf]="item.items?.length == 0 || item.items === undefined">
+              <button mat-button (click)="pageChange.emit(item)" class="menu-item" [class.selected]="item.selected">
+                <mat-icon class="material-icons material-icons-outlined icon">{{ item.icon }}</mat-icon>
+                <span>{{ item.title }}</span>
+              </button>
+            </ng-template>
+
+            <!-- Med undermeny -->
+            <ng-template [ngIf]="item.items?.length > 0">
+              <button mat-button [matMenuTriggerFor]="menu" class="menu-item" [class.selected]="item.selected">
+                <mat-icon class="material-icons material-icons-outlined icon">{{ item.icon }}</mat-icon>
+                <span>{{ item.title }}</span>
+                <mat-icon class="arrow">expand_more</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item *ngFor="let subitem of item.items" (click)="pageChange.emit(subitem)"
+                  [class.selected]="subitem.selected" tabindex="-1">
+                  <mat-icon class="material-icons material-icons-outlined icon">{{ subitem.icon }}</mat-icon>
+                  <span>{{ subitem.title }}</span>
+                </button>
+              </mat-menu>
+            </ng-template>
+          </li>
+        </ul>
+      </nav>
+    </ng-template>
+
+  </header>
+
+  <!-- Content -->
+  <main id="content">
+    <ng-content></ng-content>
+  </main>
+
+  <!-- Footer -->
+  <ng-template [ngIf]="isFooterVisible">
+    <footer id="footer">
+      <div class="col-12">
+        <div class="row justify-center">
+          <div class="col-11">
+            <div class="row footer-content">
+              <div class="col-md-8">
+                <h1>{{ appName }}</h1>
+                <p>
+                  {{ "xp.layout.contactInfo" | transloco }}
+                </p>
+                <p class="footer-contact-info">
+                  {{ "xp.layout.telephoneAbbreviation" | transloco }} {{ "xp.metria.telephoneNumber" | transloco }}
+                  <br>
+                  <a href="mailto:{{ 'xp.metria.supportMail' | transloco }}?Subject={{appName}}">{{ "xp.metria.supportMail" | transloco }}</a>
+                </p>
+              </div>
+              <div class="col-md-4 d-none d-md-flex justify-end">
+                <a [routerLink]="['/']" [attr.aria-label]="'xp.layout.goToStartpage' | transloco">
+                  <mat-icon svgIcon="logo" class="footer-logo"></mat-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </ng-template>
+</div>

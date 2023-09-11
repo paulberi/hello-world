@@ -1,0 +1,17 @@
+{
+  "/api": {
+    "target": "http://localhost:9013",
+    "xfwd": true
+  },
+  "/kund-config/api": {
+    "target": "http://localhost:9014",
+    "xfwd": true,
+    "pathRewrite": {
+      "^/kund-config/api": "/api"
+    }
+  },
+  "/configAuthIssuer": {
+    "target": "https://xplore-admin-utv.metria.se",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,50 @@
+<form [formGroup]="form">
+  <div class="col-12 row justify-space-between">
+    <div class="col-5">
+      <mat-form-field>
+        <mat-label>{{ "mk.samrad.angePubliktNamn" | transloco }}</mat-label>
+        <input matInput formControlName="rubrik" required />
+        <mat-error *ngIf="form.controls.rubrik.hasError('required')">
+          {{ "xp.common.fieldMandatory" | transloco }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-5 row slug-container">
+      <mat-form-field>
+        <mat-label>{{ "mk.samrad.urlNamn" | transloco }}</mat-label>
+        <input matInput formControlName="slug" required />
+        <mat-error *ngIf="form.controls.slug.hasError('pattern')">
+          {{ "xp.common.invalidCharacters" | transloco }}
+        </mat-error>
+      </mat-form-field>
+      <mat-icon color="accent" (click)="onSlugInformation()"
+        >info_outline</mat-icon
+      >
+    </div>
+  </div>
+  <div class="editor">
+    <ngx-editor-menu
+      [editor]="editor"
+      [toolbar]="toolbar"
+      [customMenuRef]="selectImageMenu"
+    ></ngx-editor-menu>
+    <div *ngIf="selectImageIsActive">
+      <li *ngFor="let image of images" (click)="uploadImage(image)">
+        <div class="files row">
+          <mat-icon color="accent">image</mat-icon
+          ><span>{{ image?.filnamn }}</span>
+        </div>
+      </li>
+    </div>
+
+    <ngx-editor [editor]="editor" formControlName="brodtext"></ngx-editor>
+  </div>
+
+  <ng-template #selectImageMenu>
+    <mk-select-image-menu class="image-menu"
+      [editor]="editor"
+      [selectImageIsActive]="selectImageIsActive"
+      (toggle)="toggleSelectImage($event)"
+    ></mk-select-image-menu>
+  </ng-template>
+</form>

@@ -1,0 +1,352 @@
+<style>
+  table.bbk-table th {
+    text-align: left;
+  }
+  table.bbk-table td {
+    vertical-align: top;
+  }
+</style>
+
+<h2>Ortsök</h2>
+<p>Längst uppe till vänster finns ett sökfält som kan användas för att navigera till olika platser i kartan. Funktionen ger
+  förslag medan man skriver, och i förslagen ingår olika typer av orter, till exempel: tätorter, byar, anläggningar och kyrkor
+</p>
+
+
+<h2>Lagerpanelen</h2>
+<p>
+  Till höger finns lagerlistan där man kan välja vilja lager som ska visas i kartan. Man kan även per skikt ställa in
+  opacitet för att lättare kunna se bakgrunden.
+</p>
+
+<h3>Brandbränsleklassificering (BBK)</h3>
+<p>
+  Brandbränsleklassificeringen (BBK) består av två separata skikt; skogsmark samt öppen mark. I skogsmarksskiktet är också objekt som vatten, vägar samt vegetationsfri mark inkluderade. Karteringen av öppen mark är endast giltig för aktuellt år. Minsta karteringsenhet är 0,01 ha.
+</p>
+<p>
+  Fördjupad beskrivning av klasserna i skikten:
+</p>
+
+<h4>Skogsmark</h4>
+<table class="bbk-table">
+  <th>Klass</th>
+  <th>Namn</th>
+  <th>Beskrivning</th>
+  <tr>
+    <td>201</td>
+    <td>Barrskog, lav och risdominerad</td>
+    <td>
+      <p>
+      Gles tall- eller barrblandskog på näringsfattig och genomsläpplig mark. Markvegetationen består av olika typer av lavar och risväxter, till exempel ljung. I gallrade bestånd kan mossor istället dominera bottenskiktet.
+      </p>
+      <p>
+      Snabb uttorkning vid varma väderförhållanden och hög brandspridningspotential. I områden med hög andel ljung ökar brandintensiteten. På grund av vinddämpande effekter kan spridningshastigheten vara låg. Låg sannolikhet för brandspridning till kronskiktet på grund av avståndet mellan marken och kronbränslet.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>202</td>
+    <td>Barrskog, mossa och risdominerad</td>
+    <td>
+      <p>
+        Tät gran eller barrblandskog på morän eller lerig mark. Markvegetationen består av olika typer av mossa och risväxter, till exempel blåbär eller lingon.
+      </p>
+      <p>
+        Långsam uttorkning på grund av skogens täthet, men hög spridningsrisk när bottenskiktet är uttorkat. Hög spridningsrisk till kronskiktet om lämpligt flerskiktat vertikalt bränsle finns tillgängligt och därefter fortsatt hög spridningsrisk till kringliggande områden via flygbränder.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>203</td>
+    <td>Barrskog, örtdominerad</td>
+    <td>
+      <p>
+        Gran eller blandbarrskog på näringsrik mark (dock ej torvmark) med hög potentiell markfuktighet. Förekommer också på skarpa sydsluttningar där grundvattnet kommer närmare marknivå på grund av översilningseffekter. Fältskiktet domineras av örtväxter.
+      </p>
+      <p>
+        Långsam uttorkning och låg spridningspotential under sommarmånaderna. Om riklig död fjolårsvegetation finns tillgänglig utgör klassen en högre spridningsfara under våren. Klassen utgör ofta smalare partier i landskapet vilket innebär att intensiva bränder inte hindras.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>205</td>
+    <td>Löv eller blandskog, utan örtvegetation</td>
+    <td>
+      <p>
+        Rena lövbestånd eller en blandning mellan löv- och barrträd med minst 30% lövträd. Växer på näringsfattiga marker med låg relativ markfuktighet. Markvegetationen domineras av förnafall från lövträden.
+      </p>
+      <p>
+        Långsam uttorkning av bottenskiktet och låg spridningspotential. I blandade bestånd med hög andel lövträd är sannolikheten för kronbränder låg. Observera att löv från olika trädarter kan reagera olika vid bränder, till exempel brinner generellt förna från asp bättre än förna från andra arter.
+      </p>
+      <p>
+        LV 2 kan under sommarmånaderna slås samman med LV 3 till samlingsklassen LV 1 (Löv eller blandskog)
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>206</td>
+    <td>Löv eller blandskog, med örtvegetation</td>
+    <td>
+      <p>
+        Rena lövbestånd eller en blandning mellan löv- och barrträd, minst 30% lövträd. Växer på näringsrika marker med hög relativ markfuktighet. Markvegetationen domineras av olika örtväxter, som gräs med inblandning av förnafall från lövträden.
+      </p>
+      <p>
+        Under våren utgör torr fjolårsvegetation en spridningsrisk. Långsam uttorkning av bottenskiktet och låg spridningspotential generellt, i synnerhet under sommarmånaderna. I bestånd med hög andel lövträd är sannolikheten för kronbränder låg. Observera att löv från olika trädarter kan reagera olika vid bränder, till exempel brinner generellt förna från asp bättre än förna från andra arter.
+      </p>
+      <p>
+        LV 3 kan under sommarmånaderna slås samman med LV 2 till samlingsklassen LV 1 (Löv eller blandskog)
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>207</td>
+    <td>Trädklädd torvmark, talldominerad</td>
+    <td>
+      <p>
+        Torvytor där tallen etablerar sig ligger över grundvattennivån och torkar därmed ut relativt snabbt under rätt väderförhållanden, därför skiljs dessa från övriga skogstyper som växer i torvdominerade miljöer i klassificeringen. Om torvmarken är dikad bidrar detta till ännu snabbare uttorkning. Bottenskiktet domineras av mossa (oftast vitmossa), fältskiktet består övervägande av risväxter.
+      </p>
+      <p>
+        Längs kanterna av torvmarken är bränslet mer benäget att torka ut, men vid ihållande torr väderlek blir också risvegetationen ett effektivt bränsle som ger intensiva brandförlopp. Om marken har dikats ökar risken för svårsläckta glödbränder där torv har blottats.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>208</td>
+    <td>Trädklädd torvmark, utan tall</td>
+    <td>
+      <p>
+        Trädskiktet består av gran eller lövträd. Relativt klassen TV 1 ligger grundvattennivån i TV 2 högre och marken torkar därmed ut långsammare. Om torvmarken är dikad innebär detta snabbare uttorkning. Bottenskiktet domineras av mossa (oftast vitmossa), fältskiktet består av risväxter och örtväxter.
+      </p>
+      <p>
+        Jämfört med talldominerade torvmarker torkar denna klass ut långsammare och har lägre brandspridningspotential som följd. Om marken har dikats ökar risken för svårsläckta glödbränder där torv har blottats.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>240</td>
+    <td>Öppen vattenyta</td>
+    <td>
+      <p>
+        Vatten enligt Lantmäteriets fastighetskarta.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>241</td>
+    <td>Hårdgjord mark, byggnad</td>
+    <td>
+      <p>
+        Byggnad enligt Lantmäteriets fastighetskarta. Observera att upplösningen på 10m i rasterformat medför att mindre byggnader inte finns representerade i bränslekartan.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>242</td>
+    <td>Hårdgjord mark, väg</td>
+    <td>
+      <p>
+        Väg enligt SCB, observera att vägar smalare än 10m, samt vägar med överhäng av träd också är representerade i kartan. Nyare skogsvägar kan saknas i kartan.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>243</td>
+    <td>Hårdgjord mark, ej byggnad eller väg</td>
+    <td>
+      <p>
+        Asfalterad eller annan artificiellt hårdgjord mark, som grustag och dagbrott.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>244</td>
+    <td>Övrig öppen mark utan vegetation</td>
+    <td>
+      <p>
+        Klassen innehåller vegetationsfria naturliga ytor som till exempel stränder, berghällar och alvarmark.
+      </p>
+    </td>
+  </tr>
+
+</table>
+
+
+<h4>Öppen mark</h4>
+<table class="bbk-table">
+  <th>Klass</th>
+  <th>Namn</th>
+  <th>Beskrivning</th>
+  <tr>
+    <td>210</td>
+    <td>Hygge, bart</td>
+    <td>
+      <p>
+        Klassen består av hyggesytor som har avverkats i närtid och i många fall markberetts. Enstaka träd kan stå kvar på ytan. På ytor där hyggesavfall lämnats kvar kan brandintensiteten vara hög, men på markberedda hyggen är glödbränder den största risken. På avverkade ytor hindras inte vinden och kan därmed bidra till snabbare spridning om lämpligt bränsle finns på ytan.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>211</td>
+    <td>Hygge, med gles vegetation</td>
+    <td>
+      <p>
+        Klassen består av avverkade ytor med viss tillväxt av levande vegetation som inte är högre än 0,5 meter generellt. Enstaka träd kan stå kvar på ytan. Vegetationen består huvudsakligen av örtväxter, som gräs. Örtvegetationen gynnar brandspridning under våren, men begränsar spridningsrisken under sommaren. På avverkade ytor hindras inte vinden och kan därmed bidra till snabbare spridning.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>212</td>
+    <td>Hygge eller öppen mark med buskar eller låga träd</td>
+    <td>
+      <p>
+        Klassen består av avverkade ytor eller öppen mark med förekomst av ett buskskikt eller låga träd (mellan 0.5-5m generellt). På avverkade ytor är dessa ofta planterade och i ett tidigt stadie kan markvegetationen domineras av örtväxter, men när kronskiktet slutits försvinner dessa och ersätts med risdominerad vegetation. Klassen har en hög potentiell spridningsrisk, men vid stort inslag av löv minskar denna. Vinddämpningen är lägre än i högvuxna skogsbestånd.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>220</td>
+    <td>Åkermark, brukad</td>
+    <td>
+      <p>
+        Åkermark som hävdats under slutet av analysperioden (föregående år) genom till exempel plöjning. Brandspridningspotentialen är låg över hela brandsäsongen.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>221</td>
+    <td>Öppen vegeterad mark, hävdad</td>
+    <td>
+      <p>
+        Öppen mark med vegetation som hävdats under slutet av analysperioden (föregående år), till exempel genom bete eller slåtter. Brandspridningspotentialen är låg över hela brandsäsongen på grund av avsaknad av betydande mängder bränsle.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>222</td>
+    <td>Öppen vegeterad mark, ej hävdad</td>
+    <td>
+      <p>
+        Öppen mark med vegetation som inte har hävdats under slutet av analysperioden (föregående år). Klassen innehåller också åkermark som inte skördats eller plöjts. Hög brandspridningspotential under våren, men betydligt lägre under sommarmånaderna.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>230</td>
+    <td>Öppen myrmark, mossdominerad</td>
+    <td>
+      <p>
+        Torvbildande våtmarksyta utan buskar eller träd. Består till stor del av vitmossa och ett glest och lågt fältskikt. Långsam uttorkning och låg brandintensitet. Vid extrem torka kan svårsläckta glödbränder i torven etableras.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>231</td>
+    <td>Öppen myrmark, med fältskikt</td>
+    <td>
+      <p>
+        Delar av torvbildande våtmarker med hög vattenrörelse där högvuxna starrarter etableras. Hög spridningshastighet under vår och tidig sommar. Snabb uttorkning och hög relativ intensitet vid pågående brand. Kan bidra till att sprida brand till omkringliggande skog. Lägre risk för glödbränder relativt klassen VM 1.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>232</td>
+    <td>Övrig öppen våtmark</td>
+    <td>
+      <p>
+        Ej torvbildande våtmarker, som strandängar, vassruggar. Hög variabilitet beroende på tillgänglig vegetation och aktuell vattenbalans. Generellt högre brandrisk under våren.
+      </p>
+    </td>
+  </tr>
+
+</table>
+
+<h3>Nationella marktäckedata (NMD) - basskikt</h3>
+<p>
+  Nationella marktäckedata (NMD) är en heltäckande kartering av Sverige. NMD består av en baskartering i 25
+  tematiska klasser i tre hierarkiska nivåer. Karteringen är i rasterformat med 10 meters upplösning och med
+  en minsta karteringsenhet ned till 0,01 hektar.
+</p>
+<p>
+  För mer information om basskikten, se <a target="_blank" href="http://gpt.vic-metria.nu/data/land/NMD/NMD_Produktbeskrivning_NMD2018Basskikt_v2_2.pdf">produktspecifikation</a>
+</p>
+
+
+<h3>Nationella marktäckedata (NMD) – tilläggsskikt objekthöjd och objekttäckning</h3>
+<p>
+  NMD objekthöjd och objekttäckning är ett tilläggsskikt inom Nationella Marktäckedata.
+  Detta tilläggsskikt består av två separata rasterskikt i 10 m upplösning:
+</p>
+<ul>
+  <li>Objekthöjder 5 till 45 m</li>
+  <li>Täckningsgrad av objekthöjder mellan 5 till 45 m. Täckningsgrad för objekthöjd kallas även för krontäthet. </li>
+</ul>
+<p>
+  För mer information om tilläggsskikten objekthöjd och objekttäckning, se <a target="_blank" href="http://gpt.vic-metria.nu/data/land/NMD/NMD_Produktbeskrivning_tillaggsskikt_Objekthojd_objekttackning_v1_3.pdf">produktspecifikation</a>
+</p>
+
+
+<h3>Bakgrundskartor</h3>
+<ul>
+  <li>Topografisk webbkarta</li>
+  <li>Topografisk webbkarta (nedtonad)</li>
+  <li>Ortofoto</li>
+</ul>
+<p>
+  Den nedtonade varianten kan användas för att skapa mer kontrast mot det som ligger ovanpå.
+</p>
+
+<h2>Nedladdningstjänst BBK</h2>
+<p>
+  Du kan ladda ned kartmaterial för brandbränsleklassificering för varje län eller kommun.
+  Välj ”Nedladdning av kartmaterial” via menyn längst ner till höger och ladda ned raster- och vektorskikt som zip-filer. Du kan filtrera listan på län.
+</p>
+
+<h2>Mätverktyg</h2>
+<p>
+<h3>Mätverktyg område</h3>
+<p>
+ Ett verktyg för att mäta arean på godtyckligt område. Det går att rita ett område genom att antingen klicka ut punkter på kartan, eller att frihandsrita genom att hålla nere Skifttangenten, klicka och dra. Avsluta ritning genom att dubbelklicka.
+</p>
+<p>
+  Verktyget har även stöd för att i efterhand modifiera utritade polygoner/områden. För att modifiera, ta tag i den ritade polygonen med muspekaren och dra.
+</p>
+<h3>Mätverktyg avstånd</h3>
+<p>
+  Ett verktyg för att mäta sträckan mellan två eller fler punkter. Det går att rita en linje genom att antingen klicka ut punkter på kartan, eller att frihandsrita genom att hålla nere Skifttangenten, klicka och dra. Avsluta ritning genom att dubbelklicka.
+</p>
+<p>
+  Verktyget har även stöd för att i efterhand modifiera utritade linjer. För att modifiera, ta tag i den ritade linjen med muspekaren och dra.
+</p>
+
+<h2>Verktyg</h2>
+<p>
+  Verktygsknapparna till vänster underlättar navigering i kartan. Man kan zooma med plus <i class="material-icons">add</i> och minustecknet <i class="material-icons">remove</i>.
+  Man kan navigera tillbaka till startvyn med <i class="material-icons">home</i>. Under förutsättning att din GPS-funktion är aktiverad på din enhet, kan du hitta din position i kartan genom att klicka på <i class="material-icons">my_location</i>.
+</p>
+<p>
+  Precisionen för ”Min position” kan variera beroende på vilken webbläsare som används, vi rekommenderar att någon av följande webbläsare används Microsoft Edge, Firefox, eller Google Chrome.
+</p>
+<p>
+  För bästa möjliga precision rekommenderar vi att du använder en mobilenhet, då du generellt sett får än mer precis position. Dock kan även geografiska förutsättningar och enhetens specifika inställningar ha inverkan på positioneringen, vilket kan leda till viss avvikelse från din faktiska position.
+</p>
+<h2>Övriga frågor?</h2>
+<p>Kontakta <a href="mailto:gis@msb.se">gis@msb.se</a>.</p>

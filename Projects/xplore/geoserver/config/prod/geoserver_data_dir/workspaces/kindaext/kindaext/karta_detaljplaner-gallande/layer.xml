@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_detaljplaner-gallande</name>
+  <id>LayerInfoImpl--73452c24:1783afea0a0:-44e6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--73452c24:1783afea0a0:-44e7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-16 12:32:52.948 UTC</dateCreated>
+</layer>

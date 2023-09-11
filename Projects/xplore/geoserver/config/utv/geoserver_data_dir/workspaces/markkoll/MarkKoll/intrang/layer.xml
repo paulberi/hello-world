@@ -1,0 +1,24 @@
+<layer>
+  <name>intrang</name>
+  <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fec</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fe3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fe3</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--57951a1e:17bad16dbb2:-7fed</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-25 10:24:15.646 UTC</dateCreated>
+  <dateModified>2021-10-21 13:59:18.138 UTC</dateModified>
+</layer>

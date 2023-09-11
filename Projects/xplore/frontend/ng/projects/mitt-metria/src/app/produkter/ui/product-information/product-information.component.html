@@ -1,0 +1,42 @@
+<div class="product-description-wrapper">
+    <div class="header">
+        <mm-header [header]="productName" [buttonText]="'mm.productPage.startOrder' | transloco"
+            (buttonClick)="startOrder.emit()" [isButtonVisible]="isButtonVisibleInHeader"></mm-header>
+    </div>
+
+    <div class="row description-wrapper">
+        <div class="product-information" *ngIf="productDescription || productPreamble; else noProductInformation">
+            <div [innerHtml]="productPreamble" id="mitt-metria-custom-preamble-innerhtml"></div>
+            <div *ngIf="productDescription" class="product-description">
+                <h2>{{ "mm.productPage.productDescription" | transloco }}</h2>
+                <div *ngIf="!(isTabletOrMobile$ | async)">
+                    <div [innerHtml]="productDescription" id="mitt-metria-custom-description-innerhtml"></div>
+                </div>
+                <div *ngIf="(isTabletOrMobile$ | async)">
+                    <mm-description [content]="productDescription" [limit]="500" [innerHtml]="true"
+                        [showReadMoreAndLessButton]="true" styling="mitt-metria-custom-description-innerhtml">
+                    </mm-description>
+                </div>
+            </div>
+
+            <div class="documents-section" *ngIf="productDocuments?.length">
+                <h2>{{ "mm.productPage.documents" | transloco }}</h2>
+                <div class="row documents" *ngFor="let document of productDocuments">
+                    <p>{{ document.name }}</p>
+                    <button mat-icon-button (click)="downloadDocument.emit(document.source)">
+                        <mat-icon>download</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="productImages?.length" class="images">
+            <div *ngFor="let image of productImages">
+                <img [src]="image.source" [alt]="image.name">
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noProductInformation>
+    <p>{{ "mm.productPage.noProductDescription" | transloco }}</p>
+</ng-template>

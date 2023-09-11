@@ -1,0 +1,47 @@
+<div class="action-container">
+  <form class="actionForm" [formGroup]="form">
+    <div class="action">
+      <xp-prefixed-selection #action
+        formControlName="actionTyp"
+        [prefix]="'mk.avtalActions.actionText' | transloco"
+        [label]="'mk.avtalActions.actionLabel' | transloco"
+        [options]="actionOptions">
+      </xp-prefixed-selection>
+    </div>
+    <div class="action">
+      <xp-prefixed-selection #selection
+        formControlName="selection"
+        [prefix]="'mk.avtalActions.selectionText' | transloco"
+        [label]="'mk.avtalActions.selectionLabel' | transloco"
+        [options]="selectionOptions">
+      </xp-prefixed-selection>
+    </div>
+    <div *ngIf="showTemplateSelection" class="action">
+      <xp-prefixed-selection #template
+        formControlName="dokumentmallId"
+        [prefix]="'mk.avtalActions.templateText' | transloco"
+        [label]="'mk.avtalActions.templateLabel' | transloco"
+        [options]="templateOptions">
+      </xp-prefixed-selection>
+    </div>
+    <div *ngIf="showStatusSelection" class="action">
+      <xp-prefixed-selection #status
+        formControlName="avtalsstatus"
+        [prefix]="'mk.avtalActions.statusText' | transloco"
+        [label]="'mk.avtalActions.statusLabel' | transloco"
+        [options]="statusOptions">
+      </xp-prefixed-selection>
+    </div>
+  </form>
+
+  <div class="buttons" *ngIf="showButtons()">
+    <button mat-button color="warn" type="button" (click)="reset()" [disabled]="isResetDisabled()">
+      {{ resetButtonText }}
+    </button>
+    <mk-avtal-generate-button [status]="jobbStatus"
+                              [text]="submitButtonText"
+                              [disabled]="isSubmitDisabled()"
+                              (buttonClick)="submit()">
+    </mk-avtal-generate-button>
+  </div>
+</div>

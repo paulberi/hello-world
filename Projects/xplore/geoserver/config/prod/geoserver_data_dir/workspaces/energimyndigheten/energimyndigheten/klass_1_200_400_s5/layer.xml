@@ -1,0 +1,15 @@
+<layer>
+  <name>klass_1_200_400_s5</name>
+  <id>LayerInfoImpl--4c13db87:1742b100765:6bf3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4c13db87:1742b100765:6beb</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4c13db87:1742b100765:6bf2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

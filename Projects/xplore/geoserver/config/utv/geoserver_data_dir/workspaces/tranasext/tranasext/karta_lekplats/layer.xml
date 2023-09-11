@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_lekplats</name>
+  <id>LayerInfoImpl-13ca6915:b341e106ef3:-11a3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-74f6b08f:881256f81d9:-e947</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

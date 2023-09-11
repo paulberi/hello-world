@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_belaggningsarbete</name>
+  <id>LayerInfoImpl-e26f4410:1a36144f7c9:-187c</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-faab342a:401095fcbbb:-7efc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

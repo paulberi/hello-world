@@ -1,0 +1,32 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--4c13db87:1744a016b7c:e46</id>
+  <name>testkund_miljo</name>
+  <mode>SINGLE</mode>
+  <title>testkund_miljo</title>
+  <workspace>
+    <id>WorkspaceInfoImpl--4c13db87:172ebad69f4:-4caf</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--4c13db87:172ebad69f4:-4ca9</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--4c13db87:172ebad69f4:-4ca7</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+</layerGroup>

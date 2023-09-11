@@ -1,0 +1,52 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-1413c6cc:174bae420fe:-72fa</id>
+  <name>klass_1_150_400_s5</name>
+  <nativeName>klass_1_150_400_s5</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-1413c6cc:174bae420fe:-72fe</id>
+  </namespace>
+  <title>klass_1_150_400_s5</title>
+  <keywords>
+    <string>features</string>
+    <string>klass_1_150_400_s5</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>0.0</minx>
+    <maxx>0.0</maxx>
+    <miny>0.0</miny>
+    <maxy>0.0</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>0.0</minx>
+    <maxx>0.0</maxx>
+    <miny>0.0</miny>
+    <maxy>0.0</maxy>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="elevation">
+      <dimensionInfo>
+        <enabled>false</enabled>
+      </dimensionInfo>
+    </entry>
+    <entry key="time">
+      <dimensionInfo>
+        <enabled>false</enabled>
+      </dimensionInfo>
+    </entry>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1413c6cc:174bae420fe:-72fd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

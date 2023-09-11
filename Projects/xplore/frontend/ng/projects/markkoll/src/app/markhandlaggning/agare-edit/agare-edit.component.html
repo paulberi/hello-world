@@ -1,0 +1,74 @@
+<form [formGroup]="form">
+  <mat-checkbox *ngIf="showKontaktperson" formControlName="kontaktperson">
+    {{ "mk.agareinformation.contactPerson" | transloco}}
+    <mat-icon [matTooltip]="kontaktpersonTooltip" class="info-icon" matTooltipClass="tooltip">info</mat-icon>
+  </mat-checkbox>
+
+  <mat-form-field>
+    <input matInput
+           type="text"
+           formControlName="adress"
+           placeholder="{{ 'mk.agareinformation.address' | transloco }}"/>
+  </mat-form-field>
+
+  <div id="postnummer-ort">
+    <mat-form-field>
+      <input matInput
+            type="text"
+            formControlName="postnummer"
+            placeholder="{{ 'mk.agareinformation.postalCode' | transloco }}"/>
+      <mat-error>{{ 'mk.agareinformation.invalidPostalCode' | transloco }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" formControlName="ort" placeholder="{{ 'mk.agareinformation.location' | transloco }}"/>
+    </mat-form-field>
+  </div>
+
+  <mk-country-select formControlName="land"></mk-country-select>
+
+  <mat-form-field>
+    <input matInput
+           type="text"
+           formControlName="telefon"
+           placeholder="{{ 'mk.agareinformation.telephoneNumber' | transloco }}"/>
+    <mat-error>{{ 'mk.agareinformation.invalidTelephone' | transloco }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="email" formControlName="ePost" placeholder="{{ 'mk.agareinformation.eMail' | transloco }}"/>
+    <mat-error>{{ 'mk.agareinformation.invalidEMail' | transloco }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+           type="text"
+           formControlName="bankkonto"
+           placeholder="{{ 'mk.agareinformation.accountNumber' | transloco }}"/>
+    <mat-error>{{ 'mk.agareinformation.invalidAccountNumber' | transloco }}</mat-error>
+  </mat-form-field>
+
+  <div id="set-status">
+    <span>{{ 'mk.agareinformation.setStatus' | transloco }}</span>
+    <mat-form-field>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let status of avtalsstatus" [value]="status">{{ status | prefix:"mk.avtal." | transloco }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="ersattningUtbetald()">
+    <mat-form-field class="utbetalningsdatum">
+      <mat-label>{{ 'mk.agareinformation.payment' | transloco }}</mat-label>
+      <input matInput color="secondary" [matDatepicker]="picker" placeholder="YYYY-MM-DD" formControlName="utbetalningsdatum">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div id="buttons">
+    <button class="agare-save" mat-raised-button type="submit" color="primary" [disabled]="!canSave()" (click)="save()">
+      {{ 'xp.common.save' | transloco }}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,94 @@
+<div class="wrapper">
+  <h2>Importera användare</h2>
+
+  <!-- Ladda upp fil för validering -->
+  <div *ngIf="!isFileUploaded()">
+    <p>Välj en Excel-fil för att ladda upp flera användare samtidigt.</p>
+    <button mat-button color="accent" (click)="uploadFileOnClick()">
+      <mat-icon>cloud_upload</mat-icon> Ladda upp fil
+    </button>
+    <input type="file" id="fileUpload" name="fileUpload" accept="{{accept}}" style="display:none;" />
+  </div>
+
+  <!-- Fel vid uppladdning -->
+   <div *ngIf="getUploadError$() | async as error">
+    <mat-card>
+      <mat-card-content>
+        <h3>Fel vid uppladdning</h3>
+        <p>{{ error }}</p>
+      </mat-card-content>
+      <mat-card-actions >
+        <button mat-raised-button color="primary" (click)="exitUploadFile()">Stäng</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Valideringsrapport -->
+  <div *ngIf="getValidationReport$() | async as report">
+    <mat-card>
+      <mat-card-content>
+        <h3>Status för import</h3>
+
+        <ng-template [ngIf]="isValidationSuccess(report)">
+          <p>Du har laddat upp en fil med {{ report.statuses?.length }} användare. Välj Importera för att spara användare.</p>
+        </ng-template>
+
+        <!-- Validerade användare fel -->
+        <ng-template [ngIf]="!isValidationSuccess(report)">
+          <p>Du har laddat upp en fil med {{ report.statuses?.length }} användare. Följande användare har något fel. Vänligen åtgärda detta och ladda upp filen på nytt.</p>
+
+          <ul *ngIf="getFailedStatuses(report) as failedStatuses">
+            <li *ngFor="let status of failedStatuses">
+              <mat-icon matListIcon color="warn" >error_outline</mat-icon>
+              {{ status.user.firstname }} {{ status.user.lastname }} ({{ status.user.username }})  - {{ status.message }}
+            </li>
+          </ul>
+        </ng-template >
+
+      </mat-card-content>
+      <mat-card-actions >
+        <ng-template [ngIf]="isValidationSuccess(report)">
+          <button mat-raised-button color="primary" (click)="confirmImportUsers()">Importera</button>
+          <a mat-button (click)="exitUploadFile()">Avbryt</a>
+        </ng-template>
+        <ng-template [ngIf]="!isValidationSuccess(report)">
+          <button mat-raised-button color="primary" (click)="exitUploadFile()">Stäng</button>
+        </ng-template>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <br />
+
+  <!-- Lista användare i realm -->
+  <h2>Lista med användare</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Användarnamn</th>
+      <td mat-cell *matCellDef="let user"> {{user.username}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>E-post</th>
+      <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Förnamn</th>
+      <td mat-cell *matCellDef="let user"> {{user.firstname}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Efternamn</th>
+      <td mat-cell *matCellDef="let user"> {{user.lastname}} </td>
+    </ng-container>
+    <ng-container matColumnDef="roles">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Roller</th>
+      <td mat-cell *matCellDef="let user"><span *ngFor="let role of user.roles; let isLast=last">
+          {{ role.name }}{{isLast ? '' : ', '}}
+        </span></td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [length]="totalElements"
+                 (page)="changePage($event)">
+  </mat-paginator>
+</div>

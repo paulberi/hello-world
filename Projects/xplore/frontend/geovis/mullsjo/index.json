@@ -1,0 +1,276 @@
+{
+  "controls": [
+    {
+      "name": "home"
+    },
+    {
+      "name": "mapmenu",
+      "options": {
+        "isActive": true
+      }
+    },
+    {
+      "name": "link",
+      "options": {
+        "title": "<img src=css/png/logo_print.png />",
+        "url": "http://www.mullsjo.se"
+      }
+    },
+    {
+      "name": "sharemap"
+    },
+    {
+      "name": "geoposition"
+    },
+    {
+      "name": "print"
+    },
+    {
+      "name": "draganddrop",
+      "options": {
+        "groupTitle": "<b>Egna lager</b>"
+      }
+    },
+    {
+      "name": "legend"
+    },
+    {
+      "name": "search",
+      "options": {
+        "searchAttribute": "address",
+        "northing": "y",
+        "easting": "x",
+        "url": "/geosok",
+        "title": "Adressplatser",
+        "hintText": "Sök adress...",
+        "minLength": 2
+      }
+    },
+    {
+      "name": "position",
+      "options": {
+        "title": "Sweref99 TM",
+        "projections": {
+          "EPSG:4326": "WGS84",
+          "EPSG:3006": "Sweref99 TM"
+        }
+      }
+    },
+    {
+      "name": "measure"
+    },
+    {
+      "name": "scaleLine"
+    }
+  ],
+  "pageSettings": {
+    "footer": {
+      "img": "img/footer.png"
+    },
+    "mapGrid": {
+      "visible": false
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "projectionExtent": [
+    181896.33,
+    6101648.07,
+    864416.00,
+    7689478.31
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG::3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+    }
+  ],
+  "extent": [
+    181896.33,
+    6101648.07,
+    864416.00,
+    7689478.31
+  ],
+  "center": [
+    433868,
+    6419725
+  ],
+  "zoom": 9,
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "source": {
+    "mullsjo": {
+      "url": "/geoserver/mullsjoext/ows"
+    },
+    "mapproxy": {
+      "url": "/mapproxy/service",
+      "matrixSet": "sweref99tm",
+      "matrixIdsPrefix": ""
+    }
+  },
+  "groups": [
+    {
+      "name": "allmant",
+      "title": "<b>Allmänt</b>",
+      "expanded": false
+    },
+    {
+      "name": "samhallsservice",
+      "title": "<b>Samhällsservice</b>",
+      "expanded": false
+    },
+    {
+      "name": "barnoutb",
+      "title": "<b>Barn & Utbildning</b>",
+      "expanded": false
+    },
+    {
+      "name": "bostoindustrmark",
+      "title": "<b>Bostadstomter & Industrimark</b>",
+      "expanded": false
+    },
+    {
+      "name": "gatortorg",
+      "title": "<b>Gator & Torg</b>",
+      "expanded": false
+    },
+    {
+      "name": "kulturnoje",
+      "title": "<b>Kultur & Nöje</b>",
+      "expanded": false
+    },
+    {
+      "name": "miljoatervinning",
+      "title": "<b>Miljö & Återvinning</b>",
+      "expanded": false
+    },
+    {
+      "name": "naturofriluftsliv",
+      "title": "<b>Natur & Friluftsliv</b>",
+      "expanded": false
+    },
+    {
+      "name": "samhallsplanering",
+      "title": "<b>Samhällsplanering</b>",
+      "expanded": false
+    },
+    {
+      "name": "sportfritid",
+      "title": "<b>Sport & Fritid</b>",
+      "expanded": false
+    },
+    {
+      "name": "stodomsorg",
+      "title": "<b>Stöd & Omsorg</b>",
+      "expanded": false
+    },
+    {
+      "name": "trafikbatplatser",
+      "title": "<b>Trafik, Parkering & Båtplatser</b>",
+      "expanded": false
+    },
+    {
+      "name": "turism",
+      "title": "<b>Turism</b>",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "title": "<b>Bakgrundskartor</b>",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "name": "10",
+      "opacity": 1.0,
+      "title": "Mask",
+      "group": "none",
+      "queryable": false,
+      "source": "data/mullsjo_kommun.json",
+      "style": "mask",
+      "type": "GEOJSON",
+      "visible": true
+    },
+    {
+      "attribution": "&copy Lantmäteriet Geodatasamverkan, &copy Origo, &copy Metria",
+      "format": "image/png",
+      "group": "background",
+      "name": "MullsjoKombo",
+      "queryable": false,
+      "source": "mapproxy",
+      "title": "Karta",
+      "type": "WMTS",
+      "style": "metriamaps",
+      "visible": true
+    },
+    {
+      "attribution": "&copy Lantmäteriet Geodatasamverkan, &copy Origo, &copy Metria",
+      "format": "image/jpeg",
+      "group": "background",
+      "name": "MullsjoOrto",
+      "queryable": false,
+      "source": "mapproxy",
+      "title": "Flygfoto",
+      "type": "WMTS",
+      "style": "orto",
+      "visible": false
+    }
+  ],
+  "styles": {
+    "mask": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.5)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "orto": [
+      [
+        {
+          "image": {
+            "src": "img/png/orto.png"
+          }
+        }
+      ]
+    ],
+    "metriamaps": [
+      [
+        {
+          "image": {
+            "src": "img/png/metriamaps.png"
+          }
+        }
+      ]
+    ]
+  }
+}

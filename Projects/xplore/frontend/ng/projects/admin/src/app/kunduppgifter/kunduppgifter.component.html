@@ -1,0 +1,31 @@
+
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>{{ "adm.createKund.organisationalNumber" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="id"/>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "adm.createKund.name" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="namn"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "adm.createKund.email" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="epost"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "adm.createKund.phonenumber" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="telefon"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "adm.createKund.contactPerson" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="kontaktperson"/>
+  </mat-form-field>
+</form>
+
+<div class="actions">
+  <button mat-button color="warn" (click)="kundDelete.emit()">{{ "xp.common.delete" | transloco }}</button>
+  <button mat-flat-button type="submit" color="primary" [disabled]="!canSave()" (click)="submit()">{{ "xp.common.save" | transloco }}</button>
+</div>

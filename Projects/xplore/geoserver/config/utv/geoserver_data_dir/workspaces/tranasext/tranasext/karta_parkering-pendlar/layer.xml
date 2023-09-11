@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_parkering-pendlar</name>
+  <id>LayerInfoImpl-05e6e811:b741a0b4dad:-6316</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-a5601150:d55cb4f1e9f:-e7ee</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

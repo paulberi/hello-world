@@ -1,0 +1,34 @@
+form {
+  width: 100%;
+}
+
+mat-card {
+  padding-left: 32px;
+  padding-right: 32px;
+  min-height: 185px;
+}
+
+table {
+  width: 100%;
+  background-color: white !important;
+}
+
+.mat-column-delete {
+  width: 55px;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0;
+}
+
+.variant-font-color {
+  color: var(--primary-variant)
+}
+
+.ledningsagare-input {
+  width: 100%;
+}
+
+.add-button {
+  float: right;
+}

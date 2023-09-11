@@ -1,0 +1,97 @@
+@import '~@angular/material/theming';
+@import "./xp-material-design-color-v2.scss";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import "../../notification/notification.shared.scss";
+@import "../../layout-v2/layout-v2.shared.scss";
+@import "../../grid.shared.scss";
+
+//Fonts
+@font-face {
+  font-family: Apex-New;
+  src: url("../../../assets/fonts/Apex-New-Medium.woff");
+}
+
+@font-face {
+  font-family: Calibri;
+  src: url("../../../assets/fonts/Calibri.woff");
+}
+
+:root {
+  // Basfärger, används endast internt
+  --gray-dark: #333333;
+  --white: #FFFFFF;
+  --orange: #EE7219;
+  --green: #76B82A;
+  --dark-red: #CD2026;
+  --red: #FF0000;
+
+  // Metria brand story
+  --000000-00: #000000;
+  --333333-80: #333333;
+  --666666-60: #666666;
+  --999999-40: #999999;
+  --cccccc-20: #CCCCCC;
+
+  --orange-80: #F18E47;
+  --orange-60: #F5AA75;
+  --orange-40: #F8C7A3;
+  --orange-20: #FCE3D1;
+
+  // Övriga färger
+  --gray-dark-400: #525252;
+  --primary-400: var(--gray-dark-400);
+
+  // CSS-variabler att använda i applikationen
+  --primary: var(--gray-dark);
+  --on-primary: var(--white);
+  --primary-variant: var(--999999-40);
+  --on-primary-variant: var(--gray-dark);
+  --secondary: var(--white);
+  --on-seconadry: var(--gray-dark);
+  --accent: var(--orange);
+  --on-accent: var(--white);
+  --accent-variant: var(--orange-40);
+  --on-accent-variant: var(--gray-dark);
+  --success: var(--green);
+  --on-success: var(--white);
+  --error: var(--dark-red);
+  --on-error: var(--white);
+  --error-variant: var(--red);
+  --on-error-variant: var(--gray-dark);
+  --background: var(--white);
+  --on-background: var(--gray-dark);
+  --surface: var(--white);
+  --on-surface: var(--gray-dark);
+
+  // RGB Basfärger, används endast internt
+  --gray-dark-rgb: 51, 51, 51;
+  --white-rgb: 255, 255, 255;
+
+  // RGB CSS-variabler att använda i applikationen
+  --background-rgba: rgba(var(--white-rgb), 1);
+  --on-background-rgba: rgba(var(--gray-dark-rgb), 1);
+  --on-background-rgba-alpha-25: rgba(var(--gray-dark-rgb), 0.25)
+}
+
+$custom-typography: mat-typography-config($font-family: Calibri,
+  $headline: mat-typography-level(24px, 30px, $font-weight: 300),
+  $title: mat-typography-level(18px, 23px, $font-weight: 300),
+  $body-1: mat-typography-level(16px, 20px, $font-weight: 300));
+@include angular-material-typography($custom-typography);
+@include mat-form-field-typography($custom-typography);
+@include mat-input-typography($custom-typography);
+@include mat-core($custom-typography);
+
+$primary: mat-palette($primary);
+$accent: mat-palette($accent);
+
+// The warn palette is optional (defaults to red).
+$warn: mat-palette($warn);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme-v2: mat-light-theme($primary, $accent, $warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme-v2);

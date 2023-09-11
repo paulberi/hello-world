@@ -1,0 +1,160 @@
+.map-container {
+  height: 40vh;
+  min-height: 300px;
+  z-index: 0;
+}
+
+.main-content {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.message-container {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  h3 {
+    margin-bottom: 0.25rem;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+#top {
+  display: flex;
+  justify-content:space-between;
+  padding-bottom: 3em;
+}
+
+#tillbaka{
+  display: flex;
+  align-self: center;
+}
+
+#tillbaka-link{
+  color: var(--primary);
+}
+
+mat-tab-group {
+  padding-bottom: 3em;
+  padding-top: 1em;
+}
+
+::ng-deep .mat-tab-label {
+  margin-right: 3em;
+}
+
+.toggle-previous-version {
+  align-self: center;
+  margin-right: 1.5rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  button{
+    margin-left: 2em;
+  }
+
+  mk-avtal-filter {
+    width: 100%;
+  }
+}
+
+.change-status{
+  padding-right: 24px;
+
+  span {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  mat-form-field{
+    display: inline-block;
+  }
+}
+
+mat-paginator {
+  background-color: var(--background);
+}
+
+mat-accordion mat-expansion-panel {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: var(--background);
+}
+
+mat-expansion-panel-header {
+  padding-left: 0;
+  padding-bottom: 1em;
+  padding-top: 1.5em;
+}
+
+mat-panel-title span {
+  padding-left: 24px;
+  color: var(--primary-variant);
+}
+
+.fastighetslist-chips {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chip-outredd {
+  background-color: var(--primary-variant);
+  color: var(--on-primary-variant);
+}
+
+.chip-avvikelse {
+  background-color:var(--purple-light);
+  color: var(--gray-dark);
+}
+
+.chip-ny-fastighet {
+  background-color: var(--accent-variant);
+  color: var(--on-accent-variant);
+}
+
+.chip-uppdaterad-fastighet {
+  background-color: var(--accent-variant);
+  color: var(--on-accent-variant);
+}
+
+.chip-borttagen-fastighet {
+  background-color: var(--error-variant);
+  color: var(--on-error-variant);
+}
+
+mk-avtal-generate-button {
+  width: 200px;
+}
+
+.infobrev {
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+  .mat-card-title h3 {
+    display: inline-block;
+  }
+
+  .infobrev-close {
+    float: right;
+  }
+
+  .mat-card-content {
+    margin-bottom: 0px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .mat-spinner {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}

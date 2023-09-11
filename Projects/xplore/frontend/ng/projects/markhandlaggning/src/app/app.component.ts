@@ -1,0 +1,9 @@
+import { Component } from "@angular/core";
+@Component({
+  selector: "mh-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
+})
+export class AppComponent {
+  title = "skekraft";
+}

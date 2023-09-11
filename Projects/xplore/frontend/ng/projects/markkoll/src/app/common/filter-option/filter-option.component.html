@@ -1,0 +1,9 @@
+<div class="filter-option">
+  <mat-form-field>
+    <mat-label>{{ "mk.filterOption.filterOn" | transloco }}</mat-label>
+    <mat-select ngDefaultControl (valueChange)="valueChange.emit($event)">
+      <mat-option value="">{{ defaultText }}</mat-option>
+      <mat-option *ngFor="let option of options" [value]="option.value">{{option.label}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

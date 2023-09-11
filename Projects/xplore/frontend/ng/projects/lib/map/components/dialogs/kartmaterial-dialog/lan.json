@@ -1,0 +1,23 @@
+[
+  {"name": "Blekinge", "lansKod": 10},
+  {"name": "Dalarna", "lansKod": 20},
+  {"name": "Gotland", "lansKod": 9},
+  {"name": "Gävleborg", "lansKod": 21},
+  {"name": "Halland", "lansKod": 13},
+  {"name": "Jämtland", "lansKod": 23},
+  {"name": "Jönköping", "lansKod": 6},
+  {"name": "Kalmar", "lansKod": 8},
+  {"name": "Kronoberg", "lansKod": 7},
+  {"name": "Norrbotten", "lansKod": 25},
+  {"name": "Skåne", "lansKod": 12},
+  {"name": "Stockholm", "lansKod": 1},
+  {"name": "Södermanland", "lansKod": 4},
+  {"name": "Uppsala", "lansKod": 3},
+  {"name": "Värmland", "lansKod": 17},
+  {"name": "Västerbotten", "lansKod": 24},
+  {"name": "Västernorrland", "lansKod": 22},
+  {"name": "Västmanland", "lansKod": 19},
+  {"name": "Västra Götaland", "lansKod": 14},
+  {"name": "Örebro", "lansKod": 18},
+  {"name": "Östergötland", "lansKod": 5}
+]

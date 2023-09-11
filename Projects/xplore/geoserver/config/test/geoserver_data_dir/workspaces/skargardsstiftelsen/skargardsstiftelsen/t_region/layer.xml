@@ -1,0 +1,15 @@
+<layer>
+  <name>t_region</name>
+  <id>LayerInfoImpl--10b5fb8f:16ea7627884:a9d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--10b5fb8f:16ea7627884:a9c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

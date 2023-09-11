@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <h2>Välkommen till administration för Xplore. Vad vill du göra idag?</h2>
+    <mat-form-field appearance="fill" *ngIf="realmList$ | async as realmList">
+        <mat-label>Välj realm</mat-label>
+        <mat-select (selectionChange)="onRealmChange($event)">
+            <mat-option *ngFor="let realm of realmList.realms" [value]="realm.name">
+            {{realm.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+    <button [disabled]="!selectedRealm" mat-raised-button color="primary" (click)=onButtonClick()>Gå vidare</button>
+</div>

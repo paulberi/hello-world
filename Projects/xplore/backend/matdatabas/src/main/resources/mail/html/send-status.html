@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Larm och påminnelser i Metria Miljökoll</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h2>Bästa användare i Metria Miljökoll,</h2>
+
+Med detta meddelande vill vi uppmärksamma dig på vad du har att göra i Metria Miljökoll.
+
+<h3>Sammanfattning</h3>
+<ul>
+    <li th:if="${not #lists.isEmpty(larm)}">
+        <span th:text="${#lists.size(larm)}">5</span> larm – <a th:href="@{{baseUrl}/larm(baseUrl=${applicationUrl})}" target="_blank">Kvittera larm</a>
+    </li>
+    <li th:if="${not #lists.isEmpty(paminnelser)}">
+        <span th:text="${#lists.size(paminnelser)}">3</span> försenade mätningar –
+        <a th:href="@{{baseUrl}/paminnelser(baseUrl=${applicationUrl})}" target="_blank">Visa påminnelser</a>
+    </li>
+    <li th:if="${not #lists.isEmpty(ogranskade)}">
+        <span th:text="${#lists.size(ogranskade)}">1</span> mätningar att granska –
+        <a th:href="@{{baseUrl}/granskning(baseUrl=${applicationUrl})}" target="_blank">Granska mätvärden</a>
+    </li>
+</ul>
+
+
+<div th:if="${not #lists.isEmpty(larm)}">
+    <h3>Larminformation</h3>
+    <table style="border: 1px solid black;border-collapse: collapse;text-align: left">
+        <tr>
+            <th style="border: 1px solid black;padding: 0.5rem">Namn</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Mätningstyp</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Fastighet</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Datum</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Larmnivå</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Gränsvärde</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Värde</th>
+        </tr>
+        <tr th:each="larmdetaljer : ${larm}">
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${larmdetaljer.matobjektNamn}">04CB49U</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${larmdetaljer.matningstypNamn}">Nivå (nedmätning)</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${larmdetaljer.matobjektFastighet}">VASASTADEN 2:99</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${#temporals.format(larmdetaljer.avlastDatum, 'yyyy-MM-dd HH:mm')}">2020-05-03 11:00</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${larmdetaljer.larmnivaNamn}">Varningsnivå</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${larmdetaljer.gransvarde}">2,6</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${#numbers.formatDecimal(larmdetaljer.varde, 0, larmdetaljer.matningstypDecimaler)}">12,5</td>
+        </tr>
+    </table>
+    <a th:href="@{{baseUrl}/larm(baseUrl=${applicationUrl})}" target="_blank">Kvittera larm</a>
+</div>
+<div th:if="${not #lists.isEmpty(paminnelser)}">
+    <h3>Försenade mätningar</h3>
+    <table style="border: 1px solid black;border-collapse: collapse;text-align: left">
+        <tr>
+            <th style="border: 1px solid black;padding: 0.5rem">Namn</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Mätningstyp</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Fastighet</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Läge</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Senaste mätning</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Intervall</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Försenad</th>
+        </tr>
+        <tr th:each="paminnelse : ${paminnelser}">
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.matobjektNamn}">04CB49U</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.matningstypNamn}">Nivå (nedmätning)</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.matobjektFastighet}">VASASTADEN 2:99</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.matobjektLage}">Liten, rund dexel utmed västra sidan av Odenplan. Mittemot busskur på andra sidan Upplandsgatan. 0,5 m t.h. om kurens högra sida. 0,5 m in från gatukant.</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${#temporals.format(paminnelse.avlastDatum, 'yyyy-MM-dd HH:mm')}">2020-05-03 11:00</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.antalGanger}+' ggr/'+${tidsenhetMap[__${paminnelse.tidsenhet}__]}">1 ggr/mån</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${paminnelse.forsenadDagar}+' dagar'">2</td>
+        </tr>
+    </table>
+    <a th:href="@{{baseUrl}/paminnelser(baseUrl=${applicationUrl})}" target="_blank">Visa påminnelser</a>
+</div>
+<div th:if="${not #lists.isEmpty(ogranskade)}">
+    <h3>Ej granskade mätningar</h3>
+    <table style="border: 1px solid black;border-collapse: collapse;text-align: left">
+        <tr>
+            <th style="border: 1px solid black;padding: 0.5rem">Namn</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Mätningstyp</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Fastighet</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Läge</th>
+            <th style="border: 1px solid black;padding: 0.5rem">Ej granskade</th>
+        </tr>
+        <tr th:each="matningstyp : ${ogranskade}">
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${matningstyp.matobjektNamn}">04CB49U</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${matningstyp.matningstypNamn}">Nivå (nedmätning)</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${matningstyp.matobjektFastighet}">VASASTADEN 2:99</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${matningstyp.matobjektLage}">Liten, rund dexel utmed västra sidan av Odenplan. Mittemot busskur på andra sidan Upplandsgatan. 0,5 m t.h. om kurens högra sida. 0,5 m in från gatukant.</td>
+            <td style="border: 1px solid black;padding: 0.5rem" th:text="${matningstyp.ejGranskade}">2</td>
+        </tr>
+    </table>
+    <a th:href="@{{baseUrl}/granskning(baseUrl=${applicationUrl})}" target="_blank">Granska mätvärden</a>
+</div>
+
+<br/>
+<br/>
+<div>
+Om du inte längre vill ha dessa meddelanden. Kontakta supporten via de kontaktuppgifter som finns i Metria Miljökolls sidfot.
+</div>
+
+<h3>
+Tack för att du använder Metria Miljökoll!
+</h3>
+</body>
+</html>

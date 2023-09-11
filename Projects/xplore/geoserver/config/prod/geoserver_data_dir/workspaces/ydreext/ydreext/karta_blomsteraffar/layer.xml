@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_blomsteraffar</name>
+  <id>LayerInfoImpl--6027819f:179a3acb705:-7fd9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:179a3acb705:-7fda</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-25 13:17:56.952 UTC</dateCreated>
+</layer>

@@ -1,0 +1,13 @@
+::ng-deep .mat-select-panel {
+  max-height: 80vh !important;
+}
+
+.title {
+  margin-left: 1em;
+}
+
+mat-form-field {
+  position: flex;
+  float: right;
+  padding-right: 1em;
+}

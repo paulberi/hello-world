@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_torghandel</name>
+  <id>LayerInfoImpl--37abec04:16ca913dd6a:-57ed</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--37abec04:16ca913dd6a:-57ee</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

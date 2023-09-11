@@ -1,0 +1,412 @@
+openapi: 3.0.0
+info:
+  title: Finfo API
+  description: Api för Finfo
+  version: 0.1.0
+servers:
+  - url: http://localhost:9022/api
+paths:
+  '/agare':
+    post:
+      tags:
+        - agare
+      summary: Hämta ägare
+      operationId: "getAgare"
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+                format: uuid
+      responses:
+        200:
+          description: Lista med hämtade ägare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Agare"
+  '/agare/import':
+    post:
+      tags:
+        - agare
+      summary: Importera ägare till Finfo från Fsök
+      operationId: "importAgare"
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AgareRequest'
+      responses:
+        200:
+          description: ID på importerade ägare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  format: uuid
+  
+  '/importjob/{importJobId}':
+    get:
+      tags:
+        - importJob
+      summary: Hämta information om ett importjobb.
+      operationId: "getImportJobStatus"
+      parameters:
+        - $ref: "#/components/parameters/importJobId"
+      responses:
+        200:
+          description: Status för pågående jobb
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportJobInfo'
+
+  '/registerenhet/allmanmini':
+    post:
+      tags:
+        - registerenhet
+      summary: Skapa ett importjobb (032 allmän mini) för en registerenhet
+      operationId: "createAllmanMiniJob"
+      requestBody:
+        description: Information om importjobbet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterenhetRequest'
+      responses:
+        202:
+          description: Ett importjobb skapades
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URI till importjobbet
+  '/registerenhet/allmanmini/{registerenhetUuid}':
+    get:
+      tags:
+        - registerenhet
+      summary: Hämta information (032 allmän mini) om en registerenhet
+      operationId: "getAllmanMini"
+      parameters:
+        - $ref: "#/components/parameters/registerenhetUuid"
+      responses:
+        200:
+          description: Registerenheten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samfallighet'
+
+  '/samfallighetsforening':
+    post:
+      tags:
+        - samfallighetsforening
+      summary: Skapa ett importjobb för en samfällighetsförening
+      operationId: "createSamfallighetsforeningJob"
+      requestBody:
+        description: Information om importjobbet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterenhetRequest'
+      responses:
+        202:
+          description: Ett importjobb skapades
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URI till importjobbet
+  '/samfallighetsforening/{registerenhetUuid}':
+    get:
+      tags:
+        - samfallighetsforening
+      summary: Hämta information om en samfällighetsförening
+      operationId: "getSamfallighetsforening"
+      parameters:
+        - $ref: "#/components/parameters/registerenhetUuid"
+      responses:
+        200:
+          description: Samfällighetsföreningen
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samfallighetsforening'
+components:
+  schemas:
+    Atgardstyp:
+      type: string
+      enum:
+        - TEKNISK
+        - FASTIGHETSRATTLIG
+    BerordAvAtgard:
+      type: object
+      properties:
+        atgardstyp:
+          $ref: "#/components/schemas/Atgardstyp"
+        aktbeteckning:
+          type: string
+        atgarder:
+          type: array
+          items:
+            type: string
+        registreringsdatum:
+          type: string
+          format: date
+    PagaendeFastighetsbildning:
+      type: object
+      properties:
+        arendeDagboksnummer:
+          type: string
+        arendestatus:
+          type: string
+    Rattighet:
+      type: object
+      properties:
+        aktbeteckning:
+          type: string
+        andamal:
+          type: string
+        rattighetstyp:
+          type: string
+        rattsforhallande:
+          type: string
+        rattighetsbeskrivning:
+          type: string
+        rattighetsanmarkning:
+          type: string
+    Samfallighet:
+      type: object
+      properties:
+        uuid:
+          type: string
+          format: uuid
+        andamal:
+          type: string
+        pagaendeFastighetsbildning:
+          type: array
+          items:
+            $ref: "#/components/schemas/PagaendeFastighetsbildning"
+        berordAvAtgard:
+          type: array
+          items:
+            $ref: "#/components/schemas/BerordAvAtgard"
+        forvaltandeBeteckning:
+          type: string
+        rattighet:
+          type: array
+          items:
+            $ref: "#/components/schemas/Rattighet"
+      required:
+        - uuid
+    RegisterenhetRequest:
+      type: object
+      properties:
+        nyckel:
+          type: string
+        username:
+          type: string
+        password:
+          type: string
+        kundmarke:
+          type: string
+      required:
+        - nyckel
+        - username
+        - password
+        - kundmarke
+    AgareRequest:
+      type: object
+      properties:
+        fastighetIds:
+          type: array
+          items:
+            type: string
+            format: uuid
+        username:
+          type: string
+        password:
+          type: string
+        kundmarke:
+          type: string
+    Agare:
+      type: object
+      properties:
+        adress:
+          type: string
+        andel:
+          type: string
+        co:
+          type: string
+        description:
+          type: string
+        fastighetId:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        personnummer:
+          type: string
+        postnummer:
+          type: string
+        postort:
+          type: string
+        typ:
+          type: string
+
+    Forvaltningsobjekt:
+      type: object
+      properties:
+        objektsinformation:
+          type: string
+        anmarkning:
+          type: string
+        andamal:
+          type: string
+
+    Samfallighetsforening:
+      type: object
+      properties:
+        foreningstyp:
+          type: string
+        foreningsnamn:
+          type: string
+        lan:
+          type: string
+        sate:
+          type: string
+        coNamn:
+          type: string
+        coAdress:
+          type: string
+        coPostnummer:
+          type: string
+        coPostort:
+          type: string
+        telefonnummer:
+          type: string
+        orgnr:
+          type: string
+        faststallelsedatum:
+          type: string
+          format: date
+        registreringsdatum:
+          type: string
+          format: date
+        avregistreringsdatum:
+          type: string
+          format: date
+        styrelsedatum:
+          type: string
+          format: date
+        rakenskapsarFromDag:
+          type: integer
+        rakenskapsarFromManad:
+          type: integer
+        rakenskapsarTomDag:
+          type: integer
+        rakenskapsarTomManad:
+          type: integer
+        underAjourforing:
+          type: boolean
+        senasteAjourforingsdatum:
+          type: string
+          format: date
+        firmatecknare:
+          type: string
+        anmarkning:
+          type: string
+        uuid:
+          type: string
+          format: uuid
+        styrelsemedlemmar:
+          type: array
+          items:
+            $ref: "#/components/schemas/Styrelsemedlem"
+        forvaltningsobjekt:
+          type: array
+          items:
+            $ref: "#/components/schemas/Forvaltningsobjekt"
+      required:
+        - foreningstyp
+        - foreningsnamn
+        - lan
+        - sate
+    ImportJobInfo:
+      type: object
+      properties:
+        resource:
+          type: string
+        type:
+          type: string
+        status:
+          $ref: "#/components/schemas/ImportJobStatus"
+      required:
+        - type
+        - status
+    ImportJobStatus:
+      type: string
+      enum:
+        - CREATED
+        - IN_PROGRESS
+        - DONE
+        - FAILED
+    Styrelsemedlem:
+      type: object
+      properties:
+        namn:
+          type: string
+        coAdress:
+          type: string
+        utdelningsadress:
+          type: string
+        postnummer:
+          type: string
+        postort:
+          type: string
+        land:
+          type: string
+        lansstyrelsediarienummer:
+          type: string
+        datumForLansstyrelsebeslut:
+          type: string
+          format: date
+        medlemstyp:
+          type: string
+        anmarkning:
+          type: string
+        funktion:
+          type: array
+          items:
+            type: string
+      required:
+        - namn
+  parameters:
+    importJobId:
+      name: importJobId
+      in: path
+      description: Id till ett importjobb
+      required: true
+      schema:
+        type: string
+        format: uuid
+    registerenhetUuid:
+      name: registerenhetUuid
+      in: path
+      description: Fastighetsnyckel (UUID) för en fastighet
+      required: true
+      schema:
+        type: string
+        format: uuid

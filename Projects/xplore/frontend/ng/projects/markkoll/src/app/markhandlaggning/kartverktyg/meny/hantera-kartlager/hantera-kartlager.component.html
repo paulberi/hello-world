@@ -1,0 +1,90 @@
+<div id="wrapper">
+  <h2>{{ "mk.kartverktyg.hanteraKartlager.tabTitle" | transloco }}</h2>
+  <mat-tab-group>
+    <mat-tab label="{{ 'mk.kartverktyg.hanteraKartlager.tabTitleLayers' | transloco }}">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        [checked]="allLayersSelected('information')"
+                        [indeterminate]="someLayersSelected('information')"
+                        (change)="onToggleAllInfo($event.checked)">
+          </mat-checkbox>
+          <span class="group-label">
+            {{ "mk.kartverktyg.hanteraKartlager.infoLayers" | transloco }}
+          </span>
+        </mat-expansion-panel-header>
+        <mat-selection-list dense #selectInfo (selectionChange)="selectionChange($event)">
+          <mat-list-option checkboxPosition="before"
+                           *ngFor="let layer of informationslager"
+                           [value]="layer.id"
+                           [selected]="getLayerSelected(layer.id)">
+            {{layer.name}}
+            <mat-divider></mat-divider>
+          </mat-list-option>
+        </mat-selection-list>
+
+        <!-- Layer subgroup -->
+        <mat-expansion-panel class="mat-elevation-z0" expanded="false">
+          <mat-expansion-panel-header class="subgroup-panel">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          [checked]="allLayersSelected('riksintressen')"
+                          [indeterminate]="someLayersSelected('riksintressen')"
+                          (change)="onToggleAllRiksintressen($event.checked)">
+            </mat-checkbox>
+            <span class="group-label">
+              {{ "mk.kartverktyg.hanteraKartlager.riksintressenLayers" | transloco }}
+            </span>
+          </mat-expansion-panel-header>
+          <mat-selection-list dense #selectRiksintressen (selectionChange)="selectionChange($event)">
+            <mat-list-option checkboxPosition="before"
+                             *ngFor="let layer of riksintressenlager; last as isLast"
+                             [value]="layer.id"
+                             [selected]="getLayerSelected(layer.id)">
+              {{layer.name}}
+              <mat-divider *ngIf="!isLast"></mat-divider>
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-expansion-panel>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        [checked]="allLayersSelected('projekt')"
+                        [indeterminate]="someLayersSelected('projekt')"
+                        (change)="onToggleAllProject($event.checked)">
+          </mat-checkbox>
+          <span class="group-label">
+            {{ "mk.kartverktyg.hanteraKartlager.projectLayers" | transloco }}
+          </span>
+        </mat-expansion-panel-header>
+        <mat-selection-list dense #selectProject (selectionChange)="selectionChange($event)">
+          <mat-list-option checkboxPosition="before" *ngFor="let layer of projektlager; last as isLast"
+                           [value]="layer.id"
+                           [selected]="getLayerSelected(layer.id)">
+            {{layer.name}}
+            <mat-divider *ngIf="!isLast"></mat-divider>
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{ "mk.kartverktyg.hanteraKartlager.backgroundLayers" | transloco }}</mat-panel-title>
+          <mat-panel-description></mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-radio-group>
+          <mat-radio-button (change)="onBackgroundSelected($event)" *ngFor="let layer of bakgrundskartor"
+                            [value]="layer.id"
+                            [checked]="getLayerSelected(layer.id)">
+            {{layer.name}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-expansion-panel>
+    </mat-tab>
+    <mat-tab label="{{ 'mk.kartverktyg.hanteraKartlager.tabTitleDescription' | transloco }}">
+      <div class="teckenforklaring">
+        <mk-legend [legend]="legend" [displayGroups]="false"></mk-legend>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

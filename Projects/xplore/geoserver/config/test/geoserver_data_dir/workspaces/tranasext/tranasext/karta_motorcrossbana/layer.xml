@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_motorcrossbana</name>
+  <id>LayerInfoImpl-4a742c5d:a6cf3f10eec:-ec60</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-21f21e32:b3c7f6beee4:-1b73</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

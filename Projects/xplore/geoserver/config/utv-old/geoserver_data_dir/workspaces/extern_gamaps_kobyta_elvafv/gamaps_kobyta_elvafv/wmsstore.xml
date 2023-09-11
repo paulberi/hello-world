@@ -1,0 +1,21 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl--16ee1b80:174d9943373:-6b55</id>
+  <name>gamaps_kobyta_elvafv</name>
+  <description>Kob/kobyta_elvafv</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--16ee1b80:174d9943373:-6b57</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2020-10-06 09:17:26.816 UTC</dateCreated>
+  <capabilitiesURL>http://gamaps.vic-metria.nu/arcgis/services/Kob/kobyta_elvafv/MapServer/WMSServer?</capabilitiesURL>
+  <user>vic-metria\kobwms</user>
+  <password>crypt1:A+ljK1oXLRp082YSb3YjXT2wupLfh0b/</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

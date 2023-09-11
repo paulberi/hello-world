@@ -1,0 +1,56 @@
+<form [formGroup]="form">
+  <mat-slide-toggle formControlName="skogligVardering" [checked]="skogligVardering" (change)="toggle()">
+    {{ 'mk.fastighetsinformation.skogligVardering' | transloco }}
+  </mat-slide-toggle>
+
+  <div class="container" *ngIf="skogligVardering">
+    <button mat-button color="accent" (click)="exportHms.emit()">
+      {{ 'mk.fastighetsinformation.exportHms' | transloco }}
+    </button>
+
+    <div>
+      <mat-radio-group formControlName="tillvaratagandeTyp">
+        <div class="row">
+          <div class="col-6">
+            <mat-radio-button [value]="typEgetTillvaratagande" class="vertical-center-radio-button">
+              Eget tillvaratagande
+            </mat-radio-button>
+          </div>
+          <div class="col-6">
+            <mat-form-field>
+              <input class="right-align"
+                     matInput
+                     formControlName="egetTillvaratagande"
+                     type="number"
+                     readonly
+                     tabIndex="-1">
+              <mat-label>{{ 'mk.fastighetsinformation.amount' | transloco }}</mat-label>
+              <span matSuffix>{{ 'mk.fastighetsinformation.currency' | transloco }}</span>
+              <mat-error>{{ 'mk.fastighetsinformation.hasErsattningOnSelection' | transloco }}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <mat-radio-button [value]="typRotnetto" class="vertical-center-radio-button">
+              Rotnetto
+            </mat-radio-button>
+          </div>
+          <div class="col-6">
+            <mat-form-field>
+              <input class="right-align"
+                     matInput
+                     formControlName="rotnetto"
+                     type="number"
+                     readonly
+                     tabIndex="-1">
+              <mat-label>{{ 'mk.fastighetsinformation.amount' | transloco }}</mat-label>
+              <span matSuffix>{{ 'mk.fastighetsinformation.currency' | transloco }}</span>
+              <mat-error>{{ 'mk.fastighetsinformation.hasErsattningOnSelection' | transloco }}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-radio-group>
+    </div>
+  </div>
+</form>

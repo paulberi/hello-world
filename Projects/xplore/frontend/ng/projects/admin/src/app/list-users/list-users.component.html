@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+    <div class="user-list">
+      <div *ngFor="let user of users">
+        <div class="user">
+          <button mat-icon-button (click)="delete.emit(user)">
+            <mat-icon>delete_forever</mat-icon>
+          </button>
+          <p class="user-text">{{ user.fornamn }} {{ user.efternamn }}</p>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+    <button mat-button color="primary" (click)="showAddKundAdmin()" *ngIf="!isAddKundAdminVisible">
+      <mat-icon>add</mat-icon>
+      {{ "adm.createuser.addKundAdmin" | transloco }}</button>
+  </div>
+</div>
+<div class="row add-kundadmin-form" *ngIf="isAddKundAdminVisible">
+  <div class="col-12">
+    <h2>{{ "adm.createuser.addKundAdmin" | transloco }}</h2>
+    <xp-edit-user (submit)="submit($event)" (cancel)="hideAddKundAdmin()" [spinnerActive]="spinnerActive" ></xp-edit-user>
+  </div>
+</div>

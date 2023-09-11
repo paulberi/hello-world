@@ -1,0 +1,37 @@
+mat-expansion-panel {
+  background: inherit !important;
+}
+
+h3 {
+  padding-top: 2px;
+  margin-bottom: 0;
+  float: left;
+}
+
+.buttons {
+  display: flex;
+  flex-grow: 1;
+  padding-left: 30px;
+}
+
+.toolbar-button {
+  cursor: pointer;
+  padding-top: 2px;
+  height: 28px;
+  width: 32px;
+  text-align: center;
+  border: 1px dashed transparent;
+}
+
+.toolbar-button.active {
+  border-bottom: 1px dashed transparent;
+}
+
+.settings-content {
+  margin-bottom: 10px;
+  padding: 5px 10px 0 10px;
+}
+
+::ng-deep .mat-menu {
+  max-width: 550px;
+}

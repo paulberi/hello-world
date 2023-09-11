@@ -1,0 +1,47 @@
+{
+  "sr": {
+    "common": {
+      "appName": "Samråd",
+      "valkommen": "Välkommen till Samråd"
+    },
+    "samradlista.aktuella": "Aktuella Samråd",
+    "samradlista.arkiverade": "Arkiverade Samråd",
+    "formError":{
+      "requiredForms": "Fältet är obligatoriskt"
+    },
+    "knappar":{
+      "spara":"Spara",
+      "publicera":"Publicera",
+      "radera":"Ta bort",
+      "tillbaka":"Tillbaka",
+      "skapaSamrad": "Skapa Samråd",
+      "tabort": "Ta bort",
+      "avpublicera":"Avpublicera"
+    },
+    "label":{
+      "namn":"Namn",
+      "valkommen":"Välkommen",
+      "ingress":"Ingress",
+      "brodtext":"Brödtext",
+      "dropzone":"Klicka här för att ladda upp en bild",
+      "samrad": "Samrad",
+      "arkiv": "Arkiv",
+      "samradArkiv": "Samrådsarkiv",
+      "minaSidor": "Mina sidor",
+      "minaSynpunkter": "Mina synpunkter",
+      "minaFastigheter":"Mina fastigheter",
+      "installningar":"Inställningar"
+    },
+    "info":{
+      "samrad": "Skapa nytt samråd",
+      "uppdateraSamrad": "Uppdatera samråd",
+      "laddaupp":"Uppladdningar",
+      "bekraftaTabort":"Vill du ta bort Samrådet",
+      "kanInteTaBortSamrad":"Det går inte att ta bort Samrådet, för mer information kontakta it supporten"
+    },
+    "karta": {
+      "zoomOut": "Zooma ut",
+      "zoomIn": "Zooma in"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+server:
+  port: 9090
+
+# TODO: Hur kommer man runt att behöva hårdkoda en port?
+client:
+  address: http://localhost:${server.port}/services/exchange

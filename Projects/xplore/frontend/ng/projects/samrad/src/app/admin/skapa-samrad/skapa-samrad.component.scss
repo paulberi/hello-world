@@ -1,0 +1,77 @@
+.centered-content{
+    margin: 4%;
+    width: 50vw;
+    height: 100%;
+
+}
+.bdirection{
+    margin-top: 4%;
+    border: transparent;
+    background: transparent;
+    width: 15%;
+    display: flex;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+
+}
+
+.uploadButton{
+  border: transparent;
+  background: transparent;
+  width: 15%;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  width: auto;
+  padding: 0;
+
+}
+  
+  mat-form-field {
+    width: 100%;
+  }
+
+  .brodtext ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+
+  .ingress ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+
+.upload{
+  width: 100%;
+  color: #c7dedb !important;
+}
+
+.buttons{
+  float: right;
+  margin: 1em 0 3em 0;
+}
+
+#publiceraknapp{
+  margin: 0 1.5em 0 1.5em ;
+}
+
+#tabort-knapp {
+  color: red;
+}
+
+.tillbakaKnappNamn{
+  margin-top: 5px;
+}
+
+.uploadKnappNamn{
+  margin-top: 5px; 
+  margin-left: 5px;
+}
+
+.tillbakaKnappIcon{
+  margin-left: -5px;
+}
+
+.uploadKnappIcon{
+  color: rgb(199, 95, 95); 
+  margin-top: 0px;
+}

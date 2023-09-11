@@ -1,0 +1,9 @@
+<form [formGroup]="form" class="auto-width">
+  <p [ngClass]="{'disabled': disabled}">{{prefix}}</p>
+  <mat-form-field [style.text-align]="labelTextAlign">
+    <mat-label *ngIf="label"><span [ngClass]="{'disabled': disabled}">{{label}}</span></mat-label>
+    <mat-select formControlName="selectionControl" [multiple]="multiple" [ngClass]="{'disabled': disabled}">
+      <mat-option *ngFor="let option of options" [ngClass]="{'disabled': option.isDisabled}" [value]="option.value" [disabled]="option.isDisabled">{{option.label}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

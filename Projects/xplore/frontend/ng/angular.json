@@ -1,0 +1,1314 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "admin": {
+      "root": "projects/admin",
+      "sourceRoot": "projects/admin/src",
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": false,
+          "inlineStyle": false,
+          "style": "scss"
+        }
+      },
+      "prefix": "adm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/admin",
+            "index": "projects/admin/src/index.html",
+            "main": "projects/admin/src/main.ts",
+            "tsConfig": "projects/admin/tsconfig.app.json",
+            "polyfills": "projects/admin/src/polyfills.ts",
+            "assets": [
+              "projects/admin/src/assets",
+              "projects/admin/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/admin/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/admin/src/environments/environment.ts",
+                  "with": "projects/admin/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/admin/proxy.conf.json",
+            "port": 4207
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "admin:build:production"
+            },
+            "development": {
+              "browserTarget": "admin:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "admin:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/admin/**/*.ts",
+              "projects/admin/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "skogsanalys": {
+      "root": "projects/skogsanalys",
+      "sourceRoot": "projects/skogsanalys/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/skogsanalys",
+            "index": "projects/skogsanalys/src/index.html",
+            "main": "projects/skogsanalys/src/main.ts",
+            "tsConfig": "projects/skogsanalys/tsconfig.app.json",
+            "polyfills": "projects/skogsanalys/src/polyfills.ts",
+            "assets": [
+              "projects/skogsanalys/src/silent-refresh.html",
+              "projects/skogsanalys/src/assets",
+              "projects/skogsanalys/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/skogsanalys/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/skogsanalys/src/environments/environment.ts",
+                  "with": "projects/skogsanalys/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/skogsanalys/proxy.conf.json",
+            "port": 4200
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "skogsanalys:build:production"
+            },
+            "development": {
+              "browserTarget": "skogsanalys:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "skogsanalys:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/skogsanalys/**/*.ts",
+              "projects/skogsanalys/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "geovis-vy": {
+      "root": "projects/geovis-vy",
+      "sourceRoot": "projects/geovis-vy/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/geovis-vy",
+            "index": "projects/geovis-vy/src/index.html",
+            "main": "projects/geovis-vy/src/main.ts",
+            "tsConfig": "projects/geovis-vy/tsconfig.app.json",
+            "polyfills": "projects/geovis-vy/src/polyfills.ts",
+            "assets": [
+              "projects/geovis-vy/src/silent-refresh.html",
+              "projects/geovis-vy/src/assets",
+              "projects/geovis-vy/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/geovis-vy/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/geovis-vy/src/environments/environment.ts",
+                  "with": "projects/geovis-vy/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/geovis-vy/proxy.conf.json",
+            "port": 4201
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "geovis-vy:build:production"
+            },
+            "development": {
+              "browserTarget": "geovis-vy:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "geovis-vy:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/geovis-vy/**/*.ts",
+              "projects/geovis-vy/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "geovis-extern": {
+      "root": "projects/geovis-extern",
+      "sourceRoot": "projects/geovis-extern/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/geovis-extern",
+            "index": "projects/geovis-extern/src/index.html",
+            "main": "projects/geovis-extern/src/main.ts",
+            "tsConfig": "projects/geovis-extern/tsconfig.app.json",
+            "polyfills": "projects/geovis-extern/src/polyfills.ts",
+            "assets": [
+              "projects/geovis-extern/src/silent-refresh.html",
+              "projects/geovis-extern/src/assets",
+              "projects/geovis-extern/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/geovis-extern/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/geovis-extern/src/environments/environment.ts",
+                  "with": "projects/geovis-extern/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/geovis-extern/proxy.conf.json",
+            "port": 4202
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "geovis-extern:build:production"
+            },
+            "development": {
+              "browserTarget": "geovis-extern:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "geovis-extern:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/geovis-extern/**/*.ts",
+              "projects/geovis-extern/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "brandbranslekartan": {
+      "root": "projects/brandbranslekartan",
+      "sourceRoot": "projects/brandbranslekartan/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/brandbranslekartan",
+            "index": "projects/brandbranslekartan/src/index.html",
+            "main": "projects/brandbranslekartan/src/main.ts",
+            "tsConfig": "projects/brandbranslekartan/tsconfig.app.json",
+            "polyfills": "projects/brandbranslekartan/src/polyfills.ts",
+            "assets": [
+              "projects/brandbranslekartan/src/assets",
+              "projects/brandbranslekartan/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/brandbranslekartan/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/brandbranslekartan/src/environments/environment.ts",
+                  "with": "projects/brandbranslekartan/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/brandbranslekartan/proxy.conf.json",
+            "port": 4203
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "brandbranslekartan:build:production"
+            },
+            "development": {
+              "browserTarget": "brandbranslekartan:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "brandbranslekartan:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/brandbranslekartan/**/*.ts",
+              "projects/brandbranslekartan/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "geovis-pro": {
+      "root": "projects/geovis-pro",
+      "sourceRoot": "projects/geovis-pro/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/geovis-pro",
+            "index": "projects/geovis-pro/src/index.html",
+            "main": "projects/geovis-pro/src/main.ts",
+            "tsConfig": "projects/geovis-pro/tsconfig.app.json",
+            "polyfills": "projects/geovis-pro/src/polyfills.ts",
+            "assets": [
+              "projects/geovis-pro/src/silent-refresh.html",
+              "projects/geovis-pro/src/assets",
+              "projects/geovis-pro/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/geovis-pro/src/style/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/signalr/jquery.signalR.js"
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/geovis-pro/src/environments/environment.ts",
+                  "with": "projects/geovis-pro/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/geovis-pro/proxy.conf.json",
+            "port": 4204
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "geovis-pro:build:production"
+            },
+            "development": {
+              "browserTarget": "geovis-pro:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "geovis-pro:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/geovis-pro/**/*.ts",
+              "projects/geovis-pro/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "matdatabas": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss"
+        }
+      },
+      "root": "projects/matdatabas",
+      "sourceRoot": "projects/matdatabas/src",
+      "prefix": "mdb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/matdatabas",
+            "index": "projects/matdatabas/src/index.html",
+            "main": "projects/matdatabas/src/main.ts",
+            "polyfills": "projects/matdatabas/src/polyfills.ts",
+            "tsConfig": "projects/matdatabas/tsconfig.app.json",
+            "assets": [
+              "projects/matdatabas/src/favicon.ico",
+              "projects/matdatabas/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/matdatabas/src/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/matdatabas/src/environments/environment.ts",
+                  "with": "projects/matdatabas/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 4205,
+            "proxyConfig": "projects/matdatabas/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "matdatabas:build:production"
+            },
+            "development": {
+              "browserTarget": "matdatabas:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "matdatabas:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/matdatabas/**/*.ts",
+              "projects/matdatabas/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "markhandlaggning": {
+      "root": "projects/markhandlaggning",
+      "sourceRoot": "projects/markhandlaggning/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/markhandlaggning",
+            "index": "projects/markhandlaggning/src/index.html",
+            "main": "projects/markhandlaggning/src/main.ts",
+            "tsConfig": "projects/markhandlaggning/tsconfig.app.json",
+            "polyfills": "projects/markhandlaggning/src/polyfills.ts",
+            "assets": [
+              "projects/markhandlaggning/src/assets",
+              "projects/markhandlaggning/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              }
+            ],
+            "styles": [
+              "projects/markhandlaggning/src/style/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/markhandlaggning/src/environments/environment.ts",
+                  "with": "projects/markhandlaggning/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/markhandlaggning/proxy.conf.json",
+            "port": 4206
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "markhandlaggning:build:production"
+            },
+            "development": {
+              "browserTarget": "markhandlaggning:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "markhandlaggning:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/markhandlaggning/**/*.ts",
+              "projects/markhandlaggning/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "markkoll": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "prefix": "mk"
+        },
+        "@schematics/angular:directive": {
+          "prefix": "mk"
+        }
+      },
+      "root": "projects/markkoll",
+      "sourceRoot": "projects/markkoll/src",
+      "prefix": "mk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/markkoll",
+            "index": "projects/markkoll/src/index.html",
+            "main": "projects/markkoll/src/main.ts",
+            "polyfills": "projects/markkoll/src/polyfills.ts",
+            "tsConfig": "projects/markkoll/tsconfig.app.json",
+            "assets": [
+              "projects/markkoll/src/favicon.ico",
+              "projects/markkoll/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/svg-country-flags/svg",
+                "output": "assets/svg-country-flags/svg"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/markkoll/src/styles/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/markkoll/src/environments/environment.ts",
+                  "with": "projects/markkoll/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/markkoll/proxy.conf.json",
+            "port": 4208
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "markkoll:build:production"
+            },
+            "development": {
+              "browserTarget": "markkoll:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "markkoll:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/markkoll/**/*.ts",
+              "projects/markkoll/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "mitt-metria": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "prefix": "mm"
+        },
+        "@schematics/angular:directive": {
+          "prefix": "mm"
+        }
+      },
+      "root": "projects/mitt-metria",
+      "sourceRoot": "projects/mitt-metria/src",
+      "prefix": "mm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mitt-metria",
+            "index": "projects/mitt-metria/src/index.html",
+            "main": "projects/mitt-metria/src/main.ts",
+            "polyfills": "projects/mitt-metria/src/polyfills.ts",
+            "tsConfig": "projects/mitt-metria/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/mitt-metria/src/favicon.ico",
+              "projects/mitt-metria/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/mitt-metria/src/styles.scss"
+            ],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mitt-metria/src/environments/environment.ts",
+                  "with": "projects/mitt-metria/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "projects/mitt-metria/proxy.conf.json",
+            "port": 4209
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mitt-metria:build:production"
+            },
+            "development": {
+              "browserTarget": "mitt-metria:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mitt-metria:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mitt-metria/src/test.ts",
+            "polyfills": "projects/mitt-metria/src/polyfills.ts",
+            "tsConfig": "projects/mitt-metria/tsconfig.spec.json",
+            "karmaConfig": "projects/mitt-metria/karma.conf.js",
+            "assets": [
+              "projects/mitt-metria/src/favicon.ico",
+              "projects/mitt-metria/src/assets"
+            ],
+            "styles": [
+              "projects/mitt-metria/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/mitt-metria/**/*.ts",
+              "projects/mitt-metria/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "samrad": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/samrad",
+      "sourceRoot": "projects/samrad/src",
+      "prefix": "sr",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/samrad",
+            "index": "projects/samrad/src/index.html",
+            "main": "projects/samrad/src/main.ts",
+            "polyfills": "projects/samrad/src/polyfills.ts",
+            "tsConfig": "projects/samrad/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/samrad/src/favicon.ico",
+              "projects/samrad/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/samrad/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/samrad/src/environments/environment.ts",
+                  "with": "projects/samrad/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 4210,
+            "proxyConfig": "projects/samrad/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "samrad:build:production"
+            },
+            "development": {
+              "browserTarget": "samrad:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "samrad:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/samrad/src/test.ts",
+            "polyfills": "projects/samrad/src/polyfills.ts",
+            "tsConfig": "projects/samrad/tsconfig.spec.json",
+            "karmaConfig": "projects/samrad/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/samrad/src/favicon.ico",
+              "projects/samrad/src/assets"
+            ],
+            "styles": [
+              "projects/samrad/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/samrad/**/*.ts",
+              "projects/samrad/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "storybook": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/storybook",
+      "sourceRoot": "projects/storybook/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/storybook",
+            "index": "projects/storybook/src/index.html",
+            "main": "projects/storybook/src/main.ts",
+            "polyfills": "projects/storybook/src/polyfills.ts",
+            "tsConfig": "projects/storybook/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/storybook/src/favicon.ico",
+              "projects/storybook/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/lib/assets",
+                "output": "assets/lib"
+              },
+              {
+                "glob": "*.json",
+                "input": "projects/lib/translate/locales",
+                "output": "assets/locales/xp/"
+              }
+            ],
+            "styles": [
+              "projects/storybook/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/storybook/src/environments/environment.ts",
+                  "with": "projects/storybook/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "storybook:build:production"
+            },
+            "development": {
+              "browserTarget": "storybook:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "storybook:build"
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "storybook:build:development",
+            "port": 6006,
+            "tsConfig": ".storybook/tsconfig.json"
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "outputDir": "dist/storybook",
+            "browserTarget": "storybook:build:production"
+          }
+        }
+      }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "xp",
+      "style": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "xp"
+    }
+  },
+  "cli": {
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  }
+}

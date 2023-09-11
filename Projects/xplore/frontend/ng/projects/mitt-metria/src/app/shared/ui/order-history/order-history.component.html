@@ -1,0 +1,74 @@
+<div class="column-titles">
+  <th>{{ "mm.orderHistory.orderId" | transloco }}</th>
+  <th *ngIf="admin">{{ "mm.orderHistory.salesforceId" | transloco }}</th>
+  <th *ngIf="admin">{{ "mm.orderHistory.customer" | transloco }}</th>
+  <th>{{ "mm.orderHistory.date" | transloco }}</th>
+  <th *ngIf="customer">{{ "mm.orderHistory.price" | transloco }}</th>
+  <th>{{ "mm.orderHistory.state" | transloco }}</th>
+  <th *ngIf="customer">{{ "mm.orderHistory.receipt" | transloco }}</th>
+</div>
+
+<div *ngIf="!isLoading; else loading">
+  <mat-accordion multi>
+
+    <mat-expansion-panel *ngFor="let order of orders">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ order.order.code }}</mat-panel-title>
+        <mat-panel-title *ngIf="admin">{{ order.order.externalRef }}
+        </mat-panel-title>
+        <mat-panel-title *ngIf="admin" class="overflow-hidden">{{ order.order.emailAddress }}
+        </mat-panel-title>
+        <mat-panel-title>{{ order.order.updatedAt | date:"d MMM y HH:mm" : "sv-SE" }}
+        </mat-panel-title>
+        <mat-panel-title *ngIf="customer">{{ order.order.totalWithTax }} {{ order.order.currencyCode }}
+        </mat-panel-title>
+        <mat-panel-title *ngIf="order.order.state !== 'Cancelled'">
+          {{ setOrderStateCustomer(order.lines) }}
+        </mat-panel-title>
+        <mat-panel-title *ngIf="order.order.state === 'Cancelled'">
+          {{ "mm.orderHistory.orderCancelled" | transloco }}
+        </mat-panel-title>
+        <mat-panel-title *ngIf="customer">
+          <a class="receipt" (click)="createReceipt($event, order)">{{"mm.orderHistory.receipt" |
+            transloco }}</a>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <h3 *ngIf="admin">{{ "mm.orderHistory.orderAdmin" | transloco }}</h3>
+      <div class="customer-order-header" *ngIf="customer">
+        <h3>{{ "mm.orderHistory.orderCustomer" | transloco }}</h3>
+        <mat-chip-list>
+          <mat-chip *ngIf="order.order.externalRef">
+            {{ "mm.orderHistory.orderPlacedBySalesperson" | transloco }}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+      <h4 *ngIf="admin">{{ "mm.common.shippingAddress" | transloco }}</h4>
+      <p class="shipping-address" *ngIf="admin">
+        {{ order.order.emailAddress || "Leveransadress ej angett" }}
+      </p>
+      <div *ngFor="let line of order.lines" class="order-line row">
+        <div class="display-attributes">
+          <xp-order-line [orderLine]="line.orderLine" [isDeleteButtonVisible]="false"></xp-order-line>
+        </div>
+        <div class="order-line-state row">
+          <mat-chip-list class="chips" *ngIf="order.order.state !== 'Cancelled'">
+            <mat-chip class="chip-accent" *ngIf="line.ready">{{ "mm.orderHistory.done" | transloco }}</mat-chip>
+            <mat-chip class="chip-primary" *ngIf="!line.ready">{{ "mm.orderHistory.producing" | transloco }}</mat-chip>
+          </mat-chip-list>
+
+          <button *ngIf="line.ready" (click)="downloadProduct(line.downloadUrl)" mat-icon-button>
+            <mat-icon>download</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>
+
+<ng-template #loading>
+  <div class="spinner-wrapper">
+    <mat-spinner [diameter]="48"></mat-spinner>
+  </div>
+</ng-template>

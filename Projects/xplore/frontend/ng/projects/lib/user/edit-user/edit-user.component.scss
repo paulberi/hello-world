@@ -1,0 +1,20 @@
+form {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding-bottom: 1.5em;
+}
+
+.actions {
+  float: right;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: auto auto;
+}
+
+.cancel-button{
+  background-color: var(--background);
+}
+
+.cancel-button:hover{
+  text-decoration: underline;
+}

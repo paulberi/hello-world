@@ -1,0 +1,31 @@
+<div class="choices-content">
+  <form class="add-content">
+    <div class="test">
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{ editMenuTitle }}
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item" *ngFor="let menu of $menus|async" (click)="editMenu(menu)">
+          <p>{{ menu.menuName }}</p>
+        </a>
+      </div>
+    </div>
+
+      <input class="input-field" type="text" [value]="menuNameToEdit" placeholder="Matsedelns namn: " #menuNameEdit>
+
+      <div class="dates">
+        <label class="date-label" for="start">Startdatum: </label>
+        <input class="date-input" type="date" id="start" name="start-date" [value]="chosenMenuStartDate | date:'yyyy-MM-dd'" min="2021-01-01" max="2030-12-31" #chosenStartDate>
+
+        <label class="date-label" for="start">Slutdatum: </label>
+        <input class="date-input" type="date" id="end" name="end-date" [value]="chosenMenuEndDate | date:'yyyy-MM-dd'" min="2021-01-01" max="2030-12-31" #chosenEndDate>
+      </div>
+    </div>
+  </form>
+  <div class="button-test">
+    <button class="manage-menu-button" (click)="saveEditedMenu(menuNameEdit.value, chosenStartDate.value, chosenEndDate.value)">
+        Spara uppdaterad matsedel
+    </button>
+  </div>
+</div>

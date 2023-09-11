@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_gym</name>
+  <id>LayerInfoImpl-31dbdfcd:cb2bf5fcdc0:-e591</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-17938003:c4234209299:-cdb2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

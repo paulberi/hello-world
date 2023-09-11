@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+<VBox prefWidth="300" prefHeight="300" fx.controller="com.almasb.calc.controller" xmlns:fx="http://javafx.com/fxml">
+
+	<StackPane alignment="CENTER">
+		<Rectangle fill="TRANSPARENT" stroke="GRAY" width="250" height="50" />
+		<Text fx:id="output" />
+	</StackPane>
+	
+</VBox>

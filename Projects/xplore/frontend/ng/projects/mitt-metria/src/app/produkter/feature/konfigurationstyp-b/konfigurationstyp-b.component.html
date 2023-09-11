@@ -1,0 +1,25 @@
+<mm-stepper [title]="'mm.configurationTypeB.stepperTitle' | transloco" (cancelOrder)="cancelOrder.emit()"></mm-stepper>
+<div class="wrapper">
+  <div *ngIf="hasError" class="error-message-wrapper">
+    <xp-message severity="information" [text]="'mm.configuration.errorMessage' | transloco" [isClosable]="false">
+    </xp-message>
+  </div>
+  <div class="configuration-wrapper">
+    <div class="left">
+      <mat-label>{{ "mm.configurationTypeB.label" | transloco }}</mat-label>
+      <mm-sok-fastighet [placeholder]="'mm.configurationTypeB.placeholder' | transloco"
+        (fastighetSelected)="fastighetSelected($event)" (clear)="clear()">
+      </mm-sok-fastighet>
+
+      <h3>{{ "mm.configurationTypeB.fastighetsbeteckningTitle" | transloco }}</h3>
+      <mm-description [content]="'mm.configurationTypeB.fastighetsbeteckningDescription' | transloco" [limit]="1000"
+        [innerHtml]="true" [showReadMoreAndLessButton]="false">
+      </mm-description>
+    </div>
+    <div class="right">
+      <mm-din-kartprodukt [header]="'mm.configuration.yourMapProductHeader' | transloco" [displayAttributes]="displayAttributes" [price]="price"
+        [currency]="translateCurrencyCode(productVariant?.currencyCode)" [disableButton]="hasError || !nyckel" (addToCart)="addToCart()">
+      </mm-din-kartprodukt>
+    </div>
+  </div>
+</div>

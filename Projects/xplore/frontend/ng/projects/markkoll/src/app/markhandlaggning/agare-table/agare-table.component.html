@@ -1,0 +1,73 @@
+<xp-accordion-table [dataSource]="agare" [indexExpanded]="index" [columns]="columnsToDisplay()">
+
+  <ng-template let-element>
+    <ng-container *ngTemplateOutlet="templateRef; context: { $implicit: element }"></ng-container>
+  </ng-template>
+
+  <ng-container columns>
+    <ng-container matColumnDef="icon">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let elem; let i = dataIndex">
+        <button mat-icon-button (click)="select(i)" class="edit-button">
+          <mat-icon class="agaretable-icon" *ngIf="!isSelected(i)">create</mat-icon>
+          <mat-icon class="agaretable-icon" *ngIf="isSelected(i)">check</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="namn">
+      <th mat-header-cell *matHeaderCellDef class="mat-body-strong">{{ title }}</th>
+      <td mat-cell *matCellDef="let elem">
+        <span [ngClass]="{'notification-text': agareSaknas(elem) || isMissingInformation(elem)}">{{ elem.namn }}</span>
+        <mat-icon
+          class="notification-icon"
+          *ngIf="isMissingInformation(elem)"
+          [matTooltip]="'mk.agareinformation.missingInformation' | transloco"
+          matTooltipPosition="above"
+          color="warn">info_outline</mat-icon>
+        <mat-icon
+          class="notification-icon"
+          *ngIf="agareSaknas(elem)"
+          [matTooltip]="'mk.agareinformation.agareMissing' | transloco"
+          matTooltipPosition="above"
+          color="warn">info_outline</mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="andel">
+      <th mat-header-cell *matHeaderCellDef><span *ngIf="showHeaders">{{ 'mk.fastighetsagaretable.ownerShare' | transloco }}</span></th>
+      <td mat-cell *matCellDef="let elem">
+        <span [ngClass]="{'notification-text': isMissingAndel(elem)}">
+          {{ isMissingAndel(elem) ? ('mk.agareinformation.missingAndel' | transloco) : (elem.andel | andelFormat)}}
+        </span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="avtalsstatus">
+      <th mat-header-cell *matHeaderCellDef><span *ngIf="showHeaders">{{ 'mk.fastighetsagaretable.agreementStatus' | transloco }}</span></th>
+      <td mat-cell *matCellDef="let elem">
+        <span *ngIf="elem.inkluderaIAvtal" [ngClass]="{'notification-text' : isAvtalspartOverdue(elem)}">
+          {{ elem.status | prefix:"mk.avtal." | transloco }}
+        </span>
+        <mat-icon class="notification-icon"
+                  *ngIf="isAvtalspartOverdue(elem) && elem.inkluderaIAvtal"
+                  [matTooltip]="'mk.agareinformation.notificationAvtalOverdue' | transloco"
+                  matTooltipPosition="above"
+                  color="warn">
+          info_outline
+        </mat-icon>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="signera">
+      <th mat-header-cell *matHeaderCellDef>
+        <span class="align-right" *ngIf="showHeaders">{{ 'mk.fastighetsagaretable.signeraAvtal' | transloco }}</span>
+      </th>
+      <td mat-cell *matCellDef="let elem;">
+        <span class="align-right">
+          <mat-checkbox [checked]="elem.inkluderaIAvtal" (change)="emitSigneraAvtal(elem, $event.checked)"></mat-checkbox>
+        </span>
+      </td>
+    </ng-container>
+  </ng-container>
+</xp-accordion-table>

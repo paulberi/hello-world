@@ -1,0 +1,41 @@
+.breadcrumb {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.main-content-container {
+  position: relative;
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
+  z-index: 30;
+}
+
+.main-content {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.tillbaka{
+  color: var(--primary);
+}
+
+.tillbaka-link{
+  color: var(--primary);
+}
+
+.top {
+  display: flex;
+  justify-content:space-between;
+  padding-bottom: 3em;
+}
+
+.toggle-previous-version {
+  align-self: center;
+  margin-right: 1.5rem;
+}
+.menubtn{
+  margin-left: auto;
+  margin-top: 5px;
+  line-height: 20px;
+  height: 35px;
+  width: 90px;
+}

@@ -1,0 +1,39 @@
+.foodMenus {
+    display: flex;
+    border: 10px;
+    border-color: red;
+}
+
+.foodMenus .dateOfTheDay {
+    .dateDay {
+        background: rgb(0, 140, 255);
+        margin-left: 75px;
+        width: 150px;
+        height: 150px;
+        color: white;
+    }
+}
+
+.foodMenus .menusOfTheDay {
+    .menuItems {
+        background: rgb(0, 140, 255);
+        margin-right: 75;
+        width: 750px;
+        height: 150px;
+        .Food-menu-item {
+            color: white;
+        }
+    }
+}
+
+.foodMenus .numbering {
+    .images {
+        //background: rgb(0, 140, 255);
+        //margin-left: 75px;
+        width: 50px;
+        height: 150px;
+        .Food-character {
+            color: white;
+        }
+    }
+}

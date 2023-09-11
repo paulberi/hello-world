@@ -1,0 +1,1677 @@
+{
+  "layers": [
+    {
+      "id": "metria:MetriaFastighetPlus",
+      "type": "tile",
+      "group": "background",
+      "title": "Metria FastighetPlus",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetPlus",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "selectionStyleDelomraden": "selectedDelomrade@common",
+      "visible": false
+    },
+    {
+      "id": "metria:MetriaBakgrundGSD",
+      "type": "tile",
+      "group": "background",
+      "title": "Fastighetskartan",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:MetriaBakgrundGSD",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "id": "metria:MetriaFastighetGra",
+      "type": "tile",
+      "group": "background",
+      "title": "Fastighetskartan nedtonad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:MetriaFastighetGra",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "selectionStyleDelomraden": "selectedDelomrade@common",
+      "visible": false
+    },
+    {
+      "id": "metria:orto_farg_kombinerad",
+      "type": "tile",
+      "group": "background",
+      "title": "Ortofoto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "metria:orto_farg_kombinerad"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      },
+      "selectionStyleDelomraden": "selectedDelomradeDark@common"
+    },
+    {
+      "id": "metria:Hillshade_multi",
+      "type": "tile",
+      "group": "background",
+      "title": "Hillshade",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:Hillshade_multi",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "id": "metria:NMD_markfuktighetsindex",
+      "type": "tile",
+      "group": "background",
+      "title": "Markfuktighetsindex",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:NMD_markfuktighetsindex",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "selectionStyleDelomraden": "selectedDelomrade@common",
+      "visible": false
+    },
+    {
+      "id": "adresstext",
+      "type": "tile",
+      "title": "Adresstext",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "LAYERS": "metria:Adresstext",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "plnamn",
+            "label": "Namn"
+          },
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "metria:PBR_fornlamningar_bestammelser",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "plnamn",
+            "label": "Namn"
+          },
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fastighetsytor",
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastigheter (ytor)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetFinfo",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:RiksintresseVattendrag_LST",
+      "type": "tile",
+      "group": "Mark_vattenanvändning",
+      "title": "Riksintresse Vattendrag_LST",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseVattendrag_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:RiksintresseNaturvard_NV",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Naturvård (NV)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "riks_naturvard"
+    },
+    {
+      "id": "metria:RiksintresseMineral_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Mineral (LST)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseMineral_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:RiksintresseKulturmiljovard_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kulturmiljövård (LST)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "riks_kulturvard"
+    },
+    {
+      "id": "metria:RiksintresseFriluftsliv_NV",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Friluftsliv (NV)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseFriluftsliv_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "riks_friluftsliv"
+    },
+    {
+      "id": "metria:RiksintresseRorligtFriluftsliv_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Rörligt friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseRorligtFriluftsliv_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "riks_rorligt_friluftsliv"
+    },
+    {
+      "id": "metria:RiksintresseKommunikationer_punkt_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (punkt)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_punkt_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:RiksintresseKommunikationer_linje_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (linje)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_linje_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:RiksintresseKommunikationer_yta_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (yta)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_yta_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.75,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:RiksintresseVindbruk_LST",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Vindbruk (LST)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseVindbruk_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:Natura2000_SNV",
+      "type": "tile",
+      "group": "turism",
+      "title": "Natura 2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Natura2000_SNV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "metria:Nationalpark_NV",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Nationalpark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Nationalpark_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "metria:Naturminne_NV",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturminnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturminne_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "metria:Naturreservat_NV",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturreservat_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "metria:DjurVaxtskydd_NV",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Djur och växtskyddsområden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:DjurVaxtskydd_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "metria:Artdata_slu",
+      "type": "tile",
+      "group": "natur",
+      "title": "Artdata (SLU)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Artdata_slu",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "artdata_slu"
+    },
+    {
+      "id": "metria:Fjallnaraskog_linje_SKS",
+      "type": "tile",
+      "group": "natur",
+      "title": "Fjällnära skog (Linje)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fjallnaraskog_linje_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:NMD_basskikt",
+      "type": "tile",
+      "group": "nationellamarktackedata",
+      "title": "NMD Basskikt",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:NMD_basskikt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:Exploaterad_mark_2018-2019",
+      "type": "tile",
+      "group": "test_2020",
+      "title": "Exploaterad mark 2018-2019",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Exploaterad_mark_2018-2019",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:Exploaterad_mark_2019-2020",
+      "type": "tile",
+      "group": "test_2020",
+      "title": "Exploaterad mark 2019-2020",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Exploaterad_mark_2019-2020",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:Testprodukt_NMD2020_33VVC",
+      "type": "tile",
+      "group": "test_2020",
+      "title": "Basskikt",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Testprodukt_NMD2020_33VVC",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "metria:orto_ir",
+      "type": "tile",
+      "group": "flygfoto",
+      "title": "Orto-IR",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_ir",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "Metadata_orto",
+      "type": "tile",
+      "group": "flygfoto",
+      "title": "Metadata orto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Metadata_orto",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:Byggnad_topo10",
+      "type": "tile",
+      "group": "allmant",
+      "title": "Byggnader",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Byggnad_topo10",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "detaljtyp",
+            "label": "Typ"
+          },
+          {
+            "name": "andamal1",
+            "label": "Ändamål"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Sumpskogar_SKS",
+      "type": "tile",
+      "group": "skog",
+      "title": "Sumpskogar (SKS)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Sumpskogar_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "sumpskog"
+    },
+    {
+      "id": "Nyckelbiotoper_SKS",
+      "type": "tile",
+      "group": "skog",
+      "title": "Nyckelbiotoper (SKS)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Nyckelbiotoper_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "sks_nyckelbiotop"
+    },
+    {
+      "id": "Biotopskydd_SKS",
+      "type": "tile",
+      "group": "skog",
+      "title": "Biotopskydd (SKS)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Biotopskydd_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "sks_biotopskydd"
+    },
+    {
+      "id": "metria:Fastighetsgranser",
+      "title": "Fastighetsgränser",
+      "type": "tile",
+      "group": "fastighet",
+      "infoTemplate": "alla",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsgranser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "id": "metria:Granspunkter",
+      "title": "Fastighetsgränspunkter (FK)",
+      "type": "tile",
+      "group": "fastighet",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Granspunkter",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:Fornkulturlamningtext_topo10",
+      "title": "Text för fornlämningar och övriga kulturhistoriska lämningar",
+      "type": "tile",
+      "group": "bestammelser",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fornkulturlamningtext_topo10",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:fornlamning_idpunkt",
+      "title": "ID-punkter för fornlämningars ytor",
+      "type": "tile",
+      "group": "bestammelser",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:fornlamning_idpunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:bestammelse_granspunkt",
+      "title": "Gränspunkter för bestämmelser",
+      "type": "tile",
+      "group": "bestammelser",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:bestammelse_granspunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:rattighet_ga_granspunkt",
+      "title": "Gränspunkter för rättigheter och gemensamhetsanläggningar",
+      "type": "tile",
+      "group": "rattigheter",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:rattighet_ga_granspunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:kultur_lamning_idpunkt",
+      "title": "ID-punkter för övriga kulturhistoriska lämningars ytor",
+      "type": "tile",
+      "group": "nkm_kultur",
+      "infoTemplate": null,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:kultur_lamning_idpunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:Distrikt",
+      "title": "Distrikt",
+      "type": "tile",
+      "group": "nkm_kultur",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Distrikt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "id": "metria:MetriaBakgrundGra",
+      "title": "Metria Bakgrund (nedtonad)",
+      "type": "tile",
+      "group": "background",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:MetriaBakgrundGra"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomradeDark@common"
+    },
+    {
+      "id": "metria:Vattenskydd_NV",
+      "title": "Vattenskyddsområde (NV)",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Vattenskydd_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Länsstyrelsen eller kommunen får besluta om vattenskyddsområde till skydd för en grund- eller ytvattentillgång som utnyttjas eller kan antas komma att utnyttjas för vattentäkt (7 kapitlet 21 och 22 §§ miljöbalken).",
+        "attribution": "Naturvårdsverket"
+      },
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "id": "msb:LST_maxtemp_2017_2019",
+      "type": "tile",
+      "group": "temperatur",
+      "title": "Maxtemperatur_2017_2019",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:LST_maxtemp_2017_2019",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "msb_varmekarta"
+    },
+    {
+      "id": "msb:LST_maxtemp_2018_2020",
+      "type": "tile",
+      "group": "temperatur",
+      "title": "Maxtemperatur_2018_2020",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:LST_maxtemp_2018_2020",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "msb_varmekarta"
+    },
+    {
+      "id": "msb:LST_maxtemp_2019_2021",
+      "type": "tile",
+      "group": "temperatur",
+      "title": "Maxtemperatur_2019_2021",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:LST_maxtemp_2019_2021",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "msb_varmekarta"
+    },
+    {
+      "id": "msb:LST_maxtemp_2020_2022",
+      "type": "tile",
+      "group": "temperatur",
+      "title": "Maxtemperatur_2020_2022",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:LST_maxtemp_2020_2022",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "msb_varmekarta"
+    },
+    {
+      "id": "msb:LST_maxtemp_2017_2022",
+      "type": "tile",
+      "group": "temperatur",
+      "title": "Maxtemperatur_2017_2022",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:LST_maxtemp_2017_2022",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "msb_varmekarta"
+    }
+  ],
+  "infoTemplates": {
+    "riks_friluftsliv": {
+      "properties": [
+        {
+          "name": "lank_beslu",
+          "label": "länk_beslut",
+
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "lank_beslu",
+          "label": "Rubriklänk",
+          "type": "url"
+        },
+        {
+          "name": "lank_varde",
+          "label": "länk_värde",
+          "linkRef": "the-link2"
+        },
+        {
+          "id": "the-link2",
+          "name": "lank_varde",
+          "type": "url",
+          "template": "{{lank_varde}}"
+        },
+        {
+          "name": "*"
+        },
+        {
+          "name": "shape_area",
+          "visible": false
+        },
+        {
+          "name": "shape_len",
+          "visible": false
+        },
+        {
+          "name": "geom",
+          "visible": false
+        }
+      ]
+    },
+    "riks_rorligt_friluftsliv": {
+      "properties": [
+        {
+          "name": "objektlank",
+          "label": "objektlänk",
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "objektlank",
+          "label": "Rubriklänk",
+          "type": "url"
+        },
+        {
+          "name": "beskrivnin",
+          "label": "beskrivning"
+        },
+        {
+          "name": "*"
+        },
+        {
+          "name": "geom",
+          "visible": false
+        }
+      ]
+    },
+    "riks_kulturvard": {
+      "properties": [
+        {
+          "name": "objektlank",
+          "label": "objektlänk",
+          "linkRef": "beskrivnin-link"
+        },
+        {
+          "id": "beskrivnin-link",
+          "name": "objektlank",
+          "label": "Rubriklänk",
+          "type": "url"
+        },
+        {
+          "name": "beskrivnin",
+          "label": "beskrivning"
+        },
+        {
+          "name": "*"
+        },
+        {
+          "name": "geom",
+          "visible": false
+        }
+      ]
+    },
+    "riks_naturvard": {
+      "properties": [
+        {
+          "name": "beskrivnin",
+          "label": "beskrivning",
+
+          "linkRef": "beskrivnin-link"
+        },
+        {
+          "id": "beskrivnin-link",
+          "name": "beskrivnin",
+          "label": "Rubriklänk",
+          "type": "url"
+        },
+        {
+          "name": "*"
+        },
+        {
+          "name": "shape_area",
+          "visible": false
+        },
+        {
+          "name": "shape_len",
+          "visible": false
+        }
+      ]
+    },
+    "skyddade-omraden": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Namn"
+        },
+        {
+          "name": "skyddstyp",
+          "label": "Skyddstyp"
+        },
+        {
+          "name": "origin",
+          "label": "Källa"
+        },
+        {
+          "name": "area_ha",
+          "label": "Area",
+          "template": "{{area_ha}} ha"
+        }
+      ]
+    },
+    "artdata_slu_alla": {
+      "properties": [
+        {
+          "name": "location_coordinateuncertaintyinmeters",
+          "label": "coorUncertainty",
+          "template": "{{location_coordinateuncertaintyinmeters}}  m"
+        },
+        {
+          "name": "occurrence_ispositiveobservation",
+          "label": "isPositiveObservati"
+        },
+        {
+          "name": "occurrence_substrate_name_value",
+          "label": "occuSubNameValue"
+        },
+        {
+          "name": "taxon_attributes_natura2000habitatsdirectivearticle2",
+          "label": "natura2000Article2"
+        },
+        {
+          "name": "taxon_attributes_natura2000habitatsdirectivearticle4",
+          "label": "natura2000Article4"
+        },
+        {
+          "name": "taxon_attributes_natura2000habitatsdirectivearticle5",
+          "label": "natura2000Article5"
+        },
+        {
+          "name": "taxon_attributes_protectedbylaw",
+          "label": "protectedByLaw"
+        },
+        {
+          "name": "taxon_attributes_swedishoccurrence",
+          "label": "swedishOccurrence"
+        },
+        {
+          "name": "taxon_attributes_redlistcategory",
+          "label": "redlistCategory"
+        },
+        {
+          "name": "identification_uncertainidentification",
+          "label": "uncertainIdentific"
+        },
+        {
+          "name": "identification_determinationmethod_value",
+          "label": "determMethodValue"
+        },
+        {
+          "name": "identification_verificationstatus_value",
+          "label": "verificStatusValue"
+        },
+        {
+          "name": "event_verbatimeventdate",
+          "label": "verbatimeventDate"
+        },
+        {
+          "name": "location_decimallatitude",
+          "label": "locDecimalLatitude"
+        },
+        {
+          "name": "location_decimallongitude",
+          "label": "locDecimalLongitude"
+        },
+        {
+          "name": "occurrence_behavior_value",
+          "label": "occuBehaviorValue"
+        },
+        {
+          "name": "occurrence_biotope_value",
+          "label": "occurBiotopeValue"
+        },
+        {
+          "name": "occurrence_individualcount",
+          "label": "occuIndividualCount"
+        },
+        {
+          "name": "occurrence_occurrenceid",
+          "label": "occurrenceId"
+        },
+        {
+          "name": "taxon_scientificname",
+          "label": "scientificname"
+        },
+        {
+          "name": "occurrence_reporteddate",
+          "label": "reportedDate"
+        },
+        {
+          "name": "taxon_vernacularname",
+          "label": "vernacularName"
+        },
+        {
+          "name": "occurrence_url",
+          "label": "occurrence_url",
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "occurrence_url",
+          "type": "url",
+          "template": "{{occurrence_url}}"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "artdata_slu": {
+      "properties": [
+        {
+          "name": "location_coordinateuncertaintyinmeters",
+          "label": "coorUncertainty",
+          "template": "{{location_coordinateuncertaintyinmeters}}  m"
+        },
+        {
+          "name": "occurrence_ispositiveobservation",
+          "label": "isPositiveObservati"
+        },
+        {
+          "name": "taxon_attributes_swedishoccurrence",
+          "label": "swedishOccurrence"
+        },
+        {
+          "name": "taxon_attributes_redlistcategory",
+          "label": "redlistCategory"
+        },
+        {
+          "name": "identification_verificationstatus_value",
+          "label": "verificStatusValue"
+        },
+        {
+          "name": "occurrence_occurrenceid",
+          "label": "occurrenceId"
+        },
+        {
+          "name": "taxon_attributes_organismgroup",
+          "label": "organismgroup"
+        },
+        {
+          "name": "taxon_scientificname",
+          "label": "scientificname"
+        },
+        {
+          "name": "occurrence_reporteddate",
+          "label": "reportedDate"
+        },
+        {
+          "name": "taxon_vernacularname",
+          "label": "vernacularName"
+        },
+        {
+          "name": "occurrence_url",
+          "label": "occurrence_url",
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "occurrence_url",
+          "type": "url",
+          "template": "{{occurrence_url}}"
+        },
+        {
+          "name": "event_startdate",
+          "label": "eventStartDate"
+        },
+        {
+          "name": "event_enddate",
+          "label": "eventEndDate"
+        }
+      ]
+    },
+    "sks_biotopskydd":{
+      "properties": [
+        {
+          "name": "beteckn",
+          "label": "Beteckning",
+          "linkRef":"title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "url",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "lan",
+          "label": "Län"
+        },
+        {
+          "name": "kommun",
+          "label": "Kommun"
+        },
+        {
+          "name": "arendear",
+          "label": "Ärendeår"
+        },
+        {
+          "name": "biotyp",
+          "label": "Biotoptyp"
+        },
+        {
+          "name": "naturtyp",
+          "label": "Naturtyp"
+        },
+        {
+          "name": "areatot",
+          "label": "Total area"
+        },
+        {
+          "name": "areaprod",
+          "label": "Produktionsarea"
+        },
+        {
+          "name": "datbeslut",
+          "label": "Beslutsdatum"
+        },
+        {
+          "name": "standort",
+          "label": "Standardord"
+        }
+      ]
+    },
+    "sks_nyckelbiotop":{
+      "properties": [
+        {
+          "name": "beteckn",
+          "label": "Beteckning",
+          "linkRef":"title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "url",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "lan",
+          "label": "Län"
+        },
+        {
+          "name": "kommun",
+          "label": "Kommun"
+        },
+        {
+          "name": "objnamn",
+          "label": "Objektsnamn"
+        },
+        {
+          "name": "datinv",
+          "label": "Inventerad"
+        },
+        {
+          "name": "biotop1",
+          "label": "Biotoper"
+        },
+        {
+          "name": "biotop2",
+          "label": "Biotoper, forts"
+        },
+        {
+          "name": "biotop3",
+          "label": "Biotoper, forts"
+        },
+        {
+          "name": "beskrivn1",
+          "label": "Beskrivning"
+        },
+        {
+          "name": "beskrivn2",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn3",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn4",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn5",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn6",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn7",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "beskrivn8",
+          "label": "Beskrivning, forts"
+        },
+        {
+          "name": "objektnr",
+          "label": "Objektsnummer"
+        },
+        {
+          "name": "del",
+          "label": "Del"
+        },
+        {
+          "name": "storruta",
+          "label": "Storruta"
+        },
+        {
+          "name": "ekoblad",
+          "label": "Ekoblad"
+        }
+      ]
+    },
+    "riks_kulturvard_alla":{
+      "properties": [
+        {
+          "name": "lanskod",
+          "label": "Länskod"
+        },
+        {
+          "name": "namn",
+          "label": "Namn"
+        },
+        {
+          "name": "metodbeskr",
+          "label": "Metodbeskrivning"
+        },
+        {
+          "name": "beskrivnin",
+          "label": "Länk till beskrivning",
+          "linkRef":"beskrivnin-link"
+        },
+        {
+          "id": "beskrivnin-link",
+          "name": "objektlank",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "tillkdatum",
+          "label": "Tillkom datum"
+        },
+        {
+          "name": "revdatum",
+          "label": "Reviderad"
+        },
+        {
+          "name": "originalid",
+          "label": "Orginal-Id"
+        },
+        {
+          "name": "referens",
+          "label": "Referens"
+        },
+        {
+          "name": "anm",
+          "label": "Anmärkning"
+        }
+      ]
+    },
+    "riks_friluftsliv_alla":{
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Namn"
+        },
+        {
+          "name": "naturtyp",
+          "label": "Naturtyp"
+        },
+        {
+          "name": "aktivitet",
+          "label": "Aktivitet"
+        },
+        {
+          "name": "kommun",
+          "label": "Kommun"
+        },
+        {
+          "name": "lan",
+          "label": "Län"
+        },
+        {
+          "name": "amnesomr",
+          "label": "Ämnesområde"
+        },
+        {
+          "name": "area_land_",
+          "label": "Area, land"
+        },
+        {
+          "name": "area_vatte",
+          "label": "Area, vatten"
+        },
+        {
+          "name": "area_ha",
+          "label": "Area, totalt"
+        },
+        {
+          "name": "arendenr",
+          "label": "Ärendenummer"
+        },
+        {
+          "name": "besldatum",
+          "label": "BBeslutsdatum"
+        },
+        {
+          "name": "lagrum",
+          "label": "Lagrum"
+        },
+        {
+          "name": "skydd",
+          "label": "Skydd"
+        },
+        {
+          "name": "omradesnr",
+          "label": "Områdesnummer"
+        },
+        {
+          "name": "lank_beslu",
+          "label": "Länk till beslut",
+          "linkRef":"beslu-link"
+        },
+        {
+          "id": "beslu-link",
+          "name": "lank_beslu",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "lank_varde",
+          "label": "Länk till värde",
+          "linkRef":"varde-link"
+        },
+        {
+          "id": "varde-link",
+          "name": "lank_varde",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        }
+      ]
+    },
+    "riks_naturvard_alla":{
+      "properties": [
+        {
+          "name": "skydd",
+          "label": "Skydd"
+        },
+        {
+          "name": "amnesomrad",
+          "label": "Ämnesrad"
+        },
+        {
+          "name": "namn",
+          "label": "Namn"
+        },
+        {
+          "name": "beskrivnin",
+          "label": "Länk till beskrivning",
+          "linkRef":"beskrivnin-link"
+        },
+        {
+          "id": "beskrivnin-link",
+          "name": "beskrivnin",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "lagrum",
+          "label": "Lagrum"
+        },
+        {
+          "name": "beslutsdat",
+          "label": "Beslutsdatum"
+        },
+        {
+          "name": "originalid",
+          "label": "Orginal-Id"
+        },
+        {
+          "name": "riksid",
+          "label": "Riks-Id"
+        }
+      ]
+    },
+    "sumpskog": {
+      "properties": [
+        {
+          "name": "kartid2",
+          "label": "Id",
+          "linkRef": "title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "url",
+          "label": "Klicka för mer information",
+          "type": "url",
+          "maxLength": 254
+        }
+      ]
+    },
+    "msb_varmekarta": {
+      "properties": [
+        {
+          "name": "GRAY_INDEX",
+          "label": "Grader (Celsius)"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  }
+}
+

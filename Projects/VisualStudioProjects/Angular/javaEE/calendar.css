@@ -1,0 +1,14 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-spacing: 0ch;
+}
+
+.workdays {
+    background-color: green;
+}
+
+.weekend {
+    background-color: cyan;
+}

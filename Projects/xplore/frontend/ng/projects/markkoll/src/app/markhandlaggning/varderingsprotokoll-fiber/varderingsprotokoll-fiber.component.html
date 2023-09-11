@@ -1,0 +1,212 @@
+<div id="wrapper">
+  <xp-message severity="information" [isClosable]="false" [isActionable]="false" class="message-container">
+    <h3>{{ "mk.varderingsprotokoll.fiber.messageTitle" | transloco}}</h3>
+    <p>{{ "mk.varderingsprotokoll.fiber.messageText" | transloco}}</p>
+  </xp-message>
+  <div class="row" *ngIf="vp">
+    <div class="col-12">
+      <form [formGroup]="form" (keydown.enter)="$event.preventDefault()">
+        <div class="row">
+          <ng-container formGroupName="vpForm">
+            <mat-form-field class="fg-3">
+              <mat-label>{{"mk.varderingsprotokoll.uppdragsnummer" | transloco}}</mat-label>
+              <input matInput formControlName="uppdragsnummer" tabindex="-1"/>
+            </mat-form-field>
+            <mat-form-field class="fg-3" formGroupName="metadata">
+              <mat-label>{{"mk.varderingsprotokoll.ansvarigVarderareForetag" | transloco}}</mat-label>
+              <input matInput
+                    formControlName="varderingsmanOchForetag"/>
+            </mat-form-field>
+          </ng-container>
+
+          <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+            <mat-label>{{"mk.varderingsprotokoll.markslag" | transloco}}</mat-label>
+            <input matInput formControlName="markslag"/>
+          </mat-form-field>
+
+        </div>
+
+        <!-- Är tänkt att finnas på plats innan release, så låter denna ligga kvar -->
+        <!-- <div class="row markera-alla">
+          <mat-checkbox><span class="radnr"></span>{{"mk.varderingsprotokoll.markAll" | transloco}}</mat-checkbox>
+        </div> -->
+
+        <ng-container formGroupName="vpForm">
+          <div class="row vp-rad">
+            <mat-checkbox [checked]="!isEmpty(vp?.markledning)"
+                          (change)="onCheckboxChange($event.checked, vp?.markledning, markledningPush.bind(this))">
+              {{"mk.varderingsprotokoll.fiber.ersattningMarkledning" | transloco}}
+            </mat-checkbox>
+          </div>
+          <div class="row" formArrayName="markledning">
+            <div class="col-12">
+              <div *ngFor="let markledning of markledningArray; let i=index">
+                <div [formGroupName]="i" class="row">
+                  <button mat-icon-button (click)="removeAtIndex(vp.markledning, i)" class="remove-row-button">
+                    <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                  </button>
+                  <mat-form-field class="fg-6">
+                    <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                    <input matInput formControlName="beskrivning"/>
+                  </mat-form-field>
+                  <mat-form-field class="fg-3">
+                    <mat-label>{{"mk.varderingsprotokoll.length" | transloco}}</mat-label>
+                    <input matInput type="number" min="0" formControlName="langd"/>
+                  </mat-form-field>
+                  <mat-form-field class="w-150">
+                    <mat-label>{{"mk.varderingsprotokoll.width" | transloco}}</mat-label>
+                    <mat-select formControlName="bredd">
+                      <mat-option *ngFor="let bredd of breddOptions" [value]="bredd">
+                        {{ bredd }}m
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="ersattning">
+                    <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                    <input tabindex="-1" [readonly]="true" class="ersattning-falt" formControlName="ersattning" matInput/>
+                    <span class="suffixKr" matSuffix> kr</span>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button *ngIf="vp?.markledning?.length <= 3" class="add-row" mat-flat-button (click)="markledningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+            </div>
+          </div>
+
+          <div class="row vp-rad">
+            <mat-checkbox [checked]="!isEmpty(vp?.punktersattning)"
+                          (change)="onCheckboxChange($event.checked, vp?.punktersattning, punktersattningPush.bind(this))">
+              {{"mk.varderingsprotokoll.fiber.ersattningMarkskap" | transloco}}
+            </mat-checkbox>
+          </div>
+          <div class="row" formArrayName="punktersattning">
+            <div class="col-12">
+              <div *ngFor="let punktersattning of punktersattningArray; let i=index">
+                <div [formGroupName]="i" class="row">
+                  <button mat-icon-button (click)="removeAtIndex(vp.punktersattning, i)" class="remove-row-button">
+                    <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                  </button>
+                  <mat-form-field class="fg-6">
+                    <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                    <input matInput formControlName="beskrivning"/>
+                  </mat-form-field>
+                  <mat-form-field class="fg-3">
+                    <mat-label>{{"mk.varderingsprotokoll.type" | transloco}}</mat-label>
+                    <mat-select formControlName="typ">
+                      <mat-option *ngFor="let typ of punktersattningsTyp" [value]="typ">
+                        {{ typ | prefix:"mk.varderingsprotokoll.fiber.punktersattningsTyp." | transloco }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="w-150">
+                    <mat-label>{{"mk.varderingsprotokoll.quantity" | transloco}}</mat-label>
+                    <input matInput type="number" min="0" formControlName="antal"/>
+                  </mat-form-field>
+                  <mat-form-field class="ersattning">
+                    <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                    <input formControlName="ersattning" tabindex="-1" [readonly]="true" class="ersattning-falt" matInput/>
+                    <span class="suffixKr" matSuffix> kr</span>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button *ngIf="vp?.punktersattning?.length <= 3" class="add-row" mat-flat-button (click)="punktersattningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+            </div>
+          </div>
+          <div class="row vp-rad">
+            <mat-checkbox [checked]="!isEmpty(vp?.intrangAkerOchSkogsmark)"
+                          (change)="onCheckboxChange($event.checked, vp?.intrangAkerOchSkogsmark, intrangAkerOchSkogsmarkPush.bind(this))">
+              {{"mk.varderingsprotokoll.fiber.ersattningAkerEllerSkogsmark" | transloco}}
+            </mat-checkbox>
+          </div>
+          <div class="row" formArrayName="intrangAkerOchSkogsmark">
+            <div class="col-12">
+              <div *ngFor="let intrangAkerOchSkogsmark of intrangAkerOchSkogsmarkArray; let i=index">
+                <div [formGroupName]="i" class="row">
+                  <button mat-icon-button (click)="removeAtIndex(vp.intrangAkerOchSkogsmark, i)" class="remove-row-button">
+                    <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                  </button>
+                  <mat-form-field class="fg-6">
+                    <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                    <input matInput formControlName="beskrivning"/>
+                  </mat-form-field>
+                  <mat-form-field class="ersattning">
+                    <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                    <input matInput type="number" class="ersattning-falt" formControlName="ersattning"/>
+                    <span class="suffixKr" matSuffix> kr</span>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button *ngIf="vp?.intrangAkerOchSkogsmark?.length <= 1" class="add-row" mat-flat-button (click)="intrangAkerOchSkogsmarkPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+            </div>
+          </div>
+          <div class="row vp-rad">
+            <mat-checkbox [checked]="!isEmpty(vp?.ovrigIntrangsersattning)"
+                          (change)="onCheckboxChange($event.checked, vp?.ovrigIntrangsersattning, ovrigIntrangsersattningPush.bind(this))">
+              {{"mk.varderingsprotokoll.fiber.ersattningOvrigIntrangsersattning" | transloco}}
+            </mat-checkbox>
+          </div>
+          <div class="row" formArrayName="ovrigIntrangsersattning">
+            <div class="col-12">
+              <div *ngFor="let ovrigIntrangsersattning of ovrigIntrangsersattningArray; let i=index">
+                <div [formGroupName]="i" class="row">
+                  <button mat-icon-button (click)="removeAtIndex(vp.ovrigIntrangsersattning, i)" class="remove-row-button">
+                    <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                  </button>
+                  <mat-form-field class="fg-6">
+                    <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                    <input matInput
+                          formControlName="beskrivning"/>
+                  </mat-form-field>
+                  <mat-form-field class="ersattning">
+                    <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                    <input matInput
+                          type="number"
+                          class="ersattning-falt"
+                          formControlName="ersattning"/>
+                          <span class="suffixKr" matSuffix> kr</span>
+                  </mat-form-field>
+                </div>
+              </div>
+              <button *ngIf="vp?.ovrigIntrangsersattning?.length <= 3" class="add-row" mat-flat-button (click)="ovrigIntrangsersattningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="sammanstallning">{{"mk.varderingsprotokoll.summary" | transloco}}</h3>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-8">
+              <div class="row justify-end">
+                <mat-form-field class="ersattning">
+                  <mat-label>{{"mk.varderingsprotokoll.sumIntrangCompensation" | transloco}}</mat-label>
+                  <input [value]="ersattning?.summaIntrangsersattning > 0 ? ersattning?.summaIntrangsersattning : ' '"
+                         tabindex="-1"
+                         [readonly]="true"
+                         class="ersattning-falt"
+                         matInput/>
+                  <span class="suffixKr" *ngIf="ersattning?.summaIntrangsersattning > 0" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+              <div class="row summary-row">
+                <span class="fg-1">{{"mk.varderingsprotokoll.specialCompensationAtAgreement" | transloco}}</span>
+                <span class="ersattning">{{ersattning?.sarskildErsattning}} kr</span>
+              </div>
+              <div class="row summary-row">
+                <span class="fg-1">{{"mk.varderingsprotokoll.baseCompensationAtAgreement" | transloco}}</span>
+                <span class="ersattning">{{ersattning?.grundersattning}} kr</span>
+              </div>
+              <div class="row summary-row">
+                <span class="fg-1">{{"mk.varderingsprotokoll.additionAsPerExpropriationslagen" | transloco}}</span>
+                <span class="ersattning">{{ersattning?.tillaggExpropriationslagen}} kr</span>
+              </div>
+              <div class="row summary-row total-ersattning-row">
+                <span class="total-ersattning fg-1">{{"mk.varderingsprotokoll.totalCompensation" | transloco}}</span>
+                <span class="ersattning">{{ersattning?.totalErsattning}} kr</span>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </form>
+    </div>
+  </div>
+</div>

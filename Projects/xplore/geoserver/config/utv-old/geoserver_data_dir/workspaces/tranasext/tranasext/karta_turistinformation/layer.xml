@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_turistinformation</name>
+  <id>LayerInfoImpl-8ec3b613:bdccbcf9ebe:-a913</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-b2f38d3e:b2a577cfff4:-51e6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

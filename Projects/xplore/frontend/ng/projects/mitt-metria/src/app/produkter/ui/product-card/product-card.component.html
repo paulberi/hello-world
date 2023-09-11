@@ -1,0 +1,8 @@
+<mat-card class="card mat-elevation-z" tabindex="0" (click)="selectedItem.emit()" (keyup.enter)="selectedItem.emit()">
+    <img src="{{imageUrl}}" (error)="setDefaultImage()" alt="{{ header }}">
+    <mat-card-content>
+        <mat-card-title class="truncate">{{header}}</mat-card-title>
+        <mm-description [content]="description" [limit]="130" [innerHtml]="true" styling="mitt-metria-custom-preamble-innerhtml"></mm-description>
+    </mat-card-content>
+    <!-- TODO: tags-->
+</mat-card>

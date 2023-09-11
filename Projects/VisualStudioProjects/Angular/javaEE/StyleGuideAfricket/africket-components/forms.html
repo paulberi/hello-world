@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="form.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#TypeHere'
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Forms</h1>
+    <h2>Here are the most common input forms to be used in the application</h2>
+    <h3>checkbox</h3>
+    <input type="checkbox"><input type="checkbox"><input type="checkbox">
+
+    <h3>Forms with validation support</h3>
+    <input type="email" placeholder="Username or Email">
+    <br><br>
+    <input type="password" placeholder="password">
+    <br><br>
+    <input type="number" placeholder="telephone number">
+    <br><br>
+    <h3>Ordinary text fields</h3>
+    <input type="search" placeholder="Search">
+    <br><br>
+    <input type="text" placeholder="write your input here" style="width: 500px;">
+    <br><br>
+    <h3>Dropdowns</h3>
+    <div style="width:200px;height:25px;border:0;padding:0;margin:0;">
+        <select style="width:200px; height:25px;">
+          <option></option>
+          <option value="one">one</option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+    </div>
+
+    <h3>Uploading images</h3>
+    <div>
+        <p>Upload only jpg, png and jpeg files with a max file size of 5mb</p>
+        <div id="drop-area">
+            <form class="my-form">
+                <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+                <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Select some files</label>
+            </form>
+        </div>
+    </div>
+    <h3>Advanced text editors to style ads</h3>
+    <textarea name="myTextarea" id="TypeHere"></textarea>
+
+
+
+</body>
+
+
+
+</html>

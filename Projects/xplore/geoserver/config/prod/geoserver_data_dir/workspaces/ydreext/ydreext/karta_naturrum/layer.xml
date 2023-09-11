@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_naturrum</name>
+  <id>LayerInfoImpl--6027819f:179a3acb705:-797a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:179a3acb705:-797b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-25 13:18:55.231 UTC</dateCreated>
+</layer>

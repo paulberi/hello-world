@@ -1,0 +1,238 @@
+
+components:
+  schemas:
+    Kund:
+      type: object
+      properties:
+        namn:
+          type: string
+        id:
+          type: string
+        slug:
+          type: string
+        bakgrund:
+          type: string
+        forgrund:
+          type: string
+        standardSprak:
+          type: string
+        logotyp: 
+          $ref: '#/components/schemas/Fil'
+        tillgangligaSprak:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sprak'
+    
+    Anvandare:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        epost:
+          type: string
+        roll:
+          type: string
+        aktiv:
+          type: boolean
+
+    Projekt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        rubrik:
+          type: string
+        ingress:
+          type: string
+        brodtext:
+          type: string
+        filEntityList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fil'
+        slug:
+          type: string
+        status:
+          $ref: "#/components/schemas/SamradStatus"
+
+    Synpunkt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        epost:
+          type: string
+        rubrik:
+          type: string
+        innehall:
+          type: string
+        plats:
+          type: string
+        status:
+          $ref: "#/components/schemas/SynpunktStatus"
+        filEntityList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fil'
+
+    SynpunktSvar:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        rubrik:
+          type: string
+        innehall:
+          type: string
+        status:
+          $ref: "#/components/schemas/SynpunktStatus"
+        bildEntityList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fil'
+
+    Prenumeration:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        epost:
+          type: string
+
+    Nyhet:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        rubrik:
+          type: string
+        innehall:
+          type: string
+        status:
+          $ref: "#/components/schemas/SynpunktStatus"
+        FilEntityList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Fil'
+
+    Fil:
+      type: object
+      properties:
+        filNamn:
+          type: string
+        id:
+          type: string
+          format: uuid
+        minetyp:
+          type: string
+        beskrivning:
+          type: string
+        publik:
+          type: boolean
+
+    Sprak:
+      type: object
+      properties:
+        kod:
+          type: string
+        namn:
+          type: string
+        namnOrg:
+          type: string
+
+    SamradStatus:
+      type: string
+      enum:
+        - UTKAST
+        - PUBLICERAD
+        - ARKIVERAD
+        - AVPUBLICERAD
+
+    SynpunktStatus:
+      type: string
+      enum:
+        - INLAMNAD
+        - GODKAND
+        - EJ_GODKAND
+
+  parameters:
+    kundSlug:
+      name: slug
+      in: path
+      description: Slug för kunden
+      schema:
+        type: string
+      required: true
+      example: "din-kund-slug"
+    kundId:
+      name: kundId
+      in: path
+      description: "UUID för en kund"
+      schema:
+        type: string
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    anvandareId:
+      name: anvandareId
+      in: path
+      description: "UUID för en användare"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    projektId:
+      name: projektId
+      in: path
+      description: "UUID för ett projekt"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    synpunktId:
+      name: synpunktId
+      in: path
+      description: "UUID för en synpunkt"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    svarId:
+      name: svarId
+      in: path
+      description: "UUID för ett svar"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    nyhetId:
+      name: nyhetId
+      in: path
+      description: "UUID för en nyhet"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    filId:
+      name: filId
+      in: path
+      description: "UUID för en fil"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_apotek</name>
+  <id>LayerInfoImpl-78bee732:21d481a299f:-12ba</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-f51daa46:7f96d089ddd:-bf9e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

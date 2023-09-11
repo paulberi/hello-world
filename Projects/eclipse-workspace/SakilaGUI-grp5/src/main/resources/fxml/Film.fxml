@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane 
+	minHeight="720.0" minWidth="720.0"
+	xmlns="http://javafx.com/javafx/15.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controller.FilmController">
+	<children>
+		<VBox alignment="CENTER" prefHeight="720.0" prefWidth="720.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<HBox alignment="CENTER" prefHeight="356.0" prefWidth="718.0"
+					spacing="20.0">
+					<children>
+						<VBox maxWidth="300.0" minWidth="180.0" prefHeight="196.0"
+							prefWidth="598.0" spacing="7.0">
+							<children>
+								<Label text="Title">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="title">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Description">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="description">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Release Year">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="releaseYear">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Language">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<ComboBox fx:id="langBox" prefWidth="150.0" />
+								<Label text="Original Language">
+									<font>
+										<Font size="15.0" />
+									</font>
+									<VBox.margin>
+										<Insets top="7.0" />
+									</VBox.margin>
+								</Label>
+								<ComboBox fx:id="ogLangBox" prefWidth="150.0" />
+							</children>
+						</VBox>
+						<VBox maxWidth="300.0" minWidth="180.0" prefHeight="196.0"
+							prefWidth="598.0" spacing="7.0">
+							<children>
+								<Label text="Rental Duration">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="rentalDuration">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Rental Rate">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="rentalRate">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Length">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="length">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Replacement Cost">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<TextField fx:id="replaceCost">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</TextField>
+								<Label text="Rating">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<ComboBox fx:id="ratingBox" prefWidth="150.0" />
+							</children>
+						</VBox>
+						<VBox prefHeight="328.0" prefWidth="309.0" spacing="7.0">
+							<children>
+								<Label text="Special Features" underline="true">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<CheckBox fx:id="trailersCheck" mnemonicParsing="false"
+									text="Trailers">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="commentaryCheck"
+									mnemonicParsing="false" text="Commentaries">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="deletedSceneCheck"
+									mnemonicParsing="false" text="Deleted Scenes">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="behindTheSceneCheck"
+									mnemonicParsing="false" text="Behind the scenes">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</CheckBox>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0">
+									<children>
+										<Button alignment="CENTER" layoutX="43.0" layoutY="4.0"
+											mnemonicParsing="false" onAction="#add" text="Add" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0">
+									<children>
+										<Button alignment="CENTER" layoutX="43.0" layoutY="3.0"
+											mnemonicParsing="false" onAction="#update" text="Update" />
+									</children>
+								</AnchorPane>
+								<AnchorPane prefHeight="200.0" prefWidth="200.0">
+									<children>
+										<Button alignment="CENTER" layoutX="43.0" layoutY="3.0"
+											mnemonicParsing="false" onAction="#delete" text="Delete" />
+									</children>
+								</AnchorPane>
+							</children>
+						</VBox>
+					</children>
+					<padding>
+						<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					</padding>
+				</HBox>
+				<TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+					<columns>
+						<TableColumn minWidth="75.0" prefWidth="75.0"
+							text="Film ID">
+							<cellValueFactory>
+								<PropertyValueFactory property="id" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="150.0" prefWidth="150.0"
+							text="Title">
+							<cellValueFactory>
+								<PropertyValueFactory property="title" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="200.0" prefWidth="200.0"
+							text="Description">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="description" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="100.0" prefWidth="100.0"
+							text="Release Year">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="releaseYear" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="120.0" prefWidth="120.0"
+							text="Language">
+							<cellValueFactory>
+								<PropertyValueFactory property="language" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="120.0" prefWidth="120.0"
+							text="Original Language">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="originalLanguage" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="100.0" prefWidth="100.0"
+							text="Rental Duration">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="rentalDuration" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="100.0" prefWidth="100.0"
+							text="Rental Rate">
+							<cellValueFactory>
+								<PropertyValueFactory property="rentalRate" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="100.0" prefWidth="100.0"
+							text="Length">
+							<cellValueFactory>
+								<PropertyValueFactory property="length" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="120.0" prefWidth="120.0"
+							text="Replacement Cost">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="replacementCost" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="75.0" prefWidth="75.0"
+							text="Rating">
+							<cellValueFactory>
+								<PropertyValueFactory property="rating" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="200.0" prefWidth="200.0"
+							text="Special Features">
+							<cellValueFactory>
+								<PropertyValueFactory
+									property="specialFeatures" />
+							</cellValueFactory>
+						</TableColumn>
+
+						<TableColumn minWidth="150.0" prefWidth="150.0"
+							text="Last Updated">
+							<cellValueFactory>
+								<PropertyValueFactory property="lastUpdate" />
+							</cellValueFactory>
+						</TableColumn>
+					</columns>
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+				</TableView>
+			</children>
+
+		</VBox>
+	</children>
+</AnchorPane>

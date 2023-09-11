@@ -1,0 +1,1333 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "https://www.valdemarsvik.se/visit/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Lantmäteriet, © Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ]
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/valdemarsvik_sevardheterext/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "valdemarsvik_sevardheterext:karta_"
+  },
+  "zoom": 7,
+  "center": [
+    163144,
+    6452598
+  ],
+  "extent": [
+    -264152.67,
+    6111956.69,
+    455221.06,
+    7684350.92
+  ],
+  "thumbnailCoordinates": [
+    156078,
+    6453700
+  ],
+  "groups": [
+    {
+      "name": "sevardheter",
+      "title": "Sevärdheter",
+      "expanded": false
+    },
+    {
+      "name": "avfall_atervinning",
+      "title": "Avfall & Återvinning",
+      "expanded": false
+    },
+    {
+      "name": "boende",
+      "title": "Boende",
+      "expanded": false
+    },
+    {
+      "name": "mat_fika",
+      "title": "Mat & Fika",
+      "expanded": false
+    },
+    {
+      "name": "se_gora",
+      "title": "Se & Göra",
+      "groups": [
+        {
+          "name": "fritid_friluftsliv",
+          "title": "Fritid & Friluftsliv",
+          "expanded": true
+        },
+        {
+          "name": "idrott",
+          "title": "Idrott",
+          "expanded": true
+        },
+        {
+          "name": "kultur",
+          "title": "Kultur",
+          "expanded": true
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "resa",
+      "title": "Resa",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "group": "sevardheter",
+      "style": "karta_botanik",
+      "title": "Botanik",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_botanik"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "sevardheter",
+      "style": "karta_by",
+      "title": "Byggnad",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_by"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "sevardheter",
+      "style": "karta_geologi",
+      "title": "Geologi",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_geologi"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "sevardheter",
+      "style": "karta_historia",
+      "title": "Historia",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_historia"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "sevardheter",
+      "style": "karta_natur",
+      "title": "Natur",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_natur"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "avfall_atervinning",
+      "style": "karta_atervinningscentral",
+      "title": "Återvinningscentraler",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_atervinningscentral"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "avfall_atervinning",
+      "style": "karta_atervinningsstation",
+      "title": "Återvinningsstationer",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_atervinningsstation"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "avfall_atervinning",
+      "style": "karta_sopmajor",
+      "title": "Sopmajor",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_sopmajor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "boende",
+      "style": "karta_camping",
+      "title": "Camping",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_camping"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "boende",
+      "style": "karta_uppstallningsplats",
+      "title": "Ställplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_uppstallningsplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "boende",
+      "style": "karta_gasthamn",
+      "title": "Gästhamnar",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_gasthamn"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "boende",
+      "style": "karta_hotell",
+      "title": "Hotell, B&B och pensionat",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_hotell"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "boende",
+      "style": "karta_stuga",
+      "title": "Stugor",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_stuga"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "mat_fika",
+      "style": "karta_cafe",
+      "title": "Caféer",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_cafe"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "mat_fika",
+      "style": "karta_gardsbutik",
+      "title": "Gårdsbutiker",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_gardsbutik"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "mat_fika",
+      "style": "karta_gatukok",
+      "title": "Gatukök",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_gatukok"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "mat_fika",
+      "style": "karta_restauranger",
+      "title": "Restauranger",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_restauranger"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_badplats",
+      "title": "Bad",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_badplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_naturreservat",
+      "title": "Naturreservat",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_naturreservat"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_park",
+      "title": "Parker & trädgårdar",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_park"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_aktivitetspark",
+      "title": "Aktivitetspark",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_aktivitetspark"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_vandringsleder",
+      "title": "Vandringsleder",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_vandringsleder"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_simhall",
+      "title": "Simhall",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_simhall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_utegym",
+      "title": "Utegym",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_utegym"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_idrottshall",
+      "title": "Sporthall",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_idrottshall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_konstgrasplan",
+      "title": "Konstgräsplan",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_konstgrasplan"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_golfbanor",
+      "title": "Golfbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_golfbanor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_motionsspar_uppmarkta",
+      "title": "Motionspår",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_motionsspar_uppmarkta"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_ishall",
+      "title": "Ishall",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_ishall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_skridskobana_punkt",
+      "title": "Utomhus skridskobanor",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_skridskobana_punkt"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_skidspar",
+      "title": "Längdskidspår",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_skidspar"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_skidbacke",
+      "title": "Skidbacke",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_skidbacke"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_padelbana",
+      "title": "Padelbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_padelbana"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_bibliotek",
+      "title": "Bibliotek",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_bibliotek"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_biograf",
+      "title": "Bio",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_biograf"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_kulturskolan",
+      "title": "Kulturskolan",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_kulturskolan"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_konst",
+      "title": "Konst",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_konst"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_museum",
+      "title": "Museum",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_museum"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_intressant_byggnad",
+      "title": "Byggnadsminnen",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_intressant_byggnad"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_hembygdsforening",
+      "title": "Hembygdsföreningar",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_hembygdsforening"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "se_gora",
+      "style": "karta_fornlamning",
+      "title": "Fornlämningar",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_fornlamning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "resa",
+      "style": "karta_laddstationer",
+      "title": "Laddstationer",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_laddstationer"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "resa",
+      "style": "karta_sjomack",
+      "title": "Sjömackar",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik_sevardheterext:karta_sjomack"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "import": "metria:MetriaFastighetPlus@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks kommun",
+      "visible": true
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks kommun (nedtonad)"
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks ortofoto"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_botanik": [
+      [
+        {
+          "icon": {
+            "src": "karta_4hgard.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_by": [
+      [
+        {
+          "icon": {
+            "src": "karta_lediga-bostadstomter.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_geologi": [
+      [
+        {
+          "icon": {
+            "src": "karta_geologi.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_historia": [
+      [
+        {
+          "icon": {
+            "src": "karta_konstnarlig_gestaltning.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_natur": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_natur.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningscentral": [
+      [
+        {
+          "icon": {
+            "src": "karta_atervinningcentral.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningsstation": [
+      [
+        {
+          "icon": {
+            "src": "karta_atervinningsstation.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_sopmajor": [
+      [
+        {
+          "icon": {
+            "src": "karta_sopmajor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_camping": [
+      [
+        {
+          "icon": {
+            "src": "karta_camping.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_uppstallningsplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_uppstallningsplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_gasthamn": [
+      [
+        {
+          "icon": {
+            "src": "karta_hamn.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hotell": [
+      [
+        {
+          "icon": {
+            "src": "karta_boende.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_stuga": [
+      [
+        {
+          "icon": {
+            "src": "karta_kolonilott.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_cafe": [
+      [
+        {
+          "icon": {
+            "src": "karta_cafe.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_gardsbutik": [
+      [
+        {
+          "icon": {
+            "src": "karta_gardsbutik.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_gatukok": [
+      [
+        {
+          "icon": {
+            "src": "karta_gatukok.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_restauranger": [
+      [
+        {
+          "icon": {
+            "src": "karta_restauranger.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_badplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_badplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_naturreservat": [
+      [
+        {
+          "fill": {
+            "color": "rgba(42,153,32,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(42,153,32,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_park": [
+      [
+        {
+          "icon": {
+            "src": "karta_park.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_aktivitetspark": [
+      [
+        {
+          "icon": {
+            "src": "karta_aktivitetspark.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_vandringsleder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(155,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_simhall": [
+      [
+        {
+          "icon": {
+            "src": "karta_simhall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_utegym": [
+      [
+        {
+          "icon": {
+            "src": "karta_utomhusgym.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_idrottshall": [
+      [
+        {
+          "icon": {
+            "src": "karta_idrottshall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_konstgrasplan": [
+      [
+        {
+          "icon": {
+            "src": "karta_konstgrasplan.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_golfbanor": [
+      [
+        {
+          "icon": {
+            "src": "karta_golfbanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_motionsspar_uppmarkta": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(31,120,180,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_ishall": [
+      [
+        {
+          "icon": {
+            "src": "karta_isbanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skridskobana_punkt": [
+      [
+        {
+          "icon": {
+            "src": "karta_skridskobana.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skidspar": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skidbacke": [
+      [
+        {
+          "icon": {
+            "src": "karta_skidbacke.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_padelbana": [
+      [
+        {
+          "fill": {
+            "color": "rgba(136,14,79,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(136,14,79,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_bibliotek": [
+      [
+        {
+          "icon": {
+            "src": "karta_bibliotek.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_biograf": [
+      [
+        {
+          "icon": {
+            "src": "karta_biograf.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_kulturskolan": [
+      [
+        {
+          "icon": {
+            "src": "karta_kulturskolan.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_konst": [
+      [
+        {
+          "icon": {
+            "src": "karta_konst.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_museum": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_kultur.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_intressant_byggnad": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_besoksmal.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hembygdsforening": [
+      [
+        {
+          "icon": {
+            "src": "karta_hembygdsforening.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fornlamning": [
+      [
+        {
+          "icon": {
+            "src": "karta_fornlamning.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_laddstationer": [
+      [
+        {
+          "icon": {
+            "src": "karta_laddstationer.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_sjomack": [
+      [
+        {
+          "icon": {
+            "src": "karta_drivmedelsstation.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3010",
+      "alias": "urn:ogc:def:crs:EPSG:3010",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=16.5 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -264152.67,
+        6111956.69,
+        455221.06,
+        7684350.92
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "tileSize": [
+    256,
+    256
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Rubrik",
+          "type": "title",
+          "minLength": 2,
+          "maxLength": 80,
+          "linkRef": "title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "maxLength": 254,
+          "inputType": "text-area",
+          "hideLabel": true
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3010",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

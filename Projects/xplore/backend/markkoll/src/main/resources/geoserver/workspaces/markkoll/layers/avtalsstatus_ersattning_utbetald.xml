@@ -1,0 +1,17 @@
+<layer>
+  <name>avtalsstatus_ersattning_utbetald</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:avtalsstatus_ersattning_utbetald</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:avtalsstatus_ersattning_utbetald</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-17 12:14:17.506 UTC</dateCreated>
+</layer>

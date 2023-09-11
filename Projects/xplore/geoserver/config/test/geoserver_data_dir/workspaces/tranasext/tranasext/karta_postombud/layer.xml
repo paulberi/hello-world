@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_postombud</name>
+  <id>LayerInfoImpl-4bc188cf:cf8699d1b14:-6c70</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-847c1a04:8328619d6df:-4a28</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,81 @@
+@import url(//fonts.googleapis.com/css?family=Nunito+Sans);
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #454545;
+}
+
+a {
+    color: #454545;
+}
+
+.login-pf-page {
+    width: 100%;
+    padding-top: 0px;
+}
+
+.login-pf {
+    background: inherit;
+}
+
+.login-pf body {
+    background-image: url(../img/bakgrundsmonster-top.png);
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top -20px center;
+}
+
+#kc-header {
+    background-image: url(../img/metria-logo-text.png), url(../img/METR_Grafiskt_element.svg), url(../img/login_header.jpg);
+    background-repeat: no-repeat;
+    background-size: auto, contain, cover;
+    background-position: top left, right, center;
+    height: 400px;
+    box-shadow: 4px 4px 15px 1px #0000008a;
+}
+
+#kc-header-wrapper {
+   display: none;
+}
+
+.login-pf-page .pf-m-primary {
+    margin-top: 0; 
+    background-image: unset;
+    background-color: #454545;
+    border-color: #454545;
+    box-shadow: 2px 2px 5px #000000a1;
+    border-radius: 5px;
+    font-size: large;
+    width: 180px !important;
+}
+
+.card-pf {
+    border-top: 0px;
+    background: #fff0;
+}
+
+#kc-form-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .login-pf-page .card-pf {
+        margin-top: auto;
+    }
+
+    #kc-header {
+        background-image: url(../img/metria-logo-text.png);
+        background-position: left;
+        height: 50px;
+        background-size: 50px;
+        margin-left: 15px;
+        box-shadow: none;
+    }
+
+    .login-pf body {
+        background-image: url(../img/bakgrundsmonster-top.png);
+        background-repeat: repeat;
+    }
+}

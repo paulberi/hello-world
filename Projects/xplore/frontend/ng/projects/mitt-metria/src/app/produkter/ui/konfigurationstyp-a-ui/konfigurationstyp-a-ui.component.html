@@ -1,0 +1,107 @@
+<form [formGroup]="konfigurationstypAForm">
+    <!-- STEP 1: OMRÅDE -->
+    <div *ngIf="activeStep === 1">
+        <p>{{ "mm.configurationTypeA.chooseArea" | transloco }}</p>
+        <div *ngIf="showDropzone">
+            <div class="d-flex form-control-checked">
+                <div class="form-control" formGroupName="areaForm">
+                    <mm-polygon-dropzone formControlName="file" label="Ladda upp fil">
+                    </mm-polygon-dropzone>
+                </div>
+                <div [class.checked]="areaForm.get('file').value">
+                    <mat-icon *ngIf="areaForm.get('file').value">checked</mat-icon>
+                </div>
+            </div>
+            <p class="form-control bold-center" *ngIf="parentFormControlOptions.length">
+                {{ "mm.configurationTypeA.or" | transloco }}
+            </p>
+        </div>
+
+        <div *ngIf="parentFormControlOptions.length" class="d-flex form-control-checked" formGroupName="areaForm">
+            <mat-form-field class="form-control" appearance="outline">
+                <mat-label>{{ "mm.configurationTypeA.choosePredefinedArea" | transloco }}</mat-label>
+                <mat-select formControlName="select">
+                    <mat-option *ngFor="let option of parentFormControlOptions" [value]="option">{{
+                        option.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="checked-margin-bottom" [class.checked]="areaForm.get('select').value">
+                <mat-icon *ngIf="areaForm.get('select').value">checked</mat-icon>
+            </div>
+        </div>
+
+        <div *ngIf="childFormControl && areaForm.get('select').value" class="d-flex form-control-checked"
+            formGroupName="attributeForm">
+            <mat-form-field class="form-control" appearance="outline">
+                <mat-label>{{ childFormControl.label }}</mat-label>
+                <mat-select formControlName="omrade" *ngIf="childFormControl.multiple" [multiple]="true">
+                    <mat-option *ngFor="let option of childFormControl.options" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-select>
+                <mat-select formControlName="omrade" *ngIf="!childFormControl.multiple" [multiple]="false">
+                    <mat-option *ngFor="let option of childFormControl.options" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="checked-margin-bottom unchecked" [class.checked]="attributeForm.get('omrade').valid">
+                <mat-icon *ngIf="attributeForm.get('omrade').valid">checked</mat-icon>
+            </div>
+        </div>
+        <div class="right">
+            <button id="next-button" mat-flat-button color="primary" type="button" (click)="next()"
+                [disabled]="attributeForm.get('omrade').invalid">
+                {{ "mm.configurationTypeA.next" | transloco }}
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- STEP 2: REFERENSSYSTEM -->
+    <div *ngIf="activeStep === 2" formGroupName="attributeForm">
+        <p>{{ "mm.configurationTypeA.chooseReferenssystem" | transloco }}</p>
+        <mat-form-field class="form-control" appearance="outline">
+            <mat-label>{{ "mm.configurationTypeA.choose" | transloco }}</mat-label>
+            <mat-select formControlName="refsys">
+                <mat-option *ngFor="let system of referenssystem" [value]="system">{{ system }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mm-description [content]="'mm.configurationTypeA.referenssystemDescription' | transloco" [innerHtml]="true">
+        </mm-description>
+        <div class="right">
+            <button id="previous-button" mat-stroked-button color="primary" type="button" (click)="previous()">
+                <mat-icon>chevron_left</mat-icon>
+                {{ "mm.configurationTypeA.back" | transloco }}
+            </button>
+            <button id="next-button" mat-flat-button color="primary" type="button" (click)="next()"
+                [disabled]="!attributeForm.get('refsys').valid">
+                {{ "mm.configurationTypeA.next" | transloco }}
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- STEP 3: LEVERANSFORMAT  -->
+    <div *ngIf="activeStep === 3 || activeStep === 4" formGroupName="attributeForm">
+        <p>{{ "mm.configurationTypeA.chooseLeveransformat" | transloco }}</p>
+        <mat-form-field class="form-control" appearance="outline">
+            <mat-label>{{ "mm.configurationTypeA.choose" | transloco }}</mat-label>
+            <mat-select formControlName="format">
+                <mat-option *ngFor="let format of leveransformat" [value]="format">{{ format }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mm-description [content]="'mm.configurationTypeA.leveransformatDescription' | transloco" [limit]="500"
+            [showReadMoreAndLessButton]="true" [innerHtml]="true" styling="leveransformat-description-innerhtml">
+        </mm-description>
+        <div class="right">
+            <button id="previous-button" mat-stroked-button color="primary" type="button" (click)="previous()">
+                <mat-icon>chevron_left</mat-icon>
+                {{ "mm.configurationTypeA.back" | transloco }}
+            </button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,295 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.forsvarsmakten.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    }
+  },
+  "zoom": 0,
+  "center": [
+    496000,
+    6894000
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "groups": [
+    {
+      "name": "fast_pbr",
+      "title": "Fastigheter & PBR",
+      "expanded": true
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fast_pbr",
+      "visible": true
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "fast_pbr",
+      "title": "Planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "fast_pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "fast_pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "fast_pbr",
+      "title": "Ortofoto metadata",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Metadata_orto",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background",
+      "title": "Metria Fastighetskarta",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Ortofoto färg"
+    }
+  ],
+  "styles": {},
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

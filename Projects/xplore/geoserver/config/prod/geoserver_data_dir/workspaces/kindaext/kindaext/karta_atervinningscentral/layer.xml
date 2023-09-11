@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_atervinningscentral</name>
+  <id>LayerInfoImpl--73452c24:1783ab583e7:2fa9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--73452c24:1783ab583e7:2fa8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-16 12:05:46.834 UTC</dateCreated>
+</layer>

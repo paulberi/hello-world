@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>se.metria.xplore</groupId>
+	<artifactId>geovis-db</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!--
+		Konfigurera Flyway att köra mot utv-db som default.
+		Styr med inparametrar till maven vid körning mot test eller prod
+		-->
+		<db.server>xploredb01.prodstod.se</db.server>
+		<db.port>5432</db.port>
+		<db.database>geovisdb</db.database>
+		<db.user>xplore-admin</db.user>
+		<db.schema>referensext</db.schema>
+		<db.schemaOwner>geovis</db.schemaOwner>
+		<db.epsg>3006</db.epsg>
+	</properties>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>6.0.4</version>
+				<configuration>
+					<baselineOnMigrate>false</baselineOnMigrate>
+					<schemas>
+						<schema>${db.schema}</schema>
+					</schemas>
+					<!-- Placeholders i nästa rad gör att vi kan passa
+					schemanamnet till sql-filen dvs flyway-scriptet, för
+					att kunna sätta owner till schemat. -->
+					<placeholders>
+						<schema>${db.schema}</schema>
+						<schemaOwner>${db.schemaOwner}</schemaOwner>
+						<epsg>${db.epsg}</epsg>
+					</placeholders>
+
+					<url>jdbc:postgresql://${db.server}:${db.port}/${db.database}</url>
+					<user>${db.user}</user>
+					<password>${db.passwd}</password>
+					<!-- "location" pekar till den katalog som flyway-scripten finns i.
+					filesystem:${project.basedir} pekar till samma katalog som pom-filen ligger i. -->
+					<locations>
+						<location>filesystem:${project.basedir}</location>
+					</locations>
+					<baselineVersion>1.0.0</baselineVersion>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>42.2.8</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

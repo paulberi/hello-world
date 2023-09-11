@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>se.metria.xplore</groupId>
+	<artifactId>forestlink-db</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!--
+		Konfigurera Flyway att köra mot utv-db som default.
+		Styr med inparametrar till maven vid körning mot test eller prod
+		-->
+		<db.server>xploredb01.prodstod.se</db.server>
+		<db.port>5432</db.port>
+		<db.database>forestlink_utv</db.database>
+		<db.user>xplore-admin</db.user>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>6.0.4</version>
+				<configuration>
+					<schemas>
+						<schema>forestlink</schema>
+						<schema>public</schema>
+					</schemas>
+					<url>jdbc:postgresql://${db.server}:${db.port}/${db.database}</url>
+					<user>${db.user}</user>
+					<password>${db.passwd}</password>
+					<locations>
+						<location>filesystem:${project.basedir}/src/main/resources/db/migration</location>
+					</locations>
+					<target>latest</target>
+					<baselineVersion>1.1.0</baselineVersion>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>42.2.8</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_busshallplats</name>
+  <id>LayerInfoImpl-363cc6e4:17821818b8e:aa1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:17821818b8e:aa0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-12 11:23:05.166 UTC</dateCreated>
+</layer>

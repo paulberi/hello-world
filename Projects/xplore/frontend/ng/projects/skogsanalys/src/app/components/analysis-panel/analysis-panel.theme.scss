@@ -1,0 +1,14 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin analysis-panel-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  .analysis-panel h3 {
+    color: mat-color($foreground, secondary-text)
+  }
+}

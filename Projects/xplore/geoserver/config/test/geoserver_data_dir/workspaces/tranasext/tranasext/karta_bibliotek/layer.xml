@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_bibliotek</name>
+  <id>LayerInfoImpl-90663792:29283a43634:-cd3a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-026cc93a:484c15dac66:-7161</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

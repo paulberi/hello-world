@@ -1,0 +1,27 @@
+<div class="row justify-center main-container">
+    <div class="col-11">
+      <mat-tab-group>
+        <mat-tab label="{{'sr.label.minaSidor' | transloco}}">
+          <h1 class="mat-h1">{{ "sr.label.valkommen" | transloco }} {{fornamn}}!</h1>
+          <p>Personnummer: {{personnummer}}</p>
+            <div class="container">
+              <mat-divider></mat-divider>
+                <div class="row">   
+                    <a routerLink="#">
+                      <p>{{ "sr.label.minaFastigheter" | transloco }} <mat-icon class="more">chevron_right</mat-icon></p>
+                    </a>  
+                </div>
+              <mat-divider></mat-divider>
+            </div>
+        </mat-tab>
+        
+        <mat-tab label="{{'sr.label.minaSynpunkter' | transloco}}">
+          
+        </mat-tab>
+        <mat-tab label="{{'sr.label.installningar' | transloco}}">
+          
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  

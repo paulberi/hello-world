@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_belaggningsarbete</name>
+  <id>LayerInfoImpl-5492d999:17715127651:-5f31</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:17715127651:-5f32</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-18 11:20:25.485 UTC</dateCreated>
+</layer>

@@ -1,0 +1,20 @@
+<!-- SÖKRUTA -->
+<div class="product-search">
+    <div class="filters-title">
+        <h3>{{ "mm.filter.searchTitle" | transloco }}</h3>
+    </div>
+    <div class="search-wrapper" [formGroup]="searchForm">
+        <xp-ui-search-field debounceTime="5" formControlName="searchTerm" ariaLabel="Rensa"
+            placeholder="{{ 'mm.filter.searchPlaceholder' | transloco }}" (keydown.enter)="doSearch(searchFormValue)">
+        </xp-ui-search-field>
+    </div>
+</div>
+
+<!-- FILTER -->
+<div class="product-controls">
+    <div class="filters-title">
+        <h3>{{ "mm.filter.categoryFilterTitle" | transloco }}</h3>
+    </div>
+    <xp-category-filter *ngIf="facets?.length" [titleCaseOnCategory]="false" [items]="facets"
+        [activeItemIds]="activeFacetValueIds" (filterUpdated)="toggleFacetValueIdInRoute($event)"></xp-category-filter>
+</div>

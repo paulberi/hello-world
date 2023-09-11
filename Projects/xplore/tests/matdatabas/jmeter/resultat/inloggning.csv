@@ -1,0 +1,645 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591957698270,341,/api/user/user-details,200,,Efter Inloggning 1-1,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,341,0,35
+1591957698311,300,/api/user/user-details,200,,Efter Inloggning 1-3,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,299,0,6
+1591957698270,341,/api/user/user-details,200,,Efter Inloggning 1-1,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,341,0,35
+1591957698311,300,/api/user/user-details,200,,Efter Inloggning 1-3,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,299,0,6
+1591957698615,19,/api/user/paminnelser,200,,Efter Inloggning 1-1,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957698615,19,/api/user/paminnelser,200,,Efter Inloggning 1-1,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957698615,19,/api/user/paminnelser,200,,Efter Inloggning 1-3,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957698615,19,/api/user/paminnelser,200,,Efter Inloggning 1-3,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957698270,374,/api/user/user-details,200,,Efter Inloggning 1-2,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,374,0,35
+1591957698270,374,/api/user/user-details,200,,Efter Inloggning 1-2,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,374,0,35
+1591957698645,22,/api/user/paminnelser,200,,Efter Inloggning 1-2,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,22,0,0
+1591957698645,22,/api/user/paminnelser,200,,Efter Inloggning 1-2,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,22,0,0
+1591957698634,40, /api/meddelande,200,,Efter Inloggning 1-3,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,39,0,0
+1591957698634,40, /api/meddelande,200,,Efter Inloggning 1-3,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,39,0,0
+1591957698634,50, /api/meddelande,200,,Efter Inloggning 1-1,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,50,0,0
+1591957698634,50, /api/meddelande,200,,Efter Inloggning 1-1,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,50,0,0
+1591957698674,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-3,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957698674,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-3,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957698668,26, /api/meddelande,200,,Efter Inloggning 1-2,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957698668,26, /api/meddelande,200,,Efter Inloggning 1-2,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957698685,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-1,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957698685,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-1,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957698694,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-2,text,true,,354,262,7,7,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957698694,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-2,text,true,,354,262,7,7,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957698379,447,/api/user/user-details,200,,Efter Inloggning 1-4,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,447,0,7
+1591957698379,447,/api/user/user-details,200,,Efter Inloggning 1-4,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,447,0,7
+1591957698827,15,/api/user/paminnelser,200,,Efter Inloggning 1-4,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957698827,15,/api/user/paminnelser,200,,Efter Inloggning 1-4,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957698436,438,/api/user/user-details,200,,Efter Inloggning 1-5,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,438,0,6
+1591957698436,438,/api/user/user-details,200,,Efter Inloggning 1-5,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,438,0,6
+1591957698842,33, /api/meddelande,200,,Efter Inloggning 1-4,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957698842,33, /api/meddelande,200,,Efter Inloggning 1-4,text,true,,1158,261,8,8,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957698875,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-4,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957698875,13,/api/user/paminnelser,200,,Efter Inloggning 1-5,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957698875,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-4,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957698875,13,/api/user/paminnelser,200,,Efter Inloggning 1-5,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957698888,77, /api/meddelande,200,,Efter Inloggning 1-5,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,77,0,0
+1591957698888,77, /api/meddelande,200,,Efter Inloggning 1-5,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,77,0,0
+1591957698966,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-5,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957698966,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-5,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957698501,498,/api/user/user-details,200,,Efter Inloggning 1-6,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,498,0,7
+1591957698501,498,/api/user/user-details,200,,Efter Inloggning 1-6,text,true,,591,201,8,8,http://xploreutv01.prodstod.se:9009/api/user/user-details,498,0,7
+1591957698999,15,/api/user/paminnelser,200,,Efter Inloggning 1-6,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957698999,15,/api/user/paminnelser,200,,Efter Inloggning 1-6,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957699014,29, /api/meddelande,200,,Efter Inloggning 1-6,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,29,0,0
+1591957699014,29, /api/meddelande,200,,Efter Inloggning 1-6,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,29,0,0
+1591957699043,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-6,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957699043,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-6,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957698566,514,/api/user/user-details,200,,Efter Inloggning 1-7,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,514,0,6
+1591957698566,514,/api/user/user-details,200,,Efter Inloggning 1-7,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,514,0,6
+1591957699081,14,/api/user/paminnelser,200,,Efter Inloggning 1-7,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957699081,14,/api/user/paminnelser,200,,Efter Inloggning 1-7,text,true,,354,253,9,9,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957699096,68, /api/meddelande,200,,Efter Inloggning 1-7,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,68,0,0
+1591957699096,68, /api/meddelande,200,,Efter Inloggning 1-7,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,68,0,0
+1591957698626,540,/api/user/user-details,200,,Efter Inloggning 1-8,text,true,,591,201,10,10,http://xploreutv01.prodstod.se:9009/api/user/user-details,540,0,7
+1591957698626,540,/api/user/user-details,200,,Efter Inloggning 1-8,text,true,,591,201,10,10,http://xploreutv01.prodstod.se:9009/api/user/user-details,540,0,7
+1591957699166,16,/api/user/paminnelser,200,,Efter Inloggning 1-8,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957699166,16,/api/user/paminnelser,200,,Efter Inloggning 1-8,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957699165,21, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-7,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,21,0,0
+1591957699165,21, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-7,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,21,0,0
+1591957699183,33, /api/meddelande,200,,Efter Inloggning 1-8,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957699183,33, /api/meddelande,200,,Efter Inloggning 1-8,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957699216,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-8,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957699216,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-8,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957698690,544,/api/user/user-details,200,,Efter Inloggning 1-9,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,544,0,7
+1591957698690,544,/api/user/user-details,200,,Efter Inloggning 1-9,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,544,0,7
+1591957699235,32,/api/user/paminnelser,200,,Efter Inloggning 1-9,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,32,0,0
+1591957699235,32,/api/user/paminnelser,200,,Efter Inloggning 1-9,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,32,0,0
+1591957699268,34, /api/meddelande,200,,Efter Inloggning 1-9,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,34,0,0
+1591957699268,34, /api/meddelande,200,,Efter Inloggning 1-9,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,34,0,0
+1591957699302,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-9,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957699302,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-9,text,true,,354,262,10,10,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957698753,568,/api/user/user-details,200,,Efter Inloggning 1-10,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,568,0,7
+1591957698753,568,/api/user/user-details,200,,Efter Inloggning 1-10,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,568,0,7
+1591957699321,25,/api/user/paminnelser,200,,Efter Inloggning 1-10,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,25,0,0
+1591957699321,25,/api/user/paminnelser,200,,Efter Inloggning 1-10,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,25,0,0
+1591957699346,23, /api/meddelande,200,,Efter Inloggning 1-10,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,23,0,0
+1591957699346,23, /api/meddelande,200,,Efter Inloggning 1-10,text,true,,1158,261,10,10,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,23,0,0
+1591957698818,558,/api/user/user-details,200,,Efter Inloggning 1-11,text,true,,591,201,10,10,http://xploreutv01.prodstod.se:9009/api/user/user-details,558,0,6
+1591957698818,558,/api/user/user-details,200,,Efter Inloggning 1-11,text,true,,591,201,10,10,http://xploreutv01.prodstod.se:9009/api/user/user-details,558,0,6
+1591957699370,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-10,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957699370,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-10,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957699376,56,/api/user/paminnelser,200,,Efter Inloggning 1-11,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,56,0,0
+1591957699376,56,/api/user/paminnelser,200,,Efter Inloggning 1-11,text,true,,354,253,10,10,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,56,0,0
+1591957698880,573,/api/user/user-details,200,,Efter Inloggning 1-12,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,573,0,7
+1591957698880,573,/api/user/user-details,200,,Efter Inloggning 1-12,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,573,0,7
+1591957698944,547,/api/user/user-details,200,,Efter Inloggning 1-13,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,547,0,6
+1591957698944,547,/api/user/user-details,200,,Efter Inloggning 1-13,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,547,0,6
+1591957699491,24,/api/user/paminnelser,200,,Efter Inloggning 1-13,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957699491,24,/api/user/paminnelser,200,,Efter Inloggning 1-13,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957699453,67,/api/user/paminnelser,200,,Efter Inloggning 1-12,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,67,0,0
+1591957699453,67,/api/user/paminnelser,200,,Efter Inloggning 1-12,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,67,0,0
+1591957699433,93, /api/meddelande,200,,Efter Inloggning 1-11,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,93,0,0
+1591957699433,93, /api/meddelande,200,,Efter Inloggning 1-11,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,93,0,0
+1591957699515,33, /api/meddelande,200,,Efter Inloggning 1-13,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957699515,33, /api/meddelande,200,,Efter Inloggning 1-13,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957699520,51, /api/meddelande,200,,Efter Inloggning 1-12,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,51,0,0
+1591957699520,51, /api/meddelande,200,,Efter Inloggning 1-12,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,51,0,0
+1591957699548,104, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-13,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,104,0,0
+1591957699526,126, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-11,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,126,0,0
+1591957699548,104, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-13,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,104,0,0
+1591957699526,126, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-11,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,126,0,0
+1591957699073,593,/api/user/user-details,200,,Efter Inloggning 1-15,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,593,0,6
+1591957699073,593,/api/user/user-details,200,,Efter Inloggning 1-15,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,593,0,6
+1591957699007,705,/api/user/user-details,200,,Efter Inloggning 1-14,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,705,0,8
+1591957699007,705,/api/user/user-details,200,,Efter Inloggning 1-14,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,705,0,8
+1591957699135,604,/api/user/user-details,200,,Efter Inloggning 1-16,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,604,0,6
+1591957699135,604,/api/user/user-details,200,,Efter Inloggning 1-16,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,604,0,6
+1591957699571,192, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-12,text,true,,354,262,13,13,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,192,0,0
+1591957699712,51,/api/user/paminnelser,200,,Efter Inloggning 1-14,text,true,,354,253,13,13,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,51,0,0
+1591957699571,192, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-12,text,true,,354,262,13,13,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,192,0,0
+1591957699712,51,/api/user/paminnelser,200,,Efter Inloggning 1-14,text,true,,354,253,13,13,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,51,0,0
+1591957699260,643,/api/user/user-details,200,,Efter Inloggning 1-18,text,true,,591,201,15,15,http://xploreutv01.prodstod.se:9009/api/user/user-details,643,0,7
+1591957699260,643,/api/user/user-details,200,,Efter Inloggning 1-18,text,true,,591,201,15,15,http://xploreutv01.prodstod.se:9009/api/user/user-details,643,0,7
+1591957699739,189,/api/user/paminnelser,200,,Efter Inloggning 1-16,text,true,,354,253,15,15,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,189,0,0
+1591957699739,189,/api/user/paminnelser,200,,Efter Inloggning 1-16,text,true,,354,253,15,15,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,189,0,0
+1591957699764,198, /api/meddelande,200,,Efter Inloggning 1-14,text,true,,1158,261,16,16,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,198,0,0
+1591957699764,198, /api/meddelande,200,,Efter Inloggning 1-14,text,true,,1158,261,16,16,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,198,0,0
+1591957699962,85, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-14,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,85,0,0
+1591957699666,381,/api/user/paminnelser,200,,Efter Inloggning 1-15,text,true,,354,253,17,17,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,381,0,0
+1591957699666,381,/api/user/paminnelser,200,,Efter Inloggning 1-15,text,true,,354,253,17,17,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,381,0,0
+1591957699962,85, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-14,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,85,0,0
+1591957699199,848,/api/user/user-details,200,,Efter Inloggning 1-17,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,848,0,8
+1591957699199,848,/api/user/user-details,200,,Efter Inloggning 1-17,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,848,0,8
+1591957699929,139, /api/meddelande,200,,Efter Inloggning 1-16,text,true,,1158,261,16,16,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,139,0,0
+1591957699904,164,/api/user/paminnelser,200,,Efter Inloggning 1-18,text,true,,354,253,16,16,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,164,0,0
+1591957699929,139, /api/meddelande,200,,Efter Inloggning 1-16,text,true,,1158,261,16,16,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,139,0,0
+1591957699904,164,/api/user/paminnelser,200,,Efter Inloggning 1-18,text,true,,354,253,16,16,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,164,0,0
+1591957700048,63,/api/user/paminnelser,200,,Efter Inloggning 1-17,text,true,,354,253,17,17,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,63,0,0
+1591957700048,63,/api/user/paminnelser,200,,Efter Inloggning 1-17,text,true,,354,253,17,17,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,63,0,0
+1591957700047,80, /api/meddelande,200,,Efter Inloggning 1-15,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,80,0,0
+1591957700047,80, /api/meddelande,200,,Efter Inloggning 1-15,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,80,0,0
+1591957699324,803,/api/user/user-details,200,,Efter Inloggning 1-19,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,803,0,7
+1591957699324,803,/api/user/user-details,200,,Efter Inloggning 1-19,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,803,0,7
+1591957700068,60, /api/meddelande,200,,Efter Inloggning 1-18,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,60,0,0
+1591957700068,60, /api/meddelande,200,,Efter Inloggning 1-18,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,60,0,0
+1591957699387,789,/api/user/user-details,200,,Efter Inloggning 1-20,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,789,0,7
+1591957699387,789,/api/user/user-details,200,,Efter Inloggning 1-20,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,789,0,7
+1591957699451,726,/api/user/user-details,200,,Efter Inloggning 1-21,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,726,0,7
+1591957699451,726,/api/user/user-details,200,,Efter Inloggning 1-21,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,726,0,7
+1591957700177,68,/api/user/paminnelser,200,,Efter Inloggning 1-20,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,67,0,0
+1591957700177,68,/api/user/paminnelser,200,,Efter Inloggning 1-20,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,67,0,0
+1591957700128,122, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-18,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,122,0,0
+1591957700128,122, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-18,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,122,0,0
+1591957700127,124,/api/user/paminnelser,200,,Efter Inloggning 1-19,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,123,0,0
+1591957700127,124,/api/user/paminnelser,200,,Efter Inloggning 1-19,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,123,0,0
+1591957700127,124, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-15,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,124,0,0
+1591957700127,124, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-15,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,124,0,0
+1591957700178,73,/api/user/paminnelser,200,,Efter Inloggning 1-21,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,73,0,0
+1591957700178,73,/api/user/paminnelser,200,,Efter Inloggning 1-21,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,73,0,0
+1591957700068,184, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-16,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,184,0,0
+1591957700068,184, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-16,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,184,0,0
+1591957699514,738,/api/user/user-details,200,,Efter Inloggning 1-22,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,738,0,6
+1591957699514,738,/api/user/user-details,200,,Efter Inloggning 1-22,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,738,0,6
+1591957699577,716,/api/user/user-details,200,,Efter Inloggning 1-23,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,716,0,6
+1591957699577,716,/api/user/user-details,200,,Efter Inloggning 1-23,text,true,,591,201,17,17,http://xploreutv01.prodstod.se:9009/api/user/user-details,716,0,6
+1591957700253,124,/api/user/paminnelser,200,,Efter Inloggning 1-22,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,124,0,0
+1591957700253,124,/api/user/paminnelser,200,,Efter Inloggning 1-22,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,124,0,0
+1591957700294,84,/api/user/paminnelser,200,,Efter Inloggning 1-23,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,83,0,0
+1591957700294,84,/api/user/paminnelser,200,,Efter Inloggning 1-23,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,83,0,0
+1591957700245,145, /api/meddelande,200,,Efter Inloggning 1-20,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,145,0,0
+1591957700245,145, /api/meddelande,200,,Efter Inloggning 1-20,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,145,0,0
+1591957700252,138, /api/meddelande,200,,Efter Inloggning 1-19,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,138,0,0
+1591957700252,138, /api/meddelande,200,,Efter Inloggning 1-19,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,138,0,0
+1591957700111,293, /api/meddelande,200,,Efter Inloggning 1-17,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,293,0,0
+1591957700111,293, /api/meddelande,200,,Efter Inloggning 1-17,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,293,0,0
+1591957699640,792,/api/user/user-details,200,,Efter Inloggning 1-24,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,792,0,6
+1591957699640,792,/api/user/user-details,200,,Efter Inloggning 1-24,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,792,0,6
+1591957700433,22,/api/user/paminnelser,200,,Efter Inloggning 1-24,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,22,0,0
+1591957700433,22,/api/user/paminnelser,200,,Efter Inloggning 1-24,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,22,0,0
+1591957699703,791,/api/user/user-details,200,,Efter Inloggning 1-25,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,616,0,8
+1591957699703,791,/api/user/user-details,200,,Efter Inloggning 1-25,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,616,0,8
+1591957700252,242, /api/meddelande,200,,Efter Inloggning 1-21,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,216,0,0
+1591957700252,242, /api/meddelande,200,,Efter Inloggning 1-21,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,216,0,0
+1591957700379,142, /api/meddelande,200,,Efter Inloggning 1-23,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,76,0,0
+1591957700379,142, /api/meddelande,200,,Efter Inloggning 1-23,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,76,0,0
+1591957700390,131, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-20,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,131,0,0
+1591957700390,131, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-20,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,131,0,0
+1591957700494,36,/api/user/paminnelser,200,,Efter Inloggning 1-25,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,36,0,0
+1591957700494,36,/api/user/paminnelser,200,,Efter Inloggning 1-25,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,36,0,0
+1591957700521,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-23,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700521,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-23,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700494,157, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-21,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,157,0,0
+1591957700494,157, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-21,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,157,0,0
+1591957700530,122, /api/meddelande,200,,Efter Inloggning 1-25,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,11,0,0
+1591957700377,275, /api/meddelande,200,,Efter Inloggning 1-22,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,78,0,0
+1591957700530,122, /api/meddelande,200,,Efter Inloggning 1-25,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,11,0,0
+1591957700377,275, /api/meddelande,200,,Efter Inloggning 1-22,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,78,0,0
+1591957700390,262, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-19,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,262,0,0
+1591957700390,262, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-19,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,262,0,0
+1591957700404,252, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-17,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,251,0,0
+1591957700404,252, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-17,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,251,0,0
+1591957700652,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-22,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700652,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-25,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700652,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-22,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700652,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-25,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957700456,361, /api/meddelande,200,,Efter Inloggning 1-24,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,65,0,0
+1591957700456,361, /api/meddelande,200,,Efter Inloggning 1-24,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,65,0,0
+1591957699765,1086,/api/user/user-details,200,,Efter Inloggning 1-26,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1086,0,7
+1591957699765,1086,/api/user/user-details,200,,Efter Inloggning 1-26,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1086,0,7
+1591957699830,1044,/api/user/user-details,200,,Efter Inloggning 1-27,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1044,0,7
+1591957699830,1044,/api/user/user-details,200,,Efter Inloggning 1-27,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1044,0,7
+1591957700817,62, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-24,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,62,0,0
+1591957700817,62, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-24,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,62,0,0
+1591957700851,63,/api/user/paminnelser,200,,Efter Inloggning 1-26,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,63,0,0
+1591957700875,39,/api/user/paminnelser,200,,Efter Inloggning 1-27,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,39,0,0
+1591957700851,63,/api/user/paminnelser,200,,Efter Inloggning 1-26,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,63,0,0
+1591957700875,39,/api/user/paminnelser,200,,Efter Inloggning 1-27,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,39,0,0
+1591957699891,1040,/api/user/user-details,200,,Efter Inloggning 1-28,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1040,0,7
+1591957699891,1040,/api/user/user-details,200,,Efter Inloggning 1-28,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1040,0,7
+1591957700914,26, /api/meddelande,200,,Efter Inloggning 1-26,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957700915,25, /api/meddelande,200,,Efter Inloggning 1-27,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957700914,26, /api/meddelande,200,,Efter Inloggning 1-26,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957700915,25, /api/meddelande,200,,Efter Inloggning 1-27,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957700932,14,/api/user/paminnelser,200,,Efter Inloggning 1-28,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957700932,14,/api/user/paminnelser,200,,Efter Inloggning 1-28,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957700940,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-26,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957700940,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-26,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957700940,22, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-27,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,21,0,0
+1591957700940,22, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-27,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,21,0,0
+1591957700946,38, /api/meddelande,200,,Efter Inloggning 1-28,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,38,0,0
+1591957700946,38, /api/meddelande,200,,Efter Inloggning 1-28,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,38,0,0
+1591957700984,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-28,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957700984,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-28,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957699955,1097,/api/user/user-details,200,,Efter Inloggning 1-29,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1097,0,7
+1591957699955,1097,/api/user/user-details,200,,Efter Inloggning 1-29,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1097,0,7
+1591957700082,978,/api/user/user-details,200,,Efter Inloggning 1-31,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,978,0,6
+1591957700082,978,/api/user/user-details,200,,Efter Inloggning 1-31,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,978,0,6
+1591957701053,14,/api/user/paminnelser,200,,Efter Inloggning 1-29,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957701053,14,/api/user/paminnelser,200,,Efter Inloggning 1-29,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957700018,1052,/api/user/user-details,200,,Efter Inloggning 1-30,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1052,0,6
+1591957700018,1052,/api/user/user-details,200,,Efter Inloggning 1-30,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1052,0,6
+1591957701061,15,/api/user/paminnelser,200,,Efter Inloggning 1-31,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957701061,15,/api/user/paminnelser,200,,Efter Inloggning 1-31,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957701070,16,/api/user/paminnelser,200,,Efter Inloggning 1-30,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957701070,16,/api/user/paminnelser,200,,Efter Inloggning 1-30,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957701067,27, /api/meddelande,200,,Efter Inloggning 1-29,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957701067,27, /api/meddelande,200,,Efter Inloggning 1-29,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957701076,25, /api/meddelande,200,,Efter Inloggning 1-31,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957701076,25, /api/meddelande,200,,Efter Inloggning 1-31,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957701094,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-29,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957701094,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-29,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957701086,36, /api/meddelande,200,,Efter Inloggning 1-30,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,36,0,0
+1591957701086,36, /api/meddelande,200,,Efter Inloggning 1-30,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,36,0,0
+1591957701101,31, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-31,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,31,0,0
+1591957701101,31, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-31,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,31,0,0
+1591957701122,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-30,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957701122,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-30,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957700208,1032,/api/user/user-details,200,,Efter Inloggning 1-33,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1032,0,7
+1591957700208,1032,/api/user/user-details,200,,Efter Inloggning 1-33,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1032,0,7
+1591957701240,16,/api/user/paminnelser,200,,Efter Inloggning 1-33,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957701240,16,/api/user/paminnelser,200,,Efter Inloggning 1-33,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957700145,1129,/api/user/user-details,200,,Efter Inloggning 1-32,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1129,0,7
+1591957700145,1129,/api/user/user-details,200,,Efter Inloggning 1-32,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1129,0,7
+1591957701256,30, /api/meddelande,200,,Efter Inloggning 1-33,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,30,0,0
+1591957701256,30, /api/meddelande,200,,Efter Inloggning 1-33,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,30,0,0
+1591957701275,17,/api/user/paminnelser,200,,Efter Inloggning 1-32,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,17,0,0
+1591957701275,17,/api/user/paminnelser,200,,Efter Inloggning 1-32,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,17,0,0
+1591957701286,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-33,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957701286,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-33,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957701292,28, /api/meddelande,200,,Efter Inloggning 1-32,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,28,0,0
+1591957701292,28, /api/meddelande,200,,Efter Inloggning 1-32,text,true,,1158,261,18,18,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,28,0,0
+1591957701320,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-32,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957701320,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-32,text,true,,354,262,18,18,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957700333,1042,/api/user/user-details,200,,Efter Inloggning 1-35,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1042,0,6
+1591957700333,1042,/api/user/user-details,200,,Efter Inloggning 1-35,text,true,,591,201,18,18,http://xploreutv01.prodstod.se:9009/api/user/user-details,1042,0,6
+1591957701375,15,/api/user/paminnelser,200,,Efter Inloggning 1-35,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957701375,15,/api/user/paminnelser,200,,Efter Inloggning 1-35,text,true,,354,253,18,18,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957701390,27, /api/meddelande,200,,Efter Inloggning 1-35,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957701390,27, /api/meddelande,200,,Efter Inloggning 1-35,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957700270,1170,/api/user/user-details,200,,Efter Inloggning 1-34,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1170,0,6
+1591957700270,1170,/api/user/user-details,200,,Efter Inloggning 1-34,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1170,0,6
+1591957701418,39, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-35,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,39,0,0
+1591957701418,39, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-35,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,39,0,0
+1591957701440,35,/api/user/paminnelser,200,,Efter Inloggning 1-34,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,35,0,0
+1591957701440,35,/api/user/paminnelser,200,,Efter Inloggning 1-34,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,35,0,0
+1591957701475,29, /api/meddelande,200,,Efter Inloggning 1-34,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,29,0,0
+1591957701475,29, /api/meddelande,200,,Efter Inloggning 1-34,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,29,0,0
+1591957701505,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-34,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957701505,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-34,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957700459,1124,/api/user/user-details,200,,Efter Inloggning 1-37,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1124,0,6
+1591957700459,1124,/api/user/user-details,200,,Efter Inloggning 1-37,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1124,0,6
+1591957701583,14,/api/user/paminnelser,200,,Efter Inloggning 1-37,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957701583,14,/api/user/paminnelser,200,,Efter Inloggning 1-37,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957700395,1213,/api/user/user-details,200,,Efter Inloggning 1-36,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1213,0,6
+1591957700395,1213,/api/user/user-details,200,,Efter Inloggning 1-36,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1213,0,6
+1591957701597,31, /api/meddelande,200,,Efter Inloggning 1-37,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957701597,31, /api/meddelande,200,,Efter Inloggning 1-37,text,true,,1158,261,20,20,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957701608,24,/api/user/paminnelser,200,,Efter Inloggning 1-36,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957701608,24,/api/user/paminnelser,200,,Efter Inloggning 1-36,text,true,,354,253,20,20,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957700522,1122,/api/user/user-details,200,,Efter Inloggning 1-38,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1122,0,7
+1591957700522,1122,/api/user/user-details,200,,Efter Inloggning 1-38,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1122,0,7
+1591957700585,1078,/api/user/user-details,200,,Efter Inloggning 1-39,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1078,0,7
+1591957700585,1078,/api/user/user-details,200,,Efter Inloggning 1-39,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1078,0,7
+1591957701663,76,/api/user/paminnelser,200,,Efter Inloggning 1-39,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,76,0,0
+1591957701663,76,/api/user/paminnelser,200,,Efter Inloggning 1-39,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,76,0,0
+1591957700773,1060,/api/user/user-details,200,,Efter Inloggning 1-42,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1060,0,7
+1591957700773,1060,/api/user/user-details,200,,Efter Inloggning 1-42,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1060,0,7
+1591957701740,95, /api/meddelande,200,,Efter Inloggning 1-39,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,95,0,0
+1591957701740,95, /api/meddelande,200,,Efter Inloggning 1-39,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,95,0,0
+1591957701833,47,/api/user/paminnelser,200,,Efter Inloggning 1-42,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,47,0,0
+1591957701833,47,/api/user/paminnelser,200,,Efter Inloggning 1-42,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,47,0,0
+1591957700837,1044,/api/user/user-details,200,,Efter Inloggning 1-43,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1044,0,7
+1591957700837,1044,/api/user/user-details,200,,Efter Inloggning 1-43,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1044,0,7
+1591957700711,1211,/api/user/user-details,200,,Efter Inloggning 1-41,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,1211,0,6
+1591957700711,1211,/api/user/user-details,200,,Efter Inloggning 1-41,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,1211,0,6
+1591957701881,71,/api/user/paminnelser,200,,Efter Inloggning 1-43,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,71,0,0
+1591957701881,71,/api/user/paminnelser,200,,Efter Inloggning 1-43,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,71,0,0
+1591957701088,874,/api/user/user-details,200,,Efter Inloggning 1-47,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,874,0,6
+1591957701088,874,/api/user/user-details,200,,Efter Inloggning 1-47,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,874,0,6
+1591957701880,90, /api/meddelande,200,,Efter Inloggning 1-42,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,90,0,0
+1591957701880,90, /api/meddelande,200,,Efter Inloggning 1-42,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,90,0,0
+1591957701923,52,/api/user/paminnelser,200,,Efter Inloggning 1-41,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,52,0,0
+1591957701923,52,/api/user/paminnelser,200,,Efter Inloggning 1-41,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,52,0,0
+1591957701214,794,/api/user/user-details,200,,Efter Inloggning 1-49,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,794,0,6
+1591957701214,794,/api/user/user-details,200,,Efter Inloggning 1-49,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,794,0,6
+1591957701952,89, /api/meddelande,200,,Efter Inloggning 1-43,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,89,0,0
+1591957701952,89, /api/meddelande,200,,Efter Inloggning 1-43,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,89,0,0
+1591957701970,77, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-42,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,77,0,0
+1591957701970,77, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-42,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,77,0,0
+1591957702008,45,/api/user/paminnelser,200,,Efter Inloggning 1-49,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,45,0,0
+1591957702008,45,/api/user/paminnelser,200,,Efter Inloggning 1-49,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,45,0,0
+1591957701976,92, /api/meddelande,200,,Efter Inloggning 1-41,text,true,,1158,261,26,26,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,92,0,0
+1591957701976,92, /api/meddelande,200,,Efter Inloggning 1-41,text,true,,1158,261,26,26,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,92,0,0
+1591957701962,111,/api/user/paminnelser,200,,Efter Inloggning 1-47,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,111,0,0
+1591957701962,111,/api/user/paminnelser,200,,Efter Inloggning 1-47,text,true,,354,253,26,26,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,111,0,0
+1591957702041,37, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-43,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,37,0,0
+1591957702041,37, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-43,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,37,0,0
+1591957701529,561,/api/user/user-details,200,,Efter Inloggning 1-54,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,561,0,11
+1591957701529,561,/api/user/user-details,200,,Efter Inloggning 1-54,text,true,,591,201,25,25,http://xploreutv01.prodstod.se:9009/api/user/user-details,561,0,11
+1591957701629,511, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-37,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,511,0,0
+1591957701629,511, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-37,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,511,0,0
+1591957701645,496,/api/user/paminnelser,200,,Efter Inloggning 1-38,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,496,0,0
+1591957701645,496,/api/user/paminnelser,200,,Efter Inloggning 1-38,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,496,0,0
+1591957701466,709,/api/user/user-details,200,,Efter Inloggning 1-53,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,709,0,6
+1591957701466,709,/api/user/user-details,200,,Efter Inloggning 1-53,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,709,0,6
+1591957701835,418, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-39,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,418,0,0
+1591957701835,418, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-39,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,418,0,0
+1591957702068,189, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-41,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,189,0,0
+1591957702068,189, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-41,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,189,0,0
+1591957701632,631, /api/meddelande,200,,Efter Inloggning 1-36,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,631,0,0
+1591957701632,631, /api/meddelande,200,,Efter Inloggning 1-36,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,631,0,0
+1591957702090,175,/api/user/paminnelser,200,,Efter Inloggning 1-54,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,175,0,0
+1591957702090,175,/api/user/paminnelser,200,,Efter Inloggning 1-54,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,175,0,0
+1591957702175,95,/api/user/paminnelser,200,,Efter Inloggning 1-53,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,95,0,0
+1591957702175,95,/api/user/paminnelser,200,,Efter Inloggning 1-53,text,true,,354,253,25,25,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,95,0,0
+1591957702141,146, /api/meddelande,200,,Efter Inloggning 1-38,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,146,0,0
+1591957702141,146, /api/meddelande,200,,Efter Inloggning 1-38,text,true,,1158,261,25,25,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,146,0,0
+1591957700899,1423,/api/user/user-details,200,,Efter Inloggning 1-44,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,1423,0,7
+1591957700899,1423,/api/user/user-details,200,,Efter Inloggning 1-44,text,true,,591,201,26,26,http://xploreutv01.prodstod.se:9009/api/user/user-details,1423,0,7
+1591957701656,699,/api/user/user-details,200,,Efter Inloggning 1-56,text,true,,591,201,27,27,http://xploreutv01.prodstod.se:9009/api/user/user-details,699,0,6
+1591957701656,699,/api/user/user-details,200,,Efter Inloggning 1-56,text,true,,591,201,27,27,http://xploreutv01.prodstod.se:9009/api/user/user-details,699,0,6
+1591957700647,1728,/api/user/user-details,200,,Efter Inloggning 1-40,text,true,,591,201,27,27,http://xploreutv01.prodstod.se:9009/api/user/user-details,1728,0,7
+1591957700647,1728,/api/user/user-details,200,,Efter Inloggning 1-40,text,true,,591,201,27,27,http://xploreutv01.prodstod.se:9009/api/user/user-details,1728,0,7
+1591957700962,1478,/api/user/user-details,200,,Efter Inloggning 1-45,text,true,,591,201,28,28,http://xploreutv01.prodstod.se:9009/api/user/user-details,1478,0,7
+1591957700962,1478,/api/user/user-details,200,,Efter Inloggning 1-45,text,true,,591,201,28,28,http://xploreutv01.prodstod.se:9009/api/user/user-details,1478,0,7
+1591957702356,87,/api/user/paminnelser,200,,Efter Inloggning 1-56,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,87,0,0
+1591957702356,87,/api/user/paminnelser,200,,Efter Inloggning 1-56,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,87,0,0
+1591957702375,86,/api/user/paminnelser,200,,Efter Inloggning 1-40,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,86,0,0
+1591957702375,86,/api/user/paminnelser,200,,Efter Inloggning 1-40,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,86,0,0
+1591957702322,139,/api/user/paminnelser,200,,Efter Inloggning 1-44,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,139,0,0
+1591957702322,139,/api/user/paminnelser,200,,Efter Inloggning 1-44,text,true,,354,253,28,28,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,139,0,0
+1591957702287,174, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-38,text,true,,354,262,28,28,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,174,0,0
+1591957702287,174, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-38,text,true,,354,262,28,28,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,174,0,0
+1591957702263,203, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-36,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,203,0,0
+1591957702263,203, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-36,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,203,0,0
+1591957702271,196, /api/meddelande,200,,Efter Inloggning 1-53,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,196,0,0
+1591957702271,196, /api/meddelande,200,,Efter Inloggning 1-53,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,196,0,0
+1591957702053,438, /api/meddelande,200,,Efter Inloggning 1-49,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,438,0,0
+1591957702053,438, /api/meddelande,200,,Efter Inloggning 1-49,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,438,0,0
+1591957702443,65, /api/meddelande,200,,Efter Inloggning 1-56,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,65,0,0
+1591957702443,65, /api/meddelande,200,,Efter Inloggning 1-56,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,65,0,0
+1591957702265,250, /api/meddelande,200,,Efter Inloggning 1-54,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,250,0,0
+1591957702265,250, /api/meddelande,200,,Efter Inloggning 1-54,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,250,0,0
+1591957702441,76,/api/user/paminnelser,200,,Efter Inloggning 1-45,text,true,,354,253,27,27,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,76,0,0
+1591957702441,76,/api/user/paminnelser,200,,Efter Inloggning 1-45,text,true,,354,253,27,27,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,76,0,0
+1591957702461,57, /api/meddelande,200,,Efter Inloggning 1-44,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,57,0,0
+1591957702461,57, /api/meddelande,200,,Efter Inloggning 1-44,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,57,0,0
+1591957702461,60, /api/meddelande,200,,Efter Inloggning 1-40,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,60,0,0
+1591957702508,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-56,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957702461,60, /api/meddelande,200,,Efter Inloggning 1-40,text,true,,1158,261,27,27,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,60,0,0
+1591957702508,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-56,text,true,,354,262,27,27,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957702467,55, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-53,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,55,0,0
+1591957702467,55, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-53,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,55,0,0
+1591957702491,31, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-49,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,31,0,0
+1591957702491,31, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-49,text,true,,354,262,26,26,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,31,0,0
+1591957702515,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-54,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957702515,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-54,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957702518,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-44,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957702518,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-44,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957702521,10, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-40,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,10,0,0
+1591957702521,10, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-40,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,10,0,0
+1591957702074,458, /api/meddelande,200,,Efter Inloggning 1-47,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,157,0,0
+1591957702074,458, /api/meddelande,200,,Efter Inloggning 1-47,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,157,0,0
+1591957702517,15, /api/meddelande,200,,Efter Inloggning 1-45,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,15,0,0
+1591957702517,15, /api/meddelande,200,,Efter Inloggning 1-45,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,15,0,0
+1591957702532,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-45,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702532,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-47,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702532,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-45,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702532,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-47,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957701026,1670,/api/user/user-details,200,,Efter Inloggning 1-46,text,true,,591,201,22,22,http://xploreutv01.prodstod.se:9009/api/user/user-details,1670,0,7
+1591957701026,1670,/api/user/user-details,200,,Efter Inloggning 1-46,text,true,,591,201,22,22,http://xploreutv01.prodstod.se:9009/api/user/user-details,1670,0,7
+1591957702696,19,/api/user/paminnelser,200,,Efter Inloggning 1-46,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957702696,19,/api/user/paminnelser,200,,Efter Inloggning 1-46,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,19,0,0
+1591957702715,32, /api/meddelande,200,,Efter Inloggning 1-46,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,32,0,0
+1591957702715,32, /api/meddelande,200,,Efter Inloggning 1-46,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,32,0,0
+1591957702748,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-46,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702748,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-46,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957701151,1640,/api/user/user-details,200,,Efter Inloggning 1-48,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1639,0,6
+1591957701151,1640,/api/user/user-details,200,,Efter Inloggning 1-48,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1639,0,6
+1591957702791,16,/api/user/paminnelser,200,,Efter Inloggning 1-48,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957702791,16,/api/user/paminnelser,200,,Efter Inloggning 1-48,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957702807,31, /api/meddelande,200,,Efter Inloggning 1-48,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957702807,31, /api/meddelande,200,,Efter Inloggning 1-48,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957702838,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-48,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957702838,19, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-48,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,19,0,0
+1591957701719,1153,/api/user/user-details,200,,Efter Inloggning 1-57,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1153,0,7
+1591957701719,1153,/api/user/user-details,200,,Efter Inloggning 1-57,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1153,0,7
+1591957702872,15,/api/user/paminnelser,200,,Efter Inloggning 1-57,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957702872,15,/api/user/paminnelser,200,,Efter Inloggning 1-57,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957702887,27, /api/meddelande,200,,Efter Inloggning 1-57,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957702887,27, /api/meddelande,200,,Efter Inloggning 1-57,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957702915,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-57,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957702915,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-57,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957701278,1698,/api/user/user-details,200,,Efter Inloggning 1-50,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1698,0,6
+1591957701278,1698,/api/user/user-details,200,,Efter Inloggning 1-50,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1698,0,6
+1591957702976,16,/api/user/paminnelser,200,,Efter Inloggning 1-50,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957702976,16,/api/user/paminnelser,200,,Efter Inloggning 1-50,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957701781,1229,/api/user/user-details,200,,Efter Inloggning 1-58,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1229,0,6
+1591957701781,1229,/api/user/user-details,200,,Efter Inloggning 1-58,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1229,0,6
+1591957702992,28, /api/meddelande,200,,Efter Inloggning 1-50,text,true,,1158,261,24,24,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,28,0,0
+1591957702992,28, /api/meddelande,200,,Efter Inloggning 1-50,text,true,,1158,261,24,24,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,28,0,0
+1591957701340,1682,/api/user/user-details,200,,Efter Inloggning 1-51,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1682,0,7
+1591957703011,12,/api/user/paminnelser,200,,Efter Inloggning 1-58,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957701340,1682,/api/user/user-details,200,,Efter Inloggning 1-51,text,true,,591,201,24,24,http://xploreutv01.prodstod.se:9009/api/user/user-details,1682,0,7
+1591957703011,12,/api/user/paminnelser,200,,Efter Inloggning 1-58,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957703021,11, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-50,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,11,0,0
+1591957703021,11, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-50,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,11,0,0
+1591957703023,13,/api/user/paminnelser,200,,Efter Inloggning 1-51,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703023,13,/api/user/paminnelser,200,,Efter Inloggning 1-51,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703023,17, /api/meddelande,200,,Efter Inloggning 1-58,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,17,0,0
+1591957703023,17, /api/meddelande,200,,Efter Inloggning 1-58,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,17,0,0
+1591957703041,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-58,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957703041,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-58,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957703036,41, /api/meddelande,200,,Efter Inloggning 1-51,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,41,0,0
+1591957703036,41, /api/meddelande,200,,Efter Inloggning 1-51,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,41,0,0
+1591957703077,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-51,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957703077,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-51,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957701844,1277,/api/user/user-details,200,,Efter Inloggning 1-59,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1277,0,6
+1591957701844,1277,/api/user/user-details,200,,Efter Inloggning 1-59,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1277,0,6
+1591957703121,13,/api/user/paminnelser,200,,Efter Inloggning 1-59,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957703121,13,/api/user/paminnelser,200,,Efter Inloggning 1-59,text,true,,354,253,23,23,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957701404,1757,/api/user/user-details,200,,Efter Inloggning 1-52,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1757,0,6
+1591957701404,1757,/api/user/user-details,200,,Efter Inloggning 1-52,text,true,,591,201,23,23,http://xploreutv01.prodstod.se:9009/api/user/user-details,1757,0,6
+1591957703134,27, /api/meddelande,200,,Efter Inloggning 1-59,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957703134,27, /api/meddelande,200,,Efter Inloggning 1-59,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957703162,24,/api/user/paminnelser,200,,Efter Inloggning 1-52,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957703162,24, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-59,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,24,0,0
+1591957703162,24,/api/user/paminnelser,200,,Efter Inloggning 1-52,text,true,,354,253,24,24,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,24,0,0
+1591957703162,24, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-59,text,true,,354,262,24,24,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,24,0,0
+1591957703186,33, /api/meddelande,200,,Efter Inloggning 1-52,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703186,33, /api/meddelande,200,,Efter Inloggning 1-52,text,true,,1158,261,23,23,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703220,80, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-52,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,80,0,0
+1591957703220,80, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-52,text,true,,354,262,23,23,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,80,0,0
+1591957701908,1543,/api/user/user-details,200,,Efter Inloggning 1-60,text,true,,591,201,22,22,http://xploreutv01.prodstod.se:9009/api/user/user-details,1543,0,6
+1591957701908,1543,/api/user/user-details,200,,Efter Inloggning 1-60,text,true,,591,201,22,22,http://xploreutv01.prodstod.se:9009/api/user/user-details,1543,0,6
+1591957703453,17,/api/user/paminnelser,200,,Efter Inloggning 1-60,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,17,0,0
+1591957703453,17,/api/user/paminnelser,200,,Efter Inloggning 1-60,text,true,,354,253,22,22,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,17,0,0
+1591957703470,38, /api/meddelande,200,,Efter Inloggning 1-60,text,true,,1158,261,22,22,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,38,0,0
+1591957703470,38, /api/meddelande,200,,Efter Inloggning 1-60,text,true,,1158,261,22,22,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,38,0,0
+1591957703508,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-60,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957703508,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-60,text,true,,354,262,22,22,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957701970,1607,/api/user/user-details,200,,Efter Inloggning 1-61,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1607,0,6
+1591957701970,1607,/api/user/user-details,200,,Efter Inloggning 1-61,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1607,0,6
+1591957701593,1991,/api/user/user-details,200,,Efter Inloggning 1-55,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1991,0,7
+1591957701593,1991,/api/user/user-details,200,,Efter Inloggning 1-55,text,true,,591,201,21,21,http://xploreutv01.prodstod.se:9009/api/user/user-details,1991,0,7
+1591957703579,11,/api/user/paminnelser,200,,Efter Inloggning 1-61,text,true,,354,253,21,21,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957703579,11,/api/user/paminnelser,200,,Efter Inloggning 1-61,text,true,,354,253,21,21,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957703586,16,/api/user/paminnelser,200,,Efter Inloggning 1-55,text,true,,354,253,21,21,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957703586,16,/api/user/paminnelser,200,,Efter Inloggning 1-55,text,true,,354,253,21,21,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957703590,33, /api/meddelande,200,,Efter Inloggning 1-61,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703590,33, /api/meddelande,200,,Efter Inloggning 1-61,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703602,31, /api/meddelande,200,,Efter Inloggning 1-55,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,7
+1591957703624,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-61,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957703602,31, /api/meddelande,200,,Efter Inloggning 1-55,text,true,,1158,261,21,21,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,7
+1591957703624,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-61,text,true,,354,262,21,21,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957702159,1477,/api/user/user-details,200,,Efter Inloggning 1-64,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1477,0,7
+1591957702159,1477,/api/user/user-details,200,,Efter Inloggning 1-64,text,true,,591,201,20,20,http://xploreutv01.prodstod.se:9009/api/user/user-details,1477,0,7
+1591957703633,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-55,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703633,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-55,text,true,,354,262,20,20,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703637,16,/api/user/paminnelser,200,,Efter Inloggning 1-64,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957702349,1303,/api/user/user-details,200,,Efter Inloggning 1-67,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1303,0,7
+1591957703637,16,/api/user/paminnelser,200,,Efter Inloggning 1-64,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,16,0,0
+1591957702349,1303,/api/user/user-details,200,,Efter Inloggning 1-67,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1303,0,7
+1591957702410,1254,/api/user/user-details,200,,Efter Inloggning 1-68,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1254,0,7
+1591957702410,1254,/api/user/user-details,200,,Efter Inloggning 1-68,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1254,0,7
+1591957703654,11,/api/user/paminnelser,200,,Efter Inloggning 1-67,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957703654,11,/api/user/paminnelser,200,,Efter Inloggning 1-67,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957702288,1379,/api/user/user-details,200,,Efter Inloggning 1-66,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1379,0,6
+1591957702288,1379,/api/user/user-details,200,,Efter Inloggning 1-66,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1379,0,6
+1591957703665,14,/api/user/paminnelser,200,,Efter Inloggning 1-68,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957703665,14,/api/user/paminnelser,200,,Efter Inloggning 1-68,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,14,0,0
+1591957703654,26, /api/meddelande,200,,Efter Inloggning 1-64,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957703654,26, /api/meddelande,200,,Efter Inloggning 1-64,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957703669,15,/api/user/paminnelser,200,,Efter Inloggning 1-66,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957703669,15,/api/user/paminnelser,200,,Efter Inloggning 1-66,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,15,0,0
+1591957702036,1648,/api/user/user-details,200,,Efter Inloggning 1-62,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1648,0,6
+1591957702036,1648,/api/user/user-details,200,,Efter Inloggning 1-62,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1648,0,6
+1591957703665,25, /api/meddelande,200,,Efter Inloggning 1-67,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957703665,25, /api/meddelande,200,,Efter Inloggning 1-67,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957702224,1470,/api/user/user-details,200,,Efter Inloggning 1-65,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1470,0,6
+1591957702224,1470,/api/user/user-details,200,,Efter Inloggning 1-65,text,true,,591,201,19,19,http://xploreutv01.prodstod.se:9009/api/user/user-details,1470,0,6
+1591957703679,21, /api/meddelande,200,,Efter Inloggning 1-68,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,21,0,0
+1591957703679,21, /api/meddelande,200,,Efter Inloggning 1-68,text,true,,1158,261,19,19,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,21,0,0
+1591957703686,20,/api/user/paminnelser,200,,Efter Inloggning 1-62,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,20,0,0
+1591957703686,20,/api/user/paminnelser,200,,Efter Inloggning 1-62,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,20,0,0
+1591957703690,24, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-67,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,24,0,0
+1591957703690,24, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-67,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,24,0,0
+1591957703700,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-68,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957703700,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-68,text,true,,354,262,19,19,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957703695,20,/api/user/paminnelser,200,,Efter Inloggning 1-65,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,20,0,0
+1591957703695,20,/api/user/paminnelser,200,,Efter Inloggning 1-65,text,true,,354,253,19,19,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,20,0,0
+1591957703685,31, /api/meddelande,200,,Efter Inloggning 1-66,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957703685,31, /api/meddelande,200,,Efter Inloggning 1-66,text,true,,1158,261,17,17,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,31,0,0
+1591957703681,47, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-64,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,47,0,0
+1591957703681,47, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-64,text,true,,354,262,17,17,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,47,0,0
+1591957703716,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-66,text,true,,354,262,16,16,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703716,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-66,text,true,,354,262,16,16,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703706,32, /api/meddelande,200,,Efter Inloggning 1-62,text,true,,1158,261,15,15,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,32,0,0
+1591957703706,32, /api/meddelande,200,,Efter Inloggning 1-62,text,true,,1158,261,15,15,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,32,0,0
+1591957703715,35, /api/meddelande,200,,Efter Inloggning 1-65,text,true,,1158,261,15,15,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,35,0,0
+1591957703715,35, /api/meddelande,200,,Efter Inloggning 1-65,text,true,,1158,261,15,15,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,35,0,0
+1591957703738,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-62,text,true,,354,262,15,15,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957703738,18, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-62,text,true,,354,262,15,15,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,18,0,0
+1591957703750,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-65,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957703750,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-65,text,true,,354,262,14,14,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957702476,1329,/api/user/user-details,200,,Efter Inloggning 1-69,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,1329,0,6
+1591957702476,1329,/api/user/user-details,200,,Efter Inloggning 1-69,text,true,,591,201,13,13,http://xploreutv01.prodstod.se:9009/api/user/user-details,1329,0,6
+1591957703806,12,/api/user/paminnelser,200,,Efter Inloggning 1-69,text,true,,354,253,13,13,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703806,12,/api/user/paminnelser,200,,Efter Inloggning 1-69,text,true,,354,253,13,13,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703818,33, /api/meddelande,200,,Efter Inloggning 1-69,text,true,,1158,261,13,13,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703818,33, /api/meddelande,200,,Efter Inloggning 1-69,text,true,,1158,261,13,13,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,33,0,0
+1591957703851,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-69,text,true,,354,262,13,13,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703851,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-69,text,true,,354,262,13,13,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702097,1811,/api/user/user-details,200,,Efter Inloggning 1-63,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1811,0,6
+1591957702097,1811,/api/user/user-details,200,,Efter Inloggning 1-63,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1811,0,6
+1591957702536,1379,/api/user/user-details,200,,Efter Inloggning 1-70,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1379,0,6
+1591957702536,1379,/api/user/user-details,200,,Efter Inloggning 1-70,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1379,0,6
+1591957703909,11,/api/user/paminnelser,200,,Efter Inloggning 1-63,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957703909,11,/api/user/paminnelser,200,,Efter Inloggning 1-63,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957702601,1319,/api/user/user-details,200,,Efter Inloggning 1-71,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1319,0,6
+1591957702601,1319,/api/user/user-details,200,,Efter Inloggning 1-71,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1319,0,6
+1591957703916,12,/api/user/paminnelser,200,,Efter Inloggning 1-70,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703916,12,/api/user/paminnelser,200,,Efter Inloggning 1-70,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957703921,10,/api/user/paminnelser,200,,Efter Inloggning 1-71,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957703921,10,/api/user/paminnelser,200,,Efter Inloggning 1-71,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957702664,1268,/api/user/user-details,200,,Efter Inloggning 1-72,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1268,0,7
+1591957702664,1268,/api/user/user-details,200,,Efter Inloggning 1-72,text,true,,591,201,12,12,http://xploreutv01.prodstod.se:9009/api/user/user-details,1268,0,7
+1591957703920,15, /api/meddelande,200,,Efter Inloggning 1-63,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,15,0,0
+1591957703920,15, /api/meddelande,200,,Efter Inloggning 1-63,text,true,,1158,261,12,12,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,15,0,0
+1591957703933,18,/api/user/paminnelser,200,,Efter Inloggning 1-72,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,18,0,0
+1591957703935,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-63,text,true,,354,262,12,12,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703933,18,/api/user/paminnelser,200,,Efter Inloggning 1-72,text,true,,354,253,12,12,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,18,0,0
+1591957703935,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-63,text,true,,354,262,12,12,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702727,1225,/api/user/user-details,200,,Efter Inloggning 1-73,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,1225,0,7
+1591957702727,1225,/api/user/user-details,200,,Efter Inloggning 1-73,text,true,,591,201,11,11,http://xploreutv01.prodstod.se:9009/api/user/user-details,1225,0,7
+1591957703931,22, /api/meddelande,200,,Efter Inloggning 1-71,text,true,,1158,261,11,11,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957703931,22, /api/meddelande,200,,Efter Inloggning 1-71,text,true,,1158,261,11,11,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957703929,24, /api/meddelande,200,,Efter Inloggning 1-70,text,true,,1158,261,11,11,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,24,0,0
+1591957703929,24, /api/meddelande,200,,Efter Inloggning 1-70,text,true,,1158,261,11,11,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,24,0,0
+1591957703953,8, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-70,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,8,0,0
+1591957703953,8, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-70,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,8,0,0
+1591957703953,8,/api/user/paminnelser,200,,Efter Inloggning 1-73,text,true,,354,253,11,11,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,8,0,0
+1591957703953,8,/api/user/paminnelser,200,,Efter Inloggning 1-73,text,true,,354,253,11,11,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,8,0,0
+1591957703953,8, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-71,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,8,0,0
+1591957703953,8, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-71,text,true,,354,262,11,11,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,8,0,0
+1591957703951,21, /api/meddelande,200,,Efter Inloggning 1-72,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,21,0,0
+1591957703951,21, /api/meddelande,200,,Efter Inloggning 1-72,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,21,0,0
+1591957702789,1190,/api/user/user-details,200,,Efter Inloggning 1-74,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,1189,0,7
+1591957702789,1190,/api/user/user-details,200,,Efter Inloggning 1-74,text,true,,591,201,9,9,http://xploreutv01.prodstod.se:9009/api/user/user-details,1189,0,7
+1591957703961,25, /api/meddelande,200,,Efter Inloggning 1-73,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957703961,25, /api/meddelande,200,,Efter Inloggning 1-73,text,true,,1158,261,9,9,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957703972,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-72,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957703972,15, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-72,text,true,,354,262,9,9,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,15,0,0
+1591957703980,10,/api/user/paminnelser,200,,Efter Inloggning 1-74,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957703980,10,/api/user/paminnelser,200,,Efter Inloggning 1-74,text,true,,354,253,8,8,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957703986,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-73,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957703986,16, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-73,text,true,,354,262,8,8,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,16,0,0
+1591957702853,1151,/api/user/user-details,200,,Efter Inloggning 1-75,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,1151,0,7
+1591957702853,1151,/api/user/user-details,200,,Efter Inloggning 1-75,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,1151,0,7
+1591957702915,1094,/api/user/user-details,200,,Efter Inloggning 1-76,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,1094,0,6
+1591957702915,1094,/api/user/user-details,200,,Efter Inloggning 1-76,text,true,,591,201,7,7,http://xploreutv01.prodstod.se:9009/api/user/user-details,1094,0,6
+1591957703990,27, /api/meddelande,200,,Efter Inloggning 1-74,text,true,,1158,261,7,7,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957703990,27, /api/meddelande,200,,Efter Inloggning 1-74,text,true,,1158,261,7,7,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,27,0,0
+1591957704006,11,/api/user/paminnelser,200,,Efter Inloggning 1-75,text,true,,354,253,7,7,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957704006,11,/api/user/paminnelser,200,,Efter Inloggning 1-75,text,true,,354,253,7,7,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,11,0,0
+1591957704010,12,/api/user/paminnelser,200,,Efter Inloggning 1-76,text,true,,354,253,7,7,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957704010,12,/api/user/paminnelser,200,,Efter Inloggning 1-76,text,true,,354,253,7,7,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957704017,12, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-74,text,true,,354,262,7,7,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,12,0,0
+1591957704017,12, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-74,text,true,,354,262,7,7,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,12,0,0
+1591957702980,1050,/api/user/user-details,200,,Efter Inloggning 1-77,text,true,,591,201,6,6,http://xploreutv01.prodstod.se:9009/api/user/user-details,1050,0,6
+1591957702980,1050,/api/user/user-details,200,,Efter Inloggning 1-77,text,true,,591,201,6,6,http://xploreutv01.prodstod.se:9009/api/user/user-details,1050,0,6
+1591957704017,22, /api/meddelande,200,,Efter Inloggning 1-75,text,true,,1158,261,6,6,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957704017,22, /api/meddelande,200,,Efter Inloggning 1-75,text,true,,1158,261,6,6,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957704031,12,/api/user/paminnelser,200,,Efter Inloggning 1-77,text,true,,354,253,6,6,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957704031,12,/api/user/paminnelser,200,,Efter Inloggning 1-77,text,true,,354,253,6,6,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,12,0,0
+1591957704022,22, /api/meddelande,200,,Efter Inloggning 1-76,text,true,,1158,261,6,6,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957704022,22, /api/meddelande,200,,Efter Inloggning 1-76,text,true,,1158,261,6,6,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,22,0,0
+1591957703105,942,/api/user/user-details,200,,Efter Inloggning 1-79,text,true,,591,201,6,6,http://xploreutv01.prodstod.se:9009/api/user/user-details,942,0,6
+1591957703105,942,/api/user/user-details,200,,Efter Inloggning 1-79,text,true,,591,201,6,6,http://xploreutv01.prodstod.se:9009/api/user/user-details,942,0,6
+1591957704039,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-75,text,true,,354,262,6,6,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957704039,14, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-75,text,true,,354,262,6,6,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,14,0,0
+1591957704044,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-76,text,true,,354,262,5,5,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957704044,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-76,text,true,,354,262,5,5,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957704048,9,/api/user/paminnelser,200,,Efter Inloggning 1-79,text,true,,354,253,5,5,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,9,0,0
+1591957704048,9,/api/user/paminnelser,200,,Efter Inloggning 1-79,text,true,,354,253,5,5,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,9,0,0
+1591957703042,1014,/api/user/user-details,200,,Efter Inloggning 1-78,text,true,,591,201,5,5,http://xploreutv01.prodstod.se:9009/api/user/user-details,1014,0,7
+1591957703042,1014,/api/user/user-details,200,,Efter Inloggning 1-78,text,true,,591,201,5,5,http://xploreutv01.prodstod.se:9009/api/user/user-details,1014,0,7
+1591957703167,894,/api/user/user-details,200,,Efter Inloggning 1-80,text,true,,591,201,4,4,http://xploreutv01.prodstod.se:9009/api/user/user-details,885,0,7
+1591957703167,894,/api/user/user-details,200,,Efter Inloggning 1-80,text,true,,591,201,4,4,http://xploreutv01.prodstod.se:9009/api/user/user-details,885,0,7
+1591957704057,10,/api/user/paminnelser,200,,Efter Inloggning 1-78,text,true,,354,253,4,4,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957704057,10,/api/user/paminnelser,200,,Efter Inloggning 1-78,text,true,,354,253,4,4,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,10,0,0
+1591957704044,23, /api/meddelande,200,,Efter Inloggning 1-77,text,true,,1158,261,4,4,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,23,0,0
+1591957704044,23, /api/meddelande,200,,Efter Inloggning 1-77,text,true,,1158,261,4,4,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,23,0,0
+1591957704062,13,/api/user/paminnelser,200,,Efter Inloggning 1-80,text,true,,354,253,4,4,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957704062,13,/api/user/paminnelser,200,,Efter Inloggning 1-80,text,true,,354,253,4,4,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,13,0,0
+1591957704057,20, /api/meddelande,200,,Efter Inloggning 1-79,text,true,,1158,261,4,4,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,20,0,0
+1591957704057,20, /api/meddelande,200,,Efter Inloggning 1-79,text,true,,1158,261,4,4,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,20,0,0
+1591957704068,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-77,text,true,,354,262,4,4,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957704068,9, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-77,text,true,,354,262,4,4,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,9,0,0
+1591957704077,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-79,text,true,,354,262,3,3,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957704068,26, /api/meddelande,200,,Efter Inloggning 1-78,text,true,,1158,261,3,3,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957704068,26, /api/meddelande,200,,Efter Inloggning 1-78,text,true,,1158,261,3,3,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,26,0,0
+1591957704077,17, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-79,text,true,,354,262,3,3,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,17,0,0
+1591957704075,25, /api/meddelande,200,,Efter Inloggning 1-80,text,true,,1158,261,2,2,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957704075,25, /api/meddelande,200,,Efter Inloggning 1-80,text,true,,1158,261,2,2,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,25,0,0
+1591957704094,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-78,text,true,,354,262,2,2,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957704094,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-78,text,true,,354,262,2,2,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957704100,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-80,text,true,,354,262,1,1,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591957704100,13, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-80,text,true,,354,262,1,1,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,13,0,0
+1591960120993,110,/api/user/user-details,200,,Efter Inloggning 1-1,text,true,,591,201,1,1,http://xploreutv01.prodstod.se:9009/api/user/user-details,109,0,25
+1591960121109,20,/api/user/paminnelser,200,,Efter Inloggning 1-1,text,true,,354,253,1,1,http://xploreutv01.prodstod.se:9009/api/user/paminnelser,20,0,0
+1591960121130,13, /api/meddelande,200,,Efter Inloggning 1-1,text,true,,1158,261,1,1,http://xploreutv01.prodstod.se:9009/api/meddelande?page=0&size=3,13,0,0
+1591960121144,7, /api/user/matvarden/ogranskade,200,,Efter Inloggning 1-1,text,true,,354,262,1,1,http://xploreutv01.prodstod.se:9009/api/user/matvarden/ogranskade,7,0,0

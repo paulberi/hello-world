@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-11">
+    <form [formGroup]="form">
+      <xp-dropzone [label]="'mk.projektimporter.haglofDropzoneLabel' | transloco"
+                  [acceptedFileEndings]="acceptedFileEndings"
+                  formControlName="files">
+      </xp-dropzone>
+    </form>
+
+    <div class="import-button">
+      <xp-spinner-button class="import-button"
+                        color="primary"
+                        [isDisabled]="importDisabled()"
+                        (spinnerButtonClick)="onImport()">
+        {{ "mk.projektinformation.import" | transloco }}
+      </xp-spinner-button>
+    </div>
+
+    <xp-message *ngIf="hasWarnings()" severity="warning" (onClose)="closeWarnings.emit()">
+      <mat-list>
+        <mat-list-item *ngIf="!isNullOrEmpty(warnings.fastigheterMissing)">
+          {{ "mk.projektimporter.haglofAntalFastigheterMissing" | transloco }}:
+          {{ warnings.fastigheterMissing.length }}
+        </mat-list-item>
+        <mat-list-item *ngIf="!isNullOrEmpty(warnings.agareMissing)">
+          {{ "mk.projektimporter.haglofAntalAgareMissing" | transloco }}:
+          {{ warnings.agareMissing.length }}
+        </mat-list-item>
+        <mat-list-item>
+            {{ "mk.projektimporter.haglofFastighetKommunMissing" | transloco }}:
+            {{ warnings.fastighetKommunMissing?.length }}
+        </mat-list-item>
+        <mat-list-item *ngIf="!isNullOrEmpty(warnings.agareAmbiguous)">
+            {{ "mk.projektimporter.haglofAgareAmbiguous" | transloco }}:
+            {{ warnings.agareAmbiguous.length }}
+        </mat-list-item>
+      </mat-list>
+    </xp-message>
+  </div>
+</div>

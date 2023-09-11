@@ -1,0 +1,35 @@
+components:
+  schemas:
+    Avtal:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+    AvtalMetadata:
+      type: object
+      properties:
+        stationsnamn:
+          type: string
+        matandeStation:
+          type: string
+        franStation:
+          type: string
+        tillStation:
+          type: string
+        markslag:
+          type: string
+        spanningsniva:
+          type: string
+  parameters:
+    avtalId:
+      name: avtalId
+      in: path
+      description: "UUID för avtal."
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "303a6a72-391d-90ec-e040-ed8f66444a1g"
+
+

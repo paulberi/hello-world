@@ -1,0 +1,17 @@
+<layer>
+  <name>RiksintresseFriluftsliv_NV</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6c0c</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6c0d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 08:37:44.947 UTC</dateCreated>
+  <dateModified>2020-10-06 11:35:51.627 UTC</dateModified>
+</layer>

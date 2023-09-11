@@ -1,0 +1,14 @@
+<div class="search-input">
+  <mat-form-field>
+    <input matInput
+          type="text"
+          ngDefaultControl
+          [placeholder]="placeholder"
+          [formControl]="search"/>
+    <button mat-button *ngIf="search.value" matSuffix mat-icon-button aria-label="Rensa" (click)="search.setValue('')">
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-icon *ngIf="!search.value" matSuffix>search</mat-icon>
+  </mat-form-field>
+
+</div>

@@ -1,0 +1,63 @@
+<div class="carousel-container d-flex justify-center">
+  <div class="button">
+      <button
+      carouselThrottleClick
+      mat-icon-button
+      [color]="color"
+      [ngClass]="{'hidden': selectedDot == 0}"
+      [class.margin-bottom]="titlePosition == 'bottom'"
+      (throttleClick)="onClickLeft()"
+      [attr.aria-label]="'xp.carousel.previous' | transloco">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  </div>
+
+  <div class="slider" #slider carouselResize (resize)="sliderResize($event)">
+    <div class="items d-flex">
+      <div class="item" *ngFor="let item of carouselItems" (click)="imageClick.emit(item)" [tabIndex]="item.id">
+        <div carouselResize (resize)="imageResize($event)">
+          <img
+          [src]="item.imageSrc"
+          [alt]="item.imageTitle"
+          [style.border-radius.px]="borderRadius"
+          [class.selected]="item.selected">
+        </div>
+        <ng-template [ngIf]="isTitleVisible">
+          <div [class.title-under]="titlePosition == 'bottom'"
+          [class.title-on]="titlePosition == 'on'"
+          [style.border-bottom-left-radius.px]="borderRadius"
+          [style.border-bottom-right-radius.px]="borderRadius">
+          <p>{{ item.imageTitle }}</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <div class="button">
+    <button
+      mat-button
+      carouselThrottleClick
+      mat-icon-button
+      [color]="color"
+      [ngClass]="{'hidden': selectedDot == numberOfDots - 1}"
+      [class.margin-bottom]="titlePosition == 'bottom'"
+      (throttleClick)="onClickRight()"
+      [attr.aria-label]="'xp.carousel.next' | transloco">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="dots d-flex justify-center">
+  <div *ngFor="let number of [].constructor(numberOfDots); let i = index">
+    <button
+      class="dot-style"
+      [class.margin-top]="titlePosition == 'on'"
+      [ngClass]="{'primary': color == 'primary' && selectedDot == i,
+                  'accent': color == 'accent' && selectedDot == i}"
+      (click)="onClickDots(i)"
+      [attr.aria-label]="'xp.carousel.indicators' | transloco"
+    ></button>
+  </div>
+</div>

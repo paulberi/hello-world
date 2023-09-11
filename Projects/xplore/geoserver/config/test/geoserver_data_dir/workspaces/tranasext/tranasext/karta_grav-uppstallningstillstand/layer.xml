@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_grav-uppstallningstillstand</name>
+  <id>LayerInfoImpl-35cca79a:d5663b9317d:-1a8d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-0d6da95d:bec1129dc3c:-e1c1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

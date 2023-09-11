@@ -1,0 +1,25 @@
+
+<form [formGroup]="form">
+  <mat-form-field>
+    <mat-label>{{ "xp.userForm.fornamn" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="fornamn"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "xp.userForm.efternamn" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="efternamn"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>{{ "xp.userForm.email" | transloco }}</mat-label>
+    <input matInput type="text" formControlName="email"/>
+    <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+  </mat-form-field>
+</form>
+
+<div class="actions">
+  <button mat-flat-button (click)="cancel.emit()" class="cancel-button">{{ "xp.common.cancel" | transloco }}</button>
+  <xp-spinner-button (spinnerButtonClick)="onSubmit()" [isLoading]="spinnerActive" color="primary">
+    {{ "xp.common.save" | transloco }}
+  </xp-spinner-button>
+</div>

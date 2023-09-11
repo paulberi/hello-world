@@ -1,0 +1,24 @@
+<div class="d-flex justify-space-between attributes">
+    <div *ngIf="orderLine.attributes?.length; else noAttributes">
+        <div *ngFor="let attribute of orderLine.attributes; first as isFirst">
+            <p>{{ attribute.displayName }}: <span [class.bold]="isFirst">{{ attribute.value }}</span></p>
+        </div>
+    </div>
+    <button *ngIf="isDeleteButtonVisible" mat-icon-button class="delete-button"
+        (click)="deleteOrderLine.emit(orderLine.orderLineId)"
+        [attr.aria-label]="'xp.order.deleteOrderLine' | transloco">
+        <mat-icon>delete_outlined</mat-icon>
+    </button>
+</div>
+<div class="d-flex justify-space-between bold">
+    <p>{{ "xp.order.amount" | transloco }}</p>
+    <p>{{ orderLine.linePrice }} {{ orderLine.currency }}</p>
+</div>
+<div class="d-flex justify-space-between vat">
+    <p>{{ "xp.order.vat" | transloco }}</p>
+    <p>{{ orderLine.vat }} {{ orderLine.currency }}</p>
+</div>
+
+<ng-template #noAttributes>
+    <p>{{ "xp.order.noDisplayAttributes" | transloco }}</p>
+</ng-template>

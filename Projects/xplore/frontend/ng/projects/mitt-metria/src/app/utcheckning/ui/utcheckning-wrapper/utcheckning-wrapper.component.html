@@ -1,0 +1,12 @@
+<div class="background-image">
+  <div class="wrapper custom-wrapper">
+    <div tabindex="0" class="container" (click)="back.emit()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      <p>{{goBackLabel}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="process-wrapper">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

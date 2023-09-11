@@ -1,0 +1,11 @@
+query productVariantsSchemasByProductId($id: ID!) {
+  product(id: $id) {
+    id
+    variants {
+      id
+      customFields {
+        attributeSchema
+      }
+    }
+  }
+}

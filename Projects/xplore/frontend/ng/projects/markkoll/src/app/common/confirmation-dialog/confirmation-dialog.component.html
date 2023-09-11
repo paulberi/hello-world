@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+<div mat-dialog-content>
+  <p [innerHTML]="data.message"></p>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">{{ data.dismissLabel }}</button>
+  <xp-spinner-button (spinnerButtonClick)="onConfirm()" [isLoading]="spinnerActive" color="secondary">
+    {{ data.confirmLabel }}
+  </xp-spinner-button>
+</div>

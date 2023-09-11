@@ -1,0 +1,31 @@
+mutation authenticate($token: String!) {
+  authenticate(
+    input: { mittMetriaKund: { token: $token } }
+  ) {
+    ... on CurrentUser {
+      id
+      identifier
+      channels {
+        code
+        id
+        token
+      }
+    }
+    ... on InvalidCredentialsError {
+      message
+    }
+  }
+}
+
+query activeCustomer {
+  activeCustomer {
+    id
+    __typename
+  }
+}
+
+mutation logout {
+  logout {
+    success
+  }
+}

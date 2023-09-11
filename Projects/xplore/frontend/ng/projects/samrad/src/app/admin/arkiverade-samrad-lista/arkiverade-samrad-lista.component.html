@@ -1,0 +1,41 @@
+<div class="row justify-center">
+  <div class="col-12 main-content">
+    <div class="row justify-space-between">
+      <h1 class="mat-h1">{{ "sr.samradlista.arkiverade" | transloco }}</h1>
+    </div>
+
+    <xp-paginated-table
+      [page]="samradPage"
+      matSort
+      matSortDisableClear
+      (pageChange)="pageChange($event)"
+      id="samradlist"
+    >
+      <ng-container matColumnDef="samråd">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          {{ "sr.label.samrad" | transloco }}
+        </th>
+        <td mat-cell *matCellDef="let elem">
+          <span class="mat-h2">{{ elem.rubrik }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="more">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let elem">
+          <mat-icon class="more">chevron_right</mat-icon>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+        (click)="navigateToProjekt(row)"
+        class="click-column"
+        (mouseout)="highlightRow(0)"
+        (mouseover)="highlightRow(row.samradId)"
+        [ngClass]="{ highlight: row.samradId === selectedRow }"
+      ></tr>
+    </xp-paginated-table>
+  </div>
+</div>

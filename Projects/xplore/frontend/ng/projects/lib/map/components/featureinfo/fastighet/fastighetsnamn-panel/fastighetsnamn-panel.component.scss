@@ -1,0 +1,115 @@
+.expander {
+  background: inherit;
+}
+
+mat-panel-title {
+  display: inline;
+  margin-right: 4px;
+}
+
+.namn {
+  display: inline;
+  padding-top: 3px;
+}
+
+.antalDelomraden {
+  display: inline;
+  color: lightgrey;
+  font-size: 0.8em;
+  white-space: nowrap;
+  padding-left: 8px;
+}
+
+.incomplete {
+  font-style: italic;
+}
+
+.mat-expansion-panel-header-inner {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.delomrade mat-expansion-panel-header {
+  padding-left: 55px !important;
+}
+
+.no-content {
+  cursor:default;
+}
+
+.omrade {
+  display: grid;
+  width: 80%;
+
+  align-items: start;
+  grid-template-areas: "remove name name name nav"
+                       "remove zoom coordinate coordinate coordinate"
+                       "remove zoom type type type";
+}
+
+.huvudomrade {
+  display: grid;
+  width: 80%;
+
+  align-items: start;
+  grid-template-areas: "remove name name name nav"
+                       "remove zoom type type type";
+}
+
+.delomrade {
+  display: grid;
+
+  align-items: start;
+  grid-template-areas: "remove name name name nav"
+                       "remove zoom coordinate coordinate coordinate";
+}
+
+.delomrade .zoom-button-icon mat-icon {
+  vertical-align: top;
+}
+
+mat-panel-title > .remove {
+  grid-area: remove;
+  margin-top: 0px;
+}
+
+mat-panel-title > .name {
+  grid-area: name;
+}
+
+mat-panel-title > .zoom-button-icon {
+  grid-area: zoom;
+}
+
+mat-panel-title > .nav-container {
+  grid-area: nav;
+}
+
+.mat-icon-button {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+mat-panel-title > .type {
+  grid-area: type;
+  font-size: 10px;
+  margin-top: 0;
+}
+.coordinate > p {
+  margin-bottom: 0;
+}
+
+mat-panel-title > .coordinate {
+  grid-area: coordinate;
+  font-size: 10px;
+  margin-top: 5px;
+  white-space:nowrap;
+  margin-bottom: 0;
+}
+
+.navigation-button {
+  cursor: pointer;
+  font-size: 18px !important;
+  vertical-align: top;
+}

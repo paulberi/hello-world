@@ -1,0 +1,1121 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "https://energimyndigheten.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Lantmäteriet, © Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ]
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/energimyndigheten/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "energimyndigheten:"
+  },
+  "zoom": 2,
+  "center": [
+    495909,
+    6894425
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "groups": [
+    {
+      "name": "vindbrukskollen",
+      "title": "Vindbrukskollen",
+      "expanded": false
+    },
+    {
+      "name": "resultat",
+      "title": "Resultat",
+      "expanded": true,
+      "groups": [
+        {
+          "name": "klass_1",
+          "title": "Klass 1",
+          "expanded": false
+        },
+        {
+          "name": "klass_2",
+          "title": "Klass 2",
+          "expanded": false
+        },
+        {
+          "name": "klass_1o2",
+          "title": "Klass 1 och 2",
+          "expanded": false
+        },
+        {
+          "name": "klass_3",
+          "title": "Klass 3",
+          "expanded": false
+        }
+      ]
+    },
+    {
+      "name": "intressen",
+      "title": "Indata intressen",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskarta",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_5",
+      "title": "Inte aktuella eller återkallade",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_6",
+      "title": "Uppgift saknas",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_7",
+      "title": "Överklagade",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "7",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_8",
+      "title": "Nedmonterade",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_9",
+      "title": "Handläggs",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "9",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_10",
+      "title": "Avslagna",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "10",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_11",
+      "title": "Beviljade",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "11",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "style": "stil_vindbruk_12",
+      "title": "Uppförda",
+      "infoTemplate": "vindbrukskollen",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer?",
+        "serverType": "arcgis",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "12",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 150, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_150_320_s5",
+          "STYLES": "resultatdata",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 150, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_150_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 150, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_150_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 200, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_200_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 200, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_200_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1",
+      "style": "karta_klass_1",
+      "title": "Höjd 200, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1_200_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 150, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_150_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 150, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_150_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 150, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_150_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 200, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_200_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 200, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_200_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_2",
+      "style": "karta_klass_2",
+      "title": "Höjd 200, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_2_200_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 150, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_150_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 150, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_150_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 150, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_150_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 200, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_200_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 200, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_200_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_1o2",
+      "title": "Höjd 200, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_1o2_200_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 150, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_150_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 150, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_150_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 150, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_150_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 200, Vindeffekt ≥320W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_200_320_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 200, Vindeffekt ≥400W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_200_400_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "klass_3",
+      "style": "karta_klass_3",
+      "title": "Höjd 200, Vindeffekt ≥500W/m²",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "klass_3_200_500_s5",
+          "TRANSPARENT": true,
+          "STYLES": "resultatdata"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "resultat_info",
+      "opacity": 0.75
+    },
+    {
+      "type": "tile",
+      "group": "intressen",
+      "style": "karta_intressen_klass2",
+      "title": "Indata intressen, klass 2",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "konflikter_gula_s5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "opacity": 0.4,
+      "queryable": true,
+      "infoTemplate": "intresse-info"
+    },
+    {
+      "type": "tile",
+      "group": "intressen",
+      "style": "karta_intressen_klass3",
+      "title": "Indata intressen, klass 3",
+      "source": {
+        "url": "/geoserver/energimyndigheten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "konflikter_roda_s5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "opacity": 0.4,
+      "queryable": true,
+      "infoTemplate": "intresse-info"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Metria Bas",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "matria:MetriaBakgrund",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": true,
+      "opacity": 0.52
+    }
+  ],
+  "styles": {
+    "karta_klass_1": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0, 92, 230, 0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35, 35, 35, 0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "karta_klass_2": [
+      [
+        {
+          "fill": {
+            "color": "rgba(34, 200, 241, 0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35, 35, 35, 0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "karta_klass_3": [
+      [
+        {
+          "fill": {
+            "color": "rgba(169, 0, 230, 0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35, 35, 35, 0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "karta_klass_1o2": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0, 0, 0, 0.75)"
+          },
+          "stroke": {
+            "color": "rgba(0, 0, 0, 0.75)",
+            "width": 5
+          }
+        }
+      ]
+    ],
+    "karta_intressen_klass2": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255, 255, 0, 0.75)"
+          },
+          "stroke" : {
+            "color": "rgba(0, 0, 0, 0.75)",
+            "width": 1,
+            "lineDash": [1, 2]
+          }
+        }
+      ]
+    ],
+    "karta_intressen_klass3": [
+      [
+        {
+          "fill": {
+            "color": "rgb(255, 127, 0, 0.75)"
+          },
+          "stroke" : {
+            "color": "rgba(0, 0, 0, 0.75)",
+            "width": 0.5
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_5": [
+      [
+        {
+          "fill": {
+            "color": "rgb(155, 46, 237, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_6": [
+      [
+        {
+          "fill": {
+            "color": "rgb(131, 131, 131, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_7": [
+      [
+        {
+          "fill": {
+            "color": "rgb(132, 87, 11, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_8": [
+      [
+        {
+          "fill": {
+            "color": "rgb(0, 112, 255, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_9": [
+      [
+        {
+          "fill": {
+            "color": "rgb(255, 170, 0, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_10": [
+      [
+        {
+          "fill": {
+            "color": "rgb(230, 0, 0, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_11": [
+      [
+        {
+          "fill": {
+            "color": "rgb(69, 172, 21, 1)"
+          }
+        }
+      ]
+    ],
+    "stil_vindbruk_12": [
+      [
+        {
+          "fill": {
+            "color": "rgb(0, 0, 0, 1)"
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG:3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        500000,
+        6700000
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG:4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "tileSize": [
+    256, 256
+  ],
+  "infoTemplates": {
+    "resultat_info": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Namn",
+          "type": "title",
+          "maxLength": 80
+        },
+        {
+          "name": "klass",
+          "label": "Klass",
+          "maxLength": 254
+        },
+        {
+          "name": "omradesid",
+          "label": "Områdes-ID",
+          "maxLength": 254
+        },
+        {
+          "name": "omrade_km2",
+          "label": "Områdets area (km²)",
+          "maxLength": 254
+        },
+        {
+          "name": "km2",
+          "label": "Delområdets area (km²)",
+          "maxLength": 254
+        },
+        {
+          "name": "elprisomr",
+          "label": "Elprisområde",
+          "maxLength": 254
+        },
+        {
+          "name": "lan",
+          "label": "Län",
+          "maxLength": 254
+        }
+      ]
+    },
+    "intresse-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Namn",
+          "type": "title",
+          "maxLength": 80
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "maxLength": 254
+        }
+      ]
+    },
+    "vindbrukskollen": {
+      "properties": [
+        {
+          "name": "SHAPE",
+          "visible": false
+        },
+        {
+          "name": "Datumförsenasteuppdateringavverk",
+          "label": "Senast uppdatering"
+        },
+        {
+          "name": "Tillsynsmyndighetenligtmiljöbalken",
+          "label": "Tillsynsmyndighet"
+        },
+        {
+          "name": "BeräknadårsproduktionGWh",
+          "label": "Beräknad årsprod.",
+          "template": "{{BeräknadårsproduktionGWh}} GWh"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

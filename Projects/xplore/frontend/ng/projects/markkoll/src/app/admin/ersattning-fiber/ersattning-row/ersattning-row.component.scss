@@ -1,0 +1,29 @@
+input {
+  text-align: end;
+}
+
+.input-container {
+  text-align: end;
+}
+
+.title {
+  display: flex;
+  flex-grow: 1;
+  h3{
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+// Gillar inte, men går det att lösa annars?
+mat-form-field.ersattning{
+  ::ng-deep .mat-form-field-infix {
+    width: 100px;
+    padding: 0px;
+    border: none;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

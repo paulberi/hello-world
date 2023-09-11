@@ -1,0 +1,17 @@
+<layer>
+  <name>karta_motionsspar_elljusspar</name>
+  <id>LayerInfoImpl--73452c24:1783afea0a0:-2df</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--73452c24:1783afea0a0:-2e0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-17 13:16:19.291 UTC</dateCreated>
+  <dateModified>2021-03-18 00:10:56.198 UTC</dateModified>
+</layer>

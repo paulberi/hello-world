@@ -1,0 +1,291 @@
+{
+  "layers": [
+    {
+      "id": "OI.Histortho_color_2005",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2005",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_color_2005",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_color_2004",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2004",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_color_2004",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_color_2003",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2003",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_color_2003",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_color_2002",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2002",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_color_2002",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_2001",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2001",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_2001",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_2000",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 2000",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_2000",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1999",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1999",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1999",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1998",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1998",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1998",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1997",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1997",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1997",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1996",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1996",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1996",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1995",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1995",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1995",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1994",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1994",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1994",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_bw_1993",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ortofoto 1993",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_bw_1993",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_75",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1975",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_75",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "OI.Histortho_60",
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1960",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_60",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "topowebb",
+      "group": "background",
+      "title": "Topografisk webbkarta",
+      "source": {
+        "url": "/lm-maps/topowebb/v1.1/wmts?",
+        "type": "wmts",
+        "config": {
+          "layer": "topowebb"
+        },
+        "capabilitiesUrl": "/lm-maps/topowebb/v1.1/wmts/1.0.0/WMTSCapabilities.xml"
+      },
+      "visible": false
+    },
+    {
+      "id": "topowebb_nedtonad",
+      "group": "background",
+      "title": "Topografisk webbkarta (nedtonad)",
+      "source": {
+        "url": "/lm-maps/topowebb/v1.1/wmts?",
+        "type": "wmts",
+        "config": {
+          "layer": "topowebb_nedtonad"
+        },
+        "capabilitiesUrl": "/lm-maps/topowebb/v1.1/wmts/1.0.0/WMTSCapabilities.xml"
+      },
+      "visible": false
+    },
+    {
+      "id": "Ortofoto_0.5_och_Ortofoto_0.25",
+      "type": "tile",
+      "group": "background",
+      "title": "Ortofoto",
+      "source": {
+        "url": "/lm-maps/ortofoto/wms/v1.3",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "Ortofoto_0.5,Ortofoto_0.25"
+        }
+      },
+      "visible": false
+    }
+  ]
+}
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="home.js"></script>
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-content">
+        <label class="name" style="padding: 10px; margin-left: 10px;">Car Rental AB</label>
+        <button class="homeButton" id="homeButton">Home</button>
+        <button class="createButton" id="createButton">Create Account</button>
+        <button class="loginButton" id="loginButton">Login</button>
+        <button class="logoutButton" id="logoutButton">Logout</button>
+    </div>
+    <div class="transactionPage">
+        <div class="leftPane">
+            <iframe width="100%" height="100%" id="leftIframe" class="iframe">
+                
+            </iframe>
+        </div>
+        <div class="rightPane" id="rightPane">
+            <!-- <iframe width="100%" height="100%" id="rightIframe" class="iframe1"></iframe>-->
+            <div class="homeInfo" id="homeInfo">
+                <script>
+                    $('#homeInfo').load('infor.html');
+                </script>
+            </div>
+            <div class="loginForm" id="loginForm">
+                <label class="loginLabel">User Name</label>
+                <input type="text" class="userLoginText" name="username" id="userName">
+                <br>
+                <label class="loginLabel">Password</label>
+                <input type="text" class="userPasswordText" name="password" id="password">
+                <br>
+                <button class="loginSubmit" id="loginSumbit" onClick="loginLogic()">Submit</button>
+            </div>
+            <div class="createAccountForm" id="createAccountForm">
+                <label class="createLabel">Names</label>
+                <input type="text" class="nameText" name="name" id="name">
+                <br>
+                <label class="createLabel">Address</label>
+                <input type="text" class="addressText" name="address" id="address">
+                <br>
+                <label class="createLabel">User Name</label>
+                <input type="text" class="userText" name="userName" id="userName1">
+                <br>
+                <label class="createLabel">Password</label>
+                <input type="password" class="passText" name="password" id="password1">
+                <br>
+                <label class="createLabel" id="createLabel">Role</label>
+                <select name="role" id="role">
+                      <option >Customer</option>
+                      <option >Admin</option>
+                  </select>
+                <br>
+                <input type="submit" class="createButtonSubmit" id="createButtonSubmit" onClick="loginLogic()">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+</script>
+
+</html>

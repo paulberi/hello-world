@@ -1,0 +1,955 @@
+{
+  "app": {
+    "logo": {
+      "url": "http://www.derome.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-light-theme",
+    "uistates": {
+      "grupperaFastigheter": true,
+      "visaFastighetsgranser": true
+    },
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "showSettings": true,
+          "allowDeselect": true,
+          "base_component": "base"
+        },
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "allowDeselect": true,
+          "base_component": "measure"
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      }
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/derome/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    }
+  },
+  "zoom": 0.5,
+  "center": [
+    491532 ,
+    6876639
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "thumbnailCoordinates": [
+    668281,
+    6583835
+  ],
+  "groups": [
+    {
+      "name": "fastighetsdata",
+      "title": "Fastighetsdata",
+      "expanded": true
+    },
+    {
+      "name": "pbr",
+      "title": "Planer Bestämmelser Rättigheter",
+      "expanded": false
+    },
+    {
+      "name": "natur",
+      "title": "Natur & Fornminnen",
+      "expanded": false
+    },
+    {
+      "name": "Skog",
+      "title": "Skog & Vatten",
+      "expanded": false
+    },
+    {
+      "name": "riksintressen",
+      "title": "Riksintressen",
+      "expanded": false
+    },
+    {
+      "name": "marktackedata",
+      "title": "Nationellt Marktäckedata",
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "ortofoto",
+      "title": "Ortofoto",
+      "expanded": false
+    },
+
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "group": "ovrigt",
+      "title": "Ritlager",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "derome:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser, kvalitet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetgranser_kvalite",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Deromes fastighetsinnehav",
+      "source": {
+        "url": "/metria-maps/geoserver/geovis/wms",
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "geovis:Derome_fastigheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastighetsdata",
+      "visible": true
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Fornlämningar - RAÄ",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Fornlamning_yta_FMIS,metria:Fornlamning_punkt_FMIS,metria:Fornlamning_linje_FMIS",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturminnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturminne_NV,metria:Naturminne_punkt_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturreservat_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Nationalparker",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Nationalpark_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Natura 2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Natura2000_SNV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Ängs&Betesmarksinventering (TUVA)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Tuva_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Kulturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Kulturreservat_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Landskapsbildskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Landskapsbildsskydd_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+
+
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Vattenskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vattenskydd_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Värdefulla vatten",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:SvardevattenNV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Nyckelbiotoper",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Nyckelbiotoper_SKS",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Biotopskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Biotopskydd_SKS",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Svårföryngrad skog",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Svarforyngradskog_SKS",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Sumpskog",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Sumpskogar_SKS",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skog",
+      "title": "Skyddsvärda statliga skogar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:SkyddsvardaStatligaSkogar_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Naturvård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Kulturmiljövård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Rörligt Friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseRorligtFriluftsliv_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "marktackedata",
+      "title": "Markfuktighetsindex",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:NMD_markfuktighetsindex",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "marktackedata",
+      "title": "Basskikt",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:NMD_basskikt",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Hillshade",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hillshade_multi",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto",
+      "title": "Metadata-ortofoto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Metadata_orto",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "ortofoto"
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    }
+  ],
+  "styles": {
+    "kladdlager_red": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,255,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ]
+  },
+  "infoTemplates": {
+    "alla": {
+      "properties": [
+        {
+          "name": "url",
+          "label": "Länk",
+          "template": "<a href='{{url}}' target='_blank'>{{url}}</a>"
+        },
+        {
+          "name": "agare_organisationsnummer",
+          "label": "agare_orgnr"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "tileSize": [
+    376,
+    768
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547
+  ],
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

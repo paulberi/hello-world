@@ -1,0 +1,1141 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591959202454,141,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,140,0,41
+1591959202454,141,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,140,0,41
+1591959202661,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959202661,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959202738,77,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959202738,77,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959202816,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959202816,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959202903,121,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959202903,121,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959203039,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959203039,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959203118,112,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959203118,112,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959203240,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959203240,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959203319,112,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959203319,112,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959203435,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959203435,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959203515,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959203515,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959203631,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,77,0,0
+1591959203631,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,77,0,0
+1591959203719,118,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959203719,118,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959203879,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959203879,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959203956,80,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959203956,80,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959204038,78,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959204038,78,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959204127,135,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,123,0,0
+1591959204127,135,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,123,0,0
+1591959204309,77,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,77,0,0
+1591959204309,77,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,77,0,0
+1591959204387,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959204387,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959204465,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,81,0,0
+1591959204465,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,81,0,0
+1591959204588,202,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,160,0,7
+1591959204588,202,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,160,0,7
+1591959204924,77,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,77,0,0
+1591959204924,77,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,77,0,0
+1591959205004,114,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959205004,114,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959205124,77,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,77,0,0
+1591959205124,77,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,77,0,0
+1591959205203,113,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959205203,113,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959205320,82,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,82,0,0
+1591959205320,82,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,82,0,0
+1591959205406,112,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959205406,112,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959205522,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959205522,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959205600,81,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,81,0,0
+1591959205600,81,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,81,0,0
+1591959205682,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959205682,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959205761,120,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959205761,120,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959205895,77,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,77,0,0
+1591959205895,77,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,77,0,0
+1591959205973,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959205973,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959206050,76,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959206050,76,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959206128,112,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959206128,112,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959206250,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959206250,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959206326,76,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959206326,76,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959206403,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959206403,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959206479,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959206479,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959206557,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959206557,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959206634,82,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,7
+1591959206634,82,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,7
+1591959206717,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959206717,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959206793,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959206793,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959206871,77,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,77,0,0
+1591959206871,77,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,77,0,0
+1591959206953,125,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959206953,125,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959207084,75,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,75,0,0
+1591959207084,75,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,75,0,0
+1591959207160,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959207160,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959207237,79,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959207237,79,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959207322,143,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,131,0,0
+1591959207322,143,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,131,0,0
+1591959207485,77,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,77,0,0
+1591959207485,77,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,77,0,0
+1591959207564,115,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959207564,115,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959207684,76,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,76,0,0
+1591959207684,76,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,76,0,0
+1591959207761,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959207761,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959207837,77,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,76,0,0
+1591959207837,77,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,76,0,0
+1591959207914,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959207914,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959207989,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959207989,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959208064,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959208064,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959208146,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959208146,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959208235,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959208235,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959208310,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959208310,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959208385,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959208385,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959208462,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959208462,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959208579,76,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,76,0,0
+1591959208579,76,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,76,0,0
+1591959208657,109,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959208657,109,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959208768,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959208768,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959208844,113,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959208844,113,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959208958,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959208958,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959209035,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959209035,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959209148,76,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959209148,76,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959209225,125,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,120,0,0
+1591959209225,125,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,120,0,0
+1591959209355,79,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,79,0,0
+1591959209355,79,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,79,0,0
+1591959209435,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959209435,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959209511,78,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959209511,78,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959209592,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959209592,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959209740,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959209740,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959209815,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959209815,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959209893,100,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,95,0,0
+1591959209893,100,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,95,0,0
+1591959210031,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959210031,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959210384,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,7
+1591959210384,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,7
+1591959210469,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959210469,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959210591,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959210591,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959210668,119,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959210668,119,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959210791,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959210791,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959210870,113,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959210870,113,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959210990,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959210990,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959211068,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959211068,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959211150,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959211150,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959211231,124,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959211231,124,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959211361,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959211361,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959211437,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959211437,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959211514,77,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,77,0,0
+1591959211514,77,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,77,0,0
+1591959211592,113,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959211592,113,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959211709,76,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,76,0,0
+1591959211709,76,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,76,0,0
+1591959211785,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959211785,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959211860,76,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,76,0,0
+1591959211860,76,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,76,0,0
+1591959211936,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959211936,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959212014,74,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,74,0,0
+1591959212014,74,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,74,0,0
+1591959212089,75,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959212089,75,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959212165,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959212165,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959212240,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959212240,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959212317,90,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,90,0,0
+1591959212317,90,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,90,0,0
+1591959212409,133,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,121,0,6
+1591959212409,133,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,121,0,6
+1591959212547,83,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,83,0,0
+1591959212547,83,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,83,0,0
+1591959212631,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959212631,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959212707,78,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959212707,78,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959212792,147,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,134,0,0
+1591959212792,147,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,134,0,0
+1591959212958,78,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,78,0,0
+1591959212958,78,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,78,0,0
+1591959213039,118,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,117,0,0
+1591959213039,118,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,117,0,0
+1591959213164,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959213164,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959213239,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959213239,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959213315,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959213315,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959213390,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213390,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213464,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,76,0,0
+1591959213464,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,76,0,0
+1591959213541,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213541,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213616,86,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,86,0,6
+1591959213616,86,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,86,0,6
+1591959213703,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959213703,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959213779,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213779,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959213853,76,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,76,0,0
+1591959213853,76,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,76,0,0
+1591959213930,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959213930,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959214047,76,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,76,0,0
+1591959214047,76,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,76,0,0
+1591959214124,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959214124,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959214236,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959214236,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959214313,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959214313,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959214424,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959214424,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959214502,112,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959214502,112,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959214616,75,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,75,0,0
+1591959214616,75,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,75,0,0
+1591959214693,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959214693,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959214816,78,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,77,0,0
+1591959214816,78,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,77,0,0
+1591959214894,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959214894,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959214970,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959214970,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959215051,129,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959215051,129,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959215194,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959215194,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959215270,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959215270,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959215346,80,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959215346,80,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959215441,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,149,0,0
+1591959215441,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,149,0,0
+1591959215676,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,83,0,7
+1591959215676,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,83,0,7
+1591959215761,116,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959215761,116,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959215879,80,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,80,0,0
+1591959215879,80,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,80,0,0
+1591959215960,115,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959215960,115,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959216077,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959216077,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959216154,113,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959216154,113,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959216270,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959216270,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959216346,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959216346,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959216429,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959216429,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959216506,119,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959216506,119,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959216632,82,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,82,0,0
+1591959216632,82,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,82,0,0
+1591959216715,85,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,85,0,0
+1591959216715,85,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,85,0,0
+1591959216801,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959216801,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959216877,112,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959216877,112,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959216991,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959216991,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959217067,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959217067,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959217142,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959217142,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959217218,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959217218,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959217295,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959217295,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959217370,77,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959217370,77,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959217448,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959217448,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959217524,79,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,79,0,0
+1591959217524,79,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,79,0,0
+1591959217604,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959217604,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959217682,132,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,121,0,6
+1591959217682,132,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,121,0,6
+1591959217819,76,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,76,0,0
+1591959217819,76,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,76,0,0
+1591959217896,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959217896,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959217973,78,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959217973,78,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959218056,140,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959218056,140,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959218213,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959218213,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959218291,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959218291,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959218409,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959218409,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959218484,77,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959218484,77,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959218561,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959218561,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959218637,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959218637,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959218711,74,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,74,0,0
+1591959218711,74,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,74,0,0
+1591959218786,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959218786,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959218861,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959218861,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959218950,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959218950,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959219025,73,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959219025,73,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959219099,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959219099,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959219174,117,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959219174,117,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959219294,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959219294,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959219370,112,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959219370,112,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959219484,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959219484,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959219560,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959219560,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959219672,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959219672,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959219748,111,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959219748,111,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959219861,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959219861,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959219939,120,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959219939,120,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959220064,77,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,77,0,0
+1591959220064,77,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,77,0,0
+1591959220142,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959220142,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959220218,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959220218,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959220298,137,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959220298,137,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959220448,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959220448,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959220523,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959220523,77,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959220601,85,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959220601,85,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959220704,184,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,156,0,0
+1591959220704,184,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,156,0,0
+1591959220943,81,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,81,0,7
+1591959220943,81,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,81,0,7
+1591959221026,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959221026,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959221145,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959221145,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959221222,113,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959221222,113,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959221337,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959221337,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959221414,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959221414,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959221527,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959221527,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959221603,79,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,79,0,0
+1591959221603,79,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,79,0,0
+1591959221684,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959221684,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959221762,120,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959221762,120,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959221889,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959221889,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959221965,77,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959221965,77,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959222042,77,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,76,0,0
+1591959222042,77,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,76,0,0
+1591959222121,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959222121,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959222235,74,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,74,0,0
+1591959222235,74,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,74,0,0
+1591959222310,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959222310,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959222385,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959222385,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959222461,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959222461,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959222537,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959222537,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959222613,76,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959222613,76,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959222690,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959222690,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959222765,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959222765,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959222843,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959222843,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959222921,113,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959222921,113,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959223040,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,7
+1591959223040,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,7
+1591959223123,75,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959223123,75,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959223199,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959223199,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959223287,145,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,128,0,0
+1591959223287,145,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,128,0,0
+1591959223452,75,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,75,0,0
+1591959223452,75,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,75,0,0
+1591959223529,119,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959223529,119,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959223653,77,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,77,0,0
+1591959223653,77,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,77,0,0
+1591959223730,77,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959223730,77,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959223807,76,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,76,0,0
+1591959223807,76,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,76,0,0
+1591959223883,75,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959223883,75,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959223958,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959223958,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959224034,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959224034,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959224109,94,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,94,0,7
+1591959224109,94,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,94,0,7
+1591959224204,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959224204,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959224280,76,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959224280,76,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959224356,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959224356,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959224436,130,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,125,0,0
+1591959224436,130,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,125,0,0
+1591959224569,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959224569,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959224645,108,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,108,0,0
+1591959224645,108,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,108,0,0
+1591959224754,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959224754,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959224830,109,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959224830,109,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959224940,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959224940,76,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959225016,113,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959225016,113,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959225131,83,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,83,0,0
+1591959225131,83,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,83,0,0
+1591959225216,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959225216,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959225340,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959225340,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959225417,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959225417,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959225493,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959225493,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959225572,131,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959225572,131,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959225715,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959225715,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959225791,74,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959225791,74,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959225866,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959225866,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959225966,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,150,0,0
+1591959225966,178,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,150,0,0
+1591959226198,82,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,6
+1591959226198,82,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,6
+1591959226282,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959226282,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959226401,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959226401,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959226477,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959226477,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959226588,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959226588,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959226665,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959226665,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959226778,76,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,76,0,0
+1591959226778,76,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,76,0,0
+1591959226855,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959226855,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959226938,77,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959226938,77,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959227016,119,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959227016,119,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959227142,74,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,74,0,0
+1591959227142,74,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,74,0,0
+1591959227217,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959227217,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959227294,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959227294,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959227370,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959227370,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959227484,74,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,74,0,0
+1591959227484,74,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,74,0,0
+1591959227559,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959227559,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959227633,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959227633,75,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,75,0,0
+1591959227708,78,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959227708,78,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959227787,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959227787,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959227862,77,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959227862,77,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959227940,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959227940,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959228016,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959228016,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959228093,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959228093,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959228171,113,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959228171,113,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959228289,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,7
+1591959228289,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,7
+1591959228371,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959228371,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959228448,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959228448,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959228536,141,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959228536,141,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,127,0,0
+1591959228696,77,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959228696,77,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959228776,116,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959228776,116,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959228896,78,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,78,0,0
+1591959228896,78,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,78,0,0
+1591959228975,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959228975,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959229051,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959229051,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959229126,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959229126,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959229200,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959229200,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959229276,73,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959229276,73,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959229350,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,6
+1591959229350,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,6
+1591959229439,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959229439,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959229514,75,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959229514,75,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959229590,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959229590,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959229666,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959229666,115,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959229783,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959229783,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959229859,113,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959229859,113,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959229974,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959229974,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959230049,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959230049,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959230160,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959230160,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959230236,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959230236,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959230348,75,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,75,0,0
+1591959230348,75,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,75,0,0
+1591959230425,117,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959230425,117,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959230546,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959230546,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959230621,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959230621,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959230697,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959230697,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959230777,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959230777,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959230915,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959230915,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959230990,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959230990,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959231065,85,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959231065,85,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959231163,187,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,158,0,0
+1591959231163,187,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,158,0,0
+1591959231405,81,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,81,0,6
+1591959231405,81,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,81,0,6
+1591959231487,116,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959231487,116,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959231605,75,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,75,0,0
+1591959231605,75,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,75,0,0
+1591959231681,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959231681,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959231793,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959231793,75,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,75,0,0
+1591959231869,114,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959231869,114,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959231986,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959231986,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959232061,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959232061,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959232143,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959232143,75,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,75,0,0
+1591959232220,118,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959232220,118,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959232345,76,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,76,0,0
+1591959232345,76,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,76,0,0
+1591959232422,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959232422,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959232498,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959232498,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959232574,113,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959232574,113,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959232690,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959232690,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959232766,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959232766,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959232841,76,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,76,0,0
+1591959232841,76,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,76,0,0
+1591959232917,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959232917,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959232994,74,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,74,0,0
+1591959232994,74,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,74,0,0
+1591959233069,74,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959233069,74,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959233144,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959233144,74,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,74,0,0
+1591959233219,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959233219,76,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959233296,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959233296,76,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,76,0,0
+1591959233374,112,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959233374,112,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959233491,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,7
+1591959233491,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,7
+1591959233574,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959233574,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959233651,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959233651,83,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959233739,139,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,126,0,0
+1591959233739,139,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,126,0,0
+1591959233897,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959233897,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959233975,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959233975,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959234092,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959234092,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959234168,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959234168,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959234244,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959234244,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959234318,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959234318,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959234392,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959234392,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959234468,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959234468,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959234543,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959234543,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959234631,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959234631,75,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,75,0,0
+1591959234706,73,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959234706,73,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959234780,74,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959234780,74,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959234855,118,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959234855,118,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959234976,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959234976,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959235051,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235051,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235162,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959235162,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,76,0,0
+1591959235238,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235238,110,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235350,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959235350,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,76,0,0
+1591959235427,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235427,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959235539,78,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,78,0,0
+1591959235539,78,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,78,0,0
+1591959235618,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959235618,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959235742,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959235742,76,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,76,0,0
+1591959235818,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959235818,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959235895,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959235895,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959235974,133,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959235974,133,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959236121,77,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,77,0,0
+1591959236121,77,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,77,0,0
+1591959236199,82,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959236199,82,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959236282,81,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959236282,81,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959236380,180,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959236380,180,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959236616,84,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,84,0,7
+1591959236616,84,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,84,0,7
+1591959236701,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959236701,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959236820,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959236820,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959236896,110,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959236896,110,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959237008,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959237008,76,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,76,0,0
+1591959237086,118,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959237086,118,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959237208,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959237208,75,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,75,0,0
+1591959237283,81,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,81,0,0
+1591959237283,81,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,81,0,0
+1591959237365,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959237365,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959237442,118,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959237442,118,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959237567,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959237567,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959237643,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959237643,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959237720,76,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,76,0,0
+1591959237720,76,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,76,0,0
+1591959237797,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959237797,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959237910,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959237910,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959237986,76,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959237986,76,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959238062,81,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,81,0,0
+1591959238062,81,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,81,0,0
+1591959238143,78,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959238143,78,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959238221,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959238221,76,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,76,0,0
+1591959238297,76,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959238297,76,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959238374,76,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,76,0,0
+1591959238374,76,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,76,0,0
+1591959238451,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959238451,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959238529,78,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,78,0,0
+1591959238529,78,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,78,0,0
+1591959238609,114,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959238609,114,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959238728,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,6
+1591959238728,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,6
+1591959238810,77,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959238810,77,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959238887,84,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,79,0,0
+1591959238887,84,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,79,0,0
+1591959238976,155,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,138,0,0
+1591959238976,155,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,138,0,0
+1591959239149,79,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,79,0,0
+1591959239149,79,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,79,0,0
+1591959239230,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959239230,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959239348,77,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,77,0,0
+1591959239348,77,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,77,0,0
+1591959239425,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959239425,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959239501,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959239501,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959239577,76,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959239577,76,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959239653,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,76,0,0
+1591959239653,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,76,0,0
+1591959239729,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959239729,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959239805,87,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,87,0,6
+1591959239805,87,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,87,0,6
+1591959239893,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959239893,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959239970,77,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959239970,77,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959240056,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959240056,77,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,77,0,0
+1591959240135,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959240135,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959240254,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959240254,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959240330,122,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959240330,122,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959240454,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959240454,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959240529,109,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959240529,109,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959240639,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959240639,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959240715,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959240715,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959240827,79,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,79,0,0
+1591959240827,79,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,79,0,0
+1591959240908,118,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959240908,118,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959241035,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959241035,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959241111,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959241111,76,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959241188,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,75,0,0
+1591959241188,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,75,0,0
+1591959241270,132,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,120,0,0
+1591959241270,132,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,120,0,0
+1591959241427,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959241427,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959241503,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959241503,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959241579,87,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,82,0,0
+1591959241579,87,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,82,0,0
+1591959241684,180,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959241684,180,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,151,0,0
+1591959241932,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,83,0,7
+1591959241932,83,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,83,0,7
+1591959242018,120,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959242018,120,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959242143,77,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,77,0,0
+1591959242143,77,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,77,0,0
+1591959242221,111,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959242221,111,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959242335,77,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,77,0,0
+1591959242335,77,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,77,0,0
+1591959242414,114,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959242414,114,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959242533,78,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,78,0,0
+1591959242533,78,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,78,0,0
+1591959242612,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959242612,82,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,82,0,0
+1591959242696,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959242696,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959242774,121,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959242774,121,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959242903,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959242903,75,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,75,0,0
+1591959242979,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959242979,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959243056,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959243056,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959243132,116,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959243132,116,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959243252,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959243252,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959243327,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959243327,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959243403,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959243403,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959243478,88,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,88,0,0
+1591959243478,88,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,88,0,0
+1591959243567,164,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,164,0,0
+1591959243567,164,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,164,0,0
+1591959243732,149,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,149,0,0
+1591959243732,149,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,149,0,0
+1591959243881,153,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,152,0,0
+1591959243881,153,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,152,0,0
+1591959244035,163,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,163,0,7
+1591959244035,163,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,163,0,7
+1591959244199,135,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,135,0,0
+1591959244199,135,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,135,0,0
+1591959244335,127,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959244335,127,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959244467,75,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,75,0,0
+1591959244467,75,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,75,0,0
+1591959244542,77,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959244542,77,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959244620,77,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959244620,77,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,77,0,0
+1591959244703,139,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,128,0,0
+1591959244703,139,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,128,0,0
+1591959244862,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959244862,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959244940,118,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959244940,118,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959245063,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959245063,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959245138,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959245138,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959245214,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959245214,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959245288,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959245288,74,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959245362,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959245362,75,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959245437,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959245437,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959245513,87,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,87,0,6
+1591959245513,87,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,87,0,6
+1591959245601,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959245601,74,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,74,0,0
+1591959245676,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959245676,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959245750,74,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959245750,74,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,74,0,0
+1591959245825,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959245825,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959245943,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959245943,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959246019,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959246019,110,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959246131,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959246131,75,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959246207,112,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959246207,112,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959246321,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959246321,75,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,75,0,0
+1591959246397,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959246397,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959246509,76,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959246509,76,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,76,0,0
+1591959246587,121,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959246587,121,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,116,0,0
+1591959246713,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959246713,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959246789,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959246789,75,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959246864,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959246864,77,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,77,0,0
+1591959246944,134,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959246944,134,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,119,0,0
+1591959247093,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959247093,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959247169,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959247169,75,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959247244,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959247244,86,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,80,0,0
+1591959247347,188,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,159,0,0
+1591959247347,188,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,159,0,0
+1591959247590,84,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,84,0,6
+1591959247590,84,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,84,0,6
+1591959247675,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959247675,117,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959247795,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959247795,76,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,76,0,0
+1591959247872,111,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959247872,111,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959247985,77,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,77,0,0
+1591959247985,77,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,77,0,0
+1591959248063,111,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959248063,111,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959248177,80,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,80,0,0
+1591959248177,80,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,80,0,0
+1591959248259,83,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,83,0,0
+1591959248259,83,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,83,0,0
+1591959248344,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959248344,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959248421,124,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959248421,124,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959248553,77,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,77,0,0
+1591959248553,77,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,77,0,0
+1591959248630,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959248630,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959248706,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959248706,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959248782,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959248782,111,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959248895,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959248895,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959248970,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959248970,74,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959249045,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959249045,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959249120,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959249120,76,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959249196,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959249196,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959249271,75,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959249271,75,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959249346,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959249346,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959249422,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959249422,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959249500,75,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,75,0,0
+1591959249500,75,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,75,0,0
+1591959249577,114,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959249577,114,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959249697,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,6
+1591959249697,81,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,81,0,6
+1591959249779,75,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959249779,75,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959249854,84,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959249854,84,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,78,0,0
+1591959249943,146,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,129,0,0
+1591959249943,146,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,129,0,0
+1591959250108,75,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,75,0,0
+1591959250108,75,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,75,0,0
+1591959250185,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959250185,113,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,112,0,0
+1591959250302,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959250302,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959250377,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959250377,75,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959250453,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959250453,74,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,74,0,0
+1591959250528,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959250528,73,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,73,0,0
+1591959250602,77,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,77,0,0
+1591959250602,77,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,77,0,0
+1591959250680,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959250680,74,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959250755,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959250755,88,GET Alla Matrundor,200,,Svarstid respektive mätrunda 1-1,text,true,,4283,292,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda?page=0&size=50&sortProperty=namn&sortDirection=asc&onlyAktiva=false,88,0,7
+1591959250844,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959250844,76,GET Matrunda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,495,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/52,76,0,0
+1591959250920,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959250920,74,POST Id runda 52,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959250995,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959250995,75,GET Matrunda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,3140,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/1,75,0,0
+1591959251071,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959251071,116,POST Id runda 1,200,,Svarstid respektive mätrunda 1-1,text,true,,24755,575,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959251189,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959251189,75,GET Matrunda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,2256,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/2,75,0,0
+1591959251265,111,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959251265,111,POST Id runda 2,200,,Svarstid respektive mätrunda 1-1,text,true,,13779,505,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,111,0,0
+1591959251378,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959251378,76,GET Matrunda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,2083,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/27,75,0,0
+1591959251454,108,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,108,0,0
+1591959251454,108,POST Id runda 27,200,,Svarstid respektive mätrunda 1-1,text,true,,12642,485,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,108,0,0
+1591959251564,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,77,0,0
+1591959251564,77,GET Matrunda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,2907,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/14,77,0,0
+1591959251641,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959251641,110,POST Id runda 14,200,,Svarstid respektive mätrunda 1-1,text,true,,18833,609,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959251753,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,77,0,0
+1591959251753,77,GET Matrunda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,6328,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/3,77,0,0
+1591959251831,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959251831,119,POST Id runda 3,200,,Svarstid respektive mätrunda 1-1,text,true,,52538,1060,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959251955,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959251955,75,GET Matrunda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,908,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/47,75,0,0
+1591959252031,74,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959252031,74,POST Id runda 47,200,,Svarstid respektive mätrunda 1-1,text,true,,2914,318,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,74,0,0
+1591959252105,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959252105,76,GET Matrunda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,13107,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/7,76,0,0
+1591959252184,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959252184,125,POST Id runda 7,200,,Svarstid respektive mätrunda 1-1,text,true,,113498,1836,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,118,0,0
+1591959252324,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959252324,75,GET Matrunda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,783,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/43,75,0,0
+1591959252399,76,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959252399,76,POST Id runda 43,200,,Svarstid respektive mätrunda 1-1,text,true,,2591,307,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959252476,84,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959252476,84,GET Matrunda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,51745,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/38,79,0,0
+1591959252575,175,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,148,0,0
+1591959252575,175,POST Id runda 38,200,,Svarstid respektive mätrunda 1-1,text,true,,342651,6939,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,148,0,0
+1591959252804,82,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,6
+1591959252804,82,GET Matrunda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,3855,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/45,82,0,6
+1591959252887,119,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959252887,119,POST Id runda 45,200,,Svarstid respektive mätrunda 1-1,text,true,,26617,688,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,113,0,0
+1591959253009,75,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,75,0,0
+1591959253009,75,GET Matrunda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,2847,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/42,75,0,0
+1591959253084,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959253084,109,POST Id runda 42,200,,Svarstid respektive mätrunda 1-1,text,true,,15339,599,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959253195,74,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,74,0,0
+1591959253195,74,GET Matrunda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,4481,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/4,74,0,0
+1591959253270,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959253270,110,POST Id runda 4,200,,Svarstid respektive mätrunda 1-1,text,true,,34135,761,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,109,0,0
+1591959253382,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959253382,77,GET Matrunda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,1729,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/16,77,0,0
+1591959253460,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959253460,80,POST Id runda 16,200,,Svarstid respektive mätrunda 1-1,text,true,,10794,422,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,80,0,0
+1591959253541,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959253541,76,GET Matrunda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,7372,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/5,76,0,0
+1591959253619,126,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959253619,126,POST Id runda 5,200,,Svarstid respektive mätrunda 1-1,text,true,,57887,1131,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,115,0,0
+1591959253751,76,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,76,0,0
+1591959253751,76,GET Matrunda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,809,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/17,76,0,0
+1591959253827,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959253827,76,POST Id runda 17,200,,Svarstid respektive mätrunda 1-1,text,true,,2713,313,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959253904,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959253904,75,GET Matrunda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,3846,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/6,75,0,0
+1591959253980,110,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959253980,110,POST Id runda 6,200,,Svarstid respektive mätrunda 1-1,text,true,,26367,685,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,110,0,0
+1591959254092,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959254092,75,GET Matrunda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,567,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/49,75,0,0
+1591959254168,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959254168,75,POST Id runda 49,200,,Svarstid respektive mätrunda 1-1,text,true,,1062,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959254243,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959254243,74,GET Matrunda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,1202,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/33,74,0,0
+1591959254318,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959254318,77,POST Id runda 33,200,,Svarstid respektive mätrunda 1-1,text,true,,5358,355,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959254395,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959254395,75,GET Matrunda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,1118,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/39,75,0,0
+1591959254471,79,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959254471,79,POST Id runda 39,200,,Svarstid respektive mätrunda 1-1,text,true,,4613,364,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,78,0,0
+1591959254550,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959254550,75,GET Matrunda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,1267,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/48,75,0,0
+1591959254626,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959254626,77,POST Id runda 48,200,,Svarstid respektive mätrunda 1-1,text,true,,7607,375,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,77,0,0
+1591959254704,77,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,77,0,0
+1591959254704,77,GET Matrunda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,7873,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/8,77,0,0
+1591959254783,123,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959254783,123,POST Id runda 8,200,,Svarstid respektive mätrunda 1-1,text,true,,50116,1274,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,122,0,0
+1591959254910,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,6
+1591959254910,82,GET Matrunda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,1440,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/46,82,0,6
+1591959254992,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959254992,76,POST Id runda 46,200,,Svarstid respektive mätrunda 1-1,text,true,,6366,398,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959255069,85,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,79,0,0
+1591959255069,85,GET Matrunda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,23826,226,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/9,79,0,0
+1591959255159,146,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,129,0,0
+1591959255159,146,POST Id runda 9,200,,Svarstid respektive mätrunda 1-1,text,true,,162282,3362,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,129,0,0
+1591959255323,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959255323,76,GET Matrunda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,7200,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/19,76,0,0
+1591959255401,115,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959255401,115,POST Id runda 19,200,,Svarstid respektive mätrunda 1-1,text,true,,44847,1194,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,114,0,0
+1591959255520,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959255520,75,GET Matrunda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,639,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/41,75,0,0
+1591959255595,76,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959255595,76,POST Id runda 41,200,,Svarstid respektive mätrunda 1-1,text,true,,774,283,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,76,0,0
+1591959255671,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959255671,75,GET Matrunda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,502,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/50,75,0,0
+1591959255746,75,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959255746,75,POST Id runda 50,200,,Svarstid respektive mätrunda 1-1,text,true,,487,279,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959255821,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959255821,76,GET Matrunda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,605,227,1,1,http://xploreutv01.prodstod.se:9009/api/matrunda/51,75,0,0
+1591959255897,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0
+1591959255897,75,POST Id runda 51,200,,Svarstid respektive mätrunda 1-1,text,true,,1064,288,1,1,http://xploreutv01.prodstod.se:9009/api/matobjekt/matningstyper,75,0,0

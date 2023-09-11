@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_batplatser</name>
+  <id>LayerInfoImpl-ed6cbd11:ae9a5d5b653:-1ac2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-3208c5bc:6b11ef6a7a8:-c967</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

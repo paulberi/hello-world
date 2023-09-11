@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excercice1</title>
+    <link rel="stylesheet" href="tableStyles.css" />
+    <link rel="icon" href="logo1.jpg" />
+    <!--jquerry-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<!--
+    how you can set styles directly from html, for the alternative look at the tableStyle.css
+<style>
+    th {
+        border: 1px solid black;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+</style>
+-->
+<h1>Rubrik2</h1>
+
+<body style="background-color: white;">
+    <table id="courses" class="mytable">
+        <tr>
+            <th style="width: 75%;">Kursnamn</th>
+            <th colspan="2">Starmånad</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>LIA</td>
+            <td>Jan</td>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <td>Exjobb</td>
+            <td>April</td>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <td>Examen</td>
+            <td>Maj</td>
+            <td>2022</td>
+        </tr>
+    </table>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        $('h1').css('background-color', 'red');
+        // $('table tr').each(function() {
+        //     alert($(this).html)
+        // });
+        //alert($('#courses').html());
+        alert($('.mytable').html());
+    })
+</script>
+
+</html>
+$(function() { $("../home.html .leftiframe").load("../users/loggedIn.html .customerButtons"); })

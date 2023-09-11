@@ -1,0 +1,23 @@
+<dataStore>
+  <id>DataStoreInfoImpl--10b5fb8f:16ea7627884:acd</id>
+  <name>jamtkraft_utredningsomrade</name>
+  <description>Jämtkrafts Utredningsomrade</description>
+  <type>Shapefile</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--10b5fb8f:16ea7627884:ac7</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="charset">ISO-8859-1</entry>
+    <entry key="filetype">shapefile</entry>
+    <entry key="create spatial index">true</entry>
+    <entry key="memory mapped buffer">false</entry>
+    <entry key="timezone">Europe/Stockholm</entry>
+    <entry key="enable spatial index">true</entry>
+    <entry key="namespace">www.jamtkraft.se</entry>
+    <entry key="cache and reuse memory maps">false</entry>
+    <entry key="url">file:shapefiler/jamtkraft/Utredningsområde.shp</entry>
+    <entry key="fstype">shape</entry>
+  </connectionParameters>
+  <__default>false</__default>
+</dataStore>

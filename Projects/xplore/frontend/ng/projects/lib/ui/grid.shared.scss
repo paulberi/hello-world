@@ -1,0 +1,84 @@
+  //mixin för att skapa col-(x) och col-md-(x) klasser liknande bootstraps
+@mixin col-x-list {
+  @for $i from 1 through 12 {
+    .col-#{$i} { 
+      flex: 0 0 calc(100% * (#{$i} / 12));
+      max-width: calc(100% * (#{$i} / 12));
+    }
+  }
+}
+@mixin col-md-x-list {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} { 
+      @media screen and (min-width: 768px) {
+        flex: 0 0 calc(100% * (#{$i} / 12));
+        max-width: calc(100% * (#{$i} / 12));
+      }
+    }
+  }
+}
+@mixin col-lg-x-list {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} { 
+      @media screen and (min-width: 992px) {
+        flex: 0 0 calc(100% * (#{$i} / 12));
+        max-width: calc(100% * (#{$i} / 12));
+      }
+    }
+  }
+}
+@mixin col-xl-x-list {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} { 
+      @media screen and (min-width: 1140px) {
+        flex: 0 0 calc(100% * (#{$i} / 12));
+        max-width: calc(100% * (#{$i} / 12));
+      }
+    }
+  }
+}
+
+@include col-x-list;
+@include col-md-x-list;
+@include col-lg-x-list;
+@include col-xl-x-list;
+
+.spacer {
+  flex: 1 1 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-space-between{
+  justify-content: space-between;
+}
+
+.align-center {
+  align-content: center;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+.d-md-flex{
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.d-md-block {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}

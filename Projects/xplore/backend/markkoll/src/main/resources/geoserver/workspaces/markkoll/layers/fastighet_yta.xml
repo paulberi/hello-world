@@ -1,0 +1,15 @@
+<layer>
+  <name>fastighet_yta</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:fastighet_yta</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:fastighet_yta</name>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-06-03 11:47:45.759 UTC</dateCreated>
+</layer>

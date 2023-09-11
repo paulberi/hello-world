@@ -1,0 +1,41 @@
+<dataStore>
+  <id>DataStoreInfoImpl--11b87d8d:175e78fb785:-7ffa</id>
+  <name>valdemarsvik</name>
+  <description>Kladdlager för Valdemarsvik Geovis Pro</description>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl--11b87d8d:175e78fb785:-7ffc</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">valdemarsvik</entry>
+    <entry key="Evictor run periodicity">300</entry>
+    <entry key="Max open prepared statements">50</entry>
+    <entry key="encode functions">true</entry>
+    <entry key="Batch insert size">1</entry>
+    <entry key="preparedStatements">false</entry>
+    <entry key="database">geovisdb</entry>
+    <entry key="host">xploredb01.prodstod.se</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="SSL mode">DISABLE</entry>
+    <entry key="Estimated extends">true</entry>
+    <entry key="fetch size">1000</entry>
+    <entry key="Expose primary keys">false</entry>
+    <entry key="validate connections">true</entry>
+    <entry key="Support on the fly geometry simplification">true</entry>
+    <entry key="Connection timeout">20</entry>
+    <entry key="create database">false</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:lcE/3MC5fJqiH4Q14MHsxw==</entry>
+    <entry key="min connections">1</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="namespace">www.valdemarsvik.se</entry>
+    <entry key="max connections">10</entry>
+    <entry key="Evictor tests per run">3</entry>
+    <entry key="Test while idle">true</entry>
+    <entry key="user">geovis</entry>
+    <entry key="Max connection idle time">300</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2020-11-26 11:59:03.154 UTC</dateCreated>
+</dataStore>

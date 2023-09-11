@@ -1,0 +1,5 @@
+<div class="map-container">
+  <mk-map *ngIf="mapExtent" [backgroundLayers]="backgroundLayers" [layers]="layers" [extent]="mapExtent" [paddingInMap]="paddingInMap" (infoClick)="mapClick.emit($event)" #map>
+    <mk-avtal-list-kartverktyg [map]="map" [projektId]="projektId"></mk-avtal-list-kartverktyg>
+  </mk-map>
+</div>

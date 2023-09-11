@@ -1,0 +1,12 @@
+<mk-projektinformation-ui   [beredare]="beredare"
+                            [projekt]="projekt"
+                            [projektState]="projektState"
+                            [ledningsagareOptions]="ledningsagareOptions"
+                            [showVersionMessage]="(projektHasVersioner$ | async) === false"
+                            [isDeletingProjekt]="isDeletingProjekt"
+                            [projektRoleEntries]="projektRoleEntries"
+                            [userOptions]="userOptions"
+                            [avtalsinstallningar]="avtalsinstallningar"
+                            (updateProjekt)="onUpdateProjekt($event)"
+                            (deleteProjekt)="onDeleteProjekt($event)"
+></mk-projektinformation-ui>

@@ -1,0 +1,73 @@
+<mat-expansion-panel *ngIf="page?.content" [expanded]="true" class="fastighetlist-header">
+  <div class="fastighetlist-header-row row">
+    <div class="col-3">
+      <mat-checkbox [checked]="allFastigheterChecked()"
+                    [indeterminate]="someFastigheterChecked()"
+                    (change)="fastigheterCheckAllChange($event.checked)"></mat-checkbox>
+      <span class="title-margin">{{ "mk.fastighetslista.fastighetsbeteckning" | transloco}}</span>
+    </div>
+    <div class="col-2">
+      <div class="row">
+        <mat-divider [vertical]="true" class="test"></mat-divider>
+        <span class="title-margin">{{ "mk.fastighetslista.status" | transloco}}</span>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="row">
+        <mat-divider [vertical]="true" class="test notiser-header"></mat-divider>
+        <span class="title-margin">{{ "mk.fastighetslista.notiser" | transloco}}</span>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <mat-divider [vertical]="true" class="test information-header"></mat-divider>
+        <span class="title-margin">{{ "mk.fastighetslista.info" | transloco}}</span>
+      </div>
+    </div>
+  </div>
+</mat-expansion-panel>
+<mat-accordion>
+  <mat-expansion-panel class="expansion-panel mat-elevation-z3"
+                       *ngFor="let avtal of page?.content; let i = index"
+                       [expanded]="isFastighetExpanded(i)">
+    <mat-expansion-panel-header (click)="onFastighetClick(i)">
+      <mat-panel-title class="d-flex">
+        <div class="col-3">
+          <div class="row">
+            <mat-checkbox [checked]="fastighetSelected(avtal.fastighetId)"
+                          (change)="change($event.checked, avtal.fastighetId)"
+                          (click)="$event.stopPropagation()" 
+                          (keydown)="$event.stopPropagation()"></mat-checkbox>
+            <span class="mat-h2 fastighetsbeteckning title-margin" [ngClass]="{ 'agare-saknas-title': agareSaknas(avtal) }">
+              {{ avtal.fastighetsbeteckning }}
+            </span>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row">
+            <span class="avtalsstatus mat-h2">{{ avtal.avtalsstatus | prefix: "mk.avtal." | transloco }}</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <span class="notiser mat-h2">{{avtal?.notiser}}</span>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <span class="information"><mk-noteringar [noteringar]="avtal?.information"></mk-noteringar></span>
+          </div>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <ng-container *ngTemplateOutlet="templateRef; context: { $implicit: avtal.fastighetId }"></ng-container>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-paginator [length]="page?.totalElements"
+               [pageIndex]="page?.number"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="onFastighetPageChange($event)">
+</mat-paginator>

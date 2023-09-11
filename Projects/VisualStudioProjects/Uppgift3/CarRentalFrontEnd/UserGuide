@@ -1,0 +1,14 @@
+The spring security implemented requires hashed passwords to login 
+The users registered upon running the program do not have hashed passwords
+So you run the program on eclipse
+Open live view on home.html and register a user.
+With the new registered user you can then login to "http://localhost:8081/login"
+It will redirect you to "http://127.0.0.1:5500/home.html" which is the home page
+Here you can then login using the predefined users that you can find in "http://localhost:8081/h2-console" or in the eclipse data.sql, below are some with pass and username.
+ ('password1''username1'), an admin
+  ('password3''username3'), an ordinary user
+Because of the way the code in vscode connects to the backend, most operations throws a failure exception even though it is ok, just ignore that, still trying to figure out a walk around it but have to submit now.
+
+In summary, login to "http://localhost:8081/login" logs you into the system that has users found in data.sql. so it requires two logins
+
+Tack att du läste igenom 

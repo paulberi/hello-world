@@ -1,0 +1,48 @@
+<mh-sidhuvud></mh-sidhuvud>
+<div class="col-12">
+    <div>
+      <div class="skapaAvtal">
+        <div class="row justify-center">
+          <h1>
+            Påbörja ett nytt ärende
+          </h1>
+        </div>
+        <div class="row justify-center">
+          <form [formGroup]="fileForm" (ngSubmit)="onSubmit(fileForm)">
+            <div class="row justify-center" id="avtalsTyp">
+              <mat-button-toggle-group value="avtalstyp" formControlName="avtalstyp">
+                <mat-button-toggle (change)="avtalstypChange('el')" [ngClass]="{checked: avtalstyp == 'el'}" disableRipple="true" value="el">Elnät</mat-button-toggle>
+                <mat-button-toggle (change)="avtalstypChange('fiber')" [ngClass]="{checked: avtalstyp == 'fiber'}" disableRipple="true" value="fiber">Fibernät</mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+
+            <div class="row">
+              <input class="custom-file-upload" id="projektnummer" placeholder="Ange ärendenummer" matInput formControlName="projektNr" autocomplete="off" required>
+            </div>
+  
+            <div class="row" mhDnd (fileDropped)="onFileDropped($event)" >
+              <label for="fileUpload" class="custom-file-upload" tabindex="0">
+                <p *ngIf="files.length == 0">Klicka här för att ladda upp filer från din dator, eller dra-och-släpp</p>
+                <div *ngIf="files.length > 0" align="center">
+                  <div class="col-8" align="start" style="display: inline-block">
+                    <p class="filename" *ngFor="let file of files"><mat-icon class="fileIcon">attach_file</mat-icon>{{ file.name }}</p>
+                  </div>
+                </div>
+                <input id="fileUpload" accept=".xls, .xlsx, .zip" type="file" (change)="fileBrowseHandler($event.target.files)" required
+                formControlName="files" multiple>
+              </label>
+            </div>
+
+            <div class="row justify-center">
+              <button mat-raised-button type="submit">Skapa ärende</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="projektlista">
+        <h2>Ärenden</h2>
+        <mh-projektlista></mh-projektlista>
+      </div>
+    </div>
+  </div>
+<mh-sidfot></mh-sidfot>

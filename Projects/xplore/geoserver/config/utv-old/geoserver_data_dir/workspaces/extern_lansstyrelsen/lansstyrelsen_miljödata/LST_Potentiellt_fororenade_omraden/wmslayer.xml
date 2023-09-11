@@ -1,0 +1,61 @@
+<wmsLayer>
+  <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6980</id>
+  <name>LST_Potentiellt_fororenade_omraden</name>
+  <nativeName>LST_Potentiellt_fororenade_omraden</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--16ee1b80:174d9943373:-6993</id>
+  </namespace>
+  <title>LST Potentiellt förorenade områden</title>
+  <description>EBH-stödet är länsstyrelsernas register över potentiella och konstaterade förorenade områden. Ett förorenat område kan bestå av mark, grundvatten, ytvatten, sediment och byggnader. Observera att skiktet inte ger en helhetsbild av landets förorenade områden. Mer information om förorenade områden kan finnas hos andra myndigheter som kommuner, Försvarsmakten och Trafikverket. Områdena är identifierade och klassificerade av Länsstyrelserna på uppdrag av Naturvårdsverket och med hjälp av MIFO-metodiken (Metodik för Inventering av Förorenade Områden), Naturvårdsverkets rapport 4918. Landets länsstyrelser har arbetat med att inventera potentiellt förorenade områden sedan 1990-talet. Syftet med inventeringen är att skapa en bild av vilka områden som är eller kan vara förorenade. Utifrån inventeringens resultat prioriteras sedan det fortsatta arbetet med att undersöka och sanera.Varje länsstyrelse ansvarar för informationen om förorenade områden i sitt län. Kontakta respektive län för ytterligare information. Metadata: https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/GetMetaDataById?id=e5f8c5ca-62a9-41d6-900c-43f2837a8757</description>
+  <abstract>EBH-stödet är länsstyrelsernas register över potentiella och konstaterade förorenade områden. Ett förorenat område kan bestå av mark, grundvatten, ytvatten, sediment och byggnader. Observera att skiktet inte ger en helhetsbild av landets förorenade områden. Mer information om förorenade områden kan finnas hos andra myndigheter som kommuner, Försvarsmakten och Trafikverket. Områdena är identifierade och klassificerade av Länsstyrelserna på uppdrag av Naturvårdsverket och med hjälp av MIFO-metodiken (Metodik för Inventering av Förorenade Områden), Naturvårdsverkets rapport 4918. Landets länsstyrelser har arbetat med att inventera potentiellt förorenade områden sedan 1990-talet. Syftet med inventeringen är att skapa en bild av vilka områden som är eller kan vara förorenade. Utifrån inventeringens resultat prioriteras sedan det fortsatta arbetet med att undersöka och sanera.Varje länsstyrelse ansvarar för informationen om förorenade områden i sitt län. Kontakta respektive län för ytterligare information. Metadata: https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/GetMetaDataById?id=e5f8c5ca-62a9-41d6-900c-43f2837a8757</abstract>
+  <nativeCRS class="projected">PROJCS[&quot;ETRS89 / LCC Europe&quot;, 
+  GEOGCS[&quot;ETRS89&quot;, 
+    DATUM[&quot;European Terrestrial Reference System 1989&quot;, 
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6258&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4258&quot;]], 
+  PROJECTION[&quot;Lambert_Conformal_Conic_2SP&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9802&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 10.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 51.99999999999999], 
+  PARAMETER[&quot;standard_parallel_1&quot;, 65.0], 
+  PARAMETER[&quot;false_easting&quot;, 4000000.0], 
+  PARAMETER[&quot;false_northing&quot;, 2800000.0], 
+  PARAMETER[&quot;scale_factor&quot;, 1.0], 
+  PARAMETER[&quot;standard_parallel_2&quot;, 35.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;3034&quot;]]</nativeCRS>
+  <srs>EPSG:3009</srs>
+  <nativeBoundingBox>
+    <minx>58792.65795504814</minx>
+    <maxx>221842.49881659384</maxx>
+    <miny>6203006.79598798</miny>
+    <maxy>6835451.012061122</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>13.280744395679996</minx>
+    <maxx>16.35436578028993</maxx>
+    <miny>55.941451917666626</miny>
+    <maxy>61.627669267788</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="OTHER_SRS">EPSG:102100,EPSG:3857,EPSG:3008,EPSG:3009,CRS:84,EPSG:3010,EPSG:3021,EPSG:32633,EPSG:3006,EPSG:3017,EPSG:4326,EPSG:3007,EPSG:3015,EPSG:2400,EPSG:3016,EPSG:3013,EPSG:3014,EPSG:3011,EPSG:3012,EPSG:3034</entry>
+  </metadata>
+  <store class="wmsStore">
+    <id>WMSStoreInfoImpl--16ee1b80:174d9943373:-6992</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <forcedRemoteStyle></forcedRemoteStyle>
+  <preferredFormat>image/png</preferredFormat>
+  <metadataBBoxRespected>false</metadataBBoxRespected>
+</wmsLayer>

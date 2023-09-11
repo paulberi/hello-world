@@ -1,0 +1,17 @@
+<layer>
+  <name>avtalsstatus_justeras</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:avtalsstatus_justeras</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:avtalsstatus_justeras</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-17 10:17:04.283 UTC</dateCreated>
+</layer>

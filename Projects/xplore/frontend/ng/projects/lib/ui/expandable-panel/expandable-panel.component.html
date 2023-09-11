@@ -1,0 +1,24 @@
+<div class="container styled-scrollbars" #panelElement>
+  <div>
+    <button class="tab" #dragHandle 
+            (click)="togglePanel()"
+            [class.right]="tabPosition == 'right'"
+            type="button"
+            [attr.aria-label]="'xp.expandable-panel.togglePanel' | transloco">
+            {{ tabTitle }}
+      <mat-icon *ngIf="!(isPanelOpen$ | async)">{{ tabIcon }}</mat-icon>
+      <mat-icon *ngIf="(isPanelOpen$ | async)">drag_handle</mat-icon>
+    </button>
+  </div>
+
+  <div class="panel" [attr.aria-expanded]="(isPanelOpen$ | async)"
+                      role="tabpanel"
+                      [class.right]="tabPosition == 'right'">                      
+    <div class="content styled-scrollbars" tabindex="0" 
+    [style.height.px]="panelHeight"
+    [@slideUpDown]="{value: panelAnimation, params: {expandHeight: initialHeight}}"
+    (@slideUpDown.done)="animEnd($event)">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

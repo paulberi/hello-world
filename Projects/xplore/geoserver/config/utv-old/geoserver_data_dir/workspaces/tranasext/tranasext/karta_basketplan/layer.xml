@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_basketplan</name>
+  <id>LayerInfoImpl-24f7d17b:1c1501b64b1:-90da</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5a687311:56ce4e9aa41:-1800</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

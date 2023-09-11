@@ -1,0 +1,13 @@
+<div *ngIf="versioner?.length > 0; else emptyList">
+  <div *ngFor="let version of versioner | sortVersioner; index as i">
+    <mk-projektversion [projektversion]="version"
+                       [isCurrent]="i === 0"
+                       [isPrevious]="i === 1"
+                       (restoreVersionChange)="onRestore($event)"
+                       (deleteVersionChange)="onDelete($event)">
+    </mk-projektversion>
+  </div>
+</div>
+<ng-template #emptyList>
+  <p>{{ "mk.projektinformation.emptyList" | transloco }}</p>
+</ng-template>

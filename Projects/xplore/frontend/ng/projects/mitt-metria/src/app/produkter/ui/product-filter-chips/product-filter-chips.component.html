@@ -1,0 +1,8 @@
+<!-- CHIPS -->
+<div class="chips">
+    <mm-chip-list *ngIf="searchTerm?.text" [chips]="[searchTerm]" (removeChip)="removeSearch()">
+    </mm-chip-list>
+
+    <mm-chip-list [chips]="activeFacets" (removeChip)="removeActiveFacet($event)">
+    </mm-chip-list>
+</div>

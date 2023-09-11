@@ -1,0 +1,37 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--192f91bd:16e69faa3a6:5d39</id>
+  <name>kladdlager</name>
+  <nativeName>kladdlager</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--7c94cb3b:16c6635b69f:-7fe4</id>
+  </namespace>
+  <title>kladdlager</title>
+  <keywords>
+    <string>features</string>
+    <string>kladdlager</string>
+  </keywords>
+  <srs>EPSG:3006</srs>
+  <nativeBoundingBox>
+    <minx>6411106.72623474</minx>
+    <maxx>6418336.62228507</maxx>
+    <miny>484821.731834342</miny>
+    <maxy>490115.629958117</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>6411106.72623474</minx>
+    <maxx>6418336.62228507</maxx>
+    <miny>484821.731834342</miny>
+    <maxy>490115.629958117</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--7c94cb3b:16c6635b69f:-7fe3</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

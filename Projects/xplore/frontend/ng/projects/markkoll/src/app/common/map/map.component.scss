@@ -1,0 +1,153 @@
+.map {
+
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  button{
+    color: var(--on-background);
+    background-color: var(--background);
+  }
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  @media screen and (min-width: 768px) {
+    right: 20px;
+  }
+
+  .mat-mini-fab ~ .mat-mini-fab {
+    margin-top: 5px;
+  }
+
+}
+
+.background-buttons-panel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+
+  .background-button {
+    line-height: 50px;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 2px 2px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+.mat-icon{
+  vertical-align: unset !important;
+}
+
+.map>button{
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+.fullscreen{
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+::ng-deep .ol-scale-line {
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  bottom: 10px;
+  left: auto;
+  right: 80px;
+  padding: 2px;
+  padding-top: 4px;
+  max-height: 12px !important;
+  text-align: center;
+}
+
+.is-static  {  
+  .right-panel, .left-bottom-panel {
+    display: none;
+  }
+  ::ng-deep .ol-scale-line {
+    right: 20px;
+  }
+}
+
+
+::ng-deep .ol-scale-line-inner {
+  border: 1px solid black;
+  max-height: 10px !important;
+  border-top: none;
+  color: black;
+  line-height: 10px;
+}
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+.overlay {
+  z-index: 20;
+  pointer-events: none;
+
+  position:absolute;
+  height:100%;
+  width:100%;
+
+  // overflow: hidden;
+}

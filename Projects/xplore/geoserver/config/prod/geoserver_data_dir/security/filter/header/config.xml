@@ -1,0 +1,8 @@
+<requestHeaderAuthentication>
+  <id>66dba621:16ef0393768:aad</id>
+  <name>header</name>
+  <className>org.geoserver.security.filter.GeoServerRequestHeaderAuthenticationFilter</className>
+  <roleSource class="org.geoserver.security.config.PreAuthenticatedUserNameFilterConfig$PreAuthenticatedUserNameRoleSource">Header</roleSource>
+  <rolesHeaderAttribute>x-xplore-roles</rolesHeaderAttribute>
+  <principalHeaderAttribute>x-xplore-principal</principalHeaderAttribute>
+</requestHeaderAuthentication>

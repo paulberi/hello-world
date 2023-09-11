@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        .submit {
+            margin-top: 20px;
+            margin-left: 125px;
+            background-image: linear-gradient(to left, white, cyan);
+            border: 0ch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transactionPage">
+        <div class="chooseCarToEdit" id="carToDelete">
+            <label>Select car id</label>
+            <select name="carText" id="carDropdown">
+                  <option selected="selected">Choose a Car</option>
+              </select>
+            <br>
+            <input type="submit" class="submit" id="submitId" value="Submit">
+        </div>
+    </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(function() {
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: 'GET',
+            url: 'http://localhost:8081/api/v1/cars',
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                for (var i = 0; i < data.length; i++) {
+                    var opt = new Option(data[i].carId);
+                    $("#carDropdown").append(opt);
+                }
+            }
+        });
+        $('#submitId').click(function() {
+            deletingCar();
+        });
+    })
+
+
+    function deletingCar() {
+        var carData = {
+            carId: $('#carDropdown option:selected').text()
+        };
+        var carBrands = $('#carDropdown option:selected').text();
+
+        console.log("hello " + carData);
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: "DELETE",
+            contentType: "application/json",
+            url: "http://localhost:8081/api/v1/deletecar/" + carBrands,
+            data: JSON.stringify(carData),
+            dataType: 'json',
+            success: function() {
+                if (result.responseText == 200) {
+                    alert("" + result.data.car.model +
+                        "ordered Successful! <br>" +
+                        "---> Congrats !!"
+                    );
+                } else {
+                    alert("Error");
+                }
+                console.log(result);
+            },
+            error: function(e) {
+                alert("Error")
+                console.log("ERROR", e);
+            }
+        });
+    }
+</script>
+
+</html>

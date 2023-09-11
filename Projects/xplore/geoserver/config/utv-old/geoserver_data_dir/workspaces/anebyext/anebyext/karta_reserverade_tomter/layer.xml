@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_reserverade_tomter</name>
+  <id>LayerInfoImpl--14fafb5e:16d869f9cdd:-596d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--14fafb5e:16d869f9cdd:-596e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

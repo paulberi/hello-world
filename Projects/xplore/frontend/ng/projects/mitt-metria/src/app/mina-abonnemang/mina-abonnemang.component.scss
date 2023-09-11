@@ -1,0 +1,47 @@
+h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.center-template {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+mat-panel-title.right {
+    flex-grow: 0;
+}
+
+.service-link {
+    color: var(--on-background);
+
+    :hover {
+        color: var(--accent);
+    }
+}
+
+.service-info-link {
+    color: var(--accent);
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.tag {
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px var(--on-background) solid;
+    margin-left: 10px;
+}

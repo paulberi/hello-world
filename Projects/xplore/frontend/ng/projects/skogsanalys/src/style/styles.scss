@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import "theme";
+
+@import "../../../lib/style/styles.scss";
+
+@import "../../../lib/ui/layout/layout.shared.scss";
+
+:root{ // Färger som används av layout.shared.scss
+  --gray-dark: #333333;
+  --gray-light: #f8f8f8;
+
+  --background: var(--gray-light);
+  --on-background: var(--gray-dark);
+}
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.skogsanalys-print {
+  font-size: 10pt;
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  // Font på labels i pie charts från ngx-charts komponenter
+  .pie-label {
+    font-size: 12px !important;
+  }
+
+  table {
+    border-spacing: 0 2px;
+
+    th {
+      text-align: left;
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+
+    td {
+      padding-right: 1em;
+      padding-left: 1em;
+    }
+
+    tr:nth-child(even) {
+      background: #F8F8F8 ;
+    }
+
+    tr:nth-child(odd) {
+      background: #FFFFFF;
+    }
+  }
+}
+
+.border-btn {
+  border-color: var(--background) !important;
+}

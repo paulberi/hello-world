@@ -1,0 +1,32 @@
+<div class="row justify-center">
+  <div class="col-11 main-content">
+    <!-- Vänster Sida -->
+    <div class="col-6">
+      <h1>{{ "sr.common.valkommen" | transloco }} {{ title }}</h1>
+      <h2>{{ "sr.samradlista.aktuella" | transloco }}</h2>
+      <mat-list class="col-12">
+        <cdk-virtual-scroll-viewport itemSize="20" class="list-container">
+          <mat-list-item
+            *cdkVirtualFor="let samrad of aktuellaSamradList"
+            class="list-item"
+            (click)="navigateToSamrad(samrad.slug)"
+          >
+            {{ samrad.rubrik }}
+          </mat-list-item>
+        </cdk-virtual-scroll-viewport>
+      </mat-list>
+      <h2>{{ "sr.label.samradArkiv" | transloco }}</h2>
+      <mat-list class="col-12">
+        <cdk-virtual-scroll-viewport itemSize="20" class="list-container">
+          <mat-list-item
+            *cdkVirtualFor="let samrad of arkiveradeSamradList"
+            class="list-item"
+            (click)="navigateToSamrad(samrad.slug)"
+          >
+            {{ samrad.rubrik }}
+          </mat-list-item>
+        </cdk-virtual-scroll-viewport>
+      </mat-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2202 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.dalsed.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/dalsed/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": ""
+  },
+  "zoom": 4.5,
+  "center": [
+    146076,
+    6539444
+  ],
+  "extent": [
+    23814.64,
+    6094553.81,
+    632648.37,
+    7713337.26
+  ],
+  "thumbnailCoordinates": [
+    145408,
+    6532855
+  ],
+  "groups": [
+    {
+      "name": "fastighetsdata",
+      "title": "Fastighetsdata",
+      "groups": [
+        {
+          "name": "kommunagd_mark",
+          "title": "Kommunägd mark",
+          "expanded": false
+        }
+      ],
+      "expanded": true
+    },
+    {
+      "name": "pbr",
+      "title": "PBR",
+      "expanded": false
+    },
+    {
+      "name": "primarkartan",
+      "title": "Primärkartan",
+      "expanded": false
+    },
+    {
+      "name": "va",
+      "title": "VA",
+      "expanded": false
+    },
+    {
+      "name": "ledning",
+      "title": "Ledningar",
+      "expanded": false,
+      "abstract": {
+        "text": "Obs - ej uppdaterad - informationen är ofullständig!"
+      }
+    },
+    {
+      "name": "kommundata",
+      "title": "Kommundata",
+      "groups": [
+        {
+          "name": "va_skyddsomraden",
+          "title": "VA-Skyddsområden",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "oversiktsplan_opnu_2035",
+      "title": "Översiktplan ÖPnu-2035",
+      "groups": [
+        {
+          "name": "mark_vattenanvandning",
+          "title": "Mark och vattenanvändning",
+          "groups": [
+            {
+              "name": "orter_landsbyggder",
+              "title": "Orter och landsbyggder",
+              "expanded": false
+            },
+            {
+              "name": "areell_naring",
+              "title": "Areell näring",
+              "expanded": false
+            },
+            {
+              "name": "vatten",
+              "title": "Vatten",
+              "expanded": false
+            }
+          ],
+          "expanded": false,
+          "abstract": {
+            "text": "För mer information om ÖPnu-2035, se https://www.dalsed.se/oversiktsplan/"
+          }
+        },
+        {
+          "name": "riksintressen_lis_andra",
+          "title": "Riksintressen och andra värden",
+          "groups": [
+            {
+              "name": "riksintressen_lis",
+              "title": "Riksintressen",
+              "expanded": false
+            },
+            {
+              "name": "andra_varden",
+              "title": "Andra värden",
+              "expanded": false
+            },
+            {
+              "name": "miljo_halsa_sakerhet",
+              "title": "Miljö, hälsa och säkerhet",
+              "groups": [
+                {
+                  "name": "oversvamning",
+                  "title": "Översvämning",
+                  "expanded": false
+                }
+              ],
+              "expanded": false
+            }
+          ],
+          "expanded": false,
+          "abstract": {
+            "text": "För mer information om ÖPnu-2035, se https://www.dalsed.se/oversiktsplan/"
+          }
+        },
+        {
+          "name": "lis",
+          "title": "LIS",
+          "expanded": false,
+          "abstract": {
+            "text": "För mer information om ÖPnu-2035, se https://www.dalsed.se/oversiktsplan/"
+          }
+        }
+      ],
+      "expanded": false,
+      "abstract": {
+        "text": "För mer information om ÖPnu-2035, se https://www.dalsed.se/oversiktsplan/"
+      }
+    },
+    {
+      "name": "fordjupning",
+      "title": "Fördjupning av ÖP Töftedalsfjället",
+      "expanded": false
+    },
+    {
+      "name": "vindkraftverk",
+      "title": "Vindkraftverk",
+      "groups": [
+        {
+          "name": "vindbrukskollen",
+          "title": "Vindbrukskollen",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "smhi_data",
+      "title": "SMHI-data",
+      "groups": [
+        {
+          "name": "huvudavrinningsomraden",
+          "title": "Huvudavrinningsområden",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "skyddade_omraden",
+      "title": "Skyddade områden",
+      "groups": [
+        {
+          "name": "riksintresse",
+          "title": "Riksintressen",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "ortofoton",
+      "title": "Ortofoton",
+      "groups": [
+        {
+          "import": "ortofoto_arsvisa@common"
+        },
+        {
+          "name": "ortofoto_historiska",
+          "title": "Historiska",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": [
+          "kladdlager_red",
+          "kladdlager_green",
+          "kladdlager_blue",
+          "kladdlager_magenta",
+          "kladdlager_svart"
+        ]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "dalsed:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Adresspunkter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Adresspunkt",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "adresstext@mm-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser, kvalitet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetgranser_kvalite",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastighetsdata",
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:FastighetsytorGranser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "import": "US_civilProtectionSite@inspire-msb-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "type": "tile",
+      "group": "kommunagd_mark",
+      "title": "Kommunägd mark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:KommunagdaFastigheter_FK",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunagd_mark",
+      "title": "Edshus fastigheter (under utveckling)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Detaljplaner",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "primarkartan",
+      "title": "Höjdkurvor - Primärkartan",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_pk/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "34,36,37,38,39,40,41,42,43,44,45,46",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "primarkartan",
+      "title": "Primärkartan",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_pk/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,2,4,5,6,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,30,31,32,33",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "orter_landsbyggder",
+      "title": "Ed",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "markanvandning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "orter_landsbyggder",
+      "title": "Sammanahängande bebyggelse",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sammanhallen_bebyggelse100m",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "orter_landsbyggder",
+      "title": "Rekommentationsområden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "rekommendationsomraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "areell_naring",
+      "title": "Jordbruk (3 kap. 4 § MB)",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "jordbruksmark",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "areell_naring",
+      "title": "Skogsbruk (3 kap. 4 § MB)",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "skog",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "import": "metria:RiksintresseVattendrag_LST@mm-export",
+      "group": "areell_naring",
+      "title": "Vattenbruk"
+    },
+    {
+      "type": "tile",
+      "group": "vatten",
+      "title": "Huvudavrinningsområden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "huvudavrinningsomr",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "vatten",
+      "title": "Våtmark",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "vatmark",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "vatten",
+      "title": "Mindre vattendrag",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "vattendrag_mindre",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Text",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "VA-anläggning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Vattenledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Spillvattenledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Vattenbrunn",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Spillvattenbrunn",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Dagvattenbrunn",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va",
+      "title": "Dagvattenledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Text",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Ledningsnod",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Ledningsyta",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Pipeline",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Teleledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Fjärrvärmeledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Dataledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ledning",
+      "title": "Elledning",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_ledning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["dalsed_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Geoundersökningar",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "geoteknik",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "lank_1",
+            "label": "lank_1",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "lank_1",
+            "type": "url",
+            "template": "/storage/verksamhetspdfer/geoteknik/{{lank_1}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "import": "LST_Potentiellt_fororenade_omraden@lansstyrelse-export",
+      "group": "kommundata",
+      "title": "Förorenade områden"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "VA-Verksamhetsområden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "verksamhetsomrade_va",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "va_skyddsomraden",
+      "title": "Riskanalys",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "riskanalys",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_skyddsomraden",
+      "title": "Skyddszoner Ed",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "va_skyddzoner_ed",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_skyddsomraden",
+      "title": "Skyddszoner Habol",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "va_skyddzoner_habol",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Trädvårdsplan",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tradvardsplan",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "pdf_lank",
+            "label": "pdf_lank",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "pdf_lank",
+            "type": "url",
+            "template": "/storage/verksamhetspdfer/tradvardsplan/{{pdf_lank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Tättbegyggda områden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tattbebyggda_omraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommundata",
+      "title": "§6-områden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "pot_lavomraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "rekommendationsomraden",
+      "title": "Fördjupning- linje",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_dalsed_fordjupning_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "rekommendationsomraden",
+      "title": "Fördjupning- polygon",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_dalsed_fordjupning_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "rekommendationsomraden",
+      "title": "Rekommendationsområden",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_dalsed_rekommendationsomraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "pdf_lank",
+            "label": "pdf_lank",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "pdf_lank",
+            "type": "url",
+            "template": "/storage/verksamhetspdfer/{{pdf_lank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "fordjupning",
+      "title": "Planomr och rekommendationsomr",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_toftedalsfjallet_planomr_o_rekommendationsomr",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "planeringsunderlag",
+      "title": "Planeringsunderlag",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_toftedalsfjallet_planomr_o_rekommendationsomr",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "konsekvenser",
+      "title": "Konsekvenser",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fop_toftedalsfjallet_planomr_o_rekommendationsomr",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "lis",
+      "title": "LIS",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "lis",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "LST_wms_vindbrukskollen_12@lansstyrelse-export",
+      "group": "vindbrukskollen",
+      "title": "Uppförda"
+    },
+    {
+      "import": "LST_wms_vindbrukskollen_11@lansstyrelse-export",
+      "group": "vindbrukskollen",
+      "title": "Beviljade"
+    },
+    {
+      "import": "LST_wms_vindbrukskollen_9@lansstyrelse-export",
+      "group": "vindbrukskollen",
+      "title": "Handläggs"
+    },
+    {
+      "type": "tile",
+      "group": "huvudavrinningsomraden",
+      "title": "Huvudavrinningsområden_linje",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "huvudavrinningsomraden_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "huvudavrinningsomraden",
+      "title": "Huvudavrinningsområden_yta",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "huvudavrinningsomraden_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Skyddade vattendrag",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseVattendrag_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade_omraden",
+      "title": "Fornminnen - RAÄ",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:Fornlamning_yta_FMIS,metria:Fornlamning_punkt_FMIS,metria:Fornlamning_linje_FMIS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "url",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "URL",
+            "label": "URL",
+            "linkRef": "the-link-2"
+          },
+          {
+            "id": "the-link-2",
+            "name": "URL",
+            "type": "url",
+            "template": "{{URL}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "",
+      "title": "Natura 2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:Natura2000_SNV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "metria:RiksintresseNaturvard_NV@mm-export",
+      "group": "riksintressen_lis",
+      "title": "Naturvård (3 kap. 6 § MB)"
+    },
+    {
+      "import": "metria:RiksintresseKulturmiljovard_LST@mm-export",
+      "group": "riksintressen_lis",
+      "title": "Kulturmiljövård (3 kap. 6 § MB)"
+    },
+    {
+      "import": "metria:RiksintresseFriluftsliv_NV@mm-export",
+      "group": "riksintressen_lis",
+      "title": "Friluftsliv (3 kap. 6 § MB)"
+    },
+    {
+      "import": "metria:RiksintresseRorligtFriluftsliv_LST@mm-export",
+      "group": "riksintressen_lis",
+      "title": "Rörligt friluftsliv (4 kap. 1-2 §§ MB)"
+    },
+    {
+      "import": "metria:RiksintresseKommunikationer_punkt_LST@mm-export",
+      "group": "riksintressen_lis"
+    },
+    {
+      "import": "metria:RiksintresseKommunikationer_linje_LST@mm-export",
+      "group": "riksintressen_lis"
+    },
+    {
+      "import": "metria:RiksintresseKommunikationer_yta_LST@mm-export",
+      "group": "riksintressen_lis"
+    },
+    {
+      "import": "metria:RiksintresseVindbruk_LST@mm-export",
+      "group": "riksintressen_lis",
+      "title": "Energi"
+    },
+    {
+      "import": "metria:Natura2000_SNV@mm-export",
+      "group": "andra_varden",
+      "title": "Natura 2000 (4 kap. 1, 8 §§)"
+    },
+    {
+      "import": "metria:Naturreservat_NV@mm-export",
+      "group": "andra_varden"
+    },
+    {
+      "import": "metria:Nationalpark_NV@mm-export",
+      "group": "andra_varden"
+    },
+    {
+      "import": "metria:DjurVaxtskydd_NV@mm-export",
+      "group": "andra_varden"
+    },
+    {
+      "type": "tile",
+      "group": "andra_varden",
+      "title": "Biotopskyddsområde",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "bio_djurvaxt,bio_nationalpark,bio_naturreservat,bio_skogsbiotop,bio_vattenskyddsomr",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "import": "lsto_wms_strandskydd_0@lansstyrelse-export",
+      "group": "andra_varden",
+      "title": "Strandskyddsområde"
+    },
+    {
+      "import": "LST_ext_raster_bullerdata_2016@lansstyrelse-export",
+      "group": "miljo_halsa_sakerhet"
+    },
+    {
+      "import": "lst_vm_wms_miljokvalitetsnorm@lansstyrelse-export",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Vattenkvalitet"
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Olycksrisk",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "rekvag_farligtgods,buffert_farligtgods",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "oversvamning",
+      "title": "100-årsflöde",
+      "source": {
+        "url": "https://gisapp.msb.se/arcgis/services/Oversvamningskarteringar/karteringar/MapServer/WmsServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "13",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "oversvamning",
+      "title": "200-årsflöde",
+      "source": {
+        "url": "https://gisapp.msb.se/arcgis/services/Oversvamningskarteringar/karteringar/MapServer/WmsServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "12",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "oversvamning",
+      "title": "Beräknat högsta flöde",
+      "source": {
+        "url": "https://gisapp.msb.se/arcgis/services/Oversvamningskarteringar/karteringar/MapServer/WmsServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "11",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "oversvamning",
+      "title": "Relaterade vattendrag",
+      "source": {
+        "url": "https://gisapp.msb.se/arcgis/services/Oversvamningskarteringar/karteringar/MapServer/WmsServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "15",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "RapporURL",
+            "label": "RapporURL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "RapporURL",
+            "label": "RapporURL",
+            "type": "url"
+          },
+          {
+            "name": "*"
+          },
+          {
+            "name": "Shape",
+            "visible": false
+          },
+          {
+            "name": "SHAPE_Length",
+            "visible": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Lågpunktskartering",
+      "source": {
+        "url": "https://ext-geodata-lokala.lansstyrelsen.se/arcgis/services/LSTO/lsto_wms_extern_ytavrinning_lagpunkter/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1,9,13,57",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "gridcode",
+            "label": "Gridcode"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Erosion",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "skred_effterbearbetning,skred_strandnara",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "import": "LST_Potentiellt_fororenade_omraden@lansstyrelse-export",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Förorenad mark"
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Radon",
+      "source": {
+        "url": "/maps/gawms/Dals/dalsed_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "radon",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla_utan_shape"
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Höjdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hojdlinje_topo10",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Hillshade",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hillshade_multi",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "@common"
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1975",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_75",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1960",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_60",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3007",
+      "alias": "urn:ogc:def:crs:EPSG:3007",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=12 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        23814.64,
+        6094553.81,
+        632648.37,
+        7713337.26
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999,
+    0.03499999999999999,
+    0.01749999999999999,
+    0.00869999999999999,
+    0.00439999999999999,
+    0.00217499999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "alla_utan_shape": {
+      "properties": [
+        {
+          "name": "*"
+        },
+        {
+          "name": "shape",
+          "visible": false
+        },
+        {
+          "name": "Shape",
+          "visible": false
+        },
+        {
+          "name": "shape_area",
+          "visible": false
+        },
+        {
+          "name": "shape_leng",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_Length",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_Area",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_AREA",
+          "visible": false
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3007",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

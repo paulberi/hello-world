@@ -1,0 +1,10 @@
+<table mat-table
+       [dataSource]="page?.content">
+  <ng-content></ng-content>
+</table>
+
+<mat-paginator  [length]="page?.totalElements"
+                [pageIndex]="page?.number"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="pageChange.emit($event)">
+</mat-paginator>

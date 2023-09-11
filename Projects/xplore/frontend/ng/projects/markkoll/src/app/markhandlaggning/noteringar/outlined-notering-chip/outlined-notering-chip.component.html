@@ -1,0 +1,4 @@
+<mat-chip disableRipple class="chip" [ngClass]="getColorValue()">
+  <mat-icon *ngIf="icon" fontSet="material-icons-outlined" class="chip-icon">{{icon}}</mat-icon>
+  <span class="chip-text" [ngClass]="getColorValue()"><ng-content></ng-content></span>
+</mat-chip>

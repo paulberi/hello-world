@@ -1,0 +1,94 @@
+.products-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0 calc(100% / 24) ;
+    min-height: 400px;
+}
+
+.custom-wrapper {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.grey-background {
+    background-color: #F0F0F0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.product-controls {
+    min-width: 220px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrapper {
+    padding-right: 10px;
+}
+
+.filter-wrapper {
+    top: 80px;
+    align-self: flex-start;
+    padding: 1rem 20px 0 0;
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.products {
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.chips {
+    padding: 16px;
+}
+
+#filter-toolbar {
+    flex-direction: row-reverse;
+    min-height: 72px;
+    height: fit-content;
+    align-items: center;
+    background-color: var(--background-light);
+}
+
+// Får mat-drawer att komma nerifrån istället för end (api:et har bara start och end)
+.mat-drawer.mat-drawer-end {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate3d(0, 100%, 0);
+    position: fixed;
+    border-radius: 6px 6px 0px 0px;
+    max-height: calc(100% /1.25);
+}
+
+.mat-nav-list {
+    padding: 20px;
+    font-size: 0.875rem;
+}
+
+.mobile-filter-toggle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mat-icon-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    span {
+        padding: 4px;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="choices-content">
+  <form class="add-content">
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{ deleteMenuTitle }}
+      </a>
+      <div class="navbar-dropdown">
+        <a class="navbar-item" *ngFor="let menu of $menus|async" (click)="updateDeleteMenuTitle(menu)">
+          <p>{{ menu.menuName }}</p>
+        </a>
+      </div>
+    </div>
+  </form>
+  <div class="button-test">
+    <button class="manage-menu-button-delete" (click)="deleteMenu()">
+      Ta bort matsedel
+    </button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "name": "",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::3006"
+    }
+  },
+  "features": [
+  ]
+}

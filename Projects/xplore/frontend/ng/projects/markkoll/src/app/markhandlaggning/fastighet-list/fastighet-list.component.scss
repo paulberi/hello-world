@@ -1,0 +1,82 @@
+.mat-expansion-panel {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: var(--background);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+mat-expansion-panel-header {
+  padding-left: 0;
+  padding-bottom: 1em;
+  padding-top: 1.5em;
+}
+
+mat-panel-title > div {
+  padding-top: 1px;
+  padding-left: 24px;
+  color: var(--primary-variant);
+}
+
+mat-panel-title span.agare-saknas-title {
+  color: var(--error);
+}
+
+mat-expansion-panel {
+  mat-expansion-panel-header:hover span.agare-saknas-title {
+    color: var(--error) !important;
+  }
+
+  mat-expansion-panel-header:focus span.agare-saknas-title {
+    color: var(--error) !important;
+  }
+}
+
+mat-paginator {
+  background-color: var(--background);
+}
+
+::ng-deep .fastighetlist-header .mat-expansion-panel-body{
+  padding: 0 0 0 24px !important;
+}
+
+.fastighetlist-header-row {
+  line-height: 45px;
+  font-weight: 600;
+}
+
+::ng-deep .fastighetlist-header .mat-expansion-panel-body{
+  padding: 0 24px 0;
+}
+
+.notiser-header {
+  margin-left: 47px;
+}
+
+.title-margin {
+  margin-left: 24px;
+}
+
+.information-header {
+  margin-left: 72px;
+}
+
+.avtalsstatus, .fastighetsbeteckning {
+  margin-bottom: 10px;
+}
+
+.notiser {
+  margin-bottom: 18px;
+  margin-left: 23px;
+}
+
+.information {
+  margin-bottom: 9px;
+  margin-left: 26px;
+}
+
+.test {
+  height: 25px;
+  margin-top: 10px;
+}

@@ -1,0 +1,45 @@
+import { Meta, Typeset } from '@storybook/addon-docs';
+import FontExample from '../assets/font_example.png';
+
+<Meta title="Riktlinjer/Typsnitt" />
+
+# Typsnitt
+---
+
+Ett bra typsnitt är inte bara snyggt, utan är designat för högläsbarhet. För - till exempel - en person med dyslexi så kan
+ett typsnitt underlätta eller försvåra läsningen, beroende på faktorer som avstånd mellan bokstäver i ett ord, avstånd
+mellan orden och radlängd. En bra typografi undviker också att blanda många olika typsnitt, vikter och färger, använder
+luftiga styckeindelningar och välavvägda radavstånd. Även för personer utan lässvårigheter så blir besöket i
+Xplores tjänster behagligare och enklare med rätt typsnitt och en balanserad layout.
+
+Xplore använder Nunito, som är en välbeprövad och välbalanserad sans-seriffont med hög läsbarhet. Nunito finns i
+såväl Adobes som Googles fontbibliotek, och är lätt att integrera i Angular Material och Ionic utan embedding
+licence.
+
+<br/>
+
+### Rubrik och underrubrik
+
+<Typeset
+  fontSizes={["24px", "18px"]}
+  sampleText="Sample text"
+  style={{ lineHeight: "48px" }}
+/>
+
+### Brödtext
+
+<Typeset
+  fontSizes={["16px"]}
+  sampleText="Brödtext"
+/>
+
+### Textknapp & aktiv/inaktiv flik
+
+<Typeset
+  fontSizes={["16px", "14px"]}
+  sampleText="Sample text"
+  fontWeight="600"
+  style={{ lineHeight: "48px" }}
+/>
+
+<img src={FontExample} alt="Exempel på typsnitt" />

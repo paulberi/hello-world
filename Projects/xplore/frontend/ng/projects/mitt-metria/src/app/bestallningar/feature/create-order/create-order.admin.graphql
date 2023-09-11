@@ -1,0 +1,98 @@
+query adminGetCustomerByEmail($emailAddress: String!) {
+  getCustomerByEmail(emailAddress: $emailAddress)
+    @namedClient(name: "adminApi") {
+    id
+    orders(options: { filter: { active: { eq: true } } }) {
+      items {
+        id
+      }
+      totalItems
+    }
+  }
+}
+
+mutation adminGetOrCreateActiveOrderForCustomer($customerId: ID!) {
+  getOrCreateActiveOrderForCustomer(customerId: $customerId)
+    @namedClient(name: "adminApi") {
+    id
+  }
+}
+
+mutation adminAddItemToOrder(
+  $orderId: ID!
+  $productVariantId: ID!
+  $attributes: OrderLineCustomFieldsInput!
+) {
+  addItemToOrder(
+    orderId: $orderId
+    productVariantId: $productVariantId
+    customFields: $attributes
+    quantity: 1
+  ) @namedClient(name: "adminApi") {
+    __typename
+    ... on Order {
+      id
+    }
+    ... on OrderModificationError {
+      message
+    }
+    ... on OrderLimitError {
+      message
+    }
+    ... on NegativeQuantityError {
+      message
+    }
+    ... on InsufficientStockError {
+      message
+    }
+  }
+}
+
+mutation adminPlaceOrder($orderId: ID!) {
+  placeOrder(orderId: $orderId) @namedClient(name: "adminApi") {
+    id
+  }
+}
+
+mutation adminSetOrderCustomFields(
+  $orderId: ID!
+  $emailAddress: String!
+  $externalRef: String!
+) {
+  setOrderCustomFields(
+    input: {
+      id: $orderId
+      customFields: { emailAddress: $emailAddress, externalRef: $externalRef }
+    }
+  ) @namedClient(name: "adminApi") {
+    __typename
+  }
+}
+
+query adminOngoingOrder($orderId: ID!) {
+  order(id: $orderId) @namedClient(name: "adminApi") {
+    id
+    lines {
+      id
+      productVariant {
+        name
+        product {
+          name
+        }
+      }
+      customFields {
+        attributes
+      }
+    }
+    customFields {
+      externalRef
+      emailAddress
+    }
+  }
+}
+
+mutation adminCancelOrder($orderId: ID!) {
+  cancelOrder(input: { orderId: $orderId }) @namedClient(name: "adminApi") {
+    __typename
+  }
+}

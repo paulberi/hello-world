@@ -1,0 +1,374 @@
+{
+  "groups": [
+    {
+      "name": "ortofoto_arsvisa",
+      "title": "Årsvisa",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "id": "ortofoto",
+      "type": "tile",
+      "group": "background",
+      "title": "Ortofoto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "orto_farg_kombinerad"
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      },
+      "selectionStyleDelomraden": "selectedDelomradeDark"
+    },
+    {
+      "id": "ortofoto_farg_2021",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2021",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2021",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2020",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2020",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2020",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2019",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2019",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2019",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2018",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2018",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2018",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2017",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2017",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2017",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2016",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2016",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2016",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2015",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2015",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2015",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2014",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2014",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2014",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2013",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2013",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2013",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2012",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2012",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2012",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2011",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2011",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2011",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2010",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2010",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2010",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2009",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2009",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2009",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2008",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2008",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2008",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2007",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2007",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2007",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "id": "ortofoto_farg_2006",
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2006",
+      "source": {
+        "url": "/maps/lantmeteriet/",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2006",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    }
+  ],
+  "styles": {
+    "selectedDelomradeDark": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,255,0,0.2)"
+          },
+          "stroke": {
+            "color": "#FF9300",
+            "width": 5
+          }
+        },
+        {
+          "stroke": {
+            "color": "#FFFF00",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "selectedDelomrade": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,0,0.2)"
+          },
+          "stroke": {
+            "color": "#7C372E",
+            "width": 5
+          }
+        },
+        {
+          "stroke": {
+            "color": "#FF7E1F",
+            "width": 2
+          }
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--57951a1e:17bad16dbb2:-7fc5</id>
+  <name>avtalsstatus</name>
+  <mode>NAMED</mode>
+  <title>MarkKoll Avtalsstatus</title>
+  <workspace>
+    <id>WorkspaceInfoImpl--57951a1e:17bad16dbb2:-7fe0</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fce</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd0</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd6</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fdc</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fda</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd8</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd4</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd2</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc6</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc7</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fca</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fcd</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fcc</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fcb</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc9</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc8</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+  <dateCreated>2021-09-07 14:40:52.528 UTC</dateCreated>
+  <dateModified>2021-04-08 07:05:17.237 UTC</dateModified>
+</layerGroup>

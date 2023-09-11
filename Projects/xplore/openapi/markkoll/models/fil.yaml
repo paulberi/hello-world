@@ -1,0 +1,32 @@
+components:
+  schemas:
+    Fil:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        filnamn:
+          type: string
+        mimeTyp:
+          type: string
+        skapadDatum:
+          type: string
+        skapadAv:
+          type: string
+      required:
+        - id
+        - filnamn
+        - mimeTyp
+        - skapadDatum
+        - skapadAv
+  parameters:
+    filId:
+      name: filId
+      in: path
+      description: UUID för filen
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: d4b1f7a3-4e04-480b-9d30-ce92e41167cb

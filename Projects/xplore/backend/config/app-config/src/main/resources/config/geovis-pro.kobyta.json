@@ -1,0 +1,4481 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://aneby.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      },
+      "edp_panel": {
+        "visible": true
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/kobyta/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": ""
+  },
+  "zoom": 5.5,
+  "center": [
+    138314,
+    6415558
+  ],
+  "extent": [
+    -160124.05,
+    6102440.98,
+    1617674,
+    7703081.23
+  ],
+  "thumbnailCoordinates": [
+    139225,
+    6412669
+  ],
+  "groups": [
+    {
+      "name": "fastigheter",
+      "title": "Adresser, Fastigheter & Detaljplaner",
+      "expanded": true
+    },
+    {
+      "name": "vag_och_jarnvag",
+      "title": "Väg och järnväg",
+      "groups": [
+        {
+          "name": "sandningsdistrikt",
+          "title": "Sandningsdistrikt",
+          "expanded": false
+        },
+        {
+          "name": "snorojninsdistrikt",
+          "title": "Snöröjninsdistrikt",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "tekniska_kartor",
+      "title": "Tekniska kartor",
+      "groups": [
+        {
+          "name": "vattenochavloppnat_kinda",
+          "title": "Vatten och avloppsnät",
+          "expanded": false,
+          "abstract": {
+            "text": "Vi vill påminna er att detta enbart är ett tittskåp för oss handläggare. Tekniska kartor som vatten och avloppsnät är digitaliserade sträckor på ledningarna och får ej distribueras  utanför kommunen. All information finns inte i Geovis Pro utan för att vara säker på ledningar i ett område ska ni gå in via Ledningskollen.se. Via ledningskollen kommer du i kontakt med alla ledningsägare och ska användas vid planering som kommer innebära markarbeten.",
+            "attribution": ""
+          }
+        },
+        {
+          "name": "verksamhetsomradeva_kinda",
+          "title": "Verksamhetsområde VA",
+          "expanded": false,
+          "abstract": {
+            "text": "Vi vill påminna er att detta enbart är ett tittskåp för oss handläggare. Tekniska kartor som vatten och avloppsnät är digitaliserade sträckor på ledningarna och får ej distribueras  utanför kommunen. All information finns inte i Geovis Pro utan för att vara säker på ledningar i ett område ska ni gå in via Ledningskollen.se. Via ledningskollen kommer du i kontakt med alla ledningsägare och ska användas vid planering som kommer innebära markarbeten.",
+            "attribution": ""
+          }
+        }
+      ],
+      "expanded": false,
+      "abstract": {
+        "text": "Vi vill påminna er att detta enbart är ett tittskåp för oss handläggare. Tekniska kartor som vatten och avloppsnät är digitaliserade sträckor på ledningarna och får ej distribueras  utanför kommunen. All information finns inte i Geovis Pro utan för att vara säker på ledningar i ett område ska ni gå in via Ledningskollen.se. Via ledningskollen kommer du i kontakt med alla ledningsägare och ska användas vid planering som kommer innebära markarbeten.",
+        "attribution": ""
+      }
+    },
+    {
+      "name": "bostads_industri_utv_mark",
+      "title": "Bostads-, industri- och utvecklingsmark",
+      "expanded": false
+    },
+    {
+      "name": "park",
+      "title": "Park",
+      "groups": [
+        {
+          "name": "skotselytor_punktdetaljer",
+          "title": "Skötselytor och punktdetaljer",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "kommunens_mark",
+      "title": "Kommunens mark, arrenden och utredningar",
+      "expanded": false
+    },
+    {
+      "name": "miljo_halsa_sakerhet",
+      "title": "Miljö, hälsa och säkerhet",
+      "groups": [
+        {
+          "name": "brand_kris",
+          "title": "Brand, naturolyckor och kris",
+          "expanded": false
+        },
+        {
+          "name": "radon_aneby",
+          "title": "Radonmätningar Aneby",
+          "expanded": false
+        },
+        {
+          "name": "avlopp",
+          "title": "Små avlopp risk",
+          "expanded": false
+        },
+        {
+          "name": "vatten",
+          "title": "Vatten",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "natur_kulturmiljo",
+      "title": "Natur- och kulturmiljö",
+      "groups": [
+        {
+          "name": "natur",
+          "title": "Natur",
+          "expanded": false
+        },
+        {
+          "name": "kultur",
+          "title": "Kultur",
+          "expanded": false
+        },
+        {
+          "name": "strandskydd",
+          "title": "Strandskydd",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "riksintressen",
+      "title": "Riksintressen",
+      "expanded": false
+    },
+    {
+      "name": "ovriga_kartor",
+      "title": "Övriga kartor",
+      "groups": [
+        {
+          "name": "ortofoto_arsvisa",
+          "title": "Ortofoto årsvisa",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false,
+      "abstract": {
+        "text": "Observera att ritlagret är gemensamt och det som läggs till är därmed synligt för samtliga Geovis Pro-användare i KÖBYTA-kommunerna.",
+        "attribution": ""
+      }
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "kobyta:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Kommunnamn",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:GranserKommun",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Adresspunkter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Adresspunkt",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "adresstext@mm-export",
+      "group": "fastigheter"
+    },
+    {
+      "import": "rattigheter@mm-export",
+      "id": "rattigheter",
+      "group": "fastigheter",
+      "title": "Ledn.rätter, servitut & gem.anläggningar"
+    },
+    {
+      "import": "planer@mm-export",
+      "id": "planer",
+      "group": "fastigheter",
+      "title": "Detaljplaner"
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Digitaliserade detaljplaner",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_digitala_planer/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.85,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Gränspunkter, kvalitet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Granspunkter_kvalite",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Fastighetsgränser kvalitet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetgranser_kvalite",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fastigheter",
+      "title": "Fastighetsgränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:FastighetsytorGranser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastigheter",
+      "title": "Fastighetsytor",
+      "visible": true
+    },
+    {
+      "group": "vag_och_jarnvag",
+      "style": "karta_busshallplats",
+      "title": "Busshållplats",
+      "source": {
+        "type": "wfs",
+        "url": "/geoserver/tranasext/ows",
+        "typeName": "tranasext:karta_busshallplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "editable": false,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Väghållare",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghallare_NVDB",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Järnvägsdata",
+      "source": {
+        "url": "/maps/trafikverket/BanInfo",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Infrastrukturforvaltare",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sandningsdistrikt",
+      "title": "Distrikt Centrum",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sanddistrikt_centrum_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sandningsdistrikt",
+      "title": "Distrikt 1",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sanddistrikt_1_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sandningsdistrikt",
+      "title": "Distrikt 2",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sanddistrikt_2_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sandningsdistrikt",
+      "title": "Distrikt 3",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sanddistrikt_3_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sandningsdistrikt",
+      "title": "Distrikt 4",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sanddistrikt_4_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 1",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 2",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt2,snorojning_distrikt_yta2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 3",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 4",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 5",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt5,snorojning_distrikt_yta5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 6",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 7",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt7",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 8",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 9",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt9,snorojning_distrikt_yta9",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 10",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt10",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 11",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt11",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 12",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt12",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 13",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt13",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 14",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt14",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 15",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt15",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt16",
+      "title": "Distrikt 16",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt16",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 17",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt17",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 18",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt18,snorojning_distrikt_yta18",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 20A",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt20a,snorojning_distrikt_yta20a",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 20B",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt20b,snorojning_distrikt_yta20b",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojninsdistrikt",
+      "title": "Distrikt 20C",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_snorojningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning_distrikt20c",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Saltning",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_saltning/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "saltning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Sandupptagningsdistrikt",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_sandupptagningsdistrikt/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sandupptagning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Cykelbana",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_gatuverksamhet/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tranas_cykelbana",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker","tranas_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Gatuklassning Tranås",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_gatuverksamhet/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tranas_gatutyp",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Parkeringar",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_gatuverksamhet/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "parkeringar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Beläggningsstatus",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_gatuverksamhet/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "belaggning_lank",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_samhalle_teknik"],
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "LÄNK_BELÄGGNING",
+            "label": "LÄNK_BELÄGGNING",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "LÄNK_BELÄGGNING",
+            "type": "url",
+            "template": "http://ekg.sblt.se/"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Tunnlar och broar",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_gatuverksamhet/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tunnlar_och_broar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "LÄNK_BATMAN",
+            "label": "LÄNK_BATMAN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "LÄNK_BATMAN",
+            "type": "url",
+            "template": "{{LÄNK_BATMAN}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Avfallskärl",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "avfallskarl",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Bevattning",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "matarbrunn_bevattning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Buskage",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "buskage",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Detaljplan Park och Naturytor",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "park_natur_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Fontän",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fontan",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Gräsyta",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "grasyta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Högtidsdekoration",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "hogtidsdekoration",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Invasiva arter",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "invasiva_arter",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Koloniområde",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "koloniomrade",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Lekplats",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "lekplats",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Markbeläggning",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kobyta.tra_tekniska.park_markbelaggning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Möbler fasta",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "mobler_fasta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Möbler flyttbara",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "mobler_flyttbara",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Parkväg",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "parkvag_linje,parkvag_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Rabatter",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "rabatter",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Skatepark",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "skatepark",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Städrond",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "stadrond",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Trädäck",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tradack",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Tätortsnära skog",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tatortsnara_skog",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Urnor",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "urnor_lador",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Vatten",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "vatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Vatten_åtgärder",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "vatten_atgarder",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Vattensäck träd",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "vattensack_trad",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Övrig markutrustning linje",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "ovrig_markutrustning_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skotselytor_punktdetaljer",
+      "title": "Övrig markutrustning punkt",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_park/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "ovrig_markutrustning_punkt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": ["tranas_specifik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Belysning",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_belysning_kinda/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,2,3,4,5,6,7",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Belysning",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Elskåp",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Fiberanslutna",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Höjdkurvor",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_pk/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3,4,5,6,7,8,9,10,11,12,13,14",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Primärkartan",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_pk/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "15,16,17,18,19,20,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,51,52,53,54,55,57,58,59,60,61",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Preliminära fastighetsgränser",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_bakgrund/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Prelgränser",
+          "TRANSPARENT": true
+        },
+        "serverType": "arcgis",
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla",
+      "allowedRolesTemplate": "tranas_specifik"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Primärkarteområde (ABT-leverans)",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_pkomrade/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "primarkarteomrade",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Slambrunnar",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "brunnar_fran_miljo,brunnar_fran_slambil",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Sopturer",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_sopturer/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Primärkarteområde (ABT-leverans)",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["odeshog_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Slambrunnar",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Slambrunnar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["aneby_samhalle_teknik"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "VA-områden",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "VA-verksamhetsområde",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "va_verksamhetsomrade",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["aneby_anstallda_politiker"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattenledning_aneby,dagvattenledning_aneby,spillvattenledning_aneby",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["aneby_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattenledning_boxholm,dagvattenledning_boxholm,spillvattenledning_boxholm",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["boxholm_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattennod,vattenledning,spillvattennod,spillvattenledning,dagvattennod,dagvattenledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattenledning_odeshog,dagvattenledning_odeshog,spillvattenledning_odeshog",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattenledning_ydre,dagvattenledning_ydre,spillvattenledning_ydre",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Optokabel (fibernät)",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_data/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "0,1,2,3,4,5,6,7,8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "vokby",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vattenbrunnar",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattenbrunnar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Slambrunnar",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "slambrunnar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Snöröjningskarta",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "snorojning_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["ydre_anstallda_politiker"],
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Stängsel, staket och räcken",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "gata_stangsel_racken",
+          "TRANSPARENT": true
+        },
+        "serverType": "arcgis",
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenochavloppnat_kinda",
+      "title": "Driftsinformation",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "va_driftsinformation_punkt,va_driftsinformation_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenochavloppnat_kinda",
+      "title": "Vattenläcka",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "va_vattenlacka",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenochavloppnat_kinda",
+      "title": "Vatten",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vattennod,vattenledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenochavloppnat_kinda",
+      "title": "Avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "spillvattennod,spillvattenledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenochavloppnat_kinda",
+      "title": "Dagvatten",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "dagvattennod,dagvattenledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradeva_kinda",
+      "title": "Vatten",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_vatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_anstallda_politiker"],
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradeva_kinda",
+      "title": "Avlopp",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_avlopp",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_anstallda_politiker"],
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradeva_kinda",
+      "title": "Dagvatten",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_dagvatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_anstallda_politiker"],
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomradeva_kinda",
+      "title": "Dagvatten Gata",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_dagvatten_gata",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_anstallda_politiker"],
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Verksamhetsområde vatten och avloppsnät",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_avlopp,verksamhetsomrade_dagvatten,verksamhetsomrade_dagvatten_gata,verksamhetsomrade_vatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Elnät",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "AA_Elkabel,AA_Eldetaljer",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Fjärrvärmenät",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Fjärrvärmeledning_primärkarta,Fjärrvärmeledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "aneby_kinda_tranas_ydre_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Vatten och avloppsnät",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Dagvattenledning__Tranås38147,Spillvattenledning__Tranås49219,Vattenledning__Tranås64881",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Fibernät Tranås",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_traman/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "datadetalj_traman,datakabelror_traman,dataobjekt_traman,datakabel_traman",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Sopdistrikt",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "sopdistrikt_landsbygd,sopdistrikt_tatort",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Slambrunnar",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WmsServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "slambrunnar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Sopkärl",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "sopkarl",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "allowedRolesTemplate": "tranas_specifik",
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Verksamhetsområde Kallvatten",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_kallvatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "allowedRoles": ["tranas_anstallda_politiker","tranas_samhalle_teknik","tranas_raddning_sakerhet"],
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Verksamhetsområde Spillvatten",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "verksamhetsomrade_spillvatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "allowedRoles": ["tranas_anstallda_politiker","tranas_samhalle_teknik","tranas_raddning_sakerhet"],
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "bostads_industri_utv_mark",
+      "title": "Detaljplan - pågående",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Pågående_detaljplaner62838",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "Arrenden",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Arrenden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "*"
+          },
+          {
+            "name": "Länk till avtal (PDF)",
+            "label": "Länk till avtal (PDF)",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "Länk till avtal (PDF)",
+            "type": "url",
+            "template": "{{Länk till avtal (PDF)}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "Kommunägd mark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:KommunagdaFastigheter_FK",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "NYKO-områden",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "nyko",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["ydre_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "Jordbruksarrenden",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Jordburksarrenden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "Markarrenden",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Markarrenden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kommunens_mark",
+      "title": "Miljö- och geotekniska utredningar",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "Geotekniska_utredningar27915",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "LST_Potentiellt_fororenade_omraden@lansstyrelse-export",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Potentiellt förorenade områden"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vatten_nod_aneby",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["aneby_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vatten_nod_boxholm",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["boxholm_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "brandposter_kinda",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vatten_nod_odeshog",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_elvafv/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "vatten_nod_ydre",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "ydre_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Brandposter",
+      "source": {
+        "url": "/maps/gawms/Kob/tranas_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "tranas_bp",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "tranas_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Km-rutor",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Svartån 50-årsflöde",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "oversvamningskartering_50_flode",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRolesTemplate": "aneby_tranas_exklusive_grund"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Svartån 100-årsflöde",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "oversvamningskartering_100_flode",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRolesTemplate": "aneby_tranas_exklusive_grund"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Svartån 200-årsflöde",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "oversvamningskartering_200_flode",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRolesTemplate": "aneby_tranas_exklusive_grund"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Svartån Beräknat högsta flöde",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "oversvamningskartering_hogsta_flode",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRolesTemplate": "aneby_tranas_exklusive_grund"
+    },
+    {
+      "type": "tile",
+      "group": "brand_kris",
+      "title": "Svartån delavrinningsområden",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "daro_svartan",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "aneby_tranas_exklusive_grund",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "dhi_id",
+            "label": "DARO-nr"
+          },
+          {
+            "name": "skyddsklass",
+            "label": "Skyddsklass"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "radon_aneby",
+      "title": "Radon över 200 Bq/m3",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "radon_over_200",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "allowedRoles": ["aneby_samhalle_teknik"]
+    },
+    {
+      "type": "tile",
+      "group": "radon_aneby",
+      "title": "Radon under 200 Bq/m3",
+      "source": {
+        "url": "/maps/gawms/Kob/aneby_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "radon_under_200",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "allowedRoles": ["aneby_samhalle_teknik"]
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Brunnar",
+      "source": {
+        "url": "/maps/sgu/grundvatten/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "SE.GOV.SGU.BRUNNAR.250K",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Mjältbrandsgravar äldre",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "P1_Risk_sma_avlopp_fosfor@lansstyrelse-export",
+      "group": "avlopp",
+      "title": "Fosfor",
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "import": "HS1_Risk_sma_avlopp_halsoskydd@lansstyrelse-export",
+      "group": "avlopp",
+      "title": "Hälsoskydd",
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "import": "N1_Risk_sma_avlopp_kvave@lansstyrelse-export",
+      "group": "avlopp",
+      "title": "Kväve",
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Nedlagda deponier",
+      "source": {
+        "url": "/maps/gawms/Kob/Tranas_QGIS_2018/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "nedlagda_deponier_punkt,nedlagda_deponier_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "tranas_specifik",
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "US_civilProtectionSite@inspire-msb-export",
+      "group": "miljo_halsa_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "vatten",
+      "title": "Delavrinningsområden",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "LAYERS": "0",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vatten",
+      "title": "Vattenskyddsområde",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vattenskydd_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Natura 2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Natura2000_SNV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturreservat_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturvårdsprogram-Biologiska objekt",
+      "source": {
+        "url": "/maps/gawms/Kob/boxholm_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_bio_boxholm",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["boxholm_anstallda_politiker"],
+      "allowedRolesTemplate": "boxholm_specifik",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "link",
+            "label": "link",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "link",
+            "type": "url",
+            "template": "{{link}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturvårdsprogram-Geologiska objekt",
+      "source": {
+        "url": "/maps/gawms/Kob/boxholm_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_geo_boxholm",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["boxholm_anstallda_politiker"],
+      "allowedRolesTemplate": "boxholm_specifik",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "link",
+            "label": "link",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "link",
+            "type": "url",
+            "template": "{{link}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturvårdsplan Kinda",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_2009",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["kinda_anstallda_politiker"],
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturvårdsplan (2013) Ydre",
+      "source": {
+        "url": "/maps/gawms/Kob/ydre_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Nvp_Ydre",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["ydre_anstallda_politiker","ydre_samhalle_teknik","ydre_raddning_sakerhet"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Naturvårdsplan Ödeshög",
+      "source": {
+        "url": "/maps/gawms/Kob/odeshog_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "7",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["odeshog_anstallda_politiker"],
+      "allowedRolesTemplate": "odeshog_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "natur",
+      "title": "Skyddsvärda träd/trädinventering",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_natur_kulturvarde/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "aneby_tranas",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kultur",
+      "title": "Byggnadsminnen",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_natur_kulturvarde/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "byggnadurl",
+            "label": "byggnadurl",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "byggnadurl",
+            "type": "url",
+            "template": "{{byggnadurl}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "kultur",
+      "title": "Fornminnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fornlamningar",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "url",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "URL",
+            "label": "URL",
+            "linkRef": "the-link-2"
+          },
+          {
+            "id": "the-link-2",
+            "name": "URL",
+            "type": "url",
+            "template": "{{URL}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "kultur",
+      "title": "Värdefulla byggnader",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kultur_byggnad",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "kultur",
+      "title": "Värdefulla miljöer",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kultur_miljo",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "lst_hav_riksintressen_3_5@lansstyrelse-export",
+      "group": "riksintressen",
+      "title": "Yrkesfiske 3:5",
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kulturmiljövård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Naturvård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "beskrivnin",
+            "label": "BESKRIVNIN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "beskrivnin",
+            "type": "url",
+            "template": "{{beskrivnin}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseFriluftsliv_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "lank_beslu",
+            "label": "LANK_BESLU",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "lank_beslu",
+            "type": "url",
+            "template": "{{lank_beslu}}"
+          },
+          {
+            "name": "lank_varde",
+            "label": "LANK_VARDE",
+            "linkRef": "the-link2"
+          },
+          {
+            "id": "the-link2",
+            "name": "lank_varde",
+            "type": "url",
+            "template": "{{lank_varde}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Värdefulla ämnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseMineral_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "lst_lst_riksintressen_3_8@lansstyrelse-export",
+      "group": "riksintressen",
+      "title": "Energiproduktion",
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (punkt)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_punkt_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (linje)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_linje_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Kommunikationer (yta)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:RiksintresseKommunikationer_yta_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.75,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "LST_WMS_riksintressen_3_9_fm@lansstyrelse-export",
+      "group": "riksintressen",
+      "title": "Totalförsvar",
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet"
+    },
+    {
+      "type": "tile",
+      "group": "strandskydd",
+      "title": "Strandnära områder inom 100 meter",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_natur_kulturvarde/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "LAYERS": "2",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "strandskydd",
+      "title": "Strandskydd - utökat",
+      "source": {
+        "url": "/maps/gawms/Kob/kobyta_natur_kulturvarde/MapServer/WMSServer",
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "1",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "strandskydd",
+      "title": "LIS Bostäder/verksamhet",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "LAYERS": "lis_bostader",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "strandskydd",
+      "title": "LIS Verksamheter",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "LAYERS": "lis_verksamheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRolesTemplate": "kinda_specifik",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ovriga_kartor",
+      "title": "Ortofoto 1996",
+      "source": {
+        "url": "/maps/gawms/Kob/kinda_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "ortofoto_96",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ovriga_kartor",
+      "title": "Jordartskarta",
+      "source": {
+        "url": "/maps/sgu/jord/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "jord:SE.GOV.SGU.JORD.BLOCKIGHET.25K,jord:SE.GOV.SGU.JORD.GRUNDLAGER.25K,jord:SE.GOV.SGU.JORD.LANDFORM.25K,jord:SE.GOV.SGU.JORD.UNDERLIGGANDE.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY1.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY0.25K,jord:SE.GOV.SGU.JORD.LINJER.25K",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["tranas_anstallda_politiker"],
+      "allowedRolesTemplate": "alla_teknisk_sakerhet",
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "ovriga_kartor",
+      "title": "Terrängskuggning",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hillshade",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ovriga_kartor",
+      "title": "Topowebbkarta nedtonad – LM",
+      "source": {
+        "url": "/maps/lantmeteriet/topowebb/wms/v1",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "topowebbkartan_nedtonad",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2006",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2006",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2007",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2007",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2008",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2008",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2009",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2009",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2010",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2010",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2011",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2011",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2012",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2012",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2013",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2013",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2014",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2014",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2015",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2015",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2016",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2016",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2017",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2017",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2018",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2018",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2019",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2019",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2020",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2020",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_arsvisa",
+      "title": "2021",
+      "source": {
+        "url": "/maps/lantmeteriet/ortofoto-ar/wms/v1.2",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ortofoto_farg_2021",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Flygfoto"
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "karta_busshallplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_busshallplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG:3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        580000,
+        7600000
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "allowedRolesTemplates": {
+    "alla_teknisk_sakerhet": [
+      "aneby_samhalle_teknik",
+      "boxholm_samhalle_teknik",
+      "boxholm_raddning_sakerhet",
+      "kinda_samhalle_teknik",
+      "kinda_raddning_sakerhet",
+      "odeshog_samhalle_teknik",
+      "odeshog_raddning_sakerhet",
+      "tranas_samhalle_teknik",
+      "tranas_raddning_sakerhet",
+      "ydre_samhalle_teknik",
+      "ydre_raddning_sakerhet"
+    ],
+    "aneby_specifik": [
+      "aneby_samhalle_teknik",
+      "aneby_raddning_sakerhet"
+    ],
+    "boxholm_specifik": [
+      "boxholm_samhalle_teknik",
+      "boxholm_raddning_sakerhet"
+    ],
+    "kinda_specifik": [
+      "kinda_samhalle_teknik",
+      "kinda_raddning_sakerhet"
+    ],
+    "tranas_specifik": [
+      "tranas_samhalle_teknik",
+      "tranas_raddning_sakerhet"
+    ],
+    "odeshog_specifik": [
+      "odeshog_samhalle_teknik",
+      "odeshog_raddning_sakerhet"
+    ],
+    "ydre_specifik": [
+      "ydre_samhalle_teknik",
+      "ydre_raddning_sakerhet"
+    ],
+    "vokby": [
+      "aneby_samhalle_teknik",
+      "boxholm_samhalle_teknik",
+      "boxholm_raddning_sakerhet",
+      "kinda_samhalle_teknik",
+      "kinda_raddning_sakerhet",
+      "odeshog_samhalle_teknik",
+      "odeshog_raddning_sakerhet",
+      "ydre_samhalle_teknik",
+      "ydre_raddning_sakerhet"
+    ],
+    "aneby_tranas": [
+      "aneby_grund",
+      "aneby_samhalle_teknik",
+      "aneby_raddning_sakerhet",
+      "aneby_anstallda_politiker",
+      "tranas_grund",
+      "tranas_samhalle_teknik",
+      "tranas_raddning_sakerhet",
+      "tranas_anstallda_politiker"
+    ],
+    "aneby_tranas_exklusive_grund": [
+      "aneby_samhalle_teknik",
+      "aneby_anstallda_politiker",
+      "tranas_samhalle_teknik",
+      "tranas_raddning_sakerhet",
+      "tranas_anstallda_politiker"
+    ],
+    "aneby_kinda_tranas_ydre_teknisk_sakerhet": [
+      "aneby_samhalle_teknik",
+      "kinda_raddning_sakerhet",
+      "tranas_samhalle_teknik",
+      "tranas_raddning_sakerhet",
+      "ydre_samhalle_teknik",
+      "ydre_raddning_sakerhet"
+    ],
+    "primarkarteomrade": [
+      "aneby_samhalle_teknik",
+      "boxholm_samhalle_teknik",
+      "kinda_samhalle_teknik",
+      "tranas_samhalle_teknik",
+      "ydre_samhalle_teknik"
+    ]
+  },
+  "infoTemplates": {
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3009",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+
+

@@ -1,0 +1,43 @@
+<wmsLayer>
+  <id>WMSLayerInfoImpl-60a6ef78:174f8b84431:-6c28</id>
+  <name>RiksintresseFriluftsliv_NV</name>
+  <nativeName>metria:RiksintresseFriluftsliv_NV</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-60a6ef78:174f8b84431:-6c2a</id>
+  </namespace>
+  <title>RiksintresseFriluftsliv (NV)</title>
+  <description></description>
+  <keywords>
+    <string>RIKSINTER_FRILUFTSLIV</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>9.111091005355203</minx>
+    <maxx>25.485772377955616</maxx>
+    <miny>55.19517084428533</miny>
+    <maxy>69.1492324705248</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>9.111091005355203</minx>
+    <maxx>25.485772377955616</maxx>
+    <miny>55.19517084428533</miny>
+    <maxy>69.1492324705248</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="wmsStore">
+    <id>WMSStoreInfoImpl-60a6ef78:174f8b84431:-6c29</id>
+  </store>
+</wmsLayer>

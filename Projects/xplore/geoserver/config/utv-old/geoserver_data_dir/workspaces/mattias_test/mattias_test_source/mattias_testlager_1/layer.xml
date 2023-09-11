@@ -1,0 +1,16 @@
+<layer>
+  <name>mattias_testlager_1</name>
+  <id>LayerInfoImpl-1413c6cc:174bae420fe:-7ff0</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl-1413c6cc:174bae420fe:-7ff1</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-09-23 13:06:43.717 UTC</dateCreated>
+</layer>

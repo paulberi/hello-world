@@ -1,0 +1,118 @@
+mat-sidenav-content {
+  min-height: 100vh;
+}
+
+mat-nav-list {
+  width: 14rem;
+}
+
+.mat-list-item span {
+  margin-left: 1rem;
+}
+
+.mat-subheader {
+  margin-bottom: 0 !important;
+}
+
+.main-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "current-page" "footer";
+}
+
+.current-page {
+  grid-area: current-page;
+  padding: 1rem;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+}
+
+.footer .logo {
+  width: 100px;
+  justify-self: right;
+}
+
+.header {
+  padding: 1rem;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-template-rows: 1fr auto;
+}
+.header .logo {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.header > .logo {
+  //display: inline;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  //grid-gap: 1.5rem;
+  align-items: center;
+}
+
+.header .logo > h1 {
+  margin-bottom: 0 !important;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 1fr auto;
+    //height: 4rem;
+    //padding: 1rem 2rem 2rem 2rem;
+
+    background-image: url("../assets/METR_Grafiskt_element.svg"), url("../assets/smal_header.jpg"), linear-gradient(rgba(4,21,3) 100%, rgba(4,21,3) 100%);
+    background-repeat: no-repeat;
+    background-size: contain, auto 100%;
+    background-position: right, center left;
+  }
+
+  .start-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    height: 20rem;
+    padding: 1rem 2rem 2rem 2rem;
+
+    background-image: url("../assets/METR_Grafiskt_element.svg"), url("../assets/header.jpg");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: right, center left;
+  }
+
+  .header > .logo {
+    //display: inline;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    //grid-gap: 1.5rem;
+    align-items: center;
+  }
+
+  .header .logo > h1 {
+    margin-bottom: 0 !important;
+  }
+
+  .current-page {
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+
+  .footer {
+    padding: 4rem;
+  }
+
+  .footer .logo {
+    width: 200px;
+  }
+}
+

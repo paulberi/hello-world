@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_sophamtning</name>
+  <id>LayerInfoImpl-fbdd3513:60ced24c4f2:-1f6f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-1d2b546d:05982ecb239:-9779</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

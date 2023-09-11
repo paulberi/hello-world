@@ -1,0 +1,79 @@
+{
+  "adm": {
+    "kundvy":{
+      "kund": "Hantera kunder",
+      "createKund": "Skapa kund",
+      "kundinformation": "Kundinformation",
+      "addKunder": "Lägg till nya kunder",
+      "moreOptions": "Fler alternativ",
+      "resetGeofenceRules": "Återskapa Geofence-regler",
+      "confirmDelete": "Är du säker på att du vill ta bort kunden? Detta går inte att ångra.",
+      "systeminloggningar": "Systeminloggningar",
+      "kundadmins": "Kundadministratörer"
+    },
+    "createKund": {
+      "organisationalNumber": "Organisationsnummer",
+      "email": "E-post",
+      "name": "Namn",
+      "phonenumber": "Telefon",
+      "invalidEmail": "Ange en giltig e-post",
+      "contactPerson": "Kontaktperson",
+      "nameAlreadyExists": "Det finns redan en kund med detta namn",
+      "createOneMore": "Skapa en till kund",
+      "saveAndExit": "Skapa och avsluta",
+      "saveAndContinue": "Spara och skapa nästa",
+      "youHaveAdded": "Du har lagt till:"
+    },
+    "createuser": {
+      "fornamn": "Förnamn",
+      "efternamn": "Efternamn",
+      "email": "E-post",
+      "addKundAdmin": "Lägg till kundadministratör"
+    },
+    "notifications": {
+      "kundDeleted": "Kunden togs bort",
+      "kundCreated": "Kunden har skapats",
+      "kundEdited": "Kunden har sparats",
+      "credentialsSaved": "Inloggning sparad för {{system}}",
+      "credentialsDeleted": "Inloggning inaktiverad för {{system}}",
+      "userAdded": "Användaren har skapats",
+      "abonnemangAdded": "Ett nytt abonnemang är tillagt",
+      "abonnemangDeleted": "Abonnemanget är borttaget",
+      "geoRulesReset": "Geofence-regler är återskapade för alla kunder"
+    },
+    "system": {
+      "METRIA_MAPS": "Metria Maps",
+      "FASTIGHETSOK": "FastighetSök",
+      "geoserver": "Geoserver"
+    },
+    "dialog": {
+      "resetCredentials": {
+        "title": "Inaktivera systeminloggning",
+        "message": "Vill du inaktivera inloggningen till detta system?",
+        "confirmLabel": "Inaktivera"
+      },
+      "user": {
+        "title": "Är du säker på att du vill ta bort användaren? Detta går inte att ångra."
+      }
+    },
+    "abonnemang": {
+      "productsAndServices": "Produkter & Tjänster",
+      "chooseProduct": "Välj produkt",
+      "addProduct": "Lägg till produkt",
+      "addProductsOrServices": "Lägg till produkt eller tjänst",
+      "addMoreProductsOrServices": "Lägg till produkt eller tjänst",
+      "level": "Nivå",
+      "chooseLevel": "Välj nivå"
+    },
+    "produkt": {
+      "MARKKOLL": "Markkoll",
+      "MILJOKOLL": "Miljökoll",
+      "SAMRAD": "Samråd"
+    },
+    "abonnemangTyp": {
+      "GULD": "Guld",
+      "SILVER": "Silver",
+      "STANDARD": "Standard"
+    }
+  }
+}

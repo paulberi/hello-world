@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_spontanidrottsplats</name>
+  <id>LayerInfoImpl-5bf48239:dd129fa5135:-5964</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-a9a2f4cb:5c5906f1d16:-b124</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

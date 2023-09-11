@@ -1,0 +1,25 @@
+query activeOrder {
+  activeOrder {
+    id
+    total
+    totalWithTax
+    currencyCode
+    lines {
+      id
+      unitPrice
+      unitPriceWithTax
+      customFields {
+        clientAttributes
+      }
+    }
+  }
+}
+
+mutation adjustOrderLine($orderLineId: ID!) {
+  adjustOrderLine(orderLineId: $orderLineId, quantity: 0) {
+    __typename
+    ... on OrderModificationError {
+      message
+    }
+  }
+}

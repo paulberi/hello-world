@@ -1,0 +1,1342 @@
+{
+  "app": {
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": true
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    }
+  },
+  "zoom": 0,
+  "center": [
+    496000,
+    6894000
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+    "thumbnailCoordinates": [
+    829127,
+    7292365
+  ],
+  "groups": [
+    {
+      "name": "metria_maps",
+      "title": "Metria Maps",
+      "expanded": false,
+      "filter": true,
+      "capabilities": {
+        "url": "/metria-maps/geoserver/wms"
+      }
+    },
+    {
+      "name": "flyg_sat_bilder",
+      "title": "Flyg- och satellitbilder",
+      "expanded": false
+    },
+    {
+      "name": "foreteelser",
+      "title": "Företeelser ur NVDB",
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "natur-kultur",
+      "title": "Natur och kultur",
+      "groups": [
+        {
+          "name": "skyddade-omr",
+          "title": "Skyddade områden",
+          "expanded": false
+        },
+        {
+          "name": "ovriga-omr",
+          "title": "Övriga områden",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "p-b-r",
+      "title": "Planer, bestämmelser och rättigheter",
+      "expanded": false
+    },
+    {
+      "name": "raster",
+      "title": "Rasterkartor",
+      "expanded": false
+    },
+    {
+      "name": "skoglig-info",
+      "title": "Skoglig information",
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Ortofoto färg 0,5m",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Ortofoto svart/vit 1m",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_svartvit",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Metadata ortofoto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Metadata_orto",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Satellitbilder 2018",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Saccess2018",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Satellitbilder 2019",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Saccess2019",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "flyg_sat_bilder",
+      "title": "Satellitbilder 2020",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Saccess2020",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Bärighet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Barighet_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Framkomlighet ",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Framkomlighet_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Funktionell vägklass",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Funktionsvagklass_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Tillgänglighet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Tillganglighet_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Väghinder",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghinder_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Väghållare",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghallare_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Vägnamn",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vagnamn_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "foreteelser",
+      "title": "Vägnät",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vagnat_NVDB",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Höjdgrid 50m färg",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:hojd50farg",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Höjdgrid 50m svart/vit",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:hojd50",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Biotopskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Biotopskydd_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "beteckn",
+            "label": "Beteckning"
+          },
+          {
+            "name": "biotyp",
+            "label": "BIOTYP"
+          },
+          {
+            "name": "naturtyp",
+            "label": "Naturtyp"
+          },
+          {
+            "name": "kommun",
+            "label": "Kommun"
+          },
+          {
+            "name": "lan",
+            "label": "Län"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Djur och växtskyddsområden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:DjurVaxtskydd_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Landskapsbildsskyddsområden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Landskapsbildsskydd_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Nationalparker",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Nationalpark_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturminnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturminne_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturreservat_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturvårdsavtal",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturvardsavtal_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "beteckn",
+            "label": "Beteckning"
+          },
+          {
+            "name": "naturtyp",
+            "label": "Naturtyp"
+          },
+          {
+            "name": "nvatyp",
+            "label": "NVATYP"
+          },
+          {
+            "name": "kommun",
+            "label": "Kommun"
+          },
+          {
+            "name": "lan",
+            "label": "Län"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Naturvårdsområden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturvardsomrade_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "skyddade-omraden"
+    },
+    {
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "RAÄ Fornlämningar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fornlamning_linje_FMIS,metria:Fornlamning_punkt_FMIS,metria:Fornlamning_yta_FMIS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "namn",
+            "label": "Namn"
+          },
+          {
+            "name": "lamningsnr",
+            "label": "Lämningsnummer"
+          },
+          {
+            "name": "raa_nr_old",
+            "label": "RAÄ-nummer"
+          },
+          {
+            "name": "lamningtyp",
+            "label": "Lämningstyp"
+          },
+          {
+            "name": "url",
+            "label": "Länk",
+            "template": "<a href='{{url}}' target='_blank'>{{url}}</a>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Natura 2000-områden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Natura2000_SNV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "namn",
+            "label": "Namn"
+          },
+          {
+            "name": "origin",
+            "label": "Origin"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Naturvärden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturvarden_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objnamn",
+            "label": "Objektnamn"
+          },
+          {
+            "name": "biotop1",
+            "label": "BIOTOP"
+          },
+          {
+            "name": "kommun",
+            "label": "Kommun"
+          },
+          {
+            "name": "lan",
+            "label": "Län"
+          },
+
+          {
+            "name": "url",
+            "label": "Länk",
+            "template": "<a href='{{url}}' target='_blank'>{{url}}</a>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Nyckelbiotoper",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Nyckelbiotoper_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objnamn",
+            "label": "Objektnamn"
+          },
+          {
+            "name": "biotop1",
+            "label": "BIOTOP"
+          },
+          {
+            "name": "kommun",
+            "label": "Kommun"
+          },
+          {
+            "name": "lan",
+            "label": "Län"
+          },
+          {
+            "name": "url",
+            "label": "Länk",
+            "template": "<a href='{{url}}' target='_blank'>{{url}}</a>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Ramsarområden",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Ramsar_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "name",
+            "label": "Namn"
+          },
+          {
+            "name": "ramsar_id",
+            "label": "Ramsar_ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Riksintresse för obrutet fjäll",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseObrutetFjall_LST",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Sumpskogar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Sumpskogar_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "kartid2",
+            "label": "Kart_ID"
+          },
+          {
+            "name": "url",
+            "label": "Länk",
+            "template": "<a href='{{url}}' target='_blank'>{{url}}</a>"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "ovriga-omr",
+      "title": "Ängs- och betesmarksinventeringen, TUVA",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Tuva_NV",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "area_",
+            "label": "Area"
+          },
+          {
+            "name": "faltid",
+            "label": "Fält-ID"
+          },
+          {
+            "name": "markslag",
+            "label": "Markslag"
+          }
+        ]
+      }
+    },
+    {
+      "import": "metria:Artdata_slu@mm-export",
+      "group": "natur-kultur"
+    },
+    {
+      "type": "tile",
+      "group": "p-b-r",
+      "title": "Planer och bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "plnamn",
+            "label": "Namn"
+          },
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "p-b-r",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skoglig-info",
+      "title": "Avverkningsanmälningar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Avverkningsanmalningar_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "avverktyp",
+            "label": "Avverkningstyp"
+          },
+          {
+            "name": "beteckn",
+            "label": "Beteckning"
+          },
+          {
+            "name": "arendestat",
+            "label": "Ärendestatus"
+          },
+          {
+            "name": "kommun",
+            "label": "Kommun"
+          },
+          {
+            "name": "lan",
+            "label": "Län"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skoglig-info",
+      "title": "Fjällnära skog",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fjallnaraskog_linje_SKS,metria:Fjallnaraskog_yta_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "skoglig-info",
+      "title": "Svårföryngrad skog",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Svarforyngradskog_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "skoglig-info",
+      "title": "ÖSI kartor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Osi_karta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "skoglig-info",
+      "title": "ÖSI punkter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Osi_punkt_AC_SKS,metria:Osi_punkt_BD_SKS,metria:Osi_punkt_YZ_SKS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Metria Fastighetskarta (skarp)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "metria:MetriaFastighetSkarp",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "title": "Metria Bakgrund (nedtonad)",
+      "visible": true
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background",
+      "title": "Metria InfoVisaren"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Metria Maps Tätort plus",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaTatortPlus",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Metria Maps Fastighet plus",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetPlus",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Ortofoto",
+      "selectionStyleDelomraden": "selectedDelomradeDark@common"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Terrängkartan",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Terrangkartan_raster",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Vägkartan",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vagkartan_raster",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    }
+  ],
+  "styles": {
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "#FF0000"
+            },
+            "stroke": {
+              "color": "#FF0000",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "#FF0000",
+            "width": 2
+          },
+          "fill": {
+            "color": "#FF0000"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "#FF0000"
+            },
+            "stroke": {
+              "color": "#FF0000",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "#008000"
+            },
+            "stroke": {
+              "color": "#008000",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "#008000",
+            "width": 2
+          },
+          "fill": {
+            "color": "#008000"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "#008000"
+            },
+            "stroke": {
+              "color": "#008000",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "#0000FF"
+            },
+            "stroke": {
+              "color": "#0000FF",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "#0000FF",
+            "width": 2
+          },
+          "fill": {
+            "color": "#0000FF"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "#0000FF"
+            },
+            "stroke": {
+              "color": "#0000FF",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "skyddade-omraden": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Namn"
+        },
+        {
+          "name": "skyddstyp",
+          "label": "Skyddstyp"
+        },
+        {
+          "name": "area_ha",
+          "label": "Area",
+          "template": "{{area_ha}} ha"
+        },
+        {
+          "name": "kommun",
+          "label": "Kommun"
+        },
+        {
+          "name": "lan",
+          "label": "Län"
+        }
+      ]
+    },
+    "default": {
+      "properties": [
+        {
+          "name": "NAMN",
+          "label": "Namn"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

@@ -1,0 +1,22 @@
+<h3>{{ "mm.createOrder.productInformation" | transloco }}</h3>
+<div [formGroup]="productForm" class="product-form">
+  <span>{{ "mm.createOrder.product" | transloco }}</span>
+  <mat-form-field>
+    <mat-label>{{ "mm.createOrder.chooseProduct" | transloco }}</mat-label>
+    <mat-select formControlName="productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{ product.productName }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="productVariants?.length">
+    <span>{{ "mm.createOrder.productVariant" | transloco }}</span>
+    <mat-form-field>
+      <mat-label>{{ "mm.createOrder.chooseProductVariant" | transloco }}</mat-label>
+      <mat-select formControlName="productVariantId">
+        <mat-option *ngFor="let productVariant of productVariants" [value]="productVariant.id">{{
+          removeProductNameFromProductVariant(productVariant.name, productVariant.product.name) }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

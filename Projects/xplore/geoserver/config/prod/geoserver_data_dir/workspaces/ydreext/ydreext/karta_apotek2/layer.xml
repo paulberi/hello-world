@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_apotek2</name>
+  <id>LayerInfoImpl-5492d999:177624ac73f:-1942</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:177624ac73f:-1943</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-02-02 16:26:13.900 UTC</dateCreated>
+</layer>

@@ -1,0 +1,41 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-5492d999:17647939fe9:-26f2</id>
+  <name>kladdlager</name>
+  <nativeName>kladdlager</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-5492d999:17647939fe9:-26f4</id>
+  </namespace>
+  <title>kladdlager</title>
+  <keywords>
+    <string>features</string>
+    <string>kladdlager</string>
+  </keywords>
+  <srs>EPSG:3008</srs>
+  <nativeBoundingBox>
+    <minx>62307.12504977599</minx>
+    <maxx>231974.12508902815</maxx>
+    <miny>6128402.545563756</miny>
+    <maxy>6908900.111086045</maxy>
+    <crs class="projected">EPSG:3008</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>11.810946472753546</minx>
+    <maxx>15.078956088542721</maxx>
+    <miny>55.27221293945286</miny>
+    <maxy>62.28684231038078</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-5492d999:17647939fe9:-26f3</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

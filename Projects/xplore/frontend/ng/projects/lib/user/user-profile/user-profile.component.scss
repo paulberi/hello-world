@@ -1,0 +1,50 @@
+img{
+    width: 100%;
+    margin-top: -10%;
+}
+.imgcontainer{
+    overflow: hidden;
+    width: 100%;
+    height: 30vh;
+    background-position-y: 25%;
+    background-size: 100%;
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+.save-button{
+    margin: 15px 0;
+}
+.mat-form-field{
+    width: 100%;
+}
+form{
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.form-container{
+    flex-direction: column;
+    margin-top: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 2rem 0;
+    }
+}
+.notis-installningar{
+    margin-top: 0.5rem;
+    
+    @media screen and (min-width: 768px) {
+        margin-top: 2.5rem;
+    }
+}
+.button-row{
+    justify-content: flex-end;
+    width: 95%;
+}
+.form-status{
+    align-self: center;
+    padding-right: 1rem;
+}

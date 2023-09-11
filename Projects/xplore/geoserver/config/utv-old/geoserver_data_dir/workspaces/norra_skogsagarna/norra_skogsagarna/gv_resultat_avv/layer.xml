@@ -1,0 +1,15 @@
+<layer>
+  <name>gv_resultat_avv</name>
+  <id>LayerInfoImpl--7653cc8b:16eabcc3467:5fb1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7653cc8b:16eabcc3467:5fb0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

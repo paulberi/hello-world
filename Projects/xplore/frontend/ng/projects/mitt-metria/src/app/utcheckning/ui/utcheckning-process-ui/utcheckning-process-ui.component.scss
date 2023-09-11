@@ -1,0 +1,110 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+mat-divider {
+  width: 100%;
+}
+
+.checkout-content {
+  padding: 8px 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.delivery-information {
+  margin-bottom: 32px;
+  word-wrap: break-word;
+}
+
+.delivery-information,
+.payment-option {
+  border: 0.5px solid var(--primary);
+  border-radius: 4px;
+  padding: 16px;
+
+  p {
+    margin: 8px 0;
+  }
+}
+
+.payment-option:has(.mat-radio-checked) {
+  border: none;
+  outline: 2px solid var(--accent);
+}
+
+.terms-checkbox {
+  margin: 16px 0 32px 0;
+}
+
+.mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+button {
+  margin: 0 48px;
+  height: 48px;
+  font-size: 20px;
+}
+
+.price-wrapper {
+  text-align: center;
+  margin: 20px 0;
+
+  .total {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .vat {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+}
+
+.mat-checkbox {
+  text-align: center;
+}
+
+.invoice {
+  padding: 16px 0 0 28px;
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40%;
+}
+
+@media screen and #{$xp-breakpoints-large-mobile-max} {
+  .checkout-content {
+    padding: 8px 0;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}

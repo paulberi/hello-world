@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_skolskjuts</name>
+  <id>LayerInfoImpl-363cc6e4:17821818b8e:aa9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:17821818b8e:aa8</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-12 11:24:14.876 UTC</dateCreated>
+</layer>

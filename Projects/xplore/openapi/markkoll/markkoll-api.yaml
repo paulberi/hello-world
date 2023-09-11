@@ -1,0 +1,2398 @@
+openapi: 3.0.2
+info:
+  title: Metria Markkoll API
+  description: API Markkoll
+  version: V1
+servers:
+  - url: http://localhost:9011/api
+  - url: https://markkoll-utv.metria.se/api
+  - url: https://markkoll-test.metria.se/api
+  - url: https://markkoll-acc.metria.se/api
+  - url: https://markkoll.metria.se/api
+paths:
+
+  # Projekt
+  '/projekt/fiber/{projektId}':
+    get:
+      tags:
+        - projekt
+      summary: Hämta fiberprojekt.
+      description: Hämta fiberprojekt med ett ID.
+      operationId: "getFiberProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Information om fiberprojekt.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/FiberProjekt"
+    put:
+      tags:
+        - projekt
+      summary: Uppdatera ett fiberprojekt.
+      description: Uppdatera ett fiberprojekt.
+      operationId: "updateFiberProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Fiberprojektet som ska uppdateras.
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: "./models/projekt.yaml#/components/schemas/FiberProjekt"
+      responses:
+        201:
+          description: Det uppdaterade fiberprojektet.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/FiberProjekt"
+
+  '/kund/{kundId}/projekt/fiber':
+    post:
+      tags:
+        - projekt
+      summary: Skapa ett nytt fiberprojekt.
+      description: Skapa ett nytt fiberprojekt.
+      operationId: "createFiberProjekt"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      requestBody:
+        description: Det nya fiberprojektet.
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                fiberProjekt:
+                  $ref: "./models/projekt.yaml#/components/schemas/FiberProjekt"
+                file:
+                  description: Projektgeometri
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Nytt fiberprojekt.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/FiberProjekt"
+
+  '/projekt/elnat/{projektId}':
+    get:
+      tags:
+        - projekt
+      summary: Hämta elnätsprojekt.
+      description: Hämta elnätsprojekt med ett ID.
+      operationId: "getElnatProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Information om elnätsprojekt.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/ElnatProjekt"
+    put:
+      tags:
+        - projekt
+      summary: Uppdatera ett elnätsprojekt.
+      description: Uppdatera ett elnätsprojekt.
+      operationId: "updateElnatProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Elnätsprojektet som ska uppdateras.
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: "./models/projekt.yaml#/components/schemas/ElnatProjekt"
+      responses:
+        201:
+          description: Det uppdaterade elnätsprojektet.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/ElnatProjekt"
+
+  '/kund/{kundId}/projekt/elnat':
+    post:
+      tags:
+        - projekt
+      summary: Skapa ett nytt elnätsprojekt.
+      description: Skapa ett nytt elnätsprojekt.
+      operationId: "createElnatProjekt"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      requestBody:
+        description: Det nya elnätprojektet.
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                elnatProjekt:
+                  $ref: "./models/projekt.yaml#/components/schemas/ElnatProjekt"
+                file:
+                  description: Projektgeometri
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Nytt elnätsprojekt.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/ElnatProjekt"
+
+  '/projekt/page':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en sida med befintliga projekt
+      description: Hämta en sida med befintliga projekt
+      operationId: "projektPage"
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: size
+          schema:
+            type: integer
+        - in: query
+          name: sort-property
+          schema:
+            type: string
+            default: namn
+        - in: query
+          name: sort-direction
+          schema:
+            type: string
+        - in: query
+          name: search-filter
+          schema:
+            type: string
+      responses:
+        200:
+          description: Sida med projekt
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/ProjektPage"
+        404:
+          description: Kunde inte hämta projekten
+
+  '/projekt/{projektId}':
+    get:
+      tags:
+        - projekt
+      summary: Hämta generell projektinformation.
+      description: Hämta generell projektinformation med ett ID.
+      operationId: "getProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Generell information om projektet.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/ProjektInfo"
+    delete:
+      tags:
+        - projekt
+      summary: Ta bort ett projekt
+      description: Ta bort ett projekt
+      operationId: "deleteProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        204:
+          description: Projektet togs bort
+  '/projekt/{projektId}/intrang':
+    get:
+      tags:
+        - projekt
+      summary: Hämta projektets intrång.
+      description: Hämta projektets intrång med ett ID.
+      operationId: "getProjektintrang"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Projektets intrång.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './models/projekt.yaml#/components/schemas/ProjektIntrang'
+
+  '/projekt/{projektId}/intrang/buffert':
+    get:
+      tags:
+        - projekt
+      summary: Hämta projektets intrång.
+      description: Hämta projektets intrång med ett ID.
+      operationId: "getProjektintrangWithBuffert"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Projektets intrång.
+          content:
+            application/json:
+              schema:
+                type: string
+  '/projekt/{projektId}/meta':
+    get:
+      tags:
+        - projekt
+      summary: Hämta metadata för projekt
+      operationId: "getProjektMeta"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Metadata för projekt
+          content:
+            text/plain:
+              schema:
+                type: string
+
+  '/projekt/{projektId}/fastighet':
+    post:
+      tags:
+        - projekt
+      summary: Lägg till en fastighet till ett projekt
+      operationId: "addFastighet"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: fastighetens ID
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+              format: UUID
+      responses:
+        201:
+          description: Fastigheten blev tillagd till projektet.
+        400:
+          description: En fastighet med det ID:t existerar inte.
+        409:
+          description: Fastigheten existerar redan i projektet.
+    get:
+      tags:
+        - projekt
+      summary: Hämta ingående fastigheter i ett projekt
+      operationId: "projektFastigheter"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+      responses:
+        200:
+          description: Lista med fastigheter för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Fastighet"
+
+  '/projekt/{projektId}/fastigheter':
+    post:
+      tags:
+        - projekt
+      summary: Lägg till en lista med fastigheter till ett projekt
+      operationId: "addFastigheter"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Lista med fastighetId
+        required: true
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+                format: UUID
+      responses:
+        201:
+          description: Fastigheterna blev tillagda till projektet.
+        400:
+          description: En fastighet med det ID:t existerar inte.
+        409:
+          description: En fastighet existerar redan i projektet.
+    put:
+      tags:
+        - projekt
+      summary: Exkludera en lista med fastigheter från ett projekt
+      operationId: "excludeFastigheter"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Lista med fastighetId
+        required: true
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+                format: UUID
+      responses:
+        200:
+          description: Fastigheterna blev borttagna från projektet.
+        400:
+          description: En fastighet med det ID:t existerar inte i projektet.
+
+  '/projekt/{projektId}/fastigheter/avtal':
+    get:
+      tags:
+        - avtal
+      summary: Hämta ingående editElnatVp i ett projekt med UUID-lista
+      operationId: "getEditElnatVpByUUID"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+      responses:
+        200:
+          description: Lista med editElnatVp för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/EditElnatVp"
+    post:
+      tags:
+        - avtal
+      summary: Uppdatera avtal- och VpMetadata i bulk.
+      operationId: updateElnatVpAndAvtalMetadata
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Uppdaterade vpn
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/EditElnatVp"
+      responses:
+        200: 
+          description: Värderingsprotokollen uppdaterades
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/EditElnatVp"
+        400: 
+          description: Det gick inte att uppdatera värderingsprotkollen
+  '/projekt/{projektId}/beredare':
+    get:
+      tags:
+        - projekt
+      summary: Hämta beredaruppgifter
+      operationId: "getBeredare"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Beredaruppgifter
+          content:
+            application/json:
+              schema:
+                  $ref: './models/projekt.yaml#/components/schemas/Beredare'
+    put:
+      tags:
+        - projekt
+      summary: Redigera information om beredare
+      operationId: "editBeredare"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Uppgifter om beredare
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './models/projekt.yaml#/components/schemas/Beredare'
+      responses:
+        200:
+          description: Beredaruppgifterna uppdaterades.
+
+  '/projekt/{projektId}/avtal/installningar':
+    get:
+      tags:
+        - projekt
+      summary: "Hämta avtalsinställningar"
+      operationId: "getAvtalsinstallningar"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Avtalsinställningar
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/Avtalsinstallningar"
+    put:
+      tags:
+        - projekt
+      summary: "Uppdatera avtalsinställningar"
+      operationId: "updateAvtalsinstallningar"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Avtalsinställningar
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/projekt.yaml#/components/schemas/Avtalsinstallningar"
+      responses:
+        200:
+          description: Avtalsinställningarna uppdaterades
+
+  '/projekt/{projektId}/avtal/count':
+    get:
+      tags:
+        - avtal
+      summary: Hämta en uppräkning av antalet avtal i ett projekt
+      description: Hämta en uppräkning av antalet avtal i ett projekt, möjligen från en filtrering
+      operationId: "avtalCount"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+      responses:
+        200:
+          description: Antalet avtal i projektet
+          content:
+            application/json:
+              schema:
+                type: integer
+
+  '/projekt/{projektId}/fastighet/page':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en sida med ingående fastigheter i ett projekt
+      description: Hämta en sida med ingående fastigheter i ett projekt
+      operationId: "projektFastigheterPage"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: page
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: size
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+          required: true
+      responses:
+        200:
+          description: Sida med fastigheter för ett projekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FastighetPage"
+        404:
+          description: Kunde inte hämta projekten
+
+  '/projekt/{projektId}/samf/page':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en sida med ingående samfälligheter i ett projekt
+      description: Hämta en sida med ingående samfälligheter i ett projekt
+      operationId: "projektSamfalligheterPage"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: page
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: size
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+          required: true
+      responses:
+        200:
+          description: Sida med samfälligheter för ett projekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FastighetPage"
+        404:
+          description: Kunde inte hämta projekten
+
+  '/projekt/{projektId}/samf/{samfId}/merinfo':
+    post:
+      tags:
+        - samfallighet
+      summary: Hämta ytterligare information om en samfällighetsförening
+      operationId: "importMoreSamfInfo"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - $ref: '#/components/parameters/samfId'
+      responses:
+        200:
+          description: Informationen hämtades
+  '/projekt/{projektId}/currentVersion':
+    get:
+      tags:
+        - projekt
+      summary: Hämta den aktuella versionen för ett projekt
+      operationId: "projektCurrentVersion"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Projektets aktiva version
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/Version"
+
+  '/projekt/{projektId}/versions':
+    get:
+      tags:
+        - projekt
+      summary: Hämta alla versioner för ett projekt
+      operationId: "projektVersions"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Lista med versioner för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/projekt.yaml#/components/schemas/Version"
+
+  '/projekt/{projektId}/haglof':
+    post:
+      tags:
+        - haglof
+      summary: Haglöf import
+      operationId: "HaglofImport"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        200:
+          description: Varningar från importen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HaglofImportVarningar"
+    get:
+      tags:
+        - projekt
+      summary: Hämta Excelfil för värdering av skogsmark för skogsfastigheter i ett projekt
+      operationId: "getVarderingSkogsmarkProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+      responses:
+        200:
+          description: Excelfil med export från HMS
+          content:
+            application/xlsx:
+              schema:
+                type: string
+                format: binary
+  '/projekt/{projektId}/logg/page':
+    get:
+      tags:
+        - projekt
+      summary: Hämta projektloggssida
+      operationId: "getProjektLoggPage"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: size
+          schema:
+            type: integer
+        - in: query
+          name: filter
+          schema:
+            type: array
+            items:
+              $ref: "./models/logg.yaml#/components/schemas/ProjektLoggFilter"
+        - in: query
+          name: sort-direction
+          schema:
+            $ref: "#/components/schemas/SortDirection"
+      responses:
+        200:
+          description: Projektloggen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProjektLoggPage"                
+
+  '/projekt/{projektId}/avtal/{avtalsjobbId}':
+    get:
+      tags:
+        - avtal
+      summary: Hämta avtal för ingående fastigheter i ett projekt
+      description: Hämta en zip-fil med avtal för ingående fastigheter i ett projekt
+      operationId: "getAvtalForProjekt"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - in: path
+          name: avtalsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Avtal i zip-format
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        204:
+          description: Inget avtal finns tillgängligt
+    delete:
+      tags:
+        - avtal
+      summary: Avbryt ett pågående avtalsjobb
+      operationId: "cancelAvtalsjobb"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - in: path
+          name: avtalsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Avtalsjobbet avbröts
+  '/projekt/{projektId}/users':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en lista med användare som tillhör ett projekt
+      description: Hämta en lista med användare som tillhör ett projekt
+      operationId: "getProjektUsers"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+      responses:
+        200:
+          description: Lista med användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarkkollUser"
+  '/projekt/{projektId}/users/read':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en lista med alla användare som har möjligheten att se ett visst projekt
+      operationId: "getProjektUsersRead"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+      responses:
+        200:
+          description: Lista med användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarkkollUser"
+  '/avtal/{avtalsjobbId}/progress':
+    get:
+      tags:
+        - avtal
+      summary: Hämta information om genereringsförloppet för ett avtalsjobb.
+      operationId: "avtalsjobbProgress"
+      parameters:
+        - in: path
+          name: avtalsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Förloppsindikator för avtalsjobb
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AvtalsjobbProgress"
+  '/projekt/{projektId}/avtal/{avtalId}/skogsfastighet':
+    patch:
+      tags:
+        - avtal
+      summary: Sätt om ett avtal ska vara en skogsfastighet
+      operationId: "setSkogsfastighet"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - $ref: './models/avtal.yaml#/components/parameters/avtalId'
+        - in: query
+          name: skogsfastighet
+          required: true
+          schema:
+            type: boolean
+      responses:
+        200:
+          description: Ny status för skogsfastighet satt
+    get:
+      tags:
+        - avtal
+      summary: Hämta Excelfil för värdering av skogsmark för ett avtal
+      operationId: "getVarderingSkogsmarkAvtal"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - $ref: './models/avtal.yaml#/components/parameters/avtalId'
+      responses:
+        200:
+          description: Excelfil med export från HMS
+          content:
+            application/xlsx:
+              schema:
+                type: string
+                format: binary
+  '/avtal/{avtalId}/tillvaratagande':
+    patch:
+      tags:
+        - avtal
+      summary: Sätt valt tillvaratagande på avtalet
+      operationId: "setTillvaratagandeTyp"
+      parameters:
+        - $ref: './models/avtal.yaml#/components/parameters/avtalId'
+        - in: query
+          name: tillvaragandeTyp
+          required: true
+          schema:
+            $ref: "#/components/schemas/TillvaratagandeTyp"
+      responses:
+        200:
+          description: Ny status för skogsfastighet satt
+  '/avtal/{avtalId}/avtalMetadata':
+    patch:
+      tags:
+        - avtal
+      summary: Uppdatera metadata för avtal
+      operationId: "setAvtalMetadata"
+      parameters:
+        - $ref: './models/avtal.yaml#/components/parameters/avtalId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: './models/avtal.yaml#/components/schemas/AvtalMetadata'
+      responses:
+        200:
+          description: Ny status för skogsfastighet satt
+          content:
+            application/json:
+              schema:
+                $ref: './models/avtal.yaml#/components/schemas/AvtalMetadata'
+  '/infobrev/{infobrevsjobbId}':
+    get:
+      tags:
+        - infobrev
+      summary: Hämta infobrev för ingående fastigheter i ett projekt
+      description: Hämta en zip-fil med infobrev för ingående fastigheter i ett projekt
+      operationId: "getInfobrevForProjekt"
+      parameters:
+        - in: path
+          name: infobrevsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Infobrev i zip-format
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        204:
+          description: Inget infobrev finns tillgängligt
+    delete:
+      tags:
+        - infobrev
+      summary: Avbryt ett pågående infobrevsjobb
+      operationId: "cancelInfobrevsjobb"
+      parameters:
+        - in: path
+          name: infobrevsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Infobrevsjobbet avbröts
+  '/infobrev/{infobrevsjobbId}/progress':
+    get:
+      tags:
+        - infobrev
+      summary: Hämta information om genereringsförloppet för ett infobrevsjobb.
+      operationId: "infobrevsjobbProgress"
+      parameters:
+        - in: path
+          name: infobrevsjobbId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Förloppsindikator för infobrevsjobb
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InfobrevsjobbProgress"
+  '/projekt/{projektId}/avtalsjobb':
+    post:
+      tags:
+        - projekt
+      summary: Skapa ett nytt avtalsjobb.
+      description: Skapa ett nytt avtalsjobb.
+      operationId: "createAvtalsjobb"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FilterAndTemplate"
+      responses:
+        202:
+          description: UUID till det skapade avtalsjobbet.
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/projekt/{projektId}/infobrevsjobb':
+    post:
+      tags:
+        - projekt
+      summary: Skapa ett nytt infobrevsjobb.
+      description: Skapa ett nytt infobrevsjobb.
+      operationId: "createInfobrevsjobb"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FilterAndTemplate"
+      responses:
+        202:
+          description: UUID till det skapade infobrevsjobbet.
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/projekt/{projektId}/forteckning':
+    post:
+      tags:
+        - projekt
+      summary: Skapa en förteckning för ett projekt
+      operationId: "generateForteckning"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FilterAndTemplate"
+      responses:
+        200:
+          description: Förteckningen
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+
+  '/projekt/{projektId}/fastighet/{fastighetsId}/avtal':
+    get:
+      tags:
+        - avtal
+      summary: Hämta en rapportsida i PDF-format
+      description: Hämta en rapportsida i PDF-format
+      operationId: "getAvtal"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID för fastigheten
+      responses:
+        200:
+          description: Rapportsida i PDF-format
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+  '/projekt/{projektId}/fastighet/{fastighetId}/avtalId':
+    get:
+      tags:
+        - projekt
+      summary: Hämta avtals-ID som hör till en fastighet i ett projekt
+      operationId: "getAvtalId"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - $ref: './models/projekt.yaml#/components/parameters/fastighetId'
+      responses:
+        200:
+          description: Avtals-ID
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/projekt/{projektId}/fastighet/{fastighetsId}/kvittera':
+    put:
+      tags:
+        - projekt
+      summary: Kvittera att förändring skett på fastigheten och nollställ geometristatusen
+      operationId: "resetGeometryStatus"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID för fastigheten
+      responses:
+        200:
+          description: Geometristatus är nollställd
+
+  '/projekt/{projektId}/fastighet/{fastighetsId}/remove':
+    put:
+      tags:
+        - projekt
+      summary: Markera en fastighets geometristatus som borttagen
+      operationId: "removeFastighet"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: ID för fastigheten
+      responses:
+        200:
+          description: Fastighetens geometristatus satt som borttagen
+
+  '/projekt/{projektId}/version/intrang':
+    post:
+      tags:
+        - projekt
+      summary: Skapa en ny projektversion från en uppsättning intrång
+      operationId: "updateVersionIntrang"
+      requestBody:
+        description: Indata för ny version
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: './models/projekt.yaml#/components/schemas/ProjektIntrang'
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        201:
+          description: Projektet har uppdaterats med ny version
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/Version"
+
+  
+  '/projekt/{projektId}/version':
+    post:
+      tags:
+        - projekt
+      summary: Ladda upp indata för att skapa en ny version av ett projekt.
+      operationId: "updateVersion"
+      requestBody:
+        description: Indata för ny version
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: indataTyp
+          schema:
+            $ref: "./models/projekt.yaml#/components/schemas/IndataTyp"
+          required: true
+          description: Vilken typ av fil det är
+        - in: query
+          name: buffert
+          schema:
+            type: number
+            format: double
+          required: true
+          description: Vilken buffert man valt
+      responses:
+        201:
+          description: Projektets har uppdaterats med en ny version.
+          content:
+            application/json:
+              schema:
+                $ref: "./models/projekt.yaml#/components/schemas/Version"
+
+  '/projekt/{projektId}/version/{versionId}':
+    put:
+      tags:
+        - projekt
+      summary: Återställ ett projekt till en tidigare version.
+      operationId: "restoreVersion"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: versionId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: UUID för versionen
+      responses:
+        200:
+          description: Projektets version har återställts.
+    delete:
+      tags:
+        - projekt
+      summary: Radera en projektversion
+      operationId: "deleteVersion"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: versionId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: UUID för versionen
+      responses:
+        200:
+          description: Projektets version har blivit raderad.
+
+  '/projekt/{projektId}/fastighet/status':
+    put:
+      tags:
+        - projekt
+      summary: Ändra avtalsstatus för alla markägare för en lista med fastigheter.
+      description: Ändra avtalsstatus för alla markägare för en lista med fastigheter.
+      operationId: "setFastighetsStatusForSelection"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: query
+          name: filter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsfilter"
+        - in: query
+          name: status
+          required: true
+          schema:
+            $ref: "#/components/schemas/Avtalsstatus"
+      responses:
+        200:
+          description: Antalet fastigheter med ändrad status.
+          content:
+            application/json:
+              schema:
+                type: integer
+
+  '/projekt/{projektId}/fastighet/delomraden':
+    get:
+      tags:
+        - projekt
+      summary: Hämta alla delområden för ett projekt
+      description: Hämta alla delområden för ett projekt
+      operationId: "getDelomradenForProjekt"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Projektets delområden
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/FastighetDelomradeInfo"
+
+  '/projekt/{projektId}/fastighet/{fastighetId}/status':
+    get:
+      tags:
+        - projekt
+      summary: Hämta nuvarande avtalsstatus för en fastighet
+      description: Hämta nuvarande avtalsstatus för en fastighet
+      operationId: "getFastighetStatus"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Fastighetens ID
+      responses:
+        200:
+          description: Avtalsstatusen för fastigheten
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Avtalsstatus"
+    put:
+      tags:
+        - projekt
+      summary: Ändra avtalsstatus för alla markägare för en fastighet.
+      description: Ändra avtalsstatus för alla markägare för en fastighet.
+      operationId: "setFastighetStatus"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Fastighetens ID
+        - in: query
+          name: avtalsstatus
+          required: true
+          schema:
+            $ref: "#/components/schemas/Avtalsstatus"
+      responses:
+        200:
+          description: Avtalsstatusen för fastighetens markägare ändrades.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Avtalsstatus"
+
+  '/projekt/{projektId}/fastighet/{fastighetId}':
+    get:
+      tags:
+        - projekt
+      summary: Hämta en fastighet för ett projekt
+      description: Hämta en fastighet för ett projekt
+      operationId: "getFastighet"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Fastighetens ID
+      responses:
+        200:
+          description: En fastighet
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighet"
+
+  '/fastighet/{fastighetId}/delomraden':
+    get:
+      tags:
+        - fastighet
+      summary: Hämta alla delområden för en fastighet från söktjänsten
+      description: Hämta alla delområden för en fastighet från söktjänsten
+      operationId: "fetchDelomradenForFastighet"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/fastighetId'
+      responses:
+        200:
+          description: Fastighetens delområden
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/FastighetDelomradeInfo"
+
+  '/fastighet/{id}/projekt/{projektId}/info':
+    put:
+      tags:
+        - fastighet
+      summary: Ändra ersättning och anteckning för en fastighet.
+      description: Ändra enbart ersättning och anteckning för en fastighet i ett projekt.
+      operationId: "setFastighetProjektInfo"
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: UUID för fastigheten
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Uppdaterat projekt
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FastighetsProjektInfo"
+      responses:
+        200:
+          description: Ersättningen för fastigheten ändrades.
+          content:
+            application/json:
+              schema:
+                type: integer
+
+  '/fastighet/{id}/{projektId}/info':
+    get:
+      tags:
+        - fastighet
+      summary: Hämta fastighetsinformation för en fastighet.
+      description: Hämta fastighetsinformation för en fastighet med ett UUID.
+      operationId: "getFastighetsinfo"
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: UUID för fastigheten
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Fastighetsägarlista
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fastighetsinfo"
+
+  '/projekt/{projektId}/fastighet/{fastighetsId}/agare':
+    post:
+      tags:
+        - projekt
+      summary: Lägga till en markägare
+      description: Lägga till en markägare
+      operationId: "addAgare"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+        - in: path
+          name: fastighetsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Fastighetens ID
+      requestBody:
+        description: Den nya markägaren
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MarkagareInfo"
+      responses:
+        200:
+          description: Markägaren lades till
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Markagare"
+
+  '/agare/{agareId}':
+    put:
+      tags:
+        - agare
+      summary: Uppdatera en markägare.
+      description: Uppdatera en markägare.
+      operationId: "updateAgare"
+      parameters:
+        - in: path
+          name: agareId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Ägarens ID
+      requestBody:
+        description: Den uppdaterande markägaren.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Markagare"
+      responses:
+        200:
+          description: Avtalsstatusen för markägare ändrades.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Markagare"
+    delete:
+      tags:
+        - agare
+      summary: Ta bort en markägare
+      description: Ta bort en markägare
+      operationId: "deleteAgare"
+      parameters:
+        - in: path
+          name: agareId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Ägarens ID
+      responses:
+        204:
+          description: Ägaren borttagen.
+
+  '/projekt/{projektId}/agare/import':
+    post:
+      tags:
+        - projekt
+      summary: Importera markägarlista
+      description: Importera markägarlista för en lista med fastigheter
+      operationId: "importAgare"
+      parameters:
+        - $ref: './models/projekt.yaml#/components/parameters/projektId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/projekt.yaml#/components/schemas/FastighetIds"
+      responses:
+        201:
+          description: Markägarlista har importerats med ett visst antal markägare.
+          content:
+            application/json:
+              schema:
+                type: integer
+              example: 2
+  # Ping
+  '/ping':
+    get:
+      tags:
+        - ping
+      summary: Pingtjänst för att se om det funkar.
+      description: Används för att se att det funkar.
+      operationId: "ping"
+      responses:
+        '200':
+          description: Tjänsten fungerar.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'pong!'
+
+  '/ping/auth':
+    get:
+      tags:
+        - ping
+      summary: Pingtjänst för att se om det funkar med autentisering.
+      description: Används för att se att det funkar med autentisering.
+      operationId: "pingAuth"
+      responses:
+        '200':
+          description: Tjänsten med autentisering fungerar.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'pong auth!'
+
+  # User
+  '/user/{userId}':
+    get:
+      tags:
+        - user
+      summary: Hämta en användare
+      description: Hämta en användare med userId
+      operationId: "getUser"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        200:
+          description: En användare
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MarkkollUser"
+    patch:
+      tags:
+        - user
+      summary: Redigera användaruppgifter
+      description: Redigera användaruppgifter
+      operationId: "updateUserInfo"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      requestBody:
+        description: Användaren som ska uppdateras.
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: "./admin-api.yaml#/components/schemas/UserInfo"
+      responses:
+        201:
+          description: Den uppdaterade användaren
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MarkkollUser"
+    delete:
+      tags:
+        - user
+      summary: Ta bort en användare
+      description: Ta bort en användare
+      operationId: "deleteUser"
+      parameters:
+        - $ref: "#/components/parameters/userId"
+      responses:
+        200:
+          description: Användaren togs bort
+
+  # Kund
+  '/kund/{kundId}':
+    get:
+      tags:
+        - kund
+      summary: Hämta en kund
+      operationId: "getKund"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      responses:
+        200:
+          description: En kund.
+          content:
+            application/json:
+              schema:
+                $ref: "../kundconfig-api.yaml#/components/schemas/Kund"
+
+  '/kund/{kundId}/users':
+    get:
+      tags:
+        - kund
+      summary: Hämta en lista på alla användare tillhörandes en kund
+      operationId: "getKundUsers"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      responses:
+        200:
+          description: Listan med användare.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarkkollUser"
+
+  '/kund/{kundId}/ledningsagare':
+    post:
+      tags:
+        - kund
+      summary: Lägg till en ledningsägare.
+      operationId: "addLedningsagare"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      requestBody:
+        description: Namnet på den nya ledningsägaren.
+        required: true
+        content:
+          application/json:
+            schema:
+               type: string
+      responses:
+        201:
+          description: Den tillagda ledningsägaren
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ledningsagare"
+    get:
+      tags:
+        - kund
+      summary: Hämta alla ledningsägare som hör till en kund
+      operationId: "getLedningsagare"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+      responses:
+        200:
+          description: Alla kundens ledningsägare.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Ledningsagare"
+  '/kund/{kundId}/ledningsagare/{ledningsagareId}':
+    delete:
+      tags:
+        - kund
+      summary: Ta bort en ledningsägare
+      operationId: "deleteLedningsagare"
+      parameters:
+        - $ref: "admin-api.yaml#/components/parameters/kundId"
+        - $ref: "#/components/parameters/ledningsagareId"
+      responses:
+        200:
+          description: Ledningsägaren togs bort.
+  # Fil
+  '/fil/{filId}/data':
+    get:
+      tags:
+        - fil
+      summary: Hämta innehållet i en fil
+      operationId: getFilData
+      parameters:
+        - $ref: "./models/fil.yaml#/components/parameters/filId"
+      responses:
+        200:
+          description: Innehållet i filen
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+  # Värderingsprotokoll Fiber
+  '/projekt/fiber/{projektId}/varderingsprotokoll/{fiberVpId}':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1projekt~1fiber~1{projektId}~1varderingsprotokoll~1{fiberVpId}'
+  '/projekt/fiber/{projektId}/varderingsprotokoll/{fiberVpId}/varderingconfig':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1projekt~1fiber~1{projektId}~1varderingsprotokoll~1{fiberVpId}~1varderingconfig'
+  '/projekt/fiber/{projektId}/avtal/{avtalId}/varderingsprotokoll':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1projekt~1fiber~1{projektId}~1avtal~1{avtalId}~1varderingsprotokoll'
+  '/kund/{kundId}/varderingconfig/default':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1kund~1{kundId}~1varderingconfig~1default'
+  '/kund/{kundId}/varderingconfig/{varderingConfigId}':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1kund~1{kundId}~1varderingconfig~1{varderingConfigId}'
+  '/kund/{kundId}/varderingconfig':
+    $ref: 'varderingsprotokoll-fiber.yaml#/paths/~1kund~1{kundId}~1varderingconfig'
+
+  # Värderingsprotokoll Elnät
+  '/projekt/elnat/{projektId}/avtal/{avtalId}/varderingsprotokoll':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1avtal~1{avtalId}~1varderingsprotokoll'
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}'
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/meta':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1meta'
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/config':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1config'
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/prisomrade':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1prisomrade'
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/rotnetto':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1rotnetto'
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/bilaga':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1bilaga'
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/bilaga/{bilagaId}':
+    $ref: 'varderingsprotokoll-elnat.yaml#/paths/~1projekt~1elnat~1{projektId}~1varderingsprotokoll~1{vpId}~1bilaga~1{bilagaId}'
+
+  # Admin
+  '/admin/projekt/{projektId}/user/{userId}/role/admin':
+    $ref: 'admin-api.yaml#/paths/~1admin~1projekt~1{projektId}~1user~1{userId}~1role~1admin'
+  '/admin/projekt/{projektId}/user/{userId}/role/handlaggare':
+    $ref: 'admin-api.yaml#/paths/~1admin~1projekt~1{projektId}~1user~1{userId}~1role~1handlaggare'
+  '/admin/kund/{kundId}/user':
+    $ref: 'admin-api.yaml#/paths/~1admin~1kund~1{kundId}~1user'
+  '/admin/kund/{kundId}/user/admin':  
+    $ref: 'admin-api.yaml#/paths/~1admin~1kund~1{kundId}~1user~1admin'
+  '/admin/kund/{kundId}/kundadmin':
+    $ref: 'admin-api.yaml#/paths/~1admin~1kund~1{kundId}~1kundadmin'
+  '/admin/projekt/{projektId}/user/roles':
+    $ref: 'admin-api.yaml#/paths/~1admin~1projekt~1{projektId}~1user~1roles'
+  '/admin/roles/reset':
+    $ref: 'admin-api.yaml#/paths/~1admin~1roles~1reset'
+  
+  # Kund
+  '/kund/{kundId}/dokumentmall':
+    $ref: 'kund-api.yaml#/paths/~1kund~1{kundId}~1dokumentmall'
+  '/kund/{kundId}/dokumentmall/{dokumentmallId}':
+    $ref: 'kund-api.yaml#/paths/~1kund~1{kundId}~1dokumentmall~1{dokumentmallId}'
+  '/kund/{kundId}/dokumentmall/prepare':
+    $ref: 'kund-api.yaml#/paths/~1kund~1{kundId}~1dokumentmall~1prepare'
+  '/kund/{kundId}/dokumentmall/{dokumentmallId}/data':
+    $ref: 'kund-api.yaml#/paths/~1kund~1{kundId}~1dokumentmall~1{dokumentmallId}~1data'
+  '/kund/{kundId}/niskalla':
+    $ref: 'kund-api.yaml#/paths/~1kund~1{kundId}~1niskalla'
+
+  #Samrad
+  '/kund/{kundId}/{markkollId}/samrad':
+    $ref: 'samrad-api.yaml#/paths/~1kund~1{kundId}~1{markkollId}~1samrad'
+  '/kund/{kundId}/samrad':
+    $ref: 'samrad-api.yaml#/paths/~1kund~1{kundId}~1samrad'
+  '/kund/{kundId}/samrad/{markkollId}':
+    $ref: 'samrad-api.yaml#/paths/~1kund~1{kundId}~1samrad~1{markkollId}'
+  '/kund/{kundId}/markkoll/{samradId}':
+    $ref: 'samrad-api.yaml#/paths/~1kund~1{kundId}~1markkoll~1{samradId}'
+
+components:
+  schemas:
+    Fastighet:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        fastighetsbeteckning:
+          type: string
+        detaljtyp:
+          type: string
+        avvikelse:
+          type: boolean
+        kommunnamn:
+          type: string
+        geometristatus:
+          $ref: "#/components/schemas/Geometristatus"
+        manuelltTillagd:
+          type: boolean
+        agareSaknas:
+          type: boolean
+        avtalsstatus:
+          $ref: "#/components/schemas/Avtalsstatus"
+        skogsfastighet:
+          type: boolean
+        hasAnteckningar:
+          type: boolean
+    Samfallighet:
+      type: object
+      properties:
+        delagandeFastigheter:
+          type: array
+          items:
+             type: string
+        merInformation:
+          $ref: "#/components/schemas/SamfallighetMerInformation"
+      required:
+        - delagandeFastigheter
+    SamfallighetMerInformation:
+      type: object
+      properties:
+        firmatecknare:
+          type: string
+        coNamn:
+          type: string
+        coAdress:
+          type: string
+        coPostnummer:
+          type: string
+        coPostort:
+          type: string
+        forvaltandeBeteckning:
+          type: string
+        andamal:
+          type: string
+        foreningstyp:
+          type: string
+        organisationsnummer:
+          type: string
+        pagaendeFastighetsbildning:
+          type: array
+          items:
+            $ref: "#/components/schemas/PagaendeFastighetsbildning"
+        rattighet:
+          type: array
+          items:
+            $ref: "#/components/schemas/Rattighet"
+        berordAvAtgard:
+          type: array
+          items:
+            $ref: "#/components/schemas/BerordAvAtgard"
+        styrelsemedlemmar:
+          type: array
+          items:
+            $ref: "#/components/schemas/Styrelsemedlem"
+      required:
+        - firmatecknare
+        - coNamn
+        - coAdress
+        - coPostnummer
+        - coPostort
+        - forvaltandeBeteckning
+        - andamal
+        - foreningstyp
+        - organisationsnummer
+    PagaendeFastighetsbildning:
+      type: object
+      properties:
+        arendestatus:
+          type: string
+        dagboksnummer:
+          type: string
+      required:
+        - arendestatus
+        - dagboksnummer
+    Rattighet:
+      type: object
+      properties:
+        andamal:
+          type: string
+        rattsforhallande:
+          type: string
+        aktbeteckning:
+          type: string
+        rattighetsbeskrivning:
+          type: string
+      required:
+        - andamal
+        - rattsforhallande
+        - aktbeteckning
+        - rattighetsbeskrivning
+    BerordAvAtgard:
+      type: object
+      properties:
+        atgardstyp:
+          type: string
+        registreringsdatum:
+          type: string
+          format: date
+        aktbeteckning:
+          type: string
+        atgard:
+          type: string
+      required:
+        - atgardstyp
+        - registreringsdatum
+        - aktbeteckning
+        - atgard
+    FastighetPage:
+      type: object
+      properties:
+        number:
+          type: integer
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Fastighet"
+    AvtalsjobbStatus:
+      type: string
+      enum:
+        - NONE
+        - IN_PROGRESS
+        - DONE
+        - ERROR
+        - CANCELLED
+    AvtalsjobbProgress:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          $ref: "#/components/schemas/AvtalsjobbStatus"
+        generated:
+          type: integer
+        total:
+          type: integer
+      required:
+        - id
+        - status
+        - generated
+        - total
+    InfobrevsjobbProgress:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        status:
+          $ref: "#/components/schemas/AvtalsjobbStatus"
+        generated:
+          type: integer
+        total:
+          type: integer
+      required:
+        - id
+        - status
+        - generated
+        - total
+    Detaljtyp:
+      type: string
+      enum:
+        - UNKNOWN
+        - FASTIGHET
+        - FASTO
+        - SAMF
+        - SAMFO
+    LedningsTyp:
+      type: string
+      enum:
+        - MARKFORLAGD
+        - DIREKTFORLAGD
+        - STOLPLINJE
+        - EGEN_LEDNINGSTYP
+    Ledningsagare:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+      required:
+        - id
+        - namn
+    OmradeTyp:
+      type: string
+      enum:
+        - UNKNOWN
+        - FASTIGHET
+        - INTRANG
+    Markagare:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        adress:
+          type: string
+        coAdress:
+          type: string
+        land:
+          type: string
+        postnummer:
+          type: string
+        postort:
+          type: string
+        andel:
+          type: string
+        telefon:
+          type: string
+        bankkonto:
+          type: string
+        ePost:
+          type: string
+        kontaktperson:
+          type: boolean
+        agareStatus:
+          $ref: "#/components/schemas/Avtalsstatus"
+        labels:
+          $ref: "#/components/schemas/AvtalspartLabels"
+        fodelsedatumEllerOrgnummer:
+          type: string
+        agartyp:
+          $ref: "#/components/schemas/Agartyp"
+        inkluderaIAvtal:
+          type: boolean
+        utbetalningsdatum:
+          type: string
+          format: date
+      required:
+        - id
+        - namn
+        - adress
+        - postnummer
+        - postort
+        - andel
+        - kontaktperson
+        - avtalsstatus
+        - agartyp
+    MarkagareInfo:
+      type: object
+      properties:
+        namn:
+          type: string
+        adress:
+          type: string
+        postnummer:
+          type: string
+        postort:
+          type: string
+        andel:
+          type: string
+        telefon:
+          type: string
+        bankkonto:
+          type: string
+        ePost:
+          type: string
+        kontaktperson:
+          type: boolean
+        agareStatus:
+          $ref: "#/components/schemas/Avtalsstatus"
+        fodelsedatumEllerOrgnummer:
+          type: string
+        agartyp:
+          $ref: "#/components/schemas/Agartyp"
+        inkluderaIAvtal:
+          type: boolean
+        utbetalningsdatum:
+          type: string
+          format: date
+      required:
+        - namn
+        - inkluderaIAvtal
+        - agartyp
+        - agareStatus
+        - kontaktperson
+    AvtalspartLabels:
+      type: object
+      properties:
+        avtalsstatusGammal:
+          type: boolean
+          default: false
+        agareSaknas:
+          type: boolean
+          default: false
+        ofullstandingInformation:
+          type: boolean
+          default: false
+    Intrang:
+      type: object
+      properties:
+        typ:
+          type: string
+        subtyp:
+          type: string
+        langd:
+          type: number
+          format: double
+      required:
+        - typ
+        - langd        
+    FastighetDelomrade:
+      type: object
+      properties:
+        fastighetsId:
+          type: string
+          format: uuid
+        omradeNr:
+          type: integer
+        extent:
+          type: array
+          maxItems: 4
+          items:
+            type: number
+            format: double
+        geometryType:
+          $ref: "#/components/schemas/GeometryType"
+
+    FastighetDelomradeInfo:
+      type: object
+      properties:
+        fastighetId:
+          type: string
+          format: uuid
+        fastighetsbeteckning:
+          type: string
+        geometry:
+          type: string
+        omradeNr:
+          type: long
+        
+    Fastighetsinfo:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        detaljtyp:
+          $ref: "#/components/schemas/Detaljtyp"
+        fastighetsbeteckning:
+          type: string
+        kommunnamn:
+          type: string
+        intrang:
+          type: array
+          items:
+            $ref: "#/components/schemas/Intrang"
+        agare:
+          type: array
+          items:
+            $ref: "#/components/schemas/Markagare"
+        omraden:
+          type: array
+          items:
+            $ref: "#/components/schemas/FastighetDelomrade"
+        extent:
+          type: array
+          maxItems: 4
+          items:
+            type: number
+            format: double
+        ersattning:
+          type: integer
+          format: int32
+          default: 0
+        anteckning:
+          type: string
+        avtalsLogg:
+          type: array
+          items:
+            $ref: "#/components/schemas/avtalsLoggItem"
+        skogsfastighet:
+          type: boolean
+        tillvaratagandeTyp:
+          $ref: "#/components/schemas/TillvaratagandeTyp"
+        stationsnamn:
+          type: string
+        matandeStation:
+          type: string
+        franStation:
+          type: string
+        tillStation:
+          type: string
+        markslag:
+          type: string
+        lan:
+          type: string
+        egetTillvaratagande:
+          type: integer
+        avtalsstatus:
+          $ref: "#/components/schemas/Avtalsstatus"
+        hasAnteckningar:
+          type: boolean
+        avvikelse:
+          type: boolean
+        agareSaknas:
+          type: boolean
+        samfallighet:
+          $ref: "#/components/schemas/Samfallighet"
+      required:
+        - id
+        - intrang
+        - agare
+    TillvaratagandeTyp:
+      type: string
+      enum:
+        - ROTNETTO
+        - EGET_TILLVARATAGANDE
+        - EJ_BESLUTAT
+    avtalsLoggItem:
+      type: object
+      properties:
+        avtalsLoggType:
+          $ref: "#/components/schemas/AvtalsLoggType"
+        avtalsLoggStatus:
+          type: string
+        avtalsPartNamn:
+          type: string
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+      required:
+        - avtalsLoggType
+        - avtalsLoggStatus
+        - skapadAv
+        - skapadDatum
+    ProjektLoggPage:
+      type: object
+      properties:
+        number:
+          type: integer
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ProjektLoggItem"
+    FastighetsProjektInfo:
+      type: object
+      properties:
+        fastighetsId:
+          type: string
+          format: uuid
+        projektId:
+          type: string
+          format: uuid
+        ersattning:
+          type: integer
+          format: int32
+        anteckning:
+          type: string
+      required:
+        - fastighetsId
+        - projektId
+    EditElnatVp:
+      type: object
+      properties:
+        fastighetsId:
+          type: string
+          format: uuid
+        fastighetsbeteckning:
+          type: string
+        avtalMetadata:
+          $ref: './models/avtal.yaml#/components/schemas/AvtalMetadata'
+        vpMetadata:
+          $ref: './varderingsprotokoll-elnat.yaml#/components/schemas/ElnatVarderingsprotokollMetadata'
+    EditElnatVpData:
+      type: object
+      properties:
+        fastighetsIds:
+          type: string
+          format: uuid
+        avtalMetadata:
+          $ref: './models/avtal.yaml#/components/schemas/AvtalMetadata'
+        vpMetadata:
+          $ref: './varderingsprotokoll-elnat.yaml#/components/schemas/ElnatVarderingsprotokollMetadata'
+    Fastighetsfilter:
+      type: object
+      properties:
+        avtalsstatus:
+          $ref: "#/components/schemas/Avtalsstatus"
+        fastighetsbeteckning:
+          type: string
+          default: ""
+        fastighetsIds:
+          type: array
+          items: 
+            type: string
+            format: uuid
+        intrangLength:
+          type: number
+          format: double
+        showSenastUppdaterade:
+          type: boolean
+          default: false
+        excludeWithMarkagare:
+          type: boolean
+          default: false
+        excludeOutreddaFastigheter:
+          type: boolean
+          default: false
+        showForsenade:
+          type: boolean
+          default: false
+        skogsfastighet:
+          type: boolean
+          default: false
+        luftledningar:
+          type: boolean
+          default: false
+    FilterAndTemplate:
+      type: object
+      properties:
+        filter:
+          $ref: "#/components/schemas/Fastighetsfilter"
+        template:
+          type: string
+          format: uuid
+    HaglofImportVarningar:
+      type: object
+      properties:
+        fastighetKommunMissing:
+          type: array
+          items:
+            type: string
+        fastigheterMissing:
+          type: array
+          items:
+            type: string
+        agareMissing:
+          type: array
+          items:
+            type: string
+        agareAmbiguous:
+          type: array
+          items:
+            type: string
+    Styrelsemedlem:
+      type: object
+      properties:
+        funktion:
+          type: string
+        markagare:
+          $ref: "#/components/schemas/Markagare"
+    Avtalsstatus:
+      type: string
+      enum:
+        - EJ_BEHANDLAT
+        - AVTAL_SKICKAT
+        - PAMINNELSE_SKICKAD
+        - AVTAL_JUSTERAS
+        - AVTAL_SIGNERAT
+        - ERSATTNING_UTBETALAS
+        - ERSATTNING_UTBETALD
+        - AVTALSKONFLIKT
+    AvtalsLoggType:
+      type: string
+      enum:
+        - AVTALSSTATUS
+        - GEOMETRISTATUS
+        - UTBETALNINGSDATUM
+    Agartyp:
+      type: string
+      enum:
+        - TR
+        - LF
+        - OMBUD
+        - STYRELSEMEDLEM
+        - OKAND
+    IntrangLengthFilter:
+      type: string
+      enum:
+        - ALL
+        - ENBART_KORTA
+    Geometristatus:
+      type: string
+      enum:
+        - NY
+        - BORTTAGEN
+        - UPPDATERAD
+        - OFORANDRAD
+    GeometryType:
+      type: string
+      enum:
+        - ST_Polygon
+        - ST_MultiPolygon
+        - ST_LineString
+        - ST_MultiLineString
+        - ST_Point
+        - ST_MultiPoint
+        - ST_GeometryCollection
+    SortDirection:
+      type: string
+      enum:
+        - asc
+        - desc
+    Tillvaxtomrade:
+      $ref: "varderingsprotokoll-elnat.yaml#/components/schemas/ElnatTillvaxtomrade"
+    Tradslag:
+      $ref: "varderingsprotokoll-elnat.yaml#/components/schemas/ElnatTradslag"
+    Akernormomrade:
+      $ref: "varderingsprotokoll-elnat.yaml#/components/schemas/ElnatAkernormomrade"
+    HinderMarkslag:
+      $ref: "varderingsprotokoll-elnat.yaml#/components/schemas/ElnatAkernormomrade"
+    ProjekthandelseTyp:
+      $ref: "./models/projekt.yaml#/components/schemas/ProjekthandelseTyp"
+    ProjektLoggItem:
+      $ref: "./models/logg.yaml#/components/schemas/ProjektLoggItem"
+    BilagaTyp:
+      $ref: "varderingsprotokoll-elnat.yaml#/components/schemas/ElnatBilagaTyp"
+    Utskicksstrategi:
+      $ref: "./models/projekt.yaml#/components/schemas/Utskicksstrategi"
+      
+
+## Admin
+    MarkkollUser:
+      $ref: "admin-api.yaml#/components/schemas/MarkkollUser"
+  parameters:
+    userId:
+      name: userId
+      in: path
+      description: Id för en användare, vilken är en epost som även kopplar ihop användaren med keycloak
+      required: true
+      schema:
+        type: string
+    ledningsagareId:
+      name: ledningsagareId
+      in: path
+      description: Ledningsägare-ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+    samfId:
+      name: samfId
+      in: path
+      description: Fastighetsnyckel för en samfällighet
+      required: true
+      schema:
+        type: string
+        format: uuid
+

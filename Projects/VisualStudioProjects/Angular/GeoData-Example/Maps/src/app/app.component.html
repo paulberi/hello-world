@@ -1,0 +1,15 @@
+<div class="centered-content">
+
+    <div class="container" id="map"></div>
+
+    <div class="testContainer" id="testMap"></div>
+
+    <div class="testContainers" id="testMaps">
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onMapClicked($event)">
+            <agm-marker [latitude]="latitude2" [longitude]="longitude2"></agm-marker>
+            <agm-marker [latitude]="latitude1" [longitude]="longitude1"></agm-marker>
+        </agm-map>
+        <div>Latitude: {{ latitude }}</div>
+        <div>Longitude: {{ longitude }}</div>
+    </div>
+</div>

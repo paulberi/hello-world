@@ -1,0 +1,59 @@
+
+<form [formGroup]="form">
+  <div class="d-flex">
+    <mat-form-field>
+      <mat-label>{{ "mk.createProjekt.addUsersToProject" | transloco }}</mat-label>
+      <mat-select multiple
+                  formControlName="userOptions"
+                  class="select-users"
+                  [compareWith]="compareUsers"
+                  (selectionChange)="onUserOptionsChange($event.value)">
+        <mat-option *ngFor="let option of userOptions"
+                    [value]="option.user"
+                    [disabled]="option.disabled">
+          {{ option.user.fornamn }} {{ option.user.efternamn }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div id="info-button-container">
+      <button mat-flat-button id="info-button" (click)="infoPopupClick()">{{ "mk.projektBehorighet.infoButtonText" | transloco }}</button>
+    </div>
+  </div>
+  <div *ngFor="let entry of entries; let i=index">
+    <div class="user-row row justify-space-between">
+      <div class="d-flex remove-user">
+        <div class="remove-user-button">
+          <button mat-icon-button *ngIf="!entry.disabled" (click)="removeUser(entry.user)">
+            <mat-icon class="remove-button-icon">remove_circle_outline</mat-icon>
+          </button>
+        </div>
+        <span class="user-row-text"> {{ entry.user.fornamn }} {{ entry.user.efternamn }} </span>
+      </div>
+      <div>
+        <mat-form-field class="select-roles">
+          <mat-select [value]="entry.roll" (valueChange)="updateUserRoleValue($event, entry)" [disabled]="entry.disabled">
+            <mat-option *ngFor="let role of roles" [value]="role" >{{ role | prefix:"mk.roles." | transloco}}</mat-option>
+            <mat-option *ngIf="entry.roll === RoleType.KUNDADMIN" [value]="RoleType.KUNDADMIN" >{{ RoleType.KUNDADMIN | prefix:"mk.roles." | transloco}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</form>
+
+<ng-template #infoDialog>
+  <h1 id="title">{{ "mk.projektBehorighet.dialogTitle" | transloco }}</h1>
+  <div class="row">
+    <div class="d-flex">
+      <mat-icon id="info-icon">info_outline</mat-icon>
+      <div>
+        <p>{{ "mk.projektBehorighet.dialogBody" | transloco }}</p>
+        <p>{{ "mk.projektBehorighet.dialogExtra" | transloco }}</p>
+      </div>
+    </div>
+  </div>
+  <mat-dialog-actions align="end">
+    <button mat-flat-button mat-dialog-close>{{ "xp.common.close" | transloco }}</button>
+  </mat-dialog-actions>
+</ng-template>

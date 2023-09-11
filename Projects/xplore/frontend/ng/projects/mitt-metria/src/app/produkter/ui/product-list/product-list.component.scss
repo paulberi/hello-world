@@ -1,0 +1,29 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    justify-content: center;
+    grid-gap: 64px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and #{$xp-breakpoints-large-mobile-max} {
+    .products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
+        padding: 0 16px;
+        row-gap: 16px;
+        column-gap: 0;
+    }
+
+    .product-card {
+        width: 100%
+    }
+}

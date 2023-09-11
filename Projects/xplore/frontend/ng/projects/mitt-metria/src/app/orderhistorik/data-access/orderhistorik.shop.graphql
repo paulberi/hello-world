@@ -1,0 +1,45 @@
+query shopOrders($numberOfOrders: Int!, $startIndex: Int!) {
+  orderHistory(
+    options: {
+      filter: { active: { eq: false } }
+      sort: { id: DESC }
+      take: $numberOfOrders
+      skip: $startIndex
+    }) {
+    items {
+        order {
+        id
+        updatedAt
+        code
+        totalWithTax
+        currencyCode
+        customFields {
+          emailAddress
+          externalRef
+        }
+      }
+      lines {
+        orderLine {
+          id
+          taxRate
+          unitPrice
+          unitPriceWithTax
+          productVariant {
+            id
+            name
+            product {
+              name
+            }
+          }
+          customFields {
+            clientAttributes
+          }
+        }
+        downloadUrl
+        ready
+      }
+    }
+  totalItems
+  }
+
+}

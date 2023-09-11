@@ -1,0 +1,2603 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.valdemarsvik.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      },
+      "castor_panel": {
+        "visible": true
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/valdemarsvik/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": ""
+  },
+  "zoom": 3.5,
+  "center": [
+    163144,
+    6452598
+  ],
+  "extent": [
+    -264152.67,
+    6111956.69,
+    455221.06,
+    7684350.92
+  ],
+  "thumbnailCoordinates": [
+    156078,
+    6453700
+  ],
+  "groups": [
+    {
+      "name": "fastighetsdata",
+      "title": "Fastighetsdata",
+      "expanded": true
+    },
+    {
+      "name": "pbr",
+      "title": "PBR",
+      "expanded": false
+    },
+    {
+      "name": "primarkartan",
+      "title": "Primärkartan",
+      "expanded": false
+    },
+    {
+      "name": "va",
+      "title": "VA",
+      "groups": [
+        {
+          "name": "verksamhetsomrade_va",
+          "title": "Verksamhetsområde VA",
+          "expanded": false
+        },
+        {
+          "name": "va_banken",
+          "title": "VA från VA-Banken",
+          "expanded": false
+        },
+        {
+          "name": "va_gamla",
+          "title": "VA (gamla)",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "fiber",
+      "title": "Fiber/Fjärrvärme",
+      "expanded": false
+    },
+    {
+      "name": "belysning",
+      "title": "Belysning",
+      "expanded": false
+    },
+    {
+      "name": "snorojning",
+      "title": "Snöröjning",
+      "expanded": false
+    },
+    {
+      "name": "slambrunnar",
+      "title": "Slambrunnar",
+      "expanded": false
+    },
+    {
+      "name": "sammanhallen",
+      "title": "Sammanhållen bebyggelse (2014)",
+      "expanded": false
+    },
+    {
+      "name": "saneringsomraden",
+      "title": "Saneringsområden",
+      "groups": [
+        {
+          "name": "valdemarsviken",
+          "title": "Valdemarsviken",
+          "expanded": false
+        },
+        {
+          "name": "gusum_bruk",
+          "title": "Gusum Bruk",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "vattenskyddsomrade",
+      "title": "Vattenskyddsområde",
+      "expanded": false
+    },
+    {
+      "name": "naturvard",
+      "title": "Naturvård/Kulturmiljö",
+      "groups": [
+        {
+          "name": "nv",
+          "title": "NV",
+          "expanded": false
+        },
+        {
+          "name": "sks",
+          "title": "SKS",
+          "expanded": false
+        },
+        {
+          "name": "raa",
+          "title": "RAÄ",
+          "expanded": false
+        },
+        {
+          "name": "regional",
+          "title": "Regional Kulturmiljö",
+          "expanded": false
+        },
+        {
+          "name": "naturvardsprogram",
+          "title": "Naturvårdsprogram - Valdemarsvik",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "sgu",
+      "title": "SGU",
+      "expanded": false
+    },
+    {
+      "name": "riksintressen",
+      "title": "Riksintressen",
+      "groups": [
+        {
+          "name": "mb_3_5",
+          "title": "MB 3_5",
+          "expanded": false
+        },
+        {
+          "name": "mb_3_6",
+          "title": "MB 3_6",
+          "expanded": false
+        },
+        {
+          "name": "mb_3_8",
+          "title": "MB 3_8",
+          "expanded": false
+        },
+        {
+          "name": "mb_3_9",
+          "title": "MB 3_9",
+          "expanded": false
+        },
+        {
+          "name": "mb_4",
+          "title": "MB 4",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "vagdata",
+      "title": "Vägdata",
+      "groups": [
+        {
+          "name": "nvdb",
+          "title": "NVDB",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "ortofoton",
+      "title": "Ortofoton",
+      "groups": [
+        {
+          "import": "ortofoto_arsvisa@common"
+        },
+        {
+          "name": "ortofoto_historiska",
+          "title": "Historiska",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "valdemarsvik:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Adresspunkter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Adresspunkt",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "adresstext@mm-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:FastighetsytorGranser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastighetsdata",
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Kommunägd mark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:KommunagdaFastigheter_FK",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "US_civilProtectionSite@inspire-msb-export",
+      "group": "fastighetsdata"
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "pbr",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "pbr",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "primarkartan",
+      "title": "Primärkartan",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_pk/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,15,16,17,18,19,20,21,22,23,24,25,26,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomrade_va",
+      "title": "Dagvatten",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "verksamhetsomrade_dagvatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomrade_va",
+      "title": "Spillvatten",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "verksamhetsomrade_spillvatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhetsomrade_va",
+      "title": "Vatten",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "verksamhetsomrade_vatten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Vatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Spillvatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Dagvatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Vatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Spillvatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_banken",
+      "title": "Dagvatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Vatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Spillvatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Dagvatten Ledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "VA anläggning",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Vatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Spillvatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "va_gamla",
+      "title": "Dagvatten Punkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_va_old/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "6",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fiber",
+      "title": "Fiberbrunnar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fiberbrunnar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fiber",
+      "title": "Fiberledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fiberledningar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "fiber",
+      "title": "Fjärrvärmeledningar",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "fjarrvarmeledningar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "allowedRoles": ["valdemarsvik_va"],
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Ljuspunkter VV",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "ljuspunkter_vv",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Ljuspunkter",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "ljuspunkter",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Ledning",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "ledning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Nätstation",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "natstation",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Inmatningspunkt",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "inmatningspunkt_punkt,inmatningspunkt_linje",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "belysning",
+      "title": "Övrigt",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "belysning_ovrigt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "snorojning",
+      "title": "Snöröjning",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "snorojning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "slambrunnar",
+      "title": "Fastland",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "slambrunnar_fastland",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "slambrunnar",
+      "title": "Skärgård",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "slambrunnar_skargard",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sammanhallen",
+      "title": "Sammanhållen bebyggelse (2014)",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sammanhallen_bebyggelse_2014",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Krom innan muddring",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "krom_innan_muddring",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Krom efter muddring",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "krom_efter_muddring",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Strandnära områden",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "strandnara_omrade",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Sahlinsområdet",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sahlinsomradet",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Områden som inte ingår i muddring",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "omraden_som_inte_ingar_i_muddring",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Områden avbeställd muddring",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "omraden_avbestalld_muddring",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Muddringsområde",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "muddringsomrade",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Krom innan muddring",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "krom_innan_muddring",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Kajnära områden",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kajnara_omraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Grännäs upplaget",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "grannas_upplaget",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Grännäs deponi",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "grannas_deponi",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "valdemarsviken",
+      "title": "Centralplan",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "centralplan",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Grund saneringsschakt",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "grund_saneringsschakt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Restföroreningar inmätt schaktbotten",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "restfororeningar_inmatt_schaktbotten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Restföroreningar osäker marknivå",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "restfororeningar_osaker_markniva",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Stor risk för föroeringar i mark",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "stor_risk_for_fororeningar_i_mark",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Schaktområde för sanering",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "schaktomrade_for_sanering",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Område för installerat tätmembran",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "omrade_for_installerat_tatmembran",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "gusum_bruk",
+      "title": "Inmätt schaktbotten",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "inmatt_schaktbotten",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenskyddsomrade",
+      "title": "Primär skyddszon",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "primar_skyddszon",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenskyddsomrade",
+      "title": "Sekundär skyddszon",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "sekundar_skyddszon",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenskyddsomrade",
+      "title": "Tertiär skyddszon",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "tertiar_skyddszon",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "nv",
+      "title": "Naturreservat",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturreservat_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "*"
+          },
+          {
+            "name": "beskrivnin",
+            "label": "BESKRIVNIN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "beskrivnin",
+            "type": "url",
+            "template": "{{beskrivnin}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nv",
+      "title": "Natura2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Natura2000_SNV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "nv",
+      "title": "Naturminnen",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Naturminne_NV,metria:Naturminne_punkt_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "nv",
+      "title": "Djur&Växtskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:DjurVaxtskydd_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sks",
+      "title": "Biotopskydd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Biotopskydd_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "url",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "raa",
+      "title": "Fornlämningar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fornlamningar",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "URL",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "URL",
+            "type": "url",
+            "template": "{{URL}}"
+          },
+          {
+            "name": "url",
+            "label": "url",
+            "linkRef": "the-link-2"
+          },
+          {
+            "id": "the-link-2",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "regional",
+      "title": "Punkt (sep-2020)",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kulturmiljo_punkt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "regional",
+      "title": "Yta (sep-2020)",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "kulturmiljo_yta",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "naturvardsprogram",
+      "title": "Klass 1",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_klass_1",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "naturvardsprogram",
+      "title": "Klass 2",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_klass_2",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "naturvardsprogram",
+      "title": "Klass 3",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_klass_3",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "naturvardsprogram",
+      "title": "Klass 4",
+      "source": {
+        "url": "/maps/gawms/Val/valdemarsvik_verksamhetsdata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "nvp_klass_4",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sgu",
+      "title": "Jordartskarta",
+      "source": {
+        "url": "/maps/sgu/jord/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "jord:SE.GOV.SGU.JORD.BLOCKIGHET.25K,jord:SE.GOV.SGU.JORD.GRUNDLAGER.25K,jord:SE.GOV.SGU.JORD.LANDFORM.25K,jord:SE.GOV.SGU.JORD.UNDERLIGGANDE.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY1.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY0.25K,jord:SE.GOV.SGU.JORD.LINJER.25K",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "mb_3_5",
+      "title": "Yrkesfiske",
+      "infoTemplate": "alla",
+      "queryable": true,
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseYrkesfiskehav_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "opacity": 0.7
+    },
+    {
+      "type": "tile",
+      "group": "mb_3_6",
+      "title": "Naturvård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "beskrivnin",
+            "label": "BESKRIVNIN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "beskrivnin",
+            "type": "url",
+            "template": "{{beskrivnin}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_3_6",
+      "title": "Friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseFriluftsliv_NV",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "lank_beslu",
+            "label": "LANK_BESLU",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "lank_beslu",
+            "type": "url",
+            "template": "{{lank_beslu}}"
+          },
+          {
+            "name": "lank_varde",
+            "label": "LANK_VARDE",
+            "linkRef": "the-link2"
+          },
+          {
+            "id": "the-link2",
+            "name": "lank_varde",
+            "type": "url",
+            "template": "{{lank_varde}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_3_6",
+      "title": "Kulturmiljövård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "import": "lst_lst_riksintressen_3_8@lansstyrelse-export",
+      "group": "mb_3_8",
+      "title": "Energiproduktion mm"
+    },
+    {
+      "type": "tile",
+      "group": "mb_3_8",
+      "title": "Kommunikationer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseKommunikationer_linje_LST,metria:RiksintresseKommunikationer_punkt_LST,metria:RiksintresseKommunikationer_yta_LST ",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "LST_WMS_riksintressen_3_9_fm@lansstyrelse-export",
+      "group": "mb_3_9",
+      "title": "Försvarsmakten"
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Högexploaterad Kust",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseHogexploateradKust_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Nationalstadspark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseNationalstadspark_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "objlank2",
+            "label": "OBJLANK2",
+            "linkRef": "the-link2"
+          },
+          {
+            "id": "the-link2",
+            "name": "objlank2",
+            "type": "url",
+            "template": "{{objlank2}}"
+          },
+          {
+            "name": "objlank3",
+            "label": "OBJLANK3",
+            "linkRef": "the-link3"
+          },
+          {
+            "id": "the-link3",
+            "name": "objlank3",
+            "type": "url",
+            "template": "{{objlank3}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Obruten Kust",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseObrutenKust_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Obrutet Fjäll",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseObrutetFjall_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Rörligt Friluftsliv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseRorligtFriluftsliv_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "mb_4",
+      "title": "Vattendrag",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:RiksintresseVattendrag_LST",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "nvdb",
+      "title": "Väghållare",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghallare_NVDB",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Höjdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hojdlinje_topo10",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Hillshade",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hillshade_multi",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "@common"
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1975",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_75",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "ortofoto_historiska",
+      "title": "Ref.år 1960",
+      "source": {
+        "url": "https://api.lantmateriet.se/historiska-ortofoton/wms/v1/token/29dfb999-95e0-3dc4-86d2-e6ccdada4fd8/",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "OI.Histortho_60",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Flygfoto"
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3007",
+      "alias": "urn:ogc:def:crs:EPSG:3007",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=12 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        23814.64,
+        6094553.81,
+        632648.37,
+        7713337.26
+      ]
+    },
+    {
+      "code": "EPSG:3010",
+      "alias": "urn:ogc:def:crs:EPSG:3010",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=16.5 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -264152.67,
+        6111956.69,
+        455221.06,
+        7684350.92
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG:3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        580000,
+        7600000
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "lansstyrelse": {
+      "properties": [
+        {
+          "name": "URL",
+          "label": "URL",
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "URL",
+          "type": "url",
+          "template": "{{URL}}"
+        },
+        {
+          "name": "LänktillVISS",
+          "label": "LänktillVISS",
+          "linkRef": "the-link2"
+        },
+        {
+          "id": "the-link2",
+          "name": "LänktillVISS",
+          "type": "url",
+          "template": "{{LänktillVISS}}"
+        },
+        {
+          "name": "Undantagkemiskstatussammanfattning",
+          "label": "Undantagkemiskstatussam."
+        },
+        {
+          "name": "Undantagekologiskstatussummering",
+          "label": "Undantagekolo.statussum."
+        },
+        {
+          "name": "Undantagkemiskstatussummering",
+          "label": "Undantagkemiskstatussum."
+        },
+        {
+          "name": "Särskiltförorenandeämnensummering",
+          "label": "Särskiltförore.ämnensum."
+        },
+        {
+          "name": "Skyddadeområdendricksvattenförsörjningartikel7",
+          "label": "Skyd.omr.dric.vatt.artl7"
+        },
+        {
+          "name": "Morfologiskttillståndikustvattenochvatteniövergångszon",
+          "label": "Morfo.tillst.kustvat.zon"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3010",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

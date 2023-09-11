@@ -1,0 +1,17 @@
+@import "../../../../../lib/app-shell/app-shell.shared";
+
+#analysis-info-panel {
+  @extend %scrollable-sub-panel;
+  pointer-events: all;
+
+  ::ng-deep .analysis-panel {
+    @extend %content-panel-width;
+  }
+
+  ::ng-deep .ngx-charts {
+    text {
+      fill: #fff !important;
+    }
+  }
+}
+

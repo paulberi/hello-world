@@ -1,0 +1,2 @@
+ALTER TABLE markkoll.importversion
+    ADD COLUMN buffert DOUBLE PRECISION NOT NULL DEFAULT 0;

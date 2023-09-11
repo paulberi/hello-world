@@ -1,0 +1,409 @@
+
+components:
+  schemas:
+
+  ###########################
+  # KUND
+  ###########################
+    KundReq:
+      type: object
+      properties:
+        slug:
+          type: string
+          example: "energibolaget"
+        vhtNyckel:
+          type: string
+          example: "221122-1144"
+        namn:
+          type: string
+          example: "Energibolaget AB"
+        egenskaper:
+          type: object
+          example:
+              forgrund: "#050308"
+              bakgrund: "#F356C0"
+              font: "Arial"
+        standardsprak:
+          type: string
+          example: "sv"
+
+    KundRsp:
+      allOf:
+        - $ref: '#/components/schemas/KundReq'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            logotyp: 
+              $ref: '#/components/schemas/FilRsp'
+            tillgangligaSprak:
+              type: array
+              items:
+                $ref: '#/components/schemas/Sprak'
+
+  ###########################
+  # PROJEKT
+  ###########################
+    ProjektReq:
+      allOf:
+        - $ref: "#/components/schemas/ProjektText"
+        - type: object
+          properties:
+            slug:
+              type: string
+              example: "ombyggnad-boviken"
+            publiceringStatus:
+              $ref: "#/components/schemas/PubliceringStatus"
+
+    ProjektRsp:
+      allOf:
+        - $ref: "#/components/schemas/ProjektReq"
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            filer:
+              type: array
+              items:
+                $ref: '#/components/schemas/FilRsp'
+
+    ProjektText:
+      type: object
+      properties:
+        rubrik:
+          type: string
+          example: "Ombyggnad Boviken"
+        ingress:
+          type: string
+          example: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        brodtext:
+          type: string
+          example: "Cras mattis eros vitae sapien fringilla cursus. Nulla facilisi. Quisque fermentum quam tortor, a commodo felis ultrices eu. Curabitur dolor lectus, tempus at orci a, imperdiet pharetra nunc. Quisque pellentesque magna non ex viverra, consequat consequat libero congue. Morbi quis interdum nunc."
+
+    ProjektOversattning:
+      allOf:
+        - $ref: "#/components/schemas/ProjektText"
+        - type: object
+          properties:
+            sprakkod:
+              type: string
+              example: "en"
+
+  ###########################
+  # GEOMETRI
+  ###########################
+    GeometriReq:
+      type: object
+      properties:
+        geom:
+          type: string
+          example: "<GeoJSON string>"
+        props:
+          type: object
+          example:
+            - prop01: "test"
+
+    GeometriRsp:
+      allOf:
+        - $ref: '#/components/schemas/GeometriReq'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+
+  ###########################
+  # DIALOG
+  ###########################
+    DialogReq:
+      type: object
+      properties:
+        rubrik:
+          type: string
+          example: "Synpunkt östra stranden"
+        plats:
+          type: string
+          example: "<GeoJSON>"
+
+    DialogReqAdmin:
+      allOf:
+        - $ref: '#/components/schemas/DialogReq'
+        - type: object
+          properties:
+            publiceringStatus:
+              $ref: "#/components/schemas/PubliceringStatus"
+            dialogStatus:
+              $ref: "#/components/schemas/DialogStatus"
+
+    DialogRsp:
+      allOf:
+        - $ref: '#/components/schemas/DialogReqAdmin'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            parter:
+              type: array
+              items:
+                $ref: "#/components/schemas/DialogPartRsp"
+              example:
+                - id: "92513b65-0414-46df-83e6-e33bb0233de1"
+                  namn: "Mona Nilsson"
+                  epost: "mona.n@mail.se"
+                  skapare: true
+
+    MeddelandeReq:
+      type: object
+      properties:
+        text:
+          type: string
+          example: "Hej, kan man få mer information om utbyggnaden inom ett specifikt område?"
+
+    MeddelandeReqAdmin:
+      allOf:
+        - $ref: '#/components/schemas/MeddelandeReq'
+        - type: object
+          properties:
+            publiceringStatus:
+              $ref: "#/components/schemas/PubliceringStatus"
+
+    MeddelandeRsp:
+      allOf:
+        - $ref: '#/components/schemas/MeddelandeReqAdmin'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            fran:
+              $ref: "#/components/schemas/DialogPartRsp"
+            skapadDatum:
+              type: string
+              format: date-time
+            filer:
+              type: array
+              items:
+                $ref: '#/components/schemas/FilRsp'
+
+    DialogPartReq:
+      type: object
+      properties:
+        namn:
+          type: string
+          example: "Mona Nilsson"
+        epost:
+          type: string
+          example: "mona.n@mail.se"
+        skapare:
+          type: boolean
+
+    DialogPartRsp:
+      allOf:
+        - $ref: '#/components/schemas/DialogPartReq'
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+
+    DialogKomplett:
+      allOf:
+        - $ref: '#/components/schemas/DialogRsp'
+        - type: object
+          properties:
+            meddelanden:
+              type: array
+              items:
+                $ref: '#/components/schemas/MeddelandeRsp'
+
+  ###########################
+  # FIL
+  ###########################
+    FilReq:
+      type: object
+      properties:
+        mimetyp:
+          type: string
+          example: "application/pdf"
+        beskrivning:
+          type: string
+          example: "Ett informationsutskick för projektet"
+
+    FilRsp:
+      allOf:
+        - $ref: "#/components/schemas/FilReq"
+        - type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            filnamn:
+              type: string
+              example: "Informationsutskick 2022.pdf"
+
+  ###########################
+  # SPRÅK
+  ###########################
+    Sprak:
+      type: object
+      properties:
+        kod:
+          type: string
+          example: "sv"
+        namn:
+          type: string
+          example: "Svenska"
+        namnOrg:
+          type: string
+          example: "Svenska"
+
+    Sprakval:
+      type: object
+      properties:
+        kod:
+          type: string
+          example: "sv"
+        standardsprak:
+          type: boolean
+
+    SprakvalReq:
+      type: array
+      items:
+        $ref: '#/components/schemas/Sprakval'
+
+    SprakvalRsp:
+      allOf:
+        - $ref: '#/components/schemas/Sprak'
+        - type: object
+          properties:
+            standardsprak:
+              type: boolean
+
+  ###########################
+  # STATUS
+  ###########################
+    PubliceringStatus:
+      type: string
+      enum:
+        - UTKAST
+        - PUBLICERAD
+        - ARKIVERAD
+        - AVPUBLICERAD
+      example: PUBLICERAD
+
+    DialogStatus:
+      type: string
+      enum:
+        - PAGAENDE
+        - AVSLUTAD
+
+  parameters:
+
+    kundSlug:
+      name: slug
+      in: path
+      description: Slug för kunden
+      schema:
+        type: string
+      required: true
+      example: "din-kund-slug"
+
+    kundId:
+      name: kundId
+      in: path
+      description: "UUID för en kund"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+
+    kundId_or_vhtNyckel:
+      name: kundId_or_vhtNyckel
+      in: path
+      description: "UUID eller vhtNyckel för en kund"
+      schema:
+        type: string
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2 eller 552244-2233"
+
+    projektId_or_slug:
+      name: projektId_or_slug
+      in: path
+      description: "UUID eller slug för ett projekt"
+      schema:
+        type: string
+      required: true
+      example: "7f6a7605-fba7-47ea-af16-a23854abaaa4 eller en-projekt-slug"
+
+    projektId:
+      name: projektId
+      in: path
+      description: "UUID för ett projekt"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "7f6a7605-fba7-47ea-af16-a23854abaaa4"
+
+    dialogId:
+      name: dialogId
+      in: path
+      description: "UUID för en dialog"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "9773ab32-0762-437d-bd94-f658016433ca"
+
+    filId:
+      name: filId
+      in: path
+      description: "UUID för en fil"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "d3158765-5866-4940-835a-40acd3acbeb1"
+
+    sprakkod:
+      name: sprakkod
+      in: path
+      description: "Språkkod"
+      schema:
+        type: string
+      required: true
+      example: "sv"
+
+    geometriId:
+      name: geometriId
+      in: path
+      description: "UUID för en geometri"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "d3158765-5866-4940-835a-40acd3acbeb1"
+
+    partId:
+      name: partId
+      in: path
+      description: "UUID för en part"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "d3158765-5866-4940-835a-40acd3acbeb1"
+
+    meddelandeId:
+      name: meddelandeId
+      in: path
+      description: "UUID för ett meddelande"
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "d3158765-5866-4940-835a-40acd3acbeb1"

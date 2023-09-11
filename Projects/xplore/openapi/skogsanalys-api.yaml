@@ -1,0 +1,46 @@
+openapi: 3.0.2
+info:
+  title: Skogsanalys API
+  description: API Skogsanalys
+  version: 0.1.0
+servers:
+  - url: http://localhost:9011/api
+
+paths:
+  '/rapport/skoglig/pdf':
+    get:
+      summary: Hämta en rapportsida i PDF-format
+      description: Hämta en rapportsida i PDF-format
+      parameters:
+        - in: query
+          name: skoglig
+          schema:
+            type: string
+        - in: query
+          name: lay
+          schema:
+            type: string
+        - in: query
+          name: ext
+          schema:
+            type: string
+        - in: query
+          name: inverteraFastigheter
+          schema:
+            type: boolean
+        - in: query
+          name: fastighetsgranserOpacity
+          schema:
+            type: number
+        - in: query
+          name: title
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Rapportsida i PDF-format
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_hjartstartare</name>
+  <id>LayerInfoImpl-9b36125e:0155afe12a3:-f5b4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2bea2839:782775d6ebe:-2359</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

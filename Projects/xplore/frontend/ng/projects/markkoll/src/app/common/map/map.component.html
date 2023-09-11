@@ -1,0 +1,48 @@
+<div class="map" [attr.id]="id" [ngClass]="{ 'fullscreen': isFullscreen, 'is-static': isStatic }"
+     [ngStyle]="{'background-color': mapConfig.backgroundColor}">
+  <div class="right-panel">
+    <button mat-mini-fab matTooltip="{{ 'mk.karta.zoomIn' | transloco }}"
+            [matTooltipPosition]="'left'"
+            color="white" (click)="zoomIn()">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-mini-fab matTooltip="{{ 'mk.karta.zoomOut' | transloco }}"
+            [matTooltipPosition]="'left'"
+            color="white" (click)="zoomOut()">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <button mat-mini-fab [matTooltip]="isFullscreen ? leaveFullscreen : fullscreen"
+            [matTooltipPosition]="'left'"
+            color="white"
+            (click)="toggleFullscreen()">
+      <mat-icon *ngIf="!isFullscreen">fullscreen</mat-icon>
+      <mat-icon *ngIf="isFullscreen">fullscreen_exit</mat-icon>
+    </button>
+  </div>
+
+  <!--  Knappar för att visa och byta bakgrundskarta-->
+  <ng-container *ngIf="mapThumbnails">
+    <div class="background-buttons-panel">
+      <button
+        *ngFor="let thumbnail of mapThumbnails"
+        (click)="switchBackgroundLayer(thumbnail.id)"
+        mat-raised-button
+        class="background-button"
+        [matTooltip]="thumbnail.title"
+        matTooltipPosition="left">
+        <img width="60" height="60" [src]="thumbnail.url"/>
+      </button>
+    </div>
+
+  </ng-container>
+
+  <div class="overlay">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+ALTER TABLE intrang
+ALTER COLUMN indatatyp DROP NOT NULL;
+
+ALTER TABLE intrang
+ALTER COLUMN indatatyp DROP DEFAULT;

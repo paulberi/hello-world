@@ -1,0 +1,122 @@
+<div class="info-button-container">
+  <button class="infoButton" mat-icon-button (click)="openDialog()"
+          matTooltip="Se vilka skyddsformer som kontrollerats"
+          aria-label="Knapp för att se vilka skyddsformer som kontrollerats">
+    <mat-icon>info</mat-icon>
+  </button>
+</div>
+
+<div style="padding-top: 1vh;" *ngIf="!resultat && !error">
+  Inga resultat har hämtats för den här fastigheten
+</div>
+<div *ngIf="error"><span style="color: red">{{error.felbeskrivning}}</span></div>
+<div *ngIf="resultat">
+  <div style="padding-top: 1vh;" *ngIf="dataSource.length == 0">
+    Fastigheten saknar skyddade områden.
+  </div>
+  <div class="skyddade-omraden-container" *ngIf="dataSource.length > 0">
+
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+      <ng-container matColumnDef="skyddsform">
+        <th mat-header-cell *matHeaderCellDef> Skyddsform </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon>{{expandedElement === element ? 'expand_more' : 'chevron_right'}}</mat-icon>
+          <span matTooltipClass="so-tooltip" appShowIfTruncated [matTooltip]="rowName(element)">{{rowName(element)}}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="totalAreal">
+        <th mat-header-cell *matHeaderCellDef> Areal </th>
+        <td mat-cell *matCellDef="let element"> {{element["totalAreal"] < 0.1 ? '< 0.1' : element["totalAreal"] | number:'1.0-1':'sv'}} ha</td>
+      </ng-container>
+
+      <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+      <ng-container matColumnDef="expandedDetail">
+        <td class="expanded-cell" mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+          <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+            <table class="nested-table">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Namn</th>
+                <th>Areal</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let omrade of element.skyddadeOmraden">
+                <td *ngIf="omrade.url; else elseBlock"><a [href]="omrade.url" target="_blank">{{omrade.id}}</a></td>
+                <ng-template #elseBlock>
+                  <td>{{omrade.id}}</td>
+                </ng-template>
+                <td>{{omrade.namn}}</td>
+                <td>{{omrade.areaHa < 0.1 ? '< 0.1' : omrade.areaHa | number:'1.0-1':'sv'}} ha</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+          class="element-row"
+          [class.expanded-row]="expandedElement === element"
+          (click)="expandedElement = expandedElement === element ? null : element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+    </table>
+    
+    <div id="wrapper-areal-all">
+      <div id="title-areal-all">Total areal:</div>
+      <div id="areal-all">{{totalAreaAlla | number:'1.0-1':'sv'}} ha</div>
+    </div>
+
+    <div class="info-button-container">
+      <button class="infoButton" mat-icon-button (click)="openDialogTotalAreal()"
+              matTooltip="Beskrivning av total areal"
+              aria-label="Knapp för att se vilka skyddsformer som kontrollerats">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+
+    <div class="diagram">
+      <ngx-charts-bar-vertical
+        [results]="chartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [animations]="false"
+        [showYAxisLabel]="true"
+        [view]="[diagramWidth, 250]"
+        [yAxisLabel]="'Areal (ha)'">
+        <ng-template #tooltipTemplate let-model="model">
+          <span class="tooltip-label">{{model.name}}</span>
+          <span class="tooltip-val">{{model.value | number:'1.0-1':'sv' }} ha</span>
+        </ng-template>
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
+</div>
+
+<ng-template #dialogTemplate let-kontroll>
+  <div class="flex-container">
+    <p>Följande skyddsformer har kontrollerats:</p>
+    <ul>
+      <li *ngFor="let skyddsform of kontroll">
+        {{skyddsform.skyddsform}}
+      </li>
+    </ul>
+
+    <button mat-raised-button (click)="closeDialog()">Stäng</button>
+  </div>
+</ng-template>
+
+<ng-template #dialogTemplateTotalAreal let-kontroll>
+  <div class="flex-container">
+    <p>Total areal</p>
+    <td class="info-text">
+        Skyddsformer på fastigheter kan överlappa varandra. Total areal visar hur stor del som berörs av skyddsformer.
+    </td>
+    <button mat-raised-button (click)="closeDialog()">Stäng</button>
+  </div>
+</ng-template>

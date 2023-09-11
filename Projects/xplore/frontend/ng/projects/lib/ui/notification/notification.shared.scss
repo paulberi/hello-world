@@ -1,0 +1,18 @@
+@import "~notyf/notyf.min.css";
+
+/* Färger på notifikationer */
+.xp-notification-error {    
+  background-color: var(--error) !important;
+  color: var(--on-error) !important;
+
+  .notyf__icon--error {
+      background-color: var(--on-error) !important;
+      color: var(--error) !important;
+  }
+}
+.xp-notification-success {    
+  background-color: var(--accent) !important;    
+  .notyf__icon--success {
+      color: var(--accent) !important;
+  }
+}

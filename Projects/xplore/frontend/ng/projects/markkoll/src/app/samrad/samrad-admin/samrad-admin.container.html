@@ -1,0 +1,11 @@
+<mk-samrad-admin-ui *ngIf="loadingDone"
+                [loadingDone]="loadingDone"
+                [projektId]="projektId"
+                [projektTyp]="projektTyp"
+                [projektnamn]="projektnamn$ | async"
+                [samradProjekt]="samradProjekt"
+                [markkollProjekt]="markkollProjekt"
+                [kundId]="kundId"
+                [kundInformation]="kundInformation"
+                (updateSamradx)="updateSamrad($event)"
+></mk-samrad-admin-ui>

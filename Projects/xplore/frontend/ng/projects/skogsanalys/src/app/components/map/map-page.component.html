@@ -1,0 +1,70 @@
+<app-shell #appShell [theme]="'metria-dark-theme'" [loginRequired]="false"
+           [leftPanelTemplateRef]="leftPanel"
+           [rightPanelTemplateRef]="rightPanel"
+           [leftBottomPanelTemplateRef]="leftBottomPanel"
+           [rightBottomPanelTemplateRef]="rightBottomPanel"
+           [miscTemplateRef]="misc"
+           [externalInitalization]="true"
+>
+</app-shell>
+
+<ng-template #leftPanel>
+  <xp-search-panel default="Fastighet" selectType="radio" [searchResultTemplate]="appShell.isSmallDevice() ? empty : searchResultPanelTemplate">
+    <xp-search-type name="Adress">
+      <xp-search-address></xp-search-address>
+    </xp-search-type>
+    <xp-search-type name="Fastighet">
+      <xp-search-fastighet></xp-search-fastighet>
+    </xp-search-type>
+  </xp-search-panel>
+  <xp-collapsable-info-panel [infoPanelTemplateRef]="infoPanelTemplate"></xp-collapsable-info-panel>
+  <xp-analysis-panel [appShellComponent]="appShell" left-panel id="analysis-info-panel"></xp-analysis-panel>
+</ng-template>
+
+<ng-template #leftBottomPanel>
+  <xp-navigation-toolbar [config]="navigationToolbarConfig" id="navigation-toolbar" class="toolbar"></xp-navigation-toolbar>
+  <xp-background-buttons-panel></xp-background-buttons-panel>
+</ng-template>
+
+<ng-template #rightBottomPanel>
+  <xp-menu>
+    <button mat-menu-item (click)="appShell.logOut()">Logga ut {{appShell.user?.claims.email}}</button>
+    <button mat-menu-item (click)="appShell.share()">Dela karta</button>
+    <button mat-menu-item (click)="appShell.export('Skogsanalys')">Exportera karta</button>
+    <button mat-menu-item (click)="appShell.help()">Hjälp</button>
+    <button mat-menu-item (click)="appShell.contact()">Kontakt</button>
+    <button mat-menu-item (click)="appShell.infoFastighetsgrans()">Information om fastighetsgränser</button>
+  </xp-menu>
+</ng-template>
+
+<ng-template #rightPanel>
+  <xp-layer-panel id="layer-panel" [specialMapKeyTemplateRef]="layerPanelBottomTemplate"
+                  (layerChange)="appShell.map.onLayerChange($event)"
+                  (collapsedStateUpdate)="appShell.setRightPanelClosed($event)">
+  </xp-layer-panel>
+</ng-template>
+
+<ng-template #layerPanelBottomTemplate>
+</ng-template>
+
+<ng-template #misc>
+  <xp-draggable-panel #bottomPanel>
+    <xp-info-panel [infoPanelTemplateRef]="infoPanelTemplate" (shouldOpen)="bottomPanel.expandToHeight(180)"></xp-info-panel>
+  </xp-draggable-panel>
+</ng-template>
+
+<ng-template #infoPanelTemplate>
+  <ng-container *ngTemplateOutlet="appShell.isSmallDevice() ? searchResultPanelTemplate : empty"></ng-container>
+  <h3 style="margin-bottom: 0">Platsinfo</h3>
+  <!-- Funktion borttagen enligt XP-240
+  <xp-adress-panel></xp-adress-panel>
+  -->
+  <xp-coordinate-panel></xp-coordinate-panel>
+</ng-template>
+
+<ng-template #searchResultPanelTemplate>
+  <xp-feature-info-panel></xp-feature-info-panel>
+  <xp-fsok-panel></xp-fsok-panel>
+</ng-template>
+
+<ng-template #empty></ng-template>

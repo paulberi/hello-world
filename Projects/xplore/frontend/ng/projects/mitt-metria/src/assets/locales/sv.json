@@ -1,0 +1,140 @@
+{
+  "mm": {
+    "appShell": {
+      "start": "Start",
+      "orders": "Beställningar"
+    },
+    "common": {
+      "appName": "Mitt Metria",
+      "salesperson": "Säljare",
+      "orderId": "Ordernummer",
+      "shippingAddress": "Leveransadress",
+      "cancel": "Avbryt",
+      "firstName": "Förnamn",
+      "lastName": "Efternamn",
+      "mittMetriaBackground": "Mitt Metria Bakgrund"
+    },
+    "forms": {
+      "add": "Lägg till",
+      "fieldMandatory": "Fältet är obligatoriskt",
+      "enterAtLeast": "Vänligen ange minst",
+      "enterMax": "Vänligen ange max",
+      "dropzoneText": "Ladda upp en zip-fil",
+      "enterValueBetween": "Ange ett värde som ligger mellan {{ min }} och {{ max }}",
+      "minGreaterThanMaxError": "Värdet för Min får inte vara större än Max",
+      "invalidEmail": "Ange en giltig e-post",
+      "customerNotFound": "Kunden finns inte i systemet, kontrollera att angiven epost är korrekt eller skapa ny kund nedan.",
+      "invalidSalesforceOrderNumber": "Ordernummer från Salesforce anges med 8 siffror",
+      "loadingFile": "Laddar fil",
+      "changeFile": "Byt fil"
+    },
+    "cart": {
+      "added": "Du har lagt till:",
+      "emptyOrderMessage": "Fyll i beställningsformuläret till vänster för att börja lägga en beställning.",
+      "removeOrderLine": "Ta bort orderrad"
+    },
+    "createOrder": {
+      "createOrder": "Lägg beställning",
+      "placeOrder": "Skicka beställning",
+      "cancelOrder": "Avbryt beställning",
+      "ongoingOrder": "Pågående beställning",
+      "customerInformation": "Kunduppgifter",
+      "createCustomer": "Skapa kund",
+      "orderIdFromSalesforce": "Ordernummer hämtar du från Salesforce",
+      "productInformation": "Produktuppgifter",
+      "product": "Produkt",
+      "productVariant": "Utsnitt",
+      "chooseProduct": "Välj produkt",
+      "chooseProductVariant": "Välj utsnitt",
+      "errorGeneratingForm": "Hela beställningsformuläret kunde inte genereras för att typen {{ key }} hanteras ej."
+    },
+    "orderHistory": {
+      "myOrders": "Mina ordrar",
+      "allOrders": "Alla beställningar",
+      "noOrders": "Oops.. här var det tomt",
+      "orderId": "Order ID",
+      "salesforceId": "Salesforce ID",
+      "date": "Datum",
+      "state": "Status",
+      "price": "Pris",
+      "receipt": "Kvitto",
+      "orderAdmin": "Beställning",
+      "orderCustomer": "Order",
+      "orderPlacedBySalesperson": "Lagd av säljare",
+      "done": "Klart",
+      "producing": "Produceras",
+      "orderCancelled": "Order avbruten",
+      "id": "ID",
+      "order": "Beställning",
+      "customer": "Kund"
+    },
+    "services": {
+      "myServices": "Mina abonnemang",
+      "informationAboutService": "Information om produkten",
+      "noServices": "Du abonnerar för tillfället inte på någon produkt från Metria"
+    },
+    "products": {
+      "header": "Produkter",
+      "noProducts": "Oops.. här var det tomt",
+      "loadMore": "Visa fler produkter"
+    },
+    "filter": {
+      "searchTitle": "Sök i hela vårt utbud",
+      "searchPlaceholder": "Namn eller nyckelord",
+      "categoryFilterTitle": "Filter"
+    },
+    "productPage": {
+      "startOrder": "Påbörja beställning",
+      "noProductDescription": "Vi jobbar på innehåll till denna produktsida. Tills dess, om du har några frågor kontakta info@metria.se",
+      "productDescription": "Produktbeskrivning",
+      "documents": "Dokumentation"
+    },
+    "configuration": {
+      "errorMessage": "Produkten går tyvärr inte att beställa just nu, prova igen om en stund.",
+      "yourMapProductHeader": "Din kartprodukt"
+    },
+    "configurationTypeA": {
+      "chooseArea": "Börja med att välja det område du är intresserad av:",
+      "choosePredefinedArea": "Välj fördefinierat område",
+      "or": "eller",
+      "next": "Gå vidare",
+      "back": "Tillbaka",
+      "chooseReferenssystem": "Välj vilket referenssystem du vill använda:",
+      "chooseLeveransformat": "Välj vilket leveransformat du vill använda:",
+      "choose": "Välj",
+      "referenssystemDescription": "<p>SWEREF 99 är det nationella referenssystemet för lägesbestämning i 3D och i plan.</p><p>För att SWEREF 99 ska kunna nyttjas som referenssystem i plan förutsätts en kartprojektion. För små- respektive storskaliga tillämpningar har därför följande officiella kartprojektioner definierats:</p><p>– En nationell projektionszon benämnd SWEREF 99 TM.<br />– Tolv lokala projektionszoner, som betecknas efter medelmeridianens avstånd från Greenwich enligt modellen SWEREF 99 dd mm (där dd anger grader och mm minuter).<br/ >– Kartografiska 2D-koordinater i SWEREF 99 anges med Northing (N) och Easting (E) i en Transversal Mercatorprojektion.</p><p>Mer information om referenssystem och projektioner finns i HMK - Handbok i mät- och kartfrågor</p>",
+      "leveransformatDescription": "<h3>Rasterformat</h3><h4>JPEG</h4><p>Ett komprimerat bildformat som går att läsa i de flesta bildhanteringsprogram. Kompressionen innebär att bilden har något sämre datakvalitet än källdata, men tar i stället mindre plats på disk och är mer lätthanterligt.</p><h4>TIFF</h4><p>Tiff är okomprimerat och därför större i storlek men också med ett större färgdjup och högre datakvalitet än jpeg.</p><h4>KMZ</h4><p>Används med Google Earth och är ett zippat format, innehåller i våra leveranser både en tiff- (själva kartan) och en kml-fil (för georeferering).</p><h3>Vektorformat</h3><h4>Shape</h4><p>Shape är ett vektorformat utvecklat av ESRI som innehåller geometrier ocht illhörande attributinformation.</p><h4>MapInfo</h4><p>MapInfo är ett vektorformat och även en programvara med samma namn som läser MapInfo-filerna.</p><h4>DWG</h4><p>DWG är ett vektorformat för CAD-system, där fastighetskartan är den enda produkt vi levererar med formatet.</p><h3>Höjddataformat</h3><h4>ASCIIGRID/ASCIITAB</h4><p>Höjdvärden levereras antingen i grid eller tabformat och baseras på data från flygskanning av den nationella höjdmodellen (NH).</p><h4>LAS</h4><p>Innehåller punktmolnsdata från flygskanning av den nationella höjdmodellen (NH) med en genomsnittlig punkttäthet på 0.5–1 punkt/meter.</p>",
+      "stepperTitle": "Skapa din kartprodukt i 3 enkla steg!"
+    },
+    "configurationTypeB": {
+      "fastighetsbeteckningTitle": "Exempel: Så kan en fastighetsbeteckning se ut",
+      "fastighetsbeteckningDescription": "En fastighetsbeteckning består av tre eller fyra olika delar: kommunnamn, traktnamn, blocknummer och ofta ett enhetsnummer. Ett exempel på en fiktiv fastighetsbeteckning kan se ut så här: Göteborg Nordstaden 17:5.</br></br> Göteborg är i det här fallet kommunen, Nordstaden orten eller trakten, 17 blocknumret och 5 enhetsnumret.</br></br> I det här exemplet har stamfastigheten styckats upp i fem delar. Om den här stamfastigheten skulle delas upp ytterligare skulle den nybildade fastigheten få första lediga enhetsnummer, och alltså få beteckningen Göteborg Nordstaden 17:6.",
+      "label": "Välj den fastighet du är intresserad av:",
+      "placeholder": "Sök fastighetsbeteckning",
+      "stepperTitle": "Skapa din rapport"
+    },
+    "stepper": {
+      "cancelOngoing": "Avbryt påbörjad beställning"
+    },
+    "checkout": {
+      "process": {
+        "checkout": "Kassa",
+        "approve": "Jag godkänner",
+        "terms": "licensvillkoren",
+        "forMetriaProducts": "för Metrias produkter.",
+        "deliveryInformation": "Leveransinformation",
+        "choosePaymentMethod": "Välj betalsätt",
+        "invoiceRef": "Ange fakturamärkning, 2-16 tecken.",
+        "totalPrice": "Totalbelopp",
+        "vat": "Varav moms",
+        "pay": "Betala"
+      },
+      "confirmation": {
+        "titel": "Tack för din order!",
+        "confirmedOrder": "Din order är bekräftad.",
+        "confirmationEmail": "Du kommer att få ett bekräftelsemejl inom kort.",
+        "findOrder": "Du hittar din order under "
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<layer>
+  <name>gv_informationslinjer_mb</name>
+  <id>LayerInfoImpl--44886edc:170678e9d2f:a97</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--44886edc:170678e9d2f:a96</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

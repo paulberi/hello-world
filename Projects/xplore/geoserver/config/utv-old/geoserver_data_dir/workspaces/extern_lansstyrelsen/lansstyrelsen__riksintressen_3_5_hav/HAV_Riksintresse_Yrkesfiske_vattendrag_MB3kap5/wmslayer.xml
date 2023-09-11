@@ -1,0 +1,59 @@
+<wmsLayer>
+  <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-696e</id>
+  <name>HAV_Riksintresse_Yrkesfiske_vattendrag_MB3kap5</name>
+  <nativeName>HAV_Riksintresse_Yrkesfiske_vattendrag_MB3kap5</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--16ee1b80:174d9943373:-6993</id>
+  </namespace>
+  <title>HAV_Riksintresse_Yrkesfiske_vattendrag_MB3kap5</title>
+  <description>Metadata: https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/GetMetaDataById?id=ac5a3bfc-c13a-46fd-b4fd-eb9524f1bd14</description>
+  <abstract>Metadata: https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/GetMetaDataById?id=ac5a3bfc-c13a-46fd-b4fd-eb9524f1bd14</abstract>
+  <nativeCRS class="projected">PROJCS[&quot;SWEREF99 14 15&quot;, 
+  GEOGCS[&quot;SWEREF99&quot;, 
+    DATUM[&quot;SWEREF99&quot;, 
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6619&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4619&quot;]], 
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 14.25], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 1.0], 
+  PARAMETER[&quot;false_easting&quot;, 150000.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;3012&quot;]]</nativeCRS>
+  <srs>EPSG:3009</srs>
+  <nativeBoundingBox>
+    <minx>58792.65795504814</minx>
+    <maxx>221842.49881659384</maxx>
+    <miny>6203006.79598798</miny>
+    <maxy>6835451.012061122</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>13.280744395679996</minx>
+    <maxx>16.35436578028993</maxx>
+    <miny>55.941451917666626</miny>
+    <maxy>61.627669267788</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="OTHER_SRS">EPSG:4619,EPSG:102100,EPSG:3857,EPSG:3008,EPSG:3009,CRS:84,EPSG:3010,EPSG:3021,EPSG:3006,EPSG:3017,EPSG:4326,EPSG:3007,EPSG:3018,EPSG:3015,EPSG:2400,EPSG:3016,EPSG:3013,EPSG:3014,EPSG:3011,EPSG:3012</entry>
+  </metadata>
+  <store class="wmsStore">
+    <id>WMSStoreInfoImpl--16ee1b80:174d9943373:-6977</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <forcedRemoteStyle></forcedRemoteStyle>
+  <preferredFormat>image/png</preferredFormat>
+  <metadataBBoxRespected>false</metadataBBoxRespected>
+</wmsLayer>

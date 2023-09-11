@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_golfbanor</name>
+  <id>LayerInfoImpl-b025cbac:5110e6477f5:-b49a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-11676dd8:846e0eb34bd:-bb41</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

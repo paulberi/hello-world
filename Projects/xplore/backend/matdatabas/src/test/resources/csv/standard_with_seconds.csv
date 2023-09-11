@@ -1,0 +1,4 @@
+Mätobjekt;Mätningstyp;Datum och tid;Över/under detektionsgräns;Uppmätt värde;Beräknat värde;Enhet (uppmätt värde);Enhet (beräknat värde);Felkod;Kommentar
+matobjektX;Nivå;2020-02-03 13:23:00;>;23.5;10.7;m;;Ok;Kommentar
+matobjektY;Nivå;2020-02-04 13:23:00;!z;23x,50;;Mm;;Ok;Kommentar
+matobjektZ;Nivå;2020-02-05 13:23:00;>;;;m;;Hinder;Kommentar

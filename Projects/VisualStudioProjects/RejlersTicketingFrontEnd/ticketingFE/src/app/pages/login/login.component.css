@@ -1,0 +1,29 @@
+.wrapper {
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.fadeIn {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.fourth {
+    background-color: green;
+    width: 70%;
+    margin-left: 27%;
+}
+
+#formContent {
+    background-color: #2b3a55;
+    color: white;
+    height: 500px;
+    border-radius: 5%;
+}
+
+form {
+    margin-left: 30%;
+    margin-top: 20%;
+}

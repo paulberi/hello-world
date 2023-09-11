@@ -1,0 +1,26 @@
+<mat-card class="loggbok">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-divider class="divider"></mat-divider>  
+  <mat-card-content>
+    <ng-container *ngIf="loggbok && loggbok.length > 0 else noItems">
+      <div class="item" *ngFor="let logg of loggbok; last as last">
+        <h3 class="title">{{ logg.title }}</h3>
+        <div class="text mat-small">{{ logg.text }}</div>
+        <div class="created-date mat-small">{{ logg.createdDate | date: 'short' }}</div>
+        <mat-divider [inset]="true" class="divider" *ngIf="!last"></mat-divider>
+      </div>      
+    </ng-container>
+  </mat-card-content>
+  <ng-template [ngIf]="loggbok && loggbok.length > 0 && isShowMoreVisible">
+    <mat-divider [inset]="true" class="divider"></mat-divider>  
+    <mat-card-actions align="end">
+      <button class="show-more-button" mat-button (click)="onShowMore.emit()">
+        {{ showMoreTitle }}
+      </button>
+    </mat-card-actions>
+  </ng-template>
+</mat-card>
+
+<ng-template #noItems><p class="empty-text mat-small">{{ emptyText }}</p></ng-template>

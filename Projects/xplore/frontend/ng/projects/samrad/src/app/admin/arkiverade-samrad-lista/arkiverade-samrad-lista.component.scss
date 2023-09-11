@@ -1,0 +1,55 @@
+.main-content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#form-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  float: right;
+}
+
+.more {
+  float: right;
+}
+
+.mat-column-samråd {
+  width: 28%;
+}
+
+.mat-column-more {
+  width: 18%;
+}
+
+.click-column {
+  cursor: pointer;
+}
+
+#samradlist th {
+  font-size: 13px;
+}
+
+#samradlist tr {
+  height: 4.5em;
+}
+
+#samradlist tr.highlight {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+#samradlist tr.highlight span {
+  color: var(--primary);
+}
+
+#samradlist span {
+  color: var(--primary-variant);
+}
+
+.mat-select {
+  padding-left: 0.5em;
+}
+
+.mat-h1 {
+  float: left;
+}

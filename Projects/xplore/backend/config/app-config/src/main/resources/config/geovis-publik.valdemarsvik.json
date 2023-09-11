@@ -1,0 +1,211 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "https://valdemarsvik.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Lantmäteriet, © Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ]
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/valdemarsvikext/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "valdemarsvikext:karta_"
+  },
+  "zoom": 7,
+  "center": [
+    163144,
+    6452598
+  ],
+  "extent": [
+    -264152.67,
+    6111956.69,
+    455221.06,
+    7684350.92
+  ],
+  "thumbnailCoordinates": [
+    156078,
+    6453700
+  ],
+  "groups": [
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "import": "metria:MetriaFastighetPlus@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks kommun",
+      "visible": true
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks kommun (nedtonad)"
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Valdemarsviks ortofoto"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3010",
+      "alias": "urn:ogc:def:crs:EPSG:3010",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=16.5 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -264152.67,
+        6111956.69,
+        455221.06,
+        7684350.92
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "tileSize": [
+    256,
+    256
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Rubrik",
+          "type": "title",
+          "minLength": 2,
+          "maxLength": 80,
+          "linkRef": "title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "maxLength": 254,
+          "inputType": "text-area",
+          "hideLabel": true
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3010",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

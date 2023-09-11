@@ -1,0 +1,56 @@
+<div id="title-background" class="mat-typography"></div>
+
+<div class="row justify-center">
+  <div class="col-11 main-content">
+        <h1 class="mat-h1">{{ "mk.projektlista.allProjects" | transloco }}</h1> 
+        <div id="form-controls">
+          <mk-search-input placeholder="{{'mk.projektlista.projectSearch' | transloco }}"
+                          (searchChange)="onSearchChange($event)">
+          </mk-search-input>
+        </div>
+    <xp-paginated-table [page]="projektPage"
+                        matSort
+                        [matSortActive]="active"
+                        [matSortDirection]="direction"
+                        matSortDisableClear
+                        (matSortChange)="onSortChange($event)"
+                        (pageChange)="pageChange($event)"
+                        id="projektlista">
+      <ng-container matColumnDef="namn">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ "mk.projektlista.projectName" | transloco }}</th>
+        <td mat-cell *matCellDef="let elem">
+          <span class="mat-h2">{{ elem.namn }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="projektTyp">
+        <th mat-header-cell *matHeaderCellDef>{{ "mk.projektlista.projectType" | transloco }}</th>
+        <td mat-cell *matCellDef="let elem">
+          <span class="mat-h2">{{ elem.projektTyp | prefix:"mk.projekttyp." | transloco }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="skapadDatum">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header id="datumcontainer">{{ "mk.projektlista.createdDate" | transloco }}</th>
+        <td mat-cell *matCellDef="let elem">
+          <span class="mat-h2">{{ elem.skapadDatum | date:'yyyy-MM-dd' }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="more">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let elem">
+          <mat-icon class="more">chevron_right</mat-icon>
+        </td>
+      </ng-container>
+      <!--          [queryParams]="{projektTyp: '{}'}", row.projekttyp-->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"
+          (click)="navigateToProjekt(row)"
+          class="click-column"
+          (mouseout)="highlightRow(0)"
+          (mouseover)="highlightRow(row.id)"
+          [ngClass] = "{'highlight' : row.id === selectedRow}"></tr>
+    </xp-paginated-table>
+  </div>
+</div>

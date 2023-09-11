@@ -1,0 +1,135 @@
+@import "../xp-breakpoints.scss";
+
+.mat-sidenav-content {
+  display: flex;
+}
+
+.mat-sidenav-content,
+.mat-sidenav-container {
+  color: var(--on-background);
+  background-color: var(--background);
+}
+
+//Header
+#toolbar {
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.header-mobile {
+  gap: 16px;
+
+  a {
+    height: 24px;
+  }
+
+  h1 {
+    font-size: 1.125rem;
+  }
+
+  #header-logo-mobile {
+    width: 32px;
+  }
+}
+
+//Sidenav & hamburger menu
+.layout-sidenav {
+  width: 326px;
+  background-color: var(--primary);
+  font-size: 0.875rem;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 0.875rem;
+  }
+
+  li {
+    gap: 16px;
+    color: var(--on-primary);
+    padding: 0 12px;
+
+    &.active {
+      a {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .menu-item {
+    color: var(--on-primary);
+    font-size: 0.875rem;
+    padding: 16px 8px;
+  }
+
+  .hamburger-menu-header {
+    justify-content: space-between;
+    width: 100%;
+    color: var(--on-primary);
+    padding: 16px 12px;
+
+    .mat-icon {
+      font-size: 1.125rem;
+    }
+  }
+
+  .menu-items-mobile {
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .mobile-nav-border {
+    border-bottom: 0.5px solid var(--666666-60);
+  }
+
+  .icon-mobile {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+//Cart
+.cart-sidenav {
+  width: 326px;
+}
+
+@media screen and #{$xp-breakpoints-tablet-max} {
+
+  //Menu & icons
+  .menu-icons {
+    margin: 0;
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .mat-icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  //Footer
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    padding-left: 16px;
+  }
+
+  .menu-icons {
+    margin-left: 0;
+  }
+
+  h3,
+  h4,
+  p,
+  a {
+    font-size: 1rem;
+  }
+}

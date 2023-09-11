@@ -1,0 +1,6 @@
+FROM nginx:1.13.9-alpine
+
+COPY common /usr/share/nginx/html/
+COPY mullsjo /usr/share/nginx/html/
+
+CMD ["nginx", "-g", "daemon off;"]

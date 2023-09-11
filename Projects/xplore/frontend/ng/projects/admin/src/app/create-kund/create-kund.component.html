@@ -1,0 +1,101 @@
+<div class="imgcontainer"></div>
+<div class="wrapper">
+  <div class="row">
+    <p id="tillbaka"><a (click)="back.emit()"><mat-icon inline="true">chevron_left</mat-icon> {{ "xp.common.back" | transloco }}</a></p>
+  </div>
+  <div class="top row">
+    <h1>{{ "adm.kundvy.createKund" | transloco }}</h1>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <form [formGroup]="form" *ngIf="kunder" autocomplete="off">
+        <div class="row">
+          <h2>{{ 'adm.kundvy.kundinformation' | transloco }}</h2>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <mat-label>{{ 'adm.createKund.name' | transloco }}</mat-label>
+            <input matInput
+                   formControlName="namn"
+                   type="text"/>
+            <mat-error *ngIf="form.controls.namn.hasError('required')">
+              {{"xp.common.fieldMandatory" | transloco}}
+            </mat-error>
+            <mat-error *ngIf="form.controls.namn.hasError('alreadyExists')">
+              {{ 'adm.createKund.nameAlreadyExists' | transloco }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>{{ 'adm.createKund.organisationalNumber' | transloco }}</mat-label>
+            <input matInput
+                   formControlName="organisationsnummer"
+                   type="text"/>
+            <mat-error *ngIf="form.controls.organisationsnummer.hasError('required')">
+              {{"xp.common.fieldMandatory" | transloco}}
+            </mat-error>
+            <mat-error *ngIf="form.controls.organisationsnummer.hasError('alreadyExists')">
+              {{ 'adm.createKund.nameAlreadyExists' | transloco }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <mat-label>{{ 'adm.createKund.email' | transloco }}</mat-label>
+            <input matInput
+                   formControlName="epost"
+                   type="email"/>
+            <mat-error *ngIf="form.controls.epost.hasError('email')">{{ 'adm.createKund.invalidEmail' | transloco }}</mat-error>
+            <mat-error *ngIf="form.controls.epost.hasError('required')">
+              {{"xp.common.fieldMandatory" | transloco}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <mat-label>{{ 'adm.createKund.phonenumber' | transloco }}</mat-label>
+            <input matInput
+            formControlName="telefon"
+            type="text"/>
+            <mat-error *ngIf="form.controls.telefon.hasError('required')">
+              {{"xp.common.fieldMandatory" | transloco}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <mat-label>{{ 'adm.createKund.contactPerson' | transloco }}</mat-label>
+            <input matInput
+            formControlName="kontaktperson"
+            type="text"/>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="row justify-end create-more">
+              <mat-checkbox color="primary" formControlName="createMore">{{ 'adm.createKund.createOneMore' | transloco }}</mat-checkbox>
+            </div>
+            <div class="row justify-end">
+              <button mat-flat-button color="primary" type="submit" [disabled]="!canSave()" (click)="save()">
+                <span *ngIf="!form.controls.createMore.value">{{ 'adm.createKund.saveAndExit' | transloco }}</span>
+                <span *ngIf="form.controls.createMore.value">{{ 'adm.createKund.saveAndContinue' | transloco }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-6">
+      <div class="kundlista">
+        <h2>
+          {{ 'adm.createKund.youHaveAdded' | transloco }}
+        </h2>
+        <div *ngFor="let kund of nyaKunder">
+          <h3>{{ kund.namn }}</h3>
+          <p class="kundinfo">{{ kund.epost }}</p>
+          <p class="kundinfo">{{ kund.telefon }}</p>
+          <mat-divider></mat-divider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

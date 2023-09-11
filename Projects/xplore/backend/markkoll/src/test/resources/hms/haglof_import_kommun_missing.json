@@ -1,0 +1,78 @@
+{
+  "Object": {
+    "Name": "Långsele",
+    "Id": "1",
+    "Nr": "Projektnummer",
+    "Littera": "Littera",
+    "Date": "2022-02-22 22:22:22.22",
+    "PerformedBy": "Christoffer Karlsson",
+    "Properties": [
+      {
+        "Name": "Fastighet",
+        "Nr": "10",
+        "Municipal": "",
+        "County": "VÄSTRA GÖTALAND",
+        "Status": "Försäljning",
+        "StatusId": 3,
+        "TypeOfAction": 2,
+        "Evaluation": {
+          "Landvalue": 9769,
+          "Rotvalue": 5651,
+          "Woodvalue": 6451,
+          "Earlycutvalue": 5591,
+          "Highcutvalue": 4511,
+          "Stormdryvalue": 446,
+          "Bordertreevalue": 33,
+          "Voluntaryvalue": 4242,
+          "Costvalue": 800,
+          "Volume": 17.03,
+          "Area": 1.3,
+          "Numtrees": 48,
+          "Groupid": "10",
+          "Othercompensation": {
+            "Othertotal": 7227,
+            "Fieldobstacle": {
+              "Description": "Stolpe med Staglinor",
+              "Value": 5000.01,
+              "Id": 5
+            },
+            "Forestline": {
+              "Description": "Jordkabel",
+              "Value": 500.01,
+              "Id": 6
+            },
+            "Merchwood": {
+              "Description": "Tillväxt",
+              "Value": 727.41,
+              "Id": 4
+            },
+            "Otherintrusion": {
+              "Description": "Flytt av stuga",
+              "Value": 1000.01,
+              "Id": 7
+            }
+          }
+        },
+        "Owners": [
+          {
+            "Contact": "true",
+            "OrgNo": "19860304-8979",
+            "Name": "Christoffer Karlsson",
+            "Adress": "",
+            "Zip": "191 97",
+            "City": "SOLLENTUNA",
+            "Phonehome": "000-000-000",
+            "Phonework": "0534-190 48",
+            "Mobilephone": "0123-456",
+            "Email": "en@email.se",
+            "Share": "0,333",
+            "Sharetext": "1/3",
+            "Bankgiro": "Bankgiro",
+            "Plusgiro": "Plusgiro",
+            "Bankaccount": "Bankaccount"
+          }
+        ]
+      }
+    ]
+  }
+}

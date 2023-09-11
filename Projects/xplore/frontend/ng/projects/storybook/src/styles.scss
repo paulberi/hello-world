@@ -1,0 +1,68 @@
+@import "../../lib/ui/theme/themes/xp-theme.scss";
+
+.align-center {
+  text-align: center;
+}
+
+#startsida-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.pageEmpty {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+}
+
+.accent {
+  color: var(--accent);
+  font-size: 14px !important;
+}
+
+.icons {
+
+  .icon {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    margin: 15px 15px;
+    cursor: pointer;
+  }
+
+  .material-icons-outlined,
+  .material-icons {
+    font-size: 35px;
+    padding: 8px 0;
+    min-width: 90px;
+    border-bottom: 2px solid lightgrey;
+  }
+
+  .icon-name {
+    display: block;
+    padding: 7px 5px;
+    font-size: 12px !important;
+    max-width: 75px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+.icon:hover {
+  border: 2px solid var(--accent);
+
+  .material-icons-outlined,
+  .material-icons {
+    border-bottom: 2px solid var(--accent);
+  }
+}
+
+.sbdocs-a {
+  color: var(--accent) !important;
+}

@@ -1,0 +1,17 @@
+<layer>
+  <name>fastighet_extent</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:fastighet_extent</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:fastighet_extent</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-22 10:23:09.246 UTC</dateCreated>
+</layer>

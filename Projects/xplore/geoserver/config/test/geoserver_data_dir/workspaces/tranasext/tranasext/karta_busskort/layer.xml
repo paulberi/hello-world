@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_busskort</name>
+  <id>LayerInfoImpl-48724e19:51ae0143c70:-935f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-6b94b621:b41215f4225:-2343</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

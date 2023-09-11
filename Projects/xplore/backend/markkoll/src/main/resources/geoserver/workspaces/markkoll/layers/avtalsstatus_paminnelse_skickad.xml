@@ -1,0 +1,17 @@
+<layer>
+  <name>avtalsstatus_paminnelse_skickad</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:avtalsstatus_paminnelse_skickad</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:avtalsstatus_paminnelse_skickad</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-17 12:20:43.63 UTC</dateCreated>
+</layer>

@@ -1,0 +1,2 @@
+ALTER TABLE avtal
+ADD COLUMN skogsfastighet BOOLEAN DEFAULT FALSE;

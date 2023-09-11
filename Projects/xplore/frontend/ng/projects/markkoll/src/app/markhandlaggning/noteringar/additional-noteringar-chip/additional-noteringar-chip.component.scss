@@ -1,0 +1,13 @@
+.additional-noteringar {
+  background-color: var(--accent);
+  color: white;
+  font-size: 18px;
+}
+
+.mat-standard-chip:hover::after {
+  opacity: 0;
+}
+
+.mat-standard-chip:focus::after {
+  opacity: 0;
+}

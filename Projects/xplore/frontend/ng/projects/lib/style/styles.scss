@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(~ol/ol.css);
+@import "../map/components/search-panel/search-field.scss";
+
+.tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #3399CC;
+  color: white;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #3399CC;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.mat-expansion-panel-no-padding .mat-expansion-panel-body {
+  padding: 0;
+}
+.mat-expansion-panel-no-padding .mat-expansion-panel-header {
+  padding-right: 8px;
+  padding-left: 0;
+  height: auto;
+}
+mat-expansion-panel-header.left-indicator .mat-expansion-indicator
+{
+  margin: 0 10px 0 2px !important;
+}
+
+.mat-form-field-narrow .mat-form-field-infix {
+  width: 90px;
+}

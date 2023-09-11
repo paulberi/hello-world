@@ -1,0 +1,38 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--44886edc:170678e9d2f:ac6</id>
+  <name>import</name>
+  <nativeName>import</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--44886edc:170678e9d2f:a8c</id>
+  </namespace>
+  <title>import</title>
+  <keywords>
+    <string>features</string>
+    <string>import</string>
+  </keywords>
+  <srs>EPSG:3006</srs>
+  <nativeBoundingBox>
+    <minx>1884030.919468062</minx>
+    <maxx>2598419.638521077</maxx>
+    <miny>545570.2009708204</miny>
+    <maxy>2007131.1390081618</maxy>
+    <crs class="projected">EPSG:3600</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-91.71097739018562</minx>
+    <maxx>-89.32534553267503</maxx>
+    <miny>30.993409608574577</miny>
+    <maxy>35.01700130756625</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--44886edc:170678e9d2f:a8d</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

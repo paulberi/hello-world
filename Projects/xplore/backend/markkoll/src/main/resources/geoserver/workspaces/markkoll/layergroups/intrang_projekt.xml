@@ -1,0 +1,134 @@
+<layerGroup>
+  <name>intrang_projekt</name>
+  <mode>SINGLE</mode>
+  <title>Intrång i projekt</title>
+  <abstractTxt>Grupplager för alla intrång i ett projekt.</abstractTxt>
+  <workspace>
+    <name>markkoll</name>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_markledning</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_luftledning</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_kabelskap</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_natstation</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_strak</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_brunn</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_markskap</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_projekt_teknikbod</name>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <name>markkoll:intrang_markledning</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_luftledning</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_kabelskap</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_natstation</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_strak</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_brunn</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_markskap</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_teknikbod</name>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-01-17 12:33:46.603 UTC</dateCreated>
+  <dateModified>2022-03-10 15:06:21.147 UTC</dateModified>
+  <layerGroupStyles>
+    <LayerGroupStyle>
+      <id>LayerGroupStyleImpl---73479fe7:1850bfa8f33:-1768</id>
+      <name>intrang_projekt_avtalskarta</name>
+      <internationalTitle/>
+      <internationalAbstract/>
+      <layers>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_markledning</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_luftledning</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_kabelskap</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_natstation</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_strak</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_brunn</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_markskap</name>
+        </published>
+        <published type="layer">
+          <name>markkoll:intrang_projekt_teknikbod</name>
+        </published>
+      </layers>
+      <styles>
+        <style>
+          <name>markkoll:intrang_markledning_avtalskarta</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_luftledning_avtalskarta</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_kabelskap</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_natstation</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_strak_avtalskarta</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_brunn</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_markskap</name>
+        </style>
+        <style>
+          <name>markkoll:intrang_teknikbod</name>
+        </style>
+      </styles>
+    </LayerGroupStyle>
+  </layerGroupStyles>
+</layerGroup>

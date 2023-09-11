@@ -1,0 +1,20 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-ffefddf:173e162d784:4973</id>
+  <name>s_1</name>
+  <description>gamaps_from_user</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-ffefddf:173e162d784:4790</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <capabilitiesURL>http://gamaps.vic-metria.nu/arcgis/services/Kob/aneby_plan/MapServer/WMSServer?</capabilitiesURL>
+  <user>vic-metria\kobwms</user>
+  <password>crypt1:Sdfi8eQmVHGDsaAUbYT+kgl9jzurRdkU</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

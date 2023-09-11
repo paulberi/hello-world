@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="../fontawesome-free-5.15.4-web 2/" rel="stylesheet">
+
+    <style>
+        .customerButtons {
+            margin-top: 200px;
+        }
+        
+        button {
+            width: 250px;
+            margin: 5px;
+            height: 30px;
+            border-radius: 5px;
+            border: transparent;
+            background-image: linear-gradient(to left, white, cyan);
+        }
+        
+        .personalPage {
+            margin-top: 200px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="credentials" id="credentials" style="display: flex; flex-direction: row;">
+        <i class="fas fa-user" style="color: green; margin-right: 30px;"></i> <span id="activeUser"></span>
+    </div>
+    <div class="customerButtons" id="customerButtons" style="display: flex; flex-direction: column;">
+        <button id="viewCars">View our cars</button>
+        <button id="rentalButton">Rent a car</button>
+        <button id="viewRentals">View your past rentals</button>
+        <button id="editRental">Lookup or Make changes to a rental</button>
+        <button id="viewUsers">View all Users</button>
+        <button id="postCar">Register a car</button>
+        <button id="editCar">Edit a car</button>
+        <button id="deleteCar">Delete a car</button>
+
+    </div>
+    <div class="personalPage" id="personalPage">
+    </div>
+    <button id="returnButton">Return</button>
+</body>
+<script>
+    $(function() {
+
+        $('#returnButton').hide();
+        $('#viewUsers').hide();
+        $('#postCar').hide();
+        $('#editCar').hide();
+        $('#deleteCar').hide();
+        checkingRole();
+        $('#viewCars').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="viewAllCars.html"></object>';
+
+        })
+        $('#rentalButton').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="renting.html"></object>';
+        })
+        $('#viewRentals').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="viewRentals.html"></object>';
+        })
+        $('#editRental').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="viewOrEditRentalById.html"></object>';
+        })
+        $('#viewUsers').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="viewAllUsers.html"></object>';
+        });
+
+        $('#postCar').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="registerCar.html"></object>';
+        });
+        $('#editCar').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="editCar.html"></object>';
+        });
+        $('#deleteCar').click(function() {
+            $('#customerButtons').hide();
+            $('#returnButton').show();
+            $('#personalPage').show();
+            document.getElementById("personalPage").innerHTML = '<object type="text/html" data="deleteCar.html"></object>';
+        });
+
+        $('#returnButton').click(function() {
+            $('#customerButtons').show();
+            $('#returnButton').hide();
+            $('#personalPage').hide();
+
+        })
+        var username = localStorage.getItem('username');
+        var userId = localStorage.getItem('userId');
+        document.getElementById('activeUser').innerHTML = username + " Id " + userId;
+    });
+
+    function checkingRole() {
+        console.log("checking roles")
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: "GET",
+            url: "http://localhost:8081/api/v1/customers",
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                console.log(data);
+                var userid = localStorage.getItem('userId');
+                console.log("checking roles " + userid);
+                data.forEach(user => {
+                    console.log("checking roles " + user.roles + user.username);
+                    if (user.userId == userid) {
+                        console.log(user);
+                        user.roles.forEach(role => {
+                            console.log(role);
+                            if (role.role === "Admin") {
+                                $('#viewUsers').show();
+                                $('#postCar').show();
+                                $('#editCar').show();
+                                $('#deleteCar').show();
+                            }
+                        })
+
+                    }
+                });
+            }
+        })
+    }
+</script>
+
+</html>

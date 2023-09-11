@@ -1,0 +1,9 @@
+<mk-projekt-behorighet-ui
+  [users]="users"
+  [originalProjektUsers$]="originalProjektUsers$"
+  [loggedInUser]="loggedInUser"
+  [createProjekt]="createProjekt"
+  [readonly]="readonly"
+  (formChange)="formChange.emit($event)"
+  (valid)="valid.emit($event)">
+</mk-projekt-behorighet-ui>

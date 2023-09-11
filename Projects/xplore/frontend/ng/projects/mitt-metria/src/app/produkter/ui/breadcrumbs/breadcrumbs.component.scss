@@ -1,0 +1,23 @@
+.divider,
+.breadcrumbs {
+    color: var(--on-background);
+    display: inline-block;
+    padding-right: 8px;
+    cursor: default;
+}
+
+.breadcrumbs {
+    text-decoration: none;
+
+    &:not(.active) {
+        cursor: pointer;
+    }
+
+    &.active {
+        font-weight: 700;
+    }
+
+    &:hover:not(.active) {
+        text-decoration: underline;
+    }
+}

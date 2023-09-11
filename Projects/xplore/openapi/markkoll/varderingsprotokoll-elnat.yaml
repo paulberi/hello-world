@@ -1,0 +1,477 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: "Värderingsprotokoll Elnät"
+  description: "Endpoints och modeller för allt som rör värderingsprotokoll för elnätsprojekt"
+
+paths:
+  '/projekt/elnat/{projektId}/avtal/{avtalId}/varderingsprotokoll':
+    get:
+      tags:
+        - avtal
+      summary: Hämta ett värderingsprotokoll för ett projekt med avtalId
+      operationId: "getElnatVarderingsprotokollWithAvtalId"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "./models/avtal.yaml#/components/parameters/avtalId"
+      responses:
+        200:
+          description: Värderingsprotokoll
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ElnatVarderingsprotokoll"
+        204:
+          description: Avtalet saknade ett värderingsprotokoll
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}':
+    get:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Hämta ett värderingsprotokoll för ett projekt
+      operationId: "getElnatVarderingsprotokoll"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      responses:
+        200:
+          description: ElnätVärderingsprotokoll
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ElnatVarderingsprotokoll"
+    put:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Uppdatera ett elnätsvärderingsprotokoll
+      operationId: "updateElnatVarderingsprotokoll"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      requestBody:
+        description: Värderingsprotokollet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ElnatVarderingsprotokoll"
+      respones:
+        200:
+          description: Värderingsprotokollet uppdaterades
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/meta':
+    put:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Uppdatera värderingsprotokollets metadata
+      operationId: "updateElnatVarderingsprotokollMetadata"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      requestBody:
+        description: Metadata.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ElnatVarderingsprotokollMetadata"
+      responses:
+        200:
+          description: Metadatan uppdaterades
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/config':
+    put:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Uppdatera värderingsprotokollets beräkningskonfiguration
+      operationId: "updateElnatVarderingsprotokollConfig"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      requestBody:
+        description: Beräkningskonfiguration.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ElnatVarderingsprotokollConfig"
+      responses:
+        200:
+          description: Beräkningskonfigurationen uppdaterades
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/prisomrade':
+    put:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Uppdatera varderingsprotokollets prisområde
+      operationId: "updateElnatPrisomrade"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+        - in: query
+          name: prisomrade
+          required: true
+          schema:
+            $ref: "#/components/schemas/ElnatPrisomrade"
+      responses:
+        200:
+          description: Prisområdet uppdaterades
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/rotnetto':
+    put:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Uppdatera rotnetto
+      operationId: "updateElnatRotnetto"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      requestBody:
+        description: Nytt rotnettovärde.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ElnatRotnetto"
+      responses:
+        200:
+          description: Rotnettovärdet uppdaterades
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/bilaga':
+    get:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Hämta de bilagor som hör till ett värderingsprotokoll
+      operationId: "getBilagor"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      responses:
+        200:
+          description: Värderingsprotokollets bilagor
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ElnatBilaga"
+    post:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Importera en bilaga till ett värderingsprotokoll
+      operationId: "addElnatBilaga"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+      requestBody:
+        description: Information om dokumentet och filen
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  description: Bilaga
+                  type: string
+                  format: binary
+                # Det här borde egentligen vara en BilagaTyp enum, men jag kan inte få encodingen
+                # till något annat än octet-stream, som OpenAPI-generatorn uppenbarligen inte
+                # klarar av att konvertera...
+                typ:
+                  type: string
+              required:
+                - file
+                - typ
+      responses:
+        200:
+          description: Den nya bilaga
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ElnatBilaga"
+
+  '/projekt/elnat/{projektId}/varderingsprotokoll/{vpId}/bilaga/{bilagaId}':
+    delete:
+      tags:
+        - elnatVarderingsprotokoll
+      summary: Ta bort en bilaga från ett värderingsprotokoll
+      operationId: "removeElnatBilaga"
+      parameters:
+        - $ref: "./models/projekt.yaml#/components/parameters/projektId"
+        - $ref: "#/components/parameters/elnatVpId"
+        - $ref: "#/components/parameters/bilagaId"
+      responses:
+        200:
+          description: Bilagan blev borttagen.
+              
+components:
+  #-------------------------------
+  # Schemas (datamodell)
+  #-------------------------------
+  schemas:
+    ElnatPunktersattning:
+      type: object
+      properties:
+        antal:
+          type: integer
+        beskrivning:
+          type: string
+        typ:
+          $ref: "#/components/schemas/ElnatPunktersattningTyp"
+    ElnatMarkledning:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        langd:
+          type: integer
+        bredd:
+          type: integer
+    ElnatSsbSkogsmark:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        langd:
+          type: integer
+        bredd:
+          type: integer
+    ElnatSsbVaganlaggning:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        langd:
+          type: integer
+        zon:
+          $ref: "#/components/schemas/ElnatZon"
+    ElnatHinderAkermark:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        ersattning:
+          type: integer
+    ElnatLedningSkogsmark:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        ersattning:
+          type: integer
+    ElnatOvrigtIntrang:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        ersattning:
+          type: integer
+    ElnatVarderingsprotokoll:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        config:
+          $ref: "#/components/schemas/ElnatVarderingsprotokollConfig"
+        metadata:
+          $ref: "#/components/schemas/ElnatVarderingsprotokollMetadata"
+        punktersattning:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/ElnatPunktersattning"
+        markledning:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/ElnatMarkledning"
+        ssbSkogsmark:
+          type: array
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/ElnatSsbSkogsmark"
+        ssbVaganlaggning:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/ElnatSsbVaganlaggning"
+        hinderAkermark:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/ElnatHinderAkermark"
+        ledningSkogsmark:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/ElnatLedningSkogsmark"
+        ovrigtIntrang:
+          type: array
+          maxItems: 2
+          items:
+            $ref: "#/components/schemas/ElnatOvrigtIntrang"
+        rotnetto:
+          type: double
+        prisomrade:
+          $ref: "#/components/schemas/ElnatPrisomrade"
+    ElnatVarderingsprotokollMetadata:
+      type: object
+      properties:
+        ledning:
+          type: string
+          default: ""
+        koncessionslopnr:
+          type: string
+          default: ""
+        varderingstidpunkt:
+          type: string
+          format: date-time
+        varderingsmanOchForetag:
+          type: string
+          default: ""
+        fastighetsnummer:
+          type: string
+          default: ""
+        spanningsniva:
+          type: string
+          default: ""
+    ElnatVarderingsprotokollConfig:
+      type: object
+      properties:
+        lagspanning:
+          type: boolean
+        storskogsbruksavtalet:
+          type: boolean
+        ingenGrundersattning:
+          type: boolean
+        forhojdMinimumersattning:
+          type: boolean
+    ElnatRotnetto:
+      type: object
+      properties:
+        ersattning:
+          type: integer
+      required:
+        - ersattning
+    ElnatBilaga:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        typ:
+          $ref: "#/components/schemas/ElnatBilagaTyp"
+        fil:
+          $ref: "./models/fil.yaml#/components/schemas/Fil"
+      required:
+        - id
+        - typ
+        - fil
+    ElnatPunktersattningTyp:
+      type: string
+      enum:
+        - NATSTATION_JORDBRUKSIMPEDIMENT_6X6M
+        - NATSTATION_JORDBRUKSIMPEDIMENT_8X8M
+        - NATSTATION_JORDBRUKSIMPEDIMENT_10X10M
+        - NATSTATION_OVRIGMARK_6X6M
+        - NATSTATION_OVRIGMARK_8X8M
+        - NATSTATION_OVRIGMARK_10X10M
+        - NATSTATION_SKOG_6X6M
+        - NATSTATION_SKOG_8X8M
+        - NATSTATION_SKOG_10X10M
+        - NATSTATION_EJ_KLASSIFICERAD
+        - SJOKABELSKYLT_JORDBRUKSIMPEDIMENT_6X6M
+        - SJOKABELSKYLT_JORDBRUKSIMPEDIMENT_8X8M
+        - SJOKABELSKYLT_JORDBRUKSIMPEDIMENT_10X10M
+        - SJOKABELSKYLT_OVRIGMARK_6X6M
+        - SJOKABELSKYLT_OVRIGMARK_8X8M
+        - SJOKABELSKYLT_OVRIGMARK_10X10M
+        - SJOKABELSKYLT_SKOG_6X6M
+        - SJOKABELSKYLT_SKOG_8X8M
+        - SJOKABELSKYLT_SKOG_10X10M
+        - SJOKABELSKYLT_EJ_KLASSIFICERAD
+        - KABELSKAP_JORDBRUKSIMPEDIMENT
+        - KABELSKAP_OVRIGMARK
+        - KABELSKAP_SKOG
+        - KABELSKAP_EJ_KLASSIFICERAD
+    ElnatPunktersattningMarkslag:
+      type: string
+      enum:
+        - SKOG
+        - JORDBRUKSIMPEDIMENT
+        - OVRIG_MARK
+    ElnatPunktersattningStorlek:
+      type: string
+      enum:
+        - 6X6_METER
+        - 8X8_METER
+        - 10X10_METER
+    ElnatZon:
+      type: string
+      enum: [ZON_1, ZON_2]
+      x-enum-varnames: [ZON_1, ZON_2]
+    ElnatAkernormomrade:
+      type: string
+      enum:
+        - NO
+        - NN
+        - SSK
+        - GSK
+        - SS
+        - GNS
+        - GMB
+        - GSS
+    ElnatPrisomrade:
+      type: string
+      enum:
+        - NORRLANDS_INLAND
+        - NORRLANDS_KUSTLAND
+        - TILLVAXTOMRADE_3
+        - TILLVAXTOMRADE_4A
+        - TILLVAXTOMRADE_4B
+    ElnatHinderMarkslag:
+      type: string
+      enum:
+        - AKERMARK
+        - BETESMARK
+        - IMPEDIMENT
+    ElnatTillvaxtomrade:
+      type: string
+      enum:
+        - TILLVAXTOMRADE_1
+        - TILLVAXTOMRADE_2
+        - TILLVAXTOMRADE_3
+        - TILLVAXTOMRADE_4A
+        - TILLVAXTOMRADE_4B
+        - TILLVAXTOMRADE_5
+    ElnatTradslag:
+      type: string
+      enum:
+        - TALL
+        - GRAN
+        - LOV
+    ElnatBilagaTyp:
+      type: string
+      enum:
+        - AKERNORM_74
+        - ENSTAKA_TRAD
+        - ROTNETTO
+        - OVRIGT_INTRANG
+  parameters:
+    elnatVpId:
+      name: vpId
+      in: path
+      description: UUID för värderingsprotokoll.
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "b17bfc5e-460c-4d0b-964b-3fe8dfa93cf7"
+    bilagaId:
+      name: bilagaId
+      in: path
+      description: UUID för värderingsprotokollsbilaga.
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "b17bfc5e-460c-4d0b-964b-3fe8dfa93cf7"

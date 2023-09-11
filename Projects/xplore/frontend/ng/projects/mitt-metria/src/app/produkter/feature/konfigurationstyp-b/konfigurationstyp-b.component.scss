@@ -1,0 +1,29 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.configuration-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px 64px;
+
+  @media screen and #{$xp-breakpoints-tablet-max} {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 3;
+  }
+
+  .right {
+    flex: 2;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.error-message-wrapper {
+  margin-bottom: 20px;
+}

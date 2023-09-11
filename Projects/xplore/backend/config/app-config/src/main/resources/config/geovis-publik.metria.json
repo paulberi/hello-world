@@ -1,0 +1,180 @@
+{
+  "app": {
+    "copyright": "© Lantmäteriet, © Metria",
+    "components":{
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/metriaext/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "metriaext:karta_"
+  },
+  "zoom": 2,
+  "center": [
+    565975,
+    6935128
+  ],
+  "extent": [
+    181896.33,
+    6101648.07,
+    864416.00,
+    7689478.31
+  ],
+  "thumbnailCoordinates": [
+    617957,
+    6729350
+  ],
+  "groups": [
+    {
+      "name": "kontor",
+      "title": "Metria kontor",
+      "expanded": false
+    },
+
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "group": "kontor",
+      "style": "karta_metria_kontor",
+      "title": "Metria kontor",
+      "source": {
+        "type": "wfs",
+        "typeName": "metriaext:karta_kommunkontor"
+      },
+      "visible": true,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "type": "tile",
+      "group": "background",
+      "title": "Metria bakgrund",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaBakgrund",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": true
+    }
+  ],
+  "styles": {
+    "karta_metria_kontor": [
+      [
+        {
+          "icon": {
+            "src": "karta_metria_kontor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        181896.33,
+        6101648.07,
+        864416.00,
+        7689478.31
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG:4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "tileSize": [
+    256,
+    256
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "label": "Rubrik",
+          "type": "title",
+          "minLength": 2,
+          "maxLength": 80,
+          "linkRef": "title-link"
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "label": "Rubriklänk",
+          "type": "url",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "maxLength": 254,
+          "inputType": "text-area",
+          "hideLabel": true
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

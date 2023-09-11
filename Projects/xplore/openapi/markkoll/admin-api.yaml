@@ -1,0 +1,216 @@
+openapi: 3.0.2
+info:
+  title: Markkoll Config API
+  description: Markkoll Config API
+  version: 1.0.0
+paths:
+  '/admin/projekt/{projektId}/user/{userId}/role/admin':
+    put:
+      tags:
+        - admin
+      summary: Tilldela en projektadministratörroll till en användare
+      operationId: "addRoleProjektadmin"
+      parameters:
+        - $ref: "#/components/parameters/projektId"
+        - $ref: "#/components/parameters/userId"
+      responses:
+        201:
+          description: Användaren blev tilldelad en projektadministratörroll
+    delete:
+      tags:
+        - admin
+      summary: Frånta en projektadministratörroll från en användare
+      operationId: "removeRoleProjektadmin"
+      parameters:
+        - $ref: "#/components/parameters/projektId"
+        - $ref: "#/components/parameters/userId"
+      responses:
+        200:
+          description: Användaren blev fråntagen projektadministratörroll
+
+  '/admin/projekt/{projektId}/user/{userId}/role/handlaggare':
+    put:
+      tags:
+        - admin
+      summary: Tilldela en projekthandläggareroll till en användare
+      operationId: "addRoleProjekthandlaggare"
+      parameters:
+        - $ref: "#/components/parameters/projektId"
+        - $ref: "#/components/parameters/userId"
+      responses:
+        201:
+          description: Användaren blev tilldelad en projekthandläggareroll
+    delete:
+      tags:
+        - admin
+      summary: Frånta en projekthandläggareroll från en användare
+      operationId: "removeRoleProjekthandlaggare"
+      parameters:
+        - $ref: "#/components/parameters/projektId"
+        - $ref: "#/components/parameters/userId"
+      responses:
+        200:
+          description: Användaren blev fråntagen projekthandläggareroll
+
+  '/admin/projekt/{projektId}/user/roles':
+    put:
+      tags:
+        - admin
+      summary: Tilldela roller till en uppsättning med användare i ett projekt
+      operationId: "setProjektUsersRoles"
+      parameters:
+        - $ref: "#/components/parameters/projektId"
+      requestBody:
+        description: Användare och roller
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/UserAndRole"
+      responses:
+        200:
+          description: Rollerna uppdaterades för användarna
+          
+  '/admin/kund/{kundId}/user':
+    post:
+      tags:
+        - admin
+      summary: Skapa en ny användare för en kund
+      operationId: "createUser"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: Användaruppgifter.
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: "#/components/schemas/UserInfo"
+      responses:
+        201:
+          description: Användaren skapades
+        409:
+          description: En användare med det namnet existerar redan i Markkoll
+
+  '/admin/kund/{kundId}/user/admin':
+    post:
+      tags:
+        - admin
+      summary: Skapa en ny användare med administratörsrättigheter för en kund
+      operationId: "createKundadmin"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: Användaruppgifter.
+        required: true
+        content:
+          application/json:
+            schema:
+               $ref: "#/components/schemas/UserInfo"
+      responses:
+        201:
+          description: Användaren skapades
+        409:
+          description: En användare med det namnet existerar redan i Markkoll
+  '/admin/roles/reset':
+    put:
+      tags:
+        - admin
+      summary: Nollställ rollbehörigheter relaterade till användarroller
+      operationId: "resetAllRoles"
+      responses:
+        200:
+          description: Behörigheterna nollställdes
+  '/admin/kund/{kundId}/kundadmin':
+    get:
+      tags:
+        - admin
+      summary: Hämta en lista på alla kundadmins tillhörandes en kund
+      operationId: "getKundAdminsForKund"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      responses:
+        200:
+          description: Listan med användare.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarkkollUser"
+
+components:
+  schemas:
+    MarkkollUser:
+      type: object
+      properties:
+        id:
+          type: string
+        fornamn:
+          type: string
+        efternamn:
+          type: string
+        email:
+          type: string
+        kundId:
+          type: string
+        roles:
+          type: array
+          items:
+            $ref: "#/components/schemas/Role"
+    Role:
+      type: object
+      properties:
+        objectId:
+          type: string
+        roleType:
+          $ref: "#/components/schemas/RoleType"
+    RoleType:
+      type: string
+      enum:
+        - KUNDADMIN
+        - KUNDANVANDARE
+        - PROJEKTADMIN
+        - PROJEKTHANDLAGGARE
+    UserAndRole:
+      type: object
+      properties:
+        userId:
+          type: string
+        roleType:
+          $ref: "#/components/schemas/RoleType"
+    UserInfo:
+      type: object
+      properties:
+        fornamn:
+          type: string
+        efternamn:
+          type: string
+        email:
+          type: string
+          format: email
+  parameters:
+    kundId:
+      name: kundId
+      in: path
+      description: Kund-ID
+      required: true
+      schema:
+        type: string
+    projektId:
+      name: projektId
+      in: path
+      description: Projekt-ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+    userId:
+      name: userId
+      in: path
+      description: Användar-ID
+      required: true
+      schema:
+        type: string

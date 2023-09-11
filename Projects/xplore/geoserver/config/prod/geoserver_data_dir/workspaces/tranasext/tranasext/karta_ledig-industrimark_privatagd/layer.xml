@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_ledig-industrimark_privatagd</name>
+  <id>LayerInfoImpl-5492d999:177066c3562:4f9d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:177066c3562:4f9c</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-15 17:10:03.299 UTC</dateCreated>
+</layer>

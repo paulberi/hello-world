@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_spar_och_leder</name>
+  <id>LayerInfoImpl-ffefddf:173e162d784:3ef5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-ffefddf:173e162d784:3ef4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

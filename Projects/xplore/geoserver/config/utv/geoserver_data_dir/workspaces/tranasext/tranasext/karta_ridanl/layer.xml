@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_ridanl</name>
+  <id>LayerInfoImpl-526a1117:f5715ede622:-18c2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-119df350:d83f761b4ae:-7c42</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

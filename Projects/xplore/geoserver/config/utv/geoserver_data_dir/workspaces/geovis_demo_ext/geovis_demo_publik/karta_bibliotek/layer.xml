@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_bibliotek</name>
+  <id>LayerInfoImpl-297bac16:1795f8c3857:-c9d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-297bac16:1795f8c3857:-c9e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-17 14:54:04.327 UTC</dateCreated>
+</layer>

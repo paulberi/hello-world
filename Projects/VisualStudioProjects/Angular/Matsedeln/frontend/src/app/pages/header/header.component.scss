@@ -1,0 +1,63 @@
+.centered-content {
+  max-height: 50px;
+}
+
+.dropdown-item {
+  margin-top: 3px;
+  cursor: pointer;
+  background:#063752;
+  color: white;
+  &:hover {
+        color: #1775b8 !important;
+      }
+}
+
+.paginatorLeft, .paginatorRight{
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  .weekPager {
+    margin-top: 8px;
+    font-size: 10;
+  }
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+    transform: translateY(4px);
+  }
+}
+
+mat-select {
+  margin-top: 5px;
+  background:transparent !important;
+  color:white !important;
+  cursor: pointer;
+  padding:10px;
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  max-width: 160px;
+}
+
+::ng-deep .mat-select-placeholder{
+  color: white !important;
+}
+
+::ng-deep .mat-select-min-line{
+  color:white !important;
+}
+
+.mat-option.mat-selected {
+  background: #063752 !important;
+  color: #1775b8 !important;
+}
+
+::ng-deep .mat-select-panel{
+  background: #063752;
+}
+
+::ng-deep .mat-select-arrow {
+  color: white !important;
+}

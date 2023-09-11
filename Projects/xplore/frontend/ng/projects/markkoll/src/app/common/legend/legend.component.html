@@ -1,0 +1,10 @@
+<ng-container>
+  <div *ngFor="let group of legend?.groups">
+    <h3 *ngIf="displayGroups">{{ group.title }}</h3>
+    <div *ngFor="let item of group.items">
+      <h4 class="item-title">{{ item.title }} </h4>
+      <img [src]="item.iconUrl | secureLoadImage | async" class="legend-image">
+    </div>
+    <mat-divider *ngIf="displayGroups"></mat-divider>
+  </div>
+</ng-container>

@@ -1,0 +1,29 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://markkoll-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "http://localhost:9011",
+    "changeOrigin": true
+  },
+  "/metria-maps/geoserver": {
+    "target": "http://localhost:9011",
+    "pathRewrite": {
+      "^/metria-maps/geoserver": "/proxy/metria-maps"
+    },
+    "changeOrigin": true
+  },
+  "/geoserver/markkoll": {
+    "target": "https://markkoll-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/samrad/api": {
+    "target": "http://localhost:9025",
+    "xfwd": true,
+    "pathRewrite": {
+      "^/samrad/api": "/api"
+    },
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_motionsanl</name>
+  <id>LayerInfoImpl-49b0637f:168c7e6c223:-7e7d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-49b0637f:168c7e6c223:-7e7e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

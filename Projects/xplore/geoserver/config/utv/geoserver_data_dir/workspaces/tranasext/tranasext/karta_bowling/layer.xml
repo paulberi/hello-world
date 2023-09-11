@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_bowling</name>
+  <id>LayerInfoImpl-c81a0393:ff5ab813803:-fe5a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-ee23f7d9:75c34715043:-676e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

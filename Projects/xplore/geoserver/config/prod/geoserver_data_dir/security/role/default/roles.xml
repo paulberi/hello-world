@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><roleRegistry xmlns="http://www.geoserver.org/security/roles" version="1.0">
+<roleList>
+<role id="ADMIN"/>
+<role id="ANEBY_ADMIN"/>
+<role id="ANEBY_READ"/>
+<role id="ANEBY_WRITE"/>
+<role id="GROUP_ADMIN"/>
+<role id="NORRA_SKOGSAGARNA_READ"/>
+<role id="aneby_admin"/>
+<role id="aneby_extern"/>
+<role id="boxholm_admin"/>
+<role id="boxholm_extern"/>
+<role id="dalsed_grund"/>
+<role id="dalsed_va"/>
+<role id="dalsland_user"/>
+<role id="demo_geovis_vy_kund_admin"/>
+<role id="demo_geovis_vy_kund_user"/>
+<role id="gotakanalbolag_admin"/>
+<role id="gotakanalbolag_user"/>
+<role id="gppom_admin"/>
+<role id="gppom_user"/>
+<role id="haparanda_user"/>
+<role id="ips_admin"/>
+<role id="ips_user"/>
+<role id="itsam_admin"/>
+<role id="itsam_grund"/>
+<role id="kilenkrysset_admin"/>
+<role id="kilenkrysset_grund"/>
+<role id="kinda_admin"/>
+<role id="kinda_extern"/>
+<role id="kobyta_admin"/>
+<role id="kobyta_grund"/>
+<role id="markkoll_markhandlaggare"/>
+<role id="metria_admin"/>
+<role id="metria_extern"/>
+<role id="mullsjo_admin"/>
+<role id="mullsjo_extern"/>
+<role id="mullsjo_grund"/>
+<role id="mullsjo_va"/>
+<role id="odeshog_anstallda_politiker"/>
+<role id="odeshog_raddning_sakerhet"/>
+<role id="odeshog_samhalle_teknik"/>
+<role id="skargardsstiftelsen_admin"/>
+<role id="skargardsstiftelsen_user"/>
+<role id="skinnskatteberg_admin"/>
+<role id="skinnskatteberg_user"/>
+<role id="testkund_admin"/>
+<role id="testkund_ledare"/>
+<role id="testkund_user"/>
+<role id="testkund_user_b"/>
+<role id="tranas_admin"/>
+<role id="tranas_extern"/>
+<role id="valdemarsvik_grund"/>
+<role id="vattenfall_admin"/>
+<role id="vattenfall_user"/>
+<role id="vb_energi_admin"/>
+<role id="vb_energi_user"/>
+<role id="ydre_admin"/>
+<role id="ydre_user"/>
+</roleList>
+<userList>
+<userRoles username="admin">
+<roleRef roleID="ADMIN"/>
+</userRoles>
+<userRoles username="aneby">
+<roleRef roleID="ANEBY_READ"/>
+</userRoles>
+<userRoles username="aneby_admin">
+<roleRef roleID="ANEBY_ADMIN"/>
+</userRoles>
+<userRoles username="aneby_read">
+<roleRef roleID="ANEBY_READ"/>
+</userRoles>
+<userRoles username="aneby_write">
+<roleRef roleID="ANEBY_WRITE"/>
+</userRoles>
+<userRoles username="norra_skogsagarna">
+<roleRef roleID="NORRA_SKOGSAGARNA_READ"/>
+</userRoles>
+<userRoles username="splan_norra">
+<roleRef roleID="NORRA_SKOGSAGARNA_READ"/>
+</userRoles>
+</userList>
+<groupList/>
+</roleRegistry>

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/bulma/bulma.sass';
+.alt-gradient-button {
+    //editing add button. done here on styles.css to make the settings global
+    border: none;
+    background: linear-gradient(to right, rgb(236, 72, 140), rgb(240, 53, 82));
+    color: white;
+    font-weight: 600;
+    opacity: 0.92;
+    &:hover {
+        //editing the add button surrounding so that when you pass the mouse around it there is a visible action as you will notice
+        opacity: 1;
+        color: white;
+        box-shadow: 0px 0px 0px 4px rgb(black, 0.05);
+    }
+    &:active {
+        //behaviour of button when you click
+        opacity: 0.8;
+    }
+    &:focus {
+        //color of text when you focus mouse on it
+        color: white;
+        opacity: 1;
+    }
+    i.material-icons {
+        //positioning the (+ add) in the button properly
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+}

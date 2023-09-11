@@ -1,0 +1,14 @@
+<adm-systeminloggningar-ui [auth]="auth" [indexSelected]="indexSelected" (metriaMapsAuthChange)="onAuthChange($event)"
+  (fastighetsokAuthChange)="onAuthChange($event)" (authReset)="onAuthReset($event)"
+  (indexSelectedChange)="onIndexSelectedChange($event)">
+</adm-systeminloggningar-ui>
+
+<ng-template #resetCredentialsDialog>
+  <h2 mat-dialog-title>{{ "adm.dialog.resetCredentials.title" | transloco }}</h2>
+  <p>{{ "adm.dialog.resetCredentials.message" | transloco }}</p>
+  <mat-dialog-actions align="end">
+    <button mat-flat-button color="primary" mat-dialog-close>{{ "xp.common.cancel" | transloco }}</button>
+    <button mat-raised-button [mat-dialog-close]="true">{{ "adm.dialog.resetCredentials.confirmLabel" | transloco
+      }}</button>
+  </mat-dialog-actions>
+</ng-template>

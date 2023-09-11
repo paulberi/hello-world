@@ -1,0 +1,1 @@
+INSERT INTO indatatyp VALUES ('TRIMBLE')

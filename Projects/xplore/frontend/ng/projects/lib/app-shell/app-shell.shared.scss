@@ -1,0 +1,56 @@
+$footer-margin: 26px;
+$map-margin: 10px;
+$map-margin-bottom: $map-margin + $footer-margin;
+$panel-height: calc(100vh - 40px - #{$footer-margin} - 3 * #{$map-margin});
+$panel-width: 320px;
+$content-panel-width: $panel-width - 2*$map-margin;
+$scrollbar-max-width: 50px;
+
+%base-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  // We only want child elements to capture pointer clicks, because the container may use up more space
+  // than the visible child elements.
+  pointer-events: none;
+}
+
+::ng-deep %base-panel > * {
+  pointer-events: auto !important;
+}
+
+::ng-deep %base-panel > :not(:first-child) {
+  margin-top: 10px;
+}
+
+%sub-panel {
+  position: relative;
+  display: block;
+  width: fit-content;
+  // We only want child elements to capture pointer clicks, because the container may use up more space
+  // than the visible child elements.
+  pointer-events: none;
+}
+
+::ng-deep %sub-panel > * {
+  pointer-events: auto !important;
+}
+
+%scrollable-sub-panel {
+  @extend %sub-panel;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  min-height: 40px;
+}
+
+%scrollable-sub-panel::-webkit-scrollbar {
+  //display: none;
+}
+
+%content-panel-width {
+  min-width: $content-panel-width;
+  max-width: $content-panel-width;
+  width: $content-panel-width;
+}

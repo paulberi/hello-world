@@ -1,0 +1,26 @@
+<div class="tab-content">
+  <div class="row justify-space-between">
+    <div class="col-12 col-md-6">
+      <mk-loggbok [loggbok]="filteredLoggbok"
+                  [title]="'mk.loggbok.title' | transloco"
+                  [emptyText]="'mk.loggbok.empty' | transloco"
+                  [isShowMoreVisible]="canShowMoreLoggItems()"
+                  (onShowMore)="showMoreLoggItems()">
+      </mk-loggbok>
+    </div>
+    <form [formGroup]="form" class="col-12 col-md-5">
+      <mat-form-field appearance="fill" class="anteckning">
+        <mat-label>{{ 'mk.fastighetsinformation.notes' | transloco }}</mat-label>
+        <textarea matInput type="text" formControlName="anteckning"></textarea>
+      </mat-form-field>
+
+      <div class="row justify-end">
+        <xp-spinner-button (spinnerButtonClick)="onEmitAnteckning()"
+                           [isLoading]="savingAnteckningar"
+                           [isDisabled]="canSave()">
+          {{ "xp.common.save" | transloco }}
+        </xp-spinner-button>
+      </div>
+    </form>
+  </div>
+</div>

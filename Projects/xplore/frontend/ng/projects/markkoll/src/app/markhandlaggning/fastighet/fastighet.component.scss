@@ -1,0 +1,93 @@
+
+.progress-bar-container {
+  padding-top: 2rem;
+}
+
+.message-container {
+  display: block;
+  padding-top: 2rem;
+}
+
+.agare-table-container {
+  display: block;
+  padding-top: 2rem;
+}
+
+.action-container {
+  padding-top: 1rem;
+}
+
+.skapa-avtal-container {
+  padding-top: 1rem;
+}
+
+.intrang-karta-container {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avtalsstatus-container {
+  display: inline-block;
+  padding-right: 24px;
+
+  span {
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+.check-all-container {
+  display: inline-block;
+  padding: 0 24px 0 0;
+}
+
+.actions-right {
+  text-align: right;
+}
+
+.no-agare {
+  p {
+    width: 28em;
+    color: var(--primary-variant);
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.add-ombud{
+  padding-top: 0.7rem;
+}
+
+mat-tab {
+  padding-bottom: 2rem;
+}
+
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  margin-right: 0.7em;
+}
+
+.export-button {
+  display: flex;
+  justify-content: start;
+  margin-right: 4em;
+}
+
+.export-checkbox-container {
+  margin-bottom: 0.75em;
+  justify-content: start;
+}
+
+.varderingsprotokoll{
+  padding-top: 2rem;
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}

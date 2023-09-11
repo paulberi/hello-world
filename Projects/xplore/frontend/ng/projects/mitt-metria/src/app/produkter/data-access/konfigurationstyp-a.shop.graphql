@@ -1,0 +1,25 @@
+query ProductVariantsByProductId($id: ID!) {
+  product(id: $id) {
+    id
+    name
+    productVariants: variants {
+      id
+      name
+      product {
+        id
+        name
+      }
+      priceWithTax
+      currencyCode
+      customFields {
+        attributeSchema
+      }
+    }
+  }
+}
+
+query GetAreaPriceForVariantGeojson($id: ID!, $geojsonStr: String!) {
+  getAreaPriceForVariantGeoJson(id: $id, geojsonStr: $geojsonStr) {
+    priceWithTax
+  }
+}

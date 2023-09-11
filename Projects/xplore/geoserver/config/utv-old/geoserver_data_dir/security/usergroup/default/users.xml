@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<userRegistry xmlns="http://www.geoserver.org/security/users" version="1.0">
+<users>
+<user enabled="true" name="admin" password="crypt1:Pm72ys2mVBRh5bKW17PFVA=="/>
+<user enabled="true" name="fria_skog" password="digest1:GA2h4orFjjJl/Z+G2erXyfGTVuWvZ0+jdSZfqKrLktmWFH2Ccc0zroZVQdHDIb6U"/>
+<user enabled="true" name="norra_skogsagarna" password="crypt1:rZErwwDY8+yNAcb/42cuew=="/>
+</users>
+<groups/>
+</userRegistry>

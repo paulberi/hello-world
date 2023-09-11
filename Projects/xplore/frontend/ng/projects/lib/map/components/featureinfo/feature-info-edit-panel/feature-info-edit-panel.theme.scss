@@ -1,0 +1,19 @@
+@mixin feature-info-edit-panel-theme($theme) {
+
+	$panel-colors: (false:lemonchiffon, true:#cdd2ff);
+
+	.content-panel {
+		position: relative;
+		background: map-get($panel-colors, map-get($theme, is-dark));
+		padding: 10px;
+		border: 1px dashed lightgrey;
+		border-bottom: none;
+	}
+
+	.button-right-panel {
+		background: map-get($panel-colors, map-get($theme, is-dark));
+		width: 50%;
+		border: 1px dashed lightgrey;
+		border-top: none;
+	}
+}

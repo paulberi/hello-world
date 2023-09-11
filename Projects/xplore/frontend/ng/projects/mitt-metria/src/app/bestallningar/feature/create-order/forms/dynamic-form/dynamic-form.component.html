@@ -1,0 +1,80 @@
+<div [formGroup]="dynamicForm" *ngIf="dynamicForm" class="form">
+  <div *ngFor="let property of properties | async">
+    <div [ngSwitch]="convertToInputType(property)">
+
+      <div *ngSwitchCase="'text'">
+        <mat-form-field>
+          <mat-label [attr.for]="property.key">{{ property.title }}</mat-label>
+          <input matInput [formControlName]="property.key" [id]="property.key" type="text" [min]="property.minimum"
+            [max]="property.maximum" />
+          <mat-error *ngIf="dynamicForm.controls[property.key].hasError('required')">
+            {{ "mm.forms.fieldMandatory" | transloco }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div *ngSwitchCase="'number'">
+        <mat-form-field>
+          <mat-label [attr.for]="property.key">{{ property.title }}</mat-label>
+          <input matInput [formControlName]="property.key" [id]="property.key" type="number" [min]="property.minimum"
+            [max]="property.maximum" />
+          <mat-error *ngIf="dynamicForm.controls[property.key].hasError('required')">
+            {{ "mm.forms.fieldMandatory" | transloco }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div *ngSwitchCase="'select'">
+        <span>{{ property.title }}</span>
+        <mat-form-field>
+          <mat-label [attr.for]="property.key">{{ property.description }}</mat-label>
+          <mat-select [id]="property.key" [formControlName]="property.key" [multiple]="property.type === 'array'">
+            <mat-option *ngFor="let opt of options" [value]="opt">{{ opt }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="dynamicForm.controls[property.key].hasError('required')">
+            {{ "mm.forms.fieldMandatory" | transloco }}
+          </mat-error>
+          <mat-error *ngIf="dynamicForm.controls[property.key].hasError('minlength')">
+            {{ "mm.forms.enterAtLeast" | transloco }} {{ property.minItems }}
+          </mat-error>
+          <mat-error *ngIf="dynamicForm.controls[property.key].hasError('maxlength')">
+            {{ "mm.forms.enterMax" | transloco }} {{ property.maxItems }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div *ngSwitchCase="'radio'">
+        <mat-radio-group [id]="property.key" [formControlName]="property.key">
+          <mat-label [attr.for]="property.key">{{ property.title }}</mat-label>
+          <mat-radio-button *ngFor="let opt of options" [value]="opt">
+            {{ opt }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div *ngSwitchCase="'selection-list'">
+        <mat-selection-list [formControlName]="property.key" [multiple]="!(property?.maxItems < 2)" [id]="property.key">
+          <mat-label [attr.for]="property.key">{{ property.title }}</mat-label>
+          <mat-list-option *ngFor="let opt of options" [value]="opt">
+            {{ opt }}
+          </mat-list-option>
+        </mat-selection-list>
+      </div>
+
+      <div *ngSwitchCase="'checkbox'">
+        <mat-checkbox [attr.for]="property.key" [formControlName]="property.key">{{property.title}}
+        </mat-checkbox>
+      </div>
+
+      <!-- Komplexa datatyper -->
+      <div *ngSwitchCase="'dropzone'">
+        <mm-dropzone [property]="property" [dynamicForm]="dynamicForm"></mm-dropzone>
+      </div>
+
+      <div *ngSwitchCase="'object'">
+        <mm-object [property]="property" [dynamicForm]="dynamicForm"></mm-object>
+      </div>
+
+    </div>
+  </div>
+</div>

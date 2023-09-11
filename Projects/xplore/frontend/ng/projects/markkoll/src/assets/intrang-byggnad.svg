@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_606" data-name="Group 606" transform="translate(-8486 15216)">
+    <circle id="Ellipse_258" data-name="Ellipse 258" cx="20" cy="20" r="20" transform="translate(8486 -15216)" fill="#084fef"/>
+    <path id="water_damage_FILL0_wght400_GRAD0_opsz48" d="M8.5,31.5v-12H4L19,6,34,19.5H29.5v12Zm2.25-2.25h16.5V16.425L19,9.038l-8.25,7.388Zm5.625-6.75ZM19,19.125Z" transform="translate(8487 -15215.645)" fill="#f8f8f8"/>
+    <path id="electric_bolt_FILL0_wght400_GRAD0_opsz48" d="M10.6,16.3a.482.482,0,0,1-.14-.311.453.453,0,0,1,.093-.327l3.021-4.205-5.046-.483a.573.573,0,0,1-.537-.421A.556.556,0,0,1,8.167,9.9L14.63,4.106a.431.431,0,0,1,.335-.132.494.494,0,0,1,.475.459.453.453,0,0,1-.093.327L12.325,8.966l5.046.483a.573.573,0,0,1,.537.421.556.556,0,0,1-.179.654l-6.463,5.794a.431.431,0,0,1-.335.132A.486.486,0,0,1,10.6,16.3Z" transform="translate(8493.052 -15206.212)" fill="#f8f8f8"/>
+  </g>
+</svg>

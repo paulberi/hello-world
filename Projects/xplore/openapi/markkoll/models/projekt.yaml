@@ -1,0 +1,294 @@
+components:
+
+  #-------------------------------
+  # Schemas (datamodell)
+  #-------------------------------
+  schemas:
+    FiberProjekt:
+      type: object
+      properties:
+        projektInfo:
+          $ref: "#/components/schemas/ProjektInfo"
+        fiberInfo:
+          $ref: "#/components/schemas/FiberInfo"
+        indataTyp:
+          $ref: "#/components/schemas/IndataTyp"
+        buffert:
+          type: number
+          format: double
+      required:
+        - projektInfo
+        - fiberInfo
+    ElnatProjekt:
+      type: object
+      properties:
+        projektInfo:
+          $ref: "#/components/schemas/ProjektInfo"
+        elnatInfo:
+          $ref: "#/components/schemas/ElnatInfo"
+        indataTyp:
+          $ref: "#/components/schemas/IndataTyp"
+        buffert:
+          type: number
+          format: double
+      required:
+        - projektInfo
+        - elnatInfo
+    ProjektInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        projektTyp:
+          $ref: "#/components/schemas/ProjektTyp"
+        ort:
+          type: string
+        startDatum:
+          type: string
+          format: date-time
+        skapadDatum:
+          type: string
+          format: date-time
+        beskrivning:
+          type: string
+        utskicksstrategi:
+          $ref: "#/components/schemas/Utskicksstrategi"
+        uppdragsnummer:
+          type: string
+        kundId:
+          type: string
+        utbetalningskonto:
+          type: string
+        projektnummer:
+          type: string
+        ansvarigProjektledare:
+          type: string
+        ansvarigKonstruktor:
+          type: string
+      required:
+        - namn
+        - projektTyp
+    Avtalsinstallningar:
+      type: object
+      properties:
+        berakningAbel07:
+          $ref: "#/components/schemas/BerakningAbel07"
+        berakningRev:
+          $ref: "#/components/schemas/BerakningRev"
+        mappstrategi:
+          $ref: "#/components/schemas/AvtalMappstrategi"
+      default:
+      required:
+        - berakningAbel07
+        - berakningRev
+        - mappstrategi
+    AvtalMappstrategi:
+      type: string
+      enum:
+        - FLAT
+        - HIERARCHICAL
+    FiberInfo:
+      type: object
+      properties:
+        bestallare:
+          type: string
+        bidragsprojekt:
+          type: boolean
+        varderingsprotokoll:
+          type: boolean
+        ledningsagare:
+          type: string
+        ledningsstracka:
+          type: string
+    ElnatInfo:
+      type: object
+      properties:
+        bestallare:
+          type: string
+        ledningsagare:
+          type: string
+        ledningsstracka:
+          type: string
+    ProjektPage:
+      type: object
+      properties:
+        number:
+          type: integer
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ProjektInfo"
+    Version:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        filnamn:
+          type: string
+        buffert:
+          type: double
+        skapadDatum:
+          type: string
+          format: date-time      
+      required:
+        - id
+        - filnamn
+        - buffert
+        - skapadDatum
+    ProjektIntrang:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        avtalstyp:
+          $ref: "#/components/schemas/Avtalstyp"
+        geom:
+          type: string
+        type:
+          $ref: "#/components/schemas/Intrangstyp"
+        subtype:
+          $ref: "#/components/schemas/IntrangsSubtyp"
+        status:
+          $ref: "#/components/schemas/IntrangsStatus"
+        spanningsniva:
+          type: number
+          format: double
+      required:
+        - avtalstyp
+        - geom
+        - type
+        - subtype
+        - status
+    Beredare:
+      type: object
+      properties:
+        namn:
+          type: string
+        telefonnummer:
+          type: string
+        adress:
+          type: string
+        postnummer:
+          type: string
+        ort:
+          type: string
+      required:
+        - namn
+    Avtalstyp:
+      type: string
+      enum:
+        - INTRANG
+        - SERVIS
+        - REV
+        - ABEL07
+    BerakningAbel07:
+      type: string
+      enum:
+        - ENBART_ABEL07
+        - ABEL07_GRUNDERSATTNING
+        - ABEL07_FULL_ERSATTNING
+      default: ENBART_ABEL07
+    BerakningRev:
+      type: string
+      enum:
+        - ENBART_REV
+        - REV_GRUNDERSATTNING
+        - REV_FULL_ERSATTNING
+      default: ENBART_REV
+    ProjektTyp:
+      type: string
+      enum:
+        - LOKALNAT
+        - REGIONNAT
+        - FIBER
+    IndataTyp:
+      type: string
+      enum:
+        - DPCOM
+        - DPPOWER
+        - TRIMBLE
+    ProjekthandelseTyp:
+      type: string
+      enum:
+        - HAMTA_MARKAGARE
+        - PROJEKTINFORMATION_REDIGERAD
+        - VERSION_BORTTAGEN
+        - VERSION_ATERSTALLD
+        - VERSION_IMPORTERAD
+    Utskicksstrategi:
+      type: string
+      enum:
+        - ADRESS
+        - FASTIGHETSAGARE
+        - FASTIGHET
+    Intrangstyp:
+      type: string
+      enum:
+        - BRUNN
+        - MARKSKAP
+        - STRAK
+        - OKAND
+        - LAGSPANNINGSLEDNING
+        - HOGSPANNINGSLEDNING
+        - NATSTATION
+        - KABELSKAP
+        - TEKNIKBOD
+    IntrangsSubtyp:
+      type: string
+      enum:
+        - NONE
+        - MARKSTRAK
+        - LUFTSTRAK
+        - MARKLEDNING
+        - LUFTLEDNING
+        - OSAKERT_LAGE
+        - INMATT_STRAK
+    IntrangsStatus:
+      type: string
+      enum:
+        - NY
+        - BEVARAS
+        - RASERAS
+    FastighetIds:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: string
+            format: uuid
+
+  #-------------------------------
+  # Parameters
+  #-------------------------------
+  parameters:
+    projektId:
+      name: projektId
+      in: path
+      description: "UUID för projekt."
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "f14e2846-2358-4a06-ada0-d18f83ee92d2"
+    fastighetId:
+      name: fastighetId
+      in: path
+      description: "UUID för fastighet."
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: "909a6a72-391d-90ec-e040-ed8f66444c3f"
+

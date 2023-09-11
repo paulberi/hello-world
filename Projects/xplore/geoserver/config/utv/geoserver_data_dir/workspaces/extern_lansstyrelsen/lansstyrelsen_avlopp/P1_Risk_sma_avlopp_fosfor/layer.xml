@@ -1,0 +1,16 @@
+<layer>
+  <name>P1_Risk_sma_avlopp_fosfor</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6978</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6979</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 13:10:52.454 UTC</dateCreated>
+</layer>

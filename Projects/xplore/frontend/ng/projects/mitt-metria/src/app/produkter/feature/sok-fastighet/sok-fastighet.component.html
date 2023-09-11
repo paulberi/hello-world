@@ -1,0 +1,5 @@
+<xp-search-type visible=true name="Fastighet">
+  <xp-search-field #searchField [placeholder]="placeholder" formAppearance="outline" [showIcons]="false"
+    [options]="searchResult | async" (placeSelected)="fastighetSelected.emit($event)"
+    (clearSelectedPlace)="clear.emit()"></xp-search-field>
+</xp-search-type>

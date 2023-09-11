@@ -1,0 +1,122 @@
+openapi: 3.0.0
+info:
+  title: Samrad API
+  description: Api att spara samrad id i markkoll
+  version: 0.1.0
+  
+paths:
+  '/kund/{kundId}/{markkollId}/samrad':
+    post:
+      tags:
+        - SamradProjekt
+      summary: Skaffa ett projekt
+      operationId: "saveSamradiD"
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id av kunden som äger samrådet
+        - name: markkollId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: id av projekt i markkoll som ska matcha samrad
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Samrad"
+      responses:
+        200:
+          description: sparad id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samrad'
+  '/kund/{kundId}/samrad':
+    get:
+      tags:
+        - SamradProjekt
+      operationId: "listSamradiD"
+      description: hämtar alla samrad id från db för kunden
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id kunden
+      responses:
+        200:
+          description: En lista med alla id av kundens projekter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Samrad'
+  '/kund/{kundId}/samrad/{markkollId}':
+    get:
+      tags:
+        - SamradProjekt
+      operationId: "getByMarkkollId"
+      description: hämtar en projekt med markkollId.
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id av kunden
+        - name: markkollId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id av markkolls projektet som ska hämtas
+      responses:
+        200:
+          description: en id som matchar samradId
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samrad'
+  '/kund/{kundId}/markkoll/{samradId}':
+    delete:
+      tags:
+        - SamradProjekt
+      operationId: "deleteSamrad"
+      description: rederar projektet med samradId
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id av kunden
+        - name: samradId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: id av projektet som ska raderas
+      responses:
+        200:
+          description: projektet är raderat.
+
+components:
+  schemas:
+    Samrad:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        samradId:
+          type: string

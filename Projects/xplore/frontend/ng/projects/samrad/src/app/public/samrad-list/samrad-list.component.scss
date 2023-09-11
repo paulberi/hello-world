@@ -1,0 +1,15 @@
+h2 {
+  font-size: 1.5em;
+}
+
+.list-container {
+  height: 200px;
+}
+
+.list-item {
+  height: 50px;
+  text-decoration: underline;
+}
+.list-item:hover {
+  cursor:pointer;
+}

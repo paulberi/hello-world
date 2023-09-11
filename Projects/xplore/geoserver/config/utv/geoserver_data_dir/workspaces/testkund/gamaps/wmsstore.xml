@@ -1,0 +1,20 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-ffefddf:173e162d784:3f5c</id>
+  <name>gamaps</name>
+  <description>GeoAssistent Maps</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-1977b029:171d4d67e8c:-61eb</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <capabilitiesURL>http://gamaps.vic-metria.nu/arcgis/services/Kob/kobyta_pktest/MapServer/WMSServer?</capabilitiesURL>
+  <user>vic-metria\kobwms</user>
+  <password>crypt1:M5ufAidQZJrrEVAIZdfzDvamuCFcCgjk</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

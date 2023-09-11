@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:FeatureCollection numberOfFeatures="6" timeStamp="2019-05-31T20:35:12.159Z" xmlns:gml="http://www.opengis.net/gml" xmlns:metria="http://metria.se" xmlns:wfs="http://www.opengis.net/wfs" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://metria.se http://testmaps.metria.se:80/geoserver/wfs?service=WFS&amp;version=1.1.0&amp;request=DescribeFeatureType&amp;typeName=metria%3AGSD_ORTNAMN_LNKN_UCASE http://www.opengis.net/wfs http://testmaps.metria.se:80/geoserver/schemas/wfs/1.1.0/wfs.xsd">
+	<gml:boundedBy>
+		<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+			<gml:lowerCorner>6818574 544219</gml:lowerCorner>
+			<gml:upperCorner>7316509 835078</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<gml:featureMembers>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.846478">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>7239874 807953</gml:lowerCorner>
+					<gml:upperCorner>7239874 807953</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>TERRTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>PITEÅ</metria:KOMMUNNAMN>
+			<metria:LAN>NORRBOTTENS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Naturobjekt</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Naturobjekt</metria:BESKRIVNING>
+			<metria:KOM_KOD>25</metria:KOM_KOD>
+			<metria:LAN_KOD>25</metria:LAN_KOD>
+			<metria:ORT_ID>846478</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>7239874 807953</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.656834">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>7239433 805839</gml:lowerCorner>
+					<gml:upperCorner>7239433 805839</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>TERRTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>PITEÅ</metria:KOMMUNNAMN>
+			<metria:LAN>NORRBOTTENS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Naturobjekt</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Naturobjekt</metria:BESKRIVNING>
+			<metria:KOM_KOD>25</metria:KOM_KOD>
+			<metria:LAN_KOD>25</metria:LAN_KOD>
+			<metria:ORT_ID>656834</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>7239433 805839</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.840607">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>6818574 544219</gml:lowerCorner>
+					<gml:upperCorner>6818574 544219</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>TERRTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>OVANÅKER</metria:KOMMUNNAMN>
+			<metria:LAN>GÄVLEBORGS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Naturobjekt</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Naturobjekt</metria:BESKRIVNING>
+			<metria:KOM_KOD>21</metria:KOM_KOD>
+			<metria:LAN_KOD>21</metria:LAN_KOD>
+			<metria:ORT_ID>840607</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>6818574 544219</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.536779">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>7199092 724040</gml:lowerCorner>
+					<gml:upperCorner>7199092 724040</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>BEBTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>NORSJÖ</metria:KOMMUNNAMN>
+			<metria:LAN>VÄSTERBOTTENS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Bebyggelse</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Bebyggelse</metria:BESKRIVNING>
+			<metria:KOM_KOD>24</metria:KOM_KOD>
+			<metria:LAN_KOD>24</metria:LAN_KOD>
+			<metria:ORT_ID>536779</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>7199092 724040</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.53113">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>7239245 583447</gml:lowerCorner>
+					<gml:upperCorner>7239245 583447</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>TERRTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>STORUMAN</metria:KOMMUNNAMN>
+			<metria:LAN>VÄSTERBOTTENS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Naturobjekt</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Naturobjekt</metria:BESKRIVNING>
+			<metria:KOM_KOD>24</metria:KOM_KOD>
+			<metria:LAN_KOD>24</metria:LAN_KOD>
+			<metria:ORT_ID>53113</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>7239245 583447</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+		<metria:GSD_ORTNAMN_LNKN_UCASE gml:id="GSD_ORTNAMN_LNKN_UCASE.888464">
+			<gml:boundedBy>
+				<gml:Envelope srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:lowerCorner>7316509 835078</gml:lowerCorner>
+					<gml:upperCorner>7316509 835078</gml:upperCorner>
+				</gml:Envelope>
+			</gml:boundedBy>
+			<metria:DETALJTYP>TERRTX</metria:DETALJTYP>
+			<metria:ORTNAMN>GRANNÄSUDDEN</metria:ORTNAMN>
+			<metria:KOMMUNNAMN>LULEÅ</metria:KOMMUNNAMN>
+			<metria:LAN>NORRBOTTENS LÄN</metria:LAN>
+			<metria:ANPASSAD_BESKRIVNINGSTEXT>Naturobjekt</metria:ANPASSAD_BESKRIVNINGSTEXT>
+			<metria:BESKRIVNING>Naturobjekt</metria:BESKRIVNING>
+			<metria:KOM_KOD>25</metria:KOM_KOD>
+			<metria:LAN_KOD>25</metria:LAN_KOD>
+			<metria:ORT_ID>888464</metria:ORT_ID>
+			<metria:geom>
+				<gml:MultiPoint srsDimension="2" srsName="urn:x-ogc:def:crs:EPSG:3006">
+					<gml:pointMember>
+						<gml:Point gml:id="null.1">
+							<gml:pos>7316509 835078</gml:pos>
+						</gml:Point>
+					</gml:pointMember>
+				</gml:MultiPoint>
+			</metria:geom>
+		</metria:GSD_ORTNAMN_LNKN_UCASE>
+	</gml:featureMembers>
+</wfs:FeatureCollection>

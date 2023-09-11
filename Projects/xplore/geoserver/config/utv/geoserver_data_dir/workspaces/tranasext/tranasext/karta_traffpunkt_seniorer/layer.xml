@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_traffpunkt_seniorer</name>
+  <id>LayerInfoImpl--25aaf738:16e841212e2:-7ff6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--25aaf738:16e841212e2:-7ff7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

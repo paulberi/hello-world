@@ -1,0 +1,46 @@
+@import '@angular/material/theming';
+
+@mixin app-shell-theme($theme, $gradient) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  mdb-app-shell {
+    .current-page {
+      background: white;
+    }
+
+    .mat-list-item.active {
+      background: mat-color($accent, 500);
+
+      &:hover {
+        background: mat-color($accent, 500) !important;
+      }
+
+      &:focus {
+        background: mat-color($accent, 500);
+      }
+    }
+
+    .header {
+      color: mat-color($primary, default-contrast);
+      background-image: url("../assets/METR_Grafiskt_element.svg"), url("../assets/header.jpg");
+      background-repeat: no-repeat;
+      background-size: contain, cover;
+      background-position: right, center left;
+
+      h1 {
+        text-shadow: 2px 4px 8px black;
+        //font-size: 1.8em;
+      }
+    }
+
+    .footer {
+      color: mat-color($primary, default-contrast);
+      background: $gradient;
+
+      a {
+        color: mat-color($primary, default-contrast);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="draggable-panel row" [ngStyle]="{'width': width}" [cdkDragBoundary]="boundary" cdkDrag>
+  <div class="col-12 tool-header" cdkDragHandle>
+    <div class="handle">
+      <mat-icon>drag_indicator</mat-icon>
+    </div>
+    <h3>{{title}}</h3>
+    <button mat-icon-button (click)="panelClose.emit()">
+      <mat-icon class="material-icons-outlined">cancel</mat-icon>
+    </button>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,7 @@
+<div>
+    <ng-container *ngFor="let item of items; let i = index">
+        <a class="breadcrumbs" [routerLink]="item.path" [routerLinkActiveOptions]="{exact: strictRouterLink}"
+            routerLinkActive="active">{{ item.name }}</a>
+        <p class="divider" *ngIf="i < items.length - 1">&nbsp;>&nbsp;</p>
+    </ng-container>
+</div>

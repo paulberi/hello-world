@@ -1,0 +1,4 @@
+<div id="banner">
+    <img *ngIf="!(isTabletOrMobile$ | async)" id="banner-image" [src]="fullImage" (error)="setDefaultImage()" [alt]="altText || ('mm.common.mittMetriaBackground' | transloco)">
+    <img *ngIf="(isTabletOrMobile$ | async)" id="banner-image" [src]="tabletOrMobileImage" (error)="setDefaultImage()" [alt]="altText || ('mm.common.mittMetriaBackground' | transloco)">
+</div>

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_bankomat</name>
+  <id>LayerInfoImpl-066d78cf:484417135d3:-6475</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-11d6ff98:24f05fb21a7:-7070</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

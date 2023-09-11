@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_traffpunkt-aldre</name>
+  <id>LayerInfoImpl-363cc6e4:177bbd188f3:-7fbe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:177bbd188f3:-7fbf</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-02-25 10:39:35.340 UTC</dateCreated>
+</layer>

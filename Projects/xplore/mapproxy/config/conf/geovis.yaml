@@ -1,0 +1,163 @@
+base: [../mapproxy.yaml, ../sources/kommuner.yaml]
+
+layers:
+- name: AnebyBakgrund
+  title: Anebys bakgrundskarta
+  sources: [aneby_cache]
+- name: AnebyOrto
+  title: Anebys ortofoto
+  sources: [aneby_orto_cache]
+- name: AnebyKombo
+  title: Aneby bakgrundskarta kombo
+  sources: [aneby_kombo]
+- name: AnebyGra
+  title: Aneby bakgrundskarta grå
+  sources: [aneby_gra]
+
+- name: MullsjoBakgrund
+  title: Mullsjö bakgrundskarta
+  sources: [mullsjo_cache]
+- name: MullsjoKombo
+  title: Mullsjö bakgrundskarta kombo
+  sources: [mullsjo_kombo]
+- name: MullsjoOrto
+  title: Mullsjö ortofoto
+  sources: [mullsjo_orto_cache]
+
+- name: OdeshogBakgrund
+  title: Ödeshog bakgrundskarta
+  sources: [odeshog_cache]
+- name: OdeshogKombo
+  title: Ödeshog bakgrundskarta kombo
+  sources: [odeshog_kombo]
+- name: OdeshogOrto
+  title: Ödeshog ortofoto
+  sources: [odeshog_orto_cache]
+
+- name: TranasBakgrund
+  title: Tranås bakgrundskarta
+  sources: [tranas_cache]
+- name: TranasGra
+  title: Tranås bakgrundskarta grå
+  sources: [tranas_gra]
+- name: TranasKombo
+  title: Tranås bakgrundskarta kombo
+  sources: [tranas_kombo]
+- name: TranasOrto
+  title: Tranås ortofoto
+  sources: [tranas_orto_cache]
+
+- name: BoxholmBakgrund
+  title: Boxholms bakgrundskarta
+  sources: [boxholm_cache]
+- name: BoxholmOrto
+  title: Boxholms ortofoto
+  sources: [boxholm_orto_cache]
+- name: BoxholmKombo
+  title: Boxholm bakgrundskarta kombo
+  sources: [boxholm_kombo]
+- name: BoxholmGra
+  title: Boxholm bakgrundskarta grå
+  sources: [boxholm_gra]
+
+- name: YdreBakgrund
+  title: Ydres bakgrundskarta
+  sources: [ydre_cache]
+- name: YdreOrto
+  title: Ydres ortofoto
+  sources: [ydre_orto_cache]
+- name: YdreKombo
+  title: Ydre bakgrundskarta kombo
+  sources: [ydre_kombo]
+- name: YdreGra
+  title: Ydre bakgrundskarta grå
+  sources: [ydre_gra]
+
+caches:
+  aneby_cache:
+    grids: [sweref99tm]
+    sources: ['aneby_mm:MetriaFastighetPlus']
+  aneby_gra:
+    grids: [sweref99tm]
+    sources: ['aneby_mm:MetriaFastighetGra']
+    format: image/png
+  aneby_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'aneby_mm:MetriaFastighetPlus']
+    format: image/png
+  aneby_orto_cache:
+    grids: [sweref99tm]
+    sources: ['aneby_mm:orto_farg']
+    format: image/jpeg
+
+  mullsjo_cache:
+    grids: [sweref99tm]
+    sources: ['mullsjo_mm:MetriaFastighetPlus']
+  mullsjo_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'mullsjo_mm:MetriaFastighetPlus']
+    format: image/png
+  mullsjo_orto_cache:
+    grids: [sweref99tm]
+    sources: ['mullsjo_mm:orto_farg']
+    format: image/jpeg
+
+  odeshog_cache:
+    grids: [sweref99tm]
+    sources: ['odeshog_mm:MetriaFastighetPlus']
+  odeshog_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'odeshog_mm:MetriaFastighetPlus']
+    format: image/png
+  odeshog_orto_cache:
+    grids: [sweref99tm]
+    sources: ['odeshog_mm:orto_farg']
+    format: image/jpeg
+
+  tranas_cache:
+    grids: [sweref99tm]
+    sources: ['tranas_mm:MetriaFastighetPlus']
+  tranas_gra:
+    grids: [sweref99tm]
+    sources: ['tranas_mm:MetriaFastighetGra']
+    format: image/png
+  tranas_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'tranas_mm:MetriaFastighetPlus']
+    format: image/png
+  tranas_orto_cache:
+    grids: [sweref99tm]
+    sources: ['tranas_mm:orto_farg']
+    format: image/jpeg
+
+  boxholm_cache:
+    grids: [sweref99tm]
+    sources: ['boxholm_mm:MetriaFastighetPlus']
+  boxholm_gra:
+    grids: [sweref99tm]
+    sources: ['boxholm_mm:MetriaFastighetGra']
+    format: image/png
+  boxholm_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'boxholm_mm:MetriaFastighetPlus']
+    format: image/png
+  boxholm_orto_cache:
+    grids: [sweref99tm]
+    sources: ['boxholm_mm:orto_farg']
+    format: image/jpeg
+
+  ydre_cache:
+    grids: [sweref99tm]
+    sources: ['ydre_mm:MetriaFastighetPlus']
+  ydre_gra:
+    grids: [sweref99tm]
+    sources: ['ydre_mm:MetriaFastighetGra']
+    format: image/png
+  ydre_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'ydre_mm:MetriaFastighetPlus']
+    format: image/png
+  ydre_orto_cache:
+    grids: [sweref99tm]
+    sources: ['ydre_mm:orto_farg']
+    format: image/jpeg

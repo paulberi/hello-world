@@ -1,0 +1,26 @@
+<div class="dropzone" xpDragNDrop (fileDropped)="dropFiles($event)">
+  <label for="fileUpload" class="custom-file-upload subheading-2">
+
+    <div *ngIf="files.length == 0" class="label">
+      <mat-icon class="upload-icon">cloud_upload</mat-icon>
+      <div>
+        {{label}}
+      </div>
+    </div>
+
+    <ul *ngIf="files.length > 0" class="files">
+      <li *ngFor="let file of files">
+        <mat-icon class="file-icon">attach_file</mat-icon>
+        {{ file.name }}
+      </li>
+    </ul>
+
+    <input #fileUpload id="fileUpload"
+           type="file"
+           [accept]="accept"
+           [attr.disabled]="isDisabled ? '' : null"
+           [multiple]="isMultipleFilesAllowed"
+           (change)="dropFiles($event.target.files)" />
+  </label>
+  <p class="error" *ngIf="hasRejectedFiles">{{ 'xp.dropzone.rejectedFiles' | transloco }}</p>
+</div>

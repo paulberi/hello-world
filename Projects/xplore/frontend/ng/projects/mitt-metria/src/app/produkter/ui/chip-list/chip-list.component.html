@@ -1,0 +1,7 @@
+<mat-chip-list aria-label="lista med taggar">
+    <mat-chip class="chip" (removed)="removeChip.emit(chip.id)" *ngFor="let chip of chips">{{chip?.title}}<span
+            *ngIf="chip?.title">:&nbsp;</span>
+        {{chip.text}}<button aria-label="ta bort tagg" matChipRemove>
+            <mat-icon>close</mat-icon>
+        </button></mat-chip>
+</mat-chip-list>

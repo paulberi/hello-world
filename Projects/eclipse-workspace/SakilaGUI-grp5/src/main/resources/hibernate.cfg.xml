@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/sakila</property>
+        <property name="connection.username">user</property>
+        <property name="connection.password">password</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- dbcp connection pool configuration -->
+        <!-- package location -->
+        <!-- <mapping class = "application.entities.Customer"/>  -->
+        <mapping class="application.entities.Category" />
+        <mapping class="application.entities.Language" />
+        <mapping class="application.entities.Actor" />
+        <mapping class="application.entities.Film" />
+        <mapping class="application.entities.Country" />
+        <mapping class="application.entities.City" />
+        <mapping class="application.entities.Address" />
+        <mapping class="application.entities.FilmActor" />
+        <mapping class="application.entities.Staff" />
+        <mapping class="application.entities.Store" />
+        <mapping class="application.entities.Customer" />
+        <mapping class="application.entities.Inventory" />
+        <mapping class="application.entities.Rental" />
+        <mapping class="application.entities.Payment" />
+        <mapping class="application.entities.FilmCategory" />
+
+    </session-factory>
+</hibernate-configuration>

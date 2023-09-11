@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_polis</name>
+  <id>LayerInfoImpl-ad839634:07022441777:-1078</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-79aceb1a:d0351fae298:-d551</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,11 @@
+{
+    "varderingsprotokoll": {
+        "ssbSkogsmark": [
+            {
+                "langd": 123,
+                "bredd": 456
+            }
+        ],
+        "prisomrade": "NORRLANDS_INLAND"
+    }
+}

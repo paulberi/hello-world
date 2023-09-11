@@ -1,0 +1,17 @@
+<layer>
+  <name>avtalsstatus_signerat</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:avtalsstatus_signerat</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:avtalsstatus_signerat</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-17 12:56:24.716 UTC</dateCreated>
+</layer>

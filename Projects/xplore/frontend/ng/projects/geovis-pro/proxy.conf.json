@@ -1,0 +1,32 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://geovis-pro-valdemarsvik-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://geovis-pro-valdemarsvik-utv.metria.se",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  },
+  "/castorapi": {
+    "target": "http://localhost:9015/castorapi/",
+    "pathRewrite": {
+      "^/castorapi": ""
+    },
+    "changeOrigin": true
+  },
+  "/mapproxy": {
+    "target": "https://geovis-pro-valdemarsvik-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/storage": {
+    "target": "https://geovis-pro-valdemarsvik-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/geoserver": {
+    "target": "https://geovis-pro-valdemarsvik-utv.metria.se",
+    "changeOrigin": true
+  }
+}

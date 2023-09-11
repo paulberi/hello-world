@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_racketanl</name>
+  <id>LayerInfoImpl-454d8ad5:54f91c81912:-1aab</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-cbdd51d8:8e2f55da204:-a9ec</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

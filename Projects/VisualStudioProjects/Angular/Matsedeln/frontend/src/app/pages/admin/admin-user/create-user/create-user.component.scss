@@ -1,0 +1,106 @@
+.centered-content {
+  height: 620px;
+}
+
+.choices-content {
+  max-height: 250px;
+  min-height: 250px;
+  justify-content: left;
+}
+
+.form-content {
+  display: flex;
+}
+
+.fields-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.other-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.input-field {
+  background: #08496d;
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  width: 250px;
+  height: 18px;
+  margin: 10px;
+  padding: 8px;
+}
+
+.navbar-item {
+  cursor: pointer;
+  .navbar-link {
+      color: hsl(0, 0%, 100%);
+      background: transparent;
+      &:hover {
+          color: #1775b8;
+      }
+  }
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.navbar-dropdown {
+  height: 210px;
+}
+
+.permissions-label {
+  color: white;
+  height: 20px;
+  margin-left: 12px;
+}
+
+.permission-checkbox {
+  margin-left: 20px;
+}
+
+.admin-label {
+  color: white;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.create-button {
+  width: 150px;
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+    transform: translateY(4px);
+  }
+  cursor: pointer;
+  margin-top: 95px;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.school-dropdown {
+  color:white;
+  cursor: pointer;
+}
+
+.multiselect-parent {
+  width: 300px;
+}
+
+.multiselect-parent .dropdown-toggle {
+  width: 300px;
+}
+
+.multiselect-parent .dropdown-menu {
+  width: 300px;
+}

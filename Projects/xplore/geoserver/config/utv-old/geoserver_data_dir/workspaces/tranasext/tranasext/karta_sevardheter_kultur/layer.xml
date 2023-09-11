@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_sevardheter_kultur</name>
+  <id>LayerInfoImpl-924f1ea8:9a73bfc6620:-0edd</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-2590fc7d:81adc9dce35:-f90f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

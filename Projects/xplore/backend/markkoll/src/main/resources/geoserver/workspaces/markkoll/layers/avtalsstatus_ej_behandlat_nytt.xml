@@ -1,0 +1,17 @@
+<layer>
+  <name>avtalsstatus_ej_behandlat_nytt</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:avtalsstatus_ej_behandlat_nytt</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:avtalsstatus_ej_behandlat_nytt</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-18 10:54:28.485 UTC</dateCreated>
+</layer>

@@ -1,0 +1,43 @@
+<Transaction xmlns="http://www.opengis.net/wfs" service="WFS" version="1.1.0"
+             xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Update typeName="feature:karta_skola" xmlns:feature="undefined">
+        <Property>
+            <Name>geom</Name>
+            <Value>
+                <MultiPoint xmlns="http://www.opengis.net/gml" srsName="EPSG:3006">
+                    <pointMember>
+                        <Point srsName="EPSG:3006">
+                            <pos srsDimension="2">6410308.889381546 489444.10604720004</pos>
+                        </Point>
+                    </pointMember>
+                </MultiPoint>
+            </Value>
+        </Property>
+        <Property>
+            <Name>namn</Name>
+            <Value>Furulidskolan</Value>
+        </Property>
+        <Property>
+            <Name>beskr</Name>
+            <Value>Grundskola och särskola som riktar sig till barn från årskurs sex till nio.</Value>
+        </Property>
+        <Property>
+            <Name>link</Name>
+            <Value>
+                https://aneby.se/sidor/barn-och-utbildning/grundskola/grundskolor-och-grundsarskolor/furulidskolan.html
+            </Value>
+        </Property>
+        <Property>
+            <Name>adress</Name>
+            <Value>Furulidsgatan 14, 578 31 Aneby</Value>
+        </Property>
+        <Property>
+            <Name>kontakt</Name>
+            <Value>0380-463 61</Value>
+        </Property>
+        <Filter xmlns="http://www.opengis.net/ogc">
+            <FeatureId fid="karta_skola.3"/>
+        </Filter>
+    </Update>
+</Transaction>

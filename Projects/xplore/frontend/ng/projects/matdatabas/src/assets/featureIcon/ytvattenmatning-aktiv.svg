@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 30">
+  <g id="Group_546" data-name="Group 546" transform="translate(-886 1383.5)">
+    <g id="water_drop_black_24dp" transform="translate(881 -1386)">
+      <path id="Path_23" data-name="Path 23" d="M16,2Q4.007,12.238,4,19.7a12,12,0,1,0,24,0Q28,12.23,16,2Zm0,27a8.931,8.931,0,0,1-9-9.3c0-3.51,2.925-8.16,9-13.71,6.075,5.55,9,10.185,9,13.71A8.931,8.931,0,0,1,16,29Z" transform="translate(1 0.5)"/>
+    </g>
+    <path id="Path_28" data-name="Path 28" d="M14.2,11.9V4.7a2.7,2.7,0,1,0-5.4,0v7.2a4.5,4.5,0,1,0,5.4,0ZM10.6,4.7a.9.9,0,0,1,1.8,0h-.9v.9h.9V7.4h-.9v.9h.9v1.8H10.6Z" transform="translate(886.6 -1378)"/>
+  </g>
+</svg>

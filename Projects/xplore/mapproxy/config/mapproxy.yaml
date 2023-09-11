@@ -1,0 +1,40 @@
+# -------------------------------
+# MapProxy configuration.
+# -------------------------------
+
+services:
+  demo:
+  tms:
+    use_grid_names: true
+    # origin for /tiles service
+    origin: 'nw'
+  kml:
+    use_grid_names: true
+  wmts:
+    restful: true
+    kvp: true
+  wms:
+    srs: ['EPSG:3006']
+    md:
+      title: MapProxy WMS Proxy
+      abstract: This is a minimal MapProxy example.
+
+sources:
+  under:
+    type: wms
+    req:
+      url: http://xplore:Endastutforskning2019@testmaps.metria.se/geoserver/wms?
+      layers: MetriaFastighetUnder
+    coverage:
+      bbox: [181896.33, 6101648.07, 864416.00, 7689478.31]
+      srs: 'EPSG:3006'
+
+grids:
+  sweref99tm:
+    srs: EPSG:3006
+    bbox: [181896.33, 6101648.07, 864416.00, 7689478.31]
+    origin: ul
+
+globals:
+  srs:
+    axis_order_ne: ['EPSG:3006']

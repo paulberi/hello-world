@@ -1,0 +1,71 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.form-control {
+    width: 300px;
+
+    @media screen and #{$xp-breakpoints-tablet-max} {
+        width: 90%;
+    }
+}
+
+.bold-center {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-control-checked {
+    column-gap: 48px;
+    align-items: center;
+}
+
+.unchecked {
+    border: 2px solid var(--primary);
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+}
+
+.checked-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.checked {
+    border: none;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    background-color: var(--success);
+
+    .mat-icon {
+        font-size: 1rem;
+        line-height: 20px;
+        margin-left: 2px;
+        color: var(--on-success);
+    }
+}
+
+.right {
+    float: right;
+}
+
+#previous-button,
+#next-button {
+    font-size: 16px;
+
+    .mat-icon {
+        margin-bottom: 2px;
+    }
+}
+
+#previous-button {
+    margin-right: 20px;
+    border-width: 3px;
+    border-color: var(--primary);
+    height: 48px;
+}
+
+#next-button {
+    height: 48px;
+}

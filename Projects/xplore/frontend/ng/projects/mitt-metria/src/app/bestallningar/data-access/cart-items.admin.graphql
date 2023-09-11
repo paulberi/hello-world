@@ -1,0 +1,9 @@
+mutation adminAdjustOrderLine($orderLineId: ID!) {
+  adjustOrderLine(orderLineId: $orderLineId, quantity: 0)
+    @namedClient(name: "adminApi") {
+    __typename
+    ... on OrderModificationError {
+      message
+    }
+  }
+}

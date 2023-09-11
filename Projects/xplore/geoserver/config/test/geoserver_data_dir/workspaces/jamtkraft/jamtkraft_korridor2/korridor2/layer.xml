@@ -1,0 +1,23 @@
+<layer>
+  <name>korridor2</name>
+  <id>LayerInfoImpl--10b5fb8f:16ea7627884:acf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--10b5fb8f:16ea7627884:ad3</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--10b5fb8f:16ea7627884:ad3</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--10b5fb8f:16ea7627884:ace</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

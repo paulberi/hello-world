@@ -1,0 +1,184 @@
+$header-line-height: 40px;
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-icon, .mat-icon-button {
+  width: inherit;
+  height: auto;
+  border-radius: 0;
+  fill: var(--on-background);
+}
+
+// Header
+header {
+  flex: 0 1 auto;
+
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba($color: black, $alpha: 0.5);
+
+  .first-row {
+    padding: 10px 10px;
+    background-color: var(--primary);
+
+    @media screen and (min-width: 768px) {
+      padding: 10px 20px;
+    }
+  }
+}
+
+#app-name {
+  font-size: 20px;
+  line-height: $header-line-height;
+  padding-left: 10px;
+  border-left: 2px solid white;
+  margin: auto 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  line-height: $header-line-height;
+}
+
+#logo-button {
+  margin-right: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+}
+
+#user-menu-button {
+  color: white;
+  .mat-icon{
+  line-height: 40px;
+  }
+}
+
+
+#user-menu-details {
+  padding: 0 16px 8px 16px;
+
+}
+
+#user-menu-title {
+  margin: 5px 0;
+}
+
+#user-menu-email {
+  margin: 5px 0;
+}
+
+.mat-menu-item .mat-icon-no-color, .mat-menu-item-submenu-trigger::after{
+  color: var(--on-background);
+}
+
+// Huvudmeny
+#main-menu {
+
+  background-color: var(--background);
+  color: var(--on-background);
+  fill: var(--primary);
+  padding: 4px 5px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 6px 6px;
+  }
+}
+
+.mat-button {
+  padding: 0 8px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 16px; // Standard i Material Design
+  }
+}
+
+.icon {
+  background-color: var(--on-background);
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 26px;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  margin-right: 5px;
+
+  @media screen and (min-width: 768px) {
+    line-height: 28px;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+}
+
+.mat-menu-item .mat-icon-no-color, .mat-menu-item-submenu-trigger::after{
+  color: white;
+}
+
+.selected {
+  .icon {
+    background-color: var(--teal);
+  }
+
+  .arrow {
+    color: var(--teal);
+  }
+
+  span {
+    color: var(--teal);
+  }
+}
+
+// Content
+#content {
+  flex: 1 1 auto;
+
+}
+
+// Footer
+footer {
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-contact-info {
+  padding-top: 2rem;
+  margin-bottom: 0;
+}
+
+.footer-content {
+  padding: 4rem 0;
+}
+
+.footer-logo {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+}

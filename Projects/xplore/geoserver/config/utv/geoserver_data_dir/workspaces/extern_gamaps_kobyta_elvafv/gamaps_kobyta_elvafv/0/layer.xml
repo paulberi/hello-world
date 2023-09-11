@@ -1,0 +1,16 @@
+<layer>
+  <name>0</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6b53</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6b54</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 09:40:14.35 UTC</dateCreated>
+</layer>

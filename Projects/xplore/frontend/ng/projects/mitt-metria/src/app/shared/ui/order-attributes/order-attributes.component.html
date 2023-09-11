@@ -1,0 +1,18 @@
+<div *ngIf="attributes">
+  <div class="attributes" *ngFor="let attribute of parseJSON(attributes) | keyvalue">
+    <div [ngSwitch]="checkType(attribute.value, attribute.key)">
+      <span class="capitalize">{{ attribute.key }}:</span>
+
+      <span *ngSwitchCase="'string'">&nbsp;{{ attribute.value }}</span>
+      <span *ngSwitchCase="'array'"><span *ngFor="let value of attribute.value; let isLast = last">
+          {{ value }}{{ isLast ? "" : "," }}
+        </span></span>
+      <!-- TODO Kan vi hämta fil i en geojson? -->
+      <span *ngSwitchCase="'polygon'">&nbsp;fil</span>
+      <span *ngSwitchCase="'rektangel'" class="white-space">
+        {{ convertCoordinates(attribute.value.geometry.coordinates[0]) }}
+      </span>
+      <span *ngSwitchCase="'json'">{{ attributes }}</span>
+    </div>
+  </div>
+</div>

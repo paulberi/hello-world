@@ -1,0 +1,54 @@
+<p>
+  En analys av skyddade områden och områden med naturvärden som det valda området kan beröras av. Utöver
+  skyddsformer med formellt skydd, redovisas även andra områden som kan vara viktiga för naturvårdsinsatser. 
+  Skyddsformer på fastigheter kan överlappa varandra. Total areal visar hur stor del som berörs av skyddsformer.
+</p>
+<br/>
+
+<div *ngIf="!resultat && !error">
+  Inga resultat har hämtats för den här fastigheten
+</div>
+<div *ngIf="error"><span style="color: red">{{error.felbeskrivning}}</span></div>
+<div *ngIf="resultat">
+  <div *ngIf="dataSource.length === 0">
+    Fastigheten saknar skyddade områden.
+  </div>
+  <ng-container *ngIf="dataSource.length > 0">
+    <table>
+      <thead>
+      <tr>
+        <th>Skyddsform</th>
+        <th>Antal</th>
+        <th>Areal</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of dataSource">
+        <td>{{row.skyddsform}}</td>
+        <td>{{row.skyddadeOmraden.length}}</td>
+        <td>{{row.totalAreal < 0.1 ? '< 0.1' : row.totalAreal | number:'1.0-1':'sv'}} ha</td>
+      </tr>
+
+      <tr >
+        <td class="total-areal">Total areal</td>
+        <td class="total-areal"> </td>
+        <td class="total-areal">{{totalAreaAlla < 0.1 ? '< 0.1' : totalAreaAlla | number:'1.0-1':'sv'}} ha</td>
+      </tr>
+
+      </tbody>
+    </table>
+
+<!--    <div class="diagram">-->
+<!--      <ngx-charts-bar-vertical-->
+<!--        [view]="[100+dataSource.length*70, 300]"-->
+<!--        [results]="chartData"-->
+<!--        [xAxis]="true"-->
+<!--        [yAxis]="true"-->
+<!--        [legend]="false"-->
+<!--        [animations]="false"-->
+<!--        [showYAxisLabel]="true"-->
+<!--        [yAxisLabel]="'Areal (ha)'">-->
+<!--      </ngx-charts-bar-vertical>-->
+<!--    </div>-->
+  </ng-container>
+</div>

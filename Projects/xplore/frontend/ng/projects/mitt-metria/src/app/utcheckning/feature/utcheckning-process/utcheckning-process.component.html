@@ -1,0 +1,5 @@
+<mm-utcheckning-wrapper (back)="back()">
+  <mm-utcheckning-process-ui [customer]="activeCustomer" [invoiceRef]="initialInvoiceRef" [termsLink]="licenceTermsUrl"
+    [price]="totalPriceWithTax" [vat]="vat" [currency]="currency" [paymentMethods]="paymentMethods$ | async"
+    [paymentError]="paymentErrorMessage" [pending]="pending" (pay)="completeOrder($event)"></mm-utcheckning-process-ui>
+</mm-utcheckning-wrapper>

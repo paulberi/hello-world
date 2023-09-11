@@ -1,0 +1,184 @@
+.mat-button-toggle-checked {
+  background-color: var(--accent-variant);
+  color: var(--on-accent-variant);
+}
+
+.mat-button-toggle-group {
+  border-radius: 0;
+}
+
+.chevron {
+  margin-left: 1.5rem;
+}
+
+.title {
+  padding-bottom: 1.5rem;
+}
+
+.lock {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 14px;
+  display: inline-block;
+  margin: 0;
+}
+
+.ersattning-falt{
+  color: green;
+  text-align: right;
+}
+
+.suffixKr {
+  position: relative;
+  bottom: 6px;
+  margin-left: 5px;
+}
+
+.message-container {
+  display: block;
+  padding-bottom: 2rem;
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+mat-button-toggle-group {
+  margin-top: 48px;
+}
+
+.radnr {
+  display: inline-block;
+  width: 30px;
+}
+
+.vp-rad {
+  padding-top: 1rem;
+}
+
+.add-row {
+  background-color: var(--background);
+  color: var(--accent);
+  margin-left: 24px;
+}
+
+.add-row:hover {
+  text-decoration: underline;
+}
+
+.ersattning {
+  width: 220px;
+}
+
+.summary-row {
+  text-align: end;
+}
+
+.remove-row-icon {
+  font-size: 20px;
+}
+
+.remove-row-button {
+  align-self: center;
+}
+
+mat-form-field ~ mat-form-field {
+  padding-left: 15px;
+}
+
+.rotnetto {
+  padding-left: 40px;
+}
+
+.hinder-akermark {
+  padding-left: 40px;
+}
+
+.title-without-checkbox {
+  padding-left: 25px;
+}
+
+.sammanstallning {
+  margin-left: 24px;
+  margin-top: 1.5rem;
+}
+
+.markera-alla {
+  margin-top: 2rem;
+}
+
+.total-ersattning-row {
+  padding-top: 0.5rem;
+}
+
+.total-ersattning {
+  font-weight: 400;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+.fg-2 {
+  flex-grow: 2;
+}
+
+.fg-3 {
+  flex-grow: 3;
+}
+
+.fg-4 {
+  flex-grow: 4;
+}
+
+.fg-5 {
+  flex-grow: 5;
+}
+
+.fg-6 {
+  flex-grow: 6;
+}
+
+.right-align {
+  text-align: right;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  -moz-appearance: textfield;
+}
+
+.config-checkbox {
+  margin-left: 54px;
+  display: block;
+}
+
+.prisomrade {
+  margin-left: 40px;
+  margin-top: 1em;
+}
+
+.bilagor {
+  width: 100%;
+}
+
+.hinder-akermark-info {
+    color: var(--primary-variant);
+    margin-left: 55px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}

@@ -1,0 +1,59 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-ef48da67:b066beeea15:-1324</id>
+  <name>karta_folkets-park</name>
+  <nativeName>karta_folkets-park</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-18a168b6:28010d03431:-6d8d</id>
+  </namespace>
+  <title>karta_folkets-park</title>
+  <keywords>
+    <string>features</string>
+    <string>karta_folkets-park</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS["SWEREF99 15 00", 
+  GEOGCS["SWEREF99", 
+    DATUM["SWEREF99", 
+      SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG","7019"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6619"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4619"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", 15.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 150000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","3009"]]</nativeCRS>
+  <srs>EPSG:3009</srs>
+  <nativeBoundingBox>
+    <minx>139567.827531012</minx>
+    <maxx>139569.827531012</maxx>
+    <miny>6412324.930375</miny>
+    <maxy>6412326.930375</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>14.824413602057946</minx>
+    <maxx>14.824447351662311</maxx>
+    <miny>57.82966485156939</miny>
+    <maxy>57.82968285547205</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-ba568096:c3a83500059:-dd23</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

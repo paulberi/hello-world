@@ -1,0 +1,59 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs';
+import Feedback from '../assets/feedback.svg';
+import MapDraw from '../assets/map_draw.svg';
+import AffectedArea from '../assets/affected_area.svg';
+
+<Meta title="Riktlinjer/Ikoner" />
+
+# Ikoner
+---
+
+Precis som färger, så är ikoner viktiga informationsbärare. Det är av största vikt att ikoner används enligt den betydelsen de tagits fram
+för att symbolisera. Vid ett konsekvent användande av ikoner ökar förförståelsen av ikonen som informationsbärare. Ett felaktigt användande av ikoner
+ger ett oseriöst intryck, och kan skapa förvirring. Ikoner ska vidare användas sparsamt, för att hålla gränssnittet rent och med minimalt, kognitivt brus.
+
+I första hand ska ikoner från <span class="accent">[Material Icons](https://fonts.google.com/icons)</span> användas för web,
+och Iconicons för mobilappar. I de fall som det inte finns en lämplig ikon, så tar en av Metrias designers (just nu Jenny) fram en ikon i
+liknande, minimalistisk stil.
+
+Ikoner kan användas fristående, eller mot cirkelformad bottenplatta.
+
+## Ikonbibliotek
+
+Ikonbibliotek är under tidig uppbyggnad. Biblioteket över egendesignade ikoner kompletteras allt eftersom nya ikoner tillkommer och befintliga
+förs in i designsystemet.
+
+För att kunna använda ikonerna behöver man importera `import {MatIconModule} from '@angular/material/icon';` i komponentens modul. Nedan är ett
+exempel på hur Material Icons kan användas i html:
+
+```html
+<mat-icon>add<mat-icon>
+```
+
+### Vanligt förekommande ikoner
+
+Vi jobbar på innehåll till denna underrubrik. Vi hänvisar så länge till <span class="accent">[Material Icons](https://fonts.google.com/icons)</span>
+för att hitta ikoner.
+
+<br />
+
+<!-- <div class="icons">
+<div class="icon"><span class="material-icons">add</span><span class="icon-name">Lägg till</span></div>
+<div class="icon"><span class="material-icons">edit</span><span class="icon-name">Editera</span></div>
+<div class="icon"><span class="material-icons-outlined">ef3d</span><span class="icon-name">Ta bort</span></div>
+<div class="icon"><span class="material-icons-outlined">search</span><span class="icon-name">Sök</span></div>
+<div class="icon"><span class="material-icons-outlined">menu</span><span class="icon-name">Meny</span></div>
+<div class="icon"><span class="material-icons-outlined">more_vert</span><span class="icon-name">Mer</span></div>
+<div class="icon"><span class="material-icons-outlined">expand_more</span><span class="icon-name">Expandera</span></div>
+<div class="icon"><span class="material-icons">download</span><span class="icon-name">Ladda ner</span></div>
+<div class="icon"><span class="material-icons">upload</span><span class="icon-name">Ladda upp</span></div>
+</div> -->
+
+### Egendesignade ikoner
+
+<div class="icons">
+<div class="icon"><span class="material-icons-outlined"><img src={MapDraw} alt="feedback" /></span><span class="icon-name">Rita</span></div>
+<div class="icon"><span class="material-icons-outlined"><img src={Feedback} alt="feedback" width="25%" /></span><span class="icon-name">Feedback på plats/koordinat</span></div>
+<div class="icon"><span class="material-icons-outlined"><img src={AffectedArea} alt="feedback" width="35%" /></span><span class="icon-name">Påverkad/aktuell yta</span></div>
+</div>
+

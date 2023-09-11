@@ -1,0 +1,71 @@
+.xp-message {
+  border-radius: 4px;
+}
+
+.mat-icon {
+  width: inherit;
+  height: inherit;
+}
+
+.xp-message-container {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+
+  .mat-icon {
+    font-size: 36px;
+    margin-right: 0.5rem;
+  }
+
+  .mat-icon-button .mat-icon {
+    font-size: 24px;
+  }
+
+  span {
+    flex-grow: 1;
+  }
+}
+
+.xp-message-success {
+  background: var(--accent);
+  border: solid var(--accent);
+  border-width: 0 0 0 6px;
+  color: var(--on-accent);
+
+  .mat-icon {
+    color: var(--on-accent);
+  }
+}
+
+.xp-message-information {
+  background: var(--accent-variant);
+  border: solid var(--accent);
+  border-width: 0 0 0 6px;
+  color: var(--on-accent-variant);
+
+  .mat-icon {
+    color: var(--accent);
+  }
+}
+
+.xp-message-warning {
+  background: var(--error-variant);
+  border: solid var(--error);
+  border-width: 0 0 0 6px;
+  color: var(--on-error-variant);
+
+  .mat-icon {
+    color: var(--error);
+  }
+}
+
+.xp-message-error {
+  background: var(--error);
+  border: solid var(--error);
+  border-width: 0 0 0 6px;
+  color: var(--on-error);
+
+  .mat-icon {
+    color: var(--on-error);
+  }
+}

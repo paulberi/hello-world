@@ -1,0 +1,63 @@
+<div class="customer-info">
+  <h3>{{ "mm.createOrder.customerInformation" | transloco }}</h3>
+  <div *ngIf="customerForm" [formGroup]="customerForm">
+    <div>
+      <span>{{ "mm.common.orderId" | transloco }}*</span>
+      <mat-form-field>
+        <input matInput formControlName="orderId" type="text" (keydown.enter)="$event.target.blur()" />
+        <mat-error *ngIf="customerForm.get('orderId').hasError('required')">
+          {{ "mm.forms.fieldMandatory" | transloco }}
+        </mat-error>
+        <mat-error
+          *ngIf="customerForm.get('orderId').hasError('minLength') || customerForm.get('orderId').hasError('maxLength') || customerForm.get('orderId').hasError('pattern')">
+          {{ "mm.forms.invalidSalesforceOrderNumber" | transloco }}
+        </mat-error>
+      </mat-form-field>
+      <mat-icon class="mat-icon-padding">info_outline</mat-icon>
+      <span>{{ "mm.createOrder.orderIdFromSalesforce" | transloco }}</span>
+    </div>
+    <div>
+      <span>{{ "mm.common.shippingAddress" | transloco }}*</span>
+      <mat-form-field class="shippingAddress">
+        <input matInput formControlName="shippingAddress" type="email" (keydown.enter)="$event.target.blur()" />
+        <mat-error *ngIf="customerForm.get('shippingAddress').hasError('required')">
+          {{ "mm.forms.fieldMandatory" | transloco }}
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('shippingAddress').hasError('email')">
+          {{ "mm.forms.invalidEmail" | transloco }}
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('shippingAddress').hasError('customerExistsInvalid')">
+          {{ "mm.forms.customerNotFound" | transloco }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div *ngIf="customerForm.get('shippingAddress').status !== 'PENDING';else loading">
+      <div
+        *ngIf="!customerForm.get('shippingAddress').getError('required') && !customerForm.get('shippingAddress').getError('email') && customerForm.get('shippingAddress').getError('customerExistsInvalid')">
+        <h4>{{ "mm.createOrder.createCustomer" | transloco }}</h4>
+        <div>
+          <span>{{ "mm.common.firstName" | transloco }}*</span>
+          <mat-form-field>
+            <input matInput formControlName="firstName" type="text" />
+          </mat-form-field>
+        </div>
+        <div>
+          <span>{{ "mm.common.lastName" | transloco }}*</span>
+          <mat-form-field>
+            <input matInput formControlName="lastName" type="text" />
+          </mat-form-field>
+        </div>
+        <button mat-raised-button type="button" (click)="addCustomer()" color="accent"
+          [disabled]="!customerForm.get('firstName').value || !customerForm.get('lastName').value">
+          {{ "mm.createOrder.createCustomer" | transloco }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="spinner-wrapper">
+    <mat-spinner [diameter]="64"></mat-spinner>
+  </div>
+</ng-template>

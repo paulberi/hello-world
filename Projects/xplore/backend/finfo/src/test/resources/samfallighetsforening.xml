@@ -1,0 +1,263 @@
+<forvaltning UUID="909a6a8b-6c04-90ec-e040-ed8f66444c3f">
+    <foreningstyp kod="SAMF">Samfällighetsförening</foreningstyp>
+    <foreningsnamn>LILLPITE BYS SAMFÄLLIGHETSFÖRENING</foreningsnamn>
+    <lan>
+        <lansnamn>NORRBOTTENS LÄN</lansnamn>
+        <lanskod>25</lanskod>
+    </lan>
+    <sate>Piteå</sate>
+    <coAdress>STEN ENGBERG</coAdress>
+    <adress>BONSAVÄGEN 67</adress>
+    <postnummer>94692</postnummer>
+    <postort>LILLPITE</postort>
+    <orgnr>716465-7947</orgnr>
+    <registreringsdatum>1990-09-03</registreringsdatum>
+    <styrelsedatum>2012-04-16</styrelsedatum>
+    <rakenskapsarFrom>0101</rakenskapsarFrom>
+    <rakenskapsarTom>3112</rakenskapsarTom>
+    <senasteAjourforingsdatum>2012-05-28</senasteAjourforingsdatum>
+    <firmatecknare>ORDFÖRANDE STEN ENGBERG OCH LEDAMOT BO ENGBERG TILLSAMMANS ELLER VAR FÖR SIG</firmatecknare>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>1</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:24</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150154</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>2</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:16</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150146</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>3</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:13</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150143</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>4</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:19</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150149</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>5</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:20</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150150</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>6</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:23</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150153</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>7</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:12</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150142</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>8</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:3</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150133</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>9</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:15</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150145</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>10</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:22</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150152</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>11</objektslopnummer>
+        <objektsinformation>25-PTJ-772</objektsinformation>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>12</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:17</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150147</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>13</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:8</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150138</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>14</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:18</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150148</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>15</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:9</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150139</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>16</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:10</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150140</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>17</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:11</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150141</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>18</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:21</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150151</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>19</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:33</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150163</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>20</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:34</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150164</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjekt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SamfallighetsEllerGAforvaltning">
+        <objektslopnummer>21</objektslopnummer>
+        <objektsinformation>PITEÅ LILLPITE S:14</objektsinformation>
+        <fastighetsnyckelForSamfEllerGA>250150144</fastighetsnyckelForSamfEllerGA>
+    </forvaltningsobjekt>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>1</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>2</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>3</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>4</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>5</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>6</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>7</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>8</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>9</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>10</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>11</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>12</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>13</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>14</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>15</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>16</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>17</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>18</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>19</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>20</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <forvaltningsobjektsAndamal>
+        <objektslopnummer>21</objektslopnummer>
+        <andamalstyp kod="12">Skiftessamfälligheter</andamalstyp>
+    </forvaltningsobjektsAndamal>
+    <styrelsemedlem>
+        <namn>ANDERS ÖHMAN</namn>
+        <utdelningsadress>SÖRVÄGEN 236</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Ledamot</medlemstyp>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>BERT BERG</namn>
+        <utdelningsadress>SÖRVÄGEN 289</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Suppleant</medlemstyp>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>BO ENGBERG</namn>
+        <utdelningsadress>LILLPITEVÄGEN 366</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Ledamot</medlemstyp>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>GUNNAR OLOVSSON</namn>
+        <utdelningsadress>NORRBODEVÄGEN 459</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Suppleant</medlemstyp>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>STEN ENGBERG</namn>
+        <utdelningsadress>BONSAVÄGEN 67</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Ledamot</medlemstyp>
+        <funktion>
+            <styrelsefunktionTyp kod="3">Kassör</styrelsefunktionTyp>
+        </funktion>
+        <funktion>
+            <styrelsefunktionTyp kod="1">Ordförande</styrelsefunktionTyp>
+        </funktion>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>SÖREN MYRESTAM</namn>
+        <utdelningsadress>SNÅRVÄGEN 80</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Ledamot</medlemstyp>
+    </styrelsemedlem>
+    <styrelsemedlem>
+        <namn>ÅKE MARKSTRÖM</namn>
+        <utdelningsadress>YTTERSTA 2467</utdelningsadress>
+        <postnummer>94692</postnummer>
+        <postort>LILLPITE</postort>
+        <medlemstyp>Ledamot</medlemstyp>
+    </styrelsemedlem>
+</forvaltning>

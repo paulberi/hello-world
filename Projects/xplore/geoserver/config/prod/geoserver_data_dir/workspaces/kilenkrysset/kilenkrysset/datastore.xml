@@ -1,0 +1,41 @@
+<dataStore>
+  <id>DataStoreInfoImpl-5492d999:177ab4239c8:317a</id>
+  <name>kilenkrysset</name>
+  <description>Kilenkrysset verksamhetsdata</description>
+  <type>PostGIS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-5492d999:177ab4239c8:3178</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="schema">kilenkrysset</entry>
+    <entry key="Evictor run periodicity">300</entry>
+    <entry key="Max open prepared statements">50</entry>
+    <entry key="encode functions">true</entry>
+    <entry key="Batch insert size">1</entry>
+    <entry key="preparedStatements">false</entry>
+    <entry key="database">geovisdb_prod</entry>
+    <entry key="host">xploredb02.prodstod.se</entry>
+    <entry key="Loose bbox">true</entry>
+    <entry key="SSL mode">DISABLE</entry>
+    <entry key="Estimated extends">true</entry>
+    <entry key="fetch size">1000</entry>
+    <entry key="Expose primary keys">false</entry>
+    <entry key="validate connections">true</entry>
+    <entry key="Support on the fly geometry simplification">true</entry>
+    <entry key="Connection timeout">20</entry>
+    <entry key="create database">false</entry>
+    <entry key="port">5432</entry>
+    <entry key="passwd">crypt1:Zd/gJFs/wpj+tMCk3s1ft6VPmnN+/KJc</entry>
+    <entry key="min connections">1</entry>
+    <entry key="dbtype">postgis</entry>
+    <entry key="namespace">www.kilenkrysset.se</entry>
+    <entry key="max connections">10</entry>
+    <entry key="Evictor tests per run">3</entry>
+    <entry key="Test while idle">true</entry>
+    <entry key="user">geovis</entry>
+    <entry key="Max connection idle time">300</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-02-16 18:31:08.324 UTC</dateCreated>
+</dataStore>

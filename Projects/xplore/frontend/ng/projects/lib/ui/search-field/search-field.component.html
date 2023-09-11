@@ -1,0 +1,9 @@
+<div class="search-field">
+  <mat-form-field>
+    <input id="search" matInput type="text" ngDefaultControl [placeholder]="placeholder"/>
+    <button type="button" mat-button *ngIf="!isEmpty()" id="reset-button" matSuffix mat-icon-button [attr.aria-label]="ariaLabel" (click)="reset()">
+      <mat-icon class="close">close</mat-icon>
+    </button>
+    <mat-icon *ngIf="isEmpty()" matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>

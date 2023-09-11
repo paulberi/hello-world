@@ -1,0 +1,29 @@
+<div *ngIf="!isLoading">
+<mm-stepper [title]="'mm.configurationTypeA.stepperTitle' | transloco" [steps]="stepperSteps" [activeStep]="activeStep"
+    (cancelOrder)="cancelOrder.emit()"></mm-stepper>
+
+    <div class="wrapper configuration-wrapper" *ngIf="productVariants?.length; else noProductVariants">
+        <div class="left">
+            <mm-konfigurationstyp-a-ui [showDropzone]="hasPolygonProperty"
+                [parentFormControlOptions]="filteredProductVariants" [childFormControl]="propertyOptions"
+                [referenssystem]="referenssystem" [leveransformat]="leveransformat" (activeStepChanges)="getActiveStep($event)"
+                (statusChanges)="checkIfFormIsValid($event)" (fileChanges)="polygonChanges($event)"
+                (selectChanges)="productVariantChanges($event)" (attributeFormChanges)="attributesChanges($event)">
+            </mm-konfigurationstyp-a-ui>
+        </div>
+
+        <div class="right">
+            <mm-din-kartprodukt [header]="'mm.configuration.yourMapProductHeader' | transloco"
+                [displayAttributes]="displayAttributes" [price]="price" (addToCart)="addToCart()"
+                [disableButton]="!konfigurationTypAValid" [currency]="currency">
+            </mm-din-kartprodukt>
+        </div>
+    </div>
+</div>
+
+<ng-template #noProductVariants>
+    <div class="wrapper">
+        <xp-message severity="information" [text]="'mm.configuration.errorMessage' | transloco" [isClosable]="false">
+        </xp-message>
+    </div>
+</ng-template>

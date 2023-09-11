@@ -1,0 +1,43 @@
+mat-expansion-panel {
+  margin-bottom: 2px;
+  margin-top: 20px;
+  margin-left: 23px;
+  margin-right: 10px;
+}
+
+mat-expansion-panel-header {
+  background: var(--accent);
+  padding-left: 36px;
+
+  mat-icon {
+    margin-right: 0.5em;
+  }
+}
+
+mat-expansion-panel-header:hover {
+  background: var(--accent) !important;
+}
+
+mat-expansion-panel-header:focus {
+  background: var(--accent) !important;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  color: white;
+}
+
+mat-panel-title div {
+  color: white;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding-top: 16px !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  padding-bottom: 48px !important;
+}

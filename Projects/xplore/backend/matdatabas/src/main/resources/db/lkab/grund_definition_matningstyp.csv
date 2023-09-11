@@ -1,0 +1,19 @@
+2,0,Nivå (portryck),Tryck,hPa,2,Nivå,m,2,"Flödar, Torr, Fruset, Hinder, Annat fel",0,f,Mätning av grundvattennivå med hjälp av portryck,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,NIVA_PORTRYCK
+1,0,Nivå (nedmätning),Pejlat djup,m,2,Nivå,m,2,"Flödar, Torr, Fruset, Hinder, Annat fel",0,f,Mätning av grundvattennivå med hjälp av lod,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,NIVA_NEDMATNING
+9,2,Sättning,Rörelse,m,4,,,,"Hinder, Annat fel",0,f,Mätning av rörelse i höjdled för sättningar,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,SATTNING
+4,0,Lufttryck per timme,Lufttryck,hPa,2,,,,"Hinder, Annat fel",0,t,Mätning av lufttryck för beräkning av grundvattennivå,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,LUFTTRYCK_PER_TIMME
+3,0,Nivå (vatten- o lufttryck),Vattentryck,cmvp,2,Nivå,m,2,"Hinder, Annat fel",0,t,Mätning av grundvattennivå med hjälp av vattentryck och lufttryck (separat mätning),f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,NIVA_VATTEN_LUFTTRYCK
+5,1,Infiltration (momentant flöde),Flöde,l/min,2,,,,"Hinder, Annat fel",0,f,Mätning av momentant vattenflöde med hjälp av flödesmätare och klocka,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,INFILTRATION_MOMENTANT_FLODE
+6,1,Infiltration (medelflöde),Volym,m³,2,Flöde,l/min,2,"Hinder, Annat fel",1,t,Mätning av vattenvolym som passerat mätaren sedan den installerats. Beräkning av medelflöde sker genom att jämföra med föregående mätvärde (skillnad i volym/tid),f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,INFILTRATION_MEDEL_FLODE
+7,3,Tunnelvatten (momentant flöde),Flöde,l/min,2,,,,"Hinder, Annat fel",0,f,Mätning av momentant vattenflöde med hjälp av t.ex hink och klocka,f,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,TUNNELVATTEN_MOMENTANT_FLODE
+8,3,Tunnelvatten (medelflöde),Volym,m³,2,Flöde,l/min,2,"Hinder, Annat fel",1,t,Mätning av vattenvolym som passerat mätaren sedan den installerats. Beräkning av medelflöde sker genom att jämföra med föregående mätvärde (skillnad i volym/tid),f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,TUNNELVATTEN_MEDEL_FLODE
+10,4,pH,,-,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+11,4,Suspenderat material,,mg/l,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+12,4,Konduktivitet,,mS/m,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+13,4,Totalt kväve,,mg/l,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+14,4,Oljeindex,,mg/l,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+16,4,Escherichia coli,,cfu/100 ml,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2018-03-19 10:00:00,,f,
+17,5,Dygnsnederbörd,Nederbörd,mm,1,,,,Annat fel,3,t,"Dygnsnederbörd från SMHI, automatisk import via fil",f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,
+18,5,Temperatur,Temperatur,°C,1,,,,Annat fel,2,t,"Temperatur per timme från SMHI, automatisk import via fil",f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,
+19,6,Temperatur,Temperatur,°C,1,,,,Annat fel,2,f,"Temperatur",f,2018-03-19 10:00:00,2018-03-19 10:00:00,,t,
+15,4,Bly,,mg/l,2,,,,"Hinder, Annat fel",0,f,,t,2018-03-19 10:00:00,2020-06-10 07:43:12.213415,62,f,

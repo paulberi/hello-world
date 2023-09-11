@@ -1,0 +1,22 @@
+
+<div class="vertical-tabs">
+  
+  <div class="vertical-tabs-button-group">
+    <mat-button-toggle-group  [(value)]="activeTab" vertical>
+      <mat-button-toggle *ngFor="let tab of tabs" [value]="tab.tabId" class="vertical-tabs-button">
+          <div class="vertical-tabs-button-container">
+            <mat-icon class="vertical-tabs-button-icon" *ngIf="!tab.customSvgIcon"> {{ tab.tabIcon }}</mat-icon>
+            <mat-icon class="vertical-tabs-button-icon" *ngIf="tab.customSvgIcon" [svgIcon]="tab.tabIcon"></mat-icon>
+            <p class="vertical-tabs-button-title">
+              {{ tab.tabTitle }}
+            </p>
+          </div>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="vertical-tabs-content">
+    <ng-content></ng-content>
+  </div>
+
+</div>

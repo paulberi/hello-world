@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_uppstallningsplats-husbilar</name>
+  <id>LayerInfoImpl-5492d999:177624ac73f:-1999</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:177624ac73f:-199a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-02-02 13:39:50.494 UTC</dateCreated>
+</layer>

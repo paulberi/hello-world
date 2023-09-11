@@ -1,0 +1,17 @@
+<layer>
+  <name>Infrastrukturforvaltare</name>
+  <id>LayerInfoImpl-1413c6cc:174bae420fe:-7ff5</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl-1413c6cc:174bae420fe:-7ff6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-09-23 12:56:13.862 UTC</dateCreated>
+  <dateModified>2020-10-06 17:21:21.631 UTC</dateModified>
+</layer>

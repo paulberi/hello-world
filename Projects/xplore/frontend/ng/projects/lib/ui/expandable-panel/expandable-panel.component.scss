@@ -1,0 +1,71 @@
+
+.container {
+  pointer-events: auto; 
+  max-height: 100%;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  clip-path: polygon(0% -50%, 100% -50%, 150% 100%, 0% 100%);
+}
+
+.tab {
+  color: var(--primary);
+  background-color: var(--background);
+
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: fit-content;
+  border-radius: 0 20px 0 0;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: inherit;
+  margin-left: 0;
+  .tabTitle {
+    margin-right: 8px;
+  }
+  .mat-icon {
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+}
+
+.panel {
+  background-color: var(--background);
+  border-radius: 0 20px 0 0;
+  margin: 0px;
+  padding: 00px 0px 0px 0px;
+}
+
+.content {
+  color: var(--primary);
+  padding-bottom: 0px;
+  max-height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.right {
+  float: right;
+  border-radius: 20px 0 0 0;
+}
+
+.styled-scrollbars {
+  /* Foreground, Background */
+  scrollbar-color: #adadad #333333;
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+  width: 5px; /* Mostly for vertical scrollbars */
+  height: 5px; /* Mostly for horizontal scrollbars */
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb { /* Foreground */
+  background: #adadad;
+}
+
+.styled-scrollbars::-webkit-scrollbar-track { /* Background */
+  background: #333333;
+}

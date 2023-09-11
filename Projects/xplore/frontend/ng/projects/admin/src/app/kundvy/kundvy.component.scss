@@ -1,0 +1,42 @@
+.top{
+  margin: 1.5rem 0;
+}
+
+h2{
+  margin: 0;
+}
+mat-expansion-panel{
+  border-radius: 0;
+  box-shadow: none !important;
+  background-color: var(--background);
+}
+
+.mat-dialog-container{
+  border-radius: 0 !important;
+}
+.kundlista{
+  margin-bottom: 1rem;
+}
+
+.imgcontainer{
+  width: 100%;
+  height: 200px;
+  background-image: url(../../assets/images/default_header.jpg);
+}
+
+.wrapper{
+  padding: 2rem calc(100% / 24);
+}
+
+.add-icon {
+  vertical-align: middle;
+}
+
+mat-paginator {
+  background-color: var(--background);
+}
+
+::ng-deep .mat-tab-body-wrapper {
+  margin-top: 2.5em;
+  min-height: 400px;
+}

@@ -1,0 +1,12 @@
+SET search_path TO matdatabas;
+INSERT INTO matning (id, matningstyp_id, avlast_datum, avlast_varde, inom_detektionsomrade, beraknat_varde, status, kommentar, felkod, rapportor, kallsystem) VALUES (30, 1, '2020-01-01 11:03:00', 3.08999999999999986, 1, 12.4100000000000001, 1, NULL, 'Ok', 'ÅF', 'Okänd');
+INSERT INTO matning (id, matningstyp_id, avlast_datum, avlast_varde, inom_detektionsomrade, beraknat_varde, status, kommentar, felkod, rapportor, kallsystem) VALUES (31, 1, '2020-01-02 11:03:00', 3.08999999999999986, 1, 12.4100000000000001, 1, NULL, 'Ok', 'ÅF', 'Okänd');
+INSERT INTO matning (id, matningstyp_id, avlast_datum, avlast_varde, inom_detektionsomrade, beraknat_varde, status, kommentar, felkod, rapportor, kallsystem) VALUES (32, 1, '2020-01-03 11:03:00', 3.08999999999999986, 1, 12.4100000000000001, 1, NULL, 'Ok', 'ÅF', 'Okänd');
+INSERT INTO matning (id, matningstyp_id, avlast_datum, avlast_varde, inom_detektionsomrade, beraknat_varde, status, kommentar, felkod, rapportor, kallsystem) VALUES (33, 1, '2020-01-04 11:03:00', 3.08999999999999986, 1, 12.4100000000000001, 1, NULL, 'Ok', 'ÅF', 'Okänd');
+INSERT INTO matning (id, matningstyp_id, avlast_datum, avlast_varde, inom_detektionsomrade, beraknat_varde, status, kommentar, felkod, rapportor, kallsystem) VALUES (34, 1, '2020-01-05 11:03:00', 3.08999999999999986, 1, 12.4100000000000001, 1, NULL, 'Ok', 'ÅF', 'Okänd');
+
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (30, 1, 1, 30, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (31, 1, 1, 31, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (32, 1, 1, 32, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (33, 1, 1, 33, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (34, 1, 1, 34, 0, 1, 1, 1, 0, 0);

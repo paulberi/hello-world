@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <h1>{{ "mm.services.myServices" | transloco }}</h1>
+    <div *ngIf="!isLoading; else loading">
+        <div *ngIf="services.length; else noServices">
+            <mat-accordion multi>
+                <mat-expansion-panel *ngFor="let service of services">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="align-self-center">{{ service.displayName }}
+                            <div *ngIf="service?.tag" class="tag">{{ service.tag }}
+                            </div>
+                        </mat-panel-title>
+                        <mat-panel-title class="right">
+                            <a class="row service-link" href="{{ service.link }}" target="_blank">
+                                <mat-icon class="align-self-center">
+                                    open_in_new
+                                </mat-icon>
+                            </a>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="row align-center">
+                        <p>{{ "mm.services.informationAboutService" | transloco }}:&nbsp;</p>
+                        <a class="service-info-link" href="{{ service.infoLink }}" target="_blank">
+                            {{ service.displayName }}&nbsp;{{ service.tag }}
+                        </a>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+
+<ng-template #noServices>
+    <div class="center-template">
+        <h2>{{ "mm.services.noServices" | transloco }}</h2>
+    </div>
+</ng-template>
+
+<ng-template #loading>
+    <div class="center-template">
+        <mat-spinner [diameter]="48"></mat-spinner>
+    </div>
+</ng-template>

@@ -1,0 +1,354 @@
+openapi: 3.0.0
+info:
+  title: Samrad Admin projekt API
+  description: Api för administration av projekt
+  version: 0.1.0
+servers:
+  - url: http://localhost:9025/api
+paths:
+  '/kund':
+    post:
+      tags:
+        - SamradKund
+      summary: Skaffa ett kund
+      operationId: "saveKund"
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Kund"
+      responses:
+        200:
+          description: ID på kunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kund'
+    get:
+      tags:
+        - SamradKund
+      summary: hämta alla kunder
+      operationId: "getKundList"
+      description: hämtar alla kunder från db
+      responses:
+        200:
+          description: En lista med alla kunder
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Kund'
+  '/kund/{kundId}':
+    put:
+      tags:
+        - SamradKund
+      summary: Updatera ett kund
+      operationId: "updateKund"
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: kundens id
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Kund'
+      responses:
+        200:
+          description: ID på updaterad kund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kund'
+    get:
+      tags:
+        - SamradKund
+      operationId: "getKundById"
+      description: hämtar en kund med id {id}
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kund som ska hämtas
+      responses:
+        200:
+          description: en kund med id {id}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kund'
+    delete:
+      tags:
+        - SamradKund
+      operationId: "deleteKundById"
+      description: rederar kund med id {id}
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kund som ska raderas
+      responses:
+        200:
+          description: kund är raderat.
+  '/kund/{kunduid}/samrad':
+    post:
+      tags:
+        - SamradProjekt
+      summary: Skaffa ett projekt
+      operationId: "saveSamrad"
+      parameters:
+        - name: kunduid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kunden sm äger projektet
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Samrad"
+      responses:
+        200:
+          description: ID på importerade ägare
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samrad'
+    get:
+      tags:
+        - SamradProjekt
+      operationId: "getKundSamradList"
+      description: hämtar alla projekter från db för kunden
+      parameters:
+        - name: kunduid
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kunden
+      responses:
+        200:
+          description: En lista med alla projekter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Samrad'
+  '/kund/{kundId}/samrad/{samradId}':
+    put:
+      tags:
+        - SamradProjekt
+      summary: Updatera ett projekt
+      operationId: "updateSamrad"
+      parameters:
+        - name: samradId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av projektet som ska redigeras
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: kundens id
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Samrad'
+      responses:
+        200:
+          description: ID på updaterad projekt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samrad'
+    get:
+      tags:
+        - SamradProjekt
+      operationId: "getSamradbyId"
+      description: hämtar en projekt med id {id}
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kunden
+        - name: samradId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av projektet som ska hämtas
+      responses:
+        200:
+          description: en projekt med id {id}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Samrad'
+    delete:
+      tags:
+        - SamradProjekt
+      operationId: "deleteSamrad"
+      description: rederar projektet med id {id}
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av kunden
+        - name: samradId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: uuid av projektet som ska raderas
+      responses:
+        200:
+          description: projektet är raderat.
+  '/kund/{kundId}/bifogadfil':
+    get:
+      tags:
+        - SamradBild
+      operationId: "getBildList"
+      summary: Hämta lista med bifogade filer
+      description: Hämta metadata för en lista med bifogade filer
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        200:
+          description: En lista med metadata för bifogade filer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Bild"
+        404:
+          description: Någon av de bifogade filerna hittades inte
+    post:
+      tags:
+        - SamradBild
+      operationId: "saveBild"
+      summary: Lägg till en ny bifogad fil
+      description: Lägg till en ny bifogad fil
+      parameters:
+        - name: kundId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        description: Den nya bifogade filen
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Den bifogade bilden lagrades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Bild"
+components:
+  schemas:
+    Samrad:
+      type: object
+      properties:
+        samradId:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        ingress:
+          type: string
+        brodtext:
+          type: string
+        bildList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bild'
+        slug:
+          type: string
+        status:
+          $ref: "#/components/schemas/SamradStatus"
+    SamradStatus:
+      type: string
+      enum:
+        - UTKAST
+        - PUBLICERAD
+        - ARKIVERAD
+        - AVPUBLICERAD
+    Kund:
+      type: object
+      properties:
+        namn:
+          type: string
+        kundId:
+          type: string
+          format: uuid
+        slug:
+          type: string
+        samradList:
+          type: array
+          items:
+            $ref: '#/components/schemas/Samrad'
+    Bild:
+      type: object
+      properties:
+        namn:
+          type: string
+        bildId:
+          type: string
+          format: uuid
+        typ:
+          type: string
+        bild:
+          type: string
+          format: multipart/form-data

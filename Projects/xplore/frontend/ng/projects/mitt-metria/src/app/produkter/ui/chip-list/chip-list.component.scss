@@ -1,0 +1,18 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.chip {
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+    .mat-chip-remove {
+        color: var(--primary);
+        opacity: 100%;
+    }
+}
+
+@media screen and #{$xp-breakpoints-large-mobile-max} {
+    .mat-chip-list-wrapper {
+        justify-content: flex-end;
+    }
+}

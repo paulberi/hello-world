@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_viktigt-meddelande</name>
+  <id>LayerInfoImpl-7b6831ad:207647971a2:-743b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-17aceec0:617a9ca711a:-2bcb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

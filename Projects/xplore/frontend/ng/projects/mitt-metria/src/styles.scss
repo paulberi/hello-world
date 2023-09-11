@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../lib/ui/theme/themes/xp-theme-v2.scss";
+
+header {
+  z-index: 1000;
+
+  h1 {
+    font-weight: 400;
+  }
+}
+
+footer {
+  h1 {
+    font-weight: 400;
+  }
+}
+
+.wrapper {
+  padding: 2rem calc(100% / 24);
+  max-width: 1366px;
+  min-height: 400px;
+  margin: auto;
+}
+
+//Mat-icon är by default felplacerad trots vertical-aligned: middle
+// Därav följande styling
+.mat-icon-padding {
+  padding-bottom: 3px;
+}
+
+// I Fonten Apex New är siffrorna inte alignade och det räcker inte att sätta denna styling i bodyn från temat
+// utan materials styling overridear den. Men det funkar att sätta det här
+.mat-expansion-panel-content {
+  -webkit-font-feature-settings: "lnum";
+  -moz-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
+}
+
+// Styling för innerHtml
+#mitt-metria-custom-description-innerhtml {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  ul {
+
+    li {
+      p {
+        margin: 4px 0;
+      }
+
+    }
+  }
+}
+
+#mitt-metria-custom-preamble-innerhtml {
+  p {
+    margin: 0;
+  }
+}
+
+#mat-checkbox-wrap-text {
+  .mat-checkbox-layout {
+    white-space: normal !important;
+  }
+}
+
+.wrap-mat-radio-label {
+  white-space: normal;
+  word-break: break-all;
+}
+
+
+#leveransformat-description-innerhtml {
+  h4 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}

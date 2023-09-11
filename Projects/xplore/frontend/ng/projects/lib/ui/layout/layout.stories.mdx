@@ -1,0 +1,47 @@
+
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Source,
+} from "@storybook/addon-docs";
+
+<Meta title="Komponenter/Page/Layout/Installation" />
+
+# Installation
+
+Guide för installation av XpLayout i befintlig applikation.
+
+## Dependencies
+Importera XpLayoutModule i app.module, den innehåller det som behövs.
+
+## App-shell
+För att använda XpLayout måste man wrappa den med en logisk komponent som förser den man data och hanterar alla events, den kan lämpligtvis kallas app-shell.
+För att kunna använda XpLayout för t.ex. utloggning så behöver man skicka in ett User-objekt,
+vilket enkelt kan göras med hjälp av XpUserService. <br />
+Innehållet i app-shell kan se ut som nedan:
+```html
+<xp-layout-ui
+  appName="Applikationens namn"
+  [loggedInUser]="user | async"
+  [menuItems]="menuItems"
+  (logoutClick)="openLogoutDialog()"
+  (helpClick)="openHelpDialog()"
+  (pageChange)="changePage($event)">
+  <router-outlet></router-outlet>
+</xp-layout-ui>
+```
+
+## Tema
+XpLayout fungerar bäst med Xplores gemensamma tema.
+För att använda det behöver man importera följande i style.scss
+```css
+@import "../../../lib/ui/theme/themes/xp-theme.scss";
+```
+
+## Transloco
+Transloco används för all text som inte kan påverkas utifrån, texterna finns i en språkfil under `lib/translate/locales` <br/>
+För att kunna använda Transloco så måste man göra följande:
+* Kopiera transloco-root.module.ts från t.ex. Markkoll
+* Lägg till path till xp-språkfilen i angular.json
+* Lägg till TranslocoRootModule.forRoot() i app.module

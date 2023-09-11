@@ -1,0 +1,626 @@
+{
+  "layers": [
+    {
+      "id": "lst_hav_riksintressen_3_5",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Yrkesfiske 3:5",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/HaV/lst_hav_riksintressen_3_5/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "HAV_Riksintresse_Yrkesfiske_hamn_MB3kap5,HAV_Riksintresse_Yrkesfiske_hav_MB3kap5,HAV_Riksintresse_Yrkesfiske_kustMB3kap5,HAV_Riksintresse_Yrkesfiske_sjoar_MB3kap5,HAV_Riksintresse_Yrkesfiske_vattendrag_MB3kap5",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "lst_lst_riksintressen_3_8",
+      "type": "tile",
+      "group": "energimyndigheten_kap_3",
+      "title": "Energiproduktion mm",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/LST/lst_lst_riksintressen_3_8/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "STEM_Riksintresse_Energiproduktion_MB3kap8_vindbruk_2015,LST_Intresseomrade_till_riksintresse_vattenforsorjningMB3kap8,LST_Riksintresse_Slutforvaring_av_karnbransle_och_avfal__MB3kap864001",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "opacity": 0.7,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "LST_WMS_riksintressen_3_9_fm",
+      "type": "tile",
+      "group": "riksintressen",
+      "title": "Försvarsmakten",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/FM/lst_fm_riksintressen_3_9/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "FM_Oppna_omraden_Lagflygningsomrade_med_paverkansomrade_MB3kap9,FM_Oppna_omraden_Omrade_av_betydelse_pa_land_MB3kap9,FM_Paverkansomrade_Buller_eller_annan_risk_MB3kap9,FM_Paverkansomrade_Civil_flygplats_MB3kap9,FM_Paverkansomrade_MSA-omrade_luftrum_MB3kap9,FM_Paverkansomrade_Omrade_med_sarskilt_behov_av_hinderfrihet_MB3kap9,FM_Paverkansomrade_Ovrigt_MB3kap9,FM_Paverkansomrade_Stoppomrade_for_hoga_objekt_MB3kap9,FM_Paverkansomrade_Stoppomrade_for_vindkraftverk_MB3kap9,FM_Paverkansomrade_Vaderradar_MB3kap9,FM_Riksintresse_i_havet_sjoovningsomrade_MB3kap9,FM_Riksintresse_pa_land_MB3kap9",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "LST_Potentiellt_fororenade_omraden",
+      "type": "tile",
+      "group": "kommundata",
+      "title": "Förorenade områden",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/LST/lst_wms_miljodata/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "LST_Potentiellt_fororenade_omraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "LST_potentiellt_for_omr"
+    },
+    {
+      "id": "LST_wms_vindbrukskollen_12",
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "title": "Uppförda",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "12",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "LST_wms_vindbrukskollen_11",
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "title": "Beviljade",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "11",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "LST_wms_vindbrukskollen_9",
+      "type": "tile",
+      "group": "vindbrukskollen",
+      "title": "Handläggs",
+      "source": {
+        "url": "https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/services/VBK/lst_vbk_wms_vindbrukskollen/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "9",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "lsto_wms_strandskydd_0",
+      "type": "tile",
+      "group": "skyddade_omraden",
+      "title": "Strandskydd",
+      "source": {
+        "url": "https://ext-geodata-lokala.lansstyrelsen.se/arcgis/services/LSTO/lsto_wms_strandskydd/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "P1_Risk_sma_avlopp_fosfor",
+      "type": "tile",
+      "group": "avlopp",
+      "title": "Fosfor",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/HaV/lst_hav_sma_avlopp/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "P1_Risk_sma_avlopp_fosfor",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "HS1_Risk_sma_avlopp_halsoskydd",
+      "type": "tile",
+      "group": "avlopp",
+      "title": "Hälsoskydd",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/HaV/lst_hav_sma_avlopp/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "HS1_Risk_sma_avlopp_halsoskydd",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "N1_Risk_sma_avlopp_kvave",
+      "type": "tile",
+      "group": "avlopp",
+      "title": "Kväve",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/HaV/lst_hav_sma_avlopp/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "N1_Risk_sma_avlopp_kvave",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "Grundvatten_vattenforekomst_2016_2021",
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "Grundvattenförekomster",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/VM/lst_vm_wms_vattenforekomster/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Grundvatten_vattenforekomst_2016_2021",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "lansstyrelse"
+    },
+    {
+      "id": "lst_vm_wms_statusklassningar",
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "Statusklassningar",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/VM/lst_vm_wms_statusklassningar/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Ekologisk_status_kustvatten,Kraftigt_modifierade_och_konstgjorda_sjoar,Kraftigt_modifierade_och_konstgjorda_vattendrag,Kvantitativ_status_grundvatten,Kemisk_status_grundvatten,Kemisk_status_kustvatten,Kemisk_status_sjoar,Kemisk_status_vattendrag,Kemisk_status_ytvatten_avrinningsomraden,Ekologisk_status_sjoar,Ekologisk_status_vattendrag,Ekologisk_status_ytvatten_avrinningsomraden",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "lansstyrelse"
+    },
+    {
+      "id": "lst_vm_wms_kvalitetsfaktorer",
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "Kvalitetsfaktorer",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/VM/lst_vm_wms_kvalitetsfaktorer/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Hydrografiska_villkor_kustvatten,Morfologiskt_tillstand_kustvatten,Morfologiskt_tillstand_sjoar,Morfologiskt_tillstand_vattendrag,Morfologiskt_tillstand_ytvatten_aro,Hydrologisk_regim_sjoar,Hydrologisk_regim_vattendrag,Hydrologisk_regim_sjoar_vattendrag_aro,Konnektivitet_kustvatten_60802,Konnektivitet_sjoar,Konnektivitet_vattendrag,Konnektivitet_ytvatten_aro,Prioriterade_amnen_sjoar,Prioriterade_amnen_vattendrag,Prioriterade_amnen_ytvatten_aro,Sarskilda_fororenande_amnen_sjoar,Sarskilda_fororenande_amnen_vattendrag,Sarskilda_fororenande_amnen_ytvatten_aro,Syrgasförhållanden_kustvatten,Syrgasforhallanden_sjoar,Forsurning_sjoar,Forsurning_vattendrag,Forsurning_sjoar_och_vattendrag_aro,Ljusforhallanden_kustvatten,Ljusforhallanden_sjoar,Naringsamnen_kustvatten,Naringsamnen_sjoar,Naringsamnen_vattendrag,Naringsamnen_ytvatten_aro,Fisk_sjoar,Fisk_vattendrag,Fisk_sjoar_vattendrag_aro,Makrofyter_sjoar,Makroalger_och_gomfroiga_vaxter_kustvatten,Bottenfauna_kustvatten,Bottenfauna_sjoar,Bottenfauna_vattendrag,Bottenfauna_ytvatten_aro,Pavaxt_kiselalger_sjoar,Pavaxt_kiselalger_vattendrag,Pavaxt_kiselalger_sjoar_vattendrag_aro,Vaxtplankton_kustvatten,Vaxtplankton_sjoar",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "lansstyrelse"
+    },
+    {
+      "id": "lst_vm_wms_miljokvalitetsnorm",
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "MKN",
+      "source": {
+        "url": "https://ext-geodata-nationella.lansstyrelsen.se/arcgis/services/VM/lst_vm_wms_miljokvalitetsnorm/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "MKN_grundvatten_kemisk_status_kvalitetskrav,MKN_grundvatten_kvantitativ_status_kvalitetskrav,MKN_kustvatten_kemisk_status_kvalitetskrav,MKN_kustvatten_ekologisk_status_och_kvalitetskrav,MKN_sjoar_kemisk_status_kvalitetskrav,MKN_sjoar_ekologisk_status_kvalitetskrav,MKN_vattendrag_kemisk_status_kvalitetskrav,MKN_vattendrag_ekologisk_status_kvalitetskrav",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "lansstyrelse"
+    },
+    {
+      "id": "lsto_wms_strandskydd",
+      "type": "tile",
+      "group": "skyddade-omr",
+      "title": "Strandskyddsområde",
+      "source": {
+        "url": "https://ext-geodata-lokala.lansstyrelsen.se/arcgis/services/LSTO/lsto_wms_strandskydd/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "Kommentar",
+            "label": "Kommentar"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LST_ext_raster_bullerdata_2016",
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Buller",
+      "source": {
+        "url": "https://ext-geodata.lansstyrelsen.se/arcgis/services/raster/LST_ext_raster_bullerdata_2016/ImageServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "id": "Gammal_Anvand_INTE__VM_Miljokvalitetsnorm_WMS",
+      "type": "tile",
+      "group": "miljo_halsa_sakerhet",
+      "title": "Vattenkvalitet",
+      "source": {
+        "url": "https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/VM_Miljokvalitetsnorm_WMS/MapServer/WMSServer",
+        "type": "tilewms",
+        "serverType": "arcgis",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "vattenkvalitet"
+    }
+  ],
+  "infoTemplates": {
+    "lansstyrelse": {
+      "properties": [
+        {
+          "name": "URL",
+          "label": "URL",
+          "linkRef": "the-link"
+        },
+        {
+          "id": "the-link",
+          "name": "URL",
+          "type": "url",
+          "template": "{{URL}}"
+        },
+        {
+          "name": "Länk till VISS",
+          "label": "Länk till VISS",
+          "linkRef": "the-link2"
+        },
+        {
+          "id": "the-link2",
+          "name": "Länk till VISS",
+          "type": "url",
+          "template": "{{Länk till VISS}}"
+        },
+        {
+          "name": "Länk till VISS\n",
+          "label": "Länk till VISS",
+          "linkRef": "the-link3"
+        },
+        {
+          "id": "the-link3",
+          "name": "Länk till VISS\n",
+          "type": "url",
+          "template": "{{Länk till VISS\n}}"
+        },
+        {
+          "name": "Undantagkemiskstatussammanfattning",
+          "label": "Undantagkemiskstatussam."
+        },
+        {
+          "name": "Undantagekologiskstatussummering",
+          "label": "Undantagekolo.statussum."
+        },
+        {
+          "name": "Undantagkemiskstatussummering",
+          "label": "Undantagkemiskstatussum."
+        },
+        {
+          "name": "Särskiltförorenandeämnensummering",
+          "label": "Särskiltförore.ämnensum."
+        },
+        {
+          "name": "Skyddadeområdendricksvattenförsörjningartikel7",
+          "label": "Skyd.omr.dric.vatt.artl7"
+        },
+        {
+          "name": "Morfologiskttillståndikustvattenochvatteniövergångszon",
+          "label": "Morfo.tillst.kustvat.zon"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "vattenkvalitet": {
+      "properties": [
+        {
+          "name": "Undantagkemiskstatussammanfattning",
+          "label": "Und.kemi.stat.sam."
+        },
+        {
+          "name": "Undantagekologiskstatussammanfattning",
+          "label": "Und.ekol.stat.sam."
+        },
+        {
+          "name": "Särskiltförorenandeämnensammanfattning",
+          "label": "Sär.för.ämn.sam."
+        },
+        {
+          "name": "Skyddadeområdensammanfattning",
+          "label": "Skyd.omr.sam."
+        },
+        {
+          "name": "Undantagkemiskstatus2021",
+          "label": "Und.kem.stat.2021"
+        },
+        {
+          "name": "Undantagkemiskstatus2027",
+          "label": "Und.kem-stat.2027"
+        },
+        {
+          "name": "Ekologiskstatuskvalitetskrav",
+          "label": "Eko.stat.kva.krav"
+        },
+        {
+          "name": "Kemiskstatuskvalitetskrav",
+          "label": "kem.stat.kva.krav"
+        },
+        {
+          "name": "Undantagekologiskstatussummering",
+          "label": "Und.eko.stat.sum"
+        },
+        {
+          "name": "Undantagkemiskstatussummering",
+          "label": "Und.kem.stat.sum"
+        },
+        {
+          "name": "Särskiltförorenandeämnensummering",
+          "label": "Sär.för.ämn.sum"
+        },
+        {
+          "name": "Skyddadeområdensummering",
+          "label": "Skyd.omr.sum"
+        },
+        {
+          "name": "Skyddadeområdendricksvattenförsörjningartikel7",
+          "label": "Sky.omr.dri.vat.för"
+        },
+        {
+          "name": "Kvalitetskravkvantitativstatus",
+          "label": "Kva.krav.kvan.sta"
+        },
+        {
+          "name": "Undantagkvantitativstatus",
+          "label": "Und.kvan.sta"
+        },
+        {
+          "name": "Kvalitetskravkemiskstatus",
+          "label": "Kva.krav.kem.sta"
+        },
+        {
+          "name": "Undantagkvantstatus2021",
+          "label": "Und.kvan.2021"
+        },
+        {
+          "name": "Undantagkvantstatus2027",
+          "label": "Und.kvan.2027"
+        },
+        {
+          "name": "OBJECTID",
+          "label": "Objekt-ID"
+        },
+        {
+          "name": "SHAPE.area",
+          "label": "Shape-area"
+        },
+        {
+          "name": "SHAPE.len",
+          "label": "Shape-len"
+        },
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "alla_utan_shape": {
+      "properties": [
+        {
+          "name": "*"
+        },
+        {
+          "name": "shape",
+          "visible": false
+        },
+        {
+          "name": "Shape",
+          "visible": false
+        },
+        {
+          "name": "shape_area",
+          "visible": false
+        },
+        {
+          "name": "shape_leng",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_Length",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_Area",
+          "visible": false
+        },
+        {
+          "name": "SHAPE_AREA",
+          "visible": false
+        }
+      ]
+    },
+    "LST_potentiellt_for_omr": {
+      "properties": [
+        {
+          "name": "OBJECTID",
+          "visible": false
+        },
+        {
+          "name": "Object_Id",
+          "label": "Objekt-ID"
+        },
+        {
+          "name": "Kommun",
+          "label": "Kommun"
+        },
+        {
+          "name": "Lan",
+          "label": "Län"
+        },
+        {
+          "name": "AntalFastigheter",
+          "label": "Antal fastigheter"
+        },
+        {
+          "name": "Status",
+          "label": "Status"
+        },
+        {
+          "name": "RiskKlass",
+          "label": "Riskklass"
+        },
+        {
+          "name": "PreciseradStatus",
+          "label": "Preciserad status"
+        },
+        {
+          "name": "PrimarBransch",
+          "label": "Verksamhet"
+        },
+        {
+          "name": "SekundarBransch",
+          "label": "Verksamhetsbeskr"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  }
+}
+
+
+
+
+

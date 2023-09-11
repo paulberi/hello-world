@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_samlingslokal</name>
+  <id>LayerInfoImpl-5a5f20f7:c61ab80b93d:-6115</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-366cb282:3f332da3576:-8a5b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

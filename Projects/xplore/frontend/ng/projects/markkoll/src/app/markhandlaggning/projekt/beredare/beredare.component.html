@@ -1,0 +1,36 @@
+<form [formGroup]="form">
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput type="text" placeholder="Namn" formControlName="namn" />
+      <mat-error *ngIf="form.controls.namn.hasError('required')">
+        {{"xp.common.fieldMandatory" | transloco}}
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput type="text" placeholder="Telefonnummer" formControlName="telefonnummer" />
+      <mat-error></mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <input matInput type="text" placeholder="Adress" formControlName="adress" />
+      <mat-error></mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-5">
+      <input matInput type="text" placeholder="Postnummer" formControlName="postnummer" />
+      <mat-error></mat-error>
+    </mat-form-field>
+    <span class="col-1"></span>
+    <mat-form-field class="col-6">
+      <input matInput type="text" placeholder="Ort" formControlName="ort" />
+      <mat-error></mat-error>
+    </mat-form-field>
+  </div>
+</form>

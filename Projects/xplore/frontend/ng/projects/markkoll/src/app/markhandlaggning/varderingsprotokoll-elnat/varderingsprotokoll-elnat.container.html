@@ -1,0 +1,10 @@
+<mk-varderingsprotokoll-ui    *ngIf="vp && avtalMetadata"
+                              [avtalMetadata]="avtalMetadata"
+                              [projektId]="projektId"
+                              [uppdragsnummer]="uppdragsnummer"
+                              [summering]="summering"
+                              [vp]="vp"
+                              (avtalMetadataChange)="onAvtalMetadataChange($event)"
+                              (bilagorChange)="onBilagorChange()"
+                              (vpChange)="onVpChange($event)"
+></mk-varderingsprotokoll-ui>

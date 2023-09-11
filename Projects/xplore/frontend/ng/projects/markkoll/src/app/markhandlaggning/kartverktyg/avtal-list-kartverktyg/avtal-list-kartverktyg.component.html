@@ -1,0 +1,21 @@
+<xp-expandable-panel class="toolspanel" [tabTitle]="'xp.kartverktyg.kartverktyg' | transloco" initialHeight=125 (isPanelOpenChange)="onIsPanelOpenChange($event)">
+  <xp-vertical-tabs  [activeTab]="activeTab" (activeTabChange)="onActiveTabChange($event)" #verticalTabs>
+    <xp-vertical-tab tabId="help" [tabTitle]="'xp.kartverktyg.info.tabTitle' | transloco" tabIcon="info_outline">
+      <div id="wrapper">
+        <h2>{{ "xp.kartverktyg.info.title" | transloco }}</h2>
+        <p>{{ "xp.kartverktyg.info.text" | transloco }}</p>
+      </div>
+    </xp-vertical-tab>
+    <xp-vertical-tab tabId="kartlager" [tabTitle]="'mk.kartverktyg.hanteraKartlager.tabTitle' | transloco" tabIcon="layers">
+      <mk-hantera-kartlager> </mk-hantera-kartlager>
+    </xp-vertical-tab>
+    <xp-vertical-tab tabId="fastigheter" [tabTitle]="'xp.kartverktyg.hanteraFastigheter.tabTitle' | transloco" tabIcon="crop">
+      <mk-hantera-fastigheter [delegate]="hanteraFastigheterDelegate" *ngIf="hanteraFastigheterDelegate"></mk-hantera-fastigheter>
+    </xp-vertical-tab>
+    <xp-vertical-tab tabId="intrang" [tabTitle]="'mk.kartverktyg.hanteraIntrang.tabTitle' | transloco" [customSvgIcon]="true" tabIcon="intrang">
+      <mk-hantera-intrang [delegate]="hanteraIntrangDelegate" [verktygslada]="intrangVerktygslada" *ngIf="hanteraIntrangDelegate"> </mk-hantera-intrang>
+    </xp-vertical-tab>
+  </xp-vertical-tabs>
+</xp-expandable-panel>
+
+<mk-intrang-verktygslada [buttons]="verktygsladaButtons"></mk-intrang-verktygslada>

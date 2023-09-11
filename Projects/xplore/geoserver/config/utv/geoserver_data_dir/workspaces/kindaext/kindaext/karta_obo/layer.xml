@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_obo</name>
+  <id>LayerInfoImpl-363cc6e4:178366a9ef8:2a01</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:178366a9ef8:2a00</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-17 10:31:00.797 UTC</dateCreated>
+</layer>

@@ -1,0 +1,177 @@
+{
+  "xp": {
+    "common": {
+      "username": "Användarnamn",
+      "password": "Lösenord",
+      "confirmUnsavedChangesTitle": "Vill du lämna sidan utan att spara?",
+      "confirmUnsavedChangesMessage": "Du har gjort ändringar på sidan. Om du lämnar sidan utan att spara går dina ändringar förlorade.",
+      "fieldMandatory": "Fältet är obligatoriskt",
+      "invalidCharacters": "Ogiltliga tecken",
+      "save": "Spara",
+      "saveAndShow": "Spara och visa",
+      "saved": "Ändringar har sparats",
+      "done": "Klar",
+      "add": "Lägg till",
+      "logOut": "Logga ut",
+      "cancel": "Avbryt",
+      "revert": "Ångra",
+      "help": "Hjälp",
+      "delete": "Ta bort",
+      "back": "Tillbaka",
+      "ok": "Okej",
+      "close": "Stäng",
+      "showMore": "Visa fler",
+      "checkAll": "Markera alla",
+      "next": "Nästa",
+      "clear": "Rensa",
+      "execute": "Utför",
+      "ascending": "Stigande",
+      "descending": "Fallande",
+      "yes": "Ja",
+      "no": "Nej"
+    },
+
+    "metria": {
+      "supportMail": "support@metria.se",
+      "telephoneNumber": "010-121 81 00"
+    },
+
+    "userProfile": {
+      "emailSettings": "E-postinställningar",
+      "email": "E-post",
+      "giveValidEmail": "Ange en giltig e-post",
+      "passwordSettings": "Lösenordsinställningar",
+      "currentPassword": "Nuvarande lösenord",
+      "wrongPassword": "Du har angivit fel lösenord",
+      "newPassword": "Nytt lösenord",
+      "minimumCharacters": "Minst {{numChars}} tecken",
+      "passwordMinimumLength": "Lösenordet måste vara minst {{numChars}} tecken",
+      "confirmNewPassword": "Bekräfta nytt lösenord",
+      "passwordsDoNotMatch": "Lösenorden matchar inte",
+      "changePassword": "Byt lösenord",
+      "showPassword": "Visa lösenord",
+      "emailExample": "Ex. test@example.com"
+    },
+
+    "userForm":{
+      "fornamn": "Förnamn",
+      "efternamn": "Efternamn",
+      "email": "E-post"
+    },
+
+    "message": {
+      "defaultActionLabel": "Jag förstår"
+    },
+
+    "layout": {
+      "telephoneAbbreviation": "Tel",
+      "logOutConfirm": "Är du säker på att du vill logga ut?",
+      "goToStartpage": "Gå till startsida",
+      "darkTheme": "Mörkt tema",
+      "myProfile": "Min profil",
+      "userMenu": "Användarmeny",
+      "contactInfo": "Har du några funderingar, eller har du upptäckt ett problem med tjänsten? Kontakta oss! Vår support finns på plats för att svara på dina frågor mellan 08–17 alla vardagar."
+    },
+
+    "dropzone": {
+      "label": "Klicka här för att ladda upp filer från din dator, eller dra-och-släpp",
+      "rejectedFiles": "En eller flera filer har inte rätt format. Pröva att ladda upp en annan fil."
+    },
+
+    "notAuthorized": {
+      "notAuthorized": "Du har inte behörighet att använda tjänsten."
+    },
+
+    "notFound":{
+      "pageNotFound": "Kunde inte hitta sidan.",
+      "goToStartPageButton": "Gå till startsidan"
+    },
+
+    "httpError": {
+      "400": "Något gick tyvärr fel.",
+      "401": "Behörighet saknas.",
+      "403": "Du har inte behörighet att komma åt informationen.",
+      "404": "Kunde tyvärr inte hitta sidan.",
+      "500": "Ett okänt fel uppstod. Vänligen försök igen om en stund.",
+      "502": "Kommer inte åt servern. Vänligen försök igen om en stund.",
+      "503": "Kommer inte åt servern. Vänligen försök igen om en stund.",
+      "504": "Det tog för lång tid att få svar från servern. Vänligen försök igen om en stund."
+    },
+
+    "paginator": {
+      "itemsPerPageLabel": "Antal per sida",
+      "firstPageLabel": "Första sidan",
+      "previousPageLabel": "Föregående",
+      "nextPageLabel": "Nästa",
+      "lastPageLabel": "Sista sidan",
+      "of": "av"
+    },
+
+    "expandable-panel": {
+      "togglePanel": "Öppna och stäng panelen"
+    },
+
+    "carousel": {
+      "previous": "Visa föregående sida med bilder",
+      "next": "Visa nästa sida med bilder",
+      "indicators": "Indikatorer under karusellen för att byta sida med bilder"
+    },
+    "kartverktyg": {
+      "cancelChanges": "Är du säker på att du vill ångra dina ändringar?",
+      "kartverktyg": "Kartverktyg",
+      "hanteraFastigheter": {
+        "tabTitle": "Fastigheter",
+        "clickToSelect": "Klicka på de fastigheter du vill lägga till eller ta bort. Avsluta sedan med Spara.",
+        "info": "Ser du inga fastighetsgränser i kartan? Prova zooma in lite närmare.",
+        "addOrRemove": "Lägg till eller ta bort fastigheter",
+        "addedFastigheter": "Tillagda fastigheter",
+        "removedFastigheter": "Borttagna fastigheter"
+      },
+      "info": {
+        "tabTitle": "Info",
+        "title": "Information",
+        "text": "Aktivera ett redigeringsläge i menyn till vänster för att börja arbeta i kartan. Använd gärna kartverktyget i fullskärmsläge för bäst överblick."
+      }
+    },
+
+    "layout-v2": {
+      "goToStartpage": "Gå till startsida",
+      "goToMetria": "Gå till metria.se",
+      "userMenu": "Användarmeny",
+      "profile": "Min profil",
+      "menu": "Meny",
+      "openSideNav": "Öppna sidmenyn",
+      "closeSideNav": "Stäng sidmenyn",
+      "metriaAB": "Metria AB",
+      "contactInfo": "Kontaktuppgifter",
+      "email": "E-post",
+      "metriaEmail": "info@metria.se",
+      "telephone": "Telefon",
+      "metriaTelephone": "010 - 121 80 00",
+      "importantLinks": "Viktiga länkar",
+      "pressAndMedia": "Press & Media",
+      "processingPersonalData": "Behandling av personuppgifter",
+      "metriaSocialMedia": "Metria® i sociala kanaler",
+      "guidelinesCookies": "Riktlinjer för cookies",
+      "socialMedia": "Sociala medier",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "copyright": "Copyright © Metria AB 2022"
+    },
+
+    "order": {
+      "amount": "Belopp",
+      "vat": "Varav moms",
+      "deleteOrderLine": "Radera produkt i varukorgen",
+      "noDisplayAttributes": "Kunde inte hämta orderradssammanfattning."
+    },
+
+    "cart": {
+      "cart": "Varukorg",
+      "closeCart": "Stäng varukogen",
+      "totalAmount": "Totalbelopp",
+      "toCheckout": "Till kassan",
+      "emptyCart": "Din varukorg är tom."
+    }
+  }
+}

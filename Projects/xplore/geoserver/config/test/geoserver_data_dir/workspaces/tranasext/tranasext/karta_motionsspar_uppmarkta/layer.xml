@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_motionsspar_uppmarkta</name>
+  <id>LayerInfoImpl-fc6f39aa:2e68311a110:-a7e1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-1ebf445b:dbb9a64cc36:-be50</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

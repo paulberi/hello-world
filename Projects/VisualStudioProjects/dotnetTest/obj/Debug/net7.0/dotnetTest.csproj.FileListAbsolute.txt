@@ -1,0 +1,15 @@
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/bin/Debug/net7.0/dotnetTest
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/bin/Debug/net7.0/dotnetTest.deps.json
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/bin/Debug/net7.0/dotnetTest.runtimeconfig.json
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/bin/Debug/net7.0/dotnetTest.dll
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/bin/Debug/net7.0/dotnetTest.pdb
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.csproj.AssemblyReference.cache
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.AssemblyInfoInputs.cache
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.AssemblyInfo.cs
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.csproj.CoreCompileInputs.cache
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.dll
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/refint/dotnetTest.dll
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.pdb
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/dotnetTest.genruntimeconfig.cache
+/Users/paulberinyuylukong/VisualStudioProjects/dotnetTest/obj/Debug/net7.0/ref/dotnetTest.dll

@@ -1,0 +1,24 @@
+<div>
+  <div class="map-container">
+    <div class="col-12">
+      <mk-map class="avtalskarta" [backgroundLayers]="backgroundLayers" [layers]="layers" [isStatic]="true" [paddingInMap]="paddingInMap" [extent]="aktivKarta.extent"></mk-map>
+    </div>
+  </div>
+
+  <div class="row actions">
+    <div class="col-2">
+      <button mat-icon-button class="large" *ngIf="!isFirst" color="accent" mat-icon-button (click)="previous()" [title]="'xp.paginator.previousPageLabel' | transloco">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+    </div>
+    <div class="col-8 title">
+        <div>{{ aktivKarta.title }}</div>
+        <div class="kartnummer">({{ kartnummer }} {{ "xp.paginator.of" | transloco }} {{ kartor.length }})</div>
+    </div>
+    <div class="col-2 d-flex justify-end">
+      <button mat-icon-button class="large" *ngIf="!isLast" color="accent" (click)="next()" [title]="'xp.paginator.nextPageLabel' | transloco">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

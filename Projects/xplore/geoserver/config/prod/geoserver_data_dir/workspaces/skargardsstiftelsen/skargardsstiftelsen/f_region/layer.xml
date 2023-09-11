@@ -1,0 +1,15 @@
+<layer>
+  <name>f_region</name>
+  <id>LayerInfoImpl-66dba621:170824ec81b:-f19</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-66dba621:170824ec81b:-f1a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

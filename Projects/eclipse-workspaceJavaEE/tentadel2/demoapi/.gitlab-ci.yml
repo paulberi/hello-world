@@ -1,0 +1,14 @@
+image: maven:latest
+
+stages:
+    - test
+    - deploy
+
+test:
+    stage: test
+    script:
+        - mvn test
+package:
+    stage: deploy
+    script:
+        - mvn package

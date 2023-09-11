@@ -1,0 +1,19 @@
+<div [ngSwitch]="property.key">
+
+  <div *ngSwitchCase="'polygon'">
+    <mm-polygon [property]="property" [dynamicForm]="dynamicForm"></mm-polygon>
+  </div>
+
+  <div *ngSwitchCase="'rektangel'">
+    <mm-rectangle [property]="property" [dynamicForm]="dynamicForm"></mm-rectangle>
+  </div>
+
+  <div *ngSwitchCase="'kartblad'">
+    <mm-kartblad [property]="property" [dynamicForm]="dynamicForm"></mm-kartblad>
+  </div>
+
+  <div *ngSwitchDefault>
+    <p>{{ "mm.createOrder.errorGeneratingForm" | transloco: { key: property.key || 'okänt objekt ' } }}</p>
+  </div>
+
+</div>

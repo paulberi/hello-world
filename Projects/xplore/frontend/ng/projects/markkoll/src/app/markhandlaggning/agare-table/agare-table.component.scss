@@ -1,0 +1,64 @@
+.mat-column-icon {
+  width: 5%;
+  min-width: 40px;
+}
+
+.mat-column-andel {
+  width: 120px;
+}
+
+.mat-column-avtalsstatus {
+  width: 180px;
+}
+
+.mat-column-signera {
+  width: 130px;
+}
+
+th {
+  font-size: 13px;
+}
+
+tr.mat-header-row {
+  height: 100px;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0;
+}
+
+td.mat-cell:first-of-type span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+th.mat-header-cell {
+  border-bottom-width: 0px;
+}
+
+th.mat-header-cell:first-of-type {
+  padding-left: 0;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mat-icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.notification-text {
+  color: var(--orange);
+}
+
+.notification-icon {
+  vertical-align: top;
+  margin-left: 5px;
+  line-height: inherit;
+}
+
+::ng-deep thead tr.mat-header-row {
+  height: 1em;
+}

@@ -1,0 +1,17 @@
+<layer>
+  <name>karta_laddstationer</name>
+  <id>LayerInfoImpl--73452c24:1783afea0a0:-295</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--73452c24:1783afea0a0:-296</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-17 13:20:24.425 UTC</dateCreated>
+  <dateModified>2021-03-18 00:10:06.841 UTC</dateModified>
+</layer>

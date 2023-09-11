@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_boende</name>
+  <id>LayerInfoImpl-f012bc73:8b9aad37f49:-2cd7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-17426f7c:c57c21a18e9:-02a0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

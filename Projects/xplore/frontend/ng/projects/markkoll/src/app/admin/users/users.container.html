@@ -1,0 +1,7 @@
+<mk-users [kund]="kund"
+          [loggedInUser]="loggedInUser"
+          [usersForKund]="usersForKund | async"
+          (userCreate)="userCreate($event)"
+          (userDelete)="userDelete($event)"
+          (userEdit)="userEdit($event)">
+</mk-users>

@@ -1,0 +1,22 @@
+@import '../../../style/colors.scss';
+
+.footer-container{
+  background-color: $darkgray;
+  color: white;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.3);
+}
+h1{
+  font-size: 35px;
+  margin-top: 0;
+  line-height: 1;
+}
+a{
+  color: white;
+}
+.sidfot-contact-info{
+  padding-top: 2rem;
+  margin-bottom: 0;
+}
+.sidfot-content{
+  padding: 4rem 0;
+}

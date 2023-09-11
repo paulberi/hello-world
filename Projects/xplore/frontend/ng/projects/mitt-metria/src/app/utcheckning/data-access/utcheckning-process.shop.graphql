@@ -1,0 +1,99 @@
+query getPaymentMethods {
+  eligiblePaymentMethods {
+    id
+    code
+    name
+    isEligible
+  }
+}
+
+query getActiveOrderState {
+  activeOrder {
+    id
+    state
+  }
+}
+
+mutation AddPayment($input: PaymentInput!) {
+  addPaymentToOrder(input: $input) {
+    ... on Order {
+      id
+      code
+      state
+    }
+
+    ... on OrderPaymentStateError {
+      errorCode
+      message
+    }
+    ... on IneligiblePaymentMethodError {
+      errorCode
+      message
+    }
+    ... on PaymentFailedError {
+      errorCode
+      message
+      paymentErrorMessage
+    }
+    ... on PaymentDeclinedError {
+      errorCode
+      message
+      paymentErrorMessage
+    }
+    ... on OrderStateTransitionError {
+      errorCode
+      message
+    }
+    ... on NoActiveOrderError {
+      errorCode
+      message
+    }
+  }
+}
+
+mutation updateCustomerInvoicingLabel($input: UpdateCustomerCustomFieldsInput!) {
+  updateCustomer(input: { customFields: $input }){
+    __typename
+  }
+}
+
+
+query getGembetPaymentStatus($method: String!) {
+  getGembetPaymentStatus(method: $method)
+}
+
+mutation initiateGembetPayment($method: String!, $redirectUrls: GembetRedirectUrls!) {
+  initiateGembetPayment(method: $method, urls: $redirectUrls)
+}
+
+mutation transitionToAddingItems {
+  transitionOrderToState(state: "AddingItems") {
+    __typename
+
+    ... on OrderStateTransitionError {
+      message
+    }
+  }
+}
+
+query activeCustomer {
+  activeCustomer {
+    id
+    firstName
+    lastName
+    emailAddress
+    customFields {
+      invoicingId
+      invoicingLabel
+    }
+  }
+}
+
+query getActiveOrderTotalPrice {
+  activeOrder {
+    id
+    totalWithTax
+    currencyCode
+    total
+  }
+}

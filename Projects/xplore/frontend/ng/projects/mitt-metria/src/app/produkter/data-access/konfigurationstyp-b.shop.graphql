@@ -1,0 +1,14 @@
+query productVariantsByProductId($productId: ID!) {
+  product(id: $productId) {
+    id
+    variants {
+      id
+      price
+      priceWithTax
+      currencyCode
+      customFields {
+        attributeSchema
+      }
+    }
+  }
+}

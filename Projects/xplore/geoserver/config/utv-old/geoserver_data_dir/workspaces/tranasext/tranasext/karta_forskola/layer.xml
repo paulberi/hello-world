@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_forskola</name>
+  <id>LayerInfoImpl-838f77b8:ee4d15d1315:-64f4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-8c419c1f:549f1609187:-e6e6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

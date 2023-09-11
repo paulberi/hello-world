@@ -1,0 +1,56 @@
+<div>
+    <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="projektnr">
+            <mat-header-cell *matHeaderCellDef> Ärendenummer </mat-header-cell>
+            <mat-cell *matCellDef="let projekt"> {{projekt.projektnr}} </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="created_at">
+            <mat-header-cell *matHeaderCellDef> Skapat </mat-header-cell>
+            <mat-cell *matCellDef="let projekt"> {{projekt.skapadDatum | date:'y-MM-dd, HH:mm:ss'}} </mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+             <mat-cell *matCellDef="let projekt"> 
+                 <span *ngIf="projekt.status == 'skapat'" >Produceras</span>
+                 <span *ngIf="projekt.status == 'misslyckades'">
+                    Misslyckades
+                    <mat-icon *ngIf="projekt.felmeddelande"
+                              class="warnIcon"
+                              color="warn"
+                              matTooltipClass="projektErrorTooltip"
+                              [matTooltip]="projekt.felmeddelande"
+                              matTooltipPosition="above">error_outline</mat-icon>
+                </span>
+                 <span *ngIf="projekt.status == 'klart'" >Färdigproducerat</span>
+            </mat-cell>
+             
+        </ng-container>
+      
+        <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef id="refresh">
+                <button mat-icon-button (click)="refresh()">
+                    <mat-icon>refresh</mat-icon>
+                </button>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let projekt" style="justify-content: space-between;"> 
+                <button *ngIf="projekt.status == 'klart'" mat-raised-button (click)="openDownloadDialog(projekt)" color="accent">
+                    Hämta PDF 
+                </button>
+                <button *ngIf="projekt.status == 'misslyckades'" color="primary" (click)="restartJob(projekt.id)" mat-raised-button>
+                    Starta om
+                </button>
+                <mat-spinner [diameter]="30" *ngIf="projekt.status == 'skapat'" style="margin-left: 40px;"></mat-spinner>
+                <button *ngIf="projekt.status != 'skapat'" mat-icon-button color="primary">
+                    <mat-icon aria-hidden="false" aria-label="Delete icon" (click)="openConfirmationDialog(projekt)">delete_forever</mat-icon>
+                </button>
+            </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" [pageSize]="10" [length]="totalElements" (page)="getPage($event.pageIndex, $event.pageSize)" showFirstLastButtons></mat-paginator>
+</div>

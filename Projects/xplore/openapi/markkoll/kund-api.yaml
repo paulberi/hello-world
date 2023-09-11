@@ -1,0 +1,245 @@
+paths:
+  '/kund/{kundId}/dokumentmall':
+    get:
+      tags:
+        - dokumentmall
+      summary: Hämta lista med information om dokumentmallar
+      description: Hämta lista med information om dokumentmallar
+      operationId: "getKundDokumentmallar"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      responses:
+        200:
+          description: Dokumentmallar.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Dokumentmall"
+    post:
+      tags:
+        - dokumentmall
+      summary: Ladda upp en ny dokumentmall
+      description: Ladda upp en ny dokumentmall
+      operationId: "createDokumentmall"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: Information om dokumentet och filen
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  description: Dokument
+                  type: string
+                  format: binary
+                dokumentInfo:
+                  $ref: "#/components/schemas/DokumentInfo"
+              required:
+                - file
+                - dokumentInfo
+      responses:
+        200:
+          description: Den skapade dokumentmallen.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dokumentmall"
+
+  '/kund/{kundId}/dokumentmall/{dokumentmallId}':
+    delete:
+      tags:
+        - dokumentmall
+      summary: Radera en dokumentmall
+      operationId: "deleteDokumentmall"
+      parameters:
+        - $ref: '#/components/parameters/kundId'
+        - $ref: '#/components/parameters/dokumentmallId'
+      responses:
+        200:
+          description: Dokumentet har blivit raderat.
+    put:
+      tags:
+        - dokumentmall
+      summary: Uppdatera information om en dokumentmall
+      operationId: "updateDokumentmall"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+        - $ref: '#/components/parameters/dokumentmallId'
+      requestBody:
+        description: Information om dokumentet och filen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Dokumentmall"
+      responses:
+        200:
+          description: Det uppdaterade dokumentet.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dokumentmall"
+
+  '/kund/{kundId}/niskalla':
+    get:
+      tags:
+        - installningar
+      summary: Hämta valda NIS-källor
+      description: Hämta valda NIS-källor
+      operationId: "getNisKalla"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      responses:
+        200:
+          description: Valda NIS-källor.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NisKalla"
+    put:
+      tags:
+        - installningar
+      summary: Uppdatera NIS-inställningar
+      operationId: "updateNisKalla"
+      parameters:
+        - $ref: "#/components/parameters/kundId"
+      requestBody:
+        description: De nya inställningarna
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NisKalla"
+      responses:
+        200:
+          description: Uppdaterade informationen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NisKalla"
+
+  '/kund/{kundId}/dokumentmall/prepare':
+    post:
+      tags:
+        - dokumentmall
+      summary: Behandla ett dokument genom att lägga till DocProperties
+      operationId: "prepareDokumentmall"
+      parameters:
+        - $ref: '#/components/parameters/kundId'
+      requestBody:
+        description: Worddokument som ska behandlas
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+      responses:
+        200:
+          description: Innehållet för det begärda dokumentet
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  '/kund/{kundId}/dokumentmall/{dokumentmallId}/data':
+    get:
+      tags:
+        - dokumentmall
+      summary: Hämta dokumentmallens innehåll
+      operationId: "getDokumentmallData"
+      parameters:
+        - $ref: '#/components/parameters/kundId'
+        - $ref: "#/components/parameters/dokumentmallId"
+      responses:
+        200:
+          description: Innehållet för det begärda dokumentet
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+components:
+  schemas:
+    Dokumentmall:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        namn:
+          type: string
+        kundId:
+          type: string
+        dokumenttyp:
+          $ref: "#/components/schemas/DokumentTyp"
+        selected:
+          type: boolean
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+      required:
+        - id
+        - namn
+        - kund
+        - dokumenttyp
+        - selected
+    DokumentInfo:
+      type: object
+      properties:
+        namn:
+          type: string
+        dokumenttyp:
+          $ref: "#/components/schemas/DokumentTyp"
+        selected:
+          type: boolean
+      required:
+        - namn
+        - dokumenttyp
+        - selected
+    DokumentTyp:
+      type: string
+      enum:
+        - MARKUPPLATELSEAVTAL
+        - INFOBREV
+        - FORTECKNING
+    NisKalla:
+      type: object
+      properties:
+        dpCom:
+          type: boolean
+        dpPower:
+          type: boolean
+        trimble:
+          type: boolean
+  parameters:
+    kundId:
+      name: kundId
+      in: path
+      description: "Kundnamnet (organisationsnummer)"
+      schema:
+        type: string
+      required: true
+      example: "556799-2242"
+    dokumentmallId:
+      name: dokumentmallId
+      in: path
+      description: UUID för en dokumentmall
+      schema:
+        type: string
+        format: uuid
+      required: true
+      example: 399ab7c3-a5dd-49b2-afb9-cf68ce8ac8c6

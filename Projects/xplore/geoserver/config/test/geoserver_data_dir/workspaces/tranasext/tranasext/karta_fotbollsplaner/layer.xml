@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_fotbollsplaner</name>
+  <id>LayerInfoImpl-11c15548:555d53bb127:-ca43</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-1b2e7600:2531b0941d1:-b340</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

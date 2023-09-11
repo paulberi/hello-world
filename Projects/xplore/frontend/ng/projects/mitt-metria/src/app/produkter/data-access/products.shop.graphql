@@ -1,0 +1,56 @@
+query SearchProducts($input: SearchInput!) {
+  search(input: $input) {
+    items {
+      productId
+      slug
+      productName
+      description
+      priceWithTax {
+        ... on PriceRange {
+          min
+          max
+          __typename
+        }
+        __typename
+      }
+      productAsset {
+        id
+        preview
+        focalPoint {
+          x
+          y
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    totalItems
+    facetValues {
+      count
+      facetValue {
+        id
+        name
+        facet {
+          id
+          name
+          code
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+
+query Collection($collectionSlug: String!) {
+  collection (slug: $collectionSlug) {
+    assets {
+      name
+      type
+      source
+    }
+  }
+}

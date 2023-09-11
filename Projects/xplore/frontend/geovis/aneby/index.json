@@ -1,0 +1,2315 @@
+{
+  "controls": [
+    {
+      "name": "home"
+    },
+    {
+      "name": "mapmenu",
+      "options": {
+        "isActive": true
+      }
+    },
+    {
+      "name": "link",
+      "options": {
+        "title": "<img src=css/png/logo_print.png />",
+        "url": "http://www.aneby.se"
+      }
+    },
+    {
+      "name": "sharemap"
+    },
+    {
+      "name": "geoposition"
+    },
+    {
+      "name": "print"
+    },
+    {
+      "name": "draganddrop",
+      "options": {
+        "groupTitle": "<b>Egna lager</b>"
+      }
+    },
+    {
+      "name": "legend"
+    },
+    {
+      "name": "search",
+      "options": {
+        "searchAttribute": "address",
+        "northing": "y",
+        "easting": "x",
+        "url": "/geosok",
+        "title": "Adressplatser",
+        "hintText": "Sök adress...",
+        "minLength": 2
+      }
+    },
+    {
+      "name": "position",
+      "options": {
+        "title": "Sweref99 TM",
+        "projections": {
+          "EPSG:3009": "Sweref99 15 00",
+          "EPSG:4326": "WGS84"
+        }
+      }
+    },
+    {
+      "name": "measure"
+    },
+    {
+      "name": "scaleLine"
+    }
+  ],
+  "pageSettings": {
+    "footer": {
+      "img": "img/footer.png"
+    },
+    "mapGrid": {
+      "visible": false
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "projectionExtent": [
+    181896.33,
+    6101648.07,
+    864416.00,
+    7689478.31
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG::3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+    },
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG::3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+    }
+  ],
+  "extent": [
+    181896.33,
+    6101648.07,
+    864416.00,
+    7689478.31
+  ],
+  "center": [
+    488755,
+    6410455
+  ],
+  "zoom": 7,
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "source": {
+    "geovis": {
+      "url": "/geoserver/anebyext/ows"
+    },
+    "mapproxy": {
+      "url": "/mapproxy/service",
+      "matrixSet": "sweref99tm",
+      "matrixIdsPrefix": ""
+    }
+  },
+  "groups": [
+    {
+      "name": "allmant",
+      "title": "<b>Allmänt</b>",
+      "expanded": false
+    },
+    {
+      "name": "samhallsservice",
+      "title": "<b>Samhällsservice</b>",
+      "expanded": false
+    },
+    {
+      "name": "barnoutb",
+      "title": "<b>Barn & Utbildning</b>",
+      "expanded": false
+    },
+    {
+      "name": "bostoindustrmark",
+      "title": "<b>Bostadstomter & Industrimark</b>",
+      "expanded": false
+    },
+    {
+      "name": "gatortorg",
+      "title": "<b>Gator & Torg</b>",
+      "expanded": false
+    },
+    {
+      "name": "kulturnoje",
+      "title": "<b>Kultur & Nöje</b>",
+      "expanded": false
+    },
+    {
+      "name": "miljoatervinning",
+      "title": "<b>Miljö & Återvinning</b>",
+      "expanded": false
+    },
+    {
+      "name": "naturofriluftsliv",
+      "title": "<b>Natur & Friluftsliv</b>",
+      "expanded": false
+    },
+    {
+      "name": "samhallsplanering",
+      "title": "<b>Samhällsplanering</b>",
+      "expanded": false
+    },
+    {
+      "name": "sportfritid",
+      "title": "<b>Sport & Fritid</b>",
+      "expanded": false
+    },
+    {
+      "name": "stodomsorg",
+      "title": "<b>Stöd & Omsorg</b>",
+      "expanded": false
+    },
+    {
+      "name": "trafikbatplatser",
+      "title": "<b>Trafik, Parkering & Båtplatser</b>",
+      "expanded": false
+    },
+    {
+      "name": "turism",
+      "title": "<b>Turism</b>",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "title": "<b>Bakgrundskartor</b>",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "name": "8",
+      "opacity": 1.0,
+      "title": "Mask",
+      "group": "none",
+      "queryable": false,
+      "source": "data/aneby_kommun.geojson",
+      "style": "mask",
+      "type": "GEOJSON",
+      "visible": true
+    },
+    {
+      "name": "10",
+      "opacity": 1.0,
+      "title": "Mask",
+      "group": "none",
+      "queryable": false,
+      "source": "data/ode_kommunmask.json",
+      "style": "mask",
+      "type": "GEOJSON",
+      "visible": false
+    },
+
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Kommunkontor",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_kommunkontor",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_kommunkontor",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {"name": "namn","url": "link","cls": "h6"},
+        {"name": "beskr"},
+        {"title": "Adress: ","name": "adress"},
+        {"title": "Kontakt: ","name": "kontakt"}
+      ]
+    },
+
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Polis",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_polis",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_polis",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {"name": "namn","url": "link","cls": "h6"},
+        {"name": "beskr"},
+        {"title": "Adress: ","name": "adress"},
+        {"title": "Kontakt: ","name": "kontakt"}
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Apotek",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_apotek",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_apotek",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Badplatser",
+      "group": "sportfritid",
+      "name": "anebyext:karta_badplats",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_badplats",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Bankomat",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_bankomat",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_bankomat",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Bibliotek",
+      "group": "kulturnoje",
+      "name": "anebyext:karta_bibliotek",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_bibliotek",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Boulebanor",
+      "group": "sportfritid",
+      "name": "anebyext:karta_boulebanor",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_boulebanor",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Byggdegård",
+      "group": "kulturnoje",
+      "name": "anebyext:karta_bygdegardar",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_bygdegardar",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Folkets park",
+      "group": "kulturnoje",
+      "name": "anebyext:karta_folkets-park",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_folkets-park",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Folktandvård",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_folktandvard",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_folktandvard",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Fotbollsplaner",
+      "group": "sportfritid",
+      "name": "anebyext:karta_fotbollsplaner",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_fotbollsplaner",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Golfbanor",
+      "group": "sportfritid",
+      "name": "anebyext:karta_golfbanor",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_golfbanor",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Gym",
+      "group": "sportfritid",
+      "name": "anebyext:karta_gym",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_gym",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Isbanor",
+      "group": "sportfritid",
+      "name": "anebyext:karta_isbanor",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_isbanor",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Längdskidspår - konstsnö",
+      "group": "sportfritid",
+      "name": "anebyext:karta_langdskidspar",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_langdskidspar",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Lekplatser",
+      "group": "sportfritid",
+      "name": "anebyext:karta_lekplats",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_lekplats",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Motionsspår - elljusspår",
+      "group": "sportfritid",
+      "name": "anebyext:karta_motionsspar_elljusspar",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_motionsspar_elljusspar",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Anebybostäder",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_obo",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_obo",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Postombud",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_postombud",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_postombud",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Racketanläggningar",
+      "group": "sportfritid",
+      "name": "anebyext:karta_racketanl",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_racketanl",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Räddningstjänst",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_raddningstjanst",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_raddningstjanst",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Restauranger",
+      "group": "turism",
+      "name": "anebyext:karta_restauranger",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_restauranger",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Samlingslokaler",
+      "group": "turism",
+      "name": "anebyext:karta_samlingslokal",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_samlingslokal",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Skjutbana",
+      "group": "sportfritid",
+      "name": "anebyext:karta_skjutbana",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_skjutbana",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Träffpunkt för äldre",
+      "group": "stodomsorg",
+      "name": "anebyext:karta_traffpunkt-aldre",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_traffpunkt-aldre",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+    {
+      "attribution": "och Aneby kommun",
+      "title": "Vårdcentral",
+      "group": "samhallsservice",
+      "name": "anebyext:karta_vardcentral",
+      "geometryName": "geom",
+      "source": "geovis",
+      "style": "karta_vardcentral",
+      "type": "WFS",
+      "visible": false,
+      "attributes": [
+        {
+          "name": "namn",
+          "url": "link",
+          "cls": "h6"
+        },
+        {
+          "name": "beskr"
+        },
+        {
+          "title": "Adress: ",
+          "name": "adress"
+        },
+        {
+          "title": "Kontakt: ",
+          "name": "kontakt"
+        }
+      ]
+    },
+
+    {
+      "attribution": "&copy Lantmäteriet Geodatasamverkan, &copy Origo, &copy Metria",
+      "format": "image/png",
+      "group": "background",
+      "name": "AnebyKombo",
+      "queryable": false,
+      "source": "mapproxy",
+      "title": "Karta",
+      "type": "WMTS",
+      "style": "metriamaps",
+      "visible": true
+    },
+    {
+      "attribution": "&copy Lantmäteriet Geodatasamverkan, &copy Origo, &copy Metria",
+      "format": "image/png",
+      "group": "background",
+      "name": "AnebyGra",
+      "queryable": false,
+      "source": "mapproxy",
+      "title": "Karta (nedtonad)",
+      "type": "WMTS",
+      "style": "metriamapsgra",
+      "visible": false
+    },
+    {
+      "attribution": "&copy Lantmäteriet Geodatasamverkan, &copy Origo, &copy Metria",
+      "format": "image/jpeg",
+      "group": "background",
+      "name": "AnebyOrto",
+      "queryable": false,
+      "source": "mapproxy",
+      "title": "Flygfoto",
+      "type": "WMTS",
+      "style": "orto",
+      "visible": false
+    }
+  ],
+  "styles": {
+    "mask": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.5)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "symb": [
+      [
+        {
+          "circle": {
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,0,0,1)",
+              "width": 1
+            },
+            "fill": {
+              "color": "rgba(0,0,255,0.3)"
+            }
+          }
+        }
+      ]
+    ],
+    "adress": [
+      [
+        {
+          "circle": {
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,0,0,0)",
+              "width": 1
+            },
+            "fill": {
+              "color": "rgba(255,0,0,0.6)"
+            }
+          }
+        }
+      ]
+    ],
+    "fast": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,0,0,0.3)",
+            "width": 2.5
+          },
+          "fill": {
+            "color": "rgba(0,0,0,0.0)"
+          }
+        }
+      ]
+    ],
+    "karta_kommunagd-mark": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(255,224,0,0.5)"
+          }
+        }
+      ]
+    ],
+    "karta_apotek": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_apotek.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bankomat": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_bankomat.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_begravningsplats": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_begravningsplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_energiradgivning": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_begravningsplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_polis": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_polis.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_konsumentradgivning": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_konsumentradgivning.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_postombud": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_postombud.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_systembolaget": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_systembolaget.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_raddningstjanst": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_raddningstjanst.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_folktandvard": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_folktandvard.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hjartstartare": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_hjartstartare.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_vardcentral": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_vardcentral.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_kommunkontor": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_kommunkontor.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_obo": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_obo.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_viktigt-meddelande": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_viktigt-meddelande.png",
+            "anchor": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skola": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_skola.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_forskola": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_forskola.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fritidshem": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_fritidshem.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_lediga-bostadstomter": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_lediga-bostadstomter.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bostadstomter_ejbebyggda": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(165,221,66,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(165,221,66,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_ledig-industrimark": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(188,188,250,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(188,188,250,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_ledig-industrimark_privatagd": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(188,188,250,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(188,188,250,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_grav-uppstallningstillstand": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(229,0,64,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(229,0,64,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_belaggningsarbete": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(229,0,64,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_offentligatoaletter": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_offentligtoalett.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_torghandel": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,224,0,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(255,224,0,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_bibliotek": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_bibliotek.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_biograf": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_biograf.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bygdegardar": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_bygdegardar.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_folkets-park": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_folkets-park.png"
+          }
+        }
+      ]
+    ],
+    "karta_hembygdsforening": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_hembygdsforening.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_kulturskolan": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_kulturskolan.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hundpasar": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_hundpasar.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningscentral": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_atervinningcentral.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningsstation": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_atervinningsstation.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_cykelleder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_naturreservat": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(42,153,32,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(42,153,32,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_naturvardsprogram-objekt": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(72,153,32,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(72,153,32,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_naturvardsprogram-omraden": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(102,153,32,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(102,153,32,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_vandringsleder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(155,88,0,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-pagaende": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(229,0,64,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(0,0,0,0.0)"
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-gallande": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,185,237,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(255,185,237,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_badplats": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_badplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_basketplan": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_basketplan.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_beachvolley": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_beachvolley.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_boulebanor": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_boulebanor.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bowling": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_bowling.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fotbollsplaner": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_fotbollsplaner.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_friidrottsanl": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_friidrottsanl.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fritidsgard": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_fritidsgard.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_golfbanor": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_golfbanor.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_gym": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_gym.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hundklubb": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_hundklubb.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_idrottshall": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_idrottshall.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_isbanor": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_isbanor.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_lekplats": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_lekplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_langdskidspar": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_langdskidspar.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_motionsanl": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_motionsanl.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_motionsspar_elljusspar": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,224,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_motionsspar_uppmarkta": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(31,120,180,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_motorcrossbana": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_motorcrossbana.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_racketanl": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_racketanl.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_ridanl": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_ridanl.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skatepark": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_skatepark.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skjutbana": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_skjutbana.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_spontanidrottsplats": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_spontanidrottsplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_daglig-verksamhet": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_daglig-verksamhet.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_socialkontoret": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_socialkontoret.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-aktivitetshuset": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_traffpunkt-aktivitetshuset.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-aldre": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_traffpunkt-aldre.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_okad-sysselsattning": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_okad-sysselsattning.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_busshallplats": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_busshallplats.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_busskort": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_busskort.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_busstation": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_busstation.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hamn": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_hamn.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_batplatser": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(111,243,237,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(111,243,237,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_cykelvagar": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(136,14,79,1.0)",
+            "width": 3
+          },
+          "fill": {
+            "color": "rgba(136,14,79,0.3)"
+          }
+        }
+      ]
+    ],
+    "karta_drivmedelsstation": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_drivmedelsstation.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_parkeringsplatser": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_parkeringsplatser.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_laddstationer": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_laddstationer.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_parkering_rorelsehindrade": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_parkering_rorelsehindrade.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_parkering-pendlar": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_parkering-pendlar.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_uppstallningsplats-husbilar": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_uppstallningsplats-husbilar.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_boende": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_boende.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_cafe": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_cafe.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fiske": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_fiske.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fiskekort": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_fiskekort.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_livsmedelsbutik": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_livsmedelsbutik.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_restauranger": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_restauranger.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_sevardheter_besoksmal": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_sevardheter_besoksmal.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_sevardheter_kultur": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_sevardheter_kultur.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_sevardheter_natur": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_sevardheter_natur.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_turistinformation": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_turistinformation.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_samlingslokal": [
+      [
+        {
+          "icon": {
+            "src": "img/karta/karta_samlingslokal.png",
+            "anchor": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ]
+    ],
+    "orto": [
+      [
+        {
+          "image": {
+            "src": "img/png/orto.png"
+          }
+        }
+      ]
+    ],
+    "metriamaps": [
+      [
+        {
+          "image": {
+            "src": "img/png/metriamaps.png"
+          }
+        }
+      ]
+    ],
+    "metriamapsgra": [
+      [
+        {
+          "image": {
+            "src": "img/png/metriamapsgra.png"
+          }
+        }
+      ]
+    ]
+  }
+}

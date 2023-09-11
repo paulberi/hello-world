@@ -1,0 +1,15 @@
+<layer>
+  <name>geoa_vattenskyddsomr_99tm</name>
+  <id>LayerInfoImpl--451832f0:171d4d772bc:-7fef</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--451832f0:171d4d772bc:-7ff0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

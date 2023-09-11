@@ -1,0 +1,81 @@
+mk-search-input {
+  width: 400px;
+  margin-top: -15px;
+}
+
+.main-content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#form-controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;  
+  float: right;
+
+}
+
+::ng-deep .search-input {
+  margin-right: 1.5rem;
+}
+
+#title-background {
+  background-image: url("/assets/projektlista.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+
+.more {
+  float: right;
+}
+
+.mat-column-namn {
+  width: 28%;
+}
+
+.mat-column-skapadDatum {
+  width: 26%;
+}
+
+.mat-column-status {
+  width: 28%;
+}
+
+.mat-column-more {
+  width: 18%;
+}
+
+.click-column {
+  cursor: pointer;
+}
+
+#projektlista th {
+  font-size: 13px;
+  color: var(--primary-variant);
+}
+
+#projektlista tr {
+  height: 4.5em;
+}
+
+#projektlista tr.highlight {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+#projektlista tr.highlight span {
+  color: var(--primary);
+}
+
+#projektlista span {
+  color: var(--primary-variant);
+}
+
+.mat-select {
+  padding-left: 0.5em;
+}
+
+.mat-h1 {
+  float: left;
+}

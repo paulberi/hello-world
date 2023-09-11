@@ -1,0 +1,62 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin toolbar-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+  $toolbar-button-size: 32px;
+  $toolbar-button-margin: 2px;
+  $toolbar-button-radius: 2px;
+  $toolbar-button-total-size: calc(#{$toolbar-button-size} + 2 * #{$toolbar-button-margin});
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  .toolbar, .toolbar-collapsible {
+    color: mat-color($foreground, text);
+  }
+
+  mat-bottom-sheet-container {
+    background-color: mat-color($background, background) !important;
+    color: mat-color($foreground, text);
+  }
+
+  .mat-button-toggle-group {
+    box-shadow: none;
+    padding: 5px;
+    border: 0;
+  }
+
+  .mat-button-toggle, .mat-raised-button {
+    background-color: mat-color($background, background);
+    color: mat-color($foreground, text);
+    box-shadow: 3px 3px 3px -1px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  }
+
+  .active {
+    background-color: mat-color($background, background);
+    color: mat-color($accent);
+  }
+
+  .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+    background-color: mat-color($background, raised-button);
+    color: mat-color($accent);
+  }
+
+  .toolbar {
+    .mat-button-toggle, .mat-button-toggle-button, .mat-raised-button {
+      width: $toolbar-button-total-size;
+      height: $toolbar-button-total-size;
+      line-height: $toolbar-button-total-size;
+      min-width: $toolbar-button-total-size;
+      max-width: $toolbar-button-total-size;
+      padding: 0;
+      border-radius: $toolbar-button-radius;
+    }
+    .mat-button-toggle-label-content {
+      line-height: $toolbar-button-total-size;
+      padding: 0;
+    }
+  }
+}

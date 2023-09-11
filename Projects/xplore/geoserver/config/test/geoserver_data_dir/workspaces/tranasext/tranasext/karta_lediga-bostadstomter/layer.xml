@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_lediga-bostadstomter</name>
+  <id>LayerInfoImpl-c291bdb6:47717c894ae:-3b7a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-65a531ae:0f337af5b0b:-0abc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

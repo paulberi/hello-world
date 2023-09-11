@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_apotek</name>
+  <id>LayerInfoImpl-4675f4f1:168a944595b:-7f12</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-4675f4f1:168a944595b:-7f13</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateModified>2021-03-12 00:02:23.825 UTC</dateModified>
+</layer>

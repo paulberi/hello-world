@@ -1,0 +1,600 @@
+{
+  "app": {
+    "logo": {
+      "url": "http://www.skinnskatteberg.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-light-theme",
+    "uistates": {
+      "grupperaFastigheter": true,
+      "visaFastighetsgranser": true
+    },
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "showSettings": true,
+          "allowDeselect": true,
+          "base_component": "base"
+        },
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "allowDeselect": true,
+          "base_component": "measure"
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        }
+      }
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/skinnskatteberg/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    }
+  },
+  "zoom": 7,
+  "center": [
+    538806,
+    6632206
+  ],
+  "extent": [
+    -375249,
+    5774492,
+    1460680,
+    8323704
+  ],
+  "groups": [
+    {
+      "name": "fastighetsgranser",
+      "title": "Fastighetsgränser",
+      "expanded": false
+    },
+    {
+      "name": "pbr",
+      "title": "Planer, bestämmelser och rättigheter",
+      "expanded": false
+    },
+    {
+      "name": "verksamhet",
+      "title": "Verksamhet",
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "group": "ovrigt",
+      "style": {
+        "styles": [
+          "kladdlager_red",
+          "kladdlager_green",
+          "kladdlager_blue",
+          "kladdlager_magenta",
+          "kladdlager_svart"
+        ],
+        "styleTypePropertyName": "stil"
+      },
+      "title": "Ritlager",
+      "source": {
+        "type": "wfs",
+        "canClear": false,
+        "typeName": "skinnskatteberg:kladdlager",
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "visible": true,
+      "queryable": true,
+      "geometryName": "geometry",
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      }
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "id": "fastighetsytor",
+      "type": "tile",
+      "group": "fastighetsgranser",
+      "title": "Fastighetsgränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:Fastighetsytor_WFS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": true,
+      "queryable": false
+    },
+    {
+      "import": "planer@mm-export",
+      "id": "planer",
+      "group": "pbr"
+    },
+    {
+      "import": "metria:PBR_fornlamningar_bestammelser@mm-export",
+      "group": "pbr"
+    },
+    {
+      "import": "rattigheter@mm-export",
+      "id": "rattigheter",
+      "group": "pbr"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhet",
+      "title": "Kommunägd mark lagfaren",
+      "source": {
+        "url": "/maps/gawms/Skinnskatteberg_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "1",
+          "TRANSPARENT": true
+        },
+        "serverType": "arcgis"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhet",
+      "title": "Kommunägd mark taxerad",
+      "source": {
+        "url": "/maps/gawms/Skinnskatteberg_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "0",
+          "TRANSPARENT": true
+        },
+        "serverType": "arcgis"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "verksamhet",
+      "title": "Strandskydd",
+      "source": {
+        "url": "/maps/gawms/Skinnskatteberg_verksamhetsdata/MapServer/WMSServer?",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "2",
+          "TRANSPARENT": true
+        },
+        "serverType": "arcgis"
+      },
+      "opacity": 0.5,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "metria:MetriaFastighetPlus@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ]
+  },
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG::3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        500000,
+        6700000
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG::4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "infoTemplates": {
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "egna-byggnader-info": {
+      "properties": [
+        {
+          "name": "detaljtyp",
+          "label": "Detaljtyp"
+        },
+        {
+          "name": "fastighet",
+          "label": "Fastighet"
+        },
+        {
+          "name": "adat",
+          "label": "Datum"
+        },
+        {
+          "name": "trakt",
+          "label": "Trakt"
+        },
+        {
+          "name": "kommunnamn",
+          "label": "Kommun"
+        }
+      ]
+    },
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

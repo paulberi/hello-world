@@ -1,0 +1,25 @@
+<span class="mat-h2">{{ "mk.avtalsinformation.ersattningTitle" | transloco }}</span>
+
+<form [formGroup]="form">
+  <div class="row radio-group-title">{{ "mk.avtalsinformation.revTitle" | transloco }}</div>
+  <mat-radio-group formControlName="berakningRev">
+    <mat-radio-button [value]="BerakningRev.ENBARTREV">{{ "mk.avtalsinformation.onlyRev" | transloco }}</mat-radio-button>
+    <mat-radio-button [value]="BerakningRev.REVGRUNDERSATTNING">{{ "mk.avtalsinformation.revGrundersattning" | transloco }}</mat-radio-button>
+    <mat-radio-button [value]="BerakningRev.REVFULLERSATTNING">{{ "mk.avtalsinformation.revFullErsattning" | transloco }}</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="row radio-group-title">{{ "mk.avtalsinformation.abel07Title" | transloco }}</div>
+  <mat-radio-group formControlName="berakningAbel07">
+    <mat-radio-button [value]="BerakningAbel07.ENBARTABEL07">{{ "mk.avtalsinformation.onlyAbel07" | transloco }}</mat-radio-button>
+    <mat-radio-button [value]="BerakningAbel07.ABEL07GRUNDERSATTNING">{{ "mk.avtalsinformation.abel07Grundersattning" | transloco }}</mat-radio-button>
+    <mat-radio-button [value]="BerakningAbel07.ABEL07FULLERSATTNING">{{ "mk.avtalsinformation.abel07FullErsattning" | transloco }}</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="row radio-group-title">{{ "mk.avtalsinformation.folderStructure" | transloco }}</div>
+  <mat-form-field class="mappstrategi">
+    <mat-select formControlName="mappstrategi">
+      <mat-option [value]="AvtalMappstrategi.FLAT">{{ "mk.avtalMappstrategi.FLAT" | transloco }}</mat-option>
+      <mat-option [value]="AvtalMappstrategi.HIERARCHICAL">{{ "mk.avtalMappstrategi.HIERARCHICAL" | transloco }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

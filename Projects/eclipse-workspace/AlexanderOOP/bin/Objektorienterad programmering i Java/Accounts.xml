@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.2" class="java.beans.XMLDecoder">
+ <array class="java.lang.Object" length="3">
+  <void index="0">
+   <object class="uppgift5.Account" id="Account0">
+    <void property="accountNumber">
+     <long>199011276532</long>
+    </void>
+    <void property="balance">
+     <double>680.0</double>
+    </void>
+    <void property="cards">
+     <void method="add">
+      <object class="uppgift5.CardData">
+       <void property="number">
+        <long>4534784536254512</long>
+       </void>
+       <void property="pinCode">
+        <int>4565</int>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="createdTimestamp">
+     <long>1608241506910</long>
+    </void>
+    <void property="transactions">
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608241517066</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>500.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608241528702</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>500.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608246412825</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>1200.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608246862534</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>250.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608246907232</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>720.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608249434919</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>100.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608303964813</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>650.0</double>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="uppgift5.Account" id="Account1">
+    <void property="accountNumber">
+     <long>200111276532</long>
+    </void>
+    <void property="balance">
+     <double>199.0</double>
+    </void>
+    <void property="cards">
+     <void method="add">
+      <object class="uppgift5.CardData">
+       <void property="number">
+        <long>7334784536254512</long>
+       </void>
+       <void property="pinCode">
+        <int>4174</int>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="createdTimestamp">
+     <long>1608241506913</long>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="uppgift5.Account" id="Account2">
+    <void property="accountNumber">
+     <long>4549792281206464</long>
+    </void>
+    <void property="balance">
+     <double>62525.990000000005</double>
+    </void>
+    <void property="cards">
+     <void method="add">
+      <object class="uppgift5.CardData">
+       <void property="number">
+        <long>2171515886361044</long>
+       </void>
+       <void property="pinCode">
+        <int>5553</int>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="transactions">
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608318014193</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>5000.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608328948520</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>20.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608329172880</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>20.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608329182338</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>570.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608329254561</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>1000.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608329278032</long>
+       </void>
+       <void property="message">
+        <string>Bankomat</string>
+       </void>
+       <void property="sum">
+        <double>5000.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608331958273</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>1000.0</double>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="uppgift5.Transaction">
+       <void property="createdTimestamp">
+        <long>1608405264184</long>
+       </void>
+       <void property="message">
+        <string>Insättning</string>
+       </void>
+       <void property="sum">
+        <double>50.0</double>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+ </array>
+</java>

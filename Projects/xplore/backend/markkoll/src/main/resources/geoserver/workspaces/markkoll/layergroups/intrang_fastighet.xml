@@ -1,0 +1,73 @@
+<layerGroup>
+  <name>intrang_fastighet</name>
+  <mode>NAMED</mode>
+  <title>Intrång på fastighet</title>
+  <abstractTxt>Grupplager för att visa intrång på en fastighet.</abstractTxt>
+  <publishables>
+    <published type="layer">
+      <name>markkoll:intrang_markledning</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_luftledning</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_kabelskap</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_natstation</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_strak</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_brunn</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_markskap</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_teknikbod</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:intrang_mittlinjeredovisad_samfallighet</name>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <name>markkoll:intrang_markledning</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_luftledning</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_kabelskap</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_natstation</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_strak</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_brunn</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_markskap</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_teknikbod</name>
+    </style>
+    <style>
+      <name>markkoll:intrang_mittlinjeredovisad_samfallighet</name>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+  <dateCreated>2022-01-28 09:22:18.249 UTC</dateCreated>
+  <dateModified>2022-03-10 11:04:34.912 UTC</dateModified>
+</layerGroup>

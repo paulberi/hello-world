@@ -1,0 +1,41 @@
+<ng-container *ngIf="(mapConfig | async); let mapConfig; else showLoading">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #showLoading>
+  <ng-container *ngIf="!this.error; else showError">
+    <div class="loading">
+      <mat-spinner class="loading-spinner" [diameter]="64"></mat-spinner>
+      <h3 class="loading-text">Hämtar kartkonfiguration...</h3>
+    </div>
+  </ng-container>
+</ng-template>
+<ng-template #showError>
+  <ng-container [ngSwitch]="this.errorCode">
+    <table *ngSwitchCase="403" style="width:100%; height:100%">
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: bottom;">
+          <h3 style="float: bottom">Behörighet saknades för att använda denna applikation</h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: top">
+          <button mat-button class="okButton" (click)="logOut()" style="margin-left: 10px">Logga ut</button>
+        </td>
+      </tr>
+    </table>
+    <table *ngSwitchDefault style="width:100%; height:100%">
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: bottom;">
+          <h3 style="float: bottom">Kunde inte hämta kartkonfigurationen</h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: top">
+          <button mat-button class="okButton" onclick="window.location.reload()" style="margin-right: 10px">Försök igen</button>
+          <button mat-button class="okButton" (click)="logOut()" style="margin-left: 10px">Logga ut</button>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+</ng-template>

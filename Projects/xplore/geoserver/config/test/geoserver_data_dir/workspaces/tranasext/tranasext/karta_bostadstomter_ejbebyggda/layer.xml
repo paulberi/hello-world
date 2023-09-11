@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_bostadstomter_ejbebyggda</name>
+  <id>LayerInfoImpl-ac5bb8b2:f6a3dadc118:-679e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-56e281c6:10a1c44c2e7:-8015</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

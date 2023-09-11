@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_egna_byggnader</name>
+  <id>LayerInfoImpl--10b5fb8f:16ea7627884:a9f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--10b5fb8f:16ea7627884:a9e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

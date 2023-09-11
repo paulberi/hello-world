@@ -1,0 +1,7 @@
+<xp-layout-ui appName="{{ 'mk.common.appName' | transloco }}" [menuItems]="menuItems" [loggedInUserInfo]="xpLayoutUserInfo" (logoutClick)="openLogoutDialog()" (helpClick)="openHelpDialog()" (pageChange)="changePage($event)">
+    <router-outlet></router-outlet>
+</xp-layout-ui>
+
+<ng-template #helpTemplate>
+    <p>{{ "mk.appShell.instructions" | transloco }}</p>
+</ng-template>

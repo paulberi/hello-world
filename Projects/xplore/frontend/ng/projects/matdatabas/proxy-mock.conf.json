@@ -1,0 +1,13 @@
+{
+  "/api": {
+    "target": "http://localhost:4010",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "xfwd": true
+  },
+  "/saml": {
+    "target": "http://localhost:9008",
+    "xfwd": true
+  }
+}

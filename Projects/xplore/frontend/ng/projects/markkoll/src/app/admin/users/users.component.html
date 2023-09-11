@@ -1,0 +1,29 @@
+<div class="row justify-center">
+  <div class="col-12">
+    <div class="row main-content">
+      <div class="col-5">
+        <h2>{{ "mk.admin.userDetails" | transloco }}</h2>
+        <mk-user-form (submitClick)="userCreate.emit($event)"></mk-user-form>
+
+        <h2>{{ "mk.admin.usersFor" | transloco }} {{ kund?.namn }}</h2>
+        <mat-accordion>
+          <div *ngFor="let user of usersForKund; let i = index">
+            <mat-expansion-panel class="expansion-panel mat-elevation-z0">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="d-flex">
+                  <span class="mat-h2 namn">{{ user.fornamn + " " + user.efternamn }}</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mk-user-form [editUser]="user"
+                            [loggedInUser]="loggedInUser"
+                            (submitClick)="userEdit.emit($event)"
+                            (deleteClick)="userDelete.emit($event)"
+              ></mk-user-form>
+            </mat-expansion-panel>
+            <mat-divider></mat-divider>
+          </div>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>

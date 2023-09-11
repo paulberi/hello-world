@@ -1,0 +1,17 @@
+export const environment = {
+  production: true,
+  authIssuer: "/configAuthIssuer",
+  keyCloakClientId: "markkoll",
+  keyCloakScope: "openid profile email offline_access",
+  allowedKeyCloakRole: [] as string[],
+  availableLanguages: ["sv"],
+  defaultLanguage: "sv",
+  sokServiceUrl: "/api/sok",
+  wmsUrl: "/metria-maps/geoserver/wms",
+  configurationUrl: "/api/config/app-config",
+  backendUrl: "/api",
+  metriaMapsUrl: "/metria-maps/geoserver/wms",
+  geoserverUrl: "/geoserver/markkoll/wms",
+  markkollWfsUrl: "/geoserver/markkoll/wfs",
+  samradBackendUrl: "/samrad/api",
+};

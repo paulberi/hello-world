@@ -1,0 +1,24 @@
+<form [formGroup]="form" *ngIf="form">
+  <div class="dropzone-container">
+    <xp-dropzone formControlName="files" [acceptedFileEndings]="zipFileEnding" label="{{'mk.uploadFile.dropzone' | transloco}}"></xp-dropzone>
+  </div>
+  <mat-form-field class="nis">
+    <mat-label>{{"mk.uploadFile.NIS" | transloco}}</mat-label>
+    <mat-select formControlName="indataTyp">
+      <mat-option *ngFor="let indataTyp of indataTyper" [value]="indataTyp">
+        {{ ("mk.indataTyp." + indataTyp) | transloco}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.controls.indataTyp.hasError('required')">
+      {{"xp.common.fieldMandatory" | transloco}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>{{"mk.uploadFile.buffert" | transloco}} (m)</mat-label>
+    <input matInput type="number" formControlName="buffert"/>
+    <mat-error *ngIf="form.controls.indataTyp.hasError('required')">
+      {{"xp.common.fieldMandatory" | transloco}}
+    </mat-error>
+  </mat-form-field>
+</form>

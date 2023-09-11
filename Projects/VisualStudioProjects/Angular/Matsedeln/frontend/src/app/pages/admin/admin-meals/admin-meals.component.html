@@ -1,0 +1,50 @@
+<script src="https://use.fontawesome.com/ccceada4b4.js"></script>
+<app-admin-header></app-admin-header>
+<app-header></app-header>
+<div *ngIf="week">
+  <div class="centered-content">
+    <div class="menu-content">
+      <div class="day-content" *ngFor="let day of week.days">
+        <div class="day-date">
+          {{ day.date | date: "EEEE" | titlecase }}<br>{{ day.date | date }}
+        </div>
+        <div class="meals-content">
+          <ng-template [ngIf]="day.meals">
+            <div class="day-meals" *ngFor="let meal of day.meals">
+                <form>
+                  <input class="update-meal-input-field" type="text" [value]="meal.mealName" #mealName>
+                  <input class="icon-checkbox"  title="Vegetarisk" type="checkbox" [checked]="checkFoodSpec(meal.foodSpecs, 'veg')" value="veg" name="veg" id="veg" #veg>
+                  <i class="fas veg fa-seedling" title="Vegetarisk"></i>
+                  <input class="icon-checkbox"  title="Stark" type="checkbox" [checked]="checkFoodSpec(meal.foodSpecs, 'hot')" value="hot" name="hot" id="hot" #hot>
+                  <i class="fas hot fa-pepper-hot" title="Stark"></i>
+                  <input class="icon-checkbox"  title="Fläsk" type="checkbox" [checked]="checkFoodSpec(meal.foodSpecs, 'pig')" value="pig" name="pig"  id="pig" #pig>
+                  <i class="fas pig fa-bacon" title="Fläsk"></i>
+                </form>
+                <button class="update-button" title="Uppdatera" (click)="updateMeal(meal, day, mealName.value, veg, hot, pig)" #updateButton>
+                <i class="far fa-save"></i>
+                </button>
+                <button class="delete-button" title="Ta bort" (click)="deleteMeal(meal._id, day)">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <div class="day-admin-meals" *ngIf="day.meals.length < 4">
+              <form #form>
+                <input class="new-meal-input-field" type="text" [value]="" #newMealName placeholder="Skriv ny maträtt här...">
+                <input class="icon-checkbox" title="Vegetarisk" type="checkbox" value="veg" name="veg" id="veg" #veg>
+                <i class="fas veg fa-seedling" title="Vegetarisk"></i>
+                <input class="icon-checkbox" title="Stark" type="checkbox" value="hot" name="hot" id="hot" #hot>
+                <i class="fas hot fa-pepper-hot" title="Stark"></i>
+                <input class="icon-checkbox" title="Fläsk" type="checkbox" value="pig" name="pig" id="pig" #pig>
+                <i class="fas pig fa-bacon" title="Fläsk"></i>
+              </form>
+              <button class="save-button" title="Spara" (click)="saveMeal(day, newMealName.value, veg, hot, pig, form)">
+                <i class="fas fa-save"></i>
+              </button>
+            </div>
+          </ng-template>
+      </div>
+      </div>
+      <br> <br> <br> <br>
+    </div>
+  </div>
+</div>

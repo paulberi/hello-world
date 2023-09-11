@@ -1,0 +1,16 @@
+<layer>
+  <name>kladdlager_ydre</name>
+  <id>LayerInfoImpl-11d8217f:17d39978789:-6a48</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-11d8217f:17d39978789:-6a49</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-12-23 13:11:16.790 UTC</dateCreated>
+</layer>

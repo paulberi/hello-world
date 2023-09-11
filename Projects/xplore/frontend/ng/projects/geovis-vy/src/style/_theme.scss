@@ -1,0 +1,112 @@
+@import "@angular/material/theming";
+@import "../../../lib/map/components/info-panel/info-panel.theme";
+@import "../../../lib/map/components/layer-panel/layer-panel.theme";
+@import "../../../lib/modal-dialog.theme";
+@import "../../../lib/map/components/toolbar/toolbar.theme";
+@import "../../../lib/map/components/draggable-panel/draggable-panel.theme";
+@import "../../../lib/map/components/collapsable-panel/collapsable-panel.theme";
+@import "../../../lib/map/components/menu/menu.theme";
+@import "../../../lib/app-shell/app-shell.theme";
+@import "../../../lib/map/components/featureinfo/feature-info-edit-panel/feature-info-edit-panel.theme";
+@import url(//fonts.googleapis.com/css?family=Nunito+Sans);
+
+@font-face {
+  font-family: ApexNewBook;
+  src: url("../assets/ApexNewBook.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ApexNewHeavy;
+  src: url("../assets/ApexNewHeavy.otf") format("opentype");
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+$metria-typography-config: mat-typography-config(
+  $font-family: 'Nunito Sans'
+);
+
+@include angular-material-typography($metria-typography-config);
+@include mat-core($metria-typography-config);
+
+$metria-dark-primary: mat-palette($mat-grey);
+$metria-dark-accent: mat-palette($mat-deep-orange);
+$metria-dark-warn: mat-palette($mat-red);
+$metria-light-primary: mat-palette($mat-gray);
+$metria-light-accent: mat-palette($mat-deep-orange);
+$metria-light-warn: mat-palette($mat-red);
+$metria-theme: mat-light-theme($metria-light-primary, $metria-light-accent, $metria-light-warn);
+$metria-dark-theme: mat-dark-theme($metria-dark-primary, $metria-dark-accent, $metria-dark-warn);
+$metria-light-theme: mat-light-theme($metria-light-primary, $metria-light-accent, $metria-light-warn);
+
+@include angular-material-theme($metria-theme);
+@include info-panel-theme($metria-theme);
+@include layer-panel-theme($metria-theme);
+@include modal-dialog-theme($metria-theme);
+@include toolbar-theme($metria-theme);
+@include draggable-panel-theme($metria-theme);
+@include collapsable-panel-theme($metria-theme);
+@include app-shell-theme($metria-theme);
+@include menu-theme($metria-theme);
+
+@mixin links-theme($theme) {
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+
+  a, a:visited {
+    color: mat-color($foreground, text);
+  }
+
+  a:hover {
+    color: mat-color($accent);
+  }
+}
+
+@include links-theme($metria-theme);
+
+@mixin search-theme($theme) {
+  $warn: map-get($theme, warn);
+
+  .xp-search-koordinat-hint {
+    color: mat-color($warn);
+  }
+}
+
+@include search-theme($metria-theme);
+
+.metria-dark-theme {
+  @include angular-material-theme($metria-dark-theme);
+  @include info-panel-theme($metria-dark-theme);
+  @include layer-panel-theme($metria-dark-theme);
+  @include links-theme($metria-dark-theme);
+  @include modal-dialog-theme($metria-dark-theme);
+  @include toolbar-theme($metria-dark-theme);
+  @include draggable-panel-theme($metria-dark-theme);
+  @include collapsable-panel-theme($metria-dark-theme);
+  @include app-shell-theme($metria-dark-theme);
+  @include menu-theme($metria-dark-theme);
+  @include feature-info-edit-panel-theme($metria-dark-theme);
+}
+
+.metria-light-theme {
+  @include angular-material-theme($metria-light-theme);
+  @include info-panel-theme($metria-light-theme);
+  @include layer-panel-theme($metria-light-theme);
+  @include links-theme($metria-light-theme);
+  @include modal-dialog-theme($metria-light-theme);
+  @include toolbar-theme($metria-light-theme);
+  @include draggable-panel-theme($metria-light-theme);
+  @include collapsable-panel-theme($metria-light-theme);
+  @include app-shell-theme($metria-light-theme);
+  @include menu-theme($metria-light-theme);
+  @include feature-info-edit-panel-theme($metria-light-theme);
+  @include search-theme($metria-light-theme);
+}
+
+html, body {
+  margin: 0;
+}
+
+

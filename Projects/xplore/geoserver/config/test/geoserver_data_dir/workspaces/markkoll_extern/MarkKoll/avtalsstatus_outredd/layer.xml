@@ -1,0 +1,19 @@
+<layer>
+  <name>avtalsstatus_outredd</name>
+  <id>LayerInfoImpl--1033da80:17955965d64:-1a69</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--1033da80:17955965d64:-1a5f</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1033da80:17955965d64:-1a6a</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-31 11:05:10.407 UTC</dateCreated>
+  <dateModified>2021-04-08 07:00:00.869 UTC</dateModified>
+</layer>

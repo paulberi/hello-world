@@ -1,0 +1,134 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Car Rental</title>
+    <style>
+        .renting {
+            /* margin-top: 100px; */
+        }
+        
+        label {
+            padding: 10px;
+            margin: 5px;
+        }
+        
+        input {
+            padding: 2px;
+            margin: 5px
+        }
+        
+        .submit {
+            margin-top: 20px;
+            margin-left: 212px;
+            background-image: linear-gradient(to left, white, cyan);
+            border: 0ch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="renting" id="renting">
+        <h4>Choose a car from the drop down and submit</h4>
+        <br>
+        <label>Pick up Date</label>
+        <input type="date" id="start" name="trip-start" min="2018-01-01" max="2030-12-31">
+        <br>
+        <label>Select car id</label>
+        <select name="carText" id="carDropdown">
+              <option selected="selected">Choose a Car</option>
+          </select>
+        <br>
+        <input type="submit" class="submit" id="submitOrder" value="Submit">
+    </div>
+
+
+
+</body>
+<script>
+    var userId = localStorage.getItem('userId');
+    var username;
+    var password;
+    var userList = [];
+    $(function() {
+
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: "GET",
+            url: "http://localhost:8081/api/v1/customers",
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                data.forEach(user => {
+                    if (user.userId == userId) {
+                        username = user.username;
+                        password = user.password;
+                    }
+                    userList.push(user);
+                });
+            }
+        })
+    })
+    $(function() {
+        $('#submitOrder').click(function() {
+            rentACar();
+        })
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: 'GET',
+            url: 'http://localhost:8081/api/v1/cars',
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                for (var i = 0; i < data.length; i++) {
+                    var opt = new Option(data[i].carId);
+                    $("#carDropdown").append(opt);
+                }
+            }
+        });
+    })
+
+    function rentACar() {
+        var rentalData = {
+            user: {
+                userId
+            },
+            car: {
+                carId: $('#carDropdown option:selected').text()
+            },
+            startDate: $('#start').val(),
+            dateOfBooking: new Date()
+
+        }
+        console.log(rentalData);
+
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "http://localhost:8081/api/v1/ordercar",
+            data: JSON.stringify(rentalData),
+            dataType: 'json',
+            username: username,
+            password: password,
+            success: function(result, status, xhr) {
+                alert("Order confirmed, check your account for details")
+            },
+            error: function(xhr, status, error) {
+                alert("Order not successful, check if there is no order with similar details, else try again")
+            }
+        });
+    }
+</script>
+
+</html>

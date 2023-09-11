@@ -1,0 +1,15 @@
+<layer>
+  <name>informationslinjer_gal</name>
+  <id>LayerInfoImpl--dac4a42:16a01c8aa52:-7f9a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--dac4a42:16a01c8aa52:-7f9b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="title">
+    <h3 [ngClass]="{'bold': isFocused}">
+      {{title}}
+    </h3>
+  </div>
+  <div class="input-container">
+    <mat-form-field floatLabel="always" class="ersattning">
+      <input matInput
+             type="number"
+             step=".01"
+             [value]="value"
+             (input)="onChange($event.target.valueAsNumber)"
+             (focus)="focus()"
+             (focusout)="focusout()"/>
+             
+      <span *ngIf="!isPercentValue"matSuffix>kr</span>
+      <span *ngIf="isPercentValue" matSuffix>%</span>
+    </mat-form-field>
+  </div>
+</div>

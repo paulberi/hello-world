@@ -1,0 +1,796 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.ltu.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "copyright": "© Metria",
+    "theme": "metria-light-theme",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": false
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      },
+      "layer_panel": {
+        "show_zindex": false
+      },
+      "edp_panel": {
+        "visible": true
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/testkund/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "testkund:karta_:"
+  },
+  "zoom": 0.6,
+  "center": [
+    1810876,
+    9057364
+  ],
+  "extent": [
+    1095614,
+    7301493,
+    2797074,
+    10824646
+  ],
+  "thumbnailCoordinates": [
+    2015983,
+    8255085
+  ],
+  "groups": [
+    {
+      "name": "kommuner",
+      "title": "Kommuner",
+      "expanded": false
+    },
+    {
+      "name": "vag_och_jarnvag",
+      "title": "Väg och järnväg"
+    },
+    {
+      "name": "vattenskydd",
+      "title": "Vattenskydd mm",
+      "expanded": false
+    },
+    {
+      "name": "sgu",
+      "title": "SGU",
+      "expanded": false
+    },
+    {
+      "name": "fororenade",
+      "title": "Förorenade områden",
+      "expanded": false
+    },
+    {
+      "name": "tekniska_kartor",
+      "title": "Tekniska kartor",
+      "expanded": false
+    },
+    {
+      "name": "ltu",
+      "title": "LTU - Utredningar & analyser",
+      "expanded": false
+    },
+    {
+      "name": "fastighet",
+      "title": "Fastigheter",
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": false
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "testkund:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type":"style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "kommuner",
+      "title": "Kommungränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:GranserKommun",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "kommuner",
+      "title": "Fastighetsytor",
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Järnvägsdata Trafikverket",
+      "source": {
+        "url": "/maps/trafikverket/BanInfo",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Infrastrukturforvaltare",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Rälstrafik topo10",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Ralstrafik_topo10",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vag_och_jarnvag",
+      "title": "Väghållare",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Vaghallare_NVDB",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "Delavrinningsområden SMHI",
+      "source": {
+        "url": "https://opendata-view.smhi.se/SMHI_vatten/wms",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Delavrinningsomraden_2016",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "Grundvatten_vattenforekomst_2016_2021@lansstyrelse-export",
+      "group": "vattenskydd",
+      "title": "Grundvattenförekomster LST"
+    },
+    {
+      "import": "metria:NMD_markfuktighetsindex@mm-export",
+      "group": "vattenskydd"
+    },
+    {
+      "type": "tile",
+      "group": "vattenskydd",
+      "title": "Markfuktighetskartan",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Markfuktighetskartan",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sgu",
+      "title": "Jordartskarta",
+      "source": {
+        "url": "/maps/sgu/jord/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "jord:SE.GOV.SGU.JORD.BLOCKIGHET.25K,jord:SE.GOV.SGU.JORD.GRUNDLAGER.25K,jord:SE.GOV.SGU.JORD.LANDFORM.25K,jord:SE.GOV.SGU.JORD.UNDERLIGGANDE.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY1.25K,jord:SE.GOV.SGU.JORD.YTLAGER_JY0.25K,jord:SE.GOV.SGU.JORD.LINJER.25K",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "sgu",
+      "title": "Markgenomsläpplighet",
+      "source": {
+        "url": "/maps/sgu/jord/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "SE.GOV.SGU.JORD.GRUNDLAGER.GENOMSLAPPLIGHET.25K",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.6,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "LST_Potentiellt_fororenade_omraden@lansstyrelse-export",
+      "group": "fororenade_omraden",
+      "title": "Förorenade områden LST"
+    },
+    {
+      "type": "tile",
+      "group": "tekniska_kartor",
+      "title": "Höjdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:Hojdkurvor",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "import": "metria:Hillshade_multi@mm-export",
+      "group": "tekniska_kartor"
+    },
+    {
+      "group": "ltu",
+      "style": "karta_bibliotek",
+      "title": "LTU utredningar & analyser",
+      "source": {
+        "type": "wfs",
+        "typeName": "testkund:karta_forskola"
+      },
+      "visible": false,
+      "queryable": true,
+      "checkAccess": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Flygfoto"
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    }
+  ],
+  "styles": {
+    "kladdlager_red": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "image": {
+            "radius": 5,
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          },
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "font": "bold 32px serif",
+            "text": "",
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          }
+        }
+      ]
+    ],
+    "karta_bibliotek": [
+      [
+        {
+          "icon": {
+            "src": "karta_bibliotek.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fritidshem": [
+      [
+        {
+          "icon": {
+            "src": "karta_fritidshem.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-gallande": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,185,237,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(255,185,237,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-pagaende": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,0,0.0)"
+          },
+          "stroke": {
+            "color": "rgba(229,0,64,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_sevardheter_kultur": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_kultur.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_busshallplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_busshallplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_cykelleder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3857",
+      "alias": "urn:ogc:def:crs:EPSG:3857",
+      "projection": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +axis=neu",
+      "projectionExtent": [
+        -2876478.26,
+        6975948.94,
+        7181411.70,
+        11310234.01
+      ]
+    }
+  ],
+  "resolutions": [
+    4587.519999999996,
+    2293.759999999998,
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    },
+    "skyddade-omraden": {
+      "properties": [
+        {
+          "name": "NAMN",
+          "label": "Namn"
+        },
+        {
+          "name": "SKYDDSTYP",
+          "label": "Skyddstyp"
+        },
+        {
+          "name": "ORIGIN",
+          "label": "Källa"
+        },
+        {
+          "name": "AREA_HA",
+          "label": "Area",
+          "template": "{{AREA_HA}} ha"
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3857",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

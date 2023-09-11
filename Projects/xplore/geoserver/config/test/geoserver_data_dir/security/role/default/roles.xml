@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><roleRegistry xmlns="http://www.geoserver.org/security/roles" version="1.0">
+<roleList>
+<role id="ADMIN"/>
+<role id="FRIA_SKOG_READ"/>
+<role id="GROUP_ADMIN"/>
+<role id="NORRA_SKOGSAGARNA_READ"/>
+<role id="aneby_admin"/>
+<role id="aneby_extern"/>
+<role id="boxholm_admin"/>
+<role id="boxholm_extern"/>
+<role id="dalsland_user"/>
+<role id="geovis_demo_admin"/>
+<role id="geovis_demo_user"/>
+<role id="gotakanalbolag_admin"/>
+<role id="gotakanalbolag_user"/>
+<role id="gppom_admin"/>
+<role id="gppom_user"/>
+<role id="ips_admin"/>
+<role id="ips_user"/>
+<role id="markkoll_extern"/>
+<role id="metria_admin"/>
+<role id="mullsjo_admin"/>
+<role id="mullsjo_extern"/>
+<role id="odeshog_admin"/>
+<role id="odeshog_extern"/>
+<role id="skargardsstiftelsen_admin"/>
+<role id="skargardsstiftelsen_user"/>
+<role id="tranas_admin"/>
+<role id="tranas_extern"/>
+<role id="vb_energi_admin"/>
+<role id="vb_energi_user"/>
+<role id="ydre_admin"/>
+<role id="ydre_user"/>
+</roleList>
+<userList>
+<userRoles username="admin">
+<roleRef roleID="ADMIN"/>
+</userRoles>
+<userRoles username="fria_skog">
+<roleRef roleID="FRIA_SKOG_READ"/>
+</userRoles>
+<userRoles username="norra_skogsagarna">
+<roleRef roleID="NORRA_SKOGSAGARNA_READ"/>
+</userRoles>
+</userList>
+<groupList/>
+</roleRegistry>

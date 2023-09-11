@@ -1,0 +1,21 @@
+{
+  "skogsanalys": {
+    "appShell": {
+
+    },
+    "common": {
+      "appName": "Skogsanalys",
+      "currency": "SEK",
+      "meter": "meter"
+    },
+    "errors": {
+
+    },
+    "notAuthorized": {
+      "notAuthorized": "Du har inte behörighet att använda tjänsten."
+    },
+    "profile": {
+      "mySettings": "Mina inställningar"
+    }
+  }
+}

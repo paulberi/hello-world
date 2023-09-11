@@ -1,0 +1,14 @@
+<ng-container [ngSwitch]="type">
+  <button *ngSwitchCase="'flat'" class="spinner" (click)="spinnerButtonClick.emit()" mat-button [color]="color" [disabled]="isDisabled">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+
+  <button *ngSwitchDefault class="spinner" (click)="spinnerButtonClick.emit()" mat-raised-button [color]="color" [disabled]="isDisabled">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </button>
+</ng-container>
+
+<ng-template #content>
+  <mat-spinner *ngIf="isLoading" [diameter]="24" ></mat-spinner>
+  <ng-content></ng-content>
+</ng-template>

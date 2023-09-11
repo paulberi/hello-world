@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_kommunagd-mark</name>
+  <id>LayerInfoImpl--192f91bd:16e7d528ba7:-3f7e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--192f91bd:16e7d528ba7:-3f7f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

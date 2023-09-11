@@ -1,0 +1,16 @@
+<layer>
+  <name>FM_Paverkansomrade_Ovrigt_MB3kap9</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6959</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-695a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 13:39:51.850 UTC</dateCreated>
+</layer>

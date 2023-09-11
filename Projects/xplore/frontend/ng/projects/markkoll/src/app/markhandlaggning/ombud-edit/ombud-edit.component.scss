@@ -1,0 +1,55 @@
+form {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
+  padding-left: 16px;
+}
+
+mat-checkbox {
+  padding-bottom: 1em;
+}
+
+#postnummer-ort {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 1em;
+}
+
+#set-status {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1em;
+  padding-right: 1em;
+
+  span {
+    display: flex;
+    color: var(--primary-variant);
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+#buttons {
+  .ombud-delete{
+    color: var(--orange);
+    text-decoration: underline;
+  }
+  text-align: end;
+  button ~ button {
+    margin-left: 10px;
+  }
+}
+
+#set-status {
+  position: relative;
+  float: right;
+}
+
+.utbetalningsdatum {
+  margin-left: 114px;
+}
+
+::ng-deep .tooltip {
+  font-size: 12px;
+}

@@ -1,0 +1,41 @@
+<ng-container>
+    <div class="modal-dialog">
+        <div class="title-row">
+            <h1 mat-dialog-title>Välj geometrityp och färg</h1>
+        </div>
+        <mat-divider></mat-divider>
+        <div mat-dialog-content align="center">
+            <div class="spacey">
+                <h2>Välj en geometrityp:</h2>
+                <mat-button-toggle-group (change)="setGeometryType($event)">
+                    <mat-button-toggle *ngFor="let geometryType of this.geometryTypes" value="{{geometryType}}">
+                        <mat-icon matTooltip="{{getHint(geometryType)}}">
+                            {{this.getIcon(geometryType)}}
+                        </mat-icon>
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+                <p *ngIf="this.noSelectedGeometry" class="error-text-input">Ingen geometrityp vald!</p>
+                <div class="spacey">
+                    <input *ngIf="this.allowInput" matInput placeholder="Text att lägga till i kartan" (keyup)="setText($event)">
+                    <p *ngIf="this.invalidText" class="error-text-input">Inget textvärde angivet!</p>
+                </div>
+            </div>
+            <div *ngIf="this.styles != null && this.styles.length != 0">
+                <div class="spacey">
+                    <h2>Välj en färg:</h2>
+                    <mat-button-toggle-group (change)="this.selectedFeatureOptions.styleType.style = this.styles[$event.value]">
+                        <mat-button-toggle *ngFor="let styleType of this.styles" value="{{this.styles.indexOf(styleType)}}" class="icon-toggle-button">
+                            <div class="color-indicator" [ngStyle]="this.getFillColor(styleType)"></div>
+                            <div class="color-indicator" [ngStyle]="this.getStrokeColor(styleType)"></div>
+                        </mat-button-toggle>
+                    </mat-button-toggle-group>
+                    <p *ngIf="this.noStyleSelected" class="error-text-input">Ingen färg är vald!</p>
+                </div>
+            </div>
+        </div>
+        <div mat-dialog-actions align="center">
+            <button mat-button (click)="avbrytClick()">Avbryt</button>
+            <button mat-raised-button color="accent" (click)="fortsattClick()">Fortsätt</button>
+        </div>
+    </div>
+</ng-container>

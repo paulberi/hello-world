@@ -1,0 +1,19 @@
+<layer>
+  <name>fastighet</name>
+  <id>LayerInfoImpl--6027819f:179a4079e31:2a2f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--6027819f:179a4079e31:2a3a</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:179a4079e31:2a2e</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-16 10:16:07.733 UTC</dateCreated>
+  <dateModified>2021-05-25 15:35:43.644 UTC</dateModified>
+</layer>

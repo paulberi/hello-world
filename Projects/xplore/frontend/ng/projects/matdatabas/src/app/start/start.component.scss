@@ -1,0 +1,89 @@
+.banner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "menu"
+    "messages"
+    "information";
+  grid-gap: 1rem 1rem;
+}
+
+.messages {
+  grid-area: messages;
+}
+
+.quick-menu-container {
+  grid-area: menu;
+  border-radius: 4px;
+  padding-top: 0.5rem;
+}
+
+.quick-menu-container h2 {
+  text-align: center;
+}
+
+.quick-menu, .stats {
+  padding: 0.5rem 1rem;
+}
+
+.quick-menu {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+.stats {
+  width: 100%;
+  display: grid;
+  grid-gap: 0 1rem;
+  grid-template-columns: auto 1fr;
+}
+
+.information-container {
+  grid-area: information;
+  border-radius: 4px;
+  padding-top: 0.5rem;
+}
+
+.information {
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.information-container h2 {
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: auto 18rem;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "messages menu"
+      "messages information"
+      "messages .";
+    grid-gap: 1rem 1rem;
+  }
+
+  .quick-menu, .stats {
+   padding: 0.5rem 2rem;
+  }
+
+  .information-container h2 {
+    padding-left: 2rem;
+  }
+
+  .information {
+    padding: 0.5rem 2rem;
+  }
+}

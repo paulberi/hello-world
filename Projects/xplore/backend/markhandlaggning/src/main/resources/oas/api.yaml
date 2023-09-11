@@ -1,0 +1,309 @@
+openapi: 3.0.0
+info:
+  title: Markhandläggning Web API
+  description: Markhandläggning Web API
+  version: 0.1.0
+servers:
+  - url: http://localhost:8090/api
+    description: Utvecklingsinstans
+paths:
+  '/ping':
+    get:
+      summary: Ping tjänst för att se om det funkar.
+      description: Används för att se att det funkar.
+      operationId: "ping"
+      responses:
+        '200':
+          description: Tjänsten fungerar.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Pong!
+  '/bifogadfil':
+    post:
+      summary: Lägg till en ny bifogad fil
+      description: Lägg till en ny bifogad fil
+      requestBody:
+        description: Den nya bifogade filen
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                fileName:
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Den bifogade filen lagrades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Bifogadfil"
+  '/bifogadfil/{id}/data':
+    get:
+      summary: Hämta en befintlig bifogad fil
+      description: Hämta en befintlig bifogad fil
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Data för en bifogad fil
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        404:
+          description: Den bifogade filen hittades inte
+
+  '/avtal/{id}':
+    get:
+      summary: Hämta avtalsurl
+      description: Hämta avtalsurl
+      operationId: "getAvtalUrl"
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Data för en bifogad fil
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/projekt':
+    get:
+      summary: Hämta en sida med befintliga projekt
+      description: Hämta en sida med befintliga projekt
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            format: int32
+        - in: query
+          name: pagesize
+          schema:
+            type: integer
+            format: int32
+      responses:
+        200:
+          description: Page med projekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProjektPage"
+        404:
+          description: Kunde inte hämta projekten
+    post:
+      summary: Skapa ett projekt
+      description: Skapa ett projekt
+      requestBody:
+        description: Det nya Projektet
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                projektnr:
+                  type: string
+                avtalstyp:
+                  type: string
+                  example: fiber
+                shape:
+                  type: string
+                  format: binary
+                markagarlista:
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Nytt projekt skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Projekt"
+
+  '/projekt/{id}':
+    get:
+      summary: Hämta ett befintligt projekt
+      description: Hämta ett befintligt projekt
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Ett befintligt projekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Projekt"
+        404:
+          description: Projektet hittades inte
+    delete:
+      summary: Ta bort ett befintligt projekt
+      description: Ta bort ett befintligt projekt
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        204:
+          description: Projektet togs bort
+  '/projekt/{id}/submitJob':
+    post:
+      summary: Starta ett fmejobb
+      description: Starta ett fmejobb
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Jobbet lyckades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FmeResponse"
+        422:
+          description: Jobbet misslyckades
+
+  '/projekt/{id}/status/{status}':
+    put:
+      summary: Uppdatera status
+      description: Uppdatera status
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - name: status
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Jobbet lyckades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Projekt"
+        500:
+          description: Jobbet misslyckades
+
+components:
+  schemas:
+    Bifogadfil:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        mimeTyp:
+          type: string
+          example: image/jpeg
+        filnamn:
+          type: string
+          description: Bifogade filens namn
+          example: bild.png
+        skapad_datum:
+          type: string
+          format: date-time
+    ProjektPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          x-faker: random.number
+          example: 2
+        totalElements:
+          type: integer
+          x-faker: random.number
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          x-faker: random.number
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Projekt"
+    Projekt:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        projektnr:
+          type: string
+          example: 2139823
+        status:
+          type: string
+          example: Misslyckades
+        shapeId:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        markagarlistaId:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        avtalsId:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        skapadDatum:
+          type: string
+          format: date-time
+        uppdaterad_datum:
+          type: string
+          format: date-time
+        felmeddelande:
+          type: string
+    FmeResponse:
+      type: object
+      properties:
+        ServiceResponse:
+          type: object
+          properties:
+            message:
+              type: string
+            status:
+              type: string
+            mode:
+              type: string
+    ProjektStatus:
+      type: string
+      enum:
+        - klart
+        - misslyckades
+        - skapat

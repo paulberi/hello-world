@@ -1,0 +1,70 @@
+<mat-card>
+  <mat-card-header>
+    <h1>{{"mk.editVarderingsprotokoll.varderingsprotokoll" | transloco }}</h1>
+  </mat-card-header>
+  <div class="content">
+    <div class="message-container">
+      <xp-message severity="information" [isClosable]="false" [isActionable]="false" actionLabel="Okej!">
+        <h3>{{"mk.editVarderingsprotokoll.messageTitle" | transloco }}</h3>
+        <p>{{"mk.editVarderingsprotokoll.messageBody" | transloco }}</p>
+      </xp-message>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <mat-card class="fastigheter">
+          <div class="fastigheter-header">
+            <mat-icon color="accent">check_circle</mat-icon>
+            <h2>{{"mk.editVarderingsprotokoll.selectionListTitle" | transloco }}</h2>
+          </div>
+          <div class="content">
+            <mat-checkbox class="select-all"
+                          [checked]="allFastigheterChecked()"
+                          [indeterminate]="someFastigheterChecked()"
+                          (change)="fastigheterCheckAllChange($event.checked)">{{"mk.editVarderingsprotokoll.selectAll" | transloco }}</mat-checkbox>
+            <mat-checkbox *ngFor="let vp of editElnatVps"
+                          [checked]="fastighetSelected(vp.fastighetsId)"
+                          (change)="change($event.checked, vp.fastighetsId)">{{vp.fastighetsbeteckning}}</mat-checkbox>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col-9">
+        <form [formGroup]="form">
+          <div class="row">
+            <mat-form-field class="fg-1">
+              <mat-label>{{"mk.varderingsprotokoll.ansvarigVarderareForetag" | transloco}}</mat-label>
+              <input matInput formControlName="varderingsmanOchForetag"/>
+            </mat-form-field>
+            
+            <mat-form-field>
+              <mat-label>{{"mk.varderingsprotokoll.spanningsniva" | transloco}}</mat-label>
+              <input matInput formControlName="spanningsniva" tabindex="-1"/>
+            </mat-form-field>
+            
+            <mat-form-field>
+              <mat-label>{{"mk.varderingsprotokoll.littera" | transloco}}</mat-label>
+              <input matInput formControlName="ledning"/>
+            </mat-form-field>
+            
+          </div>
+          <div class="row">
+            <mat-form-field class="fg-3">
+              <mat-label>{{"mk.varderingsprotokoll.fromStation" | transloco}}</mat-label>
+              <input matInput formControlName="franStation"/>
+            </mat-form-field>
+            
+            <mat-form-field class="fg-3">
+              <mat-label>{{"mk.varderingsprotokoll.toStation" | transloco}}</mat-label>
+              <input matInput formControlName="tillStation"/>
+            </mat-form-field>
+            <div class="fg-6 d-flex"></div>
+          </div>
+        </form>
+        <div class="row justify-end">  
+          <button mat-button color="warn" (click)="cancel.emit()">{{"xp.common.cancel" | transloco}}</button>
+          <button mat-raised-button color="primary" (click)="submit()" [disabled]="!canSave()">{{"xp.common.save" | transloco}}</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</mat-card>

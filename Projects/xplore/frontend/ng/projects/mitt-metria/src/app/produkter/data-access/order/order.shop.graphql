@@ -1,0 +1,27 @@
+mutation addItemToOrder(
+  $productVariantId: ID!
+  $customFields: OrderLineCustomFieldsInput!
+) {
+  addItemToOrder(
+    productVariantId: $productVariantId
+    customFields: $customFields
+    quantity: 1
+  ) {
+    __typename
+    ... on Order {
+      id
+    }
+    ... on OrderModificationError {
+      message
+    }
+    ... on OrderLimitError {
+      message
+    }
+    ... on NegativeQuantityError {
+      message
+    }
+    ... on InsufficientStockError {
+      message
+    }
+  }
+}

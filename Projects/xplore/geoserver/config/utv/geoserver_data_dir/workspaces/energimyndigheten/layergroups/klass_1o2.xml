@@ -1,0 +1,56 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl-ffefddf:173e162d784:3ed9</id>
+  <name>klass_1o2</name>
+  <mode>SINGLE</mode>
+  <title>Klass 1 och 2</title>
+  <workspace>
+    <id>WorkspaceInfoImpl-1977b029:171d4d67e8c:-6197</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3eb5</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3eb7</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3eb9</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3ebb</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3ec5</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl-ffefddf:173e162d784:3ebd</id>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl-ffefddf:173e162d784:3ed8</id>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+</layerGroup>

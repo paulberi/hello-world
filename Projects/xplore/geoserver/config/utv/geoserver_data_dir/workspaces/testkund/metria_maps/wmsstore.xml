@@ -1,0 +1,20 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-1977b029:171d4d67e8c:-61cd</id>
+  <name>metria_maps</name>
+  <description>Metria Maps</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-1977b029:171d4d67e8c:-61eb</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <capabilitiesURL>http://testmaps.metria.se/geoserver/wms</capabilitiesURL>
+  <user>xplore</user>
+  <password>crypt1:6++uB2M9ZoQukXohyYYQDrNJk+ffFnBzk2XSDajhbZs=</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

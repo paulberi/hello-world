@@ -1,0 +1,350 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://www.jamtkraft.se/",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-light-theme",
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    },
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "showSettings": true,
+          "allowDeselect": true,
+          "base_component": "base"
+        },
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "allowDeselect": true,
+          "base_component": "measure"
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        }
+      }
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/jamtkraft/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "jamtkraft:"
+  },
+  "zoom": 7,
+  "center": [
+    477905,
+    7036766
+  ],
+  "extent": [
+    181896.33,
+    6101648.07,
+    864416,
+    7689478.31
+  ],
+  "groups": [
+    {
+      "name": "fastighet",
+      "title": "Fastigheter",
+      "expanded": false
+    },
+    {
+      "name": "hansyn",
+      "title": "Hänsyn",
+      "expanded": false
+    },
+    {
+      "name": "verksamhet",
+      "title": "Verksamhet",
+      "expanded": true
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "id": "fastighetsytor",
+      "type": "tile",
+      "group": "fastighet",
+      "title": "Fastighetsytor",
+      "source": {
+        "url": "/mapproxy/geovis-vy/service",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "JamtkraftFastigheter",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "hansyn",
+      "title": "Hänsyn",
+      "source": {
+        "url": "/mapproxy/geovis-vy/service",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "JamtkraftHansyn",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "verksamhet",
+      "title": "Korridorer",
+      "source": {
+        "url": "/geoserver/jamtkraft/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "korridor2",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": true,
+      "queryable": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "verksamhet",
+      "title": "Utredningsområden",
+      "source": {
+        "url": "/geoserver/jamtkraft/ows",
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "utredningsomrade",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false,
+      "queryable": false,
+      "infoTemplate": null
+    },
+    {
+      "group": "background",
+      "title": "Metria FastighetPlus",
+      "source": {
+        "type": "wmts",
+        "config": {
+          "layer": "JamtkraftKombo"
+        },
+        "capabilitiesUrl": "/mapproxy/geovis-vy/wmts/1.0.0/WMTSCapabilities.xml",
+        "ignoreHost": true
+      },
+      "visible": true,
+      "selectionStyleDelomraden": "selectedDelomrade@common"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.5)",
+            "width": 3
+          }
+        }
+      ]
+    ]
+  },
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG::3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        500000,
+        6700000
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG::4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false,
+  "thumbnailCoordinates": [
+    504750,
+    6490168
+  ]
+}

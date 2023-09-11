@@ -1,0 +1,34 @@
+<layerGroup>
+  <id>LayerGroupInfoImpl--16ee1b80:174d9943373:-6c03</id>
+  <name>extern_mm_RiksintresseKommunikationer_grupp</name>
+  <mode>SINGLE</mode>
+  <title>extern_mm_RiksintresseKommunikationer_grupp</title>
+  <abstractTxt>Cascading av metria:RiksintresseKommunikationer (punkt-linje-yta)</abstractTxt>
+  <workspace>
+    <id>WorkspaceInfoImpl--16ee1b80:174d9943373:-6c5c</id>
+  </workspace>
+  <publishables>
+    <published type="layer">
+      <id>LayerInfoImpl--16ee1b80:174d9943373:-6c08</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--16ee1b80:174d9943373:-6c06</id>
+    </published>
+    <published type="layer">
+      <id>LayerInfoImpl--16ee1b80:174d9943373:-6c04</id>
+    </published>
+  </publishables>
+  <styles>
+    <style/>
+    <style/>
+    <style/>
+  </styles>
+  <bounds>
+    <minx>200000.0</minx>
+    <maxx>900000.0</maxx>
+    <miny>6100000.0</miny>
+    <maxy>7700000.0</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </bounds>
+  <dateCreated>2020-10-06 08:54:39.535 UTC</dateCreated>
+</layerGroup>

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_fritidshem</name>
+  <id>LayerInfoImpl-c419b261:11ac739547a:-4b41</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-3e1957bb:506fd210f40:-7847</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

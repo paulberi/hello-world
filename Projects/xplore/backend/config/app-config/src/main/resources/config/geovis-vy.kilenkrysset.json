@@ -1,0 +1,1126 @@
+{
+  "app": {
+    "logo": {
+      "url": "http://www.kilenkrysset.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-light-theme",
+    "uistates": {
+      "grupperaFastigheter": true,
+      "visaFastighetsgranser": true
+    },
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "showSettings": true,
+          "allowDeselect": true,
+          "base_component": "base"
+        },
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "allowDeselect": true,
+          "base_component": "measure"
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        }
+      }
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/kilenkrysset/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    }
+  },
+  "zoom": 3.2,
+  "center": [
+    496056,
+    6493957
+  ],
+  "extent": [
+    -375249,
+    5774492,
+    1460680,
+    8323704
+  ],
+  "thumbnailCoordinates": [
+    668281,
+    6583835
+  ],
+  "groups": [
+    {
+      "name": "fastighetsdata",
+      "title": "Fastighetsdata",
+      "expanded": true
+    },
+    {
+      "name": "p-b-r",
+      "title": "Planer, bestämmelser och rättigheter",
+      "expanded": false
+    },
+    {
+      "name": "verksamhetsdata",
+      "title": "Verksamhetsdata",
+      "expanded": false
+    },
+    {
+      "name": "skyddade_omraden",
+      "title": "Skyddade områden",
+      "groups": [
+        {
+          "name": "riksintresse",
+          "title": "Riksintresse",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "skoglig_information",
+      "title": "Skoglig information",
+      "groups": [
+        {
+          "name": "skogliga_grunddata",
+          "title": "Skogliga grunddata",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "hojddata",
+      "title": "Höjddata",
+      "expanded": false
+    },
+    {
+      "name": "ovrigt",
+      "title": "Övrigt",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "title": "Ritlager",
+      "group": "ovrigt",
+      "style": {
+        "styleTypePropertyName": "stil",
+        "styles": ["kladdlager_red","kladdlager_green","kladdlager_blue","kladdlager_magenta","kladdlager_svart"]
+      },
+      "geometryName": "geometry",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:kladdlager",
+        "canClear": false,
+        "customGeometryTypes": [
+          "Text"
+        ]
+      },
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "stil",
+            "type": "style",
+            "minLength": 1
+          }
+        ]
+      },
+      "queryable": true,
+      "visible": false
+    },
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "type": "tile",
+      "group": "fastighetsdata",
+      "title": "Fastighetsgränser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:FastighetsytorGranser",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "fastighetsdata",
+      "visible": true
+    },
+    {
+      "id": "planer",
+      "type": "tile",
+      "group": "p-b-r",
+      "title": "Detaljplaner",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:PBR_planer",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "plnamn",
+            "label": "Namn"
+          },
+          {
+            "name": "planbet",
+            "label": "Planbeteckning"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "p-b-r",
+      "title": "Bestämmelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "plnamn",
+            "label": "Namn"
+          },
+          {
+            "name": "planbet",
+            "label": "Planbeteckning"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rattigheter",
+      "type": "tile",
+      "group": "p-b-r",
+      "title": "Rättigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:PBR_rattigheter",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "ratbet",
+            "label": "Rättighetsbeteckning"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "group": "verksamhetsdata",
+      "style": "ramark",
+      "title": "Råmark",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:ramark_region"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bolagsnamn",
+            "label": "Bolagsnamn         "
+          },
+          {
+            "name": "ag_mark_yt",
+            "label": "Yta_på_ägande_mark"
+          },
+          {
+            "name": "framtidanv",
+            "label": "Framtidsanv"
+          }
+        ]
+      }
+    },
+    {
+      "group": "verksamhetsdata",
+      "style": "pagaende_detaljplan",
+      "title": "Pågående detaljplan",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:pagaende_detaljplan_region"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bolagsnamn",
+            "label": "Bolagsnamn"
+          },
+          {
+            "name": "forvantdat",
+            "label": "Förväntat_antagningsdatum"
+          }
+        ]
+
+      }
+    },
+    {
+      "group": "verksamhetsdata",
+      "style": "detaljplanerat_omrade",
+      "title": "Detaljplanerat område",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:detaljplanerat_omrade_region"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bolagsnamn",
+            "label": "Bolagsnamn"
+          },
+          {
+            "name": "tillat_anv",
+            "label": "Tillåten_användning"
+          },
+          {
+            "name": "byggratt",
+            "label": "Byggrätt"
+          },
+          {
+            "name": "kv_byggrat",
+            "label": "Kvarstående_byggrätt"
+          },
+          {
+            "name": "till_bhojd",
+            "label": "Tillåten_byggnadshöjd"
+          }
+        ]
+      }
+    },
+    {
+      "group": "verksamhetsdata",
+      "style": "markanskaffning",
+      "title": "Markanskaffning",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:markanskaffning_region"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bolagsnamn",
+            "label": "Bolagsnamn"
+          },
+          {
+            "name": "framtidanv",
+            "label": "Framtidsanv"
+          }
+        ]
+      }
+    },
+    {
+      "group": "verksamhetsdata",
+      "style": "markupplatelser",
+      "title": "Markupplåtelser",
+      "source": {
+        "type": "wfs",
+        "typeName": "kilenkrysset:markupplatelser_region"
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bolagsnamn",
+            "label": "Bolagsnamn"
+          },
+          {
+            "name": "upplat_typ",
+            "label": "Upplåtelsetyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skyddade_omraden",
+      "title": "Fornminnen - RAÄ",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Fornlamning_yta_FMIS,metria:Fornlamning_punkt_FMIS,metria:Fornlamning_linje_FMIS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "url",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "URL",
+            "label": "URL",
+            "linkRef": "the-link-2"
+          },
+          {
+            "id": "the-link-2",
+            "name": "URL",
+            "type": "url",
+            "template": "{{URL}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Naturvård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:RiksintresseNaturvard_NV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "beskrivnin",
+            "label": "BESKRIVNIN",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "beskrivnin",
+            "type": "url",
+            "template": "{{beskrivnin}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Kulturmiljövård",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:RiksintresseKulturmiljovard_LST",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "objektlank",
+            "label": "OBJEKTLANK",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "objektlank",
+            "type": "url",
+            "template": "{{objektlank}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "riksintresse",
+      "title": "Natura 2000",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Natura2000_SNV",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "alla"
+    },
+    {
+      "type": "tile",
+      "group": "skoglig_information",
+      "title": "Nyckelbiotoper",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Nyckelbiotoper_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "url",
+            "label": "URL",
+            "linkRef": "the-link"
+          },
+          {
+            "id": "the-link",
+            "name": "url",
+            "type": "url",
+            "template": "{{url}}"
+          },
+          {
+            "name": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "skogliga_grunddata",
+      "title": "Biomassa",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Biomassa_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "skogliga_grunddata",
+      "title": "Grundyta",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Grundyta_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "skogliga_grunddata",
+      "title": "Medeldiameter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Medeldiameter_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "skogliga_grunddata",
+      "title": "Medelhöjd",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Virkesvolym_SKS",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "opacity": 0.7,
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "skogliga_grunddata",
+      "title": "Virkesvolym",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Hojdlinje_topo10",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Höjdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Hojdlinje_topo10",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "type": "tile",
+      "group": "hojddata",
+      "title": "Hillshade",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png8",
+          "LAYERS": "metria:Hillshade_multi",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": false
+    },
+    {
+      "import": "metria:MetriaBakgrundGSD@mm-export",
+      "group": "background"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Ortofoto"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(40,40,40,0.8)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "kladdlager_red": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_blue": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,255,0.7)",
+            "opacity": 0.5
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_green": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,128,0,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(0,128,0,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(0,128,0,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(0,128,0,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_svart": [
+      [
+        {
+          "fill": {
+            "color": "rgba(10,10,10,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(10,10,10,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(10,10,10,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(10,10,10,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "kladdlager_magenta": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,255,0.7)"
+          },
+          "text": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "font": "bold 32px serif",
+            "text": "",
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "image": {
+            "fill": {
+              "color": "rgba(255,0,255,0.7)"
+            },
+            "radius": 5,
+            "stroke": {
+              "color": "rgba(255,0,255,0.7)",
+              "width": 2
+            }
+          },
+          "stroke": {
+            "color": "rgba(255,0,255,0.7)",
+            "width": 2
+          }
+        }
+      ]
+    ],
+    "ramark": [
+      [
+        {
+          "fill": {
+            "color": "rgba(30,140.70,0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35,35,35,0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "pagaende_detaljplan": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,255,0,0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35,35,35,0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "detaljplanerat_omrade": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,0,0,0.75)"
+          },
+          "stroke": {
+            "color": "rgba(35,35,35,0.75)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "markanskaffning": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,80,255,0.70)"
+          },
+          "stroke": {
+            "color": "rgba(35,35,35,0.70)",
+            "width": 1
+          }
+        }
+      ]
+    ],
+    "markupplatelser": [
+      [
+        {
+          "fill": {
+            "color": "rgba(70,72,77,0.5)"
+          },
+          "stroke": {
+            "color": "rgba(35,35,35,0.5)",
+            "width": 1
+          }
+        }
+      ]
+    ]
+  },
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG::3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        500000,
+        6700000
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG::4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "infoTemplates": {
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    },
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

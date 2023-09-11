@@ -1,0 +1,50 @@
+<div class="container-panel">
+    <div class="content-panel">
+        <form [formGroup]="editForm">
+            <div class="header">
+                <img *ngIf="fido.legendUrl" [src]="fido.legendUrl">
+                <ng-container *ngIf="getTitleProperty(fido) as title">
+                    <mat-form-field class="text-field">
+                        <input matInput formControlName="{{title.name}}" placeholder="{{title.label}}">
+                        <mat-error>{{getValidationErrorMessage(title)}}</mat-error>
+                    </mat-form-field>
+                </ng-container>
+            </div>
+            <ng-container *ngFor="let prop of getProperties()">
+                <mat-form-field *ngIf="prop.type !== 'title'" class="text-field">
+              <textarea *ngIf="prop.inputType === 'text-area'" matInput [rows]="getNumberOfRows(prop)"
+                        formControlName="{{prop.name}}" placeholder="{{prop.label}}"></textarea>
+                    <input *ngIf="!prop.inputType" matInput formControlName="{{prop.name}}"
+                           placeholder="{{prop.label}}">
+                    <mat-error>{{getValidationErrorMessage(prop)}}</mat-error>
+                </mat-form-field>
+            </ng-container>
+        </form>
+        <p class="instruction">Redigera geometrin genom att dra i den i kartan</p>
+        <div class="sync-error-panel" *ngIf="syncError">
+            Synkroniseringen misslyckades!
+        </div>
+        <div *ngIf="syncing" class="donut-container">
+            <div class="donut">
+                <mat-spinner [diameter]="24"></mat-spinner>
+            </div>
+        </div>
+    </div>
+    <div class="button-panel">
+        <div class="button-left-panel">&nbsp;</div>
+        <div class="button-right-panel">
+            <button mat-icon-button (click)="remove()" matTooltip="Radera" matTooltipShowDelay="1000"
+                    [disabled]="syncing">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button (click)="abort()" matTooltip="Avbryt" matTooltipShowDelay="1000"
+                    [disabled]="syncing">
+                <mat-icon>undo</mat-icon>
+            </button>
+            <button mat-icon-button (click)="save()" matTooltip="Spara" matTooltipShowDelay="1000"
+                    [disabled]="isSaveNotPossible()">
+                <mat-icon>cloud_upload</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

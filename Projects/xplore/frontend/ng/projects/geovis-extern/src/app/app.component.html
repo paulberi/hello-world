@@ -1,0 +1,78 @@
+<app-shell #appShell [theme]="'metria-light-theme'" [loginRequired]="this.adminLogin" [auth]="true"
+           [leftPanelTemplateRef]="leftPanel"
+           [leftBottomPanelTemplateRef]="leftBottomPanel"
+           [rightBottomPanelTemplateRef]="rightBottomPanel"
+           [rightPanelTemplateRef]="rightPanel"
+           [miscTemplateRef]="misc"
+           (loggedIn)="this.loggedIn($event)"
+           (mapConfigDownloaded)="this.mapConfigDownloaded($event)">
+</app-shell>
+
+<ng-template #leftPanel>
+  <xp-search-panel selectType="selectbox" [searchResultTemplate]="appShell.isSmallDevice() ? empty : searchResultPanelTemplate">
+    <xp-search-type *ngIf="this.standardMenu" name="Adress">
+      <xp-search-address></xp-search-address>
+    </xp-search-type>
+    <xp-search-type *ngIf="this.standardMenu" name="Koordinat">
+      <xp-search-koordinat [zoomFactor]="14"></xp-search-koordinat>
+    </xp-search-type>
+    <xp-search-type *ngIf="!this.standardMenu" name="Ort">
+      <xp-search-address></xp-search-address>
+    </xp-search-type>
+  </xp-search-panel>
+  <xp-collapsable-info-panel [infoPanelTemplateRef]="infoPanelTemplate"></xp-collapsable-info-panel>
+</ng-template>
+
+<ng-template #leftBottomPanel>
+  <xp-navigation-toolbar id="navigation-toolbar" class="toolbar"></xp-navigation-toolbar>
+  <xp-background-buttons-panel></xp-background-buttons-panel>
+</ng-template>
+
+<ng-template #rightBottomPanel>
+  <xp-menu *ngIf="this.standardMenu">
+    <button *ngIf="appShell.user?.loggedIn" mat-menu-item (click)="appShell.logOut()">Logga ut {{appShell.user?.claims.email}}</button>
+    <button mat-menu-item (click)="appShell.share()">Dela karta</button>
+    <button mat-menu-item (click)="appShell.export('Geovis')">Exportera karta</button>
+    <button mat-menu-item (click)="appShell.help()">Hjälp</button>
+    <button mat-menu-item (click)="appShell.contact()">Kontakt</button>
+    <button mat-menu-item (click)="appShell.infoFastighetsgrans()">Information om fastighetsgränser</button>
+  </xp-menu>
+  <xp-menu *ngIf="!this.standardMenu">
+    <button *ngIf="appShell.user?.loggedIn" mat-menu-item (click)="appShell.logOut()">Logga ut {{appShell.user?.claims.email}}</button>
+    <button *ngIf="this.omKarta_Path !== ''" mat-menu-item (click)="appShell.about()">Om karta</button>
+    <button *ngIf="this.laddaNedKartmaterial_Exists" mat-menu-item (click)="appShell.kartmaterial()">Ladda ned kartmaterial</button> -->
+    <button mat-menu-item (click)="appShell.share()">Dela karta</button>
+    <button *ngIf="this.exporteraKarta" mat-menu-item (click)="appShell.export('Geovis')">Exportera karta</button>
+    <button *ngIf="this.egenHjalp_Path !== ''" mat-menu-item (click)="appShell.help()">Hjälp</button>
+    <button *ngIf="this.kontakt" mat-menu-item (click)="appShell.contact()">Kontakt</button>
+    <button *ngIf="this.infoOmFastighetsgranser !== ''" mat-menu-item (click)="appShell.infoFastighetsgrans()">Information om fastighetsgränser</button>
+  </xp-menu>
+</ng-template>
+
+<ng-template #rightPanel>
+  <xp-layer-panel [initiallyCollapsed]="appShell.isSmallDevice()" id="layer-panel"
+                  (layerChange)="appShell.map.onLayerChange($event)"
+                  (collapsedStateUpdate)="appShell.setRightPanelClosed($event)">
+  </xp-layer-panel>
+</ng-template>
+
+<ng-template #misc>
+  <xp-draggable-panel #bottomPanel>
+    <xp-info-panel [infoPanelTemplateRef]="infoPanelTemplate" (shouldOpen)="bottomPanel.expandToHeight(180)"></xp-info-panel>
+  </xp-draggable-panel>
+</ng-template>
+
+<ng-template #infoPanelTemplate>
+  <ng-container *ngTemplateOutlet="appShell.isSmallDevice() ? searchResultPanelTemplate : empty"></ng-container>
+  <h3 style="margin-bottom: 0">Platsinfo</h3>
+  <!-- Funktion borttagen enligt XP-240
+  <xp-adress-panel></xp-adress-panel>
+  -->
+  <xp-coordinate-panel></xp-coordinate-panel>
+</ng-template>
+
+<ng-template #searchResultPanelTemplate>
+  <xp-feature-info-panel></xp-feature-info-panel>
+</ng-template>
+
+<ng-template #empty></ng-template>

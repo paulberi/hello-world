@@ -1,0 +1,17 @@
+<form class="top" [formGroup]="form">
+  <xp-ui-search-field #fastighetsSearch
+                   placeholder="{{ 'mk.fastighetslista.search' | transloco }}"
+                   formControlName="searchControl">
+  </xp-ui-search-field>
+  <div class="filter-option">
+    <mat-form-field>
+      <mat-label>{{ "mk.filterOption.filterOn" | transloco }}</mat-label>
+      <mat-select formControlName="statusControl">
+        <mat-option *ngFor="let option of statusOptions" [value]="option.value">
+          {{option.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
+

@@ -1,0 +1,48 @@
+parts:
+  mm_source: &mm_source
+    type: wms
+    req:
+      url: http://xplore:Endastutforskning2019@testmaps.metria.se/geoserver/wms?
+      transparent: true
+    wms_opts:
+      featureinfo: true
+  coverage: &coverage
+    clip: true
+    srs: 'EPSG:3006'
+
+sources:
+  aneby_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/aneby_kommun.geojson
+
+  mullsjo_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/mullsjo_kommun.geojson
+
+  odeshog_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/odeshog_kommun.geojson
+
+  tranas_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/tranas_kommun.geojson
+
+  boxholm_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/boxholm_kommun.geojson
+
+  ydre_mm:
+    <<: *mm_source
+    coverage:
+      <<: *coverage
+      datasource: ../coverages/ydre_kommun.geojson

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_vandringsleder</name>
+  <id>LayerInfoImpl--164813c6:1684cc0a8cc:-7369</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--164813c6:1684cc0a8cc:-736a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

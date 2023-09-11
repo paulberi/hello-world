@@ -1,0 +1,12 @@
+<layer>
+  <name>flyway_schema_history</name>
+  <id>LayerInfoImpl--44886edc:170678e9d2f:a8f</id>
+  <type>VECTOR</type>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--44886edc:170678e9d2f:a8e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

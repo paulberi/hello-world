@@ -1,0 +1,249 @@
+@import url(//fonts.googleapis.com/css?family=Nunito+Sans);
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #454545;
+}
+
+a {
+    color: #454545;
+    text-decoration: underline;
+}
+p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+h1{
+    font-size: 2.3rem;
+}
+
+#main-content{
+    margin: 0 10% 50px 10%;
+    display: flex;
+}
+
+#product-title{
+    width: 100%;
+}
+
+.login-pf-page {
+    width: 100%;
+    padding-top: 0px;
+}
+
+.login-pf {
+    background: inherit;
+}
+
+.login-pf body {
+    background-image: none;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top -20px center;
+}
+
+.form-control{
+    border-radius: 7px;
+}
+
+#marknadsforing-container {
+    background-image: url(../img/bakgrundsmonster-top.png);
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top -20px center;
+    box-shadow: 0 -4px 0.7em rgba(0,0,0,0.2);
+    padding: 4rem 10% 8rem 10%;
+}
+
+#marknadsforing-title{
+    margin: 3rem 0;
+}
+#marknadsforing-content{
+    display: flex;
+    padding: 0 1.5rem;
+}
+.marknadsforing-text{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.marknadsforing-link{
+    align-self: flex-end;
+}
+.marknadsforing-product-title{
+    font-size: 1.5rem;
+}
+.marknadsforing-product-description{
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+.marknadsforing-image{
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#fsok{
+    width: 48%;
+    background-color: white;
+    display: inline-block;
+    margin-left: 2%;
+}
+#sesverige{
+    width: 48%;
+    background-color: white;
+    display: inline-block;
+    margin-right: 2%;
+}
+#fsok-image{
+    background-image: url(../img/fsok.jpg);
+    background-size: cover;
+
+}
+#sesverige-image{
+    background-image: url(../img/sesverige.png);
+    background-size: contain;
+}
+
+.column{
+    width: 50%;
+    display: inline-block;
+}
+
+footer{
+    background-color: #333;
+    color: #F8F9FA;
+    padding: 2rem 5%;
+    display: flex;
+}
+#footer-title{
+    font-size: 1.5rem;
+}
+.footer-body{
+    font-size: 1rem;
+}
+#footer-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#footer-right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer-link{
+    color: #F8F9FA;
+}
+
+#kc-header {
+    background-image: url(../img/metria_logo_white.svg), url(../img/METR_Grafiskt_element.svg), url(../img/default_header.jpg);
+    background-repeat: no-repeat;
+    background-size: 150px auto, contain, cover;
+    background-position: top +40px left +5%, right, center;
+    height: 300px;
+    box-shadow: 4px 4px 15px 1px #0000008a;
+}
+#header-text{
+    position: absolute;
+    left: calc(5% + 160px);
+    top: 75px;
+    font-size: 1.6rem;
+}
+
+#kc-header-wrapper {
+   display: none;
+}
+
+#kc-social-pro {
+    padding: 20px;
+    background-color: black;
+}
+
+:root {
+    --pf-global--primary-color--100: #454545
+}
+
+.login-pf-page .pf-m-primary {
+    margin-top: 0; 
+    background-image: unset;
+    background-color: #454545;
+    border-color: #454545;
+    box-shadow: 2px 2px 5px #000000a1;
+    border-radius: 5px;
+    font-size: large;
+    width: 180px !important;
+}
+
+.card-pf {
+    background: #fff0;
+    margin: 0 0 0 auto;
+    width: 100%;
+    padding: 1.5rem !important;
+    border-top: 0px;
+}
+
+#kc-form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+@media (max-width: 991px) {
+    .marknadsforing-image{
+        height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .login-pf-page .card-pf, #marknadsforing-content {
+        margin-top: auto;
+        padding: 0;
+    }
+    
+    #main-content{
+        margin: 0;
+        padding: 0 20px;
+        display: block;
+    }
+    #product-title, #marknadsforing-title{
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .column, #fsok, #sesverige{
+        width: 100%;
+    }
+    #marknadsforing-content, .column{
+        display: block;
+    }
+    #marknadsforing-container{
+        padding: 4rem 4%;
+    }
+    .marknadsforing-product-title{
+        font-size: 1.3rem;
+    }
+    .marknadsforing-image{
+        height: 200px;
+    }
+    #fsok, #sesverige{
+        margin: 20px auto 0 auto;  
+    }
+
+    #kc-header {
+        background-image: url(../img/metria_logo_white.svg), url(../img/METR_Grafiskt_element.svg), url(../img/default_header.jpg);
+        background-position: center left +5%, right, center;
+        background-size: 70px auto, contain, cover;
+        height: 80px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #header-text{
+        left: calc(5% + 75px);
+        top: 28px;
+        font-size: 1rem;
+    }
+}

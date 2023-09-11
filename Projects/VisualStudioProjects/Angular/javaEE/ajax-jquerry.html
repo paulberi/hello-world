@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function() {
+                $('#cars').load('http://localhost:8081/api/v1/cars');
+            })
+            // $.ajax({
+            //     headers: {
+            //         "Accept": "application/json"
+            //     },
+            //     type: 'GET',
+            //     url: 'http://localhost:8081/api/v1/cars',
+            //     crossDomain: true,
+            //     beforeSend: function(xhr) {
+            //         xhr.withCredentials = true;
+            //     },
+            //     success: function(data, textStatus, request) {
+            //         $('#cars').load('http://localhost:8081/api/v1/cars');
+            //     }
+            // });
+    </script>
+</head>
+
+<body>
+
+    <div id="cars" style="width: 500px; height: 500px;">
+    </div>
+
+
+</body>
+
+</html>

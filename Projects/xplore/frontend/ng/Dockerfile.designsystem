@@ -1,0 +1,41 @@
+FROM node:16.16-buster as builder
+
+# Ställ in NPM repo
+RUN npm config set registry https://nexus.metria.se/repository/npm-group
+
+# Java behövs för kodgenereringen
+RUN apt-get update && apt-get -y  install openjdk-11-jre-headless
+
+# Ställ in arbetsbibliotek
+RUN mkdir -p /usr/src/app/frontend/ng
+WORKDIR /usr/src/app/frontend/ng
+
+# Installera och cacha app-beroenden
+COPY package.json /usr/src/app/frontend/ng/package.json
+COPY package-lock.json /usr/src/app/frontend/ng/package-lock.json
+RUN npm ci
+COPY . /usr/src/app/frontend/ng
+
+# Lägg till `/usr/src/app/frontend/ng/node_modules/.bin` till $PATH
+ENV PATH /usr/src/app/frontend/ng/node_modules/.bin:$PATH
+
+# Kopiera api-spec
+COPY build_tmp/openapi /usr/src/app/openapi/
+COPY build_tmp/graphql /usr/src/app/graphql/
+
+# Bygg och generera Storybook-filer. Avbryt vid fel.
+ENV NODE_OPTIONS --max_old_space_size=6096
+RUN npm run build-storybook
+
+# Kör enhetstester i Xplore library. Fortsätt även om det blir ett fel, vi fångar upp det senare när vi går igenom testrapporten i Bamboo.
+RUN touch /usr/src/app/frontend/ng/junit.xml
+RUN npm run test:ci lib; exit 0
+
+# Kopiera filer till bas-image
+FROM nginx:1.21-alpine
+COPY --from=builder /usr/src/app/frontend/ng/dist/storybook /usr/share/nginx/html
+COPY --from=builder /usr/src/app/frontend/ng/nginx.storybook.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /usr/src/app/frontend/ng/junit.xml /usr/share/test-reports/junit.xml
+
+# Kör Nginx
+CMD ["nginx", "-g", "daemon off;"]

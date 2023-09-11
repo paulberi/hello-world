@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_lediga_tomter_flerfamiljshus</name>
+  <id>LayerInfoImpl-363cc6e4:17821818b8e:a85</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:17821818b8e:a84</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-12 11:14:14.939 UTC</dateCreated>
+</layer>

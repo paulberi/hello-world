@@ -1,0 +1,19 @@
+<layer>
+  <name>avtalsstatus_signerad</name>
+  <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fce</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc6</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--57951a1e:17bad16dbb2:-7fcf</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-31 11:11:04.476 UTC</dateCreated>
+  <dateModified>2021-04-08 07:00:24.802 UTC</dateModified>
+</layer>

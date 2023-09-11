@@ -1,0 +1,17 @@
+<layer>
+  <name>fastighet</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:fastighet</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:fastighet</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-16 10:16:07.733 UTC</dateCreated>
+</layer>

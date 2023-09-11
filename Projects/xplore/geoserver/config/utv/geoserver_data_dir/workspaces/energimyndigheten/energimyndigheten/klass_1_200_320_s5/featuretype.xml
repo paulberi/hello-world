@@ -1,0 +1,59 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-ffefddf:173e162d784:3eae</id>
+  <name>klass_1_200_320_s5</name>
+  <nativeName>klass_1_200_320_s5</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-1977b029:171d4d67e8c:-6196</id>
+  </namespace>
+  <title>klass_1_200_320_s5</title>
+  <keywords>
+    <string>features</string>
+    <string>klass_1_200_320_s5</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;SWEREF99 TM&quot;, 
+  GEOGCS[&quot;SWEREF99&quot;, 
+    DATUM[&quot;SWEREF99&quot;, 
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6619&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4619&quot;]], 
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 15.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 0.9996], 
+  PARAMETER[&quot;false_easting&quot;, 500000.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;3006&quot;]]</nativeCRS>
+  <srs>EPSG:3006</srs>
+  <nativeBoundingBox>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>6.980157854051979</minx>
+    <maxx>29.57126135432266</maxx>
+    <miny>54.62630039191707</miny>
+    <maxy>69.31441092471317</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-ffefddf:17298378934:-7ffb</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

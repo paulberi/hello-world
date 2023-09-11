@@ -1,0 +1,9 @@
+<mk-varderingsprotokoll-fiber-ui
+                              *ngIf="vp && avtalMetadata"
+                              [ersattning]="ersattning"
+                              [vp]="vp"
+                              [uppdragsnummer]="uppdragsnummer"
+                              [avtalMetadata]="avtalMetadata"
+                              (avtalMetadataChange)="onAvtalMetadataChange($event)"
+                              (vpChange)="onVpChange($event)"
+></mk-varderingsprotokoll-fiber-ui>

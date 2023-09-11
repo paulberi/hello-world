@@ -1,0 +1,18 @@
+version: "3.8"
+services:  
+  keycloak:
+    image: quay.io/keycloak/keycloak:19.0.2
+    ports:
+        - 9090:8080
+    container_name: keycloak
+    command:
+      - start-dev --auto-build --http-relative-path /auth --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false
+    volumes:
+      - ./../theme/metria:/opt/keycloak/themes/metria
+      - ./../theme/miljokoll:/opt/keycloak/themes/miljokoll
+      - ./../theme/raa:/opt/keycloak/themes/raa
+      - ./../theme/mitt-metria:/opt/keycloak/themes/mitt-metria
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_FEATURES_DISABLED=admin2

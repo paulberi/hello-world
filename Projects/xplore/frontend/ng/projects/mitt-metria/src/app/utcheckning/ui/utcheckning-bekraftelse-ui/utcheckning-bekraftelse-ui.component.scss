@@ -1,0 +1,53 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+h1,
+p {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: var(--primary)
+}
+
+.confirmation-content {
+  padding: 8px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-icon {
+  padding: 56px 0;
+  font-size: 72px;
+  width: 72px;
+  height: auto;
+}
+
+.find-order-text {
+  margin-top: 32px;
+}
+
+@media screen and #{$xp-breakpoints-large-mobile-max} {
+  .confirmation-content {
+    padding: 8px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

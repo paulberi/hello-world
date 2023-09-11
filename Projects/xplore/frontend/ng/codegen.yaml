@@ -1,0 +1,47 @@
+ignoreNoDocuments: true
+#hooks:
+  #afterAllFileWrite: //filväg blir fel för windows, kan användas för OS
+    #- prettier --write
+generates:
+  ./generated/graphql/shop/shop-api-types.ts:
+    schema: "../../graphql/external/metria/vendure/shop-api.graphql"
+    plugins:
+      - typescript
+  ./generated/graphql/shop:
+    schema: "../../graphql/external/metria/vendure/shop-api.graphql"
+    documents: "./projects/**/*.shop.graphql"
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: shop-api-types.ts
+    plugins:
+      - typescript-operations
+      - typescript-apollo-angular
+    config:
+      namingConvention:
+        enumValues: "keep"
+      maybeValue: "T"
+      strict: true
+      defaultBaseOptions:
+      #fetchPolicy: 'cache-first' #cache-first is default
+  ./generated/graphql/admin/admin-api-types.ts:
+    schema: "../../graphql/external/metria/vendure/admin-api.graphql"
+    plugins:
+      - typescript
+  ./generated/graphql/admin:
+    schema: "../../graphql/external/metria/vendure/admin-api.graphql"
+    documents: "./projects/**/*.admin.graphql"
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: admin-api-types.ts
+    plugins:
+      - typescript-operations
+      - typescript-apollo-angular
+    config:
+      namingConvention:
+        enumValues: "keep"
+      maybeValue: "T"
+      strict: true
+      defaultBaseOptions:
+      #fetchPolicy: 'cache-first' #cache-first is default

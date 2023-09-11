@@ -1,0 +1,74 @@
+mat-card {
+  padding: 0;
+}
+
+.content {
+  padding: 16px;
+}
+
+mat-card-header {
+  background-color: var(--accent);
+  color: var(--on-accent);
+  padding: 16px;
+  h1 {
+    margin: 0;
+  }
+  border-radius: 4px 4px 0 0;
+}
+
+.message-container {
+  display: block;
+  padding-bottom: 2rem;
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+mat-form-field ~ mat-form-field {
+  padding-left: 15px;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+.fg-3 {
+  flex-grow: 3;
+}
+
+.fg-6 {
+  flex-grow: 6;
+}
+
+.fastigheter {
+  margin-right: 40px;
+  mat-icon {
+    margin-right: 10px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .fastigheter-header {
+    background-color: var(--accent-variant);
+    color: var(--on-accent-variant);
+    border: 1px solid var(--accent);
+    border-radius: 4px 4px 0 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content {
+    padding: 16px;
+    .mat-checkbox {
+      display: block;
+    }
+    
+    .select-all{
+      margin-bottom: 10px;
+    }
+  }
+}

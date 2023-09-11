@@ -1,0 +1,87 @@
+<div class="row justify-center">
+
+  <div class="col-12 main-content">
+    <xp-message *ngIf="skapaAvtalDisabled"
+      class="message-container"
+      severity="information"
+      [isClosable]="false">
+      <h3>{{"mk.fastighetsinformation.getAgareTitle" | transloco}}</h3>
+      <p>{{"mk.fastighetsinformation.getAgareMessage" | transloco}}</p>
+    </xp-message>
+
+    <div class="actions" *ngIf="!editingContents">
+      <div>
+        <mk-avtal-filter [filter]="avtalsfilter"
+                         (filterChange)="onFilterChange($event)"
+                         [statusOptions]="statusFilterOptions">
+        </mk-avtal-filter>
+        <mk-avtal-actions
+          [filter]="avtalsfilter"
+          [projektId]="projektId"
+          [numOfFastigheter]="fastighetPage?.totalElements"
+          [numOfAvtalSelected]="numOfAvtalSelected"
+          [registerenhetIds]="registerenhetIds"
+          [projektTyp]="projektTyp"
+
+          (selectionStatusChange)="selectionStatusChange.emit()"
+          (editingContentsChange)="editingContentsChange.emit($event)"
+          (resetFilter)="onResetFilter()">
+        </mk-avtal-actions>
+      </div>
+      <button mat-raised-button color="primary" (click)="hamtaMarkagareClick.emit()" [disabled]="hamtaMarkagareDisabled">
+        {{ "mk.fastighetslista.generate" | transloco }}
+      </button>
+    </div>
+
+    <mk-edit-varderingsprotokoll-metadata *ngIf="editingContents && editElnatVps.length > 0" [editElnatVps]="editElnatVps" (saveChanges)="saveElnatVp.emit($event)" (cancel)="editingContentsChange.emit({editingContents: false, selectionTyp: 'ALL'})"></mk-edit-varderingsprotokoll-metadata>
+
+    <mat-tab-group [selectedIndex]="tabIndex" *ngIf="!editingContents">
+      <mat-tab label="{{ 'mk.fastighetslista.properties' | transloco }} ({{ fastighetNum() }})"
+               [disabled]="fastighetNum() === 0">
+        <mk-fastighet-list
+          [page]="fastighetPage"
+          [pageSizeOptions]="pageSizeOptions"
+          [selectedIndex]="fastighetIndex"
+          [selection]="fastSelection"
+          (pageChange)="onGenericPageChange($event, PageTyp.FAST)"
+          (selectionChange)="updateFastSelection($event)"
+          (selectedIndexChange)="fastighetIndexChange.emit($event)">
+          <ng-template let-element>
+            <mk-fastighet
+              [projektId]="projektId"
+              [projektTyp]="projektTyp"
+              [fastighetId]="element"
+              (fastighetRemove)="fastighetRemove.emit(element)"
+              (fastighetChange)="fastighetChange.emit(element)">
+            </mk-fastighet>
+          </ng-template>
+        </mk-fastighet-list>
+
+      </mat-tab>
+
+      <mat-tab label="{{ 'mk.fastighetslista.associations' | transloco }} ({{ samfallighetNum() }})"
+               [disabled]="samfallighetNum() === 0">
+        <mk-fastighet-list
+          [page]="samfallighetPage"
+          [pageSizeOptions]="pageSizeOptions"
+          [selectedIndex]="samfallighetIndex"
+          [selection]="samfSelection"
+          (pageChange)="onGenericPageChange($event, PageTyp.SAMF)"
+          (selectionChange)="updateSamfSelection($event)"
+          (selectedIndexChange)="samfallighetIndexChange.emit($event)">
+          <ng-template let-element>
+            <mk-samfallighet
+              [projektId]="projektId"
+              [projektTyp]="projektTyp"
+              [fastighetId]="element"
+              (samfallighetRemove)="samfallighetRemove.emit(element)"
+              (samfallighetChange)="samfallighetChange.emit(element)">
+            </mk-samfallighet>
+          </ng-template>
+        </mk-fastighet-list>
+
+      </mat-tab>
+    </mat-tab-group>
+
+  </div>
+</div>

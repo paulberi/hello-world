@@ -1,0 +1,56 @@
+<div *ngIf="!pending; else loading">
+  <h1 class="calibri-header">{{ 'mm.checkout.process.checkout' | transloco }}</h1>
+  <mat-divider></mat-divider>
+  <div class="checkout-content">
+
+    <!--VILLKOR CHECKBOX-->
+    <mat-checkbox class="terms-checkbox" id="mat-checkbox-wrap-text" [(ngModel)]="termsChecked">{{ 'mm.checkout.process.approve' | transloco }} <a
+        href={{termsLink}} target="_blank">{{ 'mm.checkout.process.terms' | transloco }}</a> {{
+      'mm.checkout.process.forMetriaProducts' | transloco }}</mat-checkbox>
+
+    <!--LEVERANSINFORMATION-->
+    <h2 class="calibri-header">{{ 'mm.checkout.process.deliveryInformation' | transloco }}</h2>
+    <div class="delivery-information">
+      <p><b>{{customer?.firstName}} {{customer?.lastName}}</b></p>
+      <p>{{customer?.emailAddress}}</p>
+    </div>
+
+    <!--BETALSÄTT-->
+    <h2 class="calibri-header">{{ 'mm.checkout.process.choosePaymentMethod' | transloco }}</h2>
+    <mat-radio-group [(ngModel)]="selectedPayment" aria-label="Välj betalsätt" [disabled]="!termsChecked">
+      <div class="payment-option" *ngFor="let paymentMethod of paymentMethods">
+        <mat-radio-button [value]="paymentMethod.code">
+          <span class="wrap-mat-radio-label">
+            {{paymentMethod.name }}
+          </span>
+        </mat-radio-button>
+        <div class="invoice" *ngIf="paymentMethod.code === 'invoice' && selectedPayment === 'invoice'">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ 'mm.checkout.process.invoiceRef' | transloco }}</mat-label>
+            <input matInput [(ngModel)]="invoiceRef" type="text" placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-radio-group>
+
+    <mat-error *ngIf="paymentError"> {{paymentError}} </mat-error>
+
+    <!--TOTALBELOPP-->
+    <div *ngIf="price" class="price-wrapper">
+      <p class="total">{{ 'mm.checkout.process.totalPrice' | transloco }}: {{price}}&nbsp;{{currency}}</p>
+      <p class="vat">{{ 'mm.checkout.process.vat' | transloco }}: {{vat}}&nbsp;{{currency}}</p>
+    </div>
+
+    <!--BETALA-KNAPP-->
+    <button mat-flat-button type="submit" color="accent" [disabled]="!termsChecked || (selectedPayment?.length < 1)"
+      (click)="pay.emit({selectedPayment, invoiceRef})">
+      {{ 'mm.checkout.process.pay' | transloco }}
+    </button>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="spinner-wrapper">
+    <mat-spinner [diameter]="64"></mat-spinner>
+  </div>
+</ng-template>

@@ -1,0 +1,6 @@
+Mätobjekt;Mätningstyp;Datum och tid;Över/under detektionsgräns;Uppmätt värde;Beräknat värde;Enhet (uppmätt värde);Enhet (beräknat värde);Felkod;Kommentar
+matobjektX;Nivå;2020-02-03 13:23;>;23.5;10.7;m;;Ok;Kommentar
+matobjektY;Nivå;måndag kl 7;!z;23x,50;;Mm;;Ok;En jätte låååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååååång kommentar!
+matobjektZ;Nivå;2020-02-06 13:23;>;;;m;;Hinder;Kommentar
+Mätobjekt1;Nivå;2020-02-06 13:23;;3;10;m;m;Ok;
+MätobjektSattning;Sättning;2020-02-06 13:23;;7;;m;;Ok;

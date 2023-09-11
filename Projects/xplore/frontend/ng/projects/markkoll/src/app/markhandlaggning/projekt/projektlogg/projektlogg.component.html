@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <table matSort matSortDisableClear matSortActive="datum" [matSortDirection]="sortDirection" (matSortChange)="onSortChange($event)">
+          <th mat-sort-header="datum">{{ title }} {{ showSortDirection() }}</th>
+      </table>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ng-container>
+      <div class="item" *ngFor="let item of projektlogg">
+        <h3 class="title">{{ item.skapadDatum | date: 'yyyyMMdd'}} {{ itemTitle(item) }}</h3>
+        <div class="text mat-small">{{ itemText(item) }}</div>
+        <div *ngIf="isDokumenthandelse(item)">
+          <button mat-button color="accent" (click)="filDownload.emit(item)">{{ "mk.projektlogg.downloadAgain" | transloco }}</button>
+        </div>
+        <mat-divider [inset]="true" class="divider"></mat-divider>
+      </div>
+    </ng-container>
+  </mat-card-content>
+</mat-card>

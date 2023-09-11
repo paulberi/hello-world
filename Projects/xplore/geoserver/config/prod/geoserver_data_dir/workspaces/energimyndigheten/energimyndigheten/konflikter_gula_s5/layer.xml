@@ -1,0 +1,15 @@
+<layer>
+  <name>konflikter_gula_s5</name>
+  <id>LayerInfoImpl--4c13db87:1742fab2526:-314e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4c13db87:1742b100765:6be9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4c13db87:1742fab2526:-314f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

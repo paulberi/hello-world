@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_traffpunkt-funktionsnedsatta</name>
+  <id>LayerInfoImpl-f1519c10:d139b70c26b:-da08</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5274802a:37c5de2d597:-0bb0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

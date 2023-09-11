@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_wakeboardbana</name>
+  <id>LayerInfoImpl--451832f0:171d4d772bc:-7fde</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--451832f0:171d4d772bc:-7fdf</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

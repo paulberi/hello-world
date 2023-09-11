@@ -1,0 +1,5 @@
+<xp-layout-v2-ui appName="{{ 'mm.common.appName' | transloco }}" [menuItems]="menuItems"
+  (logoutClick)="openLogoutDialog()" [isCartIconVisible]="true" [cartBadgeNumber]="cartBadgeNumber" [cart]="cart"
+  (deleteCartItem)="deleteCartItem($event)" (toCheckout)="toCheckout()">
+  <router-outlet></router-outlet>
+</xp-layout-v2-ui>

@@ -1,0 +1,14 @@
+<xp-layout-ui 
+  appName="Xplore Admin"
+  [loggedInUserInfo]="xpUser | async"
+  [menuItems]="menuItems"
+  (logoutClick)="openLogoutDialog()"
+  (helpClick)="openHelpDialog()"
+  (pageChange)="changePage($event)">
+  <router-outlet></router-outlet>
+</xp-layout-ui>
+
+<ng-template #helpTemplate>
+  <h2>Kundadministration</h2>
+  <p>Här finns en lista på alla inlagda kunder och en funktion för att lägga till nya och ta bort befintliga. För att skapa en ny kund måste du kunna ange namn, e-post och telefon. Det krävs även att man har keycloakrollen global_admin för att kunna lägga till och ta bort kunder.</p>
+</ng-template>

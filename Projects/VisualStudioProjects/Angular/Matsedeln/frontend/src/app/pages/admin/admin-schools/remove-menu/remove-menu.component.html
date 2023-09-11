@@ -1,0 +1,39 @@
+<div class="choices-content">
+  <form class="add-content">
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{ chosenMunicipalityTitleToDelete }}
+      </a>
+      <div class="navbar-dropdown">
+        <a
+          class="navbar-item"
+          *ngFor="let municipality of municipalities"
+          (click)="chooseMunicipalityToDelete(municipality)"
+        >
+          <p>{{ municipality.municipalityName }}</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        {{ chosenSchoolTitleToDelete }}
+      </a>
+      <div class="navbar-dropdown">
+        <a
+          class="navbar-item"
+          *ngFor="let school of municipalityToDelete.schools"
+          (click)="chooseSchoolToDelete(school)"
+        >
+          <p>{{ school.schoolName }}</p>
+        </a>
+      </div>
+    </div>
+    <p class="menuName" style="size: 120px">
+      {{ menuToDelete }}
+    </p>
+  </form>
+  <button class="manage-menu-button" (click)="deleteMenuFromSchool(schoolToDelete)">
+    Ta bort matsedel från skolan
+  </button>
+</div>

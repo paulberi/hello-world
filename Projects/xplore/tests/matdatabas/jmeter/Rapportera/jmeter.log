@@ -1,0 +1,726 @@
+2020-06-12 12:19:03,044 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-06-12 12:19:03,062 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2020-06-12 12:19:03,063 INFO o.a.j.JMeter: Loading system properties from: C:\apache-jmeter-5.0\bin\system.properties
+2020-06-12 12:19:03,063 INFO o.a.j.JMeter: Setting JMeter property: users=200
+2020-06-12 12:19:03,063 INFO o.a.j.JMeter: Setting JMeter property: rampup=1
+2020-06-12 12:19:03,063 INFO o.a.j.JMeter: Setting JMeter property: loop=1
+2020-06-12 12:19:03,068 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: Version 5.0 r1840935
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: java.version=12.0.1
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: os.name=Windows 10
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: os.arch=amd64
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: os.version=10.0
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: file.encoding=Cp1252
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-06-12 12:19:03,069 INFO o.a.j.JMeter: Available Processors =8
+2020-06-12 12:19:03,077 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-06-12 12:19:03,077 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-06-12 12:19:03,077 INFO o.a.j.JMeter: JMeterHome=C:\apache-jmeter-5.0
+2020-06-12 12:19:03,077 INFO o.a.j.JMeter: user.dir  =C:\Test\Mätdatabasen\jmeter\Rapportera
+2020-06-12 12:19:03,078 INFO o.a.j.JMeter: PWD       =C:\Test\Mätdatabasen\jmeter\Rapportera
+2020-06-12 12:19:03,080 INFO o.a.j.JMeter: IP: 10.236.100.58 Name: MET5CG8346KCN FullName: MET5CG8346KCN.Z62.tconet.net
+2020-06-12 12:19:03,081 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\test\Mätdatabasen\jmeter\resultat\inloggning_200_1_1'
+2020-06-12 12:19:03,083 INFO o.a.j.s.FileServer: Default base='C:\Test\Mätdatabasen\jmeter\Rapportera'
+2020-06-12 12:19:03,085 INFO o.a.j.s.FileServer: Set new base='C:\test\Mätdatabasen\jmeter\inloggning'
+2020-06-12 12:19:03,200 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-06-12 12:19:03,217 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-06-12 12:19:03,220 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-06-12 12:19:03,223 INFO o.a.j.s.SaveService: Loading file: C:\test\Mätdatabasen\jmeter\inloggning\inloggning.jmx
+2020-06-12 12:19:03,257 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2020-06-12 12:19:03,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-12 12:19:03,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-12 12:19:03,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-12 12:19:03,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-06-12 12:19:03,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-06-12 12:19:03,274 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-06-12 12:19:03,294 INFO o.a.j.JMeter: Creating summariser <summary>
+2020-06-12 12:19:03,300 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2020-06-12 12:19:03,300 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: C:\test\Mätdatabasen\jmeter\resultat\inloggning.csv
+2020-06-12 12:19:03,300 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\apache-jmeter-5.0\bin\reportgenerator.properties
+2020-06-12 12:19:03,301 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2020-06-12 12:19:03,305 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction : {} is empty, not APDEX per transaction customization
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2020-06-12 12:19:03,307 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2020-06-12 12:19:03,309 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2020-06-12 12:19:03,314 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,314 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,314 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,314 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,314 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,315 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,315 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,315 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,315 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,316 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2020-06-12 12:19:03,317 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2020-06-12 12:19:03,317 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2020-06-12 12:19:03,322 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-06-12 12:19:03,323 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-06-12 12:19:03,323 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-06-12 12:19:03,331 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-06-12 12:19:03,331 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-06-12 12:19:03,654 INFO o.a.j.JMeter: Running test (1591957143654)
+2020-06-12 12:19:03,670 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Efter Inloggning
+2020-06-12 12:19:03,670 INFO o.a.j.e.StandardJMeterEngine: Starting 200 threads for group Efter Inloggning.
+2020-06-12 12:19:03,670 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-06-12 12:19:03,670 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=200 ramp-up=1 perThread=5.0 delayedStart=false
+2020-06-12 12:19:03,682 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-1
+2020-06-12 12:19:03,687 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-2
+2020-06-12 12:19:03,691 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-3
+2020-06-12 12:19:03,697 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-4
+2020-06-12 12:19:03,702 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-5
+2020-06-12 12:19:03,707 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = MET5CG8346KCN
+2020-06-12 12:19:03,708 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-6
+2020-06-12 12:19:03,714 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2020-06-12 12:19:03,714 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-7
+2020-06-12 12:19:03,716 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-06-12 12:19:03,716 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-06-12 12:19:03,716 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-06-12 12:19:03,716 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-06-12 12:19:03,720 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-8
+2020-06-12 12:19:03,725 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-9
+2020-06-12 12:19:03,731 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-10
+2020-06-12 12:19:03,737 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-11
+2020-06-12 12:19:03,742 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-12
+2020-06-12 12:19:03,748 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-13
+2020-06-12 12:19:03,756 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-14
+2020-06-12 12:19:03,762 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-15
+2020-06-12 12:19:03,767 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-16
+2020-06-12 12:19:03,774 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-17
+2020-06-12 12:19:03,778 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-18
+2020-06-12 12:19:03,791 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-06-12 12:19:03,792 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-06-12 12:19:03,790 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-20
+2020-06-12 12:19:03,785 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-19
+2020-06-12 12:19:03,797 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-21
+2020-06-12 12:19:03,802 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-22
+2020-06-12 12:19:03,808 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-23
+2020-06-12 12:19:03,814 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-24
+2020-06-12 12:19:03,819 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-25
+2020-06-12 12:19:03,826 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-26
+2020-06-12 12:19:03,831 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-27
+2020-06-12 12:19:03,836 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-28
+2020-06-12 12:19:03,841 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-29
+2020-06-12 12:19:03,846 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-30
+2020-06-12 12:19:03,853 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-31
+2020-06-12 12:19:03,857 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-32
+2020-06-12 12:19:03,864 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-33
+2020-06-12 12:19:03,869 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-34
+2020-06-12 12:19:03,874 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-35
+2020-06-12 12:19:03,879 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-36
+2020-06-12 12:19:03,886 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-37
+2020-06-12 12:19:03,891 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-38
+2020-06-12 12:19:03,897 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-39
+2020-06-12 12:19:03,902 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-40
+2020-06-12 12:19:03,907 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-41
+2020-06-12 12:19:03,913 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-42
+2020-06-12 12:19:03,919 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-43
+2020-06-12 12:19:03,924 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-44
+2020-06-12 12:19:03,930 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-45
+2020-06-12 12:19:03,935 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-46
+2020-06-12 12:19:03,941 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-47
+2020-06-12 12:19:03,946 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-48
+2020-06-12 12:19:03,952 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-49
+2020-06-12 12:19:03,956 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-50
+2020-06-12 12:19:03,963 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-51
+2020-06-12 12:19:03,967 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-52
+2020-06-12 12:19:03,972 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-53
+2020-06-12 12:19:03,978 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-54
+2020-06-12 12:19:03,984 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-55
+2020-06-12 12:19:03,990 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-56
+2020-06-12 12:19:03,995 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-57
+2020-06-12 12:19:04,000 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-58
+2020-06-12 12:19:04,006 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-59
+2020-06-12 12:19:04,012 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-60
+2020-06-12 12:19:04,017 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-61
+2020-06-12 12:19:04,023 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-62
+2020-06-12 12:19:04,028 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-63
+2020-06-12 12:19:04,034 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-64
+2020-06-12 12:19:04,040 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-65
+2020-06-12 12:19:04,045 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-66
+2020-06-12 12:19:04,051 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-67
+2020-06-12 12:19:04,058 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-68
+2020-06-12 12:19:04,063 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-69
+2020-06-12 12:19:04,069 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-70
+2020-06-12 12:19:04,074 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-71
+2020-06-12 12:19:04,080 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-72
+2020-06-12 12:19:04,086 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-73
+2020-06-12 12:19:04,091 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-74
+2020-06-12 12:19:04,117 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-76
+2020-06-12 12:19:04,119 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-77
+2020-06-12 12:19:04,123 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-80
+2020-06-12 12:19:04,123 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-75
+2020-06-12 12:19:04,124 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-78
+2020-06-12 12:19:04,128 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-79
+2020-06-12 12:19:04,157 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-81
+2020-06-12 12:19:04,160 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-84
+2020-06-12 12:19:04,162 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-82
+2020-06-12 12:19:04,162 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-85
+2020-06-12 12:19:04,164 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-83
+2020-06-12 12:19:04,167 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-86
+2020-06-12 12:19:04,183 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-88
+2020-06-12 12:19:04,183 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-87
+2020-06-12 12:19:04,184 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-89
+2020-06-12 12:19:04,185 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-90
+2020-06-12 12:19:04,186 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-91
+2020-06-12 12:19:04,190 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-92
+2020-06-12 12:19:04,195 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-93
+2020-06-12 12:19:04,201 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-94
+2020-06-12 12:19:04,206 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-95
+2020-06-12 12:19:04,212 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-96
+2020-06-12 12:19:04,217 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-97
+2020-06-12 12:19:04,223 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-98
+2020-06-12 12:19:04,228 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-99
+2020-06-12 12:19:04,234 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-100
+2020-06-12 12:19:04,239 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-101
+2020-06-12 12:19:04,244 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-102
+2020-06-12 12:19:04,250 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-103
+2020-06-12 12:19:04,255 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-104
+2020-06-12 12:19:04,261 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-105
+2020-06-12 12:19:04,266 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-106
+2020-06-12 12:19:04,271 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-107
+2020-06-12 12:19:04,277 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-108
+2020-06-12 12:19:04,282 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-109
+2020-06-12 12:19:04,287 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-110
+2020-06-12 12:19:04,293 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-111
+2020-06-12 12:19:04,299 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-112
+2020-06-12 12:19:04,304 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-113
+2020-06-12 12:19:04,310 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-114
+2020-06-12 12:19:04,315 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-115
+2020-06-12 12:19:04,320 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-116
+2020-06-12 12:19:04,326 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-117
+2020-06-12 12:19:04,331 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-118
+2020-06-12 12:19:04,337 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-119
+2020-06-12 12:19:04,342 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-120
+2020-06-12 12:19:04,347 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-121
+2020-06-12 12:19:04,353 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-122
+2020-06-12 12:19:04,358 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-123
+2020-06-12 12:19:04,364 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-124
+2020-06-12 12:19:04,369 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-125
+2020-06-12 12:19:04,375 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-126
+2020-06-12 12:19:04,380 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-127
+2020-06-12 12:19:04,386 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-128
+2020-06-12 12:19:04,391 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-129
+2020-06-12 12:19:04,397 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-130
+2020-06-12 12:19:04,402 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-131
+2020-06-12 12:19:04,408 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-132
+2020-06-12 12:19:04,417 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-133
+2020-06-12 12:19:04,423 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-134
+2020-06-12 12:19:04,428 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-135
+2020-06-12 12:19:04,433 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-136
+2020-06-12 12:19:04,439 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-137
+2020-06-12 12:19:04,444 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-138
+2020-06-12 12:19:04,450 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-139
+2020-06-12 12:19:04,455 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-140
+2020-06-12 12:19:04,461 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-141
+2020-06-12 12:19:04,466 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-142
+2020-06-12 12:19:04,471 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-143
+2020-06-12 12:19:04,477 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-144
+2020-06-12 12:19:04,482 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-145
+2020-06-12 12:19:04,488 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-146
+2020-06-12 12:19:04,494 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-147
+2020-06-12 12:19:04,501 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-148
+2020-06-12 12:19:04,507 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-149
+2020-06-12 12:19:04,516 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-150
+2020-06-12 12:19:04,521 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-151
+2020-06-12 12:19:04,525 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-152
+2020-06-12 12:19:04,530 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-153
+2020-06-12 12:19:04,535 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-154
+2020-06-12 12:19:04,540 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-155
+2020-06-12 12:19:04,547 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-156
+2020-06-12 12:19:04,552 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-157
+2020-06-12 12:19:04,558 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-158
+2020-06-12 12:19:04,563 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-159
+2020-06-12 12:19:04,569 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-160
+2020-06-12 12:19:04,574 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-161
+2020-06-12 12:19:04,579 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-162
+2020-06-12 12:19:04,586 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-163
+2020-06-12 12:19:04,591 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-164
+2020-06-12 12:19:04,597 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-165
+2020-06-12 12:19:04,602 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-166
+2020-06-12 12:19:04,608 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-167
+2020-06-12 12:19:04,614 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-168
+2020-06-12 12:19:04,619 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-169
+2020-06-12 12:19:04,624 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-170
+2020-06-12 12:19:04,629 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-171
+2020-06-12 12:19:04,639 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-172
+2020-06-12 12:19:04,644 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-173
+2020-06-12 12:19:04,647 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-174
+2020-06-12 12:19:04,654 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-175
+2020-06-12 12:19:04,659 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-176
+2020-06-12 12:19:04,664 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-177
+2020-06-12 12:19:04,669 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-178
+2020-06-12 12:19:04,674 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-179
+2020-06-12 12:19:04,679 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-180
+2020-06-12 12:19:04,685 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-181
+2020-06-12 12:19:04,694 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-182
+2020-06-12 12:19:04,699 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-183
+2020-06-12 12:19:04,703 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-184
+2020-06-12 12:19:04,708 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-185
+2020-06-12 12:19:04,714 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-186
+2020-06-12 12:19:04,719 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-187
+2020-06-12 12:19:04,723 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-188
+2020-06-12 12:19:04,728 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-189
+2020-06-12 12:19:04,734 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-190
+2020-06-12 12:19:04,740 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-191
+2020-06-12 12:19:04,745 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-192
+2020-06-12 12:19:04,751 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-193
+2020-06-12 12:19:04,752 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    0.9/s Avg:   942 Min:   942 Max:   942 Err:     0 (0.00%) Active: 193 Started: 193 Finished: 0
+2020-06-12 12:19:04,765 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-194
+2020-06-12 12:19:04,768 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-195
+2020-06-12 12:19:04,773 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-196
+2020-06-12 12:19:04,778 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-197
+2020-06-12 12:19:04,785 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-198
+2020-06-12 12:19:04,788 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-199
+2020-06-12 12:19:04,793 INFO o.a.j.t.JMeterThread: Thread started: Efter Inloggning 1-200
+2020-06-12 12:19:17,347 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-155
+2020-06-12 12:19:17,347 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-155
+2020-06-12 12:19:17,853 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-28
+2020-06-12 12:19:17,853 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-28
+2020-06-12 12:19:17,860 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-132
+2020-06-12 12:19:17,860 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-132
+2020-06-12 12:19:17,863 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-64
+2020-06-12 12:19:17,864 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-64
+2020-06-12 12:19:17,864 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-169
+2020-06-12 12:19:17,864 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-169
+2020-06-12 12:19:17,883 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-33
+2020-06-12 12:19:17,884 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-33
+2020-06-12 12:19:17,885 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-88
+2020-06-12 12:19:17,885 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-157
+2020-06-12 12:19:17,885 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-88
+2020-06-12 12:19:17,885 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-92
+2020-06-12 12:19:17,886 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-157
+2020-06-12 12:19:17,885 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-109
+2020-06-12 12:19:17,886 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-109
+2020-06-12 12:19:17,886 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-92
+2020-06-12 12:19:17,888 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-9
+2020-06-12 12:19:17,888 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-9
+2020-06-12 12:19:17,890 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-126
+2020-06-12 12:19:17,890 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-126
+2020-06-12 12:19:17,891 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-47
+2020-06-12 12:19:17,891 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-47
+2020-06-12 12:19:17,893 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-20
+2020-06-12 12:19:17,893 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-20
+2020-06-12 12:19:17,897 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-184
+2020-06-12 12:19:17,897 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-184
+2020-06-12 12:19:17,899 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-56
+2020-06-12 12:19:17,899 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-56
+2020-06-12 12:19:17,922 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-191
+2020-06-12 12:19:17,922 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-8
+2020-06-12 12:19:17,922 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-8
+2020-06-12 12:19:17,922 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-191
+2020-06-12 12:19:17,940 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-94
+2020-06-12 12:19:17,940 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-94
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-138
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-53
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-53
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-107
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-107
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-48
+2020-06-12 12:19:17,942 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-153
+2020-06-12 12:19:17,942 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-153
+2020-06-12 12:19:17,941 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-171
+2020-06-12 12:19:17,942 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-48
+2020-06-12 12:19:17,942 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-138
+2020-06-12 12:19:17,942 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-171
+2020-06-12 12:19:17,945 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-1
+2020-06-12 12:19:17,945 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-1
+2020-06-12 12:19:17,945 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-18
+2020-06-12 12:19:17,945 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-18
+2020-06-12 12:19:17,945 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-122
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-122
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-179
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-179
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-17
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-55
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-17
+2020-06-12 12:19:17,946 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-95
+2020-06-12 12:19:17,947 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-95
+2020-06-12 12:19:17,947 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-55
+2020-06-12 12:19:17,947 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-60
+2020-06-12 12:19:17,947 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-60
+2020-06-12 12:19:17,948 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-45
+2020-06-12 12:19:17,948 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-45
+2020-06-12 12:19:17,953 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-199
+2020-06-12 12:19:17,954 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-199
+2020-06-12 12:19:17,969 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-2
+2020-06-12 12:19:17,969 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-2
+2020-06-12 12:19:17,970 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-12
+2020-06-12 12:19:17,971 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-12
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-83
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-83
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-187
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-133
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-187
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-133
+2020-06-12 12:19:17,980 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-70
+2020-06-12 12:19:17,981 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-70
+2020-06-12 12:19:17,981 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-72
+2020-06-12 12:19:17,981 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-72
+2020-06-12 12:19:17,981 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-190
+2020-06-12 12:19:17,981 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-99
+2020-06-12 12:19:17,982 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-99
+2020-06-12 12:19:17,982 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-190
+2020-06-12 12:19:17,983 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-16
+2020-06-12 12:19:17,983 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-35
+2020-06-12 12:19:17,984 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-16
+2020-06-12 12:19:17,984 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-59
+2020-06-12 12:19:17,984 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-59
+2020-06-12 12:19:17,985 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-35
+2020-06-12 12:19:17,985 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-27
+2020-06-12 12:19:17,986 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-27
+2020-06-12 12:19:18,004 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-127
+2020-06-12 12:19:18,005 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-127
+2020-06-12 12:19:18,005 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-81
+2020-06-12 12:19:18,005 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-81
+2020-06-12 12:19:18,006 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-24
+2020-06-12 12:19:18,006 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-198
+2020-06-12 12:19:18,006 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-24
+2020-06-12 12:19:18,007 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-152
+2020-06-12 12:19:18,007 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-13
+2020-06-12 12:19:18,007 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-152
+2020-06-12 12:19:18,007 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-13
+2020-06-12 12:19:18,009 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-131
+2020-06-12 12:19:18,009 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-131
+2020-06-12 12:19:18,011 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-108
+2020-06-12 12:19:18,011 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-108
+2020-06-12 12:19:18,012 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-173
+2020-06-12 12:19:18,012 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-173
+2020-06-12 12:19:18,013 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-162
+2020-06-12 12:19:18,013 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-162
+2020-06-12 12:19:18,014 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-198
+2020-06-12 12:19:18,017 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-104
+2020-06-12 12:19:18,018 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-104
+2020-06-12 12:19:18,018 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-4
+2020-06-12 12:19:18,019 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-4
+2020-06-12 12:19:18,020 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-195
+2020-06-12 12:19:18,020 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-195
+2020-06-12 12:19:18,020 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-194
+2020-06-12 12:19:18,020 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-194
+2020-06-12 12:19:18,020 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-19
+2020-06-12 12:19:18,021 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-19
+2020-06-12 12:19:18,022 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-96
+2020-06-12 12:19:18,022 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-96
+2020-06-12 12:19:18,024 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-183
+2020-06-12 12:19:18,024 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-183
+2020-06-12 12:19:18,035 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-41
+2020-06-12 12:19:18,035 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-180
+2020-06-12 12:19:18,035 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-41
+2020-06-12 12:19:18,035 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-180
+2020-06-12 12:19:18,036 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-93
+2020-06-12 12:19:18,036 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-93
+2020-06-12 12:19:18,036 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-89
+2020-06-12 12:19:18,036 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-89
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-22
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-128
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-128
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-123
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-188
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-123
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-188
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-91
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-91
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-130
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-65
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-79
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-79
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-200
+2020-06-12 12:19:18,038 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-200
+2020-06-12 12:19:18,039 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-130
+2020-06-12 12:19:18,037 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-22
+2020-06-12 12:19:18,039 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-124
+2020-06-12 12:19:18,039 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-124
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-65
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-26
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-38
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-163
+2020-06-12 12:19:18,048 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-163
+2020-06-12 12:19:18,048 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-54
+2020-06-12 12:19:18,048 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-54
+2020-06-12 12:19:18,049 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-116
+2020-06-12 12:19:18,049 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-116
+2020-06-12 12:19:18,050 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-85
+2020-06-12 12:19:18,051 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-85
+2020-06-12 12:19:18,051 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-84
+2020-06-12 12:19:18,051 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-84
+2020-06-12 12:19:18,052 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-34
+2020-06-12 12:19:18,052 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-34
+2020-06-12 12:19:18,053 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-71
+2020-06-12 12:19:18,053 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-71
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-43
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-102
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-102
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-38
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-26
+2020-06-12 12:19:18,054 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-43
+2020-06-12 12:19:18,056 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-151
+2020-06-12 12:19:18,056 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-151
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-32
+2020-06-12 12:19:18,057 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-32
+2020-06-12 12:19:18,058 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-23
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-51
+2020-06-12 12:19:18,058 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-51
+2020-06-12 12:19:18,059 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-82
+2020-06-12 12:19:18,059 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-58
+2020-06-12 12:19:18,059 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-113
+2020-06-12 12:19:18,059 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-58
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-90
+2020-06-12 12:19:18,047 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-40
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-40
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-90
+2020-06-12 12:19:18,046 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-105
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-105
+2020-06-12 12:19:18,039 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-39
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-39
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-113
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-52
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-52
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-82
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-42
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-42
+2020-06-12 12:19:18,058 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-23
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-98
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-98
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-31
+2020-06-12 12:19:18,061 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-193
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-193
+2020-06-12 12:19:18,060 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-196
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-196
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-31
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-5
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-186
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-80
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-121
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-5
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-80
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-186
+2020-06-12 12:19:18,062 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-121
+2020-06-12 12:19:18,063 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-101
+2020-06-12 12:19:18,063 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-101
+2020-06-12 12:19:18,063 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-49
+2020-06-12 12:19:18,063 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-49
+2020-06-12 12:19:18,065 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-11
+2020-06-12 12:19:18,065 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-11
+2020-06-12 12:19:18,065 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-44
+2020-06-12 12:19:18,065 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-44
+2020-06-12 12:19:18,067 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-111
+2020-06-12 12:19:18,067 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-111
+2020-06-12 12:19:18,069 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-161
+2020-06-12 12:19:18,069 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-30
+2020-06-12 12:19:18,069 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-161
+2020-06-12 12:19:18,069 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-30
+2020-06-12 12:19:18,070 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-7
+2020-06-12 12:19:18,070 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-120
+2020-06-12 12:19:18,070 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-120
+2020-06-12 12:19:18,070 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-7
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-172
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-172
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-175
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-129
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-175
+2020-06-12 12:19:18,071 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-129
+2020-06-12 12:19:18,072 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-115
+2020-06-12 12:19:18,072 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-115
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-36
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-164
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-36
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-156
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-46
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-164
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-156
+2020-06-12 12:19:18,073 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-46
+2020-06-12 12:19:18,075 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-139
+2020-06-12 12:19:18,075 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-139
+2020-06-12 12:19:18,077 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-10
+2020-06-12 12:19:18,077 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-10
+2020-06-12 12:19:18,078 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-185
+2020-06-12 12:19:18,078 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-185
+2020-06-12 12:19:18,080 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-181
+2020-06-12 12:19:18,080 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-181
+2020-06-12 12:19:18,083 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-137
+2020-06-12 12:19:18,084 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-137
+2020-06-12 12:19:18,087 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-3
+2020-06-12 12:19:18,087 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-3
+2020-06-12 12:19:18,090 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-112
+2020-06-12 12:19:18,090 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-112
+2020-06-12 12:19:18,091 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-182
+2020-06-12 12:19:18,091 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-154
+2020-06-12 12:19:18,091 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-182
+2020-06-12 12:19:18,091 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-154
+2020-06-12 12:19:18,093 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-69
+2020-06-12 12:19:18,093 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-77
+2020-06-12 12:19:18,093 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-69
+2020-06-12 12:19:18,093 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-77
+2020-06-12 12:19:18,094 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-178
+2020-06-12 12:19:18,094 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-178
+2020-06-12 12:19:18,095 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-167
+2020-06-12 12:19:18,095 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-110
+2020-06-12 12:19:18,095 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-167
+2020-06-12 12:19:18,095 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-110
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-57
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-168
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-57
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-134
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-168
+2020-06-12 12:19:18,096 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-134
+2020-06-12 12:19:18,097 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-61
+2020-06-12 12:19:18,097 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-61
+2020-06-12 12:19:18,106 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-74
+2020-06-12 12:19:18,106 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-15
+2020-06-12 12:19:18,106 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-74
+2020-06-12 12:19:18,106 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-15
+2020-06-12 12:19:18,107 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-165
+2020-06-12 12:19:18,107 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-165
+2020-06-12 12:19:18,107 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-114
+2020-06-12 12:19:18,107 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-114
+2020-06-12 12:19:18,109 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-103
+2020-06-12 12:19:18,109 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-103
+2020-06-12 12:19:18,110 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-150
+2020-06-12 12:19:18,110 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-150
+2020-06-12 12:19:18,111 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-136
+2020-06-12 12:19:18,111 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-140
+2020-06-12 12:19:18,111 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-140
+2020-06-12 12:19:18,111 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-136
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-78
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-78
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-119
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-119
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-86
+2020-06-12 12:19:18,112 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-86
+2020-06-12 12:19:18,113 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-142
+2020-06-12 12:19:18,113 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-142
+2020-06-12 12:19:18,114 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-148
+2020-06-12 12:19:18,114 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-148
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-6
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-62
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-6
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-29
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-62
+2020-06-12 12:19:18,115 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-29
+2020-06-12 12:19:18,116 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-97
+2020-06-12 12:19:18,116 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-149
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-97
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-149
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-118
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-118
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-66
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-197
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-145
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-66
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-145
+2020-06-12 12:19:18,117 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-197
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-68
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-25
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-25
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-68
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-14
+2020-06-12 12:19:18,118 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-14
+2020-06-12 12:19:18,119 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-144
+2020-06-12 12:19:18,119 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-144
+2020-06-12 12:19:18,119 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-177
+2020-06-12 12:19:18,119 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-177
+2020-06-12 12:19:18,120 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-106
+2020-06-12 12:19:18,120 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-143
+2020-06-12 12:19:18,120 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-106
+2020-06-12 12:19:18,120 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-143
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-125
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-176
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-125
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-176
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-166
+2020-06-12 12:19:18,121 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-166
+2020-06-12 12:19:18,122 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-170
+2020-06-12 12:19:18,122 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-75
+2020-06-12 12:19:18,122 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-170
+2020-06-12 12:19:18,122 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-75
+2020-06-12 12:19:18,122 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-135
+2020-06-12 12:19:18,123 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-135
+2020-06-12 12:19:18,124 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-147
+2020-06-12 12:19:18,124 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-147
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-76
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-100
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-76
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-100
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-160
+2020-06-12 12:19:18,129 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-160
+2020-06-12 12:19:18,130 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-189
+2020-06-12 12:19:18,130 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-21
+2020-06-12 12:19:18,130 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-189
+2020-06-12 12:19:18,130 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-21
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-67
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-67
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-50
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-50
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-158
+2020-06-12 12:19:18,131 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-158
+2020-06-12 12:19:18,130 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-174
+2020-06-12 12:19:18,132 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-174
+2020-06-12 12:19:18,132 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-192
+2020-06-12 12:19:18,132 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-192
+2020-06-12 12:19:18,135 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-63
+2020-06-12 12:19:18,135 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-63
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-73
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-117
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-159
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-73
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-159
+2020-06-12 12:19:18,137 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-117
+2020-06-12 12:19:18,141 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-146
+2020-06-12 12:19:18,141 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-146
+2020-06-12 12:19:18,142 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-141
+2020-06-12 12:19:18,142 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-141
+2020-06-12 12:19:18,155 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-87
+2020-06-12 12:19:18,155 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-87
+2020-06-12 12:19:18,159 INFO o.a.j.t.JMeterThread: Thread is done: Efter Inloggning 1-37
+2020-06-12 12:19:18,159 INFO o.a.j.t.JMeterThread: Thread finished: Efter Inloggning 1-37
+2020-06-12 12:19:18,159 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-06-12 12:19:18,160 INFO o.a.j.r.Summariser: summary +    799 in 00:00:13 =   59.6/s Avg:  3451 Min:     8 Max: 13729 Err:     0 (0.00%) Active: 0 Started: 200 Finished: 200
+2020-06-12 12:19:18,161 INFO o.a.j.r.Summariser: summary =    800 in 00:00:15 =   55.1/s Avg:  3448 Min:     8 Max: 13729 Err:     0 (0.00%)
+2020-06-12 12:19:18,165 INFO o.a.j.JMeter: Generating Dashboard
+2020-06-12 12:19:18,165 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2020-06-12 12:19:18,184 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2020-06-12 12:19:18,965 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2020-06-12 12:19:18,965 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2020-06-12 12:19:18,967 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2020-06-12 12:19:18,967 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2020-06-12 12:19:18,974 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2020-06-12 12:19:18,976 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2020-06-12 12:19:18,977 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2020-06-12 12:19:18,977 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2020-06-12 12:19:19,013 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2020-06-12 12:19:19,013 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2020-06-12 12:19:19,014 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2020-06-12 12:19:19,014 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2020-06-12 12:19:19,042 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2020-06-12 12:19:19,043 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 11200 samples
+2020-06-12 12:19:19,043 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2020-06-12 12:19:19,043 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2020-06-12 12:19:19,043 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2020-06-12 12:19:19,044 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2020-06-12 12:19:19,044 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2020-06-12 12:19:19,044 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2020-06-12 12:19:19,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2020-06-12 12:19:19,049 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 24000 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 4800 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 1600 samples
+2020-06-12 12:19:19,050 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 1600 samples produced in 831ms on channel 0
+2020-06-12 12:19:19,051 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2020-06-12 12:19:19,054 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\test\Mätdatabasen\jmeter\resultat\inloggning_200_1_1
+2020-06-12 12:19:19,057 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: totalTPS
+2020-06-12 12:19:19,058 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: timeVsThreads
+2020-06-12 12:19:19,060 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: responseTimeDistribution
+2020-06-12 12:19:19,061 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: transactionsPerSecond
+2020-06-12 12:19:19,061 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: responseTimePercentiles
+2020-06-12 12:19:19,066 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: responseTimesOverTime
+2020-06-12 12:19:19,067 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: connectTimeOverTime
+2020-06-12 12:19:19,067 WARN o.a.j.r.d.HtmlTemplateExporter: No serie matches the series_filter: series_filter in graph: latenciesOverTime
+2020-06-12 12:19:19,178 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\test\Mätdatabasen\jmeter\resultat\inloggning_200_1_1, creating folder structure
+2020-06-12 12:19:19,614 INFO o.a.j.JMeter: Dashboard generated

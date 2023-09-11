@@ -1,0 +1,22 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://metria.utv.samrad.nu",
+    "changeOrigin": true
+  },
+  "/authIssuerBankId": {
+    "target": "https://metria.utv.samrad.nu",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "http://localhost:9025",
+    "changeOrigin": true
+  },
+  "/geoserver/metria": {
+    "target": "https://metria.utv.samrad.nu",
+    "changeOrigin": true
+  },
+  "/geoserver/mapCMS": {
+    "target": "https://metria.utv.samrad.nu",
+    "changeOrigin": true
+  }
+}

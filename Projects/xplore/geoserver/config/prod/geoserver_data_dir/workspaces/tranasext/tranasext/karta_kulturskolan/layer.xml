@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_kulturskolan</name>
+  <id>LayerInfoImpl-5492d999:17715127651:-5f94</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:17715127651:-5f95</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-18 11:05:17.102 UTC</dateCreated>
+</layer>

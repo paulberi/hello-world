@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        th {
+            background: #f1f1f1;
+            font-weight: bold;
+            padding: 6px;
+        }
+        
+        td {
+            background: #f9f9f9;
+            padding: 6px;
+        }
+        
+        .submittedId {
+            width: 150px;
+            margin: 5px;
+            height: 30px;
+            border-radius: 5px;
+            border: transparent;
+            margin-left: 140px;
+            background-image: linear-gradient(to left, white, cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rentalId" id="checkingId">
+        <label>Id of car you ordered</label>
+        <input id="rentalId">
+        <br>
+        <input type="submit" class="submittedId" id="submitId">
+
+    </div>
+    <div class="cars" id="cars" style="height: 100%; width: 100%;">
+        <table id="myTable">
+            <tr>
+                <th>User Id</th>
+                <th>Car Id</th>
+                <th>Pickup Date</th>
+                <th>Order date</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    $(function() {
+        var desiredRental
+        $("#cars").hide();
+        $("#submitId").click(function() {
+            desiredRental = $('#rentalId').val();
+            console.log(desiredRental + " wubmitted id")
+            rentalToEdit();
+            $("#cars").show();
+            $("#checkingId").hide();
+        })
+
+        function rentalToEdit() {
+            $.ajax({
+                headers: {
+                    "Accept": "application/json"
+                },
+                type: 'GET',
+                url: 'http://localhost:8081/api/v1/allorders',
+                crossDomain: true,
+                beforeSend: function(xhr) {
+                    xhr.withCredentials = true;
+                },
+                success: function(data, textStatus, request) {
+                    var userId = localStorage.getItem('userId');
+                    console.log("this user id before is " + userId);
+                    for (var i = 0; i < data.length; i++) {
+                        console.log("this user id after is " + data[i].user.userId);
+                        if (data[i].user.userId == userId) {
+                            if (data[i].car.carId == desiredRental) {
+                                console.log(desiredRental + " and " + data[i].car.carId);
+                                var row = $('<tr><td>' + data[i].user.userId + '<td>' + data[i].car.carId + '<td>' + data[i].startDate + '<td>' + data[i].dateOfBooking + '<tr>');
+                                $('#myTable').append(row);
+                            } else {
+                                alert("wrong id check ur rentals and try again");
+                            }
+
+                        } else {
+                            alert("user not found");
+                        }
+                    }
+                }
+            });
+        }
+    })
+</script>
+
+</html>

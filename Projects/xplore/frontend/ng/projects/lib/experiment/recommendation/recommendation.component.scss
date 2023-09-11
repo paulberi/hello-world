@@ -1,0 +1,63 @@
+.karta1{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta1.jpg);
+  background-size: cover;
+}
+
+.karta2{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta2.jpg);
+  background-size: cover;
+}
+
+.karta3{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta3.jpg);
+  background-size: cover;
+}
+
+.karta4{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta4.jpg);
+  background-size: cover;
+}
+
+.karta5{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta5.jpg);
+  background-size: cover;
+}
+
+.karta6{
+  width: 90%;
+  height: 180px;
+  background-image: url(../../../storybook/stories/assets/karta6.jpg);
+  background-size: cover;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 13px;
+}
+
+.xp-recommendation {
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  // background: var(--accent-variant);
+  border: solid var(--accent);
+  border-width: 2px 2px 2px 2px;
+  color: var(--on-accent-variant);
+
+  .mat-icon {
+    color: var(--accent);
+  }
+}
+

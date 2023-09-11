@@ -1,0 +1,18 @@
+<div *ngIf="!fileUploaded" class="dropzone-wrapper">
+    <xp-dropzone #fileUpload (change)="dropFiles($event.target.files)" [label]="label" [isMultipleFilesAllowed]="isMultipleFilesAllowed"
+        [acceptedFileEndings]="acceptedFileEndings"></xp-dropzone>
+    <div *ngIf="isLoading" class="spinner">
+        <mat-spinner [diameter]="24"></mat-spinner>
+        <span>{{ "mm.forms.loadingFile" | transloco }}</span>
+    </div>
+    <mat-error class="error" *ngIf="conversionError">{{ conversionErrorMessage }}</mat-error>
+</div>
+
+<div class="custom-file-upload dropzone-wrapper" *ngIf="fileUploaded">
+    <p>
+        <mat-icon class="file-icon">attach_file</mat-icon>{{ fileName }}
+    </p>
+    <button *ngIf="fileUploaded" mat-raised-button (click)="changeFile()">
+        {{ "mm.forms.changeFile" | transloco }}
+    </button>
+</div>

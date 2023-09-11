@@ -1,0 +1,84 @@
+components:
+  schemas:
+    ProjektLoggItem:
+      type: object
+      properties:
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+        projektLoggType:
+          $ref: "#/components/schemas/ProjektLoggType"
+      discriminator:
+        propertyName: projektLoggType
+        mapping:
+          PROJEKTHANDELSE: "#/components/schemas/Projekthandelse"
+          AVTALHANDELSE: "#/components/schemas/Avtalhandelse"
+          INFOBREVHANDELSE: "#/components/schemas/Infobrevhandelse"
+          MANUELL_FASTIGHETHANDELSE: "#/components/schemas/ManuellFastighethandelse"
+      required:
+        - skapadAv
+        - skapadDatum
+        - projektLoggType
+    Avtalhandelse:
+      allOf:
+      - $ref: "#/components/schemas/ProjektLoggItem"
+      - type: object
+        properties:
+          avtalsjobbId:
+            type: string
+            format: uuid
+          antalFastigheter:
+            type: integer
+      required:
+        - avtalsjobbId
+    Infobrevhandelse:
+      allOf:
+      - $ref: "#/components/schemas/ProjektLoggItem"
+      - type: object
+        properties:
+          infobrevsjobbId:
+            type: string
+            format: uuid
+          antalFastigheter:
+            type: integer
+      required:
+        - infobrevsjobbId
+    ManuellFastighethandelse:
+      allOf:
+      - $ref: "#/components/schemas/ProjektLoggItem"
+      - type: object
+        properties:
+          fastighetsbeteckning:
+            type: string
+          typ:
+            $ref: "#/components/schemas/ManuellFastighethandelseTyp"
+    Projekthandelse:
+      allOf:
+      - $ref: "#/components/schemas/ProjektLoggItem"
+      - type: object
+        properties:
+          projekthandelseTyp:
+            $ref: "./projekt.yaml#/components/schemas/ProjekthandelseTyp"
+      required:
+        - projekthandelseTyp
+    ManuellFastighethandelseTyp:
+      type: string
+      enum:
+        - TILLAGD
+        - BORTTAGEN
+    ProjektLoggType:
+      type: string
+      enum:
+        - PROJEKTHANDELSE
+        - AVTALHANDELSE
+        - INFOBREVHANDELSE
+        - MANUELL_FASTIGHETHANDELSE
+    ProjektLoggFilter:
+      type: string
+      enum:
+        - SKAPAT_AV_MIG
+        - OVRIGA_DOKUMENT
+        - MARKUPPLATELSEAVTAL
+        - PROJEKTHANDELSER

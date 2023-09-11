@@ -1,0 +1,10 @@
+<div class="container">
+  <nav mat-tab-nav-bar dynamicHeight color="accent">
+    <h1>{{ "mm.common.salesperson" | transloco }}</h1>
+    <a mat-tab-link *ngFor="let link of tabLinks" [routerLink]="link.link" routerLinkActive
+      #routerLinkActive="routerLinkActive" [active]="routerLinkActive.isActive">
+      {{ link.label }}
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

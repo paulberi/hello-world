@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device.width, initial-scale=1.0" />
+    <title>Africkets Style Library</title>
+    <link rel="icon" href="logo1.jpg" />
+    <link rel="stylesheet" href="home.css" />
+    <link href="../css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="logo1.jpg" style="height: 50px; width: 50px" />
+        <p>Africkets Pattern Library</p>
+    </header>
+    <div class="centered-content">
+        <div class="menu-pane">
+            <div class="guidelines">
+                <button class="redirecting-button" style="font-weight: bolder" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/guidelines.html')">
+            Guidelines and Topography
+          </button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/typography.html')">* Typography</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/color.html')">* Color</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/Spacing.html')">* Spacing</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/page-layout.html')">* Page Layouts</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/Guidelines/media-queries.html')">* Media Queries</button>
+            </div>
+            <div class="africket-components">
+                <button class="redirecting-button" style="font-weight: bolder" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/component.html')">
+            Components
+          </button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/buttons.html')">* Buttons</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/footer.html')">* Footer</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/forms.html')">* Forms</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/icons.html')">* Icons</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/images.html')">* Images</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/logo.html')">* Logo</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/status-messages.html')">* Status Messages</button>
+                <button class="redirecting-button" onClick="SetIframeSource('../StyleGuideAfricket/africket-components/tables.html')">* Tables</button>
+            </div>
+        </div>
+        <div class="detail-pane">
+            <iframe id="iframe" class="iframe"></iframe>
+        </div>
+        <div class="observation-pane">
+            <h2>About <img src="logo1.jpg" style="height: 20px; width: 20px" />fricket</h2>
+            <p>The website is africket.com. Africket is an online market place that targets individuals and households. The objective is to encourage people and families to practice the concept of selling their belongings that they no longer find useful
+                and which are still in good shape. This is in a bid the contribute to the environment and also to combat poverty both individually and as a community because the longer the useful lifespan of a commodity the lesser the pressure on the
+                resources to replace them
+            </p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function SetIframeSource(url) {
+        document.getElementById("iframe").setAttribute("src", url);
+        // document.location.href = "../StyleGuideAfricket/Guidelines/guidelines.html";
+    }
+</script>
+
+</html>

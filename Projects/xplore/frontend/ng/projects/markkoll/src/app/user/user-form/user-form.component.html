@@ -1,0 +1,49 @@
+<form [formGroup]="form">
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <mat-label>{{ "mk.userForm.fornamn" | transloco }}</mat-label>
+        <input matInput type="text" formControlName="fornamn"/>
+        <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="col-6">
+      <mat-form-field class="right">
+        <mat-label>{{ "mk.userForm.efternamn" | transloco }}</mat-label>
+        <input matInput type="text" formControlName="efternamn"/>
+        <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <mat-label>{{ "mk.userForm.email" | transloco }}</mat-label>
+        <input matInput type="text" formControlName="email"/>
+        <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="col-6 actions">
+      <div *ngIf="editUser">
+        <button mat-button [disabled]="loggedInUser?.email == editUser.email" (click)="deleteUser(editUser)" color="warn">{{ "mk.userForm.deleteUser" | transloco }}</button>
+        <button mat-raised-button type="submit" color="primary" [disabled]="!canSave()" (click)="onSave()">{{ "xp.common.save" | transloco }}</button>
+      </div>
+
+      <div *ngIf="!editUser">
+        <button mat-button (click)="cancel()" color="warn">{{ "xp.common.clear" | transloco }}</button>
+        <button mat-button type="submit" color="accent" [disabled]="!canSave()" (click)="onSubmit()">{{ "xp.common.add" | transloco }}</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<ng-template #deleteDialog>
+  <p>{{ "mk.userForm.deleteUserDialog" | transloco }}</p>
+  <mat-dialog-actions align="end">
+    <button mat-flat-button color="primary" mat-dialog-close>{{ "xp.common.cancel" | transloco }}</button>
+    <button mat-raised-button [mat-dialog-close]="true">{{ "xp.common.delete" | transloco }}</button>
+  </mat-dialog-actions>
+</ng-template>

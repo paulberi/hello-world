@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Car Rental</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<div id="cars"></div>
+	
+	<script>
+
+		$(function(){
+			$ajax({
+				type:'GET',
+				url:'http://localhost:8081/api/cars',
+				dataType:'json',
+				success:(data)=>{
+					console.log(data);
+					$('#cars').load('http://localhost:8081/api/cars');
+					},
+					error:(xhr,status,error)=>{
+						console.log(error);
+						}
+				})
+			})
+	</script>
+
+</body>
+</html>

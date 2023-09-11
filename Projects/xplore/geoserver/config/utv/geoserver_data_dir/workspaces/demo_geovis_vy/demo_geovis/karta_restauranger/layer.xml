@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_restauranger</name>
+  <id>LayerInfoImpl--7c94cb3b:16c6635b69f:-7fdf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7c94cb3b:16c6635b69f:-7fe0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,32 @@
+.navbar {
+    background: #1775b8;
+}
+
+.navbar-menu .paginatorLeft {
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-right: 300px;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+}
+
+.navbar-menu .paginatorRight {
+    margin-top: 10px;
+    margin-left: 300px;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    &.hover {
+        color: pink;
+    }
+}
+
+.navbar-menu .navbar-item {
+    margin-top: 3px;
+    cursor: pointer;
+    .navbar-link {
+        color: hsl(0, 0%, 100%);
+        &:hover {
+            color: #1775b8;
+        }
+    }
+}

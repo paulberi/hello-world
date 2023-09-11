@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_atervinningscentral</name>
+  <id>LayerInfoImpl-20017f35:e0b6f828627:-000b</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9012d044:1fa4ab35687:-8f2d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

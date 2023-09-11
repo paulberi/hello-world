@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_isbanor</name>
+  <id>LayerInfoImpl-7c3e7d32:5f3cd74933a:-da86</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-31f40727:17efe44f5c5:-641f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

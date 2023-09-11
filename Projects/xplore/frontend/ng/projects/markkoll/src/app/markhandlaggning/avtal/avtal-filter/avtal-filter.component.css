@@ -1,0 +1,8 @@
+.top {
+  display: flex;
+  column-gap: 1.5em;
+}
+
+xp-ui-search-field {
+  width: 375px;
+}

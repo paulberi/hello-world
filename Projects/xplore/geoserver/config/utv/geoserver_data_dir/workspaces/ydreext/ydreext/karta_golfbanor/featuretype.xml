@@ -1,0 +1,59 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--192f91bd:16e7d528ba7:-3f6b</id>
+  <name>karta_golfbanor</name>
+  <nativeName>karta_golfbanor</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--192f91bd:16e7d528ba7:-4021</id>
+  </namespace>
+  <title>karta_golfbanor</title>
+  <keywords>
+    <string>features</string>
+    <string>karta_golfbanor</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;SWEREF99 15 00&quot;, 
+  GEOGCS[&quot;SWEREF99&quot;, 
+    DATUM[&quot;SWEREF99&quot;, 
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6619&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4619&quot;]], 
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 15.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 1.0], 
+  PARAMETER[&quot;false_easting&quot;, 150000.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;3009&quot;]]</nativeCRS>
+  <srs>EPSG:3009</srs>
+  <nativeBoundingBox>
+    <minx>58792.65795504814</minx>
+    <maxx>221842.49881659402</maxx>
+    <miny>6203006.79598798</miny>
+    <maxy>6835451.012061122</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>13.280744395679996</minx>
+    <maxx>16.354365780289932</maxx>
+    <miny>55.941451917666626</miny>
+    <maxy>61.627669267787994</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--192f91bd:16e7d528ba7:-4020</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

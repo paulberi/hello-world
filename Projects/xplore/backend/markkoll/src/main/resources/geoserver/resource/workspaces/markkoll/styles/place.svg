@@ -1,0 +1,5 @@
+<svg id="place" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <path id="Path_1" data-name="Path 1" d="M0,0H40V40H0Z" fill="none"/>
+    <path id="Path_3" data-name="Path 3" d="M0,40" transform="translate(20)" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_2" data-name="Path 2" d="M12,2A7,7,0,0,0,5,9c0,5.25,7,13,7,13s7-7.75,7-13A7,7,0,0,0,12,2Zm0,9.5A2.5,2.5,0,1,1,14.5,9,2.5,2.5,0,0,1,12,11.5Z" transform="translate(8 -2)"/>
+</svg>

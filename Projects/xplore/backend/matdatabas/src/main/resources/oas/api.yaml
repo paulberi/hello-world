@@ -1,0 +1,4832 @@
+openapi: "3.0.2"
+info:
+  version: 0.1.0
+  title: Metria Mätdatabas API
+  description: |
+    API Mätdatabas.
+  contact:
+    url: "https://metria.se"
+    email: todo@metria.se
+servers:
+  - url: http://localhost:9008/api
+    description: Utvecklingsinstans
+paths:
+  '/ping/anon-ping':
+    get:
+      summary: Ping-tjänst för att se om tjänsten är uppe.
+      description: Används för att testa om tjänsten är igång.
+      operationId: "anon-ping"
+      responses:
+        '200':
+          description: Tjänsten är igång.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong!
+  '/ping/auth-ping':
+    get:
+      summary: Ping-tjänst som kräver auktorisering.
+      description: Används i testsyfte för att kontrollera auktorisering.
+      operationId: "auth-ping"
+      responses:
+        '200':
+          description: Svarar med "pong, <användarnamn>!".
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong, user123!
+  '/user/user-details':
+    get:
+      summary: Hämta användardetaljer
+      description: Hämta användardetaljer med information som användarnamn, rättigheter, m.m.
+      operationId: "user-details"
+      responses:
+        '200':
+          description: Användardetaljer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserDetails"
+  '/user/matvarden/ogranskade':
+    get:
+      summary: Hämta antalet ogranskade mätvärden
+      description: Hämta antalet ogranskade mätvärden som är kopplade till användarens grupper
+      responses:
+        '200':
+          description: Antalet ogranskade mätvärden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Count"
+  '/user/paminnelser':
+    get:
+      summary: Hämta antalet påminnelser
+      description: Hämta antalet påminnelser som är kopplade till användarens grupper
+      responses:
+        '200':
+          description: Antalet påminnelser
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Count"
+  '/user/larm':
+    get:
+      summary: Hämta antalet larm
+      description: Hämta antalet larm som är kopplade till användarens grupper
+      responses:
+        '200':
+          description: Antalet larm
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Count"
+  '/meddelande':
+    get:
+      summary: Hämta meddelanden för en sida
+      description: Hämta meddelanden för en sida
+      parameters:
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+          description: Sidan som skall hämtas
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            default: 3
+          description: Antal meddelande per sida
+      responses:
+        '200':
+          description: En sida av meddelanden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MeddelandePage"
+    post:
+      summary: Lägg till ett nytt meddelande
+      description: Lägg till ett nytt meddelande som visas på startsidan
+      requestBody:
+        description: Det nya meddelandet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMeddelande"
+      responses:
+        201:
+          description: Nytt meddelande skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Meddelande"
+  '/meddelande/{id}':
+    get:
+      summary: Hämta ett befintligt meddelande
+      description: Hämta ett befintligt meddelande
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: Ett befintligt meddelande
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Meddelande"
+    put:
+      summary: Uppdatera ett befintligt meddelande
+      description: Uppdatera ett befintligt meddelande
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Det nya meddelandet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMeddelande"
+      responses:
+        200:
+          description: Meddelandet uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Meddelande"
+    delete:
+      summary: Ta bort ett befintligt meddelande
+      description: Ta bort ett befintligt meddelande
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Meddelandet togs bort
+  '/anvandare':
+    get:
+      summary: Hämta alla användare för en sida
+      description: Hämta en sida med användardetaljer för alla registrerade användare. Kräver administratörsroll.
+      parameters:
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+          description: Sidan med användare som skall hämtas
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            default: 10
+          description: Antal användare per sida
+        - in: query
+          name: sortProperty
+          required: false
+          schema:
+            type: string
+            default: id
+          description: Namnet på den property som man ska sortera efter
+        - in: query
+          name: sortDirection
+          required: false
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+            default: asc
+          description: Sorteringsriktning
+        - in: query
+          name: visaInaktiva
+          required: false
+          schema:
+            type: boolean
+            default: true
+          description: Indikerar om inaktiva användare ska tas med i resultatet
+      responses:
+        '200':
+          description: En sida av användare
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnvandarePage"
+    post:
+      summary: Lägg till en ny användare
+      description: Lägg till en ny användare
+      requestBody:
+        description: Den nya användaren
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnvandare"
+      responses:
+        201:
+          description: Ny användare skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandare"
+        409:
+          description: Användare finns redan med användarnamnet
+  '/anvandare/{id}':
+    get:
+      summary: Hämta en befintlig användare
+      description: Hämta en befintlig användare
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: En befintlig användare
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandare"
+        404:
+          description: Användaren hittades inte
+    put:
+      summary: Uppdatera en befintlig användare
+      description: Uppdatera en befintlig användare
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Användarens nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnvandare"
+      responses:
+        200:
+          description: Den uppdaterade användaren
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandare"
+        404:
+          description: Användaren hittades inte
+    delete:
+      summary: Ta bort en befintlig användare
+      description: Ta bort en befintlig användare. Går endast att göra om användaren aldrig loggat in.
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Användaren togs bort
+        404:
+          description: Användaren hittades inte
+        405:
+          description: Användaren kunde inte tas bort eftersom användaren redan loggat in
+    options:
+      summary: Visar vilka operationer som är tillåtna på användaren
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på användaren
+        404:
+          description: Användaren hittades inte
+  '/anvandare/{id}/anonymisera':
+    put:
+      summary: Anonymisera en befintlig användare
+      description: Anonymisera en befintlig användare
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: Den anonymiserade användaren
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandare"
+        404:
+          description: Användaren hittades inte
+  '/anvandargrupp':
+    get:
+      summary: Hämta användargrupper för en sida
+      description: Hämta en sida med användargrupper
+      parameters:
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+          description: Sidan med användargrupper som skall hämtas
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            default: 10
+          description: Antal användargrupper per sida
+        - in: query
+          name: sortProperty
+          required: false
+          schema:
+            type: string
+            default: id
+          description: Namnet på den property som man ska sortera efter
+        - in: query
+          name: sortDirection
+          required: false
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+            default: asc
+          description: Sorteringsriktning
+      responses:
+        '200':
+          description: Lista med användargrupper
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnvandargruppPage"
+    post:
+      summary: Lägg till en ny användargrupp
+      description: Lägg till en ny användargrupp
+      requestBody:
+        description: Den nya gruppen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnvandargrupp"
+      responses:
+        201:
+          description: Ny användargrupp skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandargrupp"
+  '/anvandargrupp/{id}':
+    get:
+      summary: Hämta en användargrupp
+      description: Hämta en användargrupp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: En användargrupp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandargrupp"
+    put:
+      summary: Redigera en användargrupp
+      description: Redigera en användargrupp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Den uppdaterade gruppen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnvandargrupp"
+      responses:
+        200:
+          description: Gruppen uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Anvandargrupp"
+    delete:
+      summary: Ta bort en användargrupp
+      description: Ta bort en användaregrupp. Går endast att göra om gruppen inte har något mätansvar, larm eller några användare.
+      parameters:
+        - $ref: "#/components/parameters/id"
+      responses:
+        204:
+          description: Gruppen togs bort
+    options:
+      summary: Visar vilka operationer som är tillåtna på användargruppen
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - $ref: "#/components/parameters/id"
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på användargruppen
+
+  '/anvandargrupp/{id}/matansvar':
+    get:
+      summary: Hämta en användargrupp mätansvar
+      description: Hämta en användargrupps mätansvar.
+      operationId: "get-matansvar"
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        200:
+          description: En användargrupp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatansvarPage"
+  '/anvandargrupp/{id}/larm':
+    get:
+      summary: Hämta en användargrupp larm
+      description: Hämta en användargrupps larm.
+      operationId: "get-larm"
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        200:
+          description: En sida med larm
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LarmPage"
+  '/anvandargrupp/{id}/anvandare':
+    get:
+      summary: Hämta en användargrupp larm
+      description: Hämta en användargrupps larm.
+      operationId: "get-anvandare-for-anvandargrupp"
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        200:
+          description: En sida med larm
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnvandarePage"
+  '/kartlager':
+    get:
+      summary: Hämta alla kartlager
+      description: Hämtar information om alla kartlager
+      responses:
+        200:
+          description: Lista med kartlager
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfKartlager"
+    post:
+      summary: Lägg till nytt kartlager
+      description: Lägg till nytt kartlager
+      requestBody:
+        description: Det nya kartlagret
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveKartlager"
+      responses:
+        201:
+          description: Nytt kartlager skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kartlager"
+  '/kartlager/order':
+    post:
+      summary: Ändra ordningen på kartlager.
+      description: Ändra ordningen på kartlager genom att skicka in en lista med kartlager-id:n i den önskade ordningen.
+      requestBody:
+        description: En array av id:n
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+      responses:
+        204:
+          description: Ordningen ändrades
+  '/kartlager/stilar':
+    get:
+      summary: Hämta tillgängliga stilar
+      description: Valbara stilar i en array av strängar.
+      responses:
+        200:
+          description: En array av stilar
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  '/kartlager/tree':
+    get:
+      summary: Hämta kartlagerträd
+      description: En lista över kartlager grupperade på vilken grupp det tillhör. De som inte tillhör en grupp hamnar på root-nivån.
+      responses:
+        200:
+          description: Ett kartlagerträd
+          content:
+            application/json:
+              schema:
+                type: array
+                # Should be oneOf Kartlager & Kartlagergrupp but the codegen for that isn't working
+                items: {}
+  '/kartlager/{id}':
+    get:
+      summary: Hämta enskilt kartlager
+      description: Hämta enskilt kartlager
+      parameters:
+        - $ref: "#/components/parameters/id"
+      responses:
+        200:
+          description: Ett kartlager
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kartlager"
+    put:
+      summary: Redigera ett kartlager
+      description: Redigera ett kartlager
+      parameters:
+        - $ref: "#/components/parameters/id"
+      requestBody:
+        description: Ett kartlager
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveKartlager"
+      responses:
+        200:
+          description: Kartlagret uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kartlager"
+    delete:
+      summary: Ta bort ett kartlager
+      description: Ta bort ett kartlager
+      parameters:
+        - $ref: "#/components/parameters/id"
+      responses:
+        204:
+          description: Kartlagret togs bort
+        405:
+          description: Kartlagret kan inte tas bort eftersom det används
+  '/kartlager/filer/{filId}':
+    get:
+      summary: Hämta en kartlagerfil
+      description: Hämta en kartlagerfil.
+      parameters:
+        - name: filId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        200:
+          description: En kartlagerfil i geojson-format
+          content:
+            application/json:
+              schema:
+                type: string
+                format: binary
+
+  '/kallsystem':
+    get:
+      summary: Hämta alla källsystem
+      description: Hämtar information om alla källsystem
+      responses:
+        200:
+          description: Lista med källsystem
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfKallsystem"
+
+  '/validation/anvandare/exists':
+    get:
+      summary: Kontrollerar om det valda användarnamnet redan används
+      description: Kontrollerar om det valda användarnamnet redan används
+      parameters:
+        - name: anvandarnamn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/anvandargrupp/exists':
+    get:
+      summary: Kontrollerar om anvandargruppnamnet redan används
+      description: Kontrollerar om anvandargruppnamnet redan används
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/matobjekt/exists':
+    get:
+      summary: Kontrollerar om det valda mätobjektsnamnet redan används
+      description: Kontrollerar om det valda mätobjektsnamnet redan används
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/matobjektgrupp/exists':
+    get:
+      summary: Kontrollerar om det valda mätobjektgruppnamnet redan används
+      description: Kontrollerar om det valda mätobjektgruppnamnet redan används
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/definitionmatningstyp/exists':
+    get:
+      summary: Kontrollerar om det namnet på definitionen redan används inom mätobjektstypen
+      description: Kontrollerar om det namnet på definitionen redan används inom mätobjektstypen
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+        - name: matobjektTyp
+          in: query
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/matrunda/exists':
+    get:
+      summary: Kontrollerar om det valda mätrundanamnet redan används
+      description: Kontrollerar om det valda mätrundanamnet redan används
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/matobjekt/analys/exists':
+    get:
+      summary: Kontrollerar om mätobjektet redan har en analys med given tidstämpel
+      description: Kontrollerar om mätobjektet redan har en analys med given tidstämpel
+      parameters:
+        - name: matobjektId
+          in: query
+          schema:
+            type: integer
+          required: true
+        - name: analysDatum
+          in: query
+          schema:
+            type: string
+            format: date-time
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+  '/validation/rapport/exists':
+    get:
+      summary: Kontrollerar om rapportnamnet redan används i en annan rapport
+      description: Kontrollerar om rapportnamnet redan används i en annan rapport
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          $ref: '#/components/responses/ValidationResponse'
+
+  '/systemlogg':
+    get:
+      summary: Hämta alla systemloggsposter för en sida
+      description: Hämta en sida med systemloggsposter. Kräver administratörsroll.
+      parameters:
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+          description: Sidan med systemloggsposter som skall hämtas
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            default: 50
+          description: Antal systemloggsposter per sida
+        - in: query
+          name: sortProperty
+          required: false
+          schema:
+            type: string
+            default: datum
+          description: Namnet på den property som man ska sortera efter
+        - in: query
+          name: sortDirection
+          required: false
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+            default: desc
+          description: Sorteringsriktning
+        - in: query
+          name: fromDatum
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Fr.o.m datum för sökning
+        - in: query
+          name: tomDatum
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: T.o.m datum för sökning
+        - in: query
+          name: handelse
+          required: false
+          schema:
+            type: integer
+          description: Händelsetyp för sökning
+      responses:
+        '200':
+          description: En sida av systemloggsposter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SystemloggPage"
+
+  '/matningar/godkann':
+    post:
+      operationId: matningarGodkann
+      summary: Godkänn en mängd mätningar i ett svep
+      description: Godkänn en mängd mätningar i ett svep
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int64
+            minItems: 1
+      responses:
+        204:
+          description: Alla mätningar godkändes
+  '/matningar/delete':
+    delete:
+      operationId: matningarDelete
+      summary: Ta bort en mängd mätningar i ett svep
+      description: Ta bort en mängd mätningar i ett svep
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int64
+            minItems: 1
+      responses:
+        200:
+          description: Alla mätningar togs bort
+  '/matningstyper/{matningstypId}/gransvarden':
+    get:
+      operationId: matningstypGransvarden
+      summary: Hämta gränsvärden som är satta för mätningstypen
+      description: Hämta gränsvärden som är satta för mätningstypen
+      parameters:
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En lista med gränsvärden
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Gransvarde"
+  '/matningstyper/{matningstypId}/larmdetaljer':
+    get:
+      operationId: matningstypLarmdetaljer
+      summary: Hämta information om larm och gränsvärden som är satta för mätningstypen
+      description: Hämta information om larm och gränsvärden som är satta för mätningstypen
+      parameters:
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En lista med larmdetaljer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Larm"
+  '/matningstyper/{matningstypId}/matningDataSeries':
+    get:
+      operationId: matningstypDataSeries
+      summary: Hämta en lista med mätningar för granskning via graf
+      description: Hämta en lista med mätningar för granskning via graf
+      parameters:
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: fromDatum
+          required: false
+          schema:
+            type: string
+            format: date
+          description: Inkludera mätvärden fr.o.m. detta datum
+        - in: query
+          name: sattningReferensdatum
+          schema:
+            type: string
+            format: date
+          description: Använd det mätning närmast detta datum som referensvärde för beräkning av sättning
+        - in: query
+          name: filterGodkanda
+          required: false
+          schema:
+            type: boolean
+            default: false
+          description: Begränsar resultatet till endast godkända mätningar
+        - in: query
+          name: filterFelkodOk
+          required: false
+          schema:
+            type: boolean
+            default: false
+          description: Begränsar resultatet till endast mätningar utan felkod
+      responses:
+        200:
+          description: En sida med mätningar
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningDataSeries"
+        404:
+          description: Mätobjektet hittades inte
+  '/matobjekt':
+    get:
+      summary: Hämta mätobjekt för en sida
+      description: Hämta en sida med mätobjekt
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: filter
+          schema:
+            $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Lista med mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatobjektPage"
+    post:
+      summary: Lägg till ett nytt mätobjekt
+      description: Lägg till ett nytt mätobjekt
+      requestBody:
+        description: Det nya mätobjektet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatobjekt"
+      responses:
+        201:
+          description: Nytt mätobjekt skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjekt"
+        409:
+          description: Användare finns redan med användarnamnet
+  '/matobjekt/page':
+    post:
+      summary: Hämta mätobjekt för en sida
+      description: Hämta en sida med mätobjekt
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      requestBody:
+        description: Mätningstypfiltret
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Paginerad lista med mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatobjektPage"
+  '/matobjekt/mapinfo':
+    post:
+      summary: Hämta mätningstyper/mätobjekt för visning i karta
+      description: Hämta en sida med mätningstyper/mätobjekt
+      requestBody:
+        description: Mätningstypfiltret
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Lista med information om mätobjekt för karta
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MatobjektMapinfo"
+  '/matobjekt/{id}':
+    get:
+      summary: Hämta ett befintligt mätobjekt
+      description: Hämta ett befintligt mätobjekt
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: Ett befintligt mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjekt"
+        404:
+          description: Mätobjektet hittades inte
+    put:
+      summary: Uppdatera ett befintligt mätobjekt
+      description: Uppdatera ett befintligt mätobjekt
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Mätobjektets nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatobjekt"
+      responses:
+        200:
+          description: Det uppdaterade mätobjektet
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjekt"
+        404:
+          description: Mätobjektet hittades inte
+    delete:
+      summary: Ta bort ett befintligt mätobjekt
+      description: Ta bort ett befintligt mätobjekt
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Mätobjektet togs bort
+        404:
+          description: Mätobjektet hittades inte
+        405:
+          description: Mätobjektet kunde inte tas bort eftersom det finns mätningar kopplade till denna
+    options:
+      summary: Visar vilka operationer som är tillåtna på mätobjektet
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på mätobjektet
+        404:
+          description: Mätobjektet hittades inte
+  '/matobjekt/{id}/senastematningar':
+    get:
+      summary: Hämta senast gjorda mätningar.
+      description: Hämta senast gjorda mätningar för alla mätningstyper för ett visst mätobjekt.
+      operationId: matobjektSenasteMatningarGet
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SenasteMatningar"
+  '/matobjekt/{id}/matningstyper':
+    get:
+      summary: Hämta de mätningstyper som ska utföras på mätobjektet
+      description: Hämta de mätningstyper som ska utföras på mätobjektet
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En lista med mätningstyper
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Matningstyp"
+    post:
+      summary: Lägg till en ny mätningstyp
+      description: Lägg till en ny mätningstyp
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: definitionMatningstypId
+          in: query
+          schema:
+            type: integer
+      requestBody:
+        description: Den nya mätningstypen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveMatningstyp"
+      responses:
+        201:
+          description: Ny mätningstyp skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matningstyp"
+
+  '/matobjekt/{matobjektId}/matningstyper/{matningstypId}':
+    get:
+      summary: Hämta enskild mätningstyp
+      description: Hämta enskild mätningstyp
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En mätningstyp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matningstyp"
+    put:
+      summary: Uppdatera en befintlig mätningstyp
+      description: Uppdatera en befintlig mätningstyp
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Mätningstypen nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveMatningstyp"
+      responses:
+        204:
+          description: Mätningstypen uppdaterades
+    delete:
+      summary: Ta bort en mätningstyp
+      description: Ta bort en mätningstyp. Går endast att göra om mätningstypen inte har några registrerade mätningar.
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Mätningstypen togs bort
+    options:
+      summary: Visar vilka operationer som är tillåtna på mätningstypen
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på användargruppen
+  '/matobjekt/{matobjektId}/matningstyper/{matningstypId}/matningar':
+    post:
+      operationId: addMatning
+      summary: Lägg till en ny mätning
+      description: Lägg till en ny mätning
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Den nya mätningen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveMatning"
+      responses:
+        201:
+          description: Ny mätning skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningSaveResult"
+        400:
+          description: Mätningen har ogiltigt mätvärde
+        404:
+          description: Mätobjektet hittades inte
+    get:
+      operationId: matningPageGet
+      summary: Hämta mätningar för en sida för mätningstypen
+      description: Hämta en sida med mätningar.
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: fromDatum
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: Fr.o.m datum för sökning
+        - in: query
+          name: tomDatum
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: T.o.m datum för sökning
+        - in: query
+          name: status
+          required: false
+          schema:
+            type: integer
+            enum: [0,1,2]
+          description: Begränsar resultatet till endast mätningar med status
+      responses:
+        200:
+          description: En sida med mätningar
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningPage"
+        404:
+          description: Mätobjektet hittades inte
+  '/matobjekt/{matobjektId}/matningstyper/{matningstypId}/matningar/{matningId}':
+    put:
+      operationId: updateMatning
+      summary: Uppdatera en mätning
+      description: Uppdatera en mätning
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Den uppdaterade mätningen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveMatning"
+      responses:
+        200:
+          description: Mätningen uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningSaveResult"
+        400:
+          description: Mätningen har ogiltigt mätvärde
+        404:
+          description: Mätningen hittades inte
+    get:
+      operationId: getMatning
+      summary: Hämta en mätning
+      description: Hämta en mätning
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: En Mätning
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matning"
+        404:
+          description: Mätning hittades inte
+  '/matobjekt/{matobjektId}/matningstyper/{matningstypId}/matningar/{matningId}/review':
+    put:
+      operationId: reviewMatning
+      summary: Granska mätning
+      description: Granska mätning
+      parameters:
+        - name: matobjektId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: matningId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Den granskade mätningen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReviewMatning"
+      responses:
+        201:
+          description: Mätningen uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matning"
+        400:
+          description: Mätningen har ogiltigt mätvärde
+        404:
+          description: Mätobjektet hittades inte
+  '/import/matningar/import':
+    post:
+      operationId: matningarExecuteImport
+      summary: Importera mätningar
+      description: Importera mätningar
+      parameters:
+        - in: query
+          name: matrapportor
+          required: true
+          schema:
+            type: string
+          description: Mätrapportör
+        - in: query
+          name: kallsystem
+          required: true
+          schema:
+            type: string
+          description: Källsystem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/ImportMatning"
+      responses:
+        '200':
+          description: Data importerad
+  '/import/matningar/parseimport':
+    post:
+      operationId: matningarParseImport
+      summary: Läs in och validera mätningar från CSV-fil.
+      description: Läs in och validera mätningar från CSV-fil.
+      parameters:
+        - in: query
+          name: format
+          required: true
+          schema:
+            type: string
+            enum:
+              - STANDARD
+              - INSTRUMENT
+            default: STANDARD
+          description: Format på CSV-fil
+        - in: query
+          name: kallsystem
+          required: true
+          schema:
+            type: string
+          description: Källsystem
+      requestBody:
+        description: CSV-fil
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: En lista med mätningar
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ImportMatning"
+        400:
+          description: Ogiltig CSV-fil
+
+  '/matobjekt/{id}/definitionmatningstyper':
+    get:
+      summary: Hämta de definitioner av mätningstyper som finns för mätobjektet
+      description: Hämtar per default bara de mätningstyper som ännu inte är skapade för mätobjektet. Se parametern "all".
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: all
+          in: query
+          schema:
+            type: boolean
+            default: false
+      responses:
+        200:
+          description: En lista med definitioner av mätningstyper
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DefinitionMatningstyp"
+  '/matobjekt/{id}/namn':
+    get:
+      summary: Hämta namn för enskilt mätobjekt
+      description: Hämta namn för enskilt mätobjekt
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En sträng med mätobjektets namn
+          content:
+            application/json:
+              schema:
+                type: string
+                example: 16FUT012RB
+  '/matobjekt/{id}/handelser':
+    get:
+      summary: Hämta en sida med händelser
+      description: Hämta en sida med händelser
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        200:
+          description: En sida med händelser
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HandelsePage"
+        404:
+          description: Mätobjektet hittades inte
+    post:
+      summary: Lägg till en ny händelse
+      description: Lägg till en ny händelse
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Den nya händelsen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveHandelse"
+      responses:
+        201:
+          description: Ny händelse skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Handelse"
+        404:
+          description: Mätobjektet hittades inte
+  '/matobjekt/{id}/handelser/{handelseId}':
+    get:
+      summary: Hämta en händelse
+      description: Hämta en händelse
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: handelseId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: En Händelse
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Handelse"
+        404:
+          description: Händelse hittades inte
+    put:
+      summary: Uppdatera en befintligt händelse
+      description: Uppdatera en befintligt händelse
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: handelseId
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Händelsens nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveHandelse"
+      responses:
+        200:
+          description: Den uppdaterade händelsen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Handelse"
+        404:
+          description: Händelse hittades inte
+    delete:
+      summary: Ta bort en befintligt händelse
+      description: Ta bort en befintligt händelse
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: handelseId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Händelsen togs bort
+        404:
+          description: Händelsen hittades inte
+
+  '/matobjekt/{id}/vattenkemi':
+    get:
+      operationId: getAnalysPage
+      summary: Hämta en sida med analyser för vattenkemi för ett givet mätobjekt
+      description: Hämta en sida med analyser för vattenkemi för ett givet mätobjekt
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        '200':
+          description: Paginerad lista med analyser för vattenkemi
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalysPage"
+    post:
+      operationId: addAnalys
+      summary: Lägg till en ny analys för vattenkemi
+      description: Lägg till ny analys för vattenkemi
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Den nya analyser för vattenkemi
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnalys"
+      responses:
+        201:
+          description: Ny analys för vattenkemi skapades för mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Analys"
+        400:
+          description: En mätning har ogiltigt mätvärde
+        409:
+          description: Analys för vattenkemi finns redan med samma datum
+
+  '/matobjekt/{matobjektId}/vattenkemi/{vattenkemiId}':
+    put:
+      operationId: updateAnalys
+      summary: Uppdatera en befintlig analys för vattenkemi på ett givet mätobjekt
+      description: Uppdatera en befintlig analys för vattenkemi på ett givet mätobjekt
+      parameters:
+        - name: matobjektId
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: vattenkemiId
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Analysen för vattenkemins nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditAnalys"
+      responses:
+        200:
+          description: Den uppdaterade analysen för vattenkemi
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Analys"
+        400:
+          description: En mätning har ogiltigt mätvärde
+        404:
+          description: Analysen för vattenkemi hittades inte
+    get:
+      operationId: getAnalys
+      summary: Hämta analys för vattenkemi på ett givet mätobjekt
+      description: Hämta analys för vattenkemi på ett givet mätobjekt
+      parameters:
+        - name: matobjektId
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: vattenkemiId
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: Analysen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Analys"
+        404:
+          description: Analysen för vattenkemi hittades inte
+
+  '/matobjekt/namn':
+    get:
+      summary: Hämta mätobjektnamn med valt filter
+      description: Hämtar en lista med alla mätobjektnamn som matchar filtret
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Begränsar resultatet till mätobjekt med namn som börjar med vald sträng
+        - name: typ
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Begränsar resultatet till mätobjekt med vald typ
+      responses:
+        '200':
+          description: Lista med mätobjektnamn
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  '/matobjekt/fastigheter':
+    get:
+      summary: Hämta alla fastigheter med valt filter
+      description: Hämtar en lista med alla fastigheter som använts och som matchar filtret
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Begränsar resultatet till mätobjekt med fastigheter som börjar med vald sträng
+      responses:
+        '200':
+          description: Lista med fastigheter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  '/matobjekt/id':
+    get:
+      summary: Hämta mätobjekt-id för ett givet mätobjektnamn
+      description: Hämta mätobjekt-id för ett givet mätobjektnamn
+      parameters:
+        - name: namn
+          in: query
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Mätobjekt-id
+          content:
+            text/plain:
+              schema:
+                type: string
+        404:
+          description: Mätobjekt med valt mätobjektnamn hittades inte
+  '/matobjekt/{matningstypId}/ogranskade':
+    get:
+      operationId: getOgranskadeForMatningstyp
+      summary: Hämta antalet ogranskade mätvärden för mätningstypen
+      description: Hämta antalet ogranskade mätvärden som är kopplade till mätningstypen
+      parameters:
+        - name: matningstypId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Antalet ogranskade mätvärden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Count"
+  '/matobjekt/matningstyper':
+    get:
+      summary: Hämta en sida med mätningstyper/mätobjekt
+      description: Hämta en sida med mätningstyper/mätobjekt
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: filter
+          schema:
+            $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningstypMatobjektPage"
+    post:
+      summary: Hämta en sida med mätningstyper/mätobjekt
+      description: Hämta en sida med mätningstyper/mätobjekt
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      requestBody:
+        description: Mätningstypfiltret
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Paginerad lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningstypMatobjektPage"
+  '/matobjektgrupp':
+    get:
+      summary: Hämta mätobjektgrupper för en sida
+      description: Hämta en sida med mätobjektgrupper
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: kategori
+          required: false
+          schema:
+            type: integer
+          description: Begränsar resultatet till endast grupper med vald kategori
+      responses:
+        '200':
+          description: Lista med mätobjektgrupper
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatobjektgruppPage"
+    post:
+      summary: Lägg till en nytt mätobjektgrupp
+      description: Lägg till en nytt mätobjektgrupp
+      requestBody:
+        description: Den nya mätobjektgruppen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatobjektgrupp"
+      responses:
+        201:
+          description: Mätobjektgruppen som skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjektgrupp"
+        409:
+          description: Mätobjektgrupp finns redan med namnet
+  '/matobjektgrupp/{id}':
+    get:
+      summary: Hämta en befintlig mätobjektgrupp
+      description: Hämta en befintlig mätobjektgrupp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: En befintlig mätobjektgrupp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjektgrupp"
+        404:
+          description: Mätobjektgruppen hittades inte
+    put:
+      summary: Uppdatera en befintlig mätobjektgrupp
+      description: Uppdatera en befintlig mätobjektgrupp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Mätobjektgruppens nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatobjektgrupp"
+      responses:
+        200:
+          description: Den uppdaterade mätobjektgruppen
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matobjektgrupp"
+        404:
+          description: Mätobjektgruppen hittades inte
+    delete:
+      summary: Ta bort en befintlig mätobjektgrupp
+      description: Ta bort en befintlig mätobjektgrupp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Mätobjektgruppen togs bort
+        404:
+          description: Mätobjektgruppen hittades inte
+  '/bifogadfil':
+    get:
+      summary: Hämta lista med bifogade filer
+      description: Hämta metadata för en lista med bifogade filer
+      parameters:
+        - name: ids
+          in: query
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+              format: uuid
+      responses:
+        200:
+          description: En lista med metadata för bifogade filer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Bifogadfil"
+        404:
+          description: Någon av de bifogade filerna hittades inte
+    post:
+      summary: Lägg till en ny bifogad fil
+      description: Lägg till en ny bifogad fil
+      requestBody:
+        description: Den nya bifogade filen
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Den bifogade bilden lagrades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Bifogadfil"
+  '/bifogadfil/{id}':
+    get:
+      summary: Hämta en befintlig bifogad fil
+      description: Hämta en befintlig bifogad fil
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: En befintlig bifogad fil
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Bifogadfil"
+        404:
+          description: Den bifogade filen hittades inte
+  '/bifogadfil/{id}/data':
+    get:
+      summary: Hämta en befintlig bifogad fil
+      description: Hämta en befintlig bifogad fil
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Data för en bifogad fil
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        404:
+          description: Den bifogade filen hittades inte
+  '/bifogadfil/{id}/thumbnail':
+    get:
+      summary: Hämta en befintlig bifogad fils thumbnail
+      description: Hämta en befintlig bifogad fils thumbnail
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        200:
+          description: Data för en bifogad fils thumbnail
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        404:
+          description: Den bifogade filens thumbnail hittades inte
+  '/definitionmatningstyp':
+    get:
+      summary: Hämta en pagad lista över definitioner av mätningstyper
+      description: Går att filtrera på mätobjektstyp och om definitionen är ändringsbar, men returnerar per default alla definitioner.
+      parameters:
+        - name: matobjektTyp
+          in: query
+          schema:
+            type: integer
+        - name: andringsbar
+          in: query
+          schema:
+            type: boolean
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        200:
+          description: En sida med definitioner av mätningstyper
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DefinitionMatningstypPage"
+    post:
+      summary: Lägg till en ny definition
+      description: Lägg till en ny definition
+      requestBody:
+        description: Den nya mätningstypen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveDefinitionMatningstyp"
+      responses:
+        201:
+          description: Ny definition skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DefinitionMatningstyp"
+  '/definitionmatningstyp/{id}':
+    get:
+      summary: Hämta en definition av en mätningstyp
+      description: Hämta en definition av en mätningstyp
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: En definition av en mätningstyp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DefinitionMatningstyp"
+    put:
+      summary: Uppdatera en befintlig definition
+      description: Uppdatera en befintlig definition
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Definitionens nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveDefinitionMatningstyp"
+      responses:
+        204:
+          description: Definitionen uppdaterades
+    delete:
+      summary: Ta bort en definition
+      description: Ta bort en definition. Går endast att göra om den inte används av någon mätningstyp.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Definitionen togs bort
+    options:
+      summary: Visar vilka operationer som är tillåtna på definitionen
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på definitionen
+  '/gransvarde':
+    post:
+      summary: Lägg till ett nytt gränsvärde
+      description: Lägg till ett nytt gränsvärde
+      requestBody:
+        description: Det nya gränsvärdet
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveGransvarde"
+      responses:
+        201:
+          description: Nytt gränsvärde skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Gransvarde"
+  '/gransvarde/{id}':
+    get:
+      summary: Hämta ett befintligt gränsvärde
+      description: Hämta ett befintligt gränsvärde
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Gränsvärdet hämtades.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Gransvarde"
+    put:
+      summary: Uppdatera ett befintligt gränsvärde
+      description: Uppdatera ett befintligt gränsvärde
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Gränsvärdets nya värden
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveGransvarde"
+      responses:
+        204:
+          description: Gränsvärdet uppdaterades
+    delete:
+      summary: Ta bort ett gränsvärde
+      description: Ta bort ett gränsvärde
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Gränsvärdet togs bort
+    options:
+      summary: Visar vilka operationer som är tillåtna på gränsvärdet
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på gränsvärdet
+  '/gransvarde/{id}/canDeactivate':
+    get:
+      summary: Kolla om ett gränsvärde kan deaktiveras
+      description: Kolla om ett gränsvärde kan deaktiveras
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Om man kan deaktivera gränsvärdet
+          content:
+            application/json:
+              schema:
+                type: boolean
+  '/larmniva':
+    get:
+      summary: Hämta larmnivåer
+      description: Hämta alla larmnivåer
+      responses:
+        200:
+          description: En lista med larmnivåer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Larmniva"
+    post:
+      summary: Lägg till en ny larmnivå
+      description: Lägg till en ny larmnivå
+      requestBody:
+        description: Den nya larmnivån
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveLarmniva"
+      responses:
+        201:
+          description: Ny larmnivå skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Larmniva"
+  '/larmniva/{id}':
+    put:
+      summary: Uppdatera en befintlig larmnivå
+      description: Uppdatera en befintlig larmnivå
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Larmnivåns nya värden
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SaveLarmniva"
+      responses:
+        204:
+          description: Larmnivån uppdaterades
+    delete:
+      summary: Ta bort en larmnivå
+      description: Ta bort en larmnivå
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Larmnivån togs bort
+    options:
+      summary: Visar vilka operationer som är tillåtna på larmnivån
+      description: Visar vilka operationer av GET, PUT, DELETE, OPTIONS som får utföras
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Information om vilka operationer som är tillåtna på larmnivån
+  '/matrunda':
+    get:
+      summary: Hämta mätrundor för en sida
+      description: Hämta en sida med mätrundor
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - name: onlyAktiva
+          in: query
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Lista med mätrundor
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatrundaPage"
+    post:
+      summary: Lägg till en ny mätrunda
+      description: Lägg till en ny mätrunda
+      requestBody:
+        description: Den nya mätrundan
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatrunda"
+      responses:
+        201:
+          description: Mätrundan som skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matrunda"
+        409:
+          description: Mätrunda finns redan med namnet
+  '/matrunda/{id}':
+    get:
+      summary: Hämta en befintlig mätrunda
+      description: Hämta en befintlig mätrunda
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: En befintlig mätrunda
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matrunda"
+        404:
+          description: Mätrundan hittades inte
+    put:
+      summary: Uppdatera en befintlig mätrunda
+      description: Uppdatera en befintlig mätrunda
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Mätrundans nya uppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditMatrunda"
+      responses:
+        200:
+          description: Den uppdaterade mätrundan
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Matrunda"
+        404:
+          description: Mätrundan hittades inte
+    delete:
+      summary: Ta bort en befintlig mätrunda
+      description: Ta bort en befintlig mätrunda
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Mätrundan togs bort
+        404:
+          description: Mätrundan hittades inte
+  '/matrunda/{id}/faltprotokoll.xlsx':
+    get:
+      summary: Hämta fältprotokoll
+      description: Hämta fältprotokoll för mätrunda. Avsett för analog inmatning av mätvärden.
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: startDate
+          in: query
+          schema:
+            type: string
+            format: date
+          required: false
+      responses:
+        200:
+          description: En excelfil
+          content:
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                type: string
+                format: binary
+  '/matrunda/{id}/senastematningar':
+    get:
+      summary: Hämta senast gjorda mätningar.
+      description: Hämta senast gjorda mätningar för alla mätningstyper för en viss mätrunda.
+      operationId: senasteMatningarGet
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SenasteMatningar"
+  '/matrunda/{id}/matningstyper':
+    get:
+      summary: Hämta alla de mätningstyper som man ska rapportera mätningar för inom en viss mätrunda
+      description: Mätningstyperna innehåller den informations som behövs vid inrapportering av mätdata när en mätrunda ska utföras. Mätningstyperna är sorterade i den ordning som mätrundan specifierar.
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: startDate
+          in: query
+          schema:
+            type: string
+            format: date
+          required: false
+      responses:
+        '200':
+          description: Lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RapporteringMatningstyp"
+  '/matrunda/matobjekt/{id}/matningstyper':
+    get:
+      summary: Hämta alla de mätningstyper som man kan rapportera på från ett mätobjekt
+      description: Mätningstyperna innehåller den informations som behövs vid inrapportering av mätdata när en mätrunda ska utföras.
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+        - name: startDate
+          in: query
+          schema:
+            type: string
+            format: date
+          required: false
+      responses:
+        '200':
+          description: Lista med information om mätningstyper/mätobjekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RapporteringMatningstyp"
+  '/matningslogg/{matningId}':
+    get:
+      operationId: matningsloggGet
+      summary: Hämta en sida av mätningsloggen för en mätning
+      description: Hämta en sida av mätningsloggen för en mätning
+      parameters:
+        - name: matningId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        '200':
+          description: Paginerad lista
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningsloggPage"
+
+  '/export/matningstyper':
+    post:
+      summary: Lista mätningstyper att exportera
+      description: Används istället för GET vid riktigt stora filter
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - $ref: "#/components/parameters/fromDatum"
+        - $ref: "#/components/parameters/tomDatum"
+      requestBody:
+        description: Filtret som JSON-objekt
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Paginerad lista
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MatningstypAntalMatningarPage"
+  '/export/export':
+    post:
+      operationId: matningstypExport
+      summary: Exporter relaterade till mätningstyper
+      description: Hämta en specifik rapport baserat på ett urval av mätningstyper
+      parameters:
+        - in: query
+          name: rapportTyp
+          required: true
+          schema:
+            $ref: "#/components/schemas/RapportTypEnum"
+        - $ref: "#/components/parameters/fromDatum"
+        - $ref: "#/components/parameters/tomDatum"
+      requestBody:
+        description: Filtret som JSON-objekt
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Den genererade exporten
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
+  '/rapport':
+    get:
+      summary: Hämta rapporter för en sida
+      description: Hämta en sida med rapporter
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+      responses:
+        '200':
+          description: Lista med rapporter
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RapportPage"
+
+  '/rapport/{id}':
+    get:
+      summary: Hämta en rapport
+      description: Hämta en rapport
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        200:
+          description: Rapporten
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Rapport"
+        404:
+          description: Rapporten hittades inte
+        500:
+          description: Gick inte att hämta rapporten
+
+    delete:
+      summary: Ta bort en rapport
+      description: Ta bort en rapport
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        204:
+          description: Rapporten togs bort
+  '/rapport/{id}/pdf':
+    get:
+      summary: Hämta en rapportsida i PDF-format
+      description: Hämta en rapportsida i PDF-format
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Rapportsida i PDF-format
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+  '/rapport/settings':
+    post:
+      summary: Lägg till en ny rapportinställning
+      description: Lägg till en ny rapportinställning
+      requestBody:
+        description: Rapportinställningar
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RapportSettings"
+      responses:
+        201:
+          description: Ny meddelande skapades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RapportSettings"
+  '/rapport/settings/{id}':
+    get:
+      summary: Hämta en rapportinställning
+      description: Hämta en rapportinställning
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Rapporten
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RapportSettings"
+        404:
+          description: Rapporten hittades inte
+        400:
+          description: Ogiltigt värde i rapportinställning
+    put:
+      summary: Uppdatera en befintlig rapportinställning
+      description: Uppdatera en befintlig rapportinställning
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        description: Den nya rapportinställningen
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RapportSettings"
+      responses:
+        200:
+          description: Rapportinställning uppdaterades
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RapportSettings"
+        400:
+          description: Ogiltigt värde i rapportinställning
+  '/larm':
+    post:
+      summary: Hämta information om larm och gränsvärden
+      description: Hämta information om larm och gränsvärden
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: larmStatus
+          schema:
+            type: integer
+        - in: query
+          name: egnaLarm
+          required: true
+          schema:
+            type: boolean
+        - in: query
+          name: larmTillAnvandargruppIds
+          schema:
+            type: array
+            items:
+              type: integer
+        - in: query
+          name: larmniva
+          schema:
+            type: integer
+      requestBody:
+        description: Filtret som JSON-objekt
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Paginerad lista
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LarmPage"
+        404:
+          description: Ingen användare kopplad i databasen
+
+  '/larm/kvittera':
+    post:
+      operationId: larmKvittera
+      summary: Kvittera en mängd larm i ett svep
+      description: Kvittera en mängd larm i ett svep
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int64
+            minItems: 1
+      responses:
+        204:
+          description: Alla larm kvitterades
+  '/paminnelser':
+    post:
+      summary: Hämta information om påminnelser
+      description: Hämta information om påminnelser
+      parameters:
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/size"
+        - $ref: "#/components/parameters/sortProperty"
+        - $ref: "#/components/parameters/sortDirection"
+        - in: query
+          name: onlyForsenade
+          schema:
+            type: boolean
+      requestBody:
+        description: Filtret som JSON-objekt
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MatningstypSearchFilter"
+      responses:
+        '200':
+          description: Paginerad lista
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaminnelsePage"
+  '/scheduler/jobs':
+    get:
+      summary: Hämta alla job
+      responses:
+        '200':
+          description: All jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SchedulerJob"
+  '/scheduler/startJob':
+    post:
+      summary: Start job now
+      description: Start job now
+      parameters:
+        - in: query
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Jobbet startatd
+
+components:
+  parameters:
+    id:
+      name: id
+      in: path
+      schema:
+        type: integer
+      required: true
+    page:
+      in: query
+      name: page
+      required: true
+      schema:
+        type: integer
+        default: 0
+      description: Vilken resultatsida som ska hämtas
+    size:
+      in: query
+      name: size
+      required: false
+      schema:
+        type: integer
+      description: Antal element per sida
+    sortProperty:
+      in: query
+      name: sortProperty
+      required: false
+      schema:
+        type: string
+      description: Namnet på den property som man ska sortera efter
+    sortDirection:
+      in: query
+      name: sortDirection
+      required: false
+      schema:
+        type: string
+        enum:
+          - asc
+          - desc
+        default: asc
+      description: Sorteringsriktning
+    fromDatum:
+      in: query
+      name: fromDatum
+      required: false
+      schema:
+        type: string
+        format: date-time
+      description: Fr.o.m datum för sökning
+    tomDatum:
+      in: query
+      name: tomDatum
+      required: false
+      schema:
+        type: string
+        format: date-time
+      description: T.o.m datum för sökning
+  schemas:
+    SenasteMatningar:
+      type: object
+      additionalProperties:
+        $ref: "#/components/schemas/Matning"
+    UserDetails:
+      type: object
+      properties:
+        username:
+          type: string
+          x-faker: internet.userName
+          example: user123
+        fullname:
+          type: string
+          x-faker: name.findName
+          example: Mats Mätare
+        company:
+          type: string
+          example: Metria AB
+        authorities:
+          type: array
+          items:
+            type: string
+            example: ROLE_MÄTRAPPORTÖR
+        active:
+          type: boolean
+          example: true
+        email:
+          type: string
+          example: mats.matare@metria.se
+        defaultKartlagerId:
+          type: integer
+          example: 7
+    MeddelandePage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          x-faker: random.number
+          example: 2
+        totalElements:
+          type: integer
+          x-faker: random.number
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          x-faker: random.number
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Meddelande"
+    Meddelande:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+          description: Ignoreras vid redigering
+        rubrik:
+          type: string
+          x-faker: lorem.sentence
+          example: "Rubrik"
+        datum:
+          type: string
+          format: date
+        meddelande:
+          type: string
+          x-faker: lorem.paragraphs
+          example: "Ett meddelande på startsidan."
+        url:
+          type: string
+          x-faker: internet.url
+    EditMeddelande:
+      type: object
+      properties:
+        rubrik:
+          type: string
+          x-faker: lorem.sentence
+          example: "Rubrik"
+        datum:
+          type: string
+          format: date
+        meddelande:
+          type: string
+          x-faker: lorem.paragraphs
+          example: "Ett meddelande på startsidan."
+        url:
+          type: string
+          x-faker: internet.url
+    Count:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 34
+    AnvandarePage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Anvandare"
+    Anvandare:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 17
+        namn:
+          type: string
+          x-faker: name.findName
+          maxLength: 130
+          example: Mats Mätare
+        foretag:
+          type: string
+          maxLength: 60
+          example: Metria AB
+        aktiv:
+          type: boolean
+          example: true
+        inloggningsnamn:
+          type: string
+          minLength: 1
+          maxLength: 130
+          x-faker: internet.userName
+          example: user123
+        behorighet:
+          type: integer
+          example: 2
+        defaultKartlagerId:
+          type: integer
+          example: 3
+        skickaEpost:
+          type: boolean
+          example: true
+        epost:
+          type: string
+          maxLength: 130
+          example: mats.matare@metria.se
+        inloggadSenast:
+          type: string
+          format: date-time
+        anvandargrupper:
+          type: array
+          items:
+            type: integer
+    EditAnvandare:
+      type: object
+      required:
+        - inloggningsnamn
+        - aktiv
+        - behorighet
+        - skickaEpost
+        - anvandargrupper
+      properties:
+        namn:
+          type: string
+          x-faker: name.findName
+          maxLength: 130
+          example: Mats Mätare
+        foretag:
+          type: string
+          maxLength: 60
+          example: Metria AB
+        aktiv:
+          type: boolean
+          example: true
+        inloggningsnamn:
+          type: string
+          minLength: 1
+          maxLength: 130
+          x-faker: internet.userName
+          example: user123
+        behorighet:
+          type: integer
+          example: 2
+        defaultKartlagerId:
+          type: integer
+          example: 3
+        skickaEpost:
+          type: boolean
+          example: true
+        epost:
+          type: string
+          maxLength: 130
+          example: mats.matare@metria.se
+        anvandargrupper:
+          type: array
+          items:
+            type: integer
+    AnvandargruppPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Anvandargrupp"
+    Anvandargrupp:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        namn:
+          type: string
+          example: Akalla-Barkarby
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Ansvarig för mätdata för Akalla-Barkarby
+        antalAnvandare:
+          type: integer
+          example: Antalet användare i gruppen
+    EditAnvandargrupp:
+      type: object
+      required:
+        - namn
+        - beskrivning
+      properties:
+        namn:
+          type: string
+          example: Akalla-Barkarby
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Ansvarig för mätdata för Akalla-Barkarby
+    Matansvar:
+      type: object
+      properties:
+        matobjekt:
+          type: string
+        matobjektId:
+          type: number
+        matningstyp:
+          type: string
+        fastighet:
+          type: string
+    MatansvarPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Matansvar"
+    Larm:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        matobjektNamn:
+          type: string
+        matobjektId:
+          type: integer
+        matningstypNamn:
+          type: string
+        matningstypDecimaler:
+          type: integer
+        matobjektTyp:
+          type: string
+        matobjektFastighet:
+          type: string
+        avlastDatum:
+          type: string
+          format: date-time
+        varde:
+          type: number
+          format: double
+        enhet:
+          type: string
+        larmnivaNamn:
+          type: string
+        larmnivaId:
+          type: integer
+        typAvKontroll:
+          type: integer
+        gransvarde:
+          type: number
+          format: double
+        gransvardeId:
+          type: integer
+        anvandargruppNamn:
+          type: string
+        anvandargruppId:
+          type: integer
+        status:
+          type: integer
+        kvitteradDatum:
+          type: string
+          format: date-time
+        kvitteradAvId:
+          type: integer
+        kvitteradAv:
+          type: string
+        matningId:
+          type: integer
+          format: int64
+    LarmPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Larm"
+    ArrayOfKartlager:
+      type: array
+      items:
+        $ref: '#/components/schemas/Kartlager'
+    Kartlagergrupp:
+      type: object
+      properties:
+        namn:
+          type: string
+          example: Projekt
+        kartlager:
+          type: array
+          items:
+            $ref: "#/components/schemas/Kartlager"
+    Kartlager:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 17
+        namn:
+          type: string
+          example: Grundkarta
+        grupp:
+          type: string
+          example: Projekt
+        visa:
+          type: boolean
+        beskrivning:
+          type: string
+          example: Systemets bakgrundskarta
+        ordning:
+          type: integer
+        andringsbar:
+          type: boolean
+        kartlagerfiler:
+          type: array
+          items:
+            $ref: "#/components/schemas/Kartlagerfil"
+    Kartlagerfil:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        filnamn:
+          type: string
+        stil:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+    SaveKartlager:
+      type: object
+      properties:
+        namn:
+          type: string
+        grupp:
+          type: string
+        visa:
+          type: boolean
+        beskrivning:
+          type: string
+        kartlagerfiler:
+          type: array
+          items:
+            $ref: "#/components/schemas/SaveKartlagerfil"
+    SaveKartlagerfil:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        filnamn:
+          type: string
+        fil:
+          type: string
+        stil:
+          type: string
+    ArrayOfKallsystem:
+      type: array
+      items:
+        $ref: '#/components/schemas/Kallsystem'
+    Kallsystem:
+      type: object
+      properties:
+        namn:
+          type: string
+        beskrivning:
+          type: string
+        defaultGodkand:
+          type: boolean
+        manuellImport:
+          type: boolean
+        tips:
+          type: string
+    ValidationResult:
+      type: object
+      properties:
+        result:
+          type: boolean
+    Systemlogg:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+          example: Användare har loggat in
+        handelse:
+          type: integer
+          example: 2
+        anvandarnamn:
+          type: string
+          x-faker: name.findName
+          example: Mats Mätare
+        datum:
+          type: string
+          format: date-time
+    SystemloggPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Systemlogg"
+    MatobjektPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ListMatobjekt"
+    ListMatobjekt:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        typ:
+          type: integer
+          description: Typ av mätobjekt
+        namn:
+          type: string
+          example: 16FUT012RB
+        aktiv:
+          type: boolean
+        fastighet:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227
+        lage:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227. Kyrkvägen 18. På gräsmatta ungefär 4 från elskåp i fasaden
+    MatobjektMapinfo:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        typ:
+          type: integer
+          description: Typ av mätobjekt
+        typNamn:
+          type: string
+          description: Typ av mätobjekt i text
+        namn:
+          type: string
+          example: 16FUT012RB
+        aktiv:
+          type: boolean
+        fastighet:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227
+        lage:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227. Kyrkvägen 18. På gräsmatta ungefär 4 från elskåp i fasaden
+        posN:
+          type: number
+          example: 6579844.380
+        posE:
+          type: number
+          example: 154145.810
+        kartsymbol:
+          type: number
+          example: 3
+        bifogadBildThumbnail:
+          type: string
+          description: Länk till bifogad bilds thumbnail
+        matningstypIds:
+          type: array
+          items:
+            type: integer
+    Matobjekt:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        typ:
+          type: integer
+          description: Typ av mätobjekt
+        namn:
+          type: string
+          example: 16FUT012RB
+        aktiv:
+          type: boolean
+        kontrollprogram:
+          type: boolean
+        posN:
+          type: number
+          example: 6579844.380
+        posE:
+          type: number
+          example: 154145.810
+        fastighet:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227
+        lage:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227. Kyrkvägen 18. På gräsmatta ungefär 4 från elskåp i fasaden
+        bifogadBildId:
+          type: string
+          format: uuid
+          description: Id för bifogad bild
+        bifogadBildLink:
+          type: string
+          description: Länk till bifogad bild
+        bifogadBildThumbnail:
+          type: string
+          description: Länk till bifogad bilds thumbnail
+        matobjektgrupper:
+          type: array
+          items:
+            type: integer
+        matrundor:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatningstypMatrunda"
+
+        dokument:
+          type: array
+          items:
+            type: string
+            format: uuid
+    EditMatobjekt:
+      type: object
+      required:
+        - typ
+        - namn
+        - aktiv
+        - kontrollprogram
+        - posN
+        - posE
+      properties:
+        typ:
+          type: integer
+          description: Typ av mätobjekt
+        namn:
+          type: string
+          example: 16FUT012RB
+        aktiv:
+          type: boolean
+        kontrollprogram:
+          type: boolean
+        posN:
+          type: number
+          example: 6579844.380
+        posE:
+          type: number
+          example: 154145.810
+        fastighet:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227
+        lage:
+          type: string
+          x-faker: lorem.paragraph
+          example: KYRKBYN 1:227. Kyrkvägen 18. På gräsmatta ungefär 4 från elskåp i fasaden
+        bifogadBildId:
+          type: string
+          format: uuid
+          description: Id för bifogad bild
+        matobjektgrupper:
+          type: array
+          items:
+            type: integer
+        dokument:
+          type: array
+          items:
+            type: string
+            format: uuid
+    MatobjektgruppPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ListMatobjektgrupp"
+    ListMatobjektgrupp:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        kategori:
+          type: integer
+        namn:
+          type: string
+          example: FUT4 Energibrunnar Kyrkbyn
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Indelning för granskning, Energibrunnar
+        antalMatobjekt:
+          type: integer
+          example: Antalet mätobjekt som tillhör gruppen
+    Matobjektgrupp:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        kategori:
+          type: integer
+        namn:
+          type: string
+          example: FUT4 Energibrunnar Kyrkbyn
+        kartsymbol:
+          type: integer
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Indelning för granskning, Energibrunnar
+        matobjekt:
+          type: array
+          items:
+            type: integer
+    EditMatobjektgrupp:
+      type: object
+      required:
+        - namn
+        - kategori
+        - kartsymbol
+      properties:
+        kategori:
+          type: integer
+        namn:
+          type: string
+          example: FUT4 Energibrunnar Kyrkbyn
+        kartsymbol:
+          type: integer
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Indelning för granskning, Energibrunnar
+        matobjekt:
+          type: array
+          items:
+            type: integer
+    Matningstyp:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        definitionMatningstypId:
+          type: integer
+        matansvarigAnvandargruppId:
+          type: integer
+          x-faker: random.number
+        matintervallAntalGanger:
+          type: integer
+        matintervallTidsenhet:
+          type: integer
+        paminnelseDagar:
+          type: integer
+        instrument:
+          type: string
+        granskasAutomatiskt:
+          type: boolean
+        granskasMin:
+          type: number
+          format: double
+        granskasMax:
+          type: number
+          format: double
+        berakningKonstant:
+          type: number
+          format: double
+        berakningReferensniva:
+          type: number
+          format: double
+        maxPejlbartDjup:
+          type: number
+          format: double
+        fixpunkt:
+          type: string
+        typ:
+          type: string
+          description: Typ av mätning
+        enhet:
+          type: string
+          example: l/min
+        storhet:
+          type: string
+          example: Flöde
+        beraknadEnhet:
+          type: string
+          example: l/min
+        beraknadStorhet:
+          type: string
+          example: Flöde
+        decimaler:
+          type: integer
+        senasteVarde:
+          type: string
+        senasteVardeDatum:
+          type: string
+          format: date-time
+        aktiv:
+          type: boolean
+        ejGranskade:
+          type: integer
+    SaveMatningstyp:
+      type: object
+      required:
+        - matintervallAntalGanger
+        - matintervallTidsenhet
+        - aktiv
+        - paminnelseDagar
+      properties:
+        matansvarigAnvandargruppId:
+          type: integer
+          x-faker: random.number
+        matintervallAntalGanger:
+          type: integer
+        matintervallTidsenhet:
+          type: integer
+        paminnelseDagar:
+          type: integer
+        aktiv:
+          type: boolean
+        instrument:
+          type: string
+        granskasAutomatiskt:
+          type: boolean
+        granskasMin:
+          type: number
+          format: double
+        granskasMax:
+          type: number
+          format: double
+        berakningKonstant:
+          type: number
+          format: double
+        berakningReferensniva:
+          type: number
+          format: double
+        maxPejlbartDjup:
+          type: number
+          format: double
+        fixpunkt:
+          type: string
+        enhet:
+          type: string
+          example: l/min
+        decimaler:
+          type: integer
+    DefinitionMatningstyp:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        matobjektTyp:
+          type: integer
+        berakningstyp:
+          type: string
+        namn:
+          type: string
+          description: Namn på mätningstypen
+        storhet:
+          type: string
+          description: Storhet som används för uppmätt värde
+        enhet:
+          type: string
+          example: l/min
+          description: Enhet som används för uppmätt värde
+        decimaler:
+          type: integer
+          example: 2
+        beraknadStorhet:
+          type: string
+          example: Nivå
+          description: Eventuell storhet som används för beräknat värde
+        beraknadEnhet:
+          type: string
+          example: m
+          description: Eventuell enhet som används för beräknat värde
+        beskrivning:
+          type: string
+          description: Beskrivning för mätningstypen
+        automatiskInrapportering:
+          type: boolean
+          description: Anger om mätningstypen stödjer automatisk inrapportering
+        automatiskGranskning:
+          type: boolean
+          description: Anger om mätningstypen stödjer automatisk granskning
+        andringsbar:
+          type: boolean
+          description: Anger om mätningstypen kan ändras
+
+    SaveDefinitionMatningstyp:
+      type: object
+      required:
+        - matobjektTyp
+        - namn
+        - enhet
+        - decimaler
+        - automatiskInrapportering
+      properties:
+        matobjektTyp:
+          type: integer
+        namn:
+          type: string
+        enhet:
+          type: string
+        decimaler:
+          type: integer
+        automatiskInrapportering:
+          type: boolean
+        automatiskGranskning:
+          type: boolean
+        beskrivning:
+          type: string
+    DefinitionMatningstypPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/DefinitionMatningstyp"
+    Bifogadfil:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          x-faker: random.uuid
+        mimeTyp:
+          type: string
+          example: image/jpeg
+        filnamn:
+          type: string
+          description: Bifogade filens namn
+          example: bild.png
+        skapad_datum:
+          type: string
+          format: date-time
+    EditBifogadfil:
+      type: object
+      properties:
+        filnamn:
+          type: string
+          description: Bifogade filens namn
+          example: bild.png
+        mimeTyp:
+          type: string
+          example: image/jpeg
+    HandelsePage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Handelse"
+    Handelse:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        benamning:
+          type: string
+          description: Händelsens benämning
+          example: Checkpoint
+        beskrivning:
+          type: string
+          description: Händelsens beskrivning
+          example: Checkpoint flyttad från A till B.
+        foretag:
+          type: string
+          example: Metria AB
+        datum:
+          type: string
+          format: date-time
+        bifogadebilder:
+          type: array
+          items:
+            $ref: "#/components/schemas/Bifogadfil"
+    SaveHandelse:
+      type: object
+      properties:
+        benamning:
+          type: string
+          description: Händelsens benämning
+          example: Checkpoint
+        beskrivning:
+          type: string
+          description: Händelsens beskrivning
+          example: Checkpoint flyttad från A till B.
+        datum:
+          type: string
+          format: date-time
+        bifogadebilderIds:
+          type: array
+          items:
+            type: string
+            format: uuid
+    MatrundaPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ListMatrunda"
+    ListMatrunda:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Mätrundans id
+          x-faker: random.number
+        namn:
+          type: string
+          description: Mätrundans namn
+          example: Mätrunda 2
+        beskrivning:
+          type: string
+          description: Mätrundans beskrivning
+          example: Mätning av grundvattennivå i område X.
+        aktiv:
+          type: boolean
+          description: Om mätrundan är aktiv eller inte.
+        antalMatobjekt:
+          type: integer
+          x-faker: random.number
+          description: Antalet mätobjekt på mätrundan.
+    Gransvarde:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        matningstypId:
+          type: integer
+          x-faker: random.number
+        typAvKontroll:
+          type: integer
+          x-faker: random.number
+        gransvarde:
+          type: number
+          format: double
+        larmnivaId:
+          type: integer
+          x-faker: random.number
+        larmTillAnvandargruppId:
+          type: integer
+          x-faker: random.number
+        matobjektId:
+          type: integer
+        matobjektNamn:
+          type: string
+        larmnivaNamn:
+          type: string
+        aktiv:
+          type: boolean
+    SaveGransvarde:
+      type: object
+      required:
+        - matningstypId
+        - typAvKontroll
+        - gransvarde
+        - larmnivaId
+      properties:
+        matningstypId:
+          type: integer
+        typAvKontroll:
+          type: integer
+        gransvarde:
+          type: number
+          format: double
+        larmnivaId:
+          type: integer
+        larmTillAnvandargruppId:
+          type: integer
+        aktiv:
+          type: boolean
+    Larmniva:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        namn:
+          type: string
+        beskrivning:
+          type: string
+    SaveLarmniva:
+      type: object
+      required:
+        - namn
+        - beskrivning
+      properties:
+        namn:
+          type: string
+        beskrivning:
+          type: string
+    Matrunda:
+      type: object
+      properties:
+        id:
+          type: integer
+          x-faker: random.number
+        namn:
+          type: string
+          example: Blåsut_Slakthuset_Gullmarsplan_CK
+        aktiv:
+          type: boolean
+          description: Om mätrundan är aktiv eller inte.
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Mätrunda för grundvatten Blåsut/Slakthuset och Gullmarsplan.
+        matningstyper:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatrundaMatningstyp"
+    EditMatrunda:
+      type: object
+      required:
+        - namn
+        - aktiv
+        - kartsymbol
+      properties:
+        namn:
+          type: string
+          example: Blåsut_Slakthuset_Gullmarsplan_CK
+        aktiv:
+          type: boolean
+          description: Om mätrundan är aktiv eller inte.
+        beskrivning:
+          type: string
+          x-faker: lorem.paragraph
+          example: Mätrunda för grundvatten Blåsut/Slakthuset och Gullmarsplan.
+        matningstyper:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatrundaMatningstyp"
+    MatrundaMatningstyp:
+      type: object
+      required:
+        - matningstypId
+        - ordning
+      properties:
+        matningstypId:
+          type: integer
+        ordning:
+          type: integer
+    MatningstypMatrunda:
+      type: object
+      required:
+        - matningstypId
+        - matrundaId
+      properties:
+        matningstypId:
+          type: integer
+        matrundaId:
+          type: integer
+    RapporteringMatningstypPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/RapporteringMatningstyp"
+    RapporteringMatningstyp:
+      type: object
+      properties:
+        matobjektId:
+          type: integer
+        matningstypId:
+          type: integer
+        matobjekt:
+          type: string
+        matningstyp:
+          type: string
+        berakningstyp:
+          type: string
+        lage:
+          type: string
+        fastighet:
+          type: string
+        storhet:
+          type: string
+        enhet:
+          type: string
+        automatiskInrapportering:
+          type: boolean
+        instrument:
+          type: string
+        varde1:
+          type: string
+        varde2:
+          type: string
+        varde3:
+          type: string
+        status1:
+          type: integer
+        status2:
+          type: integer
+        status3:
+          type: integer
+        felkod1:
+          type: string
+        felkod2:
+          type: string
+        felkod3:
+          type: string
+        fixpunkt:
+          type: string
+        maxPejlbartDjup:
+          type: number
+          format: double
+        bifogadBildId:
+          type: string
+          format: uuid
+        bifogadBildLink:
+          type: string
+          description: Länk till bifogad bild
+        bifogadBildThumbnail:
+          type: string
+          description: Länk till bifogad bilds thumbnail
+        senasteAvlastDatum:
+          type: string
+          format: date-time
+    MatningstypMatobjektPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatningstypMatobjekt"
+    MatningstypMatobjekt:
+      type: object
+      properties:
+        matningstypId:
+          type: integer
+        matningstypNamn:
+          type: string
+        matningstypStorhet:
+          type: string
+        matningstypAktiv:
+          type: boolean
+        matobjektId:
+          type: integer
+        matobjektNamn:
+          type: string
+        matobjektFastighet:
+          type: string
+        matobjektLage:
+          type: string
+        matobjektAktiv:
+          type: boolean
+        aktiv:
+          type: boolean
+          description: Om både mätningstypen och mätobjektet är aktiva eller inte.
+        ejGranskade:
+          type: integer
+          description: Antal ej granskade mätningar
+    Matning:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        matningstypId:
+          type: integer
+        avlastDatum:
+          type: string
+          format: date-time
+        avlastVarde:
+          type: number
+          format: double
+        kommentar:
+          type: string
+        felkod:
+          type: string
+        rapportor:
+          type: string
+        inomDetektionsomrade:
+          type: integer
+        beraknatVarde:
+          type: number
+          format: double
+        status:
+          type: integer
+    MatningSaveResult:
+      type: object
+      properties:
+        matning:
+          $ref: "#/components/schemas/Matning"
+        larm:
+          type: array
+          items:
+            $ref: "#/components/schemas/Larm"
+    SaveMatning:
+      type: object
+      required:
+        - avlastDatum
+      properties:
+        avlastDatum:
+          type: string
+          format: date-time
+        avlastVarde:
+          type: number
+          format: double
+        kommentar:
+          type: string
+        felkod:
+          type: string
+        rapportor:
+          type: string
+        inomDetektionsomrade:
+          type: integer
+    ReviewMatning:
+      type: object
+      properties:
+        avlastVarde:
+          type: number
+          format: double
+        kommentar:
+          type: string
+        status:
+          type: integer
+        operation:
+          type: integer
+    ImportMatning:
+      type: object
+      properties:
+        matobjekt:
+          type: string
+        matningstyp:
+          type: string
+        storhet:
+          type: string
+        instrument:
+          type: string
+        avlastDatum:
+          type: string
+        avlastVarde:
+          type: string
+        enhetAvlast:
+          type: string
+        enhetBeraknat:
+          type: string
+        beraknatVarde:
+          type: string
+        felkod:
+          type: string
+        kommentar:
+          type: string
+        inomDetektionsomrade:
+          type: string
+        matobjektId:
+          type: integer
+        matningstypId:
+          type: integer
+        importFel:
+          type: array
+          items:
+            $ref: "#/components/schemas/ImportError"
+    ImportError:
+      type: object
+      properties:
+        property:
+          type: string
+        error:
+          type: string
+    MatningPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+          format: int64
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Matning"
+    MatningDataSeries:
+      properties:
+        matobjektId:
+          type: integer
+        matningstypId:
+          type: integer
+        matobjektNamn:
+          type: string
+        matningstypNamn:
+          type: string
+        storhet:
+          type: string
+        enhet:
+          type: string
+        decimaler:
+          type: integer
+        beraknadStorhet:
+          type: string
+        beraknadEnhet:
+          type: string
+        yAxisLabel:
+          type: string
+        graftyp:
+          type: integer
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              status:
+                type: integer
+              avlastDatum:
+                type: number
+                format: int64
+              varde:
+                type: number
+                format: double
+              felkod:
+                type: string
+    AnalysPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+          format: int64
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Analys"
+    Analys:
+      type: object
+      properties:
+        id:
+          type: integer
+        analysDatum:
+          type: string
+          format: date-time
+        rapportor:
+          type: string
+        kommentar:
+          type: string
+        rapporter:
+          type: array
+          items:
+            $ref: "#/components/schemas/Bifogadfil"
+        matningar:
+          type: array
+          items:
+            $ref: "#/components/schemas/Matning"
+    EditAnalys:
+      type: object
+      properties:
+        analysDatum:
+          type: string
+          format: date-time
+        rapportor:
+          type: string
+        kommentar:
+          type: string
+        rapporter:
+          type: array
+          items:
+            type: string
+            format: uuid
+        matningar:
+          type: array
+          items:
+            $ref: "#/components/schemas/Matning"
+    Matningslogg:
+      type: object
+      properties:
+        beskrivning:
+          type: string
+        handelse:
+          type: integer
+        loggatAvId:
+          type: integer
+        loggatDatum:
+          type: string
+          format: date-time
+        matningId:
+          type: integer
+          format: int64
+    MatningsloggPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+          format: int64
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Matningslogg"
+    RapportPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+          example: 2
+        totalElements:
+          type: integer
+          format: int64
+          example: 22
+        numberOfElements:
+          type: integer
+          example: 11
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/ListRapport"
+    ListRapport:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Rapportens id
+          x-faker: random.number
+        namn:
+          type: string
+        aktiv:
+          type: boolean
+        beskrivning:
+          type: string
+        senastSkickad:
+          type: string
+          format: date-time
+    Rapport:
+      type: object
+      properties:
+        rubrik:
+          type: string
+        information:
+          type: string
+        lagesbildId:
+          type: string
+          format: uuid
+        grafer:
+          type: array
+          items:
+            $ref: "#/components/schemas/RapportGraf"
+    RapportGraf:
+      type: object
+      properties:
+        rubrik:
+          type: string
+        information:
+          type: string
+        matningar:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatningDataSeries"
+        referensdata:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatningDataSeries"
+        gransvarden:
+          type: array
+          items:
+            $ref: "#/components/schemas/Gransvarde"
+    RapportSettings:
+      type: object
+      properties:
+        id:
+          type: integer
+        namn:
+          type: string
+        aktiv:
+          type: boolean
+        mejlmeddelande:
+          type: string
+        beskrivning:
+          type: string
+        dataperiodFrom:
+          type: string
+        rorelsereferensdatum:
+          type: string
+          format: date-time
+        tidsintervall:
+          type: string
+        startDatum:
+          type: string
+          format: date-time
+        inledningRubrik:
+          type: string
+        inledningInformation:
+          type: string
+        lagesbild:
+          type: string
+          format: uuid
+        senastSkickad:
+          type: string
+          format: date-time
+        skapadDatum:
+          type: string
+          format: date-time
+        andradDatum:
+          type: string
+          format: date-time
+        rapportGraf:
+          type: array
+          items:
+            $ref: "#/components/schemas/RapportGrafSettings"
+        rapportMottagare:
+          type: array
+          items:
+            $ref: "#/components/schemas/RapportMottagare"
+        andradAvId:
+          type: integer
+    RapportGrafSettings:
+      type: object
+      properties:
+        id:
+          type: integer
+        rubrik:
+          type: string
+        info:
+          type: string
+        matningstyper:
+          type: array
+          items:
+            type: integer
+        gransvarden:
+          type: array
+          items:
+            type: integer
+    RapportMottagare:
+      type: object
+      properties:
+        namn:
+          type: string
+        epost:
+          type: string
+    RapportTypEnum:
+      type: string
+      enum:
+        - matobjekt
+        - matdata
+        - inlackage
+        - vattenkemi
+    MatningstypSearchFilter:
+      type: object
+      properties:
+        includeIds:
+          type: array
+          items:
+            type: integer
+        excludeIds:
+          type: array
+          items:
+            type: integer
+        matobjektgrupper:
+          type: array
+          items:
+            type: integer
+        matrunda:
+          type: integer
+        matobjektIds:
+          type: array
+          items:
+            type: integer
+        matobjektNamn:
+          type: string
+        matobjektTyp:
+          type: integer
+        fastighet:
+          type: string
+        matansvarigAnvandargruppIds:
+          type: array
+          items:
+            type: integer
+        onlyAktiva:
+          type: boolean
+        onlyAktivaMatobjekt:
+          type: boolean
+        excludeAutomatiska:
+          type: boolean
+        matningStatus:
+          type: integer
+        matningFromDatum:
+          type: string
+          format: date-time
+        matningToDatum:
+          type: string
+          format: date-time
+
+    MatningstypAntalMatningarPage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+          format: int64
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatningstypAntalMatningar"
+
+    MatningstypAntalMatningar:
+      type: object
+      properties:
+        matningstypId:
+          type: integer
+        matningstypNamn:
+          type: string
+        matningstypStorhet:
+          type: string
+        matobjektId:
+          type: integer
+        matobjektNamn:
+          type: string
+        matobjektFastighet:
+          type: string
+        matobjektLage:
+          type: string
+        antalMatningar:
+          type: integer
+
+    Paminnelse:
+      type: object
+      properties:
+        matningstypId:
+          type: integer
+        matningstypNamn:
+          type: string
+        matobjektId:
+          type: integer
+        matobjektNamn:
+          type: string
+        matobjektFastighet:
+          type: string
+        matobjektLage:
+          type: string
+        avlastDatum:
+          type: string
+          format: date-time
+        antalGanger:
+          type: integer
+        tidsenhet:
+          type: integer
+        forsenadDagar:
+          type: integer
+
+    PaminnelsePage:
+      type: object
+      properties:
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+          format: int64
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Paminnelse"
+    SchedulerJob:
+      type: object
+      properties:
+        id:
+          type: integer
+        jobName:
+          type: string
+        jobGroup:
+          type: string
+        cronExpression:
+          type: string
+        latestOk:
+          type: string
+          format: date-time
+        latestRun:
+          type: string
+          format: date-time
+        latestStatus:
+          type: integer
+  responses:
+    ValidationResponse:
+      description: Resultatet av valideringen
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ValidationResult"

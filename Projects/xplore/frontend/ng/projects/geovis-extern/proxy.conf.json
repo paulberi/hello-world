@@ -1,0 +1,30 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  },
+
+  "/geoserver": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/admin/geoserver": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/mapproxy": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/storage": {
+    "target": "https://geovis-msb-vk-utv.metria.se",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,42 @@
+.message-container {
+  display: block;
+  padding-top: 20px;
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.title {
+  margin-top: 2rem;
+}
+.createConfig {
+  padding: 2rem 0;
+  background-color: white;
+  mat-form-field{
+    width: calc(100% - 10px);
+  }
+  
+  .right{
+    padding-left: 10px;
+  }
+}
+mat-expansion-panel, .mat-expansion-panel-body {
+  background-color: white !important;
+  border-radius: 0px;
+}
+mat-expansion-panel-header {
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+}
+
+.mat-expansion-panel:first-of-type, .mat-expansion-panel:last-of-type {
+  border-radius: 0px;
+}
+
+.mk-ersattning-fiber-form {
+  margin-bottom: 1.5rem;
+}
+.panel-title {
+  padding-left: 44px;
+}

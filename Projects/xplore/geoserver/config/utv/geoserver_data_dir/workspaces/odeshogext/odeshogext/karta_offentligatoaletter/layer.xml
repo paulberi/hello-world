@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_offentligatoaletter</name>
+  <id>LayerInfoImpl--6ce04a16:1673b497bb0:-7fb9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6ce04a16:1673b497bb0:-7fba</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

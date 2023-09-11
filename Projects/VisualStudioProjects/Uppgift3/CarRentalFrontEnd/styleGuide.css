@@ -1,0 +1,415 @@
+/* home.html */
+
+
+/* Här är en kollection av alla css code som ligger mest inom html filer style taggar. Filen är inte länkad till
+någon html fil utan alla css code i olika html filer är copierad här */
+
+body {
+    background-image: url("carimage.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50% 50%;
+}
+
+.header-content {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.homeButton {
+    margin-left: 55%;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.loginButton {
+    margin-left: 10px;
+    background-color: green;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.logoutButton {
+    margin-left: 10px;
+    background-color: darkred;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.createButton {
+    background-color: cadetblue;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.transactionPage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.leftPane {
+    width: 50%;
+    background: transparent;
+    min-height: 700px;
+    border: transparent;
+}
+
+.rightPane {
+    width: 50%;
+    min-height: 700px;
+    border: transparent;
+    background-image: linear-gradient(to right, white, cyan);
+}
+
+iframe {
+    border: transparent;
+}
+
+.loginSubmit {
+    margin-top: 20px;
+    margin-left: 160px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: green;
+}
+
+.loginForm {
+    margin-top: 150px;
+}
+
+.userLoginText {
+    padding: 2px;
+    margin: 5px
+}
+
+.userPasswordText {
+    padding: 2px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.loginLabel {
+    padding: 10px;
+    margin: 5px;
+}
+
+.createAccountForm {
+    margin-top: 150px;
+}
+
+.createLabel {
+    padding: 10px;
+    margin: 5px;
+}
+
+#createLabel {
+    margin-right: 120px;
+}
+
+.createButtonSubmit {
+    width: 100px;
+    border: 0px;
+    background-color: transparent;
+    margin-left: 180px;
+    padding: 10px;
+}
+
+label {
+    padding: 10px;
+    margin: 5px;
+}
+
+input {
+    padding: 2px;
+    margin: 5px
+}
+
+.nameText {
+    margin-left: 32px;
+}
+
+.addressText {
+    margin-left: 25px;
+}
+
+.passText {
+    margin-left: 15px;
+}
+
+.roleText {
+    margin-left: 50px;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 212px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+    padding: 6px;
+}
+
+td {
+    background: #f9f9f9;
+    padding: 6px;
+}
+
+
+/* viewRentals.html */
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+    padding: 6px;
+}
+
+td {
+    background: #f9f9f9;
+    padding: 6px;
+}
+
+
+/* 
+viewOrEditRentalById.html */
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+    padding: 6px;
+}
+
+td {
+    background: #f9f9f9;
+    padding: 6px;
+}
+
+.submittedId {
+    width: 150px;
+    margin: 5px;
+    height: 30px;
+    border-radius: 5px;
+    border: transparent;
+    margin-left: 140px;
+    background-image: linear-gradient(to left, white, cyan);
+}
+
+
+/* viewAllUsers.html */
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+    padding: 6px;
+}
+
+td {
+    background: #f9f9f9;
+    padding: 6px;
+}
+
+
+/* viewAllCars */
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+    padding: 6px;
+}
+
+td {
+    background: #f9f9f9;
+    padding: 6px;
+}
+
+
+/* renting.html */
+
+.renting {
+    /* margin-top: 100px; */
+}
+
+label {
+    padding: 10px;
+    margin: 5px;
+}
+
+input {
+    padding: 2px;
+    margin: 5px
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 212px;
+    background-image: linear-gradient(to left, white, cyan);
+    border: 0ch;
+}
+
+
+/* registerCar.html */
+
+.createLabel {
+    padding: 10px;
+}
+
+select {
+    margin: 5px;
+    margin-left: 105px;
+}
+
+.modelText {
+    margin: 5px;
+    margin-left: 102px;
+}
+
+.priceText {
+    margin: 5px;
+    margin-left: 60px;
+}
+
+.createButtonSubmit {
+    margin-top: 20px;
+    margin-left: 212px;
+    background-image: linear-gradient(to left, white, cyan);
+    border: 0ch;
+}
+
+input {
+    width: 100px;
+}
+
+
+/* loggedIn.html */
+
+.customerButtons {
+    margin-top: 200px;
+}
+
+button {
+    width: 250px;
+    margin: 5px;
+    height: 30px;
+    border-radius: 5px;
+    border: transparent;
+    background-image: linear-gradient(to left, white, cyan);
+}
+
+.personalPage {
+    margin-top: 200px;
+    width: 100%;
+}
+
+
+/* editCar.html */
+
+.createLabel {
+    padding: 10px;
+}
+
+select {
+    margin: 5px;
+    margin-left: 105px;
+}
+
+.modelText {
+    margin: 5px;
+    margin-left: 102px;
+}
+
+.priceText {
+    margin: 5px;
+    margin-left: 60px;
+}
+
+.createButtonSubmit {
+    margin-top: 20px;
+    margin-left: 212px;
+    background-image: linear-gradient(to left, white, cyan);
+    border: 0ch;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 212px;
+    background-image: linear-gradient(to left, white, cyan);
+    border: 0ch;
+}
+
+input {
+    width: 100px;
+}
+
+
+/* deleteCar.html */
+
+.submit {
+    margin-top: 20px;
+    margin-left: 125px;
+    background-image: linear-gradient(to left, white, cyan);
+    border: 0ch;
+}

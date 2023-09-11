@@ -1,0 +1,12 @@
+//Breakpoints
+$xp-breakpoints-mobile-max: '(max-width: 480px)';
+$xp-breakpoints-mobile-only: '(min-width: 0px) and (max-width: 480px)';
+
+$xp-breakpoints-large-mobile-max: '(max-width: 767px)';
+$xp-breakpoints-large-mobile-only: '(min-width: 481x) and (max-width: 767px)';
+
+$xp-breakpoints-tablet-min: '(min-width: 481px)';
+$xp-breakpoints-tablet-max: '(max-width: 991px)';
+$xp-breakpoints-tablet-only: '(min-width: 480px) and (max-width: 991px)';
+
+$xp-breakpoints-desktop-min: '(min-width: 992px)';

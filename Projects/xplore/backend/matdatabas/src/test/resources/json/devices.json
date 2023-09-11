@@ -1,0 +1,365 @@
+{
+  "totalRecords": 40,
+  "devices": [
+    {
+      "id": 1879,
+      "name": "Keller",
+      "networkNode": "18S1612",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229084",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-606"
+    },
+    {
+      "id": 1880,
+      "name": "Keller",
+      "networkNode": "14BE110U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229085",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-612"
+    },
+    {
+      "id": 1881,
+      "name": "Keller",
+      "networkNode": "18RT021U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229086",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-608"
+    },
+    {
+      "id": 1882,
+      "name": "Keller",
+      "networkNode": "18RT026U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229087",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-609"
+    },
+    {
+      "id": 1883,
+      "name": "Keller",
+      "networkNode": "18S1372U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229088",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-610"
+    },
+    {
+      "id": 1884,
+      "name": "Keller",
+      "networkNode": "18RT020U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229089",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-611"
+    },
+    {
+      "id": 1885,
+      "name": "Keller",
+      "networkNode": "14BE054U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229090",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-603"
+    },
+    {
+      "id": 1886,
+      "name": "Keller",
+      "networkNode": "14BE043U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229091",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-604"
+    },
+    {
+      "id": 1887,
+      "name": "Keller",
+      "networkNode": "18RT025U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229092",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-605"
+    },
+    {
+      "id": 1889,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229094",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-585"
+    },
+    {
+      "id": 1890,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229095",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-570"
+    },
+    {
+      "id": 1891,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229096",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-571"
+    },
+    {
+      "id": 1892,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229097",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-572"
+    },
+    {
+      "id": 1893,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229098",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-573"
+    },
+    {
+      "id": 1894,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229099",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-574"
+    },
+    {
+      "id": 1895,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229100",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-575"
+    },
+    {
+      "id": 1896,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229101",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-576"
+    },
+    {
+      "id": 1897,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229102",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-577"
+    },
+    {
+      "id": 1898,
+      "name": "Keller",
+      "networkNode": "18W094U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229103",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-578"
+    },
+    {
+      "id": 1899,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229104",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-579"
+    },
+    {
+      "id": 1900,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229105",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-580"
+    },
+    {
+      "id": 1901,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229107",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-582"
+    },
+    {
+      "id": 1902,
+      "name": "Keller",
+      "networkNode": "18S0705",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229108",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-583"
+    },
+    {
+      "id": 1903,
+      "name": "Keller",
+      "networkNode": "18S1111U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229109",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-584"
+    },
+    {
+      "id": 1904,
+      "name": "Keller",
+      "networkNode": "15SW321U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229110",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-586"
+    },
+    {
+      "id": 1905,
+      "name": "Keller",
+      "networkNode": "9714URB032",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229111",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-587"
+    },
+    {
+      "id": 1906,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229112",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-588"
+    },
+    {
+      "id": 1907,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229113",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-589"
+    },
+    {
+      "id": 1908,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229114",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-590"
+    },
+    {
+      "id": 1909,
+      "name": "Keller",
+      "networkNode": "20FUT201RB",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229115",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-591"
+    },
+    {
+      "id": 1910,
+      "name": "Keller",
+      "networkNode": "18W099U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229116",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-592"
+    },
+    {
+      "id": 1911,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229117",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-593"
+    },
+    {
+      "id": 1912,
+      "name": "Keller",
+      "networkNode": "15A607RU",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229118",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-594"
+    },
+    {
+      "id": 1913,
+      "name": "Keller",
+      "networkNode": "15RT320U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229119",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-595"
+    },
+    {
+      "id": 1914,
+      "name": "Keller",
+      "networkNode": "06W04U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229120",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-596"
+    },
+    {
+      "id": 1915,
+      "name": "Keller",
+      "networkNode": "FUT",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229121",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-597"
+    },
+    {
+      "id": 1916,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229122",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-598"
+    },
+    {
+      "id": 1917,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229123",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-599"
+    },
+    {
+      "id": 1918,
+      "name": "Keller",
+      "networkNode": "18S1328U",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229093",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-607"
+    },
+    {
+      "id": 1919,
+      "name": "Keller",
+      "networkNode": "AF Consult",
+      "transferType": "ARC_1",
+      "gsmNumber": "+467190005229106",
+      "euiNumber": null,
+      "serialNumber": "ARC-9.20-581"
+    }
+  ]
+}

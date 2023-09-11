@@ -1,0 +1,17 @@
+{
+  "/api": {
+    "target": "https://msb-bbk-utv.metria.se",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  },
+  "/lm-maps": {
+    "target": "https://msb-bbk-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/storage": {
+    "target": "https://msb-bbk-utv.metria.se",
+    "changeOrigin": true
+  }
+}

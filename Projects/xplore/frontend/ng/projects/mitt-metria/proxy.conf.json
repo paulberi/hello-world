@@ -1,0 +1,17 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://mitt-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/ehandelUrls": {
+    "target": "https://mitt-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://mitt-utv.metria.se",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}

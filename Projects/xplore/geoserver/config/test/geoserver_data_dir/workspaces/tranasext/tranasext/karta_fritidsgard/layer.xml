@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_fritidsgard</name>
+  <id>LayerInfoImpl-55861070:8f030d15010:-9121</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-67817db3:a9cc3bbcdc8:-dbf2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

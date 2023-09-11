@@ -1,0 +1,10 @@
+<div class="column justify-center">
+    <div class="products">
+        <mm-product-card class="product-card" *ngFor="let product of products" [imageUrl]="product.image"
+            [header]="product.name" [description]="product?.description"
+            (selectedItem)="selectedProduct.emit(product.id)">
+        </mm-product-card>
+    </div>
+
+    <button *ngIf="showLoadMore" (click)="loadMore.emit()" mat-button>{{loadMoreButtonText}}</button>
+</div>

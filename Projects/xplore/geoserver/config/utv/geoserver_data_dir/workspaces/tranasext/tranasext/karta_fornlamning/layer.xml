@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_fornlamning</name>
+  <id>LayerInfoImpl-ffefddf:173e162d784:3f15</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-ffefddf:173e162d784:3f14</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

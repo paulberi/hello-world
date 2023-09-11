@@ -1,0 +1,59 @@
+<mat-expansion-panel class="mat-expansion-panel-no-padding mat-elevation-z expander"
+                     [hideToggle]="!visaAntaletDelomraden() && delomraden.length === 1"
+                     [expanded]="expanded"
+                     (expandedChange)="expandedChange.emit($event)">
+  <mat-expansion-panel-header [ngClass]="!visaAntaletDelomraden() && delomraden.length === 1 ? 'no-content': ''" collapsedHeight="'auto'" expandedHeight="'auto'">
+    <div class="mat-expansion-panel-header-inner">
+      <mat-panel-title [ngClass]="getType()">
+
+        <button class="remove" mat-icon-button aria-label="ta bort sökresultat" (click)="onRemove($event)">
+          <mat-icon style="vertical-align: top;">close</mat-icon>
+        </button>
+
+        <div class="name">
+          <div class="namn" [innerHTML]="getBeteckning()"></div>
+          <div class="antalDelomraden" *ngIf="visaAntaletDelomraden()"
+               [ngClass]="{'incomplete': !hasKomplettFastighet()}"
+               [matTooltip]="getTooltip()" matTooltipShowDelay="1000">{{delomraden.length}} st
+          </div>
+          <div class="castor" *ngIf="castorIsAvailable && hasKomplettFastighet()">
+            <mat-checkbox (change)="updateTempUrval($event)">Lägg till Castors tmp urval<br>
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <div class="nav-container" *ngIf="this.onResize$ | async as device">
+          <button class="nav-button-icon" mat-icon-button aria-label="Visa object i Google Maps"
+                  (click)="onNavigation($event)"
+                  *ngIf="device.isMobile && fastighetsNavigering && !visaAntaletDelomraden()">
+            <mat-icon color="accent" class="navigation-button navigation-button-icon">directions</mat-icon>
+          </button>
+        </div>
+
+        <button class="zoom-button-icon" mat-icon-button aria-label="zooma till fastighet" (click)="onZoom($event)">
+          <mat-icon>zoom_in</mat-icon>
+        </button>
+
+        <div class="coordinate" *ngIf="getType() !== 'huvudomrade'">
+          <p>
+            <span class="detaljTyp">{{getCoordinate()}}</span>
+          </p>
+        </div>
+
+        <div class="type" *ngIf="visaDelomraden">
+          <p>
+            <span class="detaljTyp">({{this.getDetaljTyp(this.detaljtyp) || "Okänd detaljtyp"}})</span>
+          </p>
+        </div>
+
+      </mat-panel-title>
+    </div>
+  </mat-expansion-panel-header>
+  <ng-container *ngIf="expanded === true && visaAntaletDelomraden() && delomraden.length >= 1">
+    <xp-fastighetsnamn-panel *ngFor="let delomrade of delomraden" class="delomrade"
+                             [objektId]="delomrade.objektId"
+                             [beteckning]="delomrade.beteckning"
+                             [delomraden]="[delomrade]"
+                             (removeDelomrade)="onRemoveWithExternId($event)"></xp-fastighetsnamn-panel>
+  </ng-container>
+</mat-expansion-panel>

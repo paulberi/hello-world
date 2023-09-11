@@ -1,0 +1,10 @@
+#banner {
+    max-height: 165px;
+}
+
+#banner-image {
+    width: 100%;
+    max-height: inherit;
+    object-position: center;
+    object-fit: cover;
+}

@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./colors.scss";
+@import "./skekraft-theme.scss";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/NunitoSans-Regular.ttf");
+}
+
+:root {
+  --app-font-default-family-stack: "Nunito Sans" !important;
+  --ion-font-family: "Nunito Sans" !important;
+  font-family: "Nunito Sans" !important;
+}
+
+.mat-orangewarn {
+  color: #fff !important;
+  background-color: #BB4E00 !important;
+}
+.mat-orangewarn[disabled] {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+}
+.mat-simple-snackbar-action{
+  color: white;
+}
+.mat-simple-snackbar{
+  color: white;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-none {
+    display: none !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-10 {
+  flex: 0 0 calc(100% * (10 / 12));
+  max-width: calc(100% * (10 / 12));
+}
+
+.col-11 {
+  flex: 0 0 calc(100% * (11 / 12));
+  max-width: calc(100% * (11 / 12));
+}
+.col-8 {
+  flex: 0 0 calc(100% * (8 / 12));
+  max-width: calc(100% * (8 / 12));
+}
+.col-7 {
+  flex: 0 0 calc(100% * (7 / 12));
+  max-width: calc(100% * (7 / 12));
+}
+
+.col-6 {
+  flex: 0 0 calc(100% * (6 / 12));
+  max-width: calc(100% * (6 / 12));
+}
+
+.col-md-6 {
+  @media screen and (min-width: 992px) {
+    flex: 0 0 calc(100% * (6 / 12));
+    max-width: calc(100% * (6 / 12));
+  }
+}
+.col-5 {
+  flex: 0 0 calc(100% * (5 / 12));
+  max-width: calc(100% * (5 / 12));
+}
+
+.col-4 {
+  flex: 0 0 calc(100% * (4 / 12));
+  max-width: calc(100% * (4 / 12));
+}
+.col-2 {
+  flex: 0 0 calc(100% * (2 / 12));
+  max-width: calc(100% * (2 / 12));
+}
+
+#avtalsTyp{
+  .mat-button-toggle-label-content {
+    line-height: 16px !important;
+    padding: 0.5rem;
+  }
+}
+.errorSnackbar.mat-snack-bar-container{
+  margin-top: 80px;
+}
+.projektErrorTooltip.mat-tooltip{
+  font-size: 16px;
+  padding: 12px;
+}
+
+html,
+body {
+  height: 100%;
+}
+.spinner.mat-progress-spinner circle, .spinner.mat-spinner circle {
+  stroke: white;
+}
+#refresh {
+  display:flex;
+  justify-content:flex-end;
+ }

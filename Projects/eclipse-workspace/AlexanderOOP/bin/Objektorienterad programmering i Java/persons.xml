@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15.0.1" class="java.beans.XMLDecoder">
+ <array class="java.lang.Object" length="3">
+  <void index="0">
+   <object class="uppgift4.Person">
+    <void property="age">
+     <int>8</int>
+    </void>
+    <void property="firstName">
+     <string>Peter</string>
+    </void>
+    <void property="lastName">
+     <string>Pan</string>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="uppgift4.Person">
+    <void property="age">
+     <int>2</int>
+    </void>
+    <void property="firstName">
+     <string>Tinge</string>
+    </void>
+    <void property="lastName">
+     <string>Ling</string>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="uppgift4.Person">
+    <void property="age">
+     <int>56</int>
+    </void>
+    <void property="firstName">
+     <string>Kapten</string>
+    </void>
+    <void property="lastName">
+     <string>Krok</string>
+    </void>
+   </object>
+  </void>
+ </array>
+</java>

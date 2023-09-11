@@ -1,0 +1,8 @@
+version: "3"
+services:
+  geoserver:
+    image: nexus.metria.se:5000/xplore/geoserver:2.14.0
+    ports:
+    - "8080:8080"
+    volumes:
+    - /home/bamboodeploy/geoserver/geoserver_data_dir:/var/geoserver_data_dir

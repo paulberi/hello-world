@@ -1,0 +1,15 @@
+<layer>
+  <name>tranas_kommun_svarta_50_ars_flode</name>
+  <id>LayerInfoImpl--44886edc:170678e9d2f:b77</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--44886edc:170678e9d2f:b76</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

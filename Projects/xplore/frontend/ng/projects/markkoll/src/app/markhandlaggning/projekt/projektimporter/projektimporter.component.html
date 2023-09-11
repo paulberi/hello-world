@@ -1,0 +1,21 @@
+<div class="row">
+  <h2>{{"mk.projektimporter.manageImports" | transloco }}:</h2>
+</div>
+<div class="row">
+  <form [formGroup]="form">
+    <mat-radio-group formControlName="importType">
+      <mat-radio-button [value]="importVersion">{{ "mk.projektimporter.importVersion" | transloco}}</mat-radio-button>
+      <mat-radio-button [value]="importHaglof">{{ "mk.projektimporter.importHaglof" | transloco}}</mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>
+
+<div class="import-container">
+  <mk-haglofimport  [projektId]="projektId"
+                    *ngIf="isImportHaglof()">
+  </mk-haglofimport>
+  <mk-versionimport [projektId]="projektId"
+                    [projektTyp]="projektTyp"
+                    *ngIf="isImportVersion()">
+  </mk-versionimport>
+</div>

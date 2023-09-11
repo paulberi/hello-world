@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car Rental</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        th {
+            background: #f1f1f1;
+            font-weight: bold;
+            padding: 6px;
+        }
+        
+        td {
+            background: #f9f9f9;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cars" id="cars" style="height: 100%; width: 100%;">
+        <table id="myTable">
+            <tr>
+                <th>User Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>User Name</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    $(function() {
+        $.ajax({
+            headers: {
+                "Accept": "application/json"
+            },
+            type: 'GET',
+            url: 'http://localhost:8081/api/v1/customers',
+            crossDomain: true,
+            beforeSend: function(xhr) {
+                xhr.withCredentials = true;
+            },
+            success: function(data, textStatus, request) {
+                for (var i = 0; i < data.length; i++) {
+                    var row = $('<tr><td>' + data[i].userId + '<td>' + data[i].name + '<td>' + data[i].address + '<td>' + data[i].username + '<tr>');
+                    $('#myTable').append(row);
+                }
+            }
+        });
+    })
+</script>
+
+</html>

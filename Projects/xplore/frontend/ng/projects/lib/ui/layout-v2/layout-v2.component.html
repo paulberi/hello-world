@@ -1,0 +1,223 @@
+<!-- Desktop -->
+<div class="container flex-column" [class.no-pointer-events]="cartState" *ngIf="!(isTabletOrMobile$ | async)">
+  <header id="header">
+
+    <!-- Header -->
+    <div class="header row align-items-center">
+      <a [routerLink]="['/']">
+        <img id="header-logo" src="assets/lib/icons/metria_logo.svg"
+          [alt]="'xp.layout-v2.goToStartpage' | transloco">
+      </a>
+      <h1>{{ appName }}</h1>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu row align-items-center" [class.sticky]="isHeaderSticky">
+      <ng-template [ngIf]="menuItems">
+        <nav class="menu-items">
+          <ul>
+            <li *ngFor="let item of menuItems; let isLast = last" [class.menu-border]="!isLast"
+              routerLinkActive="active">
+              <a [routerLink]="item.path">{{ item.title }}</a>
+            </li>
+          </ul>
+        </nav>
+      </ng-template>
+      <!-- Menu icons -->
+      <div class="menu-icons">
+        <ng-template [ngIf]="menuIcons">
+          <button class="menu-icon" *ngFor="let icon of menuIcons" (click)="menuIconClick.emit(icon)" mat-icon-button
+            [attr.aria-label]="icon.ariaLabel | transloco">
+            <mat-icon>{{ icon.icon }}</mat-icon>
+          </button>
+        </ng-template>
+
+        <!-- Cart -->
+        <ng-template [ngIf]="isCartIconVisible">
+          <button class="menu-icon cart-menu-icon" mat-icon-button
+          [attr.aria-label]="'xp.cart.cart' | transloco" (click)="toggleCart()">
+          <mat-icon [matBadge]="cartBadgeNumber | async" [matBadgeHidden]="(cartBadgeNumber | async) === 0">shopping_cart</mat-icon>
+          </button>
+          <div class="cart" *ngIf="cartState" [@transformCart]>
+            <xp-cart [cart]="cart" (closeCart)="toggleCart()" (deleteCartItem)="deleteCartItem.emit($event)" 
+            (checkout)="toCheckout.emit()"></xp-cart>
+          </div>
+        </ng-template>
+
+        <button class="menu-icon" mat-icon-button [matMenuTriggerFor]="menu"
+          [attr.aria-label]="'xp.layout-v2.userMenu' | transloco">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item id="profile-button" (click)="profileClick.emit()">
+            <mat-icon color="primary">person</mat-icon>
+            <span>{{ "xp.layout-v2.profile" | transloco }}</span>
+          </button>
+          <button mat-menu-item id="logout-button" (click)="logoutClick.emit()">
+            <mat-icon color="primary">exit_to_app</mat-icon>
+            <span>{{ "xp.common.logOut" | transloco }}</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <ng-container *ngTemplateOutlet="mainContent"></ng-container>
+
+  <!-- Footer -->
+  <ng-container *ngTemplateOutlet="footer"></ng-container>
+</div>
+
+<!-- Mobile -->
+<mat-sidenav-container fullscreen *ngIf="isTabletOrMobile$ | async">
+  <mat-sidenav class="layout-sidenav" #drawer fixedInViewPort>
+
+    <!-- Hamburger menu -->
+    <mat-nav-list>
+      <div class="hamburger-menu-header row align-items-center">
+        <h1 class="uppercase">{{ "xp.layout-v2.menu" | transloco }}</h1>
+        <button type="button" [attr.aria-label]="'xp.layout-v2.closeSideNav' | transloco" mat-icon-button
+          (click)="drawer.close()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <!-- Menu items-->
+      <ul class="menu-items-mobile">
+        <li *ngFor="let item of menuItems" class="mobile-nav-border row align-items-center" routerLinkActive="active">
+          <mat-icon *ngIf="item?.icon">{{ item.icon }}</mat-icon>
+          <img class="icon-mobile" *ngIf="item?.iconPath" [src]="item.iconPath" [alt]="'Ikon för ' + item.title">
+          <a class="menu-item" [routerLink]="item.path" (click)="drawer.close()">{{ item.title | uppercase }}</a>
+        </li>
+        <li class="mobile-nav-border row align-items-center">
+          <mat-icon>account_circle</mat-icon>
+          <a class="menu-item uppercase" (click)="profileClick.emit(); drawer.close()">{{ "xp.layout-v2.profile" |
+            transloco }}</a>
+        </li>
+        <li class="row align-items-center">
+          <mat-icon>logout</mat-icon>
+          <a class="menu-item uppercase" (click)="logoutClick.emit(); drawer.close()">{{ "xp.common.logOut" | transloco
+            }}</a>
+        </li>
+      </ul>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Cart sidenav -->
+  <mat-sidenav class="cart-sidenav" #cartSidenav fixedInViewPort position="end" [autoFocus]="false" [opened]="cartState">
+    <xp-cart [cart]="cart" (closeCart)="toggleCart()" (deleteCartItem)="deleteCartItem.emit($event)" 
+            (checkout)="toCheckout.emit()"></xp-cart>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="flex-column">
+    <mat-toolbar id="toolbar" [class.sticky]="isHeaderSticky" color="primary">
+
+      <!-- Hamburger -->
+      <button type="button" [attr.aria-label]="'xp.layout-v2.openSideNav' | transloco" mat-icon-button
+        (click)="drawer.toggle()" *ngIf="isTabletOrMobile$ | async">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <!-- Metria logo and header -->
+      <div class="header-mobile row align-items-center">
+        <a [routerLink]="['/']">
+          <img id="header-logo-mobile" src="assets/lib/icons/metria_logo.svg"
+            [alt]="'xp.layout-v2.goToStartpage' | transloco ">
+        </a>
+        <h1>{{ appName }}</h1>
+      </div>
+
+      <!-- Menu icons -->
+      <div class="menu-icons">
+        <ng-template [ngIf]="menuIcons">
+          <button *ngFor="let icon of menuIcons" class="menu-icon" (click)="menuIconClick.emit(icon)" mat-icon-button
+            [attr.aria-label]="icon.ariaLabel | transloco">
+            <mat-icon>{{ icon.icon }}</mat-icon>
+          </button>
+        </ng-template>
+        
+        <!-- Cart icon -->
+        <ng-template [ngIf]="isCartIconVisible">
+          <button class="menu-icon cart-menu-icon" mat-icon-button
+          [attr.aria-label]="'xp.cart.cart' | transloco" (click)="toggleCart()">
+          <mat-icon class="cart-icon" [matBadge]="cartBadgeNumber | async" matBadgeSize="small" [matBadgeHidden]="(cartBadgeNumber | async) === 0">
+            shopping_cart
+          </mat-icon>
+          </button>
+        </ng-template>
+      </div>
+    </mat-toolbar>
+
+    <!-- Main -->
+    <ng-container *ngTemplateOutlet="mainContent"></ng-container>
+
+    <!-- Footer-->
+    <ng-container *ngTemplateOutlet="footer"></ng-container>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- Main template -->
+<ng-template #mainContent>
+  <main id="content">
+    <ng-content></ng-content>
+  </main>
+</ng-template>
+
+<!-- Footer template -->
+<ng-template #footer>
+  <footer *ngIf="isFooterVisible">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div>
+          <a href="https://metria.se/" target="_blank">
+            <img id="footer-logo" src="assets/lib/icons/metria_logo.svg"
+              [alt]="'xp.layout-v2.goToMetria' | transloco ">
+          </a>
+          <h3>{{ "xp.layout-v2.metriaAB" | transloco }}</h3>
+        </div>
+        <div>
+          <h3>{{ "xp.layout-v2.contactInfo" | transloco }}</h3>
+          <h4>{{ "xp.layout-v2.email" | transloco }}</h4>
+          <p class="margin-bottom-10"><a href="mailto: info@metria.se" id="email">{{ "xp.layout-v2.metriaEmail" |
+              transloco }}</a></p>
+          <h4>{{ "xp.layout-v2.telephone" | transloco }}</h4>
+          <p class="margin-bottom-10"> {{ "xp.layout-v2.metriaTelephone" | transloco }}</p>
+        </div>
+        <div class="important-links">
+          <h3>{{ "xp.layout-v2.importantLinks" | transloco }}</h3>
+          <ul>
+            <li><a class="link" href="https://metria.se/press-media/" target="_blank">
+                {{ "xp.layout-v2.pressAndMedia" | transloco }}
+              </a></li>
+            <li><a class="link" href="https://metria.se/behandling-av-personuppgifter/" target="_blank">
+                {{ "xp.layout-v2.processingPersonalData" | transloco }}
+              </a></li>
+            <li><a class="link" href="https://metria.se/metria-i-sociala-kanaler/" target="_blank">
+                {{ "xp.layout-v2.metriaSocialMedia" | transloco }}
+              </a></li>
+            <li><a class="link" href="https://metria.se/riktlinjer-for-cookies/" target="_blank">
+                {{ "xp.layout-v2.guidelinesCookies" | transloco }}
+              </a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>{{ "xp.layout-v2.socialMedia" | transloco }}</h3>
+          <a class="row align-items-center margin-bottom-10" href="https://www.facebook.com/metriaab" target="_blank">
+            <mat-icon class="social-media-logo facebook-logo"></mat-icon>
+            <span class="social-media-text">{{ "xp.layout-v2.facebook" | transloco }}</span>
+          </a>
+          <a class="row align-items-center margin-bottom-10" href="https://se.linkedin.com/company/metria-ab"
+            target="_blank">
+            <mat-icon class="social-media-logo linkedin-logo"></mat-icon>
+            <span class="social-media-text">{{ "xp.layout-v2.linkedin" | transloco }}</span>
+          </a>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div>
+        <p id="copyright">{{ "xp.layout-v2.copyright" | transloco }}</p>
+      </div>
+    </div>
+  </footer>
+</ng-template>

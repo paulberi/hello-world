@@ -1,0 +1,64 @@
+<app-user-header></app-user-header>
+<div class="centered-content">
+  <div class="choices-content">
+    <form class="form-content">
+
+      <div class="second-content">
+
+        <div class="fields-content">
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              {{ userToUpdateTitle }}
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" *ngFor="let user of users" (click)="chooseUserToUpdate(user)">
+                <p>{{ user.email }}</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="element">
+                <input class="input-field" type="text" placeholder="Ange förnamn:" [value]="userToUpdate.firstName" #firstName/>
+          </div>
+
+          <div class="element">
+                <input class="input-field" type="text" placeholder="Ange efternamn:" [value]="userToUpdate.lastName" #lastName/>
+          </div>
+
+          <div class="element">
+                <input class="input-field" type="email" placeholder="Ange email:" [value]="userToUpdate.email" #email/>
+          </div>
+
+          <div class="element">
+                <input class="input-field" type="password" placeholder="Ange lösenord:" [value]="userToUpdate.password" #password/>
+          </div>
+        </div>
+
+        <div class="other-content">
+
+          <div class="element">
+            <label class="permissions-label">Behörigheter: </label>
+
+            <input class="permission-checkbox" title="Admin" type="checkbox" value="admin" name="admin" id="admin" [(checked)]="checkAdmin" (change)="clickAdmin(admin.checked)" #admin>
+
+            <label class="admin-label">Admin</label>
+          </div>
+
+          <div class="element">
+
+            <ng-multiselect-dropdown class="school-dropdown" name="schools" [placeholder]="'Välj skolor att tilldela'" [data]="schoolsToChoose"  [(ngModel)]="selectedSchools" [settings]="dropdownSettings" #schools>
+
+            </ng-multiselect-dropdown>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="button-content">
+      <button class="create-button" (click)="updateUser(firstName.value, lastName.value, email.value, password.value, admin.checked, schools.selectedItems)">
+        Uppdatera användare
+    </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.header-row {
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+  padding: 0 2em;
+  h3{
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.row-container {
+  padding: 0 2em;
+  h3{
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.left-text {
+  flex-grow: 1;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.rigth-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.actions {
+  text-align: right;
+  button ~ button {
+    margin-left: 1.5em;
+  }
+}
+
+.createConfig {
+  padding: 1rem 0;
+  background-color: white;
+  mat-form-field{
+    width: calc(100% - 10px);
+  }
+  
+  .right{
+    padding-left: 10px;
+  }
+}
+
+.delete {
+  align-self: center;
+}

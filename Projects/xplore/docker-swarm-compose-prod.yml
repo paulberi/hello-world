@@ -1,0 +1,622 @@
+version: "3.8"
+services:
+  # Applikationer
+  skogsanalys:
+    image: nexus.metria.se:5000/xplore/skogsanalys:release-skogsanalys-2022-3-7
+    ports:
+      - "8000:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  geovis-vy-v2:
+    image: nexus.metria.se:5000/xplore/geovis-vy:release-geovis-2022-5-1
+    ports:
+    - "8012:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  geovis-extern-v2:
+    image: nexus.metria.se:5000/xplore/geovis-extern:release-geovis-2022-6-1
+    ports:
+    - "8013:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  brandbranslekartan:
+    image: nexus.metria.se:5000/xplore/brandbranslekartan:release-msb-bbk-2022-2-1
+    ports:
+      - "8003:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  geovis-pro-v2:
+    image: nexus.metria.se:5000/xplore/geovis-pro:release-geovis-2022-4-2
+    ports:
+    - "8011:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+
+  matdatabas-frontend:
+    image: nexus.metria.se:5000/xplore/matdatabas-frontend:release-miljokoll-2022-v45-fix-1-2
+    ports:
+      - "8005:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+
+  markkoll-frontend:
+    image: nexus.metria.se:5000/xplore/markkoll-frontend:hotfix-markkoll-2.3.4.2-2
+    ports:
+    - "8007:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  markhandlaggning-frontend:
+    image: nexus.metria.se:5000/xplore/markhandlaggning-frontend:master-101
+    ports:
+      - "8008:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+  xplore-admin-frontend:
+    image: nexus.metria.se:5000/xplore/admin-frontend:release-xplore-2022-7-1
+    ports:
+      - "8009:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+          
+  mitt-metria:
+    image: nexus.metria.se:5000/xplore/mitt-metria:release-mitt-metria-0.1-7
+    ports:
+      - "8016:80"
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+        reservations:
+          memory: 50M
+
+  # Tjänster
+  skogliga-grunddata:
+    image: nexus.metria.se:5000/xplore/skogliga-grunddata:release-xplore-2021-4-2
+    environment:
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmedatastreaming/Skog/
+      - AUTHORIZATION_CERTSURL=https://keycloak.prodstod.se/auth/realms/Xplore/protocol/openid-connect/certs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=skogliga-grunddata
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9000:9000"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 300M
+
+  nmd:
+    image: nexus.metria.se:5000/xplore/nmd:release-xplore-2021-4-2
+    environment:
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmedatastreaming/Skog/
+      - AUTHORIZATION_CERTSURL=https://keycloak.prodstod.se/auth/realms/Xplore/protocol/openid-connect/certs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=nmd
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9001:9001"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 300M
+
+  avverkningsstatistik:
+    image: nexus.metria.se:5000/xplore/avverkningsstatistik:release-xplore-2021-4-1
+    environment:
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmedatastreaming/Skog/
+      - AUTHORIZATION_CERTSURL=https://keycloak.prodstod.se/auth/realms/Xplore/protocol/openid-connect/certs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=avverkningsstatistik
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9003:9003"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 500M
+
+  huggningsklasser:
+    image: nexus.metria.se:5000/xplore/huggningsklasser:release-skogsanalys-2022-3-1
+    environment:
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmedatastreaming/Skog/
+      - AUTHORIZATION_CERTSURL=https://keycloak.prodstod.se/auth/realms/Xplore/protocol/openid-connect/certs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=huggningsklasser
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9004:9004"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 300M
+
+  skyddade-omraden:
+    image: nexus.metria.se:5000/xplore/skyddade-omraden:release-skogsanalys-2022-3-2
+    ports:
+      - "9021:9020"
+    environment:
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmedatastreaming/Skog/
+      - AUTHORIZATION_CERTSURL=https://keycloak.prodstod.se/auth/realms/Xplore/protocol/openid-connect/certs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=skyddade-omraden
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 300M
+
+  sok-v2:
+    image: nexus.metria.se:5000/xplore/sok:release-sok-2022-1-1
+    ports:
+      - "9015:9005"
+    environment:
+      - SOK_GEOFILTER_URL_KOMMUN=https://xplorefile.vic-metria.nu/geovis/{kommun}/kommunmask/{kommun}_kommun.geojson
+      - SOK_GEOCODE_ENDPOINT=https://maps-v2.metria.se/geokodning/Geocode
+      - SOK_WFS_ENDPOINT=https://maps-v2.metria.se/geoserver/wfs
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=sok-v2
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 600M
+
+
+  skogsmaskindata:
+    image: nexus.metria.se:5000/xplore/skogsmaskindata:22
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://xploredb02.prodstod.se:5432/forestlink_prod
+      - SPRING_DATASOURCE_USERNAME=forestlink
+      - SPRING_DATASOURCE_PASSWORD=zPbpOE6hUzgK0oVXsicf
+      - SFTP_URL_TO_REMOTE=forestlink.se
+      - SFTP_PASSWORD=2=44Ba7Q533*=H
+      - SFTP_KNOWNHOSTKEY=forestlink.se,217.198.151.233 ssh-dss AAAAB3NzaC1kc3MAAACBAMfUNyooFHNGrnXnr6CspYymHjr/SMZl2ZfeXnXKNO1ZiX6wHQbwiVdxA5fbFZwGEixqBOU6zE/pQwGnZ/Cmkq4qAxyBo5CJFUynPXSURH/JjdKMyWNpAcXdhwaGgOGyFbgLmvs6+tbjtknKcnucG8BArSR38/nU3bSUwUQAUcgPAAAAFQC5fyKJIcoIYOPpn8v8B8l3T1845wAAAIEAilt3H5qlzKyfZ09cc8z4kDkPS3Abr3BZW5Ih4NOtYIQTdzOUypk4M4q24dBGfCU+GUiPIytUT1lb7/Q35p4AbIKDdTJ+f16Yj3IPY8SV9VdoF6VRngJCpY8B7VzFQINEcn6gX8vEA9ieJHe5rBPJhYgcTyslTkfQZefSe+KWRo8AAACBAKNCXgWIcVDjjuxOmB53X9VmUwq8u0Z2xFGjV2I/nNQQly2KXs4oTP92Hpb7lv0MtpyqaNK3l82GGaa0zHAlpegDeZ4ENTq4g2qW3natwgXe6yPfd9p4MQaBFNrQFjS0VtKhBlzeIAsuXKOlyeDoYknjgJYpnPG7X4r42uthDuZk
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=skogsmaskindata
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    ports:
+    - "9007:9007"
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 800M
+
+  app-config:
+    image: nexus.metria.se:5000/xplore/app-config:master-284
+    environment:
+    - SPRING_DATASOURCE_URL=jdbc:postgresql://xploredb02.prodstod.se:5432/xplore
+    - SPRING_PROFILES_ACTIVE=prod
+    - ELASTIC_APM_SERVICE_NAME=app-config
+    - ELASTIC_APM_ENVIRONMENT=prod
+    - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9006:9006"
+    labels:
+    - co.elastic.logs/json.keys_under_root=true
+    - co.elastic.logs/json.overwrite_keys=true
+    - co.elastic.logs/json.add_error_key=true
+    - co.elastic.logs/json.expand_keys=true
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 400M
+
+  matdatabas-backend:
+    image: nexus.metria.se:5000/xplore/matdatabas-backend:release-miljokoll-2022-v45-fix-1-1
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=matdatabas-backend
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+      - APPLICATIONURL=https://miljokoll.metria.se
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://xploredb02.prodstod.se:5432/miljokoll?currentSchema=matdatabas
+      - SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE=30
+      - SAML_METADATAURL=https://miljokoll.metria.se/auth/realms/Miljokoll/protocol/saml/descriptor
+      - SAML_ENTITYID=saml-prod
+      - SAML_KEYSTOREKEYALIAS=saml-prod
+      - SAML_KEYSTOREPATH=classpath:/saml/keycloakKeystore-prod.jks
+      - SPRING_DATASOURCE_USERNAME=miljokoll
+      - SPRING_DATASOURCE_PASSWORD=Aqrs88eln
+      - KEYCLOAKADMIN_BASEURL=https://miljokoll.metria.se
+      - KEYCLOAKADMIN_ADMINBASEURL=https://keycloak.prodstod.se
+      - KEYCLOAKADMIN_APPREALM=Miljokoll
+      - KEYCLOAKADMIN_BATCHUSER=SYSTEM
+      - KEYCLOAKADMIN_BATCHPASSWORD=LSBJFy5hczVZszFhzdjPMFrbJakAJ35v
+      - KEYCLOAK_AUTH-SERVER-URL=https://miljokoll.metria.se/auth
+      - KEYCLOAK_BASEURL=https://keycloak.prodstod.se
+      - KEYCLOAK_REALM=Miljokoll
+      - KEYCLOAKADMIN_ADMINUSER=miljokoll
+      - KEYCLOAKADMIN_ADMINPASSWORD=boxer-pedagogy-relish-crest
+      - SPRING_MAIL_HOST=smtp.vic-metria.nu
+      - SPRING_MAIL_PORT=25
+      - SPRING_QUARTZ_AUTO-STARTUP=true
+      - PROXY_HOST=webproxy.metria.net
+      - PROXY_PORT=8080
+      - MILJOKOLL_RAPPORT_PDF_SERVICE_URL=http://xploreprod01.prodstod.se:9010/pdf
+      - MILJOKOLL_RAPPORT_REPORT_PAGE_URL=https://miljokoll.metria.se
+      - SPRING_FLYWAY_ENABLED=true
+      - IMPORTSERVICE_STOCKHOLMNSHAMNAR_URL=https://www.airviro.com/cgi-bin/sthlm/apub.tsindico.cgi
+    ports:
+      - "9008:9008"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 1024M
+
+  pdf-generator:
+    image: nexus.metria.se:5000/xplore/pdf-generator:master-23
+    ports:
+      - "9010:3000"
+    environment:
+      - ELASTIC_APM_SERVICE_NAME=pdf-generator
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 1024M
+
+  markkoll-backend:
+    image: nexus.metria.se:5000/xplore/markkoll-backend:hotfix-markkoll-2.3.4.2-4
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_FLYWAY_ENABLED=true
+      - ELASTIC_APM_SERVICE_NAME=markkoll-backend
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+      - OPENTRACING_SPRING_CLOUD_ASYNC_ENABLED=false
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 2048M
+    ports:
+      - "9011:9011"
+  markhandlaggning-backend:
+    image: nexus.metria.se:5000/xplore/markhandlaggning-backend:master-18
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://xploredb02.prodstod.se:5432/markhandlaggning?currentSchema=markhandlaggning
+      - SPRING_DATASOURCE_USERNAME=markhandlaggning
+      - SPRING_DATASOURCE_PASSWORD=secret-active-shout-dirt
+      - MILJO=prod
+      - FME_URL=https://fmeexpr21.vic-metria.nu/fmejobsubmitter/SkeKraft/
+      - FME_USERNAME=skekraft
+      - FME_PASSWORD=Fem%%zHg7XkK&1&vRuXIS_S50dj0n-Vw
+      - KEYCLOAK_AUTH-SERVER-URL=https://markhandlaggning.metria.se/auth/
+      - MARKHANDLAGGNING_AVTALSURL=https://markhandlaggning-hamtplats.metria.se/skekraft/
+    ports:
+      - "9012:9012"
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 1024M
+
+  xplore-admin-backend:
+    image: nexus.metria.se:5000/xplore/admin-backend:release-keycloak-2022-2-1
+    environment:
+      - KEYCLOAK_AUTH_SERVER_URL=https://xplore-admin.metria.se/auth
+      - KEYCLOAKADMIN_URL=https://xplore-admin.metria.se/auth
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=xplore-admin-backend
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    ports:
+      - "9013:9013"
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 512M
+
+  kund-config:
+    image: nexus.metria.se:5000/xplore/kund-config:release-xplore-2022-7-1
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_FLYWAY_ENABLED=true
+      - ELASTIC_APM_SERVICE_NAME=kund-config
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 512M
+    ports:
+      - "9014:9014"
+
+  markkoll-geoserver:
+    image: nexus.metria.se:5000/xplore/markkoll-geoserver:master-3
+    ports:
+      - "9018:8080"
+    volumes:
+      - /shares/xplore/prod/markkoll_geoserver/geoserver_data_dir:/var/geoserver_data_dir
+    environment:
+      - ELASTIC_APM_SERVICE_NAME=markkoll-geoserver
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 3000M
+
+  castor-integration:
+    image: nexus.metria.se:5000/xplore/castor-integration-backend:master-31
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVICE_NAME=castor-integration-backend
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+      - PROXY_USEPROXY=true
+      - PROXY_HOST=webproxy.metria.net
+      - PROXY_PORT=8080
+      - CASTOR_AUTH_CUSTOMER-ID=b862878f-1b65-4521-81c4-523a6a04855b
+      - CASTOR_AUTH_API-KEY=2d98774f-612e-47bb-958e-000868cdc659
+      - FINFO_FSOK-URL=https://fastighetsok.metria.se
+      - FINFO_AUTH_USERNAME=ws@valdemarsvik.se
+      - FINFO_AUTH_PASSWORD=sw6gsi5m4oxt
+      - FINFO_KUNDMARKE=castor
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    ports:
+      - "9019:9015"
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 400M
+
+  skogsanalys-backend:
+    image: nexus.metria.se:5000/xplore/skogsanalys-backend:release-skogsanalys-2022-1-2
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=skogsanalys-backend
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+      - OPENTRACING_SPRING_CLOUD_ASYNC_ENABLED=false
+      - SKOGSANALYS_RAPPORT_PDF_SERVICE_URL=http://xploreprod01.prodstod.se:9010/pdf
+      - SKOGSANALYS_RAPPORT_REPORT_PAGE_URL=https://skogsanalys.metria.se
+      - KEYCLOAK_AUTH_SERVER_URL=https://auth.metria.se/auth
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 512M
+    ports:
+      - "9016:9016"
+
+  dokument-converter:
+    image: nexus.metria.se:5000/xplore/dokument-converter:release-markkoll-2.3.3-1
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=dokument-converter
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 1024M
+    ports:
+      - "9020:9019"
+
+  finfo:
+    image: nexus.metria.se:5000/xplore/finfo:release-xplore-2022-7-1
+    ports:
+      - "9022:9022"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - ELASTIC_APM_SERVICE_NAME=finfo
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 300M
+
+  geoserver:
+    image: nexus.metria.se:5000/xplore/geoserver:release-geoserver-2022-1-1
+    ports:
+      - "9023:8080"
+    volumes:
+      - /shares/xplore/prod/xplore_geoserver/geoserver_data_dir:/var/geoserver_data_dir
+      - /shares/xplore/prod/xplore_geoserver/gwc:/var/gwc
+    environment:
+      - ELASTIC_APM_SERVICE_NAME=xplore_geoserver
+      - ELASTIC_APM_ENVIRONMENT=prod
+      - ELASTIC_APM_SERVER_URL=http://elkprod-apm.vic-metria.nu:8200
+    labels:
+      - co.elastic.logs/json.keys_under_root=true
+      - co.elastic.logs/json.overwrite_keys=true
+      - co.elastic.logs/json.add_error_key=true
+      - co.elastic.logs/json.expand_keys=true
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
+        reservations:
+          memory: 2500M
+
+  keycloak:
+    image: nexus.metria.se:5000/xplore/keycloak:release-keycloak-2022-2-1
+    ports:
+      - "9024:8080"
+    environment:
+      - KC_DB_URL_DATABASE=keycloak
+      - KC_DB_URL_HOST=xploredb02.prodstod.se
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD_FILE=/run/secrets/db_password
+      - HTTP_PROXY=http://webproxy.metria.net:8080
+    command: --hostname-path=auth --hostname-strict false --proxy edge  --hostname-strict-https=false
+    secrets:
+      - source: xplore_keycloak_db_password_v0
+        target: db_password
+    deploy:
+      resources:
+        limits:
+          memory: 1300M
+        reservations:
+          memory: 1000M
+
+secrets:
+  xplore_keycloak_db_password_v0:
+    external: true

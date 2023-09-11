@@ -1,0 +1,41 @@
+<mat-card>
+  <h2 class="variant-font-color">{{ "mk.admin.ledningsagare.addLedningsagare" | transloco }}</h2>
+  <span class="mat-caption variant-font-color">{{ "mk.admin.ledningsagare.ledningsagareCaption" | transloco }}</span>
+  <div class="row">
+    <form [formGroup]="form">
+      <mat-form-field class="ledningsagare-input">
+        <input matInput type="text" formControlName="namn" appearance="underline" [errorStateMatcher]="matcher">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-9"></div>
+    <div class="col-3">
+      <button mat-button (click)="add()" [disabled]="!form.valid" color="accent" class="add-button">
+        {{ "mk.admin.ledningsagare.add" | transloco }}
+      </button>
+    </div>
+  </div>
+  <div *ngIf="ledningsagare?.length > 0">
+    <h2 class="variant-font-color">
+      {{ "mk.admin.ledningsagare.savedLedningsagare" | transloco }}
+    </h2>
+  </div>
+  <table mat-table [dataSource]="ledningsagareSorted">
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let ag">
+        <button mat-icon-button (click)="delete(ag)">
+          <mat-icon>remove_circle_outline</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="namn">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let ag">
+        {{ ag.namn }}
+      </td>
+    </ng-container>
+    <tr mat-row *matRowDef="let ag; columns: columns;"></tr>
+  </table>
+</mat-card>

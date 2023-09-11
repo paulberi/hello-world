@@ -1,0 +1,27 @@
+<div class="row dropzone-container">
+  <div class="col-11" id="dropzone">
+    <mk-upload-file [projektTyp]="projektTyp"
+                    [disableValidation]="false"
+                    [nisKalla]="nisKalla"
+                    (filesChange)="onFilesChange($event)"
+                    (validChange)="onValidChange($event)">
+    </mk-upload-file>
+
+    <xp-spinner-button class="import-button" color="primary"
+                      [isDisabled]="!isVersionFileValid"
+                      (spinnerButtonClick)="onNewVersion()"
+                      [isLoading]="isImporting">
+      {{ "mk.projektinformation.import" | transloco }}
+    </xp-spinner-button>
+  </div>
+</div>
+
+<h2>{{ "mk.redigeraProjekt.versions" | transloco }}</h2>
+<div class="row col-12">
+  <div class="col-11">
+    <mk-projektversion-lista  [versioner]="versioner"
+                              (restoreVersionChange)="restoreVersion.emit($event)"
+                              (deleteVersionChange)="deleteVersion.emit($event)">
+    </mk-projektversion-lista>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="modal-dialog">
+  <h2 mat-dialog-title>
+    {{title}}
+  </h2>
+  <div mat-dialog-content id="message">
+    <div [innerHTML]="message"></div>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-button (click)="onDismiss()">{{dismissLabel}}</button>
+    <button mat-raised-button color="warn" (click)="onConfirm()">{{confirmLabel}}</button>
+  </div>
+</div>

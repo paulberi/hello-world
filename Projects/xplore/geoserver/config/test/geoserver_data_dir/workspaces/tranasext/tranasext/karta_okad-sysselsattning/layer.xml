@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_okad-sysselsattning</name>
+  <id>LayerInfoImpl-2b80b856:1e9421b1ccc:-5336</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-64085f5b:1de1cb12391:-6ced</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,21 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+#header {
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+#button {
+    height: 48px;
+    padding: 0px 50px;
+    font-size: 18px;
+
+    @media screen and #{$xp-breakpoints-tablet-max} {
+        height: 36px;
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+}

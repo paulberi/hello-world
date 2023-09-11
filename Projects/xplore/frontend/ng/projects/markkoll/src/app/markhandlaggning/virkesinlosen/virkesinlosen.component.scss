@@ -1,0 +1,41 @@
+.container,.options {
+  margin-left: 1.75em;
+}
+
+.option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+}
+
+mat-form-field {
+  text-align: right;
+}
+
+span {
+  padding-left: 0.25em;
+}
+
+.right-align {
+  text-align: right;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  -moz-appearance: textfield;
+}
+
+form {
+  padding-bottom: 10px;
+}
+
+.vertical-center-radio-button {
+  margin-top: 23px;
+  margin-left: 12px;
+}

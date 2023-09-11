@@ -1,0 +1,20 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-60a6ef78:174f8b84431:-6c29</id>
+  <name>metria_maps</name>
+  <description>Alla lager från Metria Maps</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-60a6ef78:174f8b84431:-6c2b</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <capabilitiesURL>http://maps.metria.se/geoserver/wms</capabilitiesURL>
+  <user>geovisprokobyta</user>
+  <password>crypt1:2ikMVJOjCP2hNNnDHw5OeeCi517stSLh</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

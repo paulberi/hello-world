@@ -1,0 +1,29 @@
+.avtalskarta ::ng-deep .map {
+  height: 380px !important;
+}
+
+.map-container{
+  height: 380px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.kartnummer {
+  margin-top: 5px;
+}
+
+.actions {
+  margin: 8px 0 16px 0;
+}
+
+.mat-icon-button.large {
+  .mat-icon {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}

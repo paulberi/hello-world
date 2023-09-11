@@ -1,0 +1,31 @@
+.toolbox {
+  .tools {
+    padding: 7px;
+    button {
+      margin: 5px;
+      background-color: white;
+      box-shadow: 5px black;
+      border-radius: 4px;
+      .button-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+          font-size: 10px;
+          line-height: 1;
+          margin-top: 2px;
+        }
+      }
+      .remove {
+        color: var(--error)
+      }
+    }
+    .selected {
+      background-color: var(--accent);
+      color: var(--on-accent);
+      .remove {
+        color: var(--on-accent)
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_bostadstomter_ejbebyggda</name>
+  <id>LayerInfoImpl-5492d999:17715127651:-5f39</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:17715127651:-5f3a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-18 11:19:11.923 UTC</dateCreated>
+</layer>

@@ -1,0 +1,35 @@
+body {
+    background-color: chartreuse;
+}
+
+table {
+    border: 2px solid black;
+    border-spacing: 0ch;
+    width: 75%;
+    height: 300px;
+}
+
+td,
+th,
+tr {
+    text-align: center;
+    border: 1px solid black;
+    margin: o;
+    padding: 0;
+}
+
+tr:nth-child(even) {
+    background-color: cadetblue;
+}
+
+th:nth-child(even) {
+    background-color: rgba(220, 20, 60, 0.47);
+}
+
+td:nth-child(even) {
+    background-color: rgba(220, 20, 60, 0.368);
+}
+
+td:nth-child(3) {
+    background-color: rgba(220, 20, 60, 0.368);
+}

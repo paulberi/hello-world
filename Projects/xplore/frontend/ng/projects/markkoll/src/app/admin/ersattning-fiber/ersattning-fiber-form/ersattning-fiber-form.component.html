@@ -1,0 +1,109 @@
+<form class="row justify-space-between" *ngIf="form" [formGroup]="form">
+  <div class="col-12" *ngIf="!kundDefault">
+    <div class="row createConfig">
+      <div class="col-5">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field floatLabel="always">
+              <mat-label>{{'mk.admin.ersattningFiber.namn' | transloco}}*</mat-label>
+              <input type="text" matInput formControlName="namn">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="right" floatLabel="always">
+              <mat-label>{{'mk.admin.ersattningFiber.personEllerOrgNummer' | transloco}}*</mat-label>
+              <input type="text" matInput formControlName="personnummer">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="col-7 delete">
+        <button mat-button color="warn" (click)="fiberVarderingConfigDelete.emit(fiberConfig)">{{'mk.admin.ersattningFiber.delete' | transloco}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-xl-5">
+    <div class="row header-row">
+      <div class="left-text">
+        <h3>{{"mk.admin.ersattningRow.typAvMarkslag" | transloco}}</h3>
+      </div>
+      <div class="right-text">
+        <h3>{{"mk.admin.ersattningRow.kostnad" | transloco}}</h3>
+      </div>
+    </div>
+    <div class="row-container">
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.markskapSkog' | transloco" formControlName="markskapSkog"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.markskapJordbruksimpediment' | transloco" formControlName="markskapJordbruksimpediment"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.markskapOvrigMark' | transloco" formControlName="markskapOvrigMark"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.optobrunnSkog' | transloco" formControlName="optobrunnSkog"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.optobrunnJordbruksimpediment' | transloco" formControlName="optobrunnJordbruksimpediment"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.optobrunnOvrigMark' | transloco" formControlName="optobrunnOvrigMark"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodSkog6x6' | transloco" formControlName="teknikbodSkog6x6"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodSkog8x8' | transloco" formControlName="teknikbodSkog8x8"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodSkog10x10' | transloco" formControlName="teknikbodSkog10x10"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodJordbruksimpediment6x6' | transloco" formControlName="teknikbodJordbruksimpediment6x6"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodJordbruksimpediment8x8' | transloco" formControlName="teknikbodJordbruksimpediment8x8"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodJordbruksimpediment10x10' | transloco" formControlName="teknikbodJordbruksimpediment10x10"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodOvrigMark6x6' | transloco" formControlName="teknikbodOvrigMark6x6"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodOvrigMark8x8' | transloco" formControlName="teknikbodOvrigMark8x8"></mk-ersattning-row>
+      <mk-ersattning-row [title]="'mk.admin.ersattningRow.teknikbodOvrigMark10x10' | transloco" formControlName="teknikbodOvrigMark10x10"></mk-ersattning-row>
+    </div>
+  </div>
+  <div class="col-xl-1"></div>
+
+  <div class="col-12 col-xl-5 rigth-column">
+    <div class="ersattning-section">
+      <div class="row header-row">
+        <div class="left-text">
+          <h3>{{"mk.admin.ersattningRow.width" | transloco}}</h3>
+        </div>
+        <div class="right-text">
+          <h3>{{"mk.admin.ersattningRow.kostnad" | transloco}}</h3>
+        </div>
+      </div>
+      <div class="row-container">
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.schablon1M' | transloco" formControlName="schablon1M"></mk-ersattning-row>
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.schablon2M' | transloco" formControlName="schablon2M"></mk-ersattning-row>
+      </div>
+    </div>
+
+    <div class="ersattning-section">
+      <div class="row header-row">
+        <div class="left-text">
+          <h3>{{"mk.admin.ersattningRow.grundersattning" | transloco}}</h3>
+        </div>
+        <div class="right-text">
+          <h3>{{"mk.admin.ersattningRow.kostnad" | transloco}}</h3>
+        </div>
+      </div>
+      <div class="row-container">
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.grundersattning' | transloco" formControlName="grundersattning"></mk-ersattning-row>
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.minimiersattningstillagg' | transloco" formControlName="minimiersattningstillagg"></mk-ersattning-row>
+        <mk-ersattning-row-checkbox [title]="'mk.admin.ersattningRow.minimiersattningMarkledning' | transloco" formControlName="minimiersattningEnbartMarkledning"></mk-ersattning-row-checkbox>
+      </div>
+    </div>
+
+    <div class="ersattning-section">
+      <div class="row header-row">
+        <div class="left-text">
+          <h3>{{"mk.admin.ersattningRow.ovrigaErsattningar" | transloco}}</h3>
+        </div>
+        <div class="right-text">
+          <h3>%</h3>
+        </div>
+      </div>
+      <div class="row-container">
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.additionAsPerExpropriationslagen' | transloco" formControlName="additionAsPerExpropriationslagen" isPercentValue="true"></mk-ersattning-row>
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.specialCompensationAtAgreement' | transloco" formControlName="specialCompensationAtAgreement" isPercentValue="true"></mk-ersattning-row>
+        <mk-ersattning-row [title]="'mk.admin.ersattningRow.specialCompensationAtAgreementMax' | transloco" formControlName="sarskildErsattningMaxbelopp"></mk-ersattning-row>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-1"></div>
+</form>
+<div class="row">
+  <div class="col-11 actions">
+    <button mat-button color="warn" (click)="cancelChanges()" [disabled]="!isFormValid()">{{"xp.common.cancel" | transloco}}</button>
+    <button mat-raised-button color="primary" (click)="submit()" [disabled]="!isFormValid()">{{"xp.common.save" | transloco}}</button>
+  </div>
+</div>

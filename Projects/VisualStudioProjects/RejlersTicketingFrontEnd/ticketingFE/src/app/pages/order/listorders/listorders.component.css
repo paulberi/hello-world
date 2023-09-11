@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.card {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    width: 1500px;
+}
+
+.card-body {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+}
+
+.table {
+    width: 100%;
+    border: 0px
+}
+
+.comments {
+    background-color: rgb(4, 113, 202);
+}
+
+.delete {
+    background-color: rgb(178, 87, 87);
+}
+
+.edit {
+    background-color: rgb(57, 127, 127);
+}

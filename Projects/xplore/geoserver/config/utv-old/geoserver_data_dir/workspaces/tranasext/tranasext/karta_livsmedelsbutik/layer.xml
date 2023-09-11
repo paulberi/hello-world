@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_livsmedelsbutik</name>
+  <id>LayerInfoImpl-613bd079:1d9847b0f1b:-d45e</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9da3dc60:e5a47369e2a:-18be</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

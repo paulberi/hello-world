@@ -1,0 +1,21 @@
+<div class="xp-message" [ngSwitch]="severity" [ngClass]="{
+'xp-message-success': severity === 'success',
+'xp-message-information': severity === 'information',
+'xp-message-warning': severity === 'warning',
+'xp-message-error': severity === 'error'}">
+  <div class="xp-message-container">
+    <mat-icon *ngSwitchCase="'success'">done</mat-icon>
+    <mat-icon *ngSwitchCase="'information'">info_outline</mat-icon>
+    <mat-icon *ngSwitchCase="'warning'">warning</mat-icon>
+    <mat-icon *ngSwitchCase="'error'">error_outline</mat-icon>
+    <span>{{ text }}<ng-content></ng-content></span>
+    <ng-template [ngIf]="isClosable">
+      <button mat-icon-button (click)="onClose.emit()" class="close" [attr.aria-label]="'xp.common.close' | transloco">
+        <mat-icon>close</mat-icon>
+      </button>
+    </ng-template>
+    <ng-template [ngIf]="isActionable">
+      <button mat-stroked-button (click)="onAction.emit()" class="action">{{ actionLabel }}</button>
+    </ng-template>
+  </div>
+</div>

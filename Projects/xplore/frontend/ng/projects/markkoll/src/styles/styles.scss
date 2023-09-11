@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../../lib/ui/theme/themes/xp-theme.scss";
+
+.mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: var(--on-background);
+}
+.mat-form-field-appearance-legacy .mat-form-field-label{
+  color: var(--on-background);
+}
+.mat-form-field-underline {
+  background-color: var(--primary-variant) !important;
+}
+.mat-form-field-appearance-legacy.mat-form-field-can-float .mat-form-field-label {
+  color: var(--primary-variant);
+}
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--on-background);
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: var(--primary) !important;
+}
+.mat-ink-bar {
+  background-color: var(--accent) !important;
+}
+.mat-tab-list .mat-tab-labels .mat-tab-label-active {
+  font-weight: 600;
+}
+
+mat-expansion-panel {
+  background-color: var(--background) !important;
+
+  mat-panel-title:hover > span {
+    color: var(--primary) !important;
+  }
+
+  mat-panel-title:focus > span {
+    color: var(--primary) !important;
+  }
+}
+mat-paginator {
+  background-color: var(--background) !important;
+}
+table {
+  background-color: var(--background) !important;
+}
+mat-progress-bar .mat-progress-bar-fill::after {
+  background-color: var(--accent) !important;
+}
+
+mat-progress-bar .mat-progress-bar-buffer {
+  background-color: #c2c2c2 !important;
+}
+.background-button{
+  background-color: var(--background) !important;
+}
+.ngx-charts text {
+  fill: var(--on-background);
+}
+.no-outline-on-focus:focus{
+  outline: none;
+}
+mat-select {
+  margin-left: 0.5em;
+}
+.button-remove-focus-overlay{
+  .mat-button-focus-overlay {
+    background-color: transparent;
+  }
+}
+
+// Gör att alla mat-form-field är lika stora i safari
+input.mat-input-element {
+  margin-top: -1em;
+}
+
+.NgxEditor__MenuBar {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}

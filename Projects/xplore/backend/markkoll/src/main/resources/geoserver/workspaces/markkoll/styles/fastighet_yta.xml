@@ -1,0 +1,12 @@
+<style>
+  <name>fastighet_yta</name>
+  <workspace>
+    <name>markkoll</name>
+  </workspace>
+  <format>sld</format>
+  <languageVersion>
+    <version>1.0.0</version>
+  </languageVersion>
+  <filename>fastighet_yta.sld</filename>
+  <dateCreated>2022-06-03 11:51:01.816 UTC</dateCreated>
+</style>

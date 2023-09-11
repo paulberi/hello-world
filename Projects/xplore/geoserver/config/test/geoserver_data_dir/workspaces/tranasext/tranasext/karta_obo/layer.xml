@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_obo</name>
+  <id>LayerInfoImpl-7b719e10:ccad033befd:-e5cf</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-17824f1c:b55614aea04:-5029</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

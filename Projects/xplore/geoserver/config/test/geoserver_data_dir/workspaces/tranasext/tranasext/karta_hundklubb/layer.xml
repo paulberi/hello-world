@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_hundklubb</name>
+  <id>LayerInfoImpl-bb5638bf:f0d15e5a010:-8762</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-84b09da6:3a0fd3dd4e1:-8b67</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

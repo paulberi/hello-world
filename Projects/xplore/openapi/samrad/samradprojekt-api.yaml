@@ -1,0 +1,641 @@
+openapi: 3.0.0
+info:
+  title: Samrad Admin projekt API
+  description: Api för administration av projekt
+  version: 0.1.0
+servers:
+  - url: http://localhost:9025/api/admin
+paths:
+  '/kunder':
+    get:
+      tags:
+        - admin
+      summary: Lista kunder
+      operationId: "listKunder"
+      responses:
+        200:
+          description: En lista med kunder
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '../models/samrad-models.yaml#/components/schemas/Kund'
+    post:
+      tags:
+        - admin
+      summary: Skapa en kund
+      operationId: "createKund"
+      requestBody:
+        description: Ny kund
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../models/samrad-models.yaml#/components/schemas/Kund'
+      responses:
+        200:
+          description: Skapad kund
+          content:
+            application/json:
+              schema:
+                $ref: '../models/samrad-models.yaml#/components/schemas/Kund'
+  '/kunder/{slug}':
+    get:
+      tags:
+        - admin
+      summary: Hämta en kund, inklusive tema
+      operationId: "getKundWithSlug"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundSlug'
+      responses:
+        200:
+          description: Information om en kund, inklusive tema
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Kund"
+  '/kund/{kundId}':
+    put:
+      tags:
+        - SamradKund
+      summary: Updatera ett kund
+      operationId: "updateKund"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      requestBody:
+        description: JSON
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../models/samrad-models.yaml#/components/schemas/Kund'
+      responses:
+        200:
+          description: updaterad kund
+          content:
+            application/json:
+              schema:
+                $ref: '../models/samrad-models.yaml#/components/schemas/Kund'
+  '/kunder/{kundId}/anvandare':
+    get:
+      tags:
+        - användare
+      summary: Lista användare för en kund
+      operationId: "listAnvandare"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      responses:
+        200:
+          description: En lista med användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+    post:
+      tags:
+        - användare
+      summary: Lägg till användare för en kund
+      operationId: "addAnvandare"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      requestBody:
+        description: Ny användare
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+      responses:
+        200:
+          description: Ny användare
+          content:
+            application/json:
+              schema:
+                $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+  '/kunder/{kundId}/anvandare/{anvandareId}':
+    get:
+      tags:
+        - användare
+      summary: Hämta en användare
+      operationId: "getAnvandare"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/anvandareId'
+      responses:
+        200:
+          description: En användare
+          content:
+            application/json:
+              schema:
+                $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+    put:
+      tags:
+        - användare
+      summary: Uppdatera en användare
+      operationId: "updateAnvandare"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/anvandareId'
+      requestBody:
+        description: Uppdaterad användare
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+      responses:
+        200:
+          description: En uppdaterad användare
+          content:
+            application/json:
+              schema:
+                $ref: '../models/samrad-models.yaml#/components/schemas/Anvandare'
+    delete:
+      tags:
+        - användare
+      summary: Ta bort en användare
+      operationId: "removeAnvandare"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/anvandareId'
+      responses:
+        200:
+          description: Användaren borttagen
+  '/kunder/{kundId}/filer':
+    get:
+      tags:
+        - kundFiler
+      summary: Lista filer för en kund
+      operationId: "listKundFiler"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      responses:
+        200:
+          description: En lista med kundens filer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Fil"
+    post:
+      tags:
+        - kundFiler
+      summary: Ladda upp en fil
+      operationId: "saveKundFil"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      requestBody:
+        description: En bifogade fil
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: en sparat fil
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Fil"
+  '/kunder/{kundId}/filer/{filId}':
+    get:
+      tags:
+        - kundFiler
+      summary: get fil data för en fil
+      operationId: "getKundFil"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: Data för en bifogad fil
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+    delete:
+      tags:
+        - kundFiler
+      summary: Ta bort en fil
+      operationId: "removeFil"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: Filen är borttagen
+  '/kunder/{kundId}/projekt':
+    get:
+      tags:
+        - projekt
+      summary: Lista projekt för kunden som inloggad användare tillhör
+      operationId: "listProjekt"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      responses:
+        200:
+          description: En lista med kundens projekter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+    post:
+      tags:
+        - projekt
+      summary: Skapa ett projekt för kunden som inloggad användare tillhör
+      operationId: addProjekt
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+      requestBody:
+        description: Ny projekt
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+      responses:
+        200:
+          description: sparat projekt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+  '/kunder/{kundId}/projekt/{projektId}':
+    get:
+      tags:
+      - projekt
+      summary: get projekt för en kund
+      operationId: "getProjektWithId"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: En projekt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+    put:
+      tags:
+        - projekt
+      summary: Uppdatera ett projekt för kunden som inloggad användare tillhör
+      operationId: updateProjekt
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      requestBody:
+        description:  projekt att uppdatera
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+      responses:
+        200:
+          description: uppdaterat projekt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Projekt"
+    delete:
+      tags:
+        - projekt
+      operationId: "deleteSamrad"
+      description: rederar projektet med id {id}
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: projektet är raderat.
+  '/kunder/{kundId}/projekt/{projektId}/synpunkter':
+    get:
+      tags:
+        - synpunkter
+      summary: Lista synpunkter för ett projekt
+      operationId: "listSynpunkter"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Lista med publicerade synpunkter för en projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+    post:
+      tags:
+        - synpunkter
+      summary: Skapa en synpunkt för ett projekt
+      operationId: "createSynpunkt"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny synpunkt
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                synpunkt:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+                filer:
+                  description: Bilagor
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        200:
+          description: Ny synpunkt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+  '/kunder/{kundId}/projekt/{projektId}/synpunkter/{synpunktId}':
+    get:
+      tags:
+        - synpunkter
+      summary: Hämta en publicerad synpunkt för ett projekt
+      operationId: "getSynpunkt"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+      responses:
+        200:
+          description: En publicerad synpunkt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+    put:
+      tags:
+        - synpunkter
+      summary: Uppdatera ett synpunkt
+      operationId: updateSynpunkt
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+      requestBody:
+        description:  synpunkt att uppdatera
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+      responses:
+        200:
+          description: uppdaterat synpunkt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+    delete:
+      tags:
+        - synpunkter
+      operationId: "deleteSynpunkt"
+      description: rederar synpunkt med id {id}
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+      responses:
+        200:
+          description: synpunkt är raderat.
+  '/kunder/{kundId}/projekt/{projektId}/synpunkter/{synpunktId}/svar':
+    get:
+      tags:
+        - SynpunktSvar
+      summary: Lista publicerade svar för en synpunkt
+      operationId: "ListSvar"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+      responses:
+        200:
+          description: Lista med svar för en synpunkt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/SynpunktSvar"
+    post:
+      tags:
+        - SynpunktSvar
+      summary: Lämna en synpunkt för ett projekt som kopplas till inloggad användare(multipart - filer)
+      operationId: "AddSynpunktFromPrenumerant"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+      requestBody:
+        description: Ny synpunkt
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                synpunkt:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+                filer:
+                  description: Bilagor
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        200:
+          description: En sparad synpunkt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Synpunkt"
+  '/kunder/{kundId}/projekt/{projektId}/synpunkter/{synpunktId}/svar/{svarId}':
+    get:
+      tags:
+        - SynpunktSvar
+      summary: Hämta ett publicerat svar för en synpunkt
+      operationId: "GetSvar"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/svarId'
+      responses:
+        200:
+          description: Ett svar
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/SynpunktSvar"
+    put:
+      tags:
+        - SynpunktSvar
+      summary: Uppdatera ett synpunkt svar
+      operationId: updateSynpunktSvar
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/svarId'
+      requestBody:
+        description:  synpunkt svar att uppdatera
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../models/samrad-models.yaml#/components/schemas/SynpunktSvar"
+      responses:
+        200:
+          description: uppdaterat synpunkt svar
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/SynpunktSvar"
+    delete:
+      tags:
+        - SynpunktSvar
+      operationId: "deleteSynpunktSvar"
+      description: rederar synpunkt med id {id}
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/synpunktId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/svarId'
+      responses:
+        200:
+          description: synpunkt svar är raderat.
+  '/kunder/{kundId}/projekt/{projektId}/nyheter':
+    get:
+      tags:
+        - Nyheter
+      summary: Lista publicerade nyheter för ett projekt
+      operationId: "ListNyheter"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: Lista med publicerade nyheter för en projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+    post:
+      tags:
+        - Nyheter
+      summary: svara till ett nyhet
+      operationId: "addNyhet"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny nyhet
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                synpunkt:
+                  $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+                filer:
+                  description: Bilagor
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        200:
+          description: En sparad synpunkt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+  '/kunder/{kundId}/projekt/{projektId}/nyheter/{nyhetId}':
+    get:
+      tags:
+        - Nyheter
+      summary: Hämta en publicerad nyhet för ett projekt
+      operationId: "GetPubliceradeNyhetForProjektWithId"
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/nyhetId'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: En nyhet för en projekt
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+    put:
+      tags:
+        - Nyheter
+      summary: Uppdatera ett nyhet
+      operationId: updateNyhet
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/nyhetId'
+      requestBody:
+        description:  nyhet att uppdatera
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+      responses:
+        200:
+          description: uppdaterat en nyhet
+          content:
+            application/json:
+              schema:
+                $ref: "../models/samrad-models.yaml#/components/schemas/Nyhet"
+    delete:
+      tags:
+        - Nyheter
+      operationId: "deleteNyhet"
+      description: rederar nyhet med id {id}
+      parameters:
+        - $ref: '../models/samrad-models.yaml#/components/parameters/kundId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/projektId'
+        - $ref: '../models/samrad-models.yaml#/components/parameters/nyhetId'
+      responses:
+        200:
+          description: nyhet är raderat.

@@ -1,0 +1,35 @@
+<div class="border">
+  <div *ngIf="order?.lines?.length > 0; else noActiveOrder">
+    <div class="order-info">
+      <p><strong> {{ "mm.common.salesperson" | transloco }}</strong> {{ userFullName }}</p>
+      <p><strong> {{ "mm.common.shippingAddress" | transloco }}</strong> {{ order?.customFields?.emailAddress || "" }}
+      </p>
+    </div>
+
+    <div class="cart">
+      <p>{{ "mm.cart.added" | transloco }}</p>
+      <div class="order-items" *ngFor="let orderLine of order?.lines">
+        <div class="items">
+          <button [attr.aria-label]="'mm.cart.removeOrderLine' | transloco" mat-icon-button
+            (click)="removeProduct(orderLine.id)">
+            <mat-icon>remove_circle_outline</mat-icon>
+          </button>
+          <div>
+            <p>{{ orderLine.productVariant.product.name }}</p>
+            <div *ngIf="orderLine.customFields?.attributes">
+              <mm-order-attributes [attributes]="orderLine.customFields?.attributes"></mm-order-attributes>
+            </div>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noActiveOrder>
+  <p>{{ "mm.cart.emptyOrderMessage" | transloco }}</p>
+  <div class="no-order">
+    <img src="../../assets/tom_order.png" alt="Tom order">
+  </div>
+</ng-template>

@@ -1,0 +1,239 @@
+openapi: 3.0.0
+info:
+  title: MapCMS Publikt API
+  description: MapCMS Publikt API
+  version: 1.0.0
+servers:
+  - url: http://localhost:9025/api
+paths:
+
+  ###########################
+  # KUND
+  ###########################
+  '/kunder/{slug}':
+    get:
+      tags:
+        - kund
+      summary: Hämta en kund, inklusive tema och tillgängliga språk
+      operationId: "getKundWithSlug"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundSlug'
+      responses:
+        200:
+          description: Information om en kund, inklusive tema och tillgängliga språk
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/KundRsp"
+
+  '/kunder/{slug}/logotyp':
+    get:
+      tags:
+        - kund
+      summary: Ladda ner en logotyp (bild) för en kund
+      operationId: "getLogoForKund"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundSlug'
+      responses:
+        200:
+          description: En logotyp för en kund
+          content:
+            image/*:
+              schema:
+                type: string
+                format: binary
+
+  ###########################
+  # PROJEKT
+  ###########################
+  '/kunder/{kundId}/projekt':
+    get:
+      tags:
+        - projekt
+      summary: Lista publicerade och arkiverade projekt för en kund
+      operationId: "listProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: Lista med publicerade och arkiverade projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+
+  '/kunder/{kundId}/projekt/{projektId_or_slug}':
+    get:
+      tags:
+        - projekt
+      summary: Hämta ett publicerat eller arkiverat projekt för en kund
+      operationId: "getProjektWithIdorSlug"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId_or_slug'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: Ett publicerat eller arkiverat projekt
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+
+  '/kunder/{kundId}/projekt/{projektId}/filer/{filId}/innehall':
+    get:
+      tags:
+        - projekt
+      summary: Ladda ner en fil för ett projekt
+      operationId: "getFilForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: En fil för ett projekt
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+  ###########################
+  # MINA SIDOR
+  ###########################
+  '/kunder/{kundId}/projekt/{projektId}/mina-sidor/dialoger':
+    get:
+      tags:
+        - mina-sidor
+      summary: Lista dialoger som inloggad användare har skapat/deltar i för ett projekt
+      operationId: "listDialogerForUser"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: Lista med dialoger som inloggad användare har skapat/deltar i för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+
+    post:
+      tags:
+        - mina-sidor
+      summary: Skapa en dialog med ett meddelande och bilagor som kopplas till inloggad användare (ej automatiskt publicerad)
+      operationId: "createDialogWithMessageForUser"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny dialog
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                dialog:
+                  $ref: "./models/common.yaml#/components/schemas/DialogReq"
+                meddelande:
+                  $ref: "./models/common.yaml#/components/schemas/MeddelandeReq"
+                filer:
+                  description: Bilagor till meddelandet
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        201:
+          description: Ny dialog
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+
+  '/kunder/{kundId}/projekt/{projektId}/mina-sidor/dialoger/{dialogId}':
+    get:
+      tags:
+        - mina-sidor
+      summary: Hämta en dialog som inloggad användare har skapat/deltar i, inklusive alla meddelanden och tillhörande lista med filer (metadata)
+      operationId: "getDialogForUser"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      responses:
+        200:
+          description: En dialog som inloggad användare har skapat/deltar i, inklusive alla meddelanden och tillhörande lista med filer (metadata)
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/DialogKomplett"
+
+    post:
+      tags:
+        - mina-sidor
+      summary: Skapa ett meddelande med bilagor i en befintlig dialog där inloggad användare är skapare/deltagare
+      operationId: "createMeddelandeInDialogForUser"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      requestBody:
+        description: Nytt meddelande
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                meddelande:
+                  $ref: "./models/common.yaml#/components/schemas/MeddelandeReq"
+                filer:
+                  description: Bilagor till meddelandet
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        201:
+          description: Nytt meddelande
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/MeddelandeRsp"
+
+  '/kunder/{kundId}/projekt/{projektId}/mina-sidor/dialoger/{dialogId}/meddelanden/{meddelandeId}/filer/{filId}/innehall':
+    get:
+      tags:
+        - mina-sidor
+      summary: Ladda ner en fil (bilaga) tillhörande ett meddelande i en dialog som inloggad användare har skapat/deltar i
+      operationId: "getFilForDialogForUser"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+        - $ref: './models/common.yaml#/components/parameters/meddelandeId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: En fil tillhörande ett meddelande i en publicerad dialog
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary

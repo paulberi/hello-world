@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_laddstationer</name>
+  <id>LayerInfoImpl-183f6601:1d25be13a58:-f166</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-9022c1a4:1e10afadd01:-ce12</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

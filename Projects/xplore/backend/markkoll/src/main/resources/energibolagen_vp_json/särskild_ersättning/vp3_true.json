@@ -1,0 +1,14 @@
+{
+    "varderingsprotokoll": {
+        "ssbSkogsmark": [
+            { "langd": 50, "bredd": 50 }
+        ],
+        "config": {
+            "lagspanning": false,
+            "storskogsbruksavtalet": true,
+            "ingenGrundersattning": false,
+            "forhojdMinimumersattning": false
+        },
+        "prisomrade": "TILLVAXTOMRADE_4B"
+    }
+}

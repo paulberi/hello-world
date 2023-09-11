@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_busshallplats</name>
+  <id>LayerInfoImpl-70ae71b2:e2ef47151a3:-0f34</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-382de438:88568a225f2:-c6c5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

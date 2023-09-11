@@ -1,0 +1,7 @@
+<div *ngIf="innerHtml" [id]="styling" [innerHtml]="content"></div>
+<div *ngIf="!innerHtml">{{ content }}</div>
+
+<div *ngIf="showReadMoreAndLessButton && content.length > limit">
+    <button *ngIf="!toggleReadMore" mat-button (click)="toggleContent()">{{ readMoreText }}</button>
+    <button *ngIf="toggleReadMore" mat-button (click)="toggleContent()">{{ readLessText }}</button>
+</div>

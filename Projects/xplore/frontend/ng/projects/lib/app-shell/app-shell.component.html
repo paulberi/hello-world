@@ -1,0 +1,76 @@
+<ng-container *ngIf="mapConfig | async; let mapConfig; else showLoading">
+  <xp-map #map class="{{theme}}" [fitPadding]="fitPadding$">
+    <div [hidden]="hidePanelsAndTools">
+      <div id="right-bottom-panel">
+        <ng-container *ngTemplateOutlet="rightBottomPanelTemplateRef"></ng-container>
+      </div>
+
+      <div id="left-bottom-panel">
+        <ng-container *ngTemplateOutlet="leftBottomPanelTemplateRef"></ng-container>
+      </div>
+
+      <div id="toolbar">
+        <div id="toolbar-container">
+          <ng-container *ngIf="windowWidth > 660; else toolbarCollapsible">
+            <xp-toolbar *ngFor="let toolbar of mapConfig.app.components.toolbars" [config]="toolbar"></xp-toolbar>
+          </ng-container>
+          <ng-template #toolbarCollapsible>
+            <xp-toolbar-collapsible [configs]="mapConfig.app.components.toolbars"
+                                    [direction]="'up'"></xp-toolbar-collapsible>
+          </ng-template>
+        </div>
+      </div>
+
+      <div id="right-panel">
+        <ng-container *ngTemplateOutlet="rightPanelTemplateRef"></ng-container>
+      </div>
+
+      <div id="left-panel">
+        <ng-container *ngTemplateOutlet="leftPanelTemplateRef"></ng-container>
+      </div>
+
+      <xp-attribution id="attribution"></xp-attribution>
+
+      <ng-container *ngTemplateOutlet="miscTemplateRef"></ng-container>
+    </div>
+  </xp-map>
+</ng-container>
+<ng-template #showLoading>
+  <ng-container *ngIf="!this.error; else showError">
+    <div class="loading" *ngIf="user && user.loggedIn">
+      <mat-spinner class="loading-spinner" [diameter]="64"></mat-spinner>
+      <h3 class="loading-text">Hämtar kartkonfiguration...</h3>
+    </div>
+  </ng-container>
+</ng-template>
+<ng-template #showError>
+  <ng-container [ngSwitch]="this.errorCode">
+    <table *ngSwitchCase="403" style="width:100%; height:100%">
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: bottom;">
+          <h3 style="float: bottom">Behörighet saknades för att använda denna applikation</h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: top">
+          <button *ngIf="user" mat-button class="okButton" (click)="logOut()" style="margin-left: 10px">Logga ut</button>
+        </td>
+      </tr>
+    </table>
+    <table *ngSwitchDefault style="width:100%; height:100%">
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: bottom;">
+          <h3 style="float: bottom">Kunde inte hämta kartkonfigurationen</h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="width:100%; text-align: center; vertical-align: top">
+          <button mat-button class="okButton" onclick="window.location.reload()" style="margin-right: 10px">Försök igen</button>
+          <button *ngIf="user" mat-button class="okButton" (click)="logOut()" style="margin-left: 10px">Logga ut</button>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+</ng-template>
+
+

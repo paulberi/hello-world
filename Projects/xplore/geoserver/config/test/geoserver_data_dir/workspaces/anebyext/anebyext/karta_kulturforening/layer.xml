@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_kulturforening</name>
+  <id>LayerInfoImpl-7d35a21c:168c7e7c223:-1a42</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-7d35a21c:168c7e7c223:-1a41</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,609 @@
+openapi: 3.0.0
+info:
+  title: Kund-config API
+  description: Api för kundkonfiguration
+  version: 0.1.0
+servers:
+  - url: http://localhost:9014/api
+paths:
+  '/kund':
+    get:
+      summary: Hämta lista med kunder
+      operationId: "getKunder"
+      tags:
+      - kund
+      responses:
+        200:
+          description: Lista med kunder
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Kund"
+    post:
+      summary: Skapa kund
+      operationId: "createKund"
+      tags:
+      - kund
+      parameters:
+        - name: kundInfo
+          in: query
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KundInfo"
+          required: true
+      responses:
+        200:
+          description: Den nya kunden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kund"
+  '/kund/page':
+    get:
+      summary: Hämta en sida med kunder
+      operationId: "getKundPage"
+      tags:
+      - kund
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: size
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Sida med kunder
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/KundPage"
+  '/kund/{kundId}':
+    get:
+      summary: Hämta kund
+      operationId: "getKund"
+      tags:
+      - kund
+      parameters:
+        - name: kundId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: En kund
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kund"
+    put:
+      summary: Uppdatera kund
+      operationId: "updateKund"
+      tags:
+      - kund
+      parameters:
+        - name: kundId
+          in: path
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Uppdaterad kund
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/KundInfo"
+      responses:
+        200:
+          description: En Kund
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Kund"
+    delete:
+      summary: Ta bort kund
+      operationId: deleteKund
+      tags:
+      - kund
+      parameters:
+        - name: kundId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        204:
+          description: Kunden togs bort
+  '/kund/{kundId}/users':
+    get:
+      summary: Hämta användare för en kund
+      operationId: "getUsersForKund"
+      tags:
+      - markkoll
+      parameters:
+        - name: kundId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Lista med användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarkkollUser"
+  '/kund/{kundId}/metria-maps':
+    get:
+      summary: Hämta autentiseringsuppgifter för Metria Maps
+      operationId: "getMetriaMapsAuth"
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Autentiseringsuppgifter för Metria Maps
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MetriaMapsAuth"
+    put:
+      summary: Uppdatera autentiseringsuppgifter för Metria Maps
+      operationId: "editMetriaMapsAuth"
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Uppdaterade autentiseringsuppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MetriaMapsAuth"
+      responses:
+        200:
+          description: Autentiseringsuppgifter för Metria Maps ändrades
+  '/kund/{kundId}/fastighetsok':
+    get:
+      summary: Hämta autentiseringsuppgifter för Fastighetsök
+      operationId: "getFastighetsokAuth"
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Autentiseringsuppgifter för Fastighetsök
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FastighetsokAuth"
+    put:
+      summary: Uppdatera autentiseringsuppgifter för Fastighetsök
+      operationId: "editFastighetsokAuth"
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Uppdaterade autentiseringsuppgifter
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FastighetsokAuth"
+      responses:
+        200:
+          description: Autentiseringsuppgifter för Metria Maps ändrades
+  '/kund/{kundId}/abonnemang':
+    post:
+      summary: Lägg till ett abonnemang till en kund
+      operationId: addAbonnemang
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Nytt abonnemang
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Abonnemang"
+      responses:
+        200:
+          description: Det nya abonnemanget
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Abonnemang"
+  '/kund/{kundId}/kundmarke':
+    get:
+      summary: Hämta kundmärke för import från Fsök
+      operationId: getKundmarke
+      tags:
+      - kund
+      parameters:
+        - in: path
+          name: kundId
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Kundmärket
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/kund/geoserver/reset-rules':
+    put:
+      summary: Återskapa Geofence-regler för alla kunder
+      operationId: "resetGeofenceRules"
+      tags:
+      - kund
+      responses:
+        200:
+          description: Har återskapat Geofence-regler för alla kunder
+  '/user':
+    get:
+      summary: Hämta alla användare
+      operationId: "getAllUsers"
+      tags:
+      - user
+      responses:
+        200:
+          description: En användare
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/XpUser"
+  '/kund/{kundId}/markkoll/user':
+    post:
+      summary: Skapa en användare
+      operationId: "createKundAdmin"
+      tags:
+        - markkoll
+      parameters:
+        - name: kundId
+          in: path
+          schema:
+            type: string
+          required: true
+      requestBody:
+        description: Ny användare
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserInfo"
+      responses:
+        200:
+          description: Användaren skapades
+
+  '/user/{id}':
+    get:
+      summary: Hämta en användare
+      operationId: "getUser"
+      tags:
+      - user
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: En användare
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/XpUser"
+    delete:
+      summary: Ta bort en användare
+      operationId: deleteUser
+      tags:
+      - markkoll
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        204:
+          description: Användaren togs bort
+  '/user/{userId}/permissions':
+    get:
+      summary: Hämta behörigheter för en kund
+      operationId: "getPermissions"
+      tags:
+      - user
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          description: Användarens ID
+          required: true
+        - in: query
+          name: produkt
+          schema:
+            $ref: "#/components/schemas/Produkt"
+          required: true
+      responses:
+        200:
+          description: Lista med behörigheter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Permissions"
+  '/abonnemang/{abonnemangId}':
+    delete:
+      summary: Ta bort ett abonnemang
+      operationId: deleteAbonnemang
+      tags:
+      - abonnemang
+      parameters:
+        - in: path
+          name: abonnemangId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        204:
+          description: Abonnemanget blev borttaget
+components:
+  schemas:
+    Kund:
+      type: object
+      properties:
+        id:
+          type: string
+        namn:
+          type: string
+        kontaktperson:
+          type: string
+        epost:
+          type: string
+        telefon:
+          type: string
+        skapadAv:
+          type: string
+        skapadDatum:
+          type: string
+          format: date-time
+        andradAv:
+          type: string
+        andradDatum:
+          type: string
+          format: date-time
+        configurations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Config"
+        abonnemang:
+          type: array
+          items:
+            $ref: "#/components/schemas/Abonnemang"
+      required:
+        - id
+        - namn
+        - epost
+        - telefon
+    KundInfo:
+      type: object
+      properties:
+        namn:
+          type: string
+        organisationsnummer:
+          type: string
+        epost:
+          type: string
+        telefon:
+          type: string
+        kontaktperson:
+          type: string
+      required:
+        - namn
+        - epost
+        - telefon
+    Kontakt:
+      type: object
+      properties:
+        epost:
+          type: string
+        telefon:
+          type: string
+    KundPage:
+      type: object
+      properties:
+        number:
+          type: integer
+        totalPages:
+          type: integer
+        totalElements:
+          type: integer
+        numberOfElements:
+          type: integer
+        content:
+          type: array
+          items:
+            $ref: "#/components/schemas/Kund"
+    XpUser:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        permissions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Permissions"
+      required:
+        - id
+    XpUserInfo:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        permissions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Permissions"
+    MetriaMapsAuth:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        username:
+          type: string
+        password:
+          type: string
+        kundId:
+          type: string
+      required:
+        - id
+        - username
+        - password
+        - kundId
+    FastighetsokAuth:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        username:
+          type: string
+        password:
+          type: string
+        kundmarke:
+          type: string
+        kundId:
+          type: string
+      required:
+        - id
+        - username
+        - password
+        - kundmarke
+        - kundId
+    Config:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        key:
+          type: string
+        value:
+          type: string
+      required:
+        - id
+        - key
+        - value
+    Abonnemang:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        produkt:
+          $ref: "#/components/schemas/Produkt"
+        typ:
+          $ref: "#/components/schemas/AbonnemangTyp"
+      required:
+        - produkt
+        - typ
+    System:
+      type: string
+      enum:
+        - METRIA_MAPS
+        - FASTIGHETSOK
+    Permissions:
+      type: object
+      properties:
+        userId:
+          type: string
+        roll:
+          $ref: "#/components/schemas/Roll"
+        produkt:
+          $ref: "#/components/schemas/Produkt"
+        kundId:
+          type: string
+      required:
+        - userId
+        - roll
+        - produkt
+        - kundId
+    Produkt:
+      type: string
+      enum:
+        - MARKKOLL
+        - MILJOKOLL
+        - SAMRAD
+    Roll:
+      type: string
+      enum:
+        - KUNDADMIN
+        - ANVANDARE
+        - MARKHANDLAGGARE
+        - ANALYS
+    AbonnemangTyp:
+      type: string
+      enum:
+        - GULD
+        - SILVER
+        - STANDARD
+    MarkkollUser:
+      $ref: "markkoll/admin-api.yaml#/components/schemas/MarkkollUser"
+    UserInfo:
+      $ref: "markkoll/admin-api.yaml#/components/schemas/UserInfo"

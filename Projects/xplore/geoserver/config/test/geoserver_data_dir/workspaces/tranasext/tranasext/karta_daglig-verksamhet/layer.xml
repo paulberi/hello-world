@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_daglig-verksamhet</name>
+  <id>LayerInfoImpl-aef783b1:b479631a9f4:-600d</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-8d21a51d:4db69a3573c:-93ec</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,41 @@
+.border {
+  border: 1px solid var(--primary-variant);
+  padding: 12px;
+}
+
+.order-info {
+  margin-bottom: 15px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.cart {
+  p {
+    margin: 5px 0;
+  }
+}
+
+.items {
+  display: flex;
+  column-gap: 5px;
+}
+
+.order-items {
+  margin-bottom: 10px;
+
+  .mat-divider {
+    margin-top: 15px;
+  }
+}
+
+.no-order {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    margin: 20px;
+    width: 50%;
+  }
+}

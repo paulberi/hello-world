@@ -1,0 +1,808 @@
+openapi: 3.0.0
+info:
+  title: MapCMS Admin API
+  description: MapCMS Admin API
+  version: 1.0.0
+servers:
+  - url: http://localhost:9025/api/admin
+paths:
+
+  ###########################
+  # SPRÅK
+  ###########################
+  '/sprak':
+    get:
+      tags:
+        - plattform-admin
+      summary: Lista tillgängliga språk i plattformen (språkkod är nyckel)
+      operationId: listSprak
+      responses:
+        200:
+          description: En lista med tillgängliga språk
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './models/common.yaml#/components/schemas/Sprak'
+
+  ###########################
+  # KUND
+  ###########################
+  '/kunder':
+    get:
+      tags:
+        - kund-admin
+      summary: Lista kunder som inloggad användare är behörig att administrera
+      operationId: "listKunderForAdmin"
+      responses:
+        200:
+          description: En lista med kunder
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './models/common.yaml#/components/schemas/KundRsp'
+
+  '/kunder/{kundId_or_vhtNyckel}':
+    get:
+      tags:
+        - kund-admin
+      summary: Hämta en kund, inklusive tema och standardspråk, som inloggad användare är behörig att administrera
+      operationId: "getKundBySlugOrVhtNyckel"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId_or_vhtNyckel'
+      responses:
+        200:
+          description: Information om en kund, inklusive tema
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/KundRsp"
+
+    put:
+      tags:
+        - kund-admin
+      summary: Updatera en kund som inloggad användare är behörig att administrera
+      operationId: "updateKund"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId_or_vhtNyckel'
+      requestBody:
+        description: Uppdaterad kund
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                kund:
+                  $ref: "./models/common.yaml#/components/schemas/KundReq"
+                logotyp:
+                  description: Logotyp
+                  type: string
+                  format: binary
+            encoding:
+              logotyp:
+                contentType: image/png, image/jpeg, image/svg+xml
+      responses:
+        200:
+          description: Uppdaterad kund
+          content:
+            application/json:
+              schema:
+                $ref: './models/common.yaml#/components/schemas/KundRsp'
+
+  '/kunder/{kundId}/logotyp':
+    get:
+      tags:
+        - kund-admin
+      summary: Ladda ner en logotyp (bild) för en kund
+      operationId: "getLogoForKund"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+      responses:
+        200:
+          description: En logotyp för en kund
+          content:
+            image/*:
+              schema:
+                type: string
+                format: binary
+
+  '/kunder/{kundId}/sprak':
+    get:
+      tags:
+        - kund-admin
+      summary: Lista valda språk för en kund
+      operationId: listSprakForKund
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+      responses:
+        200:
+          description: En lista med valda språk för en kund
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './models/common.yaml#/components/schemas/SprakvalRsp'
+  
+    put:
+      tags:
+        - kund-admin
+      summary: Uppdatera valda språk för en kund
+      operationId: "updateSprakForKund"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+      requestBody:
+        description: Uppdaterade språkval för en kund
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './models/common.yaml#/components/schemas/SprakvalReq'
+      responses:
+        200:
+          description: Uppdaterade språkval för en kund
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: './models/common.yaml#/components/schemas/SprakvalRsp'
+
+  ###########################
+  # PROJEKT
+  ###########################
+  '/kunder/{kundId}/projekt':
+    get:
+      tags:
+        - projekt-admin
+      summary: Lista projekt för en kund (standardspråk eller angivet språk)
+      operationId: "listProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: En lista med projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+
+    post:
+      tags:
+        - projekt-admin
+      summary: Skapa ett projekt för en kund (standardspråk, filer och översättningar hanteras separat)
+      operationId: createProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+      requestBody:
+        description: Nytt projekt
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/ProjektReq"
+      responses:
+        201:
+          description: Nytt projekt
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+  
+  '/kunder/{kundId}/projekt/{projektId}':
+    get:
+      tags:
+      - projekt-admin
+      summary: Hämta ett projekt för en kund (standardspråk eller angivet språk)
+      operationId: "getProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - in: query
+          name: lang
+          schema:
+            type: string
+          description: Val av språk för översättningsbara fält
+      responses:
+        200:
+          description: Ett projekt
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+
+    put:
+      tags:
+        - projekt-admin
+      summary: Uppdatera ett projekt för en kund (standardspråk, översättningar hanteras separat)
+      operationId: updateProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description:  Uppdaterat projekt
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/ProjektReq"
+      responses:
+        200:
+          description: Uppdaterat projekt
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektRsp"
+
+    delete:
+      tags:
+        - projekt-admin
+      description: Ta bort ett projekt för en kund (ej tidigare publicerat)
+      operationId: "deleteProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        204:
+          description: Projektet är borttaget.
+
+  '/kunder/{kundId}/projekt/{projektId}/oversattningar':
+    get:
+      tags:
+        - projekt-admin
+      summary: Lista alla översättningar (exklusive standardspråk) för ett projekt
+      operationId: "listOversattningarForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: En lista med översättningar för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/ProjektOversattning"
+
+    post:
+      tags:
+        - projekt-admin
+      summary: Skapa en översättning för ett projekt
+      operationId: createOversattningForProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny översättning
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/ProjektOversattning"
+      responses:
+        201:
+          description: Ny översättning
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektOversattning"
+  
+  '/kunder/{kundId}/projekt/{projektId}/oversattningar/{sprakkod}':
+    get:
+      tags:
+      - projekt-admin
+      summary: Hämta en översättning för ett projekt (med språkkod, ej standardspråk)
+      operationId: "getOversattningForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/sprakkod'
+      responses:
+        200:
+          description: En översättning
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektOversattning"
+
+    put:
+      tags:
+        - projekt-admin
+      summary: Uppdatera en översättning för ett projekt (ej standardspråk)
+      operationId: updateOversattningForProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/sprakkod'
+      requestBody:
+        description:  Uppdaterad översättning
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/ProjektText"
+      responses:
+        200:
+          description: Uppdaterad översättning
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/ProjektOversattning"
+
+    delete:
+      tags:
+        - projekt-admin
+      description: Ta bort en översättning för ett projekt (ej standardspråk)
+      operationId: "deleteOversattningForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/sprakkod'
+      responses:
+        204:
+          description: Översättningen är borttagen.
+
+  '/kunder/{kundId}/projekt/{projektId}/filer':
+    get:
+      tags:
+        - projekt-admin
+      summary: Lista alla filer (metadata) för ett projekt
+      operationId: listFilerForProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: En lista med filer för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/FilRsp"
+
+    post:
+      tags:
+        - projekt-admin
+      summary: Lägg till en fil för ett projekt
+      operationId: addFilForProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny fil
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                metadata:
+                  $ref: "./models/common.yaml#/components/schemas/FilReq"
+                fil:
+                  type: string
+                  format: binary
+      responses:
+        201:
+          description: Ny fil
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/FilRsp"
+  
+  '/kunder/{kundId}/projekt/{projektId}/filer/{filId}':
+    get:
+      tags:
+      - projekt-admin
+      summary: Hämta en fil (metadata) för ett projekt
+      operationId: "getFilForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: En fil
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/FilRsp"
+
+    put:
+      tags:
+        - projekt-admin
+      summary: Uppdatera en fil för ett projekt
+      operationId: updateFilForProjekt
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      requestBody:
+        description:  Uppdaterad fil
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                metadata:
+                  $ref: "./models/common.yaml#/components/schemas/FilReq"
+                fil:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: Uppdaterad fil
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/FilRsp"
+
+    delete:
+      tags:
+        - projekt-admin
+      description: Ta bort en fil för ett projekt
+      operationId: "deleteFilForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      responses:
+        204:
+          description: Filen är borttagen.
+
+  '/kunder/{kundId}/projekt/{projektId}/filer/{filId}/innehall':
+    get:
+      tags:
+      - projekt-admin
+      summary: Ladda ner en fil för ett projekt
+      operationId: "getFilInnehallForProjekt"
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/filId'
+      responses:
+        200:
+          description: En fil tillhörande ett projekt
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+  ###########################
+  # GEOMETRIER
+  ###########################
+  '/kunder/{kundId}/projekt/{projektId}/geometrier':
+    get:
+      tags:
+        - geometri-admin
+      summary: Lista alla geometrier för ett projekt
+      operationId: listGeometrier
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: En lista med geometrier för ett projekt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/GeometriRsp"
+
+    post:
+      tags:
+        - geometri-admin
+      summary: Skapa en geometri för ett projekt
+      operationId: createGeometri
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny geometri
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/GeometriReq"
+      responses:
+        201:
+          description: Ny geometri
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/GeometriRsp"
+  
+  '/kunder/{kundId}/projekt/{projektId}/geometrier/{geometriId}':
+    get:
+      tags:
+      - geometri-admin
+      summary: Hämta en geometri för ett projekt
+      operationId: getGeometri
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/geometriId'
+      responses:
+        200:
+          description: En geometri
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/GeometriRsp"
+
+    put:
+      tags:
+        - geometri-admin
+      summary: Uppdatera en geometri för ett projekt
+      operationId: updateGeometri
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/geometriId'
+      requestBody:
+        description:  Uppdaterad geometri
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/GeometriReq"
+      responses:
+        200:
+          description: Uppdaterad geometri
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/GeometriRsp"
+
+    delete:
+      tags:
+        - geometri-admin
+      description: Ta bort en geometri för ett projekt
+      operationId: deleteGeometri
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/geometriId'
+      responses:
+        204:
+          description: Geometrin är borttagen.
+
+  ###########################
+  # DIALOG
+  ###########################
+  '/kunder/{kundId}/projekt/{projektId}/dialoger':
+    get:
+      tags:
+        - dialog-admin
+      summary: Lista alla dialoger för ett projekt
+      operationId: listDialoger
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      responses:
+        200:
+          description: En lista med dialoger
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+
+    post:
+      tags:
+        - dialog-admin
+      summary: Skapa en dialog med ett meddelande och bilagor som kopplas till inloggad användare
+      operationId: createDialogWithMessage
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+      requestBody:
+        description: Ny dialog
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                dialog:
+                  $ref: "./models/common.yaml#/components/schemas/DialogReqAdmin"
+                meddelande:
+                  $ref: "./models/common.yaml#/components/schemas/MeddelandeReqAdmin"
+                filer:
+                  description: Bilagor till meddelandet
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        201:
+          description: Ny dialog
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+  
+  '/kunder/{kundId}/projekt/{projektId}/dialoger/{dialogId}':
+    get:
+      tags:
+      - dialog-admin
+      summary: Hämta en dialog för ett projekt
+      operationId: getDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      responses:
+        200:
+          description: En dialog
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+
+    put:
+      tags:
+        - dialog-admin
+      summary: Uppdatera en dialog för ett projekt
+      operationId: updateDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      requestBody:
+        description:  Uppdaterad dialog
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/DialogReqAdmin"
+      responses:
+        200:
+          description: Uppdaterad dialog
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/DialogRsp"
+
+    delete:
+      tags:
+        - dialog-admin
+      description: Ta bort en dialog för ett projekt
+      operationId: deleteDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      responses:
+        204:
+          description: Dialogen och alla meddelanden med bilagor är borttagen.
+
+  ###########################
+  # DIALOG - MEDDELANDE
+  ###########################
+  '/kunder/{kundId}/projekt/{projektId}/dialoger/{dialogId}/meddelanden':
+    get:
+      tags:
+        - dialog-admin
+      summary: Lista alla meddelanden för en dialog
+      operationId: listMeddelandenForDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      responses:
+        200:
+          description: En lista med meddelanden för en dialog
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./models/common.yaml#/components/schemas/MeddelandeRsp"
+
+    post:
+      tags:
+        - dialog-admin
+      summary: Lägg till ett meddelande med bilagor till en befintlig dialog, som kopplas till inloggad användare
+      operationId: createMeddelandeForDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+      requestBody:
+        description: Nytt meddelande med bilagor
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                meddelande:
+                  $ref: "./models/common.yaml#/components/schemas/MeddelandeReqAdmin"
+                filer:
+                  description: Bilagor till meddelandet
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        201:
+          description: Nytt meddelande
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/MeddelandeRsp"
+  
+  '/kunder/{kundId}/projekt/{projektId}/dialoger/{dialogId}/meddelanden/{meddelandeId}':
+    get:
+      tags:
+      - dialog-admin
+      summary: Hämta ett meddelande för en dialog
+      operationId: getMeddelandeForDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+        - $ref: './models/common.yaml#/components/parameters/meddelandeId'
+      responses:
+        200:
+          description: Ett meddelande
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/MeddelandeRsp"
+
+    put:
+      tags:
+        - dialog-admin
+      summary: Uppdatera ett meddelande för en dialog
+      operationId: updateMeddelandeForDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+        - $ref: './models/common.yaml#/components/parameters/meddelandeId'
+      requestBody:
+        description:  Uppdaterat meddelande
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "./models/common.yaml#/components/schemas/MeddelandeReqAdmin"
+      responses:
+        200:
+          description: Uppdaterad nyhet
+          content:
+            application/json:
+              schema:
+                $ref: "./models/common.yaml#/components/schemas/MeddelandeRsp"
+
+    delete:
+      tags:
+        - dialog-admin
+      description: Ta bort ett meddelande för en dialog
+      operationId: deleteMeddelandeForDialog
+      parameters:
+        - $ref: './models/common.yaml#/components/parameters/kundId'
+        - $ref: './models/common.yaml#/components/parameters/projektId'
+        - $ref: './models/common.yaml#/components/parameters/dialogId'
+        - $ref: './models/common.yaml#/components/parameters/meddelandeId'
+      responses:
+        204:
+          description: Meddelandet är borttaget.

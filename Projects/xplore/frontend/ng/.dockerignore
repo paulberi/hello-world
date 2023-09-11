@@ -1,0 +1,9 @@
+node_modules
+.git
+dist
+generated
+test-report.html
+junit.xml
+Dockerfile.*
+.angular
+docker-build*.sh

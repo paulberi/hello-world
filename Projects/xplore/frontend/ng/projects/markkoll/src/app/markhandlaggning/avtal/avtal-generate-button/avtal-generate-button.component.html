@@ -1,0 +1,37 @@
+<ng-container [ngSwitch]="status">
+  <button *ngSwitchCase="'NONE'"
+          mat-raised-button
+          [disabled]="disabled"
+          (click)="buttonClick.emit()"
+          color="secondary">
+          {{ text }}
+  </button>
+  <button *ngSwitchCase="'IN_PROGRESS'"
+          mat-raised-button
+          [disabled]="disabled"
+          (click)="buttonClick.emit()"
+          color="secondary">
+          {{ text }}
+  </button>
+  <button *ngSwitchCase="'DONE'"
+          mat-raised-button
+          [disabled]="disabled"
+          (click)="buttonClick.emit()"
+          color="accent">
+          {{ text }}
+  </button>
+  <button *ngSwitchCase="'ERROR'"
+          mat-raised-button
+          [disabled]="disabled"
+          (click)="buttonClick.emit()"
+          color="warn">
+          {{ text }}
+  </button>
+  <button *ngSwitchDefault
+          mat-raised-button
+          [disabled]="disabled"
+          (click)="buttonClick.emit()"
+          color="secondary">
+          {{ text }}
+  </button>
+</ng-container>

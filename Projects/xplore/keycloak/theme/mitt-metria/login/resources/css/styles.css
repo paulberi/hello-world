@@ -1,0 +1,327 @@
+@import url(//fonts.googleapis.com/css?family=Nunito+Sans);
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #454545;
+}
+
+a {
+    color: #007565;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+#main-content {
+    margin: 50px auto;
+    display: flex;
+    padding: 20px 40px;
+    max-width: fit-content;
+    align-items: center;
+}
+
+#main-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#product-image {
+    margin-top: 20px;
+}
+
+#product-title {
+    width: 100%;
+}
+
+.login-pf-page {
+    width: 100%;
+    padding-top: 0px;
+    flex: 1 1 auto;
+}
+
+.login-pf {
+    background: inherit;
+}
+
+.login-pf body {
+    background-image: url(../img/bakgrundsmonster-top.png);
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top -20px center;
+}
+
+.form-control {
+    border-radius: 7px;
+}
+
+.column {
+    width: 100%;
+    padding: 20px;
+}
+
+#product-image {
+    max-width: 80%;
+}
+
+footer {
+    background-color: #333;
+    color: #F8F9FA;
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 6px 5px #0000004d;
+}
+
+#footer-title {
+    font-size: 2rem;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+.footer-body {
+    font-size: 1rem;
+}
+
+#footer-links {
+    padding-top: 1rem;
+}
+
+#footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    #footer-left {
+        flex: 0 0 calc(100% * (8 / 12));
+        max-width: calc(100% * (8 / 12));
+    }
+
+    #footer-right {
+        flex: 0 0 calc(100% * (4 / 12));
+        max-width: calc(100% * (4 / 12));
+    }
+}
+
+.footer-link {
+    color: #F8F9FA;
+}
+
+#kc-header {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px #00000080;
+}
+
+#kc-header-wrapper {
+    display: none;
+}
+
+#kc-header-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kc-header-title {
+    font-size: 30px;
+    padding-left: 20px;
+    border-left: 2px solid white;
+    margin: auto 0;
+    color: #fff;
+    line-height: 40px;
+}
+
+#kc-social-pro {
+    padding: 20px;
+    background-color: black;
+}
+
+#rememberMe:checked {
+    accent-color: #007565;
+}
+
+:root {
+    --pf-global--primary-color--100: #454545;
+}
+
+.login-pf-page .pf-m-primary {
+    margin-top: 0;
+    background-image: unset;
+    background-color: #007565;
+    border-color: #007565;
+    box-shadow: 2px 2px 5px #000000a1;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.card-pf {
+    /*     margin: 0 0 0 auto;
+ */
+    width: 100%;
+    padding: 1.5rem !important;
+    border: none;
+}
+
+#kc-form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+#kc-info {
+    margin: 10px 0 0 0;
+}
+
+#kc-info-wrapper {
+    background-color: transparent;
+    padding: 15px 35px 0;
+}
+
+.kc-social-item .kc-social-provider-name::before {
+    text-decoration: none;
+}
+
+#social-metria-ad-oidc .kc-social-provider-name::before {
+    content: "";
+    padding-right: 30px;
+    background: url("../img/metria-logo-text.png") no-repeat;
+    background-size: contain;
+}
+
+.kc-social-item .kc-social-provider-name {
+    top: 0
+}
+
+.kc-social-item {
+    text-decoration: none;
+}
+
+.kc-social-item::after {
+    border: solid 1px #b1b1b1;
+}
+
+#kc-social-providers h4 {
+    display: none
+}
+
+#custom-alert-icon-wrapper {
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+#product-description {
+    text-align: center;
+}
+
+#custom-password-policy-wrapper {
+    margin-bottom: 15px;
+}
+
+#custom-alert-info {
+    border-color: #007565;
+    background-color: #C7DEDB;
+    margin-bottom: 15px;
+}
+
+#custom-info-exclamation-circle {
+    color: #007565;
+}
+
+#custom-password-information-text {
+    color: #333333;
+    font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .login-pf-page .card-pf {
+        /*margin-top: auto;*/
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #main-content {
+        padding: 20px;
+        display: block;
+        background-color: transparent;
+    }
+
+    #product-image {
+        display: none;
+    }
+
+    #kc-current-locale-link:is(a) {
+        color: white;
+    }
+
+    #product-title {
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    #kc-header {
+        background-position: center left +5%, right, center;
+        background-size: 70px auto, contain, cover;
+        height: 80px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    #kc-locale {
+        top: 28px;
+    }
+
+    #header-text {
+        left: calc(5% + 75px);
+        top: 28px;
+        font-size: 1rem;
+    }
+
+    #kc-header-title {
+        font-size: 20px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+
+    #kc-header-icon {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        box-shadow: none;
+    }
+
+    #footer-right {
+        display: none;
+    }
+}

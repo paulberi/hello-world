@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../lib/ui/theme/themes/xp-theme.scss";
+
+.mat-paginator {
+  background-color: var(--background);
+}
+
+.mat-table {
+  background-color: var(--background);
+}

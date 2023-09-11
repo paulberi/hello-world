@@ -1,0 +1,70 @@
+/* Root */
+.root
+{ 
+    -fx-accent: 	 	   orange;
+    -fx-focus-color:  	   orange;
+    -fx-faint-focus-color: transparent;
+	-fx-background-color:  linear-gradient(#131313 80%, #181818 100%); 
+}
+
+
+/* Label */
+.label
+{
+    -fx-text-fill: white;
+}
+
+
+/* Button */
+.button
+{
+	-fx-font-size: 		   16;
+	-fx-text-fill: 		   white;
+    -fx-background-color:  #383838;
+    -fx-background-insets: 0;
+}
+
+.button:pressed
+{
+	-fx-effect:	innershadow(three-pass-box, #181818, 5, 0, 0, 0);
+}
+
+.button:hover
+{
+    -fx-text-fill: -fx-accent;
+}
+
+
+/* Scroll pane */
+.scroll-pane
+{
+   -fx-background-color:transparent;
+}
+
+.scroll-pane .viewport
+{ 
+   -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb
+{
+	-fx-background-color: orange;
+}
+
+.scroll-bar:horizontal{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb
+{
+	-fx-background-color: transparent;
+}
+
+.scroll-pane > corner
+{
+	-fx-background-color: transparent;
+}

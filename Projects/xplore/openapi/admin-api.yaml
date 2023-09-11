@@ -1,0 +1,237 @@
+openapi: "3.0.2"
+info:
+  version: 0.1.0
+  title: Xplore Admin interface API
+  description: |
+    API Xplore Admin.
+  contact:
+    url: "https://metria.se"
+    email: todo@metria.se
+servers:
+  - url: http://localhost:9013/api
+    description: Utvecklingsinstans
+paths:
+  '/ping/anon-ping':
+    get:
+      tags:
+        - Ping
+      summary: Ping-tjänst för att se om tjänsten är uppe.
+      description: Används för att testa om tjänsten är igång.
+      operationId: "anon-ping"
+      responses:
+        '200':
+          description: Tjänsten är igång.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong!
+  '/ping/auth-ping':
+    get:
+      tags:
+        - Ping
+      summary: Ping-tjänst som kräver auktorisering.
+      description: Används i testsyfte för att kontrollera auktorisering.
+      operationId: "auth-ping"
+      responses:
+        '200':
+          description: Svarar med "pong, <användarnamn>!".
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong, user123!
+  '/keycloak/realms':
+    get:
+      tags:
+        - Keycloak
+      summary: Listar realms.
+      description: Listar realms i KeyCloak.
+      responses:
+        '200':
+          description: Lista med realm name och display name.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RealmList"
+  '/keycloak/realms/{realm}/users':
+    get:
+      tags:
+        - Keycloak
+      summary: Listar användare i realm.
+      description: Listar användare i realm i KeyCloak.
+      parameters:
+        - name: realm
+          in: path
+          schema:
+            type: string
+            example: master
+          required: true
+        - in: query
+          name: first
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: max
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: Lista med användare.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserList"
+    post:
+      tags:
+        - Keycloak
+      summary: Skapar/Uppdaterar användare.
+      description: Skapar/Uppdaterar användare från excel-fil.
+      parameters:
+        - name: realm
+          in: path
+          schema:
+            type: string
+            example: master
+          required: true
+        - name: dry-run
+          in: query
+          description: Om 'true' körs en "dry-run" med in-datat för att validera att det är korrekt.
+          schema:
+            type: boolean
+            example: true
+          required: true
+        - name: skip-first-rows
+          in: query
+          description: Valfri. Hoppar över det angivna antalet rader i början av varje sida när excel-fil läses in. Default är 0.
+          schema:
+            type: integer
+            example: 1
+          required: false
+        - name: number-of-sheets
+          in: query
+          description: Valfri. Anger hur många blad ur excel-filen som ska läsas. Default är att alla läses. Om värdet < 0 läses alla blad.
+          schema:
+            type: integer
+            example: 3
+          required: false
+      requestBody:
+        description: Excel-fil med användardata.
+        content:
+          application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: Om dry-run=true -> Rapport på vad som kommer att hända om samma request körs med dry-run=false. Om dry-run=false -> Rapport hur det gick att skapa/uppdatera användare.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateUsersReport"
+        '400':
+          description: Om filen inte kunde läsas in. message sätts till ett felmeddelande och statuses lämnas tom.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateUsersReport"
+
+components:
+  schemas:
+    RealmList:
+      type: object
+      properties:
+        realms:
+          type: array
+          items:
+            $ref: "#/components/schemas/RealmInfo"
+    RealmInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          example: master
+        displayName:
+          type: string
+          example: Master realm
+    UserList:
+      type: object
+      properties:
+        totalElements:
+          type: integer
+        users:
+          type: array
+          items:
+            $ref: "#/components/schemas/UserDetails"
+    UserDetails:
+      type: object
+      properties:
+        username:
+          type: string
+          example: user123
+        email:
+          type: string
+          example: user123@company.se
+        firstname:
+          type: string
+          example: Firstname
+        lastname:
+          type: string
+          example: Lastname
+        roles:
+          type: array
+          items:
+            $ref: "#/components/schemas/RoleInfo"
+        enabled:
+          type: boolean
+          example: true
+        resetPassword:
+          type: boolean
+          example: false
+    RoleInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          example: company_admin
+        description:
+          type: string
+          example: Roll som ger admin-rättigheter till company
+    CreateUsersReport:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Fel uppstod under skapande av en eller fera användare. Vänligen kontrollera felrapporten.
+        statuses:
+          type: array
+          items:
+            $ref: "#/components/schemas/CreateUserStatus"
+    CreateUserStatus:
+      type: object
+      properties:
+        user:
+          $ref: "#/components/schemas/UserDetails"
+        action:
+          type: string
+          enum: [CREATE, UPDATE, UNKNOWN]
+          description: >
+            Action type:
+              * `CREATE` - Skapa en ny användare
+              * `UPDATE` - Uppdatera en befintlig användare
+              * `UNKNOWN` - Ett okänt fel uppstod vid försök att skapa/uppdatera en användare under skarp körning
+
+        status:
+          type: string
+          enum: [SUCCESS, FAIL, WARNING, UNKNOWN]
+          description: >
+            Result status:
+              * `SUCCESS`- Handlingen lyckades
+              * `FAIL`- Handlingen misslyckades
+              * `WARNING`- Delvis lyckad handling, men ett eller flera steg kan ha misslyckats under skarp körning
+              * `UNKNOWN`- Ett okänt fel uppstod vid skarp körning, och vi vet inte i vilket tillstånd servern lämnats
+        message:
+          type: string
+          example: Epost-addressen är upptagen.\nRoller saknas på KeyCloak servern  role_1, role_2, role_3.\n

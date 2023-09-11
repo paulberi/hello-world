@@ -1,0 +1,23 @@
+<mk-samfallighet-ui [projektId]="projektId"
+                    [fastighetId]="fastighetId"
+                    [avtal]="avtal"
+                    [vp]="vp"
+                    [fiberVp]="fiberVp"
+                    [versionMessage]="versionMessage"
+                    [isSavingAnteckningar]="isSavingAnteckningar"
+                    [isGeneratingAvtal]="isGeneratingAvtal"
+                    [isSavingIntrang]="isSavingIntrang"
+                    [projekt]="projekt"
+
+                    (avtalStatusChange)="onAvtalStatusChange($event)"
+                    (confirmVersionChange)="onConfirmVersionChange()"
+                    (skapaAvtalClick)="onSkapaAvtalClick()"
+                    (anteckningarChange)="onAnteckningarChange($event)"
+                    (intrangChange)="onIntrangChange($event)"
+                    (signAvtalCheckAllChange)="signAvtalCheckAllChange($event)"
+                    (exportXlsxClick)="onExportXlsxClick()"
+                    (ombudChange)="onAgareChange($event)"
+                    (ombudCreate)="onOmbudCreate($event)"
+                    (ombudDelete)="onOmbudDelete($event)"
+                    >
+</mk-samfallighet-ui>

@@ -1,0 +1,34 @@
+openapi: "3.0.2"
+components:
+  schemas:
+    Import:
+      description: Representerar en import
+      type: object
+      properties:
+        organisation:
+          type: string
+          description: Organisationen som denna import tillhör
+        objektnummer:
+          type: string
+          description: Objektnumret för denna import
+        status:
+          type: string
+          description: Importens status
+        startad_tidpunkt:
+          type: string
+          format: 'date-time'
+          description: Tidpunkt då denna import startades
+        avslutad_tidpunkt:
+          type: string
+          format: 'date-time'
+          description: Tidpunkt då denna import avslutades
+
+    Error:
+      required:
+        - code
+        - message
+      properties:
+          code:
+            type: string
+          message:
+            type: string

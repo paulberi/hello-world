@@ -1,0 +1,31 @@
+query productById($productId: ID!) {
+  product(id: $productId) {
+    id
+    name
+    description
+    customFields {
+      fullDescription
+    }
+    assets {
+      name
+      type
+      mimeType
+      source
+    }
+     featuredAsset {
+      name
+      source
+      type
+    }
+    facetValues {
+      id
+      name
+      facet {
+        id
+        code
+      }
+    }
+  }
+}
+
+

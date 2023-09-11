@@ -1,0 +1,63 @@
+{
+  "skogsmark": {
+    "prisomrade": {
+      "norrlandsInland": 2.4689961832061074,
+      "norrlandsKustland": 3.0247875318066164,
+      "tillvaxtomrade3": 3.484384223918575,
+      "tillvaxtomrade4A": 4.435642493638678,
+      "tillvaxtomrade4B": 4.595966921119594
+    }
+  },
+  "punktersattning": {
+    "kabelSkap": {
+      "skog": 500,
+      "jordbruksimpediment": 500,
+      "ovrigMark": 500
+    },
+    "natstation": {
+      "skog": {
+        "yta6x6m": 2300,
+        "yta8x8m": 2800,
+        "yta10x10m": 3400
+      },
+      "jordbruksimpediment": {
+        "yta6x6m": 2700,
+        "yta8x8m": 3000,
+        "yta10x10m": 3400
+      },
+      "ovrigMark": {
+        "yta6x6m": 2700,
+        "yta8x8m": 3000,
+        "yta10x10m": 3400
+      }
+    },
+    "sjokabelskylt": {
+      "skog": {
+        "yta6x6m": 2300,
+        "yta8x8m": 2800,
+        "yta10x10m": 3400
+      },
+      "jordbruksimpediment": {
+        "yta6x6m": 2700,
+        "yta8x8m": 3000,
+        "yta10x10m": 3400
+      },
+      "ovrigMark": {
+        "yta6x6m": 2700,
+        "yta8x8m": 3000,
+        "yta10x10m": 3400
+      }
+    }
+  },
+  "markledning": {
+    "factor": 4.064344460570876
+  },
+  "vaganlaggning": {
+    "zon1": 10.923836657169991,
+    "zon2": 4.245014245014246
+  },
+  "prisbasbelopp": 47300,
+  "minimumersattning": 2365,
+  "forhojdMinimumersattning": 5000,
+  "sarskildErsattningSkogsbruksavtalet": 2749.0295165394405
+}

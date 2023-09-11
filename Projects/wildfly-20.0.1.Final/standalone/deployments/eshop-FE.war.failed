@@ -1,0 +1,2 @@
+"{\"WFLYCTL0080: Failed services\" => {\"jboss.deployment.unit.\\\"eshop-FE.war\\\".POST_MODULE\" => \"WFLYSRV0153: Failed to process phase POST_MODULE of deployment \\\"eshop-FE.war\\\"
+    Caused by: org.jboss.msc.service.DuplicateServiceException: Service jboss.naming.context.java.module.eshop-FE.eshop-FE is already registered\"}}"

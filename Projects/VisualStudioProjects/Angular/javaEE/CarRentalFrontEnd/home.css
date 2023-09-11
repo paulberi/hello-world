@@ -1,0 +1,159 @@
+body {
+    background-image: url("carimage.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+}
+
+.header-content {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.homeButton {
+    margin-left: 55%;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.loginButton {
+    margin-left: 10px;
+    background-color: green;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.logoutButton {
+    margin-left: 10px;
+    background-color: darkred;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.createButton {
+    background-color: cadetblue;
+    margin-top: 8px;
+    height: 25px;
+    width: auto;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.transactionPage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.leftPane {
+    width: 50%;
+    background: transparent;
+    height: 90vh;
+    border: transparent;
+}
+
+.rightPane {
+    width: 50%;
+    height: 90vh;
+    border: transparent;
+    background-image: linear-gradient(to right, white, cyan);
+    overflow: hidden;
+}
+
+iframe {
+    border: transparent;
+}
+
+.loginSubmit {
+    margin-top: 20px;
+    margin-left: 160px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: green;
+}
+
+.loginForm {
+    margin-top: 150px;
+}
+
+.userLoginText {
+    padding: 2px;
+    margin: 5px
+}
+
+.userPasswordText {
+    padding: 2px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.loginLabel {
+    padding: 10px;
+    margin: 5px;
+}
+
+.createAccountForm {
+    margin-top: 150px;
+}
+
+.createLabel {
+    padding: 10px;
+    margin: 5px;
+}
+
+#createLabel {
+    margin-right: 120px;
+}
+
+.createButtonSubmit {
+    width: 100px;
+    border: 0px;
+    background-color: transparent;
+    margin-left: 180px;
+    padding: 10px;
+}
+
+label {
+    padding: 10px;
+    margin: 5px;
+}
+
+input {
+    padding: 2px;
+    margin: 5px
+}
+
+.nameText {
+    margin-left: 32px;
+}
+
+.addressText {
+    margin-left: 25px;
+}
+
+.passText {
+    margin-left: 15px;
+}
+
+.roleText {
+    margin-left: 50px;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 212px;
+}

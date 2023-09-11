@@ -1,0 +1,58 @@
+@import "../../../../../../lib/ui/xp-breakpoints.scss";
+
+.product-description-wrapper {
+    padding: 2rem calc(100% / 24);
+}
+
+.header {
+    margin-bottom: 12px;
+}
+
+.description-wrapper {
+    flex-wrap: nowrap;
+    gap: 24px 64px;
+
+    @media screen and #{$xp-breakpoints-tablet-max} {
+        flex-direction: column;
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+.product-information {
+    flex: 3;
+}
+
+.product-description {
+    margin-top: 40px;
+}
+
+.images {
+    flex: 2;
+
+    img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 60px;
+
+        @media screen and #{$xp-breakpoints-desktop-min} {
+            max-width: 500px;
+        }
+    }
+}
+
+.documents-section {
+    margin-top: 40px;
+
+    h2 {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    
+    .documents {
+        align-items: center;
+    }
+}
+

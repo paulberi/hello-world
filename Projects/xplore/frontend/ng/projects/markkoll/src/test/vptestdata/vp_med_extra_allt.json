@@ -1,0 +1,46 @@
+{
+    "varderingsprotokoll": {
+        "markledning": [
+            { "langd": 1, "bredd": 2 },
+            { "langd": 4, "bredd": 1 },
+            { "langd": 8, "bredd": 2 },
+            { "langd": 16, "bredd": 1 }
+        ],
+        "punktersattning": [
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 1 },
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 2 },
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 3 },
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 4 }
+        ],
+        "hinderAkermark": [
+            { "ersattning": 100 },
+            { "ersattning": 200}
+        ],
+        "ledningSkogsmark": [
+            { "ersattning": 432 },
+            { "ersattning": 68 }
+        ],
+        "rotnetto": 500,
+        "ovrigtIntrang": [
+            { "ersattning": 300 },
+            { "ersattning": 400 }
+        ],
+        "ssbSkogsmark": [
+            { "langd": 5, "bredd": 7 },
+            { "langd": 6, "bredd": 8 },
+            { "langd": 9, "bredd": 10 },
+            { "langd": 11, "bredd": 12 }
+        ],
+        "ssbVaganlaggning": [
+            { "langd": 5, "zon": "ZON_1" },
+            { "langd": 10, "zon": "ZON_2" }
+        ],
+        "config": {
+            "lagspanning": false,
+            "storskogsbruksavtalet": false,
+            "ingenGrundersattning": false,
+            "forhojdMinimumersattning": false
+        },
+        "prisomrade": "NORRLANDS_INLAND"
+    }
+}

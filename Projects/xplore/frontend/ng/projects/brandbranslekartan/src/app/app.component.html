@@ -1,0 +1,40 @@
+<app-shell #appShell [theme]="'metria-dark-theme'"
+           [leftPanelTemplateRef]="leftPanel"
+           [leftBottomPanelTemplateRef]="leftBottomPanel"
+           [rightBottomPanelTemplateRef]="rightBottomPanel"
+           [rightPanelTemplateRef]="rightPanel">
+</app-shell>
+
+<ng-template #leftPanel>
+  <xp-search-panel>
+    <xp-search-type name="Orter">
+      <xp-search-ort></xp-search-ort>
+    </xp-search-type>
+  </xp-search-panel>
+</ng-template>
+
+<ng-template #leftBottomPanel>
+  <xp-navigation-toolbar id="navigation-toolbar" class="toolbar"
+                         [config]="appShell.getProperty('navigation-toolbar', 'toolbar', false)">
+  </xp-navigation-toolbar>
+  <xp-background-buttons-panel></xp-background-buttons-panel>
+</ng-template>
+
+<ng-template #rightBottomPanel>
+  <xp-menu>
+    <button mat-menu-item (click)="about()">Om karta</button>
+    <button mat-menu-item (click)="kartmaterial()">Ladda ned kartmaterial</button>
+    <button mat-menu-item (click)="appShell.share()">Dela karta</button>
+    <button mat-menu-item (click)="appShell.help()">Hjälp</button>
+  </xp-menu>
+</ng-template>
+
+<ng-template #rightPanel>
+  <xp-layer-panel id="layer-panel" [specialMapKeyTemplateRef]="layerPanelBottomTemplate"
+                  (layerChange)="appShell.map.onLayerChange($event)"
+                  (collapsedStateUpdate)="appShell.setRightPanelClosed($event)">
+  </xp-layer-panel>
+</ng-template>
+
+<ng-template #layerPanelBottomTemplate>
+</ng-template>

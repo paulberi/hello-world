@@ -1,0 +1,16 @@
+<layer>
+  <name>RiksintresseMineral_LST</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6c0a</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6c0b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 08:39:40.323 UTC</dateCreated>
+</layer>

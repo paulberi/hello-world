@@ -1,0 +1,11 @@
+@import '../../../style/colors.scss';
+
+header {
+  padding: 20px 0;
+  background-color: $darkgray;
+  box-shadow: 0 3px 6px rgba($color: $black, $alpha: 0.5);
+  position: relative;
+}
+.mat-flat-button{
+  background-color: $darkgray;
+}

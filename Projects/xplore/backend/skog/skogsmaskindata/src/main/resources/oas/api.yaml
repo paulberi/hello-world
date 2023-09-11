@@ -1,0 +1,37 @@
+openapi: "3.0.2"
+info:
+  version: 0.1.0
+  title: Metria Skogsmaskindata API
+  description: |
+    API för att hämta och processera paket med skogsmaskindata ifrån Forestlink.
+  contact:
+    url: 'https://metria.se'
+    email: todo@metria.se
+paths:
+  '/ping':
+    get:
+      summary: Ping-tjänst för att se om tjänsten är uppe.
+      description: Används för att testa om tjänsten är igång.
+      responses:
+        '200':
+          description: Tjänsten är igång.
+
+  '/readAll':
+      post:
+        summary: Anrop för att starta inläsning från FTP-yta
+        description: Används för att läsa in nya paket ifrån FTP-ytan
+        responses:
+          '200':
+            description: Import är klar. Returnerar resultat med vilka importer som lyckades och misslyckades
+            content:
+              application/json:
+                schema:
+                  type: array
+                  items:
+                      $ref: './dtos.yaml#/components/schemas/Import'
+          default:
+            description: unexpected error
+            content:
+                application/json:
+                  schema:
+                    $ref: './dtos.yaml#/components/schemas/Error'

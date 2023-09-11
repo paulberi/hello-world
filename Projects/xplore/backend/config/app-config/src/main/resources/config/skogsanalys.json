@@ -1,0 +1,1865 @@
+{
+    "app": {
+        "uistates": {
+            "grupperaFastigheter": true,
+            "visaFastighetsgranser": true,
+            "fastighetsgranserOpacity": 0
+        },
+        "copyright": "© Metria",
+        "components": {
+            "toolbars": [
+                {
+                    "tools": [
+                        {
+                            "mode": {
+                                "actionMode": "select",
+                                "featureSelectionMode": "click"
+                            },
+                            "tooltip": "Välj objekt",
+                            "icon_name": "touch_app"
+                        },
+                        {
+                            "mode": {
+                                "actionMode": "select",
+                                "featureSelectionMode": "draw",
+                                "resetPreviousSelectionOnMode": "end"
+                            },
+                            "tooltip": "Rita eget område",
+                            "icon_name": "edit"
+                        },
+                        {
+                            "mode": {
+                                "actionMode": "measure",
+                                "measureMode": "area"
+                            },
+                            "tooltip": "Mät område",
+                            "icon_name": "format_shapes"
+                        },
+                        {
+                            "mode": {
+                                "actionMode": "measure",
+                                "measureMode": "distance"
+                            },
+                            "tooltip": "Mät avstånd",
+                            "icon_name": "timeline"
+                        }
+                    ],
+                    "tooltip": "Selekteringsverktyg",
+                    "svg_icon": "valj_fastighet",
+                    "showSettings": true,
+                    "allowDeselect": false,
+                    "base_component": "base"
+                }
+            ],
+            "background-buttons-panel": {
+                "visible": true,
+                "visible-mobile": true
+            }
+        },
+        "selectionSettings": {
+            "fastigheter": {
+                "minimumZoom": 8.2
+            }
+        }
+    },
+    "zoom": 0,
+    "center": [
+        496000,
+        6894000
+    ],
+    "extent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+    ],
+    "groups": [
+        {
+            "name": "avverkning",
+            "title": "Avverkning",
+            "expanded": false
+        },
+        {
+            "name": "skydd",
+            "title": "Skyddade områden",
+            "groups": [
+                {
+                    "name": "skydd_nat",
+                    "title": "Nationella skyddsformer",
+                    "expanded": true
+                },
+                {
+                    "name": "skydd_n2000",
+                    "title": "Natura 2000-områden",
+                    "expanded": true
+                },
+                {
+                    "name": "skydd_internat",
+                    "title": "Områden med internationell status",
+                    "expanded": true
+                },
+                {
+                    "name": "skydd_ovrigt",
+                    "title": "Områden med särskilda restriktioner",
+                    "expanded": true
+                },
+                {
+                    "name": "fornlamning",
+                    "title": "Fornlämningar",
+                    "expanded": true
+                },
+                {
+                    "name": "natur_ovrigt",
+                    "title": "Naturvård övrigt",
+                    "expanded": true
+                }
+            ],
+            "expanded": false
+        },
+        {
+            "name": "grunddata",
+            "title": "Skogliga grunddata",
+            "expanded": false
+        },
+        {
+            "name": "risk",
+            "title": "Risker",
+            "expanded": false
+        },
+        {
+            "name": "natur",
+            "title": "Natur",
+            "expanded": false
+        },
+        {
+            "name": "miljo",
+            "title": "Miljö",
+            "expanded": false
+        },
+        {
+            "name": "nmd",
+            "title": "Nationella marktäckedata",
+            "expanded": false
+        },
+        {
+            "name": "pbr",
+            "title": "Planer, rättigheter, bestämmelser",
+            "expanded": false
+        },
+        {
+            "name": "skogsagare",
+            "title": "Skogsägare",
+            "expanded": false
+        },
+        {
+            "name": "fastighetsgranser",
+            "title": "Fastighetsgränser",
+            "expanded": false
+        },
+        {
+            "name": "ortofoton_historiska",
+            "title": "Historiska Ortofoton",
+            "expanded": false
+        },
+        {
+            "name": "ortofotoinfo",
+            "title": "Information om Ortofoto",
+            "expanded": false
+        },
+        {
+            "name": "ovrigt",
+            "title": "Övrigt",
+            "expanded": false
+          },
+        {
+            "name": "background",
+            "type": "radio",
+            "title": "Bakgrundskartor",
+            "expanded": true
+        }
+    ],
+    "layers": [
+        {
+            "type": "tile",
+            "group": "avverkning",
+            "style": "avverkningsanmalan",
+            "title": "Avverkningsanmälningar",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Avverkningsanmalningar_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Anmälan till Skogsstyrelsen görs vid; föryngringsavverkning, avverkning för annat ändamål än virkesproduktion, uttag av skogsbränsle, användning av utländska trädslag, skyddsdikning och för samråd om åtgärder som väsentligt ändrar naturmiljön. I vissa fall krävs ett tillstånd.",
+                "attribution": "Skogsstyrelsen"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "anmaldha",
+                        "label": "Anmäld area",
+                        "decimals": 1,
+                        "template": "{{anmaldha}} ha"
+                    },
+                    {
+                        "name": "avverktyp",
+                        "label": "Avverkningstyp"
+                    },
+                    {
+                        "name": "inkomdatum",
+                        "type": "date",
+                        "label": "Inkom datum"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "avverkning",
+            "style": "avverkningsanmalan_utford",
+            "title": "Utförda avverkningar",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:UtfordAvverkning_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Områden som avverkats enligt skillnadsanalys i satellitbilder.",
+                "attribution": "Skogsstyrelsen"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "anmaldha",
+                        "label": "Anmäld area",
+                        "decimals": 1,
+                        "template": "{{anmaldha}} ha"
+                    },
+                    {
+                        "name": "avverktyp",
+                        "label": "Avverkningstyp"
+                    },
+                    {
+                        "name": "avvdatum",
+                        "type": "date",
+                        "label": "Avvdatum"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Nationalpark (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Nationalpark_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Syftet med en nationalpark är att 'bevara ett större sammanhängande område av viss landskapstyp i dess naturliga tillstånd eller i väsentligt oförändrat skick' (ur miljöbalken). Staten äger all mark i en nationalpark. Nationalparkerna ska utgöras av representativa landskapstyper som bevaras i naturligt tillstånd men de ska också vara natursköna eller unika miljöer som kan ge starka naturupplevelser. Sverige har 29 nationalparker.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Naturreservat (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturreservat_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Länsstyrelserna och kommunerna kan bilda naturreservat enligt miljöbalken. Naturreservat bildas i ”syfte att bevara biologisk mångfald, vårda och bevara värdefulla naturmiljöer eller tillgodose behov av områden för friluftslivet. Ett område som behövs för att skydda, återställa eller nyskapa värdefulla naturmiljöer eller livsmiljöer för skyddsvärda arter får också förklaras som naturreservat.” (ur miljöbalken). Sverige har drygt 3 300 naturreservat.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Naturvårdsområde (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturvardsomrade_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Länsstyrelsen eller kommunen kunde innan miljöbalken trädde i kraft avsätta naturvårdsområden med stöd av naturvårdslagen. Skyddsformen var svagare än naturreservatet och fick inte hindra pågående markanvändning, som till exempel skogsbruk.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Djur- och växtskyddsområde (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:DjurVaxtskydd_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Det är möjligt att skydda till exempel häckande fåglar eller sälkolonier genom att förbjuda tillträde till ett område under vissa av årets månader. De flesta av de drygt 1000 djurskyddsområden som finns i dag ligger vid kuster eller insjöar och har tillkommit för att freda sjöfågel eller säl.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Kulturreservat (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Kulturreservat_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Med stöd av miljöbalken kan kommun eller länsstyrelse skydda värdefulla kulturpräglade landskapsområden som kulturreservat. De kan inrättas på såväl statlig som kommunal eller enskild mark.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Vattenskyddsområde (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Vattenskydd_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Länsstyrelsen eller kommunen får besluta om vattenskyddsområde till skydd för en grund- eller ytvattentillgång som utnyttjas eller kan antas komma att utnyttjas för vattentäkt (7 kapitlet 21 och 22 §§ miljöbalken).",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Landskapsbildsskydd (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Landskapsbildsskydd_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Landskapsbildsskydd är en äldre skyddsform (som bildades med stöd av 19 § naturvårdslagen) och ett begrepp som inte finns i miljöbalken. Det ersätts successivt med andra skyddsformer, men fram tills dess gäller bestämmelserna i landskapsskyddsområdena.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Skogligt biotopskyddsområde (SKS)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Biotopskydd_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Det är vanligt att livsmiljöer som har stor betydelse för växt- och djurarter bara påträffas som små spridda öar i ett mer alldagligt landskap. I den svenska lagstiftningen finns en möjlighet att avsätta sådana områden som så kallade biotopskyddsområden. Skogsstyrelsen ansvarar för detta områdesskydd om biotoperna ligger på skogsmark, på annan mark är länsstyrelserna ansvarig.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "beteckn",
+                        "label": "Beteckning"
+                    },
+                    {
+                        "name": "areatot",
+                        "label": "Area",
+                        "template": "{{areatot}} ha"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Övrigt biotopskyddsområde (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:BiotopskyddOvriga_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Biotopskyddsområde används för att bevara mindre livsmiljöer för nationellt hotade arter och små skyddsvärda naturtyper i skogs- eller jordbrukslandskapet. Övriga biotopskyddsområden Skogliga biotopskyddsområden skapas av kommun eller länsstyrelse.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Naturminne (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturminne_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Merparten av naturminnena är inrättade genom äldre beslut och med stöd av tidigare naturvårdslagstiftning. De flesta utgörs av särskilt skyddsvärda träd, t.ex. jätteekar. Andra objekt är flyttblock och jättegrytor. Även mindre områden, som t.ex. växtplatser för ovanliga växter eller små holmar, förekommer bland naturminnena. Naturminnen kan vara både ytor och punkter.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_nat",
+            "title": "Interimistiska förbud (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:SkyddsomradeIntermistiskaForbud_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Ett områdes naturvärden kan skyddas i avvaktan på beslut om naturreservat. Länsstyrelsen eller kommunen kan meddela ett tillfälligt förbud (enligt Miljöbalken) att utan tillstånd vidta åtgärder som skulle kunna skada de värden man vill skydda – ett interimistiskt förbud. Exempel på åtgärder som kan strida mot syftet med tilltänkt naturreservat är avverkning, husbehovstäkt, uppförande av byggnad eller dikesrensning.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": "skyddade-omraden"
+        },
+        {
+            "type": "tile",
+            "group": "skydd_n2000",
+            "title": "Natura 2000-områden (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Natura2000_SNV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Natura 2000-områden utses med stöd av två EU-direktiv: fågeldirektivet och art- och habitatdirektivet. Där listas 170 naturtyper (i miljöbalken kallade ”livsmiljöer” och i EU-lagstiftning ”habitat”) och sammanlagt cirka 900 växt- och djurarter som särskilt värdefulla.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "title": "NAMN",
+                "properties": [
+                    {
+                        "name": "origin",
+                        "label": "N2000 typ"
+                    },
+                    {
+                        "name": "area_ha",
+                        "label": "Area",
+                        "decimals": 1,
+                        "template": "{{area_ha}} ha"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skydd_ovrigt",
+            "title": "Naturvårdsavtal (SKS)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturvardsavtal_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Naturvårdsavtalet är ett civilrättsligt avtal som tecknas mellan Skogsstyrelsen, länsstyrelse eller kommun och markägare som är intresserade av naturvård.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "beteckn",
+                        "label": "Beteckning",
+                        "linkRef": "title-link"
+                    },
+                    {
+                        "name": "areatot",
+                        "label": "Area",
+                        "template": "{{areatot}} ha"
+                    },
+                    {
+                        "name": "kommun",
+                        "label": "Kommun"
+                    },
+                    {
+                        "name": "nvatyp",
+                        "label": "Nvatyp"
+                    },
+                    {
+                        "name": "naturtyp",
+                        "label": "Naturtyp"
+                    },
+                    {
+                        "name": "datavtal",
+                        "type": "date",
+                        "label": "Avtalsdatum"
+                    },
+                    {
+                        "id": "title-link",
+                        "name": "url",
+                        "type": "url",
+                        "label": "Länk",
+                        "maxLength": 254
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skydd_ovrigt",
+            "title": "Naturvårdsavtal (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturvardsavtal_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Naturvårdsavtal som tecknats mellan fastighetsägare och Naturvårdsverket eller länsstyrelse som avtalspart för staten. Naturvårdsavtal är ett civilrättsligt avtal. Fastighetsägaren och staten eller en kommun kommer överens om en viss ekonomisk ersättning för fastighetsägaren mot att denne avstår från till exempel skogsbruk.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "diarienrnv",
+                        "label": "Diarienr NV"
+                    },
+                    {
+                        "name": "objnamn",
+                        "label": "Namn"
+                    },
+                    {
+                        "name": "status",
+                        "label": "Status"
+                    },
+                    {
+                        "name": "kommnamn",
+                        "label": "Kommun"
+                    },
+                    {
+                        "name": "fastbet",
+                        "label": "Fastighet"
+                    },
+                    {
+                        "name": "datstart",
+                        "label": "Startdatum"
+                    },
+                    {
+                        "name": "datslut",
+                        "label": "Slutdatum"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "fornlamning",
+            "title": "Fornlämning (RAÄ)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Fornlamning_yta_FMIS,metria:Fornlamning_linje_FMIS,metria:Fornlamning_punkt_FMIS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Fornlämningar är spår efter mänsklig verksamhet. De kan till exempel utgöras av boplatser, gravfält, gruvor, kvarnar, kulturlager i medeltida städer. I kulturmiljölagen anges vad som är en fornlämning och därmed omfattas av lagskyddet",
+                "attribution": "Riksantikvarieämbetet"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "lamningsnr",
+                        "label": "Lämningsnummer",
+                        "linkRef": "title-link"
+                    },
+                    {
+                        "id": "title-link",
+                        "name": "url",
+                        "type": "url",
+                        "label": "Länk",
+                        "maxLength": 254
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skydd_internat",
+            "title": "Ramsar-områden (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Ramsar_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Ramsarkonventionen är en global naturvårdskonvention om att bevara våtmarker och vattenmiljöer och nyttja dem på ett hållbart sätt.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "name",
+                        "label": "Namn"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "natur_ovrigt",
+            "title": "Myrskyddsplan (NV)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Myrskyddsplan_NV",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Naturvårdsverket reviderade Myrskyddsplan för Sverige 2007. Planen innehöll de oskyddade myrar med höga naturvärden som Naturvårdsverket ansåg borde ges ett långsiktigt skydd.",
+                "attribution": "Naturvårdsverket"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "first_obje",
+                        "label": "Namn"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "natur_ovrigt",
+            "title": "Naturvärden (SKS)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Naturvarden_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Under inventeringen av nyckelbiotoper har man också registrerat andra objekt som har naturvärden, utan att nå upp till samma kvalitet som en nyckelbiotop. Resultatet används till rådgivning och planering av insatser för naturvården.",
+                "attribution": "Skogsstyrelsen"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "beteckn",
+                        "label": "Beteckning",
+                        "linkRef": "title-link"
+                    },
+                    {
+                        "name": "objnamn",
+                        "label": "Namn"
+                    },
+                    {
+                        "name": "hektar",
+                        "label": "Area",
+                        "template": "{{hektar}} ha"
+                    },
+                    {
+                        "id": "title-link",
+                        "name": "url",
+                        "type": "url",
+                        "label": "Länk",
+                        "maxLength": 254
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "natur_ovrigt",
+            "title": "Nyckelbiotoper (SKS)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Nyckelbiotoper_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "En nyckelbiotop är ett skogsområde som från en samlad bedömning av biotopens struktur, artinnehåll, historik och fysiska miljö idag har mycket stor betydelse för skogens flora och fauna. Där finns eller kan förväntas finnas rödlistade arter.",
+                "attribution": "Skogsstyrelsen"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "beteckn",
+                        "label": "Beteckning",
+                        "linkRef": "title-link"
+                    },
+                    {
+                        "name": "objnamn",
+                        "label": "Namn"
+                    },
+                    {
+                        "name": "hektar",
+                        "label": "Area",
+                        "decimals": 1,
+                        "template": "{{hektar}} ha"
+                    },
+                    {
+                        "id": "title-link",
+                        "name": "url",
+                        "type": "url",
+                        "label": "Länk",
+                        "maxLength": 254
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "natur_ovrigt",
+            "title": "Sumpskogar (SKS)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Sumpskogar_SKS",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Samlingsnamn för all skogsklädd våtmark. 3 typer, myrskog, fuktskog och strandskog. Myrskogen kan delas in i kärrskog och mosseskog. Fuktskogen delas in i översilningsskog och övrig fuktskog.",
+                "attribution": "Skogsstyrelsen"
+            },
+            "queryable": true,
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "kartid2",
+                        "label": "Id",
+                        "linkRef": "title-link"
+                    },
+                    {
+                        "id": "title-link",
+                        "name": "url",
+                        "type": "url",
+                        "label": "Länk",
+                        "maxLength": 254
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "ortofotoinfo",
+            "title": "Ortofoto - Flygår och flyghöjd",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Metadata_orto",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Vektorlager med metadata för ortofoton.",
+                "attribution": "Lantmäteriet"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "ortofotoinfo",
+            "title": "Ortofoto 1950-1970 - Flygår",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Metadata_orto_1950_1970",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Vektorlager med metadata för ortofoton 1950-1970.",
+                "attribution": "Lantmäteriet"
+            },
+            "allowedRoles": ["skogsanalys_historiska_orton"]
+        },
+        {
+            "type": "tile",
+            "group": "ortofotoinfo",
+            "title": "Ortofoto 1970-1980 - Flygår",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Metadata_orto_1970_1980",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Vektorlager med metadata för ortofoton 1970-1980.",
+                "attribution": "Lantmäteriet"
+            },
+            "allowedRoles": ["skogsanalys_historiska_orton"]
+        },
+        {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "Permanentboende fastigheter",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Permanentboende_fastigheter",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "Permanentboende adresser",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Permanentboende_adresser",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "Brandrisk",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "msb:Brandrisk",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "Väghållare (NVDB)",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Vaghallare_NVDB",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "Skogsägarkartan",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Skogsagarkartan",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.7,
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "NMD Markfuktighetsindex",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:NMD_markfuktighetsindex",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "NMD Markfuktighet slu",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Markfuktighetskartan_slu",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "NMD Markfuktighet blot",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Markfuktighetskartan_blot",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+            },
+            {
+            "type": "tile",
+            "group": "ovrigt",
+            "title": "NMD Markfuktighetskartan",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                "FORMAT": "image/png8",
+                "LAYERS": "metria:Markfuktighetskartan",
+                "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_ovrigt"
+            ]
+        },      
+        {
+            "type": "tile",
+            "group": "grunddata",
+            "title": "Medeldiameter",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Medeldiameter_avv",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.8,
+            "visible": false,
+            "abstract": {
+                "text": "Grundytevägd medeldiameter (DGV) redovisas i enheten cm på pixelnivå 12,5x12,5 m och är ett mått på trädens diameter (cm) i ett bestånd satt i relation till grundytan.",
+                "attribution": "Skogsstyrelsen, skogliga grunddata"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "grunddata",
+            "title": "Medelhöjd",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Medelhojd_avv",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.8,
+            "visible": false,
+            "abstract": {
+                "text": "Grundytevägd medelhöjd (HGV) redovisas i enheten cm på pixelnivå 12,5x12,5 m och är ett mått på trädens medelhöjd (m) i ett bestånd satt i relation till grundytan.",
+                "attribution": "Skogsstyrelsen, skogliga grunddata"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "grunddata",
+            "title": "Grundyta",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Grundyta_avv",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.8,
+            "visible": false,
+            "abstract": {
+                "text": "Grundyta redovisas i enheten m2/ha på pixelnivå 12,5x12,5 m och användas när gallringsbehov ska räknas ut, vid volymsberäkning och som ett mått på beståndets slutenhet.",
+                "attribution": "Skogsstyrelsen, skogliga grunddata"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "grunddata",
+            "title": "Virkesvolym",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Virkesvolym_avv",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.8,
+            "visible": false,
+            "abstract": {
+                "text": "Virkesvolym redovisas i enheten m3sk/ha på pixelnivå 12,5x12,5 m och ger en god uppfattning om virkesförrådet (skogsbeståndets volyminnehåll av stamved).",
+                "attribution": "Skogsstyrelsen, skogliga grunddata"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "grunddata",
+            "title": "Trädhöjd 5x5",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Tradhojd_5m",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.8,
+            "visible": false,
+            "abstract": {
+                "text": "Kartan visar trädhöjd i meter.",
+                "attribution": "Metria"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "risk",
+            "title": "Barkborrerisk (SKS)",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Barkborrerisk",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Barkborreriskkartan en riskindexkarta för granbarkborre som bygger på analyser från olika geografiska data och satellitbilder. Kartan visar inte faktiska angrepp utan lyfter fram de skogstyper som granbarkborren söker sig till. Riskfaktorer för granbarkborreangrepp är bland annat stora virkesvolymer, torr mark, hyggeskanter och tidigare angrepp. Riskindexkartan visar var de olika riskfaktorerna sammanfaller och var det är viktigt att du som skogsägare kontinuerligt letar efter nya angrepp. Kartan finns för följande län: Blekinge, Halland, Kronoberg, Kalmar, Jönköping, Östergötland, Västra Götaland, Södermanland, Örebro, Västmanland och delar av Skåne län. För teckenförklaring, se hjälpavsnitt.",
+                "attribution": "Skogsstyrelsen"
+            }
+        },
+        {
+            "import": "metria:Artdata_slu@mm-export",
+            "group": "natur",
+            "allowedRoles": ["skogsanalys_artdata"],
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "taxon_attributes_organismgroup",
+                        "label": "Artnamn"
+                    },
+                    {
+                        "name": "occurrence_individualcount",
+                        "label": "Antal"
+                    },
+                    {
+                        "name": "taxon_vernacularname",
+                        "label": "Vetenskapligt namn"
+                    },
+                    {
+                        "name": "taxon_attributes_redlistcategory",
+                        "label": "Rödlistekategori",
+                        "type": "replace",
+                        "replacements": {
+                            "LC": "Livskraftig (LC)",
+                            "DD": "Kunskapsbrist (DD)",
+                            "NT": "Nära hotad (NT)",
+                            "VU": "Sårbar (VU)",
+                            "EN": "Starkt hotad (EN)",
+                            "CR": "Akut hotad (CR)",
+                            "RE": "Nationellt utdöd (RE)"
+                        }
+                    },
+                    {
+                        "name": "occurrence_reporteddate",
+                        "label": "Datum för observation",
+                        "type": "date"
+                    },
+                    {
+                        "name": "identification_verificationstatus_value",
+                        "label": "Validerad eller ej​"
+                    },
+                    {
+                        "name": "location_coordinateuncertaintyinmeters",
+                        "label": "Noggrannhet",
+                        "template": "{{location_coordinateuncertaintyinmeters}} meter"
+                    },
+                    {
+                        "name": "taxon_attributes_protectedbylaw",
+                        "label": "Skyddad enligt lag",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "occurrence_url",
+                        "label": "Länk till artdatabanken",
+                        "linkRef": "the-link"
+                    },
+                    {
+                        "id": "the-link",
+                        "name": "occurrence_url",
+                        "type": "url",
+                        "template": "{{occurrence_url}}"
+                    }
+                ]
+            }
+
+        },
+        {
+            "import": "metria:Fjallnaraskog_linje_SKS@mm-export",
+            "group": "natur",
+            "allowedRoles": [
+                "skogsanalys_fjallnaraskog"
+            ]
+        },
+        {
+            "import": "LST_Potentiellt_fororenade_omraden@lansstyrelse-export",
+            "group": "miljo",
+            "title": "Potentiellt förorenade områden",
+            "allowedRoles": ["skogsanalys_fororenadeomraden"]
+        },
+        {
+            "type": "tile",
+            "group": "nmd",
+            "title": "Basskikt",
+            "mapKey": {
+                "title": "Basskikt (NMD)",
+                "visible": true,
+                "staticKey": [
+                    {
+                        "color": "rgb(194, 158, 215)",
+                        "description": "Öppen våtmark"
+                    },
+                    {
+                        "color": "rgb(255, 255, 190)",
+                        "description": "Åkermark"
+                    },
+                    {
+                        "color": "rgb(225, 225, 225)",
+                        "description": "Övrig öppen mark utan vegetation"
+                    },
+                    {
+                        "color": "rgb(255, 211, 127)",
+                        "description": "Övrig öppen mark med vegetation"
+                    },
+                    {
+                        "color": "rgb(90, 20, 20)",
+                        "description": "Exploaterad mark, byggnad"
+                    },
+                    {
+                        "color": "rgb(229, 70, 75)",
+                        "description": "Exploaterad mark, ej byggnad eller väg/järnväg"
+                    },
+                    {
+                        "color": "rgb(25, 25, 25)",
+                        "description": "Exploaterad mark, väg/järnväg"
+                    },
+                    {
+                        "color": "rgb(102, 153, 205)",
+                        "description": "Sjö och vattendrag"
+                    },
+                    {
+                        "color": "rgb(138, 204, 250)",
+                        "description": "Hav"
+                    },
+                    {
+                        "color": "rgb(110, 140, 5)",
+                        "description": "Tallskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(45, 95, 0)",
+                        "description": "Granskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(78, 112, 0)",
+                        "description": "Barrblandskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(56, 168, 0)",
+                        "description": "Lövblandad barrskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(76, 230, 0)",
+                        "description": "Triviallövskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(170, 255, 0)",
+                        "description": "Ädellövskog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(151, 230, 0)",
+                        "description": "Triviallövskog med ädellövinslag (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(205, 205, 102)",
+                        "description": "Temporärt ej skog (utanför våtmark)"
+                    },
+                    {
+                        "color": "rgb(89, 140, 85)",
+                        "description": "Tallskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(48, 94, 80)",
+                        "description": "Granskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(35, 115, 90)",
+                        "description": "Barrblandskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(67, 136, 112)",
+                        "description": "Lövblandad barrskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(137, 205, 155)",
+                        "description": "Triviallövskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(165, 245, 120)",
+                        "description": "Ädellövskog (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(171, 205, 120)",
+                        "description": "Triviallövskog med ädellövinslag (på våtmark)"
+                    },
+                    {
+                        "color": "rgb(137, 137, 68)",
+                        "description": "Temporärt ej skog (på våtmark)"
+                    }
+                ]
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:NMD_basskikt",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Nationella marktäckedata (NMD) är en heltäckande kartering av Sverige. Syftet är att få grundläggande information om landskapet och hur det förändras. Karteringen genomfördes 2017- februari 2019 och därefter är planerna att data ska uppdateras vart 5:e år. NMD består av en baskartering i 25 tematiska klasser i tre hierarkiska nivåer. Karteringen är i rasterformat med 10 meters upplösning och med en minsta karteringsenhet ned till 0,01 hektar. Utöver baskarteringen ingår följande tilläggsskikt: objekthöjd och -täckning, produktivitet (skoglig produktivitet), markanvändning, låg fjällskog.",
+                "attribution": "Naturvårdsverket"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "nmd",
+            "title": "Produktivitet",
+            "mapKey": {
+                "title": "Produktivitet (NMD)",
+                "visible": true,
+                "staticKey": [
+                    {
+                        "color": "rgb(24, 101, 5)",
+                        "description": "Produktiv skogsmark"
+                    },
+                    {
+                        "color": "rgb(249, 169, 74)",
+                        "description": "Impediment"
+                    }
+                ]
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png",
+                    "LAYERS": "metria:NMD_produktivitet",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Nationella marktäckedata (NMD) är en heltäckande kartering av Sverige. Syftet är att få grundläggande information om landskapet och hur det förändras. Karteringen genomfördes 2017- februari 2019 och därefter är planerna att data ska uppdateras vart 5:e år. NMD består av en baskartering i 25 tematiska klasser i tre hierarkiska nivåer. Karteringen är i rasterformat med 10 meters upplösning och med en minsta karteringsenhet ned till 0,01 hektar. Utöver baskarteringen ingår följande tilläggsskikt: objekthöjd och -täckning, produktivitet (skoglig produktivitet), markanvändning, låg fjällskog.",
+                "attribution": "Naturvårdsverket"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "skogsagare",
+            "title": "Skogsägarkartan",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:Skogsagarkartan",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "opacity": 0.7,
+            "visible": false,
+            "allowedRoles": [
+                "skogsanalys_skogsagarkartan"
+            ]
+        },
+        {
+            "type": "tile",
+            "group": "pbr",
+            "title": "Bestämmelser",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "PBR_fornlamningar_bestammelser",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Bestämmelser och fornlämningar",
+                "attribution": "Lantmäteriet"
+            },
+            "queryable": true,
+            "allowedRoles": [
+                "skogsanalys_fastighetsinfo_pbr"
+            ],
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "detaljtyp",
+                        "label": "Detaljtyp"
+                    },
+                    {
+                        "name": "bestbet",
+                        "label": "Beteckning"
+                    },
+                    {
+                        "name": "plnamn",
+                        "label": "Namn"
+                    },
+                    {
+                        "name": "adat",
+                        "type": "date",
+                        "label": "Adat"
+                    },
+                    {
+                        "name": "bdat",
+                        "type": "date",
+                        "label": "Bdat"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "pbr",
+            "title": "Rättigheter",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "PBR_rattigheter",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Rättigheter",
+                "attribution": "Lantmäteriet"
+            },
+            "queryable": true,
+            "allowedRoles": [
+                "skogsanalys_fastighetsinfo_pbr"
+            ],
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "detaljtyp",
+                        "label": "Detaljtyp"
+                    },
+                    {
+                        "name": "ratbet",
+                        "label": "Beteckning"
+                    },
+                    {
+                        "name": "adat",
+                        "type": "date",
+                        "label": "Adat"
+                    },
+                    {
+                        "name": "xyfel",
+                        "label": "XY fel"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "pbr",
+            "title": "Planer",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "PBR_planer",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Planer",
+                "attribution": "Lantmäteriet"
+            },
+            "queryable": true,
+            "allowedRoles": [
+                "skogsanalys_fastighetsinfo_pbr"
+            ],
+            "infoTemplate": {
+                "properties": [
+                    {
+                        "name": "detaljtyp",
+                        "label": "Detaljtyp"
+                    },
+                    {
+                        "name": "planbet",
+                        "label": "Planbet"
+                    },
+                    {
+                        "name": "plnamn",
+                        "label": "Plannamn"
+                    },
+                    {
+                        "name": "bdat",
+                        "type": "date",
+                        "label": "Bdat"
+                    },
+                    {
+                        "name": "adat",
+                        "type": "date",
+                        "label": "Adat"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "tile",
+            "group": "fastighetsgranser",
+            "title": "Fastighetsgränser",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:MetriaFastighetOver10k",
+                    "TRANSPARENT": true
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": true,
+            "abstract": {
+                "text": "Fastighetsgränser och beteckningar",
+                "attribution": "Lantmäteriet"
+            }
+        },
+        {
+            "type": "tile",
+            "group": "ortofoton_historiska",
+            "title": "Ortofoto 1950-1970",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/jpeg",
+                    "LAYERS": "metria:orto_1950_1970"
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "selectionStyleDelomraden": "selectedDelomradeDark@common",
+            "allowedRoles": ["skogsanalys_historiska_orton"]
+        },
+        {
+            "type": "tile",
+            "group": "ortofoton_historiska",
+            "title": "Ortofoto 1970-1980",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/jpeg",
+                    "LAYERS": "metria:orto_1970_1980"
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "abstract": {
+                "text": "Sverige saknar rikstäckande ortofototäckning, vilket kan vara bra att känna till för visning av historiska ortofoton 1970 - 1980.",
+                "attribution": "Metria"
+            },
+            "selectionStyleDelomraden": "selectedDelomradeDark@common",
+            "allowedRoles": ["skogsanalys_historiska_orton"]
+        },
+        {
+            "type": "tile",
+            "group": "background",
+            "title": "Bakgrund",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/png8",
+                    "LAYERS": "metria:MetriaBakgrundGSD"
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": true,
+            "selectionStyleDelomraden": "selectedDelomrade@common"
+        },
+        {
+            "type": "tile",
+            "group": "background",
+            "title": "Bakgrund + Hillshade",
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/jpeg",
+                    "LAYERS": "metria:MetriaFastighetSA"
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "selectionStyleDelomraden": "selectedDelomrade@common"
+        },
+        {
+            "group": "background",
+            "import": "metria:orto_farg_kombinerad@mm-export"
+        },
+        {
+            "type": "tile",
+            "group": "background",
+            "title": "Ortofoto IR",
+            "mapKey": {
+                "visible": false
+            },
+            "source": {
+                "type": "tilewms",
+                "params": {
+                    "FORMAT": "image/jpeg",
+                    "LAYERS": "orto_ir"
+                },
+                "discardLowResolutionTiles": true
+            },
+            "visible": false,
+            "selectionStyleDelomraden": "selectedDelomradeDark@common"
+        }
+    ],
+    "styles": {
+        "mask": [
+            [
+                {
+                    "fill": {
+                        "color": "rgba(0,0,0,0.2)"
+                    },
+                    "stroke": {
+                        "color": "rgba(128,128,128,1.0)",
+                        "width": 3
+                    }
+                }
+            ]
+        ],
+        "avverkningsanmalan": [
+            [
+                {
+                    "fill": {
+                        "color": "rgba(251,129,130,0.2)"
+                    },
+                    "stroke": {
+                        "color": "rgba(251,105,106,1.0)",
+                        "width": 3
+                    }
+                }
+            ]
+        ],
+        "avverkningsanmalan_utford": [
+            [
+                {
+                    "fill": {
+                        "color": "rgba(239,129,112,0.2)"
+                    },
+                    "stroke": {
+                        "color": "rgba(250,25,31,1.0)",
+                        "width": 3
+                    }
+                }
+            ]
+        ]
+    },
+    "tileSize": [
+        512,
+        512
+    ],
+    "proj4Defs": [
+        {
+            "code": "EPSG:3006",
+            "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+            "projectionExtent": [
+                190000,
+                6100000,
+                950000,
+                7700000
+            ]
+        },
+        {
+            "code": "EPSG:3009",
+            "alias": "urn:ogc:def:crs:EPSG::3009",
+            "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+            "projectionExtent": [
+                -100000,
+                6150000,
+                500000,
+                6700000
+            ]
+        },
+        {
+            "code": "EPSG:4326",
+            "alias": "urn:ogc:def:crs:EPSG::4326",
+            "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+            "projectionExtent": [
+                -180,
+                -90,
+                180,
+                90
+            ]
+        }
+    ],
+    "resolutions": [
+        1146.8799999999999,
+        573.4399999999999,
+        286.71999999999997,
+        143.35999999999999,
+        71.67999999999999,
+        35.839999999999996,
+        17.919999999999998,
+        8.959999999999999,
+        4.4799999999999995,
+        2.2399999999999998,
+        1.1199999999999999,
+        0.5599999999999999,
+        0.27999999999999997,
+        0.13999999999999999,
+        0.06999999999999999
+    ],
+    "infoTemplates": {
+        "skyddade-omraden": {
+            "properties": [
+                {
+                    "name": "namn",
+                    "label": "Namn"
+                },
+                {
+                    "name": "nvrid",
+                    "label": "Nvrid"
+                },
+                {
+                    "name": "skyddstyp",
+                    "label": "Skyddstyp"
+                },
+                {
+                    "name": "area_ha",
+                    "label": "Area",
+                    "decimals": 1,
+                    "template": "{{area_ha}} ha"
+                }
+            ]
+        }
+    },
+    "projectionCode": "EPSG:3006",
+    "geolocateOnStartup": true
+}
+
+
+

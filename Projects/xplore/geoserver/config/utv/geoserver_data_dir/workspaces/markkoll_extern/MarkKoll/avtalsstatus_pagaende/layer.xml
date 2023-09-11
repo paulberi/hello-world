@@ -1,0 +1,19 @@
+<layer>
+  <name>avtalsstatus_pagaende</name>
+  <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fd0</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fc7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--57951a1e:17bad16dbb2:-7fd1</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-31 11:12:37.744 UTC</dateCreated>
+  <dateModified>2021-04-08 07:00:14.219 UTC</dateModified>
+</layer>

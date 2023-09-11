@@ -1,0 +1,19 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '../../../../../node_modules/@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin draggable-panel-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  .draggable-panel {
+    background-color: mat-color($background, background);
+    color: mat-color($foreground, text);
+  }
+
+  .draggable-panel h3 {
+    color: mat-color($foreground, secondary-text)
+  }
+}

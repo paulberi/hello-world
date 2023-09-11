@@ -1,0 +1,16 @@
+<form [formGroup]="rectangleForm">
+  <mat-form-field *ngFor="let formControl of formControls">
+    <mat-label [attr.for]="formControl.id">{{ formControl.title }}</mat-label>
+    <input matInput [formControlName]="formControl.id" type="number" />
+    <mat-error *ngIf="rectangleForm.controls[formControl.id].hasError('required')">
+      {{ "mm.forms.fieldMandatory" | transloco }}
+    </mat-error>
+    <mat-error
+      *ngIf="rectangleForm.controls[formControl.id].hasError('min') || rectangleForm.controls[formControl.id].hasError('max')">
+      {{ "mm.forms.enterValueBetween" | transloco: { min: formControl.min, max: formControl.max } }}
+    </mat-error>
+    <mat-error *ngIf="rectangleForm.controls[formControl.id].hasError('minGreaterThanMax')">
+      {{ "mm.forms.minGreaterThanMaxError" | transloco }}
+    </mat-error>
+  </mat-form-field>
+</form>

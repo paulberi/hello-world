@@ -1,0 +1,19 @@
+<layer>
+  <name>avtalsstatus_ej_behandlat_ny</name>
+  <id>LayerInfoImpl--57951a1e:17bad16dbb2:-7fda</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--57951a1e:17bad16dbb2:-7fcc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--57951a1e:17bad16dbb2:-7fdb</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-31 11:26:29.357 UTC</dateCreated>
+  <dateModified>2021-04-08 06:59:03.905 UTC</dateModified>
+</layer>

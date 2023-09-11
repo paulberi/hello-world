@@ -1,0 +1,2215 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "http://www.tranas.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "contactDef": {
+      "customerName": "Tranås kommun",
+      "supportEmail": "tillvaxt@tranas.se",
+      "supportTel": "0140 - 681 00"
+    },
+    "copyright": "© Lantmäteriet, © Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "allowDeselect": true,
+          "base_component": "measure"
+        }
+      ]
+    },
+    "defaultUrls": {
+      "ows": {
+        "url": "/geoserver/tranasext/ows"
+      },
+      "icons": {
+        "url": "/storage/ikoner"
+      }
+    },
+    "layerMatchPrefix": "tranas:karta_"
+  },
+  "zoom": 8,
+  "center": [
+    490943,
+    6432419
+  ],
+  "thumbnailCoordinates": [
+    498760,
+    6432594
+  ],
+  "extent": [
+    181896.33,
+    6101648.07,
+    864416,
+    7689478.31
+  ],
+  "groups": [
+    {
+      "name": "samhallsservice",
+      "title": "Samhällsservice",
+      "expanded": false
+    },
+    {
+      "name": "barnoutb",
+      "title": "Barn & Utbildning",
+      "expanded": false
+    },
+    {
+      "name": "detaljplaner",
+      "title": "Detaljplaner",
+      "expanded": false
+    },
+    {
+      "name": "miljo_infrastruktur",
+      "title": "Miljö & Infrastruktur",
+      "groups": [
+        {
+          "name": "batplats",
+          "title": "Båtplats",
+          "expanded": false
+        },
+        {
+          "name": "trafik",
+          "title": "Trafik",
+          "expanded": false
+        },
+        {
+          "name": "atervinning",
+          "title": "Återvinning",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "bostoindustrmark",
+      "title": "Mark för bostäder och verksamheter",
+      "expanded": false
+    },
+    {
+      "name": "uppleva_gora",
+      "title": "Uppleva & Göra",
+      "groups": [
+        {
+          "name": "fritid",
+          "title": "Fritid och Friluftsliv",
+          "expanded": false
+        },
+        {
+          "name": "idrott",
+          "title": "Idrott",
+          "expanded": false
+        },
+        {
+          "name": "kultur",
+          "title": "Kultur",
+          "expanded": false
+        },
+        {
+          "name": "parker_gron",
+          "title": "Parker & Grönområden",
+          "expanded": false
+        }
+      ],
+      "expanded": false
+    },
+    {
+      "name": "familj_omsorg",
+      "title": "Familj & Omsorg",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "style": "kommungrans",
+      "title": "Kommungräns",
+      "source": {
+        "url": "/storage/kommunmask/kommunmask.geojson",
+        "type": "vector",
+        "format": "geojson"
+      },
+      "visible": true
+    },
+    {
+      "group": "samhallsservice",
+      "style": "karta_hjartstartare",
+      "title": "Hjärtstartare",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_hjartstartare"
+      },
+      "visible": false,
+      "queryable": true,
+      "geometryName": "geom",
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "samhallsservice",
+      "style": "karta_begravningsplats",
+      "title": "Begravningsplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_begravningsplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "samhallsservice",
+      "style": "karta_torghandel",
+      "title": "Torghandel",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_torghandel"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "samhallsservice",
+      "style": "karta_kommunkontor",
+      "title": "Kommunkontor",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_kommunkontor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "samhallsservice",
+      "style": "karta_offentligatoaletter",
+      "title": "Offentlig toalett",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_offentligatoaletter"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "import": "US_civilProtectionSite@inspire-msb-export",
+      "group": "samhallsservice"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_forskola",
+      "title": "Förskola",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_forskola"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_fritidshem",
+      "title": "Fritidshem",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_fritidshem"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_skola",
+      "title": "Grundskola",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_skola"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_gymnasium",
+      "title": "Gymnasium",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_gymnasium"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_skolskjuts",
+      "title": "Skolskjuts",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_skolskjuts"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "barnoutb",
+      "style": "karta_vuxenutbildning",
+      "title": "Vuxenutbildning",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_vuxenutbildning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "type": "tile",
+      "group": "detaljplaner",
+      "title": "Gällande detaljplaner",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png8",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "detaljplaner-gallande-info"
+    },
+    {
+      "group": "detaljplaner",
+      "style": "karta_detaljplaner-pagaende",
+      "title": "Pågående detaljplaner",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_detaljplaner-pagaende"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-detaljplaner-pagaende-info"
+    },
+    {
+      "group": "batplats",
+      "style": "karta_hamn",
+      "title": "Hamn",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_hamn"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_busshallplats",
+      "title": "Busshållplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_busshallplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_cykelleder",
+      "title": "Cykelvägar",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_cykelleder"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_laddstationer",
+      "title": "Laddstationer",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_laddstationer"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_parkeringsplatser",
+      "title": "Parkering",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_parkeringsplatser"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_station",
+      "title": "Station",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_station"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "trafik",
+      "style": "karta_uppstallningsplats",
+      "title": "Uppställningsplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_uppstallningsplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "atervinning",
+      "style": "karta_atervinningscentral",
+      "title": "Återvinningscentraler",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_atervinningscentral"
+      },
+      "visible": false,
+      "queryable": true,
+      "geometryName": "geom",
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "atervinning",
+      "style": "karta_atervinningsstation",
+      "title": "Återvinningsstationer",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_atervinningsstation"
+      },
+      "visible": false,
+      "queryable": true,
+      "geometryName": "geom",
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "bostoindustrmark",
+      "style": "karta_ledig-flerfamiljshus",
+      "title": "Tomter för flerfamiljshus",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_lediga_tomter_flerfamiljshus"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "bostoindustrmark",
+      "style": "karta_ledig-industrimark",
+      "title": "Tomter för verksamheter",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_ledig-industrimark"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "bostoindustrmark",
+      "style": "karta_lediga-bostadstomter",
+      "title": "Villatomter",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_lediga-bostadstomter"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_badplats",
+      "title": "Badplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_badplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_batuthyrning",
+      "title": "Båtuthyrning",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_batuthyrning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_camping",
+      "title": "Camping",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_camping"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_fritidsgard",
+      "title": "Fritidsgård",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_fritidsgard"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_fiske",
+      "title": "Fiske",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_fiske"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_naturskola",
+      "title": "Naturskola",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_naturskola"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_utflyktsmal",
+      "title": "Utflyktsmål",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_utflyktsmal"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_spar_och_leder",
+      "title": "Spår & leder",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_spar_och_leder"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "fritid",
+      "style": "karta_4h_gard",
+      "title": "4H-gård",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_4h_gard"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_anlaggning",
+      "title": "Anläggning",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_anlaggning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_boulebanor",
+      "title": "Boule",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_boulebanor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_bowling",
+      "title": "Bowling",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_bowling"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_discgolf",
+      "title": "Discgolf",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_discgolf"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_fotbollsplaner",
+      "title": "Fotbollsplan",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_fotbollsplaner"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_golfbanor",
+      "title": "Golf",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_golfbanor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_hundklubb",
+      "title": "Hundklubb",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_hundklubb"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_idrottshall",
+      "title": "Idrottshall",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_idrottshall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_isbanor",
+      "title": "Isbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_isbanor"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_motorcrossbana",
+      "title": "Motorcrossbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_motorcrossbana"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_racketanl",
+      "title": "Racketsport",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_racketanl"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_ridanl",
+      "title": "Ridsport",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_ridanl"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_simhall",
+      "title": "Simhall",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_simhall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_skatepark",
+      "title": "Skatepark",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_skatepark"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_skjutbana",
+      "title": "Skjutbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_skjutbana"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_spontanidrottsplats",
+      "title": "Spontanidrottsplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_spontanidrottsplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_utomhusgym",
+      "title": "Utegym",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_utomhusgym"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "idrott",
+      "style": "karta_wakeboardbana",
+      "title": "Wakeboardbana",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_wakeboardbana"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_bibliotek",
+      "title": "Bibliotek",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_bibliotek"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_biograf",
+      "title": "Biograf",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_biograf"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_folkets-park",
+      "title": "Folkpark",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_folkets-park"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_fornlamning",
+      "title": "Fornlämning",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_fornlamning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_hembygdsgard",
+      "title": "Hembygdsgård",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_hembygdsgard"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_intressant_byggnad",
+      "title": "Intressant byggnad",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_intressant_byggnad"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_konsthall",
+      "title": "Konsthall",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_konsthall"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_konstnarlig_gestaltning",
+      "title": "Konstnärlig gestaltning",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_konstnarlig_gestaltning"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_kulturskolan",
+      "title": "Kulturskola",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_kulturskolan"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_museum",
+      "title": "Museum",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_museum"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_samlingslokal",
+      "title": "Samlingslokal",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_samlingslokal"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_scen",
+      "title": "Scen",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_scen"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "kultur",
+      "style": "karta_teater",
+      "title": "Teater",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_teater"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "parker_gron",
+      "style": "karta_naturreservat",
+      "title": "Skyddad natur",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_naturreservat"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "parker_gron",
+      "style": "karta_kolonilotter",
+      "title": "Kolonilotter",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_kolonilotter"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "parker_gron",
+      "style": "karta_park",
+      "title": "Park",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_park"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "parker_gron",
+      "style": "karta_lekplats",
+      "title": "Lekplats",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_lekplats"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "familj_omsorg",
+      "style": "karta_traffpunkt-aktivitetshuset",
+      "title": "Bergets matsal",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_traffpunkt-aktivitetshuset"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "familj_omsorg",
+      "style": "karta_traffpunkt-funktionsnedsatta",
+      "title": "Familjecentralen",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_traffpunkt-funktionsnedsatta"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "familj_omsorg",
+      "style": "karta_traffpunkt-seniorer",
+      "title": "Seniorcentralen",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_traffpunkt_seniorer"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "group": "familj_omsorg",
+      "style": "karta_traffpunkt-aldre",
+      "title": "Äldreboende",
+      "source": {
+        "type": "wfs",
+        "typeName": "tranasext:karta_traffpunkt-aldre"
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "geovis-standard-info"
+    },
+    {
+      "import": "metria:MetriaFastighetPlus@mm-export",
+      "group": "background",
+      "title": "Tranås kommun"
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "title": "Tranås kommun (nedtonad)",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Tranås ortofoto"
+    }
+  ],
+  "styles": {
+    "kommungrans": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,255,255,1)",
+            "width": 7
+          }
+        },
+        {
+          "stroke": {
+            "color": "rgba(0,0,0,0.5)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_hjartstartare": [
+      [
+        {
+          "icon": {
+            "src": "karta_hjartstartare.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_begravningsplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_begravningsplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_torghandel": [
+      [
+        {
+          "icon": {
+            "src": "karta_torghandel.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_kommunkontor": [
+      [
+        {
+          "icon": {
+            "src": "karta_kommunkontor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_offentligatoaletter": [
+      [
+        {
+          "icon": {
+            "src": "karta_offentligtoalett.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_forskola": [
+      [
+        {
+          "icon": {
+            "src": "karta_forskola.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fritidshem": [
+      [
+        {
+          "icon": {
+            "src": "karta_fritidshem.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skola": [
+      [
+        {
+          "icon": {
+            "src": "karta_skola.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_gymnasium": [
+      [
+        {
+          "icon": {
+            "src": "karta_gym.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skolskjuts": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(200,100,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_vuxenutbildning": [
+      [
+        {
+          "icon": {
+            "src": "karta_bibliotek.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-gallande": [
+      [
+        {
+          "fill": {
+            "color": "rgba(255,185,237,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(255,185,237,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_detaljplaner-pagaende": [
+      [
+        {
+          "fill": {
+            "color": "rgba(0,0,0,0.0)"
+          },
+          "stroke": {
+            "color": "rgba(229,0,64,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_hamn": [
+      [
+        {
+          "icon": {
+            "src": "karta_hamn.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_busshallplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_busshallplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_cykelleder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_laddstationer": [
+      [
+        {
+          "icon": {
+            "src": "karta_laddstationer.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_parkeringsplatser": [
+      [
+        {
+          "icon": {
+            "src": "karta_parkeringsplatser.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_station": [
+      [
+        {
+          "icon": {
+            "src": "karta_resecentrum.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_uppstallningsplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_uppstallningsplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningscentral": [
+      [
+        {
+          "icon": {
+            "src": "karta_atervinningcentral.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_atervinningsstation": [
+      [
+        {
+          "icon": {
+            "src": "karta_atervinningsstation.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_ledig-flerfamiljshus": [
+      [
+        {
+          "icon": {
+            "src": "karta_lediga_tomter_flerfamiljshus.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_ledig-industrimark": [
+      [
+        {
+          "fill": {
+            "color": "rgba(188,188,250,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(188,188,250,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_lediga-bostadstomter": [
+      [
+        {
+          "icon": {
+            "src": "karta_lediga-bostadstomter_1.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_badplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_badplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_batuthyrning": [
+      [
+        {
+          "icon": {
+            "src": "karta_batuthyrning.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_camping": [
+      [
+        {
+          "icon": {
+            "src": "karta_camping.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fritidsgard": [
+      [
+        {
+          "icon": {
+            "src": "karta_fritidsgard.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fiske": [
+      [
+        {
+          "icon": {
+            "src": "karta_fiske.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_naturskola": [
+      [
+        {
+          "icon": {
+            "src": "karta_naturskola.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_utflyktsmal": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_besoksmal.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_spar_och_leder": [
+      [
+        {
+          "stroke": {
+            "color": "rgba(255,88,0,1.0)",
+            "width": 3,
+            "lineDash": [
+              1,
+              6
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_4h_gard": [
+      [
+        {
+          "icon": {
+            "src": "karta_4hgard.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_anlaggning": [
+      [
+        {
+          "icon": {
+            "src": "karta_idrottshall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_boulebanor": [
+      [
+        {
+          "icon": {
+            "src": "karta_boulebanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bowling": [
+      [
+        {
+          "icon": {
+            "src": "karta_bowling.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_discgolf": [
+      [
+        {
+          "icon": {
+            "src": "karta_discgolf.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fotbollsplaner": [
+      [
+        {
+          "icon": {
+            "src": "karta_fotbollsplaner.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_golfbanor": [
+      [
+        {
+          "icon": {
+            "src": "karta_golfbanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hundklubb": [
+      [
+        {
+          "icon": {
+            "src": "karta_hundklubb.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_idrottshall": [
+      [
+        {
+          "icon": {
+            "src": "karta_idrottshall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_isbanor": [
+      [
+        {
+          "icon": {
+            "src": "karta_isbanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_motorcrossbana": [
+      [
+        {
+          "icon": {
+            "src": "karta_motorcrossbana.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_racketanl": [
+      [
+        {
+          "icon": {
+            "src": "karta_racketanl.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_ridanl": [
+      [
+        {
+          "icon": {
+            "src": "karta_ridanl.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_simhall": [
+      [
+        {
+          "icon": {
+            "src": "karta_simhall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skatepark": [
+      [
+        {
+          "icon": {
+            "src": "karta_skatepark.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_skjutbana": [
+      [
+        {
+          "icon": {
+            "src": "karta_skjutbana.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_spontanidrottsplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_spontanidrottsplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_utomhusgym": [
+      [
+        {
+          "icon": {
+            "src": "karta_utomhusgym.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_wakeboardbana": [
+      [
+        {
+          "icon": {
+            "src": "karta_wakeboardbana.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_bibliotek": [
+      [
+        {
+          "icon": {
+            "src": "karta_bibliotek.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_biograf": [
+      [
+        {
+          "icon": {
+            "src": "karta_biograf.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_folkets-park": [
+      [
+        {
+          "icon": {
+            "src": "karta_folkets-park.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_fornlamning": [
+      [
+        {
+          "icon": {
+            "src": "karta_fornlamning.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_hembygdsgard": [
+      [
+        {
+          "icon": {
+            "src": "karta_hembygdsforening.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_intressant_byggnad": [
+      [
+        {
+          "icon": {
+            "src": "karta_intressant_byggnad.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_konsthall": [
+      [
+        {
+          "icon": {
+            "src": "karta_konsthall.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_konstnarlig_gestaltning": [
+      [
+        {
+          "icon": {
+            "src": "karta_konstnarlig_gestaltning.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_kulturskolan": [
+      [
+        {
+          "icon": {
+            "src": "karta_kulturskolan.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_museum": [
+      [
+        {
+          "icon": {
+            "src": "karta_sevardheter_kultur.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_samlingslokal": [
+      [
+        {
+          "icon": {
+            "src": "karta_samlingslokal.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_scen": [
+      [
+        {
+          "icon": {
+            "src": "karta_scen.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_teater": [
+      [
+        {
+          "icon": {
+            "src": "karta_teater.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_naturreservat": [
+      [
+        {
+          "fill": {
+            "color": "rgba(42,153,32,0.3)"
+          },
+          "stroke": {
+            "color": "rgba(42,153,32,1.0)",
+            "width": 3
+          }
+        }
+      ]
+    ],
+    "karta_kolonilotter": [
+      [
+        {
+          "icon": {
+            "src": "karta_kolonilott.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_park": [
+      [
+        {
+          "icon": {
+            "src": "karta_park.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_lekplats": [
+      [
+        {
+          "icon": {
+            "src": "karta_lekplats.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-aktivitetshuset": [
+      [
+        {
+          "icon": {
+            "src": "karta_restauranger.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-funktionsnedsatta":
+    [
+      [
+        {
+          "icon": {
+            "src": "karta_fritidsgard.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-seniorer":
+    [
+      [
+        {
+          "icon": {
+            "src": "karta_boulebanor.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ],
+    "karta_traffpunkt-aldre":
+    [
+      [
+        {
+          "icon": {
+            "src": "karta_traffpunkt-aldre.png",
+            "anchor": [
+              0.5,
+              1
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    },
+    {
+      "code": "EPSG:3009",
+      "alias": "urn:ogc:def:crs:EPSG:3009",
+      "projection": "+proj=tmerc +lat_0=0 +lon_0=15 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        -100000,
+        6150000,
+        500000,
+        6700000
+      ]
+    },
+    {
+      "code": "EPSG:4326",
+      "alias": "urn:ogc:def:crs:EPSG:4326",
+      "projection": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "projectionExtent": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "resolutions": [
+    6202.461875,
+    3101.2309375,
+    1550.61546875,
+    775.307734375,
+    387.653867187,
+    193.826933594,
+    96.9134667969,
+    48.4567333984,
+    24.2283666992,
+    12.1141833496,
+    6.0570916748,
+    3.0285458374,
+    1.5142729187,
+    0.757136459351,
+    0.378568229675,
+    0.189284114838,
+    0.0946420574188,
+    0.0473210287094,
+    0.0236605143547,
+    0.0118302571774
+  ],
+  "infoTemplates": {
+    "geovis-standard-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 2
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Rubriklänk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "inputType": "text-area",
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    },
+    "detaljplaner-gallande-info": {
+      "properties": [
+        {
+          "name": "externid",
+          "label": "EXTERNID",
+          "linkRef": "tranas-link"
+        },
+        {
+          "id": "tranas-link",
+          "name": "externid",
+          "type": "url",
+          "adaptAttributeValue": [{
+              "attributeName": "externid",
+              "previousChar": ["/"],
+              "newChar": ["_"]
+            }
+          ],
+          "template": "https://www.tranas.se/webdav/files/GeoVis/akt_{{externid}}.pdf"
+        },
+        {
+          "name": "detaljtyp",
+          "label": "DETALJTYP"
+        },
+        {
+          "name": "plnamn",
+          "label": "PLNAMN"
+        }
+      ]
+    },
+    "geovis-detaljplaner-pagaende-info": {
+      "properties": [
+        {
+          "name": "namn",
+          "type": "title",
+          "label": "Rubrik",
+          "linkRef": "title-link",
+          "maxLength": 80,
+          "minLength": 1
+        },
+        {
+          "id": "title-link",
+          "name": "link",
+          "type": "url",
+          "label": "Länk",
+          "maxLength": 254
+        },
+        {
+          "name": "beskr",
+          "label": "Beskrivning",
+          "hideLabel": true,
+          "maxLength": 254
+        },
+        {
+          "name": "adress",
+          "label": "Adress",
+          "maxLength": 254
+        },
+        {
+          "name": "kontakt",
+          "label": "Kontakt",
+          "maxLength": 254
+        }
+      ]
+    },
+    "alla": {
+      "properties": [
+        {
+          "name": "*"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

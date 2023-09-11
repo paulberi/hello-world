@@ -1,0 +1,18 @@
+::ng-deep p b {
+  font-weight: 650;
+}
+
+mat-icon {
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+button ~ button {
+  margin-left: 20px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}

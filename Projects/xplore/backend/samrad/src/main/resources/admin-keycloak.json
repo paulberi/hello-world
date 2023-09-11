@@ -1,0 +1,8 @@
+{
+  "realm": "Markkoll",
+  "auth-server-url": "https://auth-utv.metria.se/auth",
+  "ssl-required": "external",
+  "resource": "samrad-backend",
+  "public-client": true,
+  "bearer-only": true
+}

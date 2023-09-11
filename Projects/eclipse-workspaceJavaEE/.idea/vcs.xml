@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/JEEBackend_Upp1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JEEBackend_Upp1/eshopp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JEEBackend_Upp1/eshopp/src/main/java/com/eshopp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/carRentals" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ebutik-FE" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ebutik-FE/xplore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/echoklient" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/eshop-BE" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/eshopApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/eshopp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gitLabAndTestsPractice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/three-tier-eshop/uppgift_1_2_Lukong_Paul_Berinyuy_8310271237/ebutik-FE" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/three-tier-eshop/uppgift_1_2_Lukong_Paul_Berinyuy_8310271237/eshop-BE" vcs="Git" />
+  </component>
+</project>

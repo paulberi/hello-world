@@ -1,0 +1,26 @@
+#buttons{
+  margin-bottom: 1.5rem;
+  button ~ button {
+    margin-left: 10px;
+  }
+}
+
+.version{
+  border-bottom: 1px solid var(--primary-variant);
+  margin-left: 20px;
+  height: 50px;
+  align-items: center;
+}
+
+.version-action{
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#aterstall{
+  color: var(--accent);
+}
+
+::ng-deep .mat-chip-list .mat-chip-list-wrapper {
+  margin: 0;
+}

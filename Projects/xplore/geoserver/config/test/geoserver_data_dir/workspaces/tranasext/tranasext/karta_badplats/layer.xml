@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_badplats</name>
+  <id>LayerInfoImpl-8f87d1cd:6f352845222:-a090</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-ed6d4d0d:ab5315e1ac3:-468e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

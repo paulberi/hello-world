@@ -1,0 +1,15 @@
+<layer>
+  <name>informationspunkter_mb</name>
+  <id>LayerInfoImpl-6c107486:16d8cbe693c:1496</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-6c107486:16d8cbe693c:1495</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

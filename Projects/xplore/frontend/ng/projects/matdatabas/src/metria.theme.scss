@@ -1,0 +1,79 @@
+@import '@angular/material/theming';
+
+/*
+ * Metria theme
+ *
+ * Palette generated with http://mcg.mbitson.com
+ */
+$metria-blue: (
+  50 : #e6ebee,
+  100 : #bfcdd5,
+  200 : #95acb9,
+  300 : #6b8b9c,
+  400 : #4b7287,
+  500 : #2b5972,
+  600 : #26516a,
+  700 : #20485f,
+  800 : #1a3e55,
+  900 : #102e42,
+  A100 : #7dc6ff,
+  A200 : #4aafff,
+  A400 : #1798ff,
+  A700 : #008dfc,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$metria-lightblue: (
+  50 : #f0f8fc,
+  100 : #daecf9,
+  200 : #c1e0f5,
+  300 : #a8d4f0,
+  400 : #95caed,
+  500 : #82c1ea,
+  600 : #7abbe7,
+  700 : #6fb3e4,
+  800 : #65abe1,
+  900 : #529edb,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #d4ebff,
+  A700 : #bbe0ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$metria-primary: mat-palette($metria-blue);
+$metria-accent: mat-palette($metria-lightblue);
+$metria-warn: mat-palette($mat-red);
+
+$metria-theme: mat-light-theme($metria-primary, $metria-accent, $metria-warn);

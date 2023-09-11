@@ -1,0 +1,59 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Source,
+} from "@storybook/addon-docs";
+import Colors from "../assets/farger_kombinationer.png"
+
+<Meta title="Riktlinjer/Färger" />
+
+# Färger
+---
+
+Färger är viktiga informationsbärare och förhöjer användbarheten; vi lär oss tidigt att rött betyder stopp, orange betyder varning och grönt betyder gå eller okej. Att
+bryta mot dessa inlärda signaler skapar förvirring i interaktionen. Att använda färger i kommunikation innebär också en utmaning, då vi inte vet vilka eventuella hinder
+våra användare har i form av tex. nedsatt syn eller färgseende. Just den vedertagna, rödgröna färgskalan innebär problem för en relativt stor användargrupp med rödgrön färgblindhet.
+Använd därför aldrig enbart färg som informationsbärare.
+
+En generell riktlinje för läsbarhet och tillgänglighet är att använda goda kontraster, men att samtidigt undvika så hög kontrastgrad att läsbarheten påverkas. En större font kan
+göra det acceptabelt med lägre kontrast, eftersom större text är lättare att läsa. För vissa användare underlättar istället låga kontraster, och att själv kunna välja kontraster och
+färgskalor - som valbart mörkt tema.
+
+Med ovanstående i åtanke har färgerna i Xplores designriktlinjer valts ut, och korrekt använda når de upp till WCAG nivå AA-AAA. Färgerna finns tillgängliga globalt i komponenter som
+CSS-variabler.
+
+### Do's and don'ts
+
+<img src={Colors} alt="empty" />
+
+## CSS-variabler
+
+Importera `@import "lib/ui/theme/themes/xp-theme.scss"` i applikationens `styles.scss`
+för att få tillgång till färgvariablerna. Sedan kan du använda variablerna i en css/scss-fil:
+
+<Source
+  language="css"
+  code={`
+.my-element {
+  color: var(--primary);
+}
+  `}
+/>
+
+<ColorPalette>
+  <ColorItem title="--primary" subtitle="Primärfärg" colors={["#333333"]} />
+  <ColorItem title="--on-primary" subtitle="Ovanpå primärfärg" colors={["#F8F8F8"]} />
+  <ColorItem title="--secondary" subtitle="Sekundärfärg" colors={["#707070"]} />
+  <ColorItem title="--on-secondary" subtitle="Ovanpå sekundärfärg" colors={["#F8F8F8"]} />
+  <ColorItem title="--accent" subtitle="Accentfärg" colors={["#007565"]} />
+  <ColorItem title="--on-accent" subtitle="Ovanpå accentfärg" colors={["#F8F8F8"]} />
+  <ColorItem title="--error" subtitle="Fel" colors={["#BB4E00"]} />
+  <ColorItem title="--on-error" subtitle="Ovanpå fel" colors={["#F8F8F8"]} />
+  <ColorItem title="--background" subtitle="Bakgrundsfärg" colors={["#F8F8F8"]} />
+  <ColorItem title="--on-background" subtitle="Ovanpå bakgrundsfärg" colors={["#333333"]} />
+  <ColorItem title="--accent-variant" subtitle="Variant av accentfärg" colors={["#C7DEDB"]} />
+  <ColorItem title="--on-accent-variant" subtitle="Ovanpå variant av accentfärg" colors={["#333333"]} />
+  <ColorItem title="--error-variant" subtitle="Variant av felfärg" colors={["#ECD7CB"]} />
+  <ColorItem title="--on-error-variant" subtitle="Ovanpå variant av felfärg" colors={["#333333"]} />
+</ColorPalette>

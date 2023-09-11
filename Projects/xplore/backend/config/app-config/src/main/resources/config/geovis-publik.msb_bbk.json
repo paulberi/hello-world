@@ -1,0 +1,610 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "https://msb.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-dark-theme",
+    "copyright": "© Lantmäteriet, © Metria",
+    "rightBottomPanelElements": {
+      "egenHjalp_Path": "/storage/html/help-msb-bbk.html",
+      "omKarta_Path": "/storage/html/about-dialog-msb-bbk.html",
+      "infoOmFastighetsgranser": "",
+      "laddaNedKartmaterial": [
+        {
+          "mapName": "Skogsmark",
+          "title": "Skogsmark",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/BBK_skogsmark_rev2020.zip",
+          "lanCatalogPath": "/storage/zipfiler/skogsmark/lan/",
+          "kommunCatalogPath": "/storage/zipfiler/skogsmark/kommuner/",
+          "raster": true,
+          "vector": true
+        },
+        {
+          "mapName": "Öppen mark",
+          "title": "Öppen mark",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/BBK_oppenmark_rev2021.zip",
+          "lanCatalogPath": "/storage/zipfiler/oppenmark/lan/",
+          "kommunCatalogPath": "/storage/zipfiler/oppenmark/kommuner/",
+          "raster": true,
+          "vector": true
+        }
+      ]
+    },
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ]
+    },
+    "uistates": {
+      "measureUnit": "hectare"
+    }
+  },
+  "zoom": 0.8,
+  "center": [
+    496000,
+    6894000
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "thumbnailCoordinates": [
+    516987,
+    6409208
+  ],
+  "groups": [
+    {
+      "name": "brand",
+      "title": "Brandbränsleklassificering",
+      "expanded": true
+    },
+    {
+      "name": "nmd",
+      "title": "Nationella marktäckedata",
+      "expanded": true
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "type": "tile",
+      "group": "brand",
+      "title": "Skogsmark",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:Brandrisk",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Brandbränsleklassificering (BBK) Skogsmark är en kartering av botten- och fältskiktssammansättning i skogsmark i Sverige.",
+        "attribution": "Metria"
+      },
+      "mapKey": {
+        "title": "Brandbränseklassificering - Skogsmark",
+        "visible": true,
+        "staticKey": [
+          {
+            "code": 201,
+            "color": "rgb(255, 1, 1)",
+            "description": "BR 1 - Barrskog, lav och risdominerad"
+          },
+          {
+            "code": 202,
+            "color": "rgb(255, 135, 1)",
+            "description": "BR 2 - Barrskog, mossa och risdominerad"
+          },
+          {
+            "code": 203,
+            "color": "rgb(255, 255, 1)",
+            "description": "BR 3 - Barrskog, örtdominerad"
+          },
+          {
+            "code": 205,
+            "color": "rgb(165, 100, 65)",
+            "description": "LV 2 - Löv eller blandskog, utan örtvegetation"
+          },
+          {
+            "code": 206,
+            "color": "rgb(235, 225, 195)",
+            "description": "LV 3 - Löv eller blandskog, med örtvegetation"
+          },
+
+          {
+            "code": 207,
+            "color": "rgb(255, 10, 230)",
+            "description": "TV 1 - Trädklädd torvmark, talldominerad"
+          },
+          {
+            "code": 208,
+            "color": "rgb(150, 1, 255)",
+            "description": "TV 2 - Trädklädd torvmark, utan tall"
+          },
+          {
+            "code": 240,
+            "color": "rgb(102, 153, 205)",
+            "description": "IV 1 - Öppen vattenyta"
+          },
+          {
+            "code": 241,
+            "color": "rgb(0, 0, 0)",
+            "description": "IB 1 - Hårdgjord mark, byggnad"
+          },
+          {
+            "code": 242,
+            "color": "rgb(0, 0, 0)",
+            "description": "IB 2 - Hårdgjord mark, väg"
+          },
+          {
+            "code": 243,
+            "color": "rgb(125, 125, 125)",
+            "description": "IB 3 - Hårdgjord mark, ej byggnad eller väg"
+          },
+          {
+            "code": 244,
+            "color": "rgb(125, 125, 125)",
+            "description": "IO 1 - Övrig öppen mark utan vegetation"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "brand",
+      "title": "Öppen mark 2021",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "msb:Brandrisk_oppenmark",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Brandbränsleklassificering (BBK) Öppen mark är en kartering av botten- och fältskiktssammansättning i öppen mark i Sverige.",
+        "attribution": "Metria"
+      },
+      "mapKey": {
+        "title": "Brandbränseklassificering - Öppen mark",
+        "visible": true,
+        "staticKey": [
+          {
+            "code": 210,
+            "color": "rgb(164, 229, 124)",
+            "description": "HE 1 - Hygge, bart"
+          },
+          {
+            "code": 211,
+            "color": "rgb(94, 129, 71)",
+            "description": "HE 2 - Hygge, med gles vegetation"
+          },
+          {
+            "code": 212,
+            "color": "rgb(48, 68, 36)",
+            "description": "HE 3 - Hygge eller öppen mark med låga träd eller buskar"
+          },
+          {
+            "code": 220,
+            "color": "rgb(198, 198, 198)",
+            "description": "JB 1 - Åkermark, brukad"
+          },
+          {
+            "code": 221,
+            "color": "rgb(154, 124, 59)",
+            "description": "GS 2 - Öppen vegeterad mark, hävdad"
+          },
+          {
+            "code": 222,
+            "color": "rgb(205, 105, 49)",
+            "description": "GS 2 - Öppen vegeterad mark, ej hävdad"
+          },
+          {
+            "code": 230,
+            "color": "rgb(229, 157, 255)",
+            "description": "VM 1 - Myrmark, mossdominerad"
+          },
+          {
+            "code": 231,
+            "color": "rgb(199, 59, 224)",
+            "description": "VM 2 - Myrmark, med fältskikt"
+          },
+          {
+            "code": 232,
+            "color": "rgb(114, 0, 149)",
+            "description": "VM 3 - Övrig öppen våtmark"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nmd",
+      "title": "Basskikt",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "metria:NMD_basskikt",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Nationella marktäckedata (NMD) är en heltäckande kartering av Sverige. NMD består av en baskartering i 25 tematiska klasser i tre hierarkiska nivåer.",
+        "attribution": "Naturvårdsverket"
+      },
+      "mapKey": {
+        "title": "Basskikt (NMD)",
+        "visible": true,
+        "staticKey": [
+          {
+            "code": 2,
+            "color": "rgb(194, 158, 215)",
+            "description": "Öppen våtmark"
+          },
+          {
+            "code": 3,
+            "color": "rgb(255, 255, 190)",
+            "description": "Åkermark"
+          },
+          {
+            "code": 41,
+            "color": "rgb(225, 225, 225)",
+            "description": "Övrig öppen mark utan vegetation"
+          },
+          {
+            "code": 42,
+            "color": "rgb(255, 211, 127)",
+            "description": "Övrig öppen mark med vegetation"
+          },
+          {
+            "code": 51,
+            "color": "rgb(90, 20, 20)",
+            "description": "Exploaterad mark, byggnad"
+          },
+          {
+            "code": 52,
+            "color": "rgb(229, 70, 75)",
+            "description": "Exploaterad mark, ej byggnad eller väg/järnväg"
+          },
+          {
+            "code": 53,
+            "color": "rgb(25, 25, 25)",
+            "description": "Exploaterad mark, väg/järnväg"
+          },
+          {
+            "code": 61,
+            "color": "rgb(102, 153, 205)",
+            "description": "Sjö och vattendrag"
+          },
+          {
+            "code": 62,
+            "color": "rgb(138, 204, 250)",
+            "description": "Hav"
+          },
+          {
+            "code": 111,
+            "color": "rgb(110, 140, 5)",
+            "description": "Tallskog (utanför våtmark)"
+          },
+          {
+            "code": 112,
+            "color": "rgb(45, 95, 0)",
+            "description": "Granskog (utanför våtmark)"
+          },
+          {
+            "code": 113,
+            "color": "rgb(78, 112, 0)",
+            "description": "Barrblandskog (utanför våtmark)"
+          },
+          {
+            "code": 114,
+            "color": "rgb(56, 168, 0)",
+            "description": "Lövblandad barrskog (utanför våtmark)"
+          },
+          {
+            "code": 115,
+            "color": "rgb(76, 230, 0)",
+            "description": "Triviallövskog (utanför våtmark)"
+          },
+          {
+            "code": 116,
+            "color": "rgb(170, 255, 0)",
+            "description": "Ädellövskog (utanför våtmark)"
+          },
+          {
+            "code": 117,
+            "color": "rgb(151, 230, 0)",
+            "description": "Triviallövskog med ädellövinslag (utanför våtmark)"
+          },
+          {
+            "code": 118,
+            "color": "rgb(205, 205, 102)",
+            "description": "Temporärt ej skog (utanför våtmark)"
+          },
+          {
+            "code": 121,
+            "color": "rgb(89, 140, 85)",
+            "description": "Tallskog (på våtmark)"
+          },
+          {
+            "code": 122,
+            "color": "rgb(48, 94, 80)",
+            "description": "Granskog (på våtmark)"
+          },
+          {
+            "code": 123,
+            "color": "rgb(35, 115, 90)",
+            "description": "Barrblandskog (på våtmark)"
+          },
+          {
+            "code": 124,
+            "color": "rgb(67, 136, 112)",
+            "description": "Lövblandad barrskog (på våtmark)"
+          },
+          {
+            "code": 125,
+            "color": "rgb(137, 205, 155)",
+            "description": "Triviallövskog (på våtmark)"
+          },
+          {
+            "code": 126,
+            "color": "rgb(165, 245, 120)",
+            "description": "Ädellövskog (på våtmark)"
+          },
+          {
+            "code": 127,
+            "color": "rgb(171, 205, 120)",
+            "description": "Triviallövskog med ädellövinslag (på våtmark)"
+          },
+          {
+            "code": 128,
+            "color": "rgb(137, 137, 68)",
+            "description": "Temporärt ej skog (på våtmark)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nmd",
+      "title": "Objekthöjd 5-45 m",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:NMD_hojd",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Tilläggsskikt inom Nationella marktäckedata. Objekthöjder 5 till 45 m.",
+        "attribution": "Naturvårdsverket"
+      },
+      "mapKey": {
+        "title": "Objekthöjd 5-45m (NMD)",
+        "visible": true,
+        "staticKey": [
+          {
+            "code": 10,
+            "color": "rgb(0, 97, 0)",
+            "description": "5 - 10 m"
+          },
+          {
+            "code": 15,
+            "color": "rgb(97, 153, 0)",
+            "description": "10 - 15 m"
+          },
+          {
+            "code": 20,
+            "color": "rgb(197, 219, 0)",
+            "description": "15 - 20 m"
+          },
+          {
+            "code": 25,
+            "color": "rgb(255, 217, 0)",
+            "description": "20 - 25 m"
+          },
+          {
+            "code": 30,
+            "color": "rgb(255, 132, 0)",
+            "description": "25 - 30 m"
+          },
+          {
+            "code": 45,
+            "color": "rgb(255, 38, 0)",
+            "description": "> 30 m"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nmd",
+      "title": "Krontäthet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "metria:NMD_tackning",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "abstract": {
+        "text": "Tilläggsskikt inom Nationella marktäckedata. Täckningsgrad av objekthöjder mellan 5 till 45 m. Täckningsgrad för objekthöjd kallas även för krontäthet.",
+        "attribution": "Naturvårdsverket"
+      },
+      "mapKey": {
+        "title": "NMD Krontäthet (NMD)",
+        "visible": true,
+        "staticKey": [
+          {
+            "code": 5,
+            "color": "rgb(0, 97, 0)",
+            "description": "0 - 5 %"
+          },
+          {
+            "code": 10,
+            "color": "rgb(54, 125, 0)",
+            "description": "5 - 10 %"
+          },
+          {
+            "code": 20,
+            "color": "rgb(97, 153, 0)",
+            "description": "10 - 20 %"
+          },
+          {
+            "code": 30,
+            "color": "rgb(146, 186, 0)",
+            "description": "20 - 30 %"
+          },
+          {
+            "code": 40,
+            "color": "rgb(197, 219, 0)",
+            "description": "30 - 40 %"
+          },
+          {
+            "code": 50,
+            "color": "rgb(255, 255, 0)",
+            "description": "40 - 50 %"
+          },
+          {
+            "code": 60,
+            "color": "rgb(255, 217, 0)",
+            "description": "50 - 60 %"
+          },
+          {
+            "code": 70,
+            "color": "rgb(255, 174, 0)",
+            "description": "60 - 70 %"
+          },
+          {
+            "code": 80,
+            "color": "rgb(255, 132, 0)",
+            "description": "70 - 80 %"
+          },
+          {
+            "code": 90,
+            "color": "rgb(255, 89, 0)",
+            "description": "80 - 90 %"
+          },
+          {
+            "code": 100,
+            "color": "rgb(255, 34, 0)",
+            "description": "90 - 100 %"
+          }
+        ]
+      }
+    },
+    {
+      "import": "topowebb@lantmateriet-export",
+      "group": "background",
+      "visible": true,
+      "mapKey": {
+        "visible": false
+      }
+    },
+    {
+      "import": "topowebb_nedtonad@lantmateriet-export",
+      "group": "background",
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      }
+    },
+    {
+      "import": "Ortofoto_0.5_och_Ortofoto_0.25@lantmateriet-export",
+      "group": "background",
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      }
+    }
+  ],
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    2293.7599999999998,
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "infoTemplates": {},
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+

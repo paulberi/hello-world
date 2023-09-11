@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <mat-label>{{ "mk.fiberInfo.bestallare" | transloco }}</mat-label>
+        <input matInput formControlName="bestallare" />
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="right">
+        <mat-label>{{ "mk.fiberInfo.ledningsstracka" | transloco }}</mat-label>
+        <input matInput formControlName="ledningsstracka" />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field *ngIf="ledningsagare?.length > 0">
+        <mat-label>{{ "mk.fiberInfo.ledningsagare" | transloco }}</mat-label>
+        <mat-select formControlName="ledningsagare">
+          <mat-option *ngFor="let ag of ledningsagare" [value]="ag">{{ ag }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</form>

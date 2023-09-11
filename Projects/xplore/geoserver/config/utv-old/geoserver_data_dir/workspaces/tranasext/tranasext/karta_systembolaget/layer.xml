@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_systembolaget</name>
+  <id>LayerInfoImpl-2bb6abc5:9b3c005d60f:-0582</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-f75b3673:e0aca18dea7:-8113</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

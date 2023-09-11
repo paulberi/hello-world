@@ -1,0 +1,60 @@
+query adminOrders($numberOfOrders: Int!, $startIndex: Int!) {
+  orderHistory(
+    options: {
+      filter: { externalRef: { eq: true }, active: {eq: false } }
+      sort: { id: DESC }
+      take: $numberOfOrders
+      skip: $startIndex
+    }
+  ) @namedClient(name: "adminApi") {
+    items {
+      order {
+      id
+      active
+      state
+      updatedAt
+      code
+      totalWithTax
+      currencyCode
+      customFields {
+        emailAddress
+        externalRef
+      }
+    }
+    lines {
+      orderLine {
+        id
+        taxRate
+        unitPrice
+        unitPriceWithTax
+        productVariant {
+          id
+          name
+          product {
+            name
+          }
+        }
+        customFields {
+          clientAttributes
+        }
+      }
+      downloadUrl
+      ready
+    }
+  }
+  totalItems
+  }
+      
+}
+
+query getDeliveryOrder($id: ID!) {
+  getDeliveryOrder(id: $id) @namedClient(name: "adminApi") {
+    status
+  }
+}
+
+query getDeliveryOrderLine($id: ID!) {
+  getDeliveryOrderLine(id: $id) @namedClient(name: "adminApi") {
+    status
+  }
+}

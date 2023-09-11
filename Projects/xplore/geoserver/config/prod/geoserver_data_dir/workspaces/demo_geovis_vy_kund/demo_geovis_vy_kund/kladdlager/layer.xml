@@ -1,0 +1,15 @@
+<layer>
+  <name>kladdlager</name>
+  <id>LayerInfoImpl-60a6ef78:174d481848f:508f</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-60a6ef78:174d481848f:508e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

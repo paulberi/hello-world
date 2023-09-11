@@ -1,0 +1,78 @@
+@import '@angular/material/theming';
+
+/*
+ * SLL theme
+ *
+ * Palette generated with http://mcg.mbitson.com
+ */
+$sll-blue: (
+  50 : #e0e6eb,
+  100 : #b3c0ce,
+  200 : #8096ad,
+  300 : #4d6c8c,
+  400 : #264d73,
+  500 : #002d5a,
+  600 : #002852,
+  700 : #002248,
+  800 : #001c3f,
+  900 : #00112e,
+  A100 : #6789ff,
+  A200 : #3462ff,
+  A400 : #013aff,
+  A700 : #0034e6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$sll-pink: (
+  50 : #fbe4ee,
+  100 : #f5bbd4,
+  200 : #ee8db7,
+  300 : #e75f9a,
+  400 : #e23d84,
+  500 : #dd1b6e,
+  600 : #d91866,
+  700 : #d4145b,
+  800 : #cf1051,
+  900 : #c7083f,
+  A100 : #fff1f4,
+  A200 : #ffbecd,
+  A400 : #ff8ba6,
+  A700 : #ff7193,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$sll-primary: mat-palette($sll-blue);
+$sll-accent: mat-palette($sll-pink);
+$sll-warn: mat-palette($mat-red);
+
+$sll-theme: mat-light-theme($sll-primary, $sll-accent, $sll-warn);

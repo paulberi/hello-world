@@ -1,0 +1,15 @@
+<layer>
+  <name>tranas_kommun_svartan_bhf</name>
+  <id>LayerInfoImpl--451832f0:171d4d772bc:-7fe3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--451832f0:171d4d772bc:-7fe4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,25 @@
+<app-user-header></app-user-header>
+<div class="centered-content">
+    <div class="choices-content">
+
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+        {{ NameOfUserToDelete }}
+      </a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item" *ngFor="let user of $users | async" (click)="UserToDelete(user)">
+                    <p>{{ user.email }}</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="button-content">
+            <button class="delete-button" (click)="deleteUser()">
+        Ta bort användare
+    </button>
+        </div>
+
+
+
+    </div>
+</div>

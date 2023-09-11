@@ -1,0 +1,55 @@
+  <div class="analysis-report">
+    <div *ngFor="let group of dataSource" class="group-list">
+        <div class="group-contents" [ngSwitch]="group.component">
+          <h3>{{group.title}}</h3>
+
+          <ng-template *ngSwitchCase="'nmd'"
+                       [ngTemplateOutlet]="nmd"
+                       [ngTemplateOutletContext]="{$implicit: group}">
+          </ng-template>
+          <ng-template *ngSwitchCase="'skogliga-grunddata'"
+                       [ngTemplateOutlet]="skogligaGrunddata"
+                       [ngTemplateOutletContext]="{$implicit: group}">
+          </ng-template>
+          <ng-template *ngSwitchCase="'avverkningsstatistik'"
+                       [ngTemplateOutlet]="avverkningsstatistik"
+                       [ngTemplateOutletContext]="{$implicit: group}">
+          </ng-template>
+          <ng-template *ngSwitchCase="'huggningsklasser'"
+                       [ngTemplateOutlet]="huggningsklasser"
+                       [ngTemplateOutletContext]="{$implicit: group}">
+          </ng-template>
+          <ng-template *ngSwitchCase="'skyddade-omraden'"
+                       [ngTemplateOutlet]="skyddadeOmraden"
+                       [ngTemplateOutletContext]="{$implicit: group}">
+          </ng-template>
+          <ng-template *ngSwitchDefault [ngTemplateOutlet]="default"></ng-template>
+        </div>
+    </div>
+  </div>
+
+  <ng-template #skogligaGrunddata let-group>
+    <xp-skogliga-grunddata-report [resultat]="group.result" [error]="group.error"></xp-skogliga-grunddata-report>
+  </ng-template>
+
+  <ng-template #nmd let-group>
+    <xp-nmd-report [resultat]="group.result | async" [error]="group.error"></xp-nmd-report>
+  </ng-template>
+
+  <ng-template #avverkningsstatistik let-group>
+    <xp-avverkningsstatistik-report [resultat]="group.result | async"
+                                   [error]="group.error"></xp-avverkningsstatistik-report>
+  </ng-template>
+
+  <ng-template #huggningsklasser let-group>
+    <xp-huggningsklasser-report [resultat]="group.result | async" [error]="group.error"></xp-huggningsklasser-report>
+  </ng-template>
+
+  <ng-template #skyddadeOmraden let-group>
+    <xp-skyddade-omraden-report [resultat]="group.result | async" [error]="group.error"></xp-skyddade-omraden-report>
+  </ng-template>
+
+
+  <ng-template #default>
+    Tjänsten är temporärt ej tillgänglig.
+  </ng-template>

@@ -1,0 +1,35 @@
+<div id="title-background" class="mat-typography"></div>
+<div class="row justify-center" id="wrapper">
+  <div class="col-11">
+    <h1>Markkoll Admin</h1>
+    <mat-tab-group dynamicHeight mat-align-tabs="start">
+      <mat-tab [label]="'mk.admin.settings' | transloco">
+        <div class="row main-content">
+          <div class="col-4">
+            <div class="col-11">
+              <mk-ledningsagare [kundId]="activeKund?.id"></mk-ledningsagare>
+            </div>
+          </div>
+          <div class="col-4">
+            <mk-nis-kalla [kund]="activeKund"></mk-nis-kalla>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </mat-tab>
+
+      <mat-tab [label]="'mk.admin.dokumentmallar' | transloco">
+        <div class="col-12 projektdokument">
+          <mk-projektdokument [kundId]="loggedInUser.kundId"></mk-projektdokument>
+        </div>
+      </mat-tab>
+
+      <mat-tab [label]="'mk.admin.users' | transloco">
+        <mk-users-container [kund]="activeKund" [loggedInUser]="loggedInUser"></mk-users-container>
+      </mat-tab>
+
+      <mat-tab [label]="'mk.admin.ersattningFiber.tabTitle' | transloco">
+        <mk-ersattning-fiber *ngIf="activeKund" [activeKund]="activeKund.id"></mk-ersattning-fiber>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

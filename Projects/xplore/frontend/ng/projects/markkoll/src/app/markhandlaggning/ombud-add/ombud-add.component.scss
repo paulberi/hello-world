@@ -1,0 +1,20 @@
+form {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+#postnummer-ort {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 1em;
+}
+
+
+#buttons {
+  #cancel-button{
+    text-decoration: underline;
+  }
+  button ~ button {
+    margin-left: 10px;
+  }
+}

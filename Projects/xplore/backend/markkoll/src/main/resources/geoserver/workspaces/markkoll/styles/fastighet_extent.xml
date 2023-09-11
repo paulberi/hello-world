@@ -1,0 +1,12 @@
+<style>
+  <name>fastighet_extent</name>
+  <workspace>
+    <name>markkoll</name>
+  </workspace>
+  <format>sld</format>
+  <languageVersion>
+    <version>1.0.0</version>
+  </languageVersion>
+  <filename>fastighet_extent.sld</filename>
+  <dateCreated>2022-03-09 11:06:10.602 UTC</dateCreated>
+</style>

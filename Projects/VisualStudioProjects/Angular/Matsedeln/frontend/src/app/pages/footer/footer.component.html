@@ -1,0 +1,39 @@
+<script src="https://use.fontawesome.com/ccceada4b4.js"></script>
+<div class="one">
+    <div class="user-content">
+        <ng-container *ngIf="auth.isAuthenticated$ | async;">
+            <div class="icon">
+                <i class="fas fa-user" style='color:white'></i>
+            </div>
+            <div class="two">
+                <p class="logged-in-user-label">
+                    {{ loggedInUser }}
+                </p>
+            </div>
+        </ng-container>
+    </div>
+    <div>
+        <ng-container *ngIf="admin">
+            <button class="user-button" routerLink="/user">
+          Administrera användare
+        </button>
+        </ng-container>
+        <ng-container *ngIf=" loggedIn; else loggedOut">
+            <button class="admin-button" routerLink="/admin">
+        Administrera matsedel
+      </button>
+            <button class="admin-button" (click)="auth.logout({ returnTo: ROOT_URL + '/logout' })">
+      Logga ut
+    </button>
+        </ng-container>
+        <ng-template #loggedOut>
+            <!-- <button class="admin-button" (click)="auth.loginWithRedirect({
+      })">
+        Logga in
+      </button> -->
+            <button class="admin-button" routerLink="/login">
+        Logga in
+      </button>
+        </ng-template>
+    </div>
+</div>

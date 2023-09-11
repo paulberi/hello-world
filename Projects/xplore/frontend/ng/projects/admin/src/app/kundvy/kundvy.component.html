@@ -1,0 +1,79 @@
+<div class="imgcontainer"></div>
+<div class="wrapper">
+  <div class="top row">
+    <div class="col-6">
+      <h1>{{ "adm.kundvy.kund" | transloco }}</h1>
+    </div>
+    <div class="col-6 d-flex justify-end">
+      <button *ngIf="canCreate()" mat-button (click)="kundAdd.emit()">
+        {{ "adm.kundvy.addKunder" | transloco }}
+        <mat-icon class="add-icon">add_circle</mat-icon>
+      </button>
+      <button *ngIf="canCreate()" mat-button [matMenuTriggerFor]="menu">
+        {{ "adm.kundvy.moreOptions" | transloco }}
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="resetGeofenceRulesClick.emit()">
+          <mat-icon>refresh</mat-icon>
+          <span>{{ "adm.kundvy.resetGeofenceRules" | transloco }}</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+
+  <mat-accordion class="kundlista" displayMode="flat">
+    <div *ngFor="let kund of page?.content; let i = index">
+      <mat-divider></mat-divider>
+      <mat-expansion-panel [expanded]="isKundExpanded(i)">
+
+        <mat-expansion-panel-header collapsedHeight="80px" (click)="onKundClick(i)">
+          <mat-panel-title>
+            <h2>{{kund.namn}}</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-tab-group color="accent">
+          <mat-tab [label]="'adm.kundvy.kundinformation' | transloco">
+            <div class="col-6">
+              <adm-kunduppgifter [kund]="kund"
+                                 (kundChange)="kundChange.emit($event)"
+                                 (kundDelete)="kundDelete.emit(kund.id)">
+              </adm-kunduppgifter>
+            </div>
+          </mat-tab>
+
+          <mat-tab [label]="'adm.kundvy.kundadmins' | transloco">
+            <div class="col-6">
+              <adm-list-users [kund]="kund"></adm-list-users>
+            </div>
+          </mat-tab>
+
+          <mat-tab [label]="'adm.kundvy.systeminloggningar' | transloco">
+            <div class="col-6">
+              <adm-systeminloggningar [kundId]="kund.id"></adm-systeminloggningar>
+            </div>
+          </mat-tab>
+
+          <mat-tab [label]="'adm.abonnemang.productsAndServices' | transloco">
+              <adm-abonnemang [kundId]="kund.id" [abonnemang]="kund.abonnemang"></adm-abonnemang>
+          </mat-tab>
+
+        </mat-tab-group>
+
+      </mat-expansion-panel>
+
+    </div>
+    <mat-divider></mat-divider>
+  </mat-accordion>
+
+  <mat-paginator [length]="page?.totalElements"
+                 [pageIndex]="page?.number"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="pageChange.emit($event)">
+  </mat-paginator>
+</div>
+
+<ng-template>
+
+</ng-template>

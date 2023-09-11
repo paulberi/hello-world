@@ -1,0 +1,33 @@
+<mk-projektkarta [projektId]="projektId"></mk-projektkarta>
+
+<div class="row justify-center main-content-container">
+  <div class="col-11 main-content">
+    <div class="top">
+      <div class="d-flex">
+        <p class="tillbaka">
+          <a class="tillbaka-link" [routerLink]="goBackRouterLink" routerLinkActive="router-link-active">
+            <mat-icon inline="true">chevron_left</mat-icon>
+            {{ "xp.common.back" | transloco }}
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <h1>{{ projektnamn }}</h1>
+
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let link of links"
+                      [routerLink]="link.link"
+                      routerLinkActive #rla="routerLinkActive"
+                      [active]="rla.isActive">
+        {{link.label}}
+      </a>
+      <button mat-raised-button color="accent" [matMenuTriggerFor]="menu" class="menubtn">{{ "mk.samrad.flerVal" | transloco }} <mat-icon>keyboard_arrow_down</mat-icon></button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item routerLink="#">{{ "mk.samrad.visaDokumentarkiv" | transloco }}</button>
+        <button *ngIf="samradAbonnemang?.length > 0" mat-menu-item [routerLink]="['/samrad-admin', projektId]">{{ "mk.samrad.hanteraSamrad" | transloco }}</button>
+      </mat-menu>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

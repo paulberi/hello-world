@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/theming';
+
+@import './sll.theme.scss';
+@import './metria.theme.scss';
+@import './app/app-shell.theme.scss';
+@import './app/start/start.theme.scss';
+
+@import url(~ol/ol.css);
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/*
+ * This makes sure that an elements size includes border and padding.
+ * It makes sizing more predictable.
+ */
+*, ::after, ::before {
+  box-sizing:border-box
+}
+
+/*
+ * Favor bottom margins over top margins for an easier mental model.
+ */
+h1,h2,h3,h4,h5 {
+  margin-top: 0 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+th, td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrap-text th, td {
+  white-space: normal;
+}
+
+.centered {
+  max-width: 70rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+}
+
+.rest-error {
+  color: red;
+  font-style: italic;
+  padding-top: 1rem;
+}
+
+.actions {
+  display: grid;
+  grid-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .actions {
+    grid-template-columns: auto auto auto;
+    justify-content: left;
+    grid-gap: 1rem;
+  }
+}
+
+/*
+ * Font styles
+ *
+ * This applies the fonts to all angular material components but it does NOT effect the rest.
+ * By adding the class "mat-typography" to the root element it takes effect everywhere.
+ * (except apparently cdkDrag elements - the next class is necessary too.)
+ */
+$custom-typography: mat-typography-config(
+  $font-family: 'Nunito Sans, sans-serif',
+  $headline: mat-typography-level(32px, 32px, Bold),
+  $title: mat-typography-level(20px, 32px, Bold),
+  $subheading-2:  mat-typography-level(16px, 28px, Bold)
+);
+
+.cdk-drag-preview {
+  font-family: Nunito Sans, sans-serif;
+}
+
+// Include the common style for angular material (including but not limited to typography styles).
+@include mat-core($custom-typography);
+
+// This avoid zooming on form fields on mobile.
+@media only screen and (max-width: 768px) {
+  .mat-form-field {
+    font-size: 16px;
+  }
+}
+
+/*
+ * Theme styles
+ *
+ * We need to set the theme for all angular material components, but also our own components that make their
+ * own color choices. Ideally few of our components will need custom theming.
+ */
+$theme: $metria-theme;
+@include angular-material-theme($theme);
+
+// Theming for our own components.
+$gradient: transparent linear-gradient(0deg, #162D39 0%, #2B5972 100%) 0% 0% no-repeat padding-box;
+@include app-shell-theme($theme, $gradient);
+@include start-theme($theme, #E6E6E6, #333333);
+
+// Theming for things that aren't components.
+$primary: map-get($theme, primary);
+a, a:visited {
+  text-decoration: none;
+  color: mat-color($primary);
+}
+
+.subheader {
+  font-size: smaller;
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.popup {
+  background: white;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width: 500px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: mat-color($primary);
+  }
+}
+
+hr {
+  color: mat-color($primary);
+  border-style: solid;
+  border-width: 0.5px;
+  margin: 1rem 0;
+  opacity: 0.2;
+}
+

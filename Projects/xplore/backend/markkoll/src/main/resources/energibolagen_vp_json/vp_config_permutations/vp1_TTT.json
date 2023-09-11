@@ -1,0 +1,26 @@
+{
+    "varderingsprotokoll": {
+        "markledning": [
+            { "langd": 1, "bredd": 2},
+            { "langd": 4, "bredd": 1 }
+        ],
+        "punktersattning": [
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 1 }
+        ],
+        "ssbSkogsmark": [
+            { "langd": 5, "bredd": 7 },
+            { "langd": 6, "bredd": 8 }
+        ],
+        "ssbVaganlaggning": [
+            { "langd": 5, "zon": "ZON_1" },
+            { "langd": 10, "zon": "ZON_2" }
+        ],
+        "config": {
+            "ingenGrundersattning": true,
+            "forhojdMinimumersattning": true,
+            "storskogsbruksavtalet": true,
+            "lagspanning": false
+        },
+        "prisomrade": "NORRLANDS_INLAND"
+    }
+}

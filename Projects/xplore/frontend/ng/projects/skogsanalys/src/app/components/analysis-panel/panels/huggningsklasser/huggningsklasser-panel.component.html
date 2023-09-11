@@ -1,0 +1,44 @@
+<div *ngIf="!resultat && !error">
+  Inga resultat har hämtats för den här fastigheten
+</div>
+<div *ngIf="error"><span style="color: red">{{error.felbeskrivning}}</span></div>
+<div *ngIf="resultat">
+    <table class="table">
+      <tr>
+        <td>Medelhöjd</td>
+        <td>{{resultat.medel < 0.1 ? '< 0.1' : resultat.medel | number:'1.0-1':'sv'}} m</td>
+      </tr>
+      <tr>
+        <td>Referensdatum</td>
+        <td>{{resultat.referensArIntervall}}</td>
+      </tr>
+      <tr>
+        <td>Lövad säsong</td>
+        <td>{{resultat.lov?'Ja':'Nej'}}</td>
+      </tr>
+    </table>
+
+    <mat-radio-group [(ngModel)]="chartTypeVolym">
+      <mat-radio-button *ngFor="let chartType of chartTypes" [value]="chartType" class="chart-radio-button">
+        {{chartType}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="histogram">
+      <ngx-charts-bar-vertical
+        [scheme]="colorScheme"
+        [results]="getChartData(resultat)"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [animations]="false"
+        [showYAxisLabel]="true"
+        [showXAxisLabel]="true"
+        [yAxisLabel]="getChartLabel()"
+        [xAxisLabel]="'Trädhöjd (m)'">
+        <ng-template #tooltipTemplate let-model="model">
+          <span class="tooltip-label">{{model.name}}</span>
+          <span class="tooltip-val">{{model.value | number:'1.0-1':'sv' }} {{getChartTooltipPostfix()}}</span>
+        </ng-template>
+      </ngx-charts-bar-vertical>
+    </div>
+</div>

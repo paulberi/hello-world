@@ -1,0 +1,16 @@
+<layer>
+  <name>pagaende_detaljplan_region</name>
+  <id>LayerInfoImpl-5492d999:177ab4239c8:3184</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5492d999:177ab4239c8:3183</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-02-16 18:44:22.151 UTC</dateCreated>
+</layer>

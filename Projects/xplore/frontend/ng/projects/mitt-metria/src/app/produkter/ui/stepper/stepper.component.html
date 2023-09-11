@@ -1,0 +1,29 @@
+<div class="stepper-banner">
+  <h2 class="stepper-title" [class.remove-stepper-title]="steps.length > 1">{{title}}</h2>
+  <div class="steps">
+    <ng-container *ngFor="let step of steps">
+      <div tabIndex="0" class="step" [ngClass]="{
+        'step__active': isActive(step),
+        'step__inactive': isInactive(step),
+        'step__recently_done': isLatestDone(step),
+        'step__done': isDone(step) && !isLatestDone(step)
+      }">
+        <span class="circle" [ngClass]="{
+        stepActive: isActive(step),
+        stepDone: isDone(step)}"
+        (click)="clickNumber.emit(step.stepNumber)">
+          {{step.stepNumber}}
+        </span>
+        <span class="step-title">{{step.title}}</span>
+      </div>
+      <div *ngIf="!isLastStep(step)" class="horizontal-line"
+           [ngClass]="isNextStepActive(step) || isNextStepInactive(step) ? 'invisible-line' : 'horizontal-line'"></div>
+    </ng-container>
+  </div>
+  <div (click)="cancelOrder.emit()" class="icon-and-text-wrapper">
+    <button type="button" [attr.aria-label]="'mm.stepper.cancelOngoing' | transloco" mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+    <span>Avsluta</span>
+  </div>
+</div>

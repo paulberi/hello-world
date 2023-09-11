@@ -1,0 +1,18 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-1413c6cc:174bae420fe:-7ff2</id>
+  <name>mattias_test_source</name>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-1413c6cc:174bae420fe:-7ff4</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2020-09-23 13:06:20.278 UTC</dateCreated>
+  <capabilitiesURL>https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_wms_vindbrukskollen/MapServer/WMSserver?</capabilitiesURL>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

@@ -1,0 +1,97 @@
+<mat-vertical-stepper #stepper color="accent" orientation="vertical" linear="true" (animationDone)="onStepChange()">
+
+  <mat-step [stepControl]="radioForm" [label]="'mk.projektdokument.createTemplateOrDraft' | transloco">
+    <form [formGroup]="radioForm">
+      <mat-radio-group formControlName="template">
+        <div class="row create-radiobuttons" >
+          <mat-radio-button [value]="1" matStepperNext (change)="goToCreate()">
+            {{ "mk.projektdokument.uploadNewTemplate" | transloco }}<br>
+            <span class="mat-caption">{{ "mk.projektdokument.uploadNewTemplateDescription" | transloco }}</span>
+          </mat-radio-button>
+        </div>
+        <div class="row">
+          <mat-radio-button [value]="2" matStepperNext (change)="goToPrepare()">
+            {{ "mk.projektdokument.createDraft" | transloco }}<br>
+            <span class="mat-caption">{{ "mk.projektdokument.createDraftDescription" | transloco }}</span>
+          </mat-radio-button>
+        </div>
+      </mat-radio-group>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="createForm" [label]="'mk.projektdokument.dokumentInformation' | transloco" *ngIf="isCreatingDokument()">
+    <form [formGroup]="createForm">
+      <div class="row dokument-info">
+        <mat-form-field class="select-form-field">
+        <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+          <mat-label>{{"mk.projektdokument.dokumentName" | transloco}}</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <h3 class="dokumenttyp-rubrik">{{"mk.projektdokument.dokumentType" | transloco}}*</h3>
+        <mat-form-field class="dokumenttyp">
+        <mat-error>{{ "xp.common.fieldMandatory" | transloco }}</mat-error>
+          <mat-select formControlName="dokumenttyp" (selectionChange)="onDokumenttypChange($event.value)">
+            <mat-option *ngFor="let dtyp of dokumenttyper" [value]="dtyp.value">{{dtyp.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-checkbox class="defaultmall" formControlName="default">
+          {{ "mk.projektdokument.setDefault" | transloco}}
+          <mat-icon class="info-icon" [matTooltip]="'mk.projektdokument.setDefaultTooltip' | transloco" >info</mat-icon>
+        </mat-checkbox>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <xp-dropzone formControlName="file" [acceptedFileEndings]="getAcceptedFileEndings()"></xp-dropzone>
+          <mat-error *ngIf="createForm.controls.file.hasError('required')">
+            {{"xp.common.fieldMandatory" | transloco}}
+          </mat-error>
+          <button mat-button matStepperPrevious>{{ "xp.common.back" | transloco}}</button>
+          <button mat-button color="accent" matStepperNext>{{ "xp.common.next" | transloco}}</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="prepareForm" [label]="'mk.projektdokument.dokumentInformation' | transloco" *ngIf="isPreparingDokument()">
+    <form [formGroup]="prepareForm">
+      <div class="row">
+        <div class="col-6">
+          <xp-dropzone formControlName="file" [acceptedFileEndings]="acceptedFileEndings"></xp-dropzone>
+          <mat-error *ngIf="prepareForm.controls.file.hasError('required')">
+            {{"xp.common.fieldMandatory" | transloco}}
+          </mat-error>
+          <button mat-button matStepperPrevious>{{ "xp.common.back" | transloco}}</button>
+          <button mat-button color="accent" matStepperNext>{{ "xp.common.next" | transloco}}</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [label]="'mk.projektdokument.done' | transloco">
+    <div>
+      <button mat-button matStepperPrevious>{{ "xp.common.back" | transloco}}</button>
+      <button *ngIf="isCreatingDokument()" mat-flat-button (click)="createDokument()" color="primary">{{ "mk.projektdokument.save" | transloco}}</button>
+      <button *ngIf="isPreparingDokument()" mat-flat-button (click)="prepareDokument()" color="primary">{{ "mk.projektdokument.save" | transloco}}</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+<div class="col-12 col-lg-10 col-md-11">
+  <h2 *ngIf="dokument?.length > 0" class="projektdokument-titel">{{ "mk.projektdokument.projektdokument" | transloco }}</h2>
+  <mk-projektdokument-table [dataSource]="filterDokumentmallar(DokumentTyp.MARKUPPLATELSEAVTAL)"
+                            [title]="'mk.dokumenttyp.MARKUPPLATELSEAVTAL' | transloco"
+                            (selectedDokumentChange)="dokumentChange.emit($event)"
+                            (delete)="dokumentDelete.emit($event)"
+  ></mk-projektdokument-table>
+
+  <mk-projektdokument-table [dataSource]="filterDokumentmallar(DokumentTyp.INFOBREV)"
+                            [title]="'mk.dokumenttyp.OTHERS' | transloco"
+                            (selectedDokumentChange)="dokumentChange.emit($event)"
+                            (delete)="dokumentDelete.emit($event)"
+  ></mk-projektdokument-table>
+
+  <mk-projektdokument-table [dataSource]="filterDokumentmallar(DokumentTyp.FORTECKNING)"
+                            [title]="'mk.dokumenttyp.FORTECKNINGAR' | transloco"
+                            (selectedDokumentChange)="dokumentChange.emit($event)"
+                            (delete)="dokumentDelete.emit($event)"
+  ></mk-projektdokument-table>
+  <!--<mk-projektdokument-list [dokument]="dokument" (dokumentDelete)="dokumentDelete.emit($event)" (dokumentChange)="dokumentChange.emit($event)"></mk-projektdokument-list>-->
+</div>

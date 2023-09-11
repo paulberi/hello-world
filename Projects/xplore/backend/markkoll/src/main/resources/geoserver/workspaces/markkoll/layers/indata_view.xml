@@ -1,0 +1,15 @@
+<layer>
+  <name>indata_view</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:indata_view</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:indata_view</name>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-06-03 11:47:45.759 UTC</dateCreated>
+</layer>

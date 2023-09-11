@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_hembygdsforening</name>
+  <id>LayerInfoImpl-0d02cc3a:61abc571b1d:-1ffc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-25e08ca5:1f214fb1d61:-af4d</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

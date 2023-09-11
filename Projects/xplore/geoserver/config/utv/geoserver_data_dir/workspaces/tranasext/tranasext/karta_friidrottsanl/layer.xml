@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_friidrottsanl</name>
+  <id>LayerInfoImpl-1c642366:d3113997523:-e6c8</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-19efa563:1bd670b1ee5:-10c2</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

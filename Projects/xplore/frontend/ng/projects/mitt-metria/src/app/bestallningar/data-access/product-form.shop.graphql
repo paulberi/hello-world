@@ -1,0 +1,40 @@
+query products {
+  search(
+    input: {
+      collectionSlug: "mitt-metria"
+      groupByProduct: true
+      sort: { name: ASC }
+    }
+  ) {
+    items {
+      productVariantName
+      productVariantId
+      productId
+      productName
+      description
+      productAsset {
+        preview
+      }
+    }
+  }
+}
+
+query productVariantsByProductId($id: ID!) {
+  product(id: $id) {
+    id
+    productVariants: variants {
+      id
+      name
+      product {
+        id
+        name
+      }
+      options {
+        groupId
+        id
+        name
+        code
+      }
+    }
+  }
+}

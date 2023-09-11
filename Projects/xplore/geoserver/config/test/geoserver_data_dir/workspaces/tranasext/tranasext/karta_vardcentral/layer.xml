@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_vardcentral</name>
+  <id>LayerInfoImpl-e5869672:dec22c2402a:-5e19</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-d32d7416:f05910aa9a1:-1657</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

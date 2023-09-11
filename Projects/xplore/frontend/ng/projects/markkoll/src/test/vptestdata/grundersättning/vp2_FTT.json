@@ -1,0 +1,27 @@
+{
+    "varderingsprotokoll": {
+        "markledning": [
+            { "langd": 10, "bredd": 2},
+            { "langd": 40, "bredd": 1 }
+        ],
+        "punktersattning": [
+            { "typ": "KABELSKAP_OVRIGMARK", "antal": 2 },
+            { "typ": "NATSTATION_SKOG_10X10M", "antal": 3 }
+        ],
+        "ssbSkogsmark": [
+            { "langd": 2000, "bredd": 2 },
+            { "langd": 1000, "bredd": 3 }
+        ],
+        "ssbVaganlaggning": [
+            { "langd": 500, "zon": "ZON_1" },
+            { "langd": 1000, "zon": "ZON_2" }
+        ],
+        "config": {
+            "ingenGrundersattning": false,
+            "forhojdMinimumersattning": true,
+            "storskogsbruksavtalet": true,
+            "lagspanning": false
+        },
+        "prisomrade": "TILLVAXTOMRADE_4A"
+    }
+}

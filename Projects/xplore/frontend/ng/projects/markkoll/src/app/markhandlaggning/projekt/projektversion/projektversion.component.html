@@ -1,0 +1,25 @@
+<div class="version d-flex justify-space-between" *ngIf="projektversion">
+  <div>{{projektversion.filnamn}}</div>
+  <mat-chip-list selectable="false" focused="false" *ngIf="isCurrent && !isPrevious">
+    <mat-chip disableRipple="true" selectable="false">{{ "mk.redigeraProjekt.current" | transloco }}</mat-chip>
+  </mat-chip-list>
+  <div *ngIf="!isCurrent && isPrevious">
+    <button mat-button
+            class="version-action"
+            color="accent"
+            (click)="restoreVersion()"
+            [disabled]="isRestoring">
+      <mat-spinner [diameter]="26" *ngIf="isRestoring"></mat-spinner>
+      <span *ngIf="!isRestoring">{{ "mk.redigeraProjekt.reset" | transloco }}</span>
+    </button>
+    <button mat-button
+            class="version-action"
+            color="warn"
+            (click)="deleteVersion()"
+            [disabled]="isDeleting">
+      <mat-spinner [diameter]="26" *ngIf="isDeleting"></mat-spinner>
+      <span *ngIf="!isDeleting">{{ "xp.common.delete" | transloco }}</span>
+    </button>
+  </div>
+</div>
+

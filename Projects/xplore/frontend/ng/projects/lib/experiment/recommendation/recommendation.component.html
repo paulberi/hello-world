@@ -1,0 +1,35 @@
+<div class="xp-recommendation">
+  <div class="row" style="justify-content: space-between">
+    <h2 class="d-flex">Är du också intresserad av?</h2>
+    <button
+      id="show-more"
+      mat-button
+      color="accent"
+      (click)="showMoreClick.emit()">
+      Visa fler förslag
+      <mat-icon class="refresh-button">refresh</mat-icon>
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let item of items">
+      <div class="recommendation-item">
+        <a href="{{ item.url }}">
+          <div class="{{ item.image }}"></div>
+        </a>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-end">
+    <button
+      id="show-more"
+      mat-flat-button
+      color="accent"
+      (click)="showCatalogueClick.emit()">
+      Ta mig till katalogen
+    </button>
+  </div>
+</div>

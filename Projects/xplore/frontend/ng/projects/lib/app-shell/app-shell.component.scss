@@ -1,0 +1,198 @@
+@import "../../lib/app-shell/app-shell.shared";
+
+#right-bottom-panel {
+  @extend %base-panel;
+  bottom: $map-margin;
+  right: 2 * $map-margin;
+}
+
+#right-bottom-panel > * {
+  @extend %sub-panel;
+  margin-left: auto;
+}
+
+
+#left-panel {
+  @extend %base-panel;
+  max-height: $panel-height;
+  top: $map-margin;
+  left: $map-margin;
+  align-items: flex-start;
+}
+
+#left-panel > *, #right-panel > * {
+  @extend %sub-panel;
+}
+
+#right-panel {
+  @extend %base-panel;
+  max-height: $panel-height;
+  top: $map-margin;
+  right: $map-margin;
+  align-items: flex-end;
+}
+
+#left-bottom-panel {
+  @extend %base-panel;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  left: $map-margin;
+  bottom: $map-margin;
+}
+
+::ng-deep {
+  xp-draggable-panel {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  xp-search-panel {
+    @extend %scrollable-sub-panel;
+    min-height: 50px;
+
+    ::ng-deep .search-panel {
+      @extend %content-panel-width;
+    }
+  }
+
+  xp-collapsable-info-panel {
+    @extend %scrollable-sub-panel;
+    min-height: 50px;
+    ::ng-deep .info-panel {
+      @extend %content-panel-width;
+    }
+  }
+
+  xp-layer-panel {
+    @extend %scrollable-sub-panel;
+
+    ::ng-deep .layer-panel {
+      @extend %content-panel-width;
+    }
+  }
+
+  .xp-sub-panel {
+    @extend %scrollable-sub-panel;
+
+    ::ng-deep .xp-sub-panel-content {
+      @extend %content-panel-width;
+    }
+  }
+}
+
+#toolbar {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: $map-margin;
+  pointer-events: none;
+}
+
+::ng-deep #navigation-toolbar {
+  display: inline-block;
+  z-index: 1;
+
+  ::ng-deep .mat-button-toggle-group > *:first-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::ng-deep xp-background-buttons-panel {
+  margin-top: 5px !important;
+}
+
+#toolbar-container {
+  position: relative;
+  left: -50%;
+  display: flex;
+  flex-direction: row;
+  pointer-events: auto;
+}
+
+#toolbar-container > * {
+  margin-right: 7px;
+}
+
+#toolbar-container > *:last-child {
+  margin-right: 0;
+}
+
+#attribution {
+  position: fixed;
+  bottom: $map-margin;
+  right: 20px;
+  z-index: 1;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+}
+
+::ng-deep .ol-scale-line {
+  background: rgba(255,255,255,0.5);
+  bottom: $map-margin;
+  left: auto;
+  right: 70px;
+  max-height: 10px !important;
+}
+
+::ng-deep .ol-scale-line-inner {
+  border: 1px solid black;
+  max-height: 10px !important;
+  border-top: none;
+  color: black;
+  line-height: 10px;
+}
+
+
+@media screen and (max-width: 660px) and (orientation: portrait) {
+  ::ng-deep xp-draggable-panel {
+    display: inline;
+  }
+
+  #right-bottom-panel, #toolbar, #attribution, ::ng-deep .ol-scale-line {
+    bottom: $map-margin-bottom;
+  }
+
+  ::ng-deep xp-collapsable-info-panel, ::ng-deep xp-background-buttons-panel, ::ng-deep .ol-scale-line {
+    display: none !important;
+  }
+
+  #left-panel, #right-panel {
+    max-height: calc(#{$panel-height} - #{$footer-margin});
+  }
+
+  ::ng-deep #left-bottom-panel {
+    bottom: $map-margin-bottom !important;
+  }
+}
+
+.loading {
+  width: 300px;
+  height: 64px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: visible;
+}
+
+.loading-spinner {
+  float: left;
+}
+
+.loading-text {
+  float: left;
+  padding-left: 10px;
+  padding-top: 18px
+}

@@ -1,0 +1,39 @@
+<wmsLayer>
+  <id>WMSLayerInfoImpl-ffefddf:173e162d784:42d0</id>
+  <name>2</name>
+  <nativeName>2</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-ffefddf:173e162d784:42ca</id>
+  </namespace>
+  <title>Markanordning, punkt</title>
+  <description></description>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>14.631444</minx>
+    <maxx>15.690899</maxx>
+    <miny>57.821462</miny>
+    <maxy>58.232008</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>14.631444</minx>
+    <maxx>15.690899</maxx>
+    <miny>57.821462</miny>
+    <maxy>58.232008</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="wmsStore">
+    <id>WMSStoreInfoImpl-ffefddf:173e162d784:42cb</id>
+  </store>
+</wmsLayer>

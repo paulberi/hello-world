@@ -1,0 +1,96 @@
+<ng-container *ngIf="projektState !== State.Error; else notFound">
+  <div class="message-container">
+    <xp-message class="message" *ngIf="showVersionMessage" severity="information" [isClosable]="false"
+                [isActionable]="true"
+                actionLabel="{{ 'mk.projektinformation.okExplanationMark' | transloco }}"
+                (onAction)="onAction()">
+      <h3>{{ 'mk.projektinformation.noVersionMessageTitle' | transloco }}</h3>
+      <p>{{ 'mk.projektinformation.noVersionMessageText' | transloco }}</p>
+    </xp-message>
+  </div>
+
+  <form [formGroup]="form">
+    <div class="row">
+
+      <!-- Vänster kolumn-->
+      <div class="col-6">
+        <div class="row">
+          <mk-expansion-panel icon="info"
+                              [title]="'mk.projektinformation.projektinformation' | transloco"
+                              (toggle)="toggleExpanded('projektInformation')"
+                              [expanded]="isExpanded('projektInformation')"
+                              class="col-12">
+            <mk-edit-projekt  formControlName="projekt"
+                              [ledningsagareOptions]="ledningsagareOptions"
+                              (projektInfoChange)="onProjektInfoChange($event)">
+            </mk-edit-projekt>
+          </mk-expansion-panel>
+        </div>
+        <div class="row">
+          <mk-expansion-panel icon="text_fields"
+                              title="Avtalsinformation och anteckningar"
+                              (toggle)="toggleExpanded('avtalsinformation')"
+                              [expanded]="isExpanded('avtalsinformation')"
+                              class="col-12">
+              <mk-avtalsinstallningar [avtalsinstallningar]="avtalsinstallningar"
+                                      formControlName="avtalsinstallningar">
+              </mk-avtalsinstallningar>
+          </mk-expansion-panel>
+        </div>
+      </div>
+
+      <!-- Höger kolumn -->
+      <div class="col-6">
+        <div class="row">
+          <mk-expansion-panel icon="account_circle"
+                              [title]="'mk.projektinformation.usersInProject' | transloco"
+                              (toggle)="toggleExpanded('userInProject')"
+                              [expanded]="isExpanded('userInProject')"
+                              class="col-12">
+            <mk-user-roles formControlName="users" [userOptions]="userOptions"></mk-user-roles>
+          </mk-expansion-panel>
+        </div>
+        <div class="row">
+          <mk-expansion-panel icon="manage_accounts"
+                              [title]="'mk.projektinformation.beredare' | transloco"
+                              (toggle)="toggleExpanded('beredare')"
+                              [expanded]="isExpanded('beredare')"
+                              class="col-12">
+            <mk-beredare [beredare]="beredare" formControlName="beredare"></mk-beredare>
+          </mk-expansion-panel>
+        </div>
+        <div class="row">
+          <mk-expansion-panel icon="cloud_upload"
+                              [title]="'mk.projektimporter.manageImports' | transloco"
+                              (toggle)="toggleExpanded('projektImporter')"
+                              [expanded]="isExpanded('projektImporter')"
+                              class="col-12">
+            <mk-projektimporter [projektTyp]="projekt?.projektInfo?.projektTyp"
+                                [projektId]="projekt?.projektInfo.id">
+            </mk-projektimporter>
+          </mk-expansion-panel>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 d-flex justify-end">
+        <div id="buttons">
+          <xp-spinner-button color="warn" type="flat" [isLoading]="isDeletingProjekt" (click)="onDeleteProjekt()">
+            {{ "mk.redigeraProjekt.deleteProjekt" | transloco }}
+          </xp-spinner-button>
+          <button id="submit" mat-flat-button color="primary" type="submit" (click)="submit()"
+                  [disabled]="!hasUnsavedChanges()">
+            {{ "xp.common.save" | transloco }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-container>
+<ng-template #notFound>
+  <xp-not-found title="{{'mk.visaProjekt.notFound' | transloco}}"
+                linkUrl="/projektlista"
+                linkTitle="{{'mk.visaProjekt.notFoundButton' | transloco}}">
+  </xp-not-found>
+</ng-template>

@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: Castor API
+  description: Api för kundkonfiguration
+  version: 0.1.0
+servers:
+  - url: http://localhost:9015/castorapi
+paths:
+  '/sendToCastor':
+    post:
+      summary: Skicka begäran till Castor
+      operationId: "sendToCastor"
+      requestBody:
+        description: Det som ska skickas till Castor
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/SendToCastorData"
+      responses:
+        200:
+          description: Om det gick att skicka eller ej
+          content:
+            application/json:
+              schema:
+                type: boolean
+  '/getCastorSelections':
+    get:
+      summary: Hämta väntande objekt från Castor
+      operationId: "getCastorSelections"
+      responses:
+        200:
+          description: Kön från Castor
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CastorSelectionList"
+
+components:
+  schemas:
+    RealEstateIdentifier:
+      type: object
+      properties:
+        uuid:
+          type: string
+        beteckning:
+          type: string
+    SendToCastorData:
+      type: object
+      properties:
+        requestName:
+          type: string
+        realEstateIdentifierList:
+          type: array
+          items:
+            $ref: "#/components/schemas/RealEstateIdentifier"
+      required:
+        - realEstateIdentifierList
+    CastorQueue:
+      type: array
+      items:
+        $ref: "#/components/schema/CastorQueueItem"
+    CastorSelectionItem:
+      type: object
+      properties:
+        created:
+          type: string
+        description:
+          type: string
+        name:
+          type: string
+        selectionList:
+          type: array
+          items:
+            $ref: "#/components/schema/RealEstateIdentifier"
+    CastorSelectionList:
+      type: array
+      items:
+        $ref: "#/components/schema/CastorSelectionItem"
+
+

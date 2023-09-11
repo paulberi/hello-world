@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_langdskidspar</name>
+  <id>LayerInfoImpl-77c841fd:9bcb8583380:-d101</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-a3871601:cc4908a1bb5:-5024</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

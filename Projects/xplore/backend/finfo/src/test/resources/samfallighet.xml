@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Fastighetsinformation xmlns="http://www.metria.com/finfo/data/finfodatamodell">
+    <registerenhet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Samfallighet" UUID="909a6a83-5b69-90ec-e040-ed8f66444c3f" id="fnr_230041679">
+        <forvaltandeForening>Beteckning</forvaltandeForening>
+        <berordAvFastighetsrattsligAtgard>
+            <registreringsdatum>1980-03-28</registreringsdatum>
+            <aktbeteckning>23-SVJ-1302</aktbeteckning>
+            <atgard kod="FBST">Fastighetsbestämning</atgard>
+        </berordAvFastighetsrattsligAtgard>
+        <berordAvFastighetsrattsligAtgard>
+            <registreringsdatum>1980-03-28</registreringsdatum>
+            <aktbeteckning>23-SVJ-68</aktbeteckning>
+            <littera>S:1</littera>
+            <atgard kod="LS">Laga skifte</atgard>
+        </berordAvFastighetsrattsligAtgard>
+        <berordAvFastighetsrattsligAtgard>
+            <registreringsdatum>2003-03-24</registreringsdatum>
+            <aktbeteckning>2361-03/9</aktbeteckning>
+            <atgard kod="AVST">Avstyckning</atgard>
+        </berordAvFastighetsrattsligAtgard>
+        <berordAvTekniskAtgard>
+            <registreringsdatum>2001-02-03</registreringsdatum>
+            <aktbeteckning>1234-56/7</aktbeteckning>
+            <atgard kod="AVST">Avstyckning</atgard>
+        </berordAvTekniskAtgard>
+        <fastighetsnyckel>230041679</fastighetsnyckel>
+        <innehallerFelFR>false</innehallerFelFR>
+        <senasteAjourforingFR>2003-03-24</senasteAjourforingFR>
+        <underAjourforingFR>false</underAjourforingFR>
+        <anmarkningAreal>
+            <informationsgruppkod>8</informationsgruppkod>
+            <informationslopnummer>1</informationslopnummer>
+            <anmarkningstext>AREALUPPGIFT SAKNAS</anmarkningstext>
+        </anmarkningAreal>
+        <arendePagar>
+            <arende_dagboksnummer>210691</arende_dagboksnummer>
+            <arendestatus kod="1">Lantmäteriförrättning pågår</arendestatus>
+        </arendePagar>
+        <anmarkningSocken>
+            <informationsgruppkod>3</informationsgruppkod>
+            <informationslopnummer>3</informationslopnummer>
+            <anmarkningstext>Socken: Sveg</anmarkningstext>
+        </anmarkningSocken>
+        <forsamling>
+            <forsamlingsnamn>Sveg</forsamlingsnamn>
+            <forsamlingskod>319002</forsamlingskod>
+            <kommun>
+                <kommunnamn>Härjedalen</kommunnamn>
+                <kommunkod>61</kommunkod>
+                <lan>
+                    <lansnamn>Jämtlands län</lansnamn>
+                    <lanskod>23</lanskod>
+                </lan>
+            </kommun>
+        </forsamling>
+        <jordnaturKrono>false</jordnaturKrono>
+        <ofullstandigRattighetsredovisning>true</ofullstandigRattighetsredovisning>
+        <rattighetLast referens="rtg_Z_2361-03_9__1">
+            <aktbeteckning>2361-03/9</aktbeteckning>
+            <lopnummerInomAkt>1</lopnummerInomAkt>
+        </rattighetLast>
+        <rattighetLast referens="rtg_Z_2361-96_129__3">
+            <aktbeteckning>2361-96/129</aktbeteckning>
+            <lopnummerInomAkt>3</lopnummerInomAkt>
+        </rattighetLast>
+        <urholkasAv3Dutrymme>false</urholkasAv3Dutrymme>
+        <_3D-utrymme>false</_3D-utrymme>
+        <utbredning xsi:type="Enhetsomrade">
+            <omradesnummer>1</omradesnummer>
+            <N_koordinat>6882877.7</N_koordinat>
+            <E_koordinat>473587.9</E_koordinat>
+        </utbredning>
+        <forvarvstillstandKravsInomOmarronderingsomrade>false</forvarvstillstandKravsInomOmarronderingsomrade>
+        <forvarvstillstandKravsInomGlesbygd>false</forvarvstillstandKravsInomGlesbygd>
+        <andamal>LÅNG-OCH TVÄRGATOR</andamal>
+        <delagFastighetOfullstandiga>true</delagFastighetOfullstandiga>
+        <gallandeBeteckning>
+            <enhetsnummer>3</enhetsnummer>
+            <tecken>:</tecken>
+            <trakt>
+                <traktnamn>YTTERBERG</traktnamn>
+                <kommun>
+                    <kommunnamn>HÄRJEDALEN</kommunnamn>
+                    <kommunkod>61</kommunkod>
+                    <lan>
+                        <lansnamn>JÄMTLANDS LÄN</lansnamn>
+                        <lanskod>23</lanskod>
+                    </lan>
+                </kommun>
+            </trakt>
+            <samfallighetstyp>S</samfallighetstyp>
+        </gallandeBeteckning>
+        <harHaftBeteckning xsi:type="FastighetsbeteckningForeBeteckningsreform">
+            <omregistreringsdatum>19920603</omregistreringsdatum>
+            <aktbeteckning>2380-92/20</aktbeteckning>
+            <registeromrade>Z-SVEG</registeromrade>
+            <trakt_agotrakt>YTTERBERG</trakt_agotrakt>
+            <tecken>:</tecken>
+            <enhet>3</enhet>
+            <block_kvartersnamn_STG>S</block_kvartersnamn_STG>
+        </harHaftBeteckning>
+        <skifteslagDelagareKlartext>YTTERBERGS SKIFTESLAG</skifteslagDelagareKlartext>
+    </registerenhet>
+    <refereradeEnheter>
+        <registerenhet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Fastighet" UUID="909a6a84-ac8c-90ec-e040-ed8f66444c3f" id="fnr_230127994">
+            <fastighetsnyckel>230127994</fastighetsnyckel>
+            <innehallerFelFR>false</innehallerFelFR>
+            <underAjourforingFR>false</underAjourforingFR>
+            <jordnaturKrono>false</jordnaturKrono>
+            <ofullstandigRattighetsredovisning>false</ofullstandigRattighetsredovisning>
+            <rattighetForman referens="rtg_Z_2361-96_129__3">
+                <aktbeteckning>2361-96/129</aktbeteckning>
+                <lopnummerInomAkt>3</lopnummerInomAkt>
+            </rattighetForman>
+            <forvarvstillstandKravsInomOmarronderingsomrade>false</forvarvstillstandKravsInomOmarronderingsomrade>
+            <forvarvstillstandKravsInomGlesbygd>false</forvarvstillstandKravsInomGlesbygd>
+            <aldreTomtrattEnligtLagFore1954>false</aldreTomtrattEnligtLagFore1954>
+            <allvarligtFelIR>false</allvarligtFelIR>
+            <gallandeBeteckning>
+                <enhetsnummer>28</enhetsnummer>
+                <tecken>:</tecken>
+                <trakt>
+                    <traktnamn>YTTERBERG</traktnamn>
+                    <kommun>
+                        <kommunnamn>Härjedalen</kommunnamn>
+                        <kommunkod>61</kommunkod>
+                        <lan>
+                            <lansnamn>Jämtlands län</lansnamn>
+                            <lanskod>23</lanskod>
+                        </lan>
+                    </kommun>
+                </trakt>
+                <blocknummer>37</blocknummer>
+            </gallandeBeteckning>
+            <ofullstandigSamfallighetsredovisning>false</ofullstandigSamfallighetsredovisning>
+            <underAjourforingIR>false</underAjourforingIR>
+            <upplatenMedTomtratt>false</upplatenMedTomtratt>
+        </registerenhet>
+        <registerenhet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Fastighet" UUID="909a6a84-b960-90ec-e040-ed8f66444c3f" id="fnr_230131278">
+            <fastighetsnyckel>230131278</fastighetsnyckel>
+            <innehallerFelFR>false</innehallerFelFR>
+            <underAjourforingFR>false</underAjourforingFR>
+            <jordnaturKrono>false</jordnaturKrono>
+            <ofullstandigRattighetsredovisning>false</ofullstandigRattighetsredovisning>
+            <rattighetForman referens="rtg_Z_2361-03_9__1">
+                <aktbeteckning>2361-03/9</aktbeteckning>
+                <lopnummerInomAkt>1</lopnummerInomAkt>
+            </rattighetForman>
+            <forvarvstillstandKravsInomOmarronderingsomrade>false</forvarvstillstandKravsInomOmarronderingsomrade>
+            <forvarvstillstandKravsInomGlesbygd>false</forvarvstillstandKravsInomGlesbygd>
+            <aldreTomtrattEnligtLagFore1954>false</aldreTomtrattEnligtLagFore1954>
+            <allvarligtFelIR>false</allvarligtFelIR>
+            <gallandeBeteckning>
+                <enhetsnummer>12</enhetsnummer>
+                <tecken>:</tecken>
+                <trakt>
+                    <traktnamn>YTTERBERG</traktnamn>
+                    <kommun>
+                        <kommunnamn>Härjedalen</kommunnamn>
+                        <kommunkod>61</kommunkod>
+                        <lan>
+                            <lansnamn>Jämtlands län</lansnamn>
+                            <lanskod>23</lanskod>
+                        </lan>
+                    </kommun>
+                </trakt>
+                <blocknummer>33</blocknummer>
+            </gallandeBeteckning>
+            <ofullstandigSamfallighetsredovisning>false</ofullstandigSamfallighetsredovisning>
+            <underAjourforingIR>false</underAjourforingIR>
+            <upplatenMedTomtratt>false</upplatenMedTomtratt>
+        </registerenhet>
+    </refereradeEnheter>
+    <refereradeRattigheter>
+        <rattighet id="rtg_Z_2361-03_9__1">
+            <aktbeteckning>2361-03/9</aktbeteckning>
+            <andamal>VÄG</andamal>
+            <harskandeEllerTjanandeEjUtredda>false</harskandeEllerTjanandeEjUtredda>
+            <karta></karta>
+            <lansbokstav>Z</lansbokstav>
+            <lopnummerInomAkt>1</lopnummerInomAkt>
+            <rattighetsanmarkning></rattighetsanmarkning>
+            <rattighetsbeskrivning>RÄTT ATT ANVÄNDA DEN SAMFÄLLDA VÄGEN YTTERBERG S:3, VARI STAMFASTIGHETEN HAR DEL, FÖR UTFART TILL DEN ALLMÄNNA VÄGEN.</rattighetsbeskrivning>
+            <rattighetsperiodanmarkning></rattighetsperiodanmarkning>
+            <redovisasPaFlerKartor>false</redovisasPaFlerKartor>
+            <status kod="L">Levande</status>
+            <typAvRattighet kod="1">Officialservitut</typAvRattighet>
+            <underAjourforing>false</underAjourforing>
+            <tjanande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RattsforhallandeRegisterenhet">
+                <fastighetsnyckel referens="fnr_230041679">230041679</fastighetsnyckel>
+            </tjanande>
+            <harskande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RattsforhallandeRegisterenhet">
+                <fastighetsnyckel referens="fnr_230131278">230131278</fastighetsnyckel>
+            </harskande>
+        </rattighet>
+        <rattighet id="rtg_Z_2361-96_129__3">
+            <aktbeteckning>2361-96/129</aktbeteckning>
+            <andamal>VÄG</andamal>
+            <harskandeEllerTjanandeEjUtredda>false</harskandeEllerTjanandeEjUtredda>
+            <karta></karta>
+            <lansbokstav>Z</lansbokstav>
+            <lopnummerInomAkt>3</lopnummerInomAkt>
+            <rattighetsanmarkning></rattighetsanmarkning>
+            <rattighetsbeskrivning></rattighetsbeskrivning>
+            <rattighetsperiodanmarkning></rattighetsperiodanmarkning>
+            <rattighetsanmarkning>ANDELSSERVITUT</rattighetsanmarkning>
+            <redovisasPaFlerKartor>false</redovisasPaFlerKartor>
+            <senasteAndringsdatum>1997-02-05</senasteAndringsdatum>
+            <status kod="L">Levande</status>
+            <typAvRattighet kod="1">Officialservitut</typAvRattighet>
+            <underAjourforing>false</underAjourforing>
+            <tjanande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RattsforhallandeRegisterenhet">
+                <fastighetsnyckel referens="fnr_230041679">230041679</fastighetsnyckel>
+            </tjanande>
+            <harskande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RattsforhallandeRegisterenhet">
+                <fastighetsnyckel referens="fnr_230127994">230127994</fastighetsnyckel>
+            </harskande>
+        </rattighet>
+    </refereradeRattigheter>
+</Fastighetsinformation>

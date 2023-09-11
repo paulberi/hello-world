@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="forms">
+    <h2>{{ "mm.createOrder.createOrder" | transloco }}</h2>
+    <form [formGroup]="parentForm" (ngSubmit)="addProductToOrder()">
+      <mm-customer-form formControlName="customerForm"></mm-customer-form>
+      <div *ngIf="parentForm.get('customerForm').valid && order">
+        <mm-product-form formControlName="productForm"></mm-product-form>
+        <div *ngIf="schema">
+          <mm-dynamic-form formControlName="dynamicForm" [properties]="properties" [required]="required">
+          </mm-dynamic-form>
+          <div class="actions">
+            <button mat-button type="button" color="warn" (click)="cancelOrderForm()">
+              {{ "mm.common.cancel" | transloco}}
+            </button>
+            <button mat-raised-button type="submit" color="accent" [disabled]="!parentForm.valid">
+              {{ "mm.forms.add" | transloco }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <mat-divider *ngIf="parentForm.get('customerForm').valid" [vertical]="true"></mat-divider>
+
+  <div *ngIf="parentForm.get('customerForm').valid && order" class="cart">
+    <h3>{{ "mm.createOrder.ongoingOrder" | transloco }}</h3>
+    <mm-cart-items [order]="order"></mm-cart-items>
+
+    <div class="order-btns">
+      <button mat-button type="button" color="warn" (click)="cancelOrder()" [disabled]="order?.lines?.length < 1">
+        {{ "mm.createOrder.cancelOrder" | transloco }}
+      </button>
+      <button mat-raised-button type="submit" color="accent" (click)="placeOrder()"
+        [disabled]="order?.lines?.length < 1">
+        {{ "mm.createOrder.placeOrder" | transloco }} </button>
+    </div>
+  </div>
+</div>

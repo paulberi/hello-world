@@ -1,0 +1,29 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://matdatabas-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "http://localhost:9008",
+    "xfwd": true
+  },
+  "/saml": {
+    "target": "http://localhost:9008",
+    "xfwd": true
+  },
+  "/files": {
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/files": ""
+    },
+    "target": "https://xplorefile01.prodstod.se/miljokoll"
+  },
+  "/metria-maps/geoserver": {
+    "target": "https://matdatabas-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/config": {
+    "target": "https://matdatabas-utv.metria.se",
+    "changeOrigin": true
+  }
+}

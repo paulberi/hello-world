@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_naturreservat</name>
+  <id>LayerInfoImpl-26095c81:895859fcb0b:-72a7</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-bb4d6810:0b23b595e05:-dc52</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,7 @@
+@import "../../../lib/app-shell/app-shell.shared";
+
+.toolbar-geovis {
+  @extend %sub-panel;
+  pointer-events: all;
+}
+

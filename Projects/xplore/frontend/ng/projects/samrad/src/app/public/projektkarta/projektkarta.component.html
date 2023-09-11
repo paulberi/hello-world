@@ -1,0 +1,10 @@
+<div class="map-container">
+  <sr-map *ngIf="mapExtent"
+    [backgroundLayers]="backgroundLayers"
+    [layers]="layers"
+    [extent]="mapExtent"
+    [paddingInMap]="paddingInMap"
+    #map
+  >
+  </sr-map>
+</div>

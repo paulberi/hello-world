@@ -1,0 +1,33 @@
+import {
+  Meta,
+} from "@storybook/addon-docs";
+
+import ai_imagefile from './ai.png';
+import ai_kluster_imagefile from './ai-kluster.png';
+import arch_imagefile from './arkitektur.png';
+
+<Meta title="Komponenter/Experiment/Recommendation/Designförslag" />
+
+# Rekommendationskomponent
+
+Denna sida beskriver den övergripande arkitekturen för "Rekommendationer" inom mCommerce-plattformen
+
+## Arkitektur
+
+Lösningen består av ett antal komponenter.
+<img src={arch_imagefile} />
+
+### Frontend
+* **RecommendationComponent** [Presentationskomponent](?path=/story/experiment-recommendation--kartskikt)
+som listar rekommendationer för den inloggade användaren och låter denne interagera med rekommendationerna.
+* **RecommendationService** kommunicerar med backend-tjänsterna.
+
+### Backend
+* **Sökmotor** som skapar rekommendationer baserad på inloggad användares kundtillhörighet.
+Se avsnittet AI nedan.
+* **Produktkatalog** innehåller metdata om de olika produkterna. Från denna hämtas bilder och beskrivningar om de
+olika produkterna
+
+## AI-stöd
+<img src={ai_imagefile} />
+<img src={ai_kluster_imagefile} />

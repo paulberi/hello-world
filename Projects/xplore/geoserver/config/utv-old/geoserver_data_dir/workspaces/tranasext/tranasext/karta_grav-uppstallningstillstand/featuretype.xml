@@ -1,0 +1,59 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-0d6da95d:bec1129dc3c:-e1c1</id>
+  <name>karta_grav-uppstallningstillstand</name>
+  <nativeName>karta_grav-uppstallningstillstand</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-18a168b6:28010d03431:-6d8d</id>
+  </namespace>
+  <title>karta_grav-uppstallningstillstand</title>
+  <keywords>
+    <string>features</string>
+    <string>karta_grav-uppstallningstillstand</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS["SWEREF99 15 00", 
+  GEOGCS["SWEREF99", 
+    DATUM["SWEREF99", 
+      SPHEROID["GRS 1980", 6378137.0, 298.257222101, AUTHORITY["EPSG","7019"]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY["EPSG","6619"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4619"]], 
+  PROJECTION["Transverse_Mercator", AUTHORITY["EPSG","9807"]], 
+  PARAMETER["central_meridian", 15.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 150000.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","3009"]]</nativeCRS>
+  <srs>EPSG:3009</srs>
+  <nativeBoundingBox>
+    <minx>58792.65795504814</minx>
+    <maxx>221842.49881659402</maxx>
+    <miny>6203006.79598798</miny>
+    <maxy>6835451.012061122</maxy>
+    <crs class="projected">EPSG:3009</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>13.280744395679996</minx>
+    <maxx>16.354365780289932</maxx>
+    <miny>55.941451917666626</miny>
+    <maxy>61.627669267787994</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-ba568096:c3a83500059:-dd23</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Välkommen till Miljökoll</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>
+    Välkommen till Miljökoll.
+</p>
+<p>Användarnamn: <span th:text="${anvandare.getInloggningsnamn() }">adsf</span></p>
+
+<p th:if="${password}">Lösenord: <span th:text="${password}">adsf</span>
+
+<p th:unless="${password}">Använd lösenordet du redan har för Miljökoll.</span>
+</p>
+
+<p> <a th:href="${applicationUrl}">Börja här</a> </p>
+</body>
+</html>

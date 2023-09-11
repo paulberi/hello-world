@@ -1,0 +1,11 @@
+.capitalize {
+  display: inline-block;
+}
+
+.capitalize::first-letter {
+  text-transform: capitalize;
+}
+
+.white-space {
+  white-space: pre;
+}

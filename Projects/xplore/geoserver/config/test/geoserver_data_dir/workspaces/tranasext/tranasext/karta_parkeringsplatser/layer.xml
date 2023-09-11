@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_parkeringsplatser</name>
+  <id>LayerInfoImpl-1c3ed49a:228f212939e:-39ce</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-628bc268:201f06d0f93:-1ec9</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

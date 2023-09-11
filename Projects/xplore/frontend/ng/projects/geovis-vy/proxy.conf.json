@@ -1,0 +1,31 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  },
+
+  "/geoserver": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/mapproxy": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/storage": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/fsok/ownerlist/": {
+    "target": "https://demo-geovis-vy-utv.metria.se",
+    "changeOrigin": true
+  }
+
+}

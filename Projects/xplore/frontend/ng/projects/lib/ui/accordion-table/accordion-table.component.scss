@@ -1,0 +1,19 @@
+table {
+  background-color: var(--background);
+  width: 100%;
+}
+.accordion-detail {
+  overflow: hidden;
+  display: flex;
+}
+.accordion-detail-row {
+  height: 0;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 0px;
+}
+
+td.mat-cell:last-of-type {
+  padding-right: 0px;
+}

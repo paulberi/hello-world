@@ -1,0 +1,89 @@
+<layerGroup>
+  <name>avtalsstatus</name>
+  <mode>NAMED</mode>
+  <title>Avtalsstatus</title>
+  <abstractTxt>Avtalsstatus för projekt i Markkoll.</abstractTxt>
+  <publishables>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_ej_behandlat</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_ej_behandlat_nytt</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_ej_behandlat_uppdaterat</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_justeras</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_paminnelse_skickad</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_skickat</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_signerat</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_ersattning_utbetalas</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_ersattning_utbetald</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_konflikt</name>
+    </published>
+    <published type="layer">
+      <name>markkoll:avtalsstatus_outredd</name>
+    </published>
+  </publishables>
+  <styles>
+    <style>
+      <name>markkoll:avtalsstatus_ej_behandlat</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_ej_behandlat_nytt</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_ej_behandlat_uppdaterat</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_justeras</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_paminnelse_skickad</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_skickat</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_signerat</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_ersattning_utbetalas</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_ersattning_utbetald</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_konflikt</name>
+    </style>
+    <style>
+      <name>markkoll:avtalsstatus_outredd</name>
+    </style>
+  </styles>
+  <bounds>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </bounds>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-02-16 12:27:01.76 UTC</dateCreated>
+  <dateModified>2022-03-01 12:38:08.698 UTC</dateModified>
+</layerGroup>

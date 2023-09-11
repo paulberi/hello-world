@@ -1,0 +1,401 @@
+{
+  "layers": [
+    {
+      "id": "fastighetsytorLayer",
+      "title": "Fastighetsgränser",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Fastighetsytor",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "fastighetgranserKvalite",
+      "title": "Fastighetsgränsernas kvalitet",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Fastighetgranser_kvalite",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "kommunagdaFastigheter",
+      "title": "Kommunalt ägda fastigheter",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "KommunagdaFastigheter_FK",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "jordbruksverketsProduktionsområden",
+      "title": "Jordbruksverkets produktionsområden",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "JVB_produktionsomraden",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "tillvaxtomradeSkog",
+      "title": "Tillväxtområden för skogen",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Tillvaxtomrade_skog",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "vaghallare",
+      "title": "Väghållare",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Vaghallare_NVDB",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "metriaRattigheter",
+      "title": "Rättigheter på fastighet",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "MetriaRattigheter",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "hansyn",
+      "title": "Hänsyn",
+      "group": "information",
+      "source": {
+        "type": "imagewms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Hansyn",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseYrkesfiskehav",
+      "title": "Yrkesfiske",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseYrkesfiskehav_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseVindbruk",
+      "title": "Vindbruk",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseVindbruk_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseVattendrag",
+      "title": "Vattendrag",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseVattendrag_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseSlutforvaring",
+      "title": "Slutförvaring",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseSlutforvaring_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseRorligtFriluftsliv",
+      "title": "Rörligt friluftsliv",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseRorligtFriluftsliv_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseRennaringen",
+      "title": "Rennäringen",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseRennaringen_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseObrutetFjall",
+      "title": "Obrutet fjäll",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseObrutetFjall_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseObrutenKust",
+      "title": "Obruten kust",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseObrutenKust_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseNaturvard",
+      "title": "Naturvård",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseNaturvard_NV",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseNationalstadspark",
+      "title": "Nationalstadspark",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseNationalstadspark_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseMineral",
+      "title": "Mineral",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseMineral_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseKulturmiljovard",
+      "title": "Kulturmiljövård",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseKulturmiljovard_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseKommunikationer_linje",
+      "title": "Kommunikationer - linje",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseKommunikationer_linje_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseKommunikationer_punkt",
+      "title": "Kommunikationer - punkt",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseKommunikationer_punkt_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseKommunikationer_yta",
+      "title": "Kommunikationer - yta",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseKommunikationer_yta_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseHogexploateradKust",
+      "title": "Högexploaterad kust",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseHogexploateradKust_LST",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "riksintresseFriluftsliv",
+      "title": "Friluftsliv",
+      "group": "riksintressen",
+      "source": {
+        "type": "imagewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "RiksintresseFriluftsliv_NV",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "defaultBackground",
+      "title": "Metria Bakgrundskarta",
+      "group": "bakgrundskartor",
+      "source": {
+        "type": "tilewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/png",
+          "LAYERS": "Europa,MetriaBakgrundEnkel",
+          "TRANSPARENT": true
+        }
+      },
+      "visible": true
+    },
+    {
+      "id": "ortoBackground",
+      "title": "Ortofoto",
+      "group": "bakgrundskartor",
+      "source": {
+        "type": "tilewms",
+        "url": "/metria-maps/geoserver/wms",
+        "params": {
+          "FORMAT": "image/jpeg",
+          "LAYERS": "orto_farg_kombinerad",
+          "TRANSPARENT": false
+        }
+      },
+      "visible": false
+    }
+  ]
+}

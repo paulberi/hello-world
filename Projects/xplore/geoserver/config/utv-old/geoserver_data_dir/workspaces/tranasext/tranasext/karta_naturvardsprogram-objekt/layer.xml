@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_naturvardsprogram-objekt</name>
+  <id>LayerInfoImpl-e6071435:be972106110:-558a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-871e51e4:961e6a57f96:-7722</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

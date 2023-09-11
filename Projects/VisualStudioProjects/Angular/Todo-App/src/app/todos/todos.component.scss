@@ -1,0 +1,137 @@
+/** this file is the frontend or the GUI of the web. Everything here in brown on the todos.component.html are names of items or variable names on the page and are referenced in the here (todos.component.css) and else where where they are styled and edited **/
+
+.heading-section {
+    //this is the green top part of the app
+    background: linear-gradient(to right, rgb(2, 228, 171), rgb(74, 215, 240));
+    padding: 100px;
+    padding-bottom: 150px;
+    h1.title {
+        font-weight: bold;
+        color: white;
+        text-shadow: 0px 1px 2px rgba($color: #000000, $alpha: 0.7);
+    }
+}
+
+.container {
+    //this is the white container that overlaps the gree top where you make changes to your to do list
+    max-width: 800px;
+}
+
+.add-todo-box {
+    //the textbox and styling
+    padding: 25px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: -68px;
+    box-shadow: 0 4px 12px rgba($color: #000000, $alpha: 0.08);
+}
+
+.todo-item {
+    display: flex; //places the checkbox and matching text on thesame line
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    padding: 35px 15px;
+    border-bottom: 1px solid #eee; //the thin line separating two items on the list
+    cursor: pointer;
+    &.completed {
+        color: #aaa;
+    }
+}
+
+.todo-item .check-box {
+    display: flex;
+    flex-shrink: 0;
+    border: 2px solid #eee;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    // the circle created is oval so setting h and w as below gives it a round feel
+    height: 28px;
+    width: 28px;
+    transition: background-color 0.2s;
+    //targeting infor inside the text box
+    i.material-icons {
+        font-size: 20;
+        margin: auto;
+        color: #333;
+        //hides the tick when not selected by default
+        opacity: 0;
+        transition: background-color 0.2s;
+    }
+    /*&:hover {
+        i.material-icons {
+            //this makes the material in the material-icons box to be visible when you hover the mouse over it
+        
+            opacity: 1;
+        }
+    }*/
+    //easier way to do what is commented above is as below with the difference that the above works when you hover over the textbox and the below hightlights when you hover either over the text or textbox
+}
+
+.todo-item:hover .check-box {
+    background: #eee;
+    i.material-icons {
+        //this makes the material in the material-icons box to be visible when you hover the mouse over it
+        opacity: 0.28;
+    }
+}
+
+.todo-item.completed .check-box {
+    background: rgb(11, 223, 170);
+    border-color: rgb(11, 223, 170);
+    ;
+    i.material-icons {
+        opacity: 1;
+    }
+}
+
+.todo-item .todo-controls-box {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    display: flex;
+    //hide by default
+    opacity: 0;
+    visibility: translateY(10px);
+    visibility: hidden;
+}
+
+.todo-item:hover .todo-controls-box {
+    opacity: 1;
+    //makes the delete and edit button to hide and appear when the mouse hovers over the applicable area.
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    transform: translateY(0);
+}
+
+.todo-controls-box .todo-control-button {
+    display: flex;
+    background: #f5f7f8;
+    border-radius: 7px;
+    padding: 7px 10px;
+    i.material-icons {
+        color: #333;
+        font-size: 20px;
+    }
+    &:hover {
+        background: #eee;
+        i.material-icons {
+            color: #333;
+        }
+    }
+    &:active {
+        background: #e5e7e8;
+    }
+    &:first-of-type {
+        border-top-left-radius: 7px;
+    }
+    &:last-of-type {
+        border-top-right-radius: 7px;
+    }
+}
+
+.todo-controls-box .todo-control-button.is-danger:active i.material-icons {
+    background: rgb(155, 27, 27);
+}

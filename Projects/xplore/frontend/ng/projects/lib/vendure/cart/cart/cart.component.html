@@ -1,0 +1,41 @@
+<div class="cart" #cartElement>
+    <div class="d-flex justify-space-between cart-header">
+        <h4>{{ "xp.cart.cart" | transloco }}</h4>
+        <button mat-icon-button (click)="closeCart.emit()" [attr.aria-label]="'xp.cart.closeCart' | transloco">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+
+    <mat-divider color="accent"></mat-divider>
+
+    <div class="cart-items-wrapper">
+        <div *ngIf="cart?.cartItems.length; else emptyCart" class="mobile-space-between">
+            <div class="cart-items">
+                <div *ngFor="let item of cart?.cartItems" class="cart-item">
+                    <xp-order-line [orderLine]="item" [isDeleteButtonVisible]="true"
+                        (deleteOrderLine)="deleteCartItem.emit($event)">
+                    </xp-order-line>
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex justify-space-between bold total">
+                    <p>{{ "xp.cart.totalAmount" | transloco }}</p>
+                    <p>{{ cart.totalPrice }} {{ cart.currency }}</p>
+                </div>
+                <div class="d-flex justify-space-between vat">
+                    <p>{{ "xp.order.vat" | transloco }}</p>
+                    <p>{{ cart.vat }} {{ cart.currency }}</p>
+                </div>
+                <button mat-flat-button color="accent" (click)="checkout.emit()">
+                    <span class="uppercase">{{ "xp.cart.toCheckout" | transloco }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #emptyCart>
+    <p class="align-text-center">{{ "xp.cart.emptyCart" | transloco }}</p>
+</ng-template>

@@ -1,0 +1,469 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+    xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+    xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns="http://tempuri.org/"
+    xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+    xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ProsonaRealestateExchange" targetNamespace="http://tempuri.org/">
+    <wsp:Policy wsu:Id="BasicHttpBinding_IProsonaRealestateExchange_policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false"/>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic256/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Strict/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+            <xs:import namespace="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts"/>
+            <xs:element name="GetProsonaSelections">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetProsonaSelectionsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" minOccurs="0" name="GetProsonaSelectionsResult" nillable="true" type="q1:ArrayOfProsonaPartnerSelection"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPartnerSelections">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPartnerSelectionsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" minOccurs="0" name="GetPartnerSelectionsResult" nillable="true" type="q2:ArrayOfProsonaPartnerSelection"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TransferSelectionToProsona">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" minOccurs="0" name="selection" nillable="true" type="q3:ProsonaPartnerSelection"/>
+                        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TransferSelectionToProsonaResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="TransferSelectionToProsonaResult" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TransferSelectionToPartner">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" minOccurs="0" name="selection" nillable="true" type="q4:ProsonaPartnerSelection"/>
+                        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="TransferSelectionToPartnerResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="TransferSelectionToPartnerResult" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetSelection">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="SelectionID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="CustomerID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetSelectionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" minOccurs="0" name="GetSelectionResult" nillable="true" type="q5:ProsonaPartnerSelection"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RemoveSelection">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="ApiKey" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RemoveSelectionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="RemoveSelectionResult" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+            <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+            <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+            <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+            <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+            <xs:element name="byte" nillable="true" type="xs:byte"/>
+            <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+            <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+            <xs:element name="double" nillable="true" type="xs:double"/>
+            <xs:element name="float" nillable="true" type="xs:float"/>
+            <xs:element name="int" nillable="true" type="xs:int"/>
+            <xs:element name="long" nillable="true" type="xs:long"/>
+            <xs:element name="QName" nillable="true" type="xs:QName"/>
+            <xs:element name="short" nillable="true" type="xs:short"/>
+            <xs:element name="string" nillable="true" type="xs:string"/>
+            <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+            <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+            <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+            <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+            <xs:element name="char" nillable="true" type="tns:char"/>
+            <xs:simpleType name="char">
+                <xs:restriction base="xs:int"/>
+            </xs:simpleType>
+            <xs:element name="duration" nillable="true" type="tns:duration"/>
+            <xs:simpleType name="duration">
+                <xs:restriction base="xs:duration">
+                    <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+                    <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+                    <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="guid" nillable="true" type="tns:guid"/>
+            <xs:simpleType name="guid">
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:attribute name="FactoryType" type="xs:QName"/>
+            <xs:attribute name="Id" type="xs:ID"/>
+            <xs:attribute name="Ref" type="xs:IDREF"/>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts">
+            <xs:import namespace="http://schemas.datacontract.org/2004/07/ProsonaRealestateDataContracts.Contracts"/>
+            <xs:complexType name="ArrayOfProsonaPartnerSelection">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaPartnerSelection" nillable="true" type="tns:ProsonaPartnerSelection"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfProsonaPartnerSelection" nillable="true" type="tns:ArrayOfProsonaPartnerSelection"/>
+            <xs:complexType name="ProsonaPartnerSelection">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Created" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+                    <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ProsonaRealestateDataContracts.Contracts" minOccurs="0" name="RealestateSelection" nillable="true" type="q1:ArrayOfProsonaRealestate"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaPartnerSelection" nillable="true" type="tns:ProsonaPartnerSelection"/>
+            <xs:complexType name="ProsonaFault">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ExceptionMessage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaFault" nillable="true" type="tns:ProsonaFault"/>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://schemas.datacontract.org/2004/07/ProsonaRealestateDataContracts.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProsonaRealestateDataContracts.Contracts">
+            <xs:complexType name="ArrayOfProsonaRealestate">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestate" nillable="true" type="tns:ProsonaRealestate"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfProsonaRealestate" nillable="true" type="tns:ArrayOfProsonaRealestate"/>
+            <xs:complexType name="ProsonaRealestate">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Adresser" nillable="true" type="tns:ArrayOfProsonaRealestateAddress"/>
+                    <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Enhet" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Fnr" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="KomKod" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Kommun" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Lagfarter" nillable="true" type="tns:ArrayOfProsonaRealestateOwner"/>
+                    <xs:element minOccurs="0" name="LanKod" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="LansNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Tkn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Trakt" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Typ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaRealestate" nillable="true" type="tns:ProsonaRealestate"/>
+            <xs:complexType name="ArrayOfProsonaRealestateAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestateAddress" nillable="true" type="tns:ProsonaRealestateAddress"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfProsonaRealestateAddress" nillable="true" type="tns:ArrayOfProsonaRealestateAddress"/>
+            <xs:complexType name="ProsonaRealestateAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="AdrOmrade" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="AdrPlats" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="AdrplTyp" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="GardsNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="KomKod" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="KomdelLage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="LanKod" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PopNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PostNr" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PostOrt" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PunktTyp" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="XKoord" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="XKoordL" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="YKoord" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="YKoordL" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaRealestateAddress" nillable="true" type="tns:ProsonaRealestateAddress"/>
+            <xs:complexType name="ArrayOfProsonaRealestateOwner">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestateOwner" nillable="true" type="tns:ProsonaRealestateOwner"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfProsonaRealestateOwner" nillable="true" type="tns:ArrayOfProsonaRealestateOwner"/>
+            <xs:complexType name="ProsonaRealestateOwner">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Adresser" nillable="true" type="tns:ArrayOfProsonaRealestatePersonAddress"/>
+                    <xs:element minOccurs="0" name="BeviljadandelNamnare" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="BeviljadandelTaljare" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="EfterNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ForNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="IsOrganisation" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="MellanNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="OrganisationsNamn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PersonOrgNummer" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaRealestateOwner" nillable="true" type="tns:ProsonaRealestateOwner"/>
+            <xs:complexType name="ArrayOfProsonaRealestatePersonAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestatePersonAddress" nillable="true" type="tns:ProsonaRealestatePersonAddress"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ArrayOfProsonaRealestatePersonAddress" nillable="true" type="tns:ArrayOfProsonaRealestatePersonAddress"/>
+            <xs:complexType name="ProsonaRealestatePersonAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Land" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Namn_Co" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PostNummer" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="PostOrt" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="Typ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="UtdelningsAdr1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="UtdelningsAdr2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="UtdelningsAdr3" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="UtdelningsAdr4" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ProsonaRealestatePersonAddress" nillable="true" type="tns:ProsonaRealestatePersonAddress"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="IProsonaRealestateExchange_GetProsonaSelections_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetProsonaSelections"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetProsonaSelections_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetProsonaSelectionsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetProsonaSelections_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q1:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetPartnerSelections_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetPartnerSelections"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetPartnerSelections_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetPartnerSelectionsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetPartnerSelections_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q2:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToProsona_InputMessage">
+        <wsdl:part name="parameters" element="tns:TransferSelectionToProsona"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToProsona_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TransferSelectionToProsonaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToProsona_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q3:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToPartner_InputMessage">
+        <wsdl:part name="parameters" element="tns:TransferSelectionToPartner"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToPartner_OutputMessage">
+        <wsdl:part name="parameters" element="tns:TransferSelectionToPartnerResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_TransferSelectionToPartner_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q4:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetSelection_InputMessage">
+        <wsdl:part name="parameters" element="tns:GetSelection"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetSelection_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GetSelectionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_GetSelection_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q5:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_RemoveSelection_InputMessage">
+        <wsdl:part name="parameters" element="tns:RemoveSelection"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_RemoveSelection_OutputMessage">
+        <wsdl:part name="parameters" element="tns:RemoveSelectionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="IProsonaRealestateExchange_RemoveSelection_ProsonaFaultFault_FaultMessage">
+        <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" name="detail" element="q6:ProsonaFault"/>
+    </wsdl:message>
+    <wsdl:portType name="IProsonaRealestateExchange">
+        <wsdl:operation name="GetProsonaSelections">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetProsonaSelections" message="tns:IProsonaRealestateExchange_GetProsonaSelections_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetProsonaSelectionsResponse" message="tns:IProsonaRealestateExchange_GetProsonaSelections_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetProsonaSelectionsProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_GetProsonaSelections_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetPartnerSelections">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetPartnerSelections" message="tns:IProsonaRealestateExchange_GetPartnerSelections_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetPartnerSelectionsResponse" message="tns:IProsonaRealestateExchange_GetPartnerSelections_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetPartnerSelectionsProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_GetPartnerSelections_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TransferSelectionToProsona">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToProsona" message="tns:IProsonaRealestateExchange_TransferSelectionToProsona_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToProsonaResponse" message="tns:IProsonaRealestateExchange_TransferSelectionToProsona_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToProsonaProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_TransferSelectionToProsona_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="TransferSelectionToPartner">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToPartner" message="tns:IProsonaRealestateExchange_TransferSelectionToPartner_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToPartnerResponse" message="tns:IProsonaRealestateExchange_TransferSelectionToPartner_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToPartnerProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_TransferSelectionToPartner_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetSelection">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetSelection" message="tns:IProsonaRealestateExchange_GetSelection_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetSelectionResponse" message="tns:IProsonaRealestateExchange_GetSelection_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/GetSelectionProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_GetSelection_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="RemoveSelection">
+            <wsdl:input wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/RemoveSelection" message="tns:IProsonaRealestateExchange_RemoveSelection_InputMessage"/>
+            <wsdl:output wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/RemoveSelectionResponse" message="tns:IProsonaRealestateExchange_RemoveSelection_OutputMessage"/>
+            <wsdl:fault wsaw:Action="http://tempuri.org/IProsonaRealestateExchange/RemoveSelectionProsonaFaultFault" name="ProsonaFaultFault" message="tns:IProsonaRealestateExchange_RemoveSelection_ProsonaFaultFault_FaultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IProsonaRealestateExchange" type="tns:IProsonaRealestateExchange">
+        <wsp:PolicyReference URI="#BasicHttpBinding_IProsonaRealestateExchange_policy"/>
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetProsonaSelections">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/GetProsonaSelections" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetPartnerSelections">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/GetPartnerSelections" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="TransferSelectionToProsona">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToProsona" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="TransferSelectionToPartner">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/TransferSelectionToPartner" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="GetSelection">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/GetSelection" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="RemoveSelection">
+            <soap:operation soapAction="http://tempuri.org/IProsonaRealestateExchange/RemoveSelection" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ProsonaFaultFault">
+                <soap:fault use="literal" name="ProsonaFaultFault" namespace=""/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ProsonaRealestateExchange">
+        <wsdl:port name="BasicHttpBinding_IProsonaRealestateExchange" binding="tns:BasicHttpBinding_IProsonaRealestateExchange">
+            <soap:address location="https://www.prosona.net/ProsonaRealestateExchangeService.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

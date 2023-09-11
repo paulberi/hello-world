@@ -1,0 +1,48 @@
+query getActiveOrder {
+  activeOrder {
+    id
+    state
+    lines {
+      id
+    }
+    shippingLines {
+      id
+    }
+  }
+}
+
+query getShippingMethods {
+  eligibleShippingMethods {
+    id
+    code
+  }
+}
+
+
+mutation setShippingMethod($shippingMethodId: ID!) {
+  setOrderShippingMethod(shippingMethodId: $shippingMethodId) {
+    __typename
+
+    ... on OrderModificationError {
+      message
+    }
+
+    ... on IneligibleShippingMethodError {
+      message
+    }
+    ... on NoActiveOrderError {
+      message
+    }
+  }
+}
+
+
+mutation transitionToArrangingPayment {
+  transitionOrderToState(state: "ArrangingPayment") {
+    __typename
+
+    ... on OrderStateTransitionError {
+      message
+    }
+  }
+}

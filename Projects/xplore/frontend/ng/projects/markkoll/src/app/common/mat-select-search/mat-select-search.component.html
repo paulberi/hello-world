@@ -1,0 +1,16 @@
+<mat-form-field>
+  <mat-select [formControl]="optionCtrl" [placeholder]="label" #singleSelect>
+    <mat-select-trigger *ngIf="value && triggerRef">
+      <ng-container [ngTemplateOutlet]="triggerRef" [ngTemplateOutletContext]="{$implicit: value}"></ng-container>
+    </mat-select-trigger>
+    <mat-option>
+      <ngx-mat-select-search [formControl]="filterCtrl"
+                             [placeholderLabel]="searchLabel"
+                             [noEntriesFoundLabel]="noEntriesFoundLabel"
+      ></ngx-mat-select-search>
+    </mat-option>
+    <mat-option *ngFor="let opt of filtered | async" [value]="opt">
+      <ng-container [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{$implicit: opt}"></ng-container>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

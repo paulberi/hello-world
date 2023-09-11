@@ -1,0 +1,38 @@
+<xp-accordion-table [dataSource]="auth" [columns]="columns" [indexExpanded]="indexSelected" [showHeaderRow]="false">
+  <ng-template let-element let-index="dataIndex">
+    <adm-metria-maps-auth-form *ngIf="isMetriaMapsAuth(element)"
+                          class="credentials-form"
+                          [metriaMapsAuth]="element"
+                          (metriaMapsAuthChange)="onMetriaMapsAuthChange($event, index)"
+                          (cancel)="onFormCancel()"
+                          (reset)="onMetriaMapsAuthReset(element.id, index)">
+    </adm-metria-maps-auth-form>
+    <adm-fastighetsok-auth-form *ngIf="isFastighetsokAuth(element)"
+                                class="credentials-form"
+                                [fastighetsokAuth]="element"
+                                (fastighetsokAuthChange)="onFastighetsokAuthChange($event, index)"
+                                (cancel)="onFormCancel()"
+                                (reset)="onFastighetsokAuthReset(element.id, index)">
+    </adm-fastighetsok-auth-form>
+  </ng-template>
+
+  <ng-container columns>
+    
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let elem; let i = dataIndex">
+        <button (click)="toggleSelected(i)" mat-icon-button>
+          <mat-icon class="agaretable-icon" *ngIf="!isSelected(i)">create</mat-icon>
+          <mat-icon class="agaretable-icon" *ngIf="isSelected(i)">check</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="system">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let elem">
+        {{ "adm.system." + systemName(elem) | transloco }}
+      </td>
+    </ng-container>
+  </ng-container>
+</xp-accordion-table>

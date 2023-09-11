@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+  <mat-form-field>
+    <input matInput type="text" formControlName="username"/>
+    <mat-label>{{"xp.common.username" | transloco}}</mat-label>
+    <mat-error>{{"xp.common.fieldMandatory" | transloco}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" formControlName="password"/>
+    <mat-label>{{"xp.common.password" | transloco}}</mat-label>
+    <mat-error>{{"xp.common.fieldMandatory" | transloco}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" formControlName="kundmarke"/>
+    <mat-label>Kundmärke</mat-label>
+    <mat-error>{{"xp.common.fieldMandatory" | transloco}}</mat-error>
+  </mat-form-field>
+</form>
+
+<div class="actions">
+  <button mat-button color="warn" (click)="this.reset.emit()" [disabled]="authIsEmpty()">Ta bort</button>
+  <button mat-button type="button" color="secondary" (click)="this.cancel.emit()">{{ "xp.common.cancel" | transloco }}</button>
+  <button mat-flat-button
+          type="submit"
+          color="primary"
+          [disabled]="!canSave()"
+          (click)="submit()">
+    {{ "xp.common.save" | transloco }}
+  </button>
+</div>

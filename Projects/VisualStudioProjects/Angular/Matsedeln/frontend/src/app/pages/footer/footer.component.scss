@@ -1,0 +1,44 @@
+@import url("https://use.fontawesome.com/releases/v5.14.0/css/all.css");
+
+.admin-button {
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+      transform: translateY(4px);
+  }
+  cursor: pointer;
+  padding: 20px;
+}
+
+.user-button {
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+      transform: translateY(4px);
+  }
+  cursor: pointer;
+  padding: 20px;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+}
+
+.two {
+  margin-top: 4px;
+}
+
+.user-content {
+  position: fixed;
+  left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logged-in-user-label {
+  color: white;
+}

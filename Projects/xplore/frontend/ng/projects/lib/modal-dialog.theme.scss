@@ -1,0 +1,31 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin modal-dialog-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  .modal-dialog {
+    background-color: mat-color($background, background);
+    color: mat-color($foreground, text);
+  }
+
+  .modal-dialog h1, .modal-dialog h2, .modal-dialog h3  {
+    color: mat-color($foreground, secondary-text, 400);
+  }
+
+  mat-dialog-container {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .modal-dialog .mat-divider {
+    background: mat-color($accent);
+    color: white;
+  }
+}

@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_sevardheter_kultur</name>
+  <id>LayerInfoImpl-297bac16:1795f8c3857:-2930</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-297bac16:1795f8c3857:-2931</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-14 09:45:01.745 UTC</dateCreated>
+</layer>

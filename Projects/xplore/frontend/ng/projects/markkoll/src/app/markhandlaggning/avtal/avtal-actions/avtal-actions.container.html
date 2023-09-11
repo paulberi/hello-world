@@ -1,0 +1,14 @@
+<mk-avtal-actions-ui [filter]="filter"
+                     [dokumentmallar]="dokumentmallar"
+
+                     [jobbStatus]="jobbStatus()"
+                     [submitButtonText]="submitButtonText()"
+                     [resetButtonText]="resetButtonText()"
+                     [actionsDisabled]="actionsDisabled()"
+                     [registerenhetIds]="registerenhetIds"
+                     [projektTyp]="projektTyp"
+
+                     [(avtalsAction)]="avtalsAction"
+                     (executeAction)="onExecuteAction($event)"
+                     (resetAction)="onResetAction($event)">
+</mk-avtal-actions-ui>

@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_traffpunkt-aldre</name>
+  <id>LayerInfoImpl-6d5e3144:edfc738fdc1:-0148</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-178af4a9:3d1fc007c8d:-d1bc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

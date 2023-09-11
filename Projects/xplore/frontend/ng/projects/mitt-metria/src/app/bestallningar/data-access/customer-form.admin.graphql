@@ -1,0 +1,28 @@
+query adminFilterCustomerByEmail($emailAddress: String!) {
+  customers(options: { filter: { emailAddress: { eq: $emailAddress } } })
+    @namedClient(name: "adminApi") {
+    items {
+      id
+    }
+  }
+}
+
+mutation adminCreateCustomer(
+  $firstName: String!
+  $lastName: String!
+  $emailAddress: String!
+) {
+  createCustomer(
+    input: {
+      firstName: $firstName
+      lastName: $lastName
+      emailAddress: $emailAddress
+    }
+  ) @namedClient(name: "adminApi") {
+    __typename
+    ... on EmailAddressConflictError {
+      message
+      __typename
+    }
+  }
+}

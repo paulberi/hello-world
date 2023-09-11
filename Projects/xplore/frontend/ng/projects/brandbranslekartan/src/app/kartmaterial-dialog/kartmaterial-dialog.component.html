@@ -1,0 +1,69 @@
+<div class="modal-dialog">
+  <div class="title-row">
+    <h1 mat-dialog-title style="float:left;">Nedladdning av kartmaterial</h1>
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 22.5">
+      <defs>
+        <style>.a{fill:#fff}.b{fill:#ff7333}</style>
+      </defs>
+      <title>Metria_logo_op</title>
+      <path class="a" d="M31.7 10.3a1.6 1.6 0 0 0-.9-.7L2.3.1A1.84 1.84 0 0 0 .7.3 2.1 2.1 0 0 0 0 1.7v19.1a2.1 2.1 0 0 0 .4 1.1l.3.3a1.93 1.93 0 0 0 1 .3 1.27 1.27 0 0 0 .6-.1l28.5-9.5a1.72 1.72 0 0 0 1.2-1.5v-.1a1.69 1.69 0 0 0-.3-1"></path>
+      <path class="b" d="M10.7 15l-1.4.5v-.1a.76.76 0 0 1 .5-.9c.4-.1.8 0 .9.4zm14.7-3.3a1.14 1.14 0 0 1-.8.7.51.51 0 0 1-.7-.4c-.1-.3 0-.5.4-.7l.8-.4z"></path>
+      <path class="b" d="M27.4 12.5c-.7.2-1.2.2-1.5-.1a.35.35 0 0 1-.1.2 2 2 0 0 1-1.1.9h-.1l-2.4.8c-1.2.4-1.8-.1-2.1-1.2l-.6-1.9-.6.2c-1 .3-1.4.6-1.3 1.2l1 2.9-2.9 1c-1.3.4-1.8-.1-2.2-1.2l-.6-1.9-1.2.4a4.35 4.35 0 0 1 .4.7l.3.9-2.7.9.1.2c.1.4.4.5.9.4s.6-.4.5-.7l1.3-.4a1.81 1.81 0 0 1-1.4 2.2 1.82 1.82 0 0 1-2.6-1.1l-.1-.2-.9.3.6 2-1.3.4-1-3.1a.52.52 0 0 0-.7-.3.51.51 0 0 0-.4.7l1 3.1-1.3.4-1-3.1a.52.52 0 0 0-.7-.3.51.51 0 0 0-.4.7l1 3.1-.9.3-2.2.7c.1.1.1.2.2.3l.3.3a1.93 1.93 0 0 0 1 .3 1.27 1.27 0 0 0 .6-.1l28.5-9.5a1.72 1.72 0 0 0 1.2-1.5v-.3z"></path>
+      <path class="b" d="M30.8 9.6L2.3.1A1.84 1.84 0 0 0 .7.3 2.1 2.1 0 0 0 0 1.7v18.7l1.7-.6L1 18c-.4-1.1.2-1.9 1.3-2.3a2 2 0 0 1 1.3-.1 1.77 1.77 0 0 1 1.1-.7A1.71 1.71 0 0 1 7.1 16v.1l.9-.2c-.4-1.2.2-2 1.4-2.4l3.1-1-.2-.6 1.3-.4.2.6 1.1-.4.4 1.1-1.2.2.6 1.9c.1.4.3.5.8.4l.5-.2.9-.3-.6-1.8c-.3-1 0-2 1.5-2.5l2.4-.8 1 3c.1.4.3.5.8.4l.5-.2.2-.1a.37.37 0 0 1-.1-.3c-.4-1.2.4-1.7 1.2-2l1-.4-.1-.2c-.1-.3-.4-.4-.8-.3s-.6.3-.4.7l-1.3.4c-.3-1 .1-1.7 1.4-2.1a1.67 1.67 0 0 1 2.4 1l.5 1.4c.1.4.3.5.8.4l.5-.2 3.6-1.2a.92.92 0 0 0-.6-.4zm-11.3-.3a.73.73 0 1 1 .5-.9.72.72 0 0 1-.5.9z"></path>
+    </svg>
+  </div>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content class="content-list">
+    <mat-form-field>
+      <mat-label>Filtrera på län...</mat-label>
+      <mat-select [(value)]="filter">
+        <mat-option *ngFor="let l of lan" [value]="l.name">
+          {{l.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button *ngIf="filter" mat-button (click)="filter = ''">Visa alla län</button>
+    <table class="link-table">
+      <tr *ngIf="!filter">
+        <td class="item-name"><h2>Hela Sverige</h2></td>
+      </tr>
+      <tr *ngIf="!filter">
+        <td class="item-name">Skogsmark</td>
+        <td><a href="/storage/bbk/helasverige/BBK_skogsmark_rev2020.zip" title="Skogsmark">Raster</a></td>
+      </tr>
+      <tr *ngIf="!filter">
+        <td class="item-name">Öppen mark 2021</td>
+        <td><a href="/storage/bbk/helasverige/BBK_oppenmark_rev2021.zip" title="Öppen mark">Raster</a></td>
+      </tr>
+      <ng-container *ngFor="let l of list()">
+        <tr>
+          <td><h2>{{l.name}}</h2></td>
+          <td><a href="/storage/bbk/skogsmark/lan/{{toFileName(l.name)}}_raster.zip" title="Skogsmark">Raster</a></td>
+          <td><a href="/storage/bbk/skogsmark/lan/{{toFileName(l.name)}}_vektor.zip" title="Skogsmark">Vektor</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="/storage/bbk/oppenmark/lan/raster/{{toFileName(l.name)}}_raster.zip" title="Öppen mark">Raster</a></td>
+          <td><a href="/storage/bbk/oppenmark/lan/vektor/{{toFileName(l.name)}}_vektor.zip" title="Öppen mark">Vektor</a></td>
+        </tr>
+        <ng-container *ngFor="let k of l.kommuner">
+          <tr>
+            <td class="item-name">{{k.name}}</td>
+            <td><a href="/storage/bbk/skogsmark/kommuner/{{toFileName(k.name)}}_raster.zip" title="Skogsmark">Raster</a></td>
+            <td><a href="/storage/bbk/skogsmark/kommuner/{{toFileName(k.name)}}_vektor.zip" title="Skogsmark">Vektor</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="/storage/bbk/oppenmark/kommuner/raster/{{toFileName(k.name)}}_raster.zip" title="Öppen mark">Raster</a></td>
+            <td><a href="/storage/bbk/oppenmark/kommuner/vektor/{{toFileName(k.name)}}_vektor.zip" title="Öppen mark">Vektor</a></td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </table>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-flat-button color="accent" (click)="close()">Stäng</button>
+  </div>
+</div>

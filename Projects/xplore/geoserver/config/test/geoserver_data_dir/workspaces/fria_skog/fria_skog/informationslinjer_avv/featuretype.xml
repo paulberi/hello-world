@@ -1,0 +1,75 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-6c107486:16d8cbe693c:1485</id>
+  <name>informationslinjer_avv</name>
+  <nativeName>gv_informationslinjer_avv</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-6c107486:16d8cbe693c:1483</id>
+  </namespace>
+  <title>informationslinjer_avv</title>
+  <keywords>
+    <string>features</string>
+    <string>gv_informationslinjer_avv</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;SWEREF99 TM&quot;,
+  GEOGCS[&quot;SWEREF99&quot;,
+    DATUM[&quot;SWEREF99&quot;,
+      SPHEROID[&quot;GRS 1980&quot;, 6378137.0, 298.257222101, AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      AUTHORITY[&quot;EPSG&quot;,&quot;6619&quot;]],
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],
+    UNIT[&quot;degree&quot;, 0.017453292519943295],
+    AXIS[&quot;Geodetic longitude&quot;, EAST],
+    AXIS[&quot;Geodetic latitude&quot;, NORTH],
+    AUTHORITY[&quot;EPSG&quot;,&quot;4619&quot;]],
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]],
+  PARAMETER[&quot;central_meridian&quot;, 15.0],
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0],
+  PARAMETER[&quot;scale_factor&quot;, 0.9996],
+  PARAMETER[&quot;false_easting&quot;, 500000.0],
+  PARAMETER[&quot;false_northing&quot;, 0.0],
+  UNIT[&quot;m&quot;, 1.0],
+  AXIS[&quot;Easting&quot;, EAST],
+  AXIS[&quot;Northing&quot;, NORTH],
+  AUTHORITY[&quot;EPSG&quot;,&quot;3006&quot;]]</nativeCRS>
+  <srs>EPSG:3006</srs>
+  <nativeBoundingBox>
+    <minx>181896.32913603852</minx>
+    <maxx>1086312.9422175875</maxx>
+    <miny>6091282.433471196</miny>
+    <maxy>7689478.305598114</maxy>
+    <crs class="projected">EPSG:3006</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>10.511247156296408</minx>
+    <maxx>10.511256115293092</maxx>
+    <miny>-9.0193758097E-6</miny>
+    <maxy>0.0</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="time">
+      <dimensionInfo>
+        <enabled>true</enabled>
+        <attribute>enddate</attribute>
+        <presentation>LIST</presentation>
+        <units>ISO8601</units>
+        <defaultValue>
+          <strategy>FIXED</strategy>
+          <referenceValue>0000/9999</referenceValue>
+        </defaultValue>
+        <nearestMatchEnabled>false</nearestMatchEnabled>
+      </dimensionInfo>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-6c107486:16d8cbe693c:1484</id>
+  </store>
+  <cqlFilter>organisation=&apos;Fria Skog&apos;</cqlFilter>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

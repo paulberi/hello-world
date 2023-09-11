@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.mat-column-avtal {
+    width: 20%;
+}
+
+.mat-column-uppladdat {
+  width: 20%;
+}
+
+.mat-column-andrat {
+  width: 20%;
+}
+
+.mat-column-selected {
+  width: 10%;
+}
+
+.mat-column-download {
+  width: 20%;
+}
+
+.delete-icon{
+    vertical-align: bottom;
+}
+
+.delete-icon:hover{
+  cursor: pointer;
+  color: var(--error);
+}

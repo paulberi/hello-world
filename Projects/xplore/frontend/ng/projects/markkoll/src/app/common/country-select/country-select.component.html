@@ -1,0 +1,18 @@
+<mk-mat-select-search [compareWith]="compareWith"
+                      [options]="countries"
+                      [value]="value"
+                      [label]="'mk.agareinformation.country' | transloco"
+                      (selectionChange)="onSelectionChange($event)">
+
+  <ng-template let-selected #Trigger>
+    <span class="trigger">
+      <mat-icon class="trigger-icon" [svgIcon]="'flag_' + selected.alpha2Code"></mat-icon>
+      {{selected?.name}}
+    </span>
+  </ng-template>
+
+  <ng-template let-country>
+    <mat-icon [svgIcon]="'flag_' + country?.alpha2Code"></mat-icon> {{country?.name}}
+  </ng-template>
+
+</mk-mat-select-search>

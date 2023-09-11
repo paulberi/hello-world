@@ -1,0 +1,3657 @@
+{
+  "x-generator": "NSwag v12.3.1.0 (NJsonSchema v9.14.1.0 (Newtonsoft.Json v11.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "KOLIBRI Cloud API Swagger Specification",
+    "version": "1.0.79.1"
+  },
+  "host": "api.kolibricloud.ch",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/Alarms": {
+      "get": {
+        "tags": [
+          "Alarms"
+        ],
+        "operationId": "Alarms_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "query",
+            "format": "int32",
+            "default": -1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "skip",
+            "in": "query",
+            "format": "int32",
+            "default": 0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "take",
+            "in": "query",
+            "format": "int32",
+            "default": 50,
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "searchText",
+            "in": "query",
+            "default": "",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "sortField",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "boolean",
+            "name": "sortAscending",
+            "in": "query",
+            "default": true,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlarmListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Alarms/{alarmId}": {
+      "put": {
+        "tags": [
+          "Alarms"
+        ],
+        "operationId": "Alarms_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "alarmId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "alarmPutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AlarmPutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/AlarmSettings/{deviceId}": {
+      "get": {
+        "tags": [
+          "AlarmSettings"
+        ],
+        "operationId": "AlarmSettings_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AlarmSettingsViewModel"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/AlarmSettings/{alarmSettingsId}": {
+      "put": {
+        "tags": [
+          "AlarmSettings"
+        ],
+        "operationId": "AlarmSettings_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "alarmSettingsId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "alarmSettingsPutPostModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AlarmSettingsPutPostModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/AlarmSettings": {
+      "post": {
+        "tags": [
+          "AlarmSettings"
+        ],
+        "operationId": "AlarmSettings_Post",
+        "parameters": [
+          {
+            "name": "alarmSettingsPutPostModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AlarmSettingsPutPostModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/AlarmSettings/{alarmId}": {
+      "delete": {
+        "tags": [
+          "AlarmSettings"
+        ],
+        "operationId": "AlarmSettings_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "alarmId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/DeviceConfiguration/{deviceId}": {
+      "get": {
+        "tags": [
+          "DeviceConfiguration"
+        ],
+        "operationId": "DeviceConfiguration_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeviceConfigurationsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "DeviceConfiguration"
+        ],
+        "operationId": "DeviceConfiguration_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "settings",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeviceConfigurationModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "skip",
+            "in": "query",
+            "format": "int32",
+            "default": 0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "take",
+            "in": "query",
+            "format": "int32",
+            "default": 50,
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "searchText",
+            "in": "query",
+            "default": "",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "sortField",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "boolean",
+            "name": "sortAscending",
+            "in": "query",
+            "default": true,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeviceListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetDeviceDetails",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeviceDetailsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "devicePutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DevicePutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}/BatteryInfos": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetBatteryInfos",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/BatteryValuesListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}/SignalQualityInfos": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetSignalQualityInfos",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ValuesListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}/HumidityInfos": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetHumidityInfosInfos",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ValuesListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}/Location": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetLocationInfos",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LocationViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Devices/{deviceId}/SelectedChannels": {
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_GetSelectedChannels",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SelectedChannelsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Devices"
+        ],
+        "operationId": "Devices_PutSelectedChannels",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "selectedChannelsPutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SelectedChannelsPutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Export": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "operationId": "Export_GetExport",
+        "parameters": [
+          {
+            "type": "array",
+            "name": "deviceIds",
+            "in": "query",
+            "collectionFormat": "multi",
+            "x-nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "type": "string",
+            "name": "from",
+            "in": "query",
+            "required": true,
+            "format": "date-time",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "to",
+            "in": "query",
+            "required": true,
+            "format": "date-time",
+            "x-nullable": false
+          },
+          {
+            "type": "array",
+            "name": "measurementDefinitionIds",
+            "in": "query",
+            "collectionFormat": "multi",
+            "x-nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "type": "integer",
+            "name": "exportFileType",
+            "in": "query",
+            "required": true,
+            "x-schema": {
+              "$ref": "#/definitions/Filetype"
+            },
+            "x-nullable": false,
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Favorites": {
+      "get": {
+        "tags": [
+          "Favorites"
+        ],
+        "operationId": "Favorites_Get",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/FavoriteListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Favorites"
+        ],
+        "operationId": "Favorites_Post",
+        "parameters": [
+          {
+            "name": "favoritePutPostModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FavoritePutPostModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Favorites/{favoriteId}": {
+      "put": {
+        "tags": [
+          "Favorites"
+        ],
+        "operationId": "Favorites_Put",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "favoriteId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "favoritePutPostModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FavoritePutPostModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Favorites"
+        ],
+        "operationId": "Favorites_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "favoriteId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Measurements": {
+      "get": {
+        "tags": [
+          "Measurements"
+        ],
+        "operationId": "Measurements_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "measurementDefinitionId",
+            "in": "query",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "query",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "string",
+            "name": "start",
+            "in": "query",
+            "format": "date-time",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "end",
+            "in": "query",
+            "format": "date-time",
+            "x-nullable": true
+          },
+          {
+            "type": "boolean",
+            "name": "isFiltered",
+            "in": "query",
+            "default": false,
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "ianaTimeZone",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MeasurementValuesListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Measurements/LastMeasurement/{deviceId}": {
+      "get": {
+        "tags": [
+          "Measurements"
+        ],
+        "operationId": "Measurements_GetLastData",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MeasurementViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/MultiSensorCalculationSettings/{deviceId}": {
+      "get": {
+        "tags": [
+          "MultiSensorCalculationSettings"
+        ],
+        "operationId": "MultiSensorCalculationSettings_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/MultiSensorCalculationSettingsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "MultiSensorCalculationSettings"
+        ],
+        "operationId": "MultiSensorCalculationSettings_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "settings",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MultiSensorCalculationSettingsViewModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/PageSettings": {
+      "get": {
+        "tags": [
+          "PageSettings"
+        ],
+        "operationId": "PageSettings_Get",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PageSettingsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "PageSettings"
+        ],
+        "operationId": "PageSettings_Create",
+        "parameters": [
+          {
+            "name": "pageSettingsPutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageSettingsPutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/PageSettings/{pageSettingsId}": {
+      "put": {
+        "tags": [
+          "PageSettings"
+        ],
+        "operationId": "PageSettings_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "pageSettingsId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "pageSettingsPutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageSettingsPutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "operationId": "Roles_GetUserRoles",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UserRolesViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/TankCalculationSettings/{deviceId}": {
+      "get": {
+        "tags": [
+          "TankCalculationSettings"
+        ],
+        "operationId": "TankCalculationSettings_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/TankCalculationSettingsModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "TankCalculationSettings"
+        ],
+        "operationId": "TankCalculationSettings_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "newSettings",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TankCalculationSettingsModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/Units": {
+      "get": {
+        "tags": [
+          "Units"
+        ],
+        "operationId": "Units_Get",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UnitListViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v1/WaterCalculationSettings/{deviceId}": {
+      "get": {
+        "tags": [
+          "WaterCalculationSettings"
+        ],
+        "operationId": "WaterCalculationSettings_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/WaterCalculationSettingsViewModel"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "WaterCalculationSettings"
+        ],
+        "operationId": "WaterCalculationSettings_Update",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "settingsPutModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WaterCalculationSettingsPutModel"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AlarmListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "totalRecords",
+        "totalActiveApplicationAlarms",
+        "totalActiveDeviceAlarms",
+        "totalActiveSystemAlarms"
+      ],
+      "properties": {
+        "totalRecords": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalActiveApplicationAlarms": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalActiveDeviceAlarms": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "totalActiveSystemAlarms": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "alarms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AlarmViewModel"
+          }
+        }
+      }
+    },
+    "AlarmViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "deviceId",
+        "alarmValue",
+        "alarmPeriod",
+        "firstAlarmTime",
+        "confirmingTime"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deviceName": {
+          "type": "string"
+        },
+        "alarmState": {
+          "type": "string"
+        },
+        "alarmType": {
+          "type": "string"
+        },
+        "alarmSource": {
+          "type": "string"
+        },
+        "alarmCategory": {
+          "type": "string"
+        },
+        "alarmValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "alarmPeriod": {
+          "type": "string",
+          "format": "time-span"
+        },
+        "networkNode": {
+          "type": "string"
+        },
+        "transferType": {
+          "type": "string"
+        },
+        "firstAlarmTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "alarmUserAlerts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AlarmUserAlertViewModel"
+          }
+        },
+        "confirmingUserName": {
+          "type": "string"
+        },
+        "confirmingTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "confirmingNote": {
+          "type": "string"
+        },
+        "alarmSettingsId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "AlarmUserAlertViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sendTime"
+      ],
+      "properties": {
+        "sendTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "emailAddressesCommaSeparated": {
+          "type": "string"
+        },
+        "smsNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "AlarmPutModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alarmState"
+      ],
+      "properties": {
+        "alarmState": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confirmingUserName": {
+          "type": "string"
+        },
+        "confirmingDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "confirmingNote": {
+          "type": "string"
+        }
+      }
+    },
+    "AlarmSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alarmSettingId",
+        "deviceId",
+        "measurementDefinitionId",
+        "isAlarmStateOn"
+      ],
+      "properties": {
+        "alarmSettingId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "emailAddressesCommaSeparated": {
+          "type": "string"
+        },
+        "measurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "waterCalculationId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "valueUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sendAlarmOffMessage": {
+          "type": "boolean"
+        },
+        "repeatingAlarmMaxCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "repeatingAlarmResendTimeSpanInHours": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "levelAlarmIsHigher": {
+          "type": "boolean"
+        },
+        "levelAlarmValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "levelAlarmHysteresisValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "deltaTimeAlarmTimeSpanInMinutes": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deltaAlarmDifferenceValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "isAlarmStateOn": {
+          "type": "boolean"
+        },
+        "alternativeAlarmOnMailSubjectText": {
+          "type": "string"
+        },
+        "alternativeAlarmOnMailBodyText": {
+          "type": "string"
+        },
+        "alternativeAlarmOffMailSubjectText": {
+          "type": "string"
+        },
+        "alternativeAlarmOffMailBodyText": {
+          "type": "string"
+        }
+      }
+    },
+    "AlarmSettingsPutPostModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "measurementDefinitionId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "emailAddressesCommaSeparated": {
+          "type": "string"
+        },
+        "measurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "waterCalculationId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "valueUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sendAlarmOffMessage": {
+          "type": "boolean"
+        },
+        "repeatingAlarmMaxCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "repeatingAlarmResendTimeSpanInHours": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "levelAlarmIsHigher": {
+          "type": "boolean"
+        },
+        "levelAlarmValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "levelAlarmHysteresisValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "deltaTimeAlarmTimeSpanInMinutes": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deltaAlarmDifferenceValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "alternativeAlarmOnMailSubjectText": {
+          "type": "string"
+        },
+        "alternativeAlarmOnMailBodyText": {
+          "type": "string"
+        },
+        "alternativeAlarmOffMailSubjectText": {
+          "type": "string"
+        },
+        "alternativeAlarmOffMailBodyText": {
+          "type": "string"
+        }
+      }
+    },
+    "DeviceConfigurationsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "actualDeviceConfiguration": {
+          "$ref": "#/definitions/DeviceConfigurationModel"
+        },
+        "pendingDeviceConfiguration": {
+          "$ref": "#/definitions/DeviceConfigurationModel"
+        }
+      }
+    },
+    "DeviceConfigurationModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "creationDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lockTimerMeasurement": {
+          "type": "boolean"
+        },
+        "lockTimerAlarm": {
+          "type": "boolean"
+        },
+        "lockTimerInfo": {
+          "type": "boolean"
+        },
+        "lockTimerCheck": {
+          "type": "boolean"
+        },
+        "lockTimerDial": {
+          "type": "boolean"
+        },
+        "generalNetworkName": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalOwnTelNumber": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "generalLocationName": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalLocationAddressText": {
+          "type": "string",
+          "maxLength": 100,
+          "minLength": 0
+        },
+        "generalGsmSerialNumber": {
+          "type": "string",
+          "maxLength": 8,
+          "minLength": 0
+        },
+        "generalGsmSoftwareVersion": {
+          "type": "string",
+          "maxLength": 16,
+          "minLength": 0
+        },
+        "generalLongitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalLatitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalAltitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalGpsLongitude": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "generalGpsLatitude": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "generalGpsAltitude": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "generalCellLocateLongitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalCellLocateLatitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "generalCellLocateAltitudeText": {
+          "type": "string",
+          "maxLength": 20,
+          "minLength": 0
+        },
+        "hardwareConnectionType": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "hardwarePowerExternalDevice": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "hardwareMeasureSaveChannel0": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel1": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel2": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel3": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel4": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel5": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel6": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel7": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel8": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel9": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel10": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel11": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel12": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel13": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel14": {
+          "type": "boolean"
+        },
+        "hardwareMeasureSaveChannel15": {
+          "type": "boolean"
+        },
+        "hardwareDataConnectionTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hardwareDataConnectionInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hardwareSupportedSensorTypes": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "hardwarePreOnTime": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hardwareMultiplierPressureChannels": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "hardwareMultiplierTemperatureChannels": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "hardwareResolutionPressureChannels": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "hardwareResolutionTemperatureChannels": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "hardwareDataConnectionCallNumber": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "measurementTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measurementInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measurementSendSms": {
+          "type": "boolean"
+        },
+        "measurementSendMail": {
+          "type": "boolean"
+        },
+        "measurementSendFTP": {
+          "type": "boolean"
+        },
+        "measurementMailAddress": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "measurementSmsNumber": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "measurementSmsText": {
+          "type": "string",
+          "maxLength": 160,
+          "minLength": 0
+        },
+        "measurementSendMailAfterX": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "measurementSendSmsAfterX": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "measurementSendFtpAfterX": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "gprsAPN": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "gprsID": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "gprsPassword": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "gprsDNS": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "gprsSimPin": {
+          "type": "string",
+          "maxLength": 10,
+          "minLength": 0
+        },
+        "gprsSmsServiceCenterNr": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "gprsPasswordForQuerySms": {
+          "type": "string",
+          "maxLength": 10,
+          "minLength": 0
+        },
+        "gprsModemProtocol": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "cellularModuleId": {
+          "type": "string"
+        },
+        "cellularModuleRevisionId": {
+          "type": "string"
+        },
+        "cellularModuleSerialNumberIMEI": {
+          "type": "string"
+        },
+        "cellularSIMCardId": {
+          "type": "string"
+        },
+        "cellularSIMCardSubscriberId": {
+          "type": "string"
+        },
+        "ftpServerName": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "ftpServerPath": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "ftpUsername": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "ftpAccount": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "ftpPassword": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "ftpPort": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ftpUseTLS": {
+          "type": "boolean"
+        },
+        "ftpSourceControlPort": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ftpSourceDataPort": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ftpUseActiveMode": {
+          "type": "boolean"
+        },
+        "mailSmtpShowedName": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailPop3Username": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailPop3Password": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailSmtpUseSSL": {
+          "type": "boolean"
+        },
+        "mailPop3UseSSL": {
+          "type": "boolean"
+        },
+        "mailUseAlternativeSMTPLogin": {
+          "type": "boolean"
+        },
+        "mailReturnAddress": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailOptSmtpUsername": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailOptSmtpPassword": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailSmtpServer": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailSmtpPort": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "mailPop3Server": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "mailPop3Port": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "infoTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "infoInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "infoSendSms": {
+          "type": "boolean"
+        },
+        "infoSendMail": {
+          "type": "boolean"
+        },
+        "infoSendFTP": {
+          "type": "boolean"
+        },
+        "infoMailAddress": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "infoSmsNumber": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "checkTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "checkInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "checkSendSms": {
+          "type": "boolean"
+        },
+        "checkSendMail": {
+          "type": "boolean"
+        },
+        "checkSendFTP": {
+          "type": "boolean"
+        },
+        "checkAnswerSmsText": {
+          "type": "string",
+          "maxLength": 160,
+          "minLength": 0
+        },
+        "alarmTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "alarmInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "alarmSendSms": {
+          "type": "boolean"
+        },
+        "alarmSendMail": {
+          "type": "boolean"
+        },
+        "alarmSendFTP": {
+          "type": "boolean"
+        },
+        "alarmMailAddress": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 0
+        },
+        "alarmSmsNumber": {
+          "type": "string",
+          "maxLength": 30,
+          "minLength": 0
+        },
+        "alarmSmsText": {
+          "type": "string",
+          "maxLength": 160,
+          "minLength": 0
+        },
+        "alarmSendXTimes": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "alarmType": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "alarmChannelNumber": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "alarmOnThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "alarmOffThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "alarmDeltaThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "eventType": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "eventMeasureTimer": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "eventCheckInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "eventMeasureInterval": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "eventChannel": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "eventOnValueThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "eventOffValueThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "eventDeltaValueThreshold": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "eventSendMailXTimes": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "waterLevelCalculationEnable": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationLength": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationHeight": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationOffset": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationDensity": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationWidth": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationAngle": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationFormFactor": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationMinCalcHeight": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "waterLevelCalculationFormType": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "waterLevelCalculationIsAbsoluteSensor": {
+          "type": "boolean"
+        },
+        "waterLevelCalculationCalculateFrom": {
+          "type": "integer",
+          "format": "byte"
+        },
+        "waterLevelCalculationConversionTo": {
+          "type": "integer",
+          "format": "byte"
+        }
+      }
+    },
+    "DeviceListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "totalRecords"
+      ],
+      "properties": {
+        "totalRecords": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DeviceViewModel"
+          }
+        }
+      }
+    },
+    "DeviceViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "networkNode": {
+          "type": "string"
+        },
+        "transferType": {
+          "type": "string"
+        },
+        "gsmNumber": {
+          "type": "string"
+        },
+        "euiNumber": {
+          "type": "string"
+        },
+        "serialNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "DeviceDetailsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "numberOfUnconfirmedAlarms"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "stationId": {
+          "type": "string"
+        },
+        "measurementDefinitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeasurementDefinitionViewModel"
+          }
+        },
+        "note": {
+          "type": "string"
+        },
+        "numberOfUnconfirmedAlarms": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lastMeasurementTransmissionDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "signalQuality": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "humidity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "batteryInfoVoltageInVolt": {
+          "type": "number",
+          "format": "double"
+        },
+        "batteryInfoCapacityInPercent": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "transmissionInterval": {
+          "type": "string",
+          "format": "time-span"
+        },
+        "saveInterval": {
+          "type": "string",
+          "format": "time-span"
+        }
+      }
+    },
+    "MeasurementDefinitionViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "unitId",
+        "isActive"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "unitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "isActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "BatteryValuesListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "calculatedBatteryCapacityUnitId",
+        "measuredBatteryVoltageUnitId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "calculatedBatteryCapacityValues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleMeasurementPair"
+          }
+        },
+        "calculatedBatteryCapacityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measuredBatteryVoltageValues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleMeasurementPair"
+          }
+        },
+        "measuredBatteryVoltageUnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "SimpleMeasurementPair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "time"
+      ],
+      "properties": {
+        "time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "value": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "ValuesListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "unitId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SimpleMeasurementPair"
+          }
+        },
+        "unitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "LocationViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "registeredLatitude",
+        "registeredLongitude",
+        "triangulatedLatitude",
+        "triangulatedLongitude",
+        "altitudeInMeters"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "type": "string"
+        },
+        "registeredLatitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "registeredLongitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "triangulatedLatitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "triangulatedLongitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "altitudeInMeters": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "SelectedChannelsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measurementDefinitionIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "lastDataRangeTimeSpan": {
+          "type": "string",
+          "format": "time-span"
+        },
+        "customRangeStartUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customRangeEndUtc": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "SelectedChannelsPutModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "selectedChannels": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "lastDataRangeTimeSpan": {
+          "type": "string",
+          "format": "time-span"
+        },
+        "customRangeStartUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customRangeEndUtc": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "DevicePutModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "Filetype": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Csv",
+        "Excel",
+        "Zip",
+        "Docx",
+        "Hydras",
+        "AquaInfo",
+        "KellerMeasurementFileFormat",
+        "Png",
+        "Jpeg"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "FavoriteListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "totalRecords"
+      ],
+      "properties": {
+        "totalRecords": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "favorites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FavoriteViewModel"
+          }
+        }
+      }
+    },
+    "FavoriteViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "favoriteId",
+        "deviceId"
+      ],
+      "properties": {
+        "favoriteId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "millisecondsFromNow": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "timeRangeStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timeRangeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "selectedMeasurementDefinitionIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "FavoritePutPostModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "name"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "millisecondsFromNow": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "timeRangeStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timeRangeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "selectedMeasurementDefinitionIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
+    "MeasurementValuesListViewModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ValuesListViewModel"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measurementDefinitionId"
+          ],
+          "properties": {
+            "measurementDefinitionId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      ]
+    },
+    "MeasurementViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "time"
+      ],
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeasurementValueViewModel"
+          }
+        },
+        "time": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "MeasurementValueViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "measurementDefId",
+        "measurementValue"
+      ],
+      "properties": {
+        "measurementDefId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measurementDefIdName": {
+          "type": "string"
+        },
+        "measurementValue": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "MultiSensorCalculationSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sensorSettings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MultiSensorCalculationSettingViewModel"
+          }
+        }
+      }
+    },
+    "MultiSensorCalculationSettingViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "density",
+        "densityUnitId",
+        "gravity",
+        "gravityUnitId",
+        "measurementDefinitionId",
+        "correspondsToMeasurementDefinitionId"
+      ],
+      "properties": {
+        "density": {
+          "type": "number",
+          "format": "double"
+        },
+        "densityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gravity": {
+          "type": "number",
+          "format": "double"
+        },
+        "gravityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "measurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "correspondsToMeasurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offset": {
+          "type": "number",
+          "format": "double"
+        },
+        "offsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p1MeasurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p2MeasurementDefinitionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "a": {
+          "type": "number",
+          "format": "double"
+        },
+        "aUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "b": {
+          "type": "number",
+          "format": "double"
+        },
+        "bUnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "PageSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "pressureUnitId",
+        "pressureDecimalPlaces",
+        "temperatureUnitId",
+        "temperatureDecimalPlaces",
+        "lengthUnitId",
+        "lengthDecimalPlaces",
+        "conductivityUnitId",
+        "conductivityDecimalPlaces",
+        "volumeUnitId",
+        "volumeDecimalPlaces",
+        "voltageUnitId",
+        "voltageDecimalPlaces"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "languageIso6391TwoLetterCode": {
+          "type": "string"
+        },
+        "languageCultureName": {
+          "type": "string"
+        },
+        "countryRegion": {
+          "type": "string"
+        },
+        "utcOffset": {
+          "type": "string"
+        },
+        "pressureUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pressureDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedPressureUnitName": {
+          "type": "string"
+        },
+        "userDefinedPressureConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "temperatureUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "temperatureDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedTemperatureUnitName": {
+          "type": "string"
+        },
+        "userDefinedTemperatureConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "lengthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lengthDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedLengthUnitName": {
+          "type": "string"
+        },
+        "userDefinedLengthConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "conductivityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "conductivityDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedConductivityUnitName": {
+          "type": "string"
+        },
+        "userDefinedConductivityConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "volumeUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "volumeDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedVolumeUnitName": {
+          "type": "string"
+        },
+        "userDefinedVolumeConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "voltageUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "voltageDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedVoltageUnitName": {
+          "type": "string"
+        },
+        "userDefinedVoltageConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "isLengthAxisInverted": {
+          "type": "boolean"
+        },
+        "chartType": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "theme": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "showCalculationForWaterLevel": {
+          "type": "boolean"
+        },
+        "showCalculationForWaterFlow": {
+          "type": "boolean"
+        },
+        "showCalculationForTankContent": {
+          "type": "boolean"
+        },
+        "showMultiCalculations": {
+          "type": "boolean"
+        },
+        "alternativeChannelNames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeasurementDefinitionsAlternativeNamesGetModel"
+          }
+        }
+      }
+    },
+    "MeasurementDefinitionsAlternativeNamesGetModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "measurementDefinition"
+      ],
+      "properties": {
+        "measurementDefinition": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "alternative": {
+          "type": "string"
+        },
+        "default": {
+          "type": "string"
+        }
+      }
+    },
+    "PageSettingsPutModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "languageIso6391TwoLetterCode": {
+          "type": "string"
+        },
+        "languageCultureName": {
+          "type": "string"
+        },
+        "countryRegion": {
+          "type": "string"
+        },
+        "utcOffset": {
+          "type": "string"
+        },
+        "pressureUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pressureDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedPressureUnitName": {
+          "type": "string"
+        },
+        "userDefinedPressureConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "temperatureUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "temperatureDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedTemperatureUnitName": {
+          "type": "string"
+        },
+        "userDefinedTemperatureConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "lengthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lengthDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedLengthUnitName": {
+          "type": "string"
+        },
+        "userDefinedLengthConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "conductivityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "conductivityDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedConductivityUnitName": {
+          "type": "string"
+        },
+        "userDefinedConductivityConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "volumeUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "volumeDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedVolumeUnitName": {
+          "type": "string"
+        },
+        "userDefinedVolumeConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "voltageUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "voltageDecimalPlaces": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "userDefinedVoltageUnitName": {
+          "type": "string"
+        },
+        "userDefinedVoltageConversionFactor": {
+          "type": "number",
+          "format": "double"
+        },
+        "isLengthAxisInverted": {
+          "type": "boolean"
+        },
+        "chartType": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "theme": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "showCalculationForWaterLevel": {
+          "type": "boolean"
+        },
+        "showCalculationForWaterFlow": {
+          "type": "boolean"
+        },
+        "showCalculationForTankContent": {
+          "type": "boolean"
+        },
+        "showMultiCalculations": {
+          "type": "boolean"
+        },
+        "alternativeNames": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeasurementDefinitionsAlternativeNamesPutPostModel"
+          }
+        }
+      }
+    },
+    "MeasurementDefinitionsAlternativeNamesPutPostModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "measurementDefinition"
+      ],
+      "properties": {
+        "measurementDefinition": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "alternative": {
+          "type": "string"
+        }
+      }
+    },
+    "UserRolesViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "isAdmin",
+        "isContributor",
+        "isReader"
+      ],
+      "properties": {
+        "isAdmin": {
+          "type": "boolean"
+        },
+        "isContributor": {
+          "type": "boolean"
+        },
+        "isReader": {
+          "type": "boolean"
+        }
+      }
+    },
+    "TankCalculationSettingsModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "density",
+        "densityUnitId",
+        "gravity",
+        "gravityUnitId"
+      ],
+      "properties": {
+        "density": {
+          "type": "number",
+          "format": "double"
+        },
+        "densityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gravity": {
+          "type": "number",
+          "format": "double"
+        },
+        "gravityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1P1Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1P1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1P2Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1P2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1Height": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank1HeightUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1Width": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank1WidthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1Length": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank1LengthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1B": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank1BUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank1TankTypeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2P1Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2P1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2P2Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2P2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2Height": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank2HeightUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2Width": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank2WidthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2Length": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank2LengthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2B": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank2BUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank2TankTypeId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3P1Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3P1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3P2Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3P2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3Height": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank3HeightUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3Width": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank3WidthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3Length": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank3LengthUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3B": {
+          "type": "number",
+          "format": "double"
+        },
+        "tank3BUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tank3TankTypeId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "UnitListViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "units": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitViewModel"
+          }
+        },
+        "measurementsDefinitionIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MeasurementDefinitionLookUpViewModel"
+          }
+        }
+      }
+    },
+    "UnitViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "unitCategory": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "unitSymbol": {
+          "type": "string"
+        }
+      }
+    },
+    "MeasurementDefinitionLookUpViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "WaterCalculationSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deviceId",
+        "density",
+        "densityUnitId",
+        "gravity",
+        "gravityUnitId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "density": {
+          "type": "number",
+          "format": "double"
+        },
+        "densityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gravity": {
+          "type": "number",
+          "format": "double"
+        },
+        "gravityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "depthCalculationSettings": {
+          "$ref": "#/definitions/DepthCalculationSettingsViewModel"
+        },
+        "heightCalculationSettings": {
+          "$ref": "#/definitions/HeightCalculationSettingsViewModel"
+        },
+        "heightAboveSeeLevelCalculationSettings": {
+          "$ref": "#/definitions/HeightAboveSeeLevelCalculationSettingsViewModel"
+        }
+      }
+    },
+    "DepthCalculationSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "calculationId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offset": {
+          "type": "number",
+          "format": "double"
+        },
+        "offsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p1": {
+          "type": "number",
+          "format": "double"
+        },
+        "p1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p2": {
+          "type": "number",
+          "format": "double"
+        },
+        "p2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "b": {
+          "type": "number",
+          "format": "double"
+        },
+        "bUnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "HeightCalculationSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "calculationId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offset": {
+          "type": "number",
+          "format": "double"
+        },
+        "offsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p1": {
+          "type": "number",
+          "format": "double"
+        },
+        "p1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p2": {
+          "type": "number",
+          "format": "double"
+        },
+        "p2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "HeightAboveSeeLevelCalculationSettingsViewModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "calculationId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "offset": {
+          "type": "number",
+          "format": "double"
+        },
+        "offsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p1": {
+          "type": "number",
+          "format": "double"
+        },
+        "p1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "p2": {
+          "type": "number",
+          "format": "double"
+        },
+        "p2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "a": {
+          "type": "number",
+          "format": "double"
+        },
+        "aUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "b": {
+          "type": "number",
+          "format": "double"
+        },
+        "bUnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "WaterCalculationSettingsPutModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "density",
+        "densityUnitId",
+        "gravity",
+        "gravityUnitId"
+      ],
+      "properties": {
+        "density": {
+          "type": "number",
+          "format": "double"
+        },
+        "densityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "gravity": {
+          "type": "number",
+          "format": "double"
+        },
+        "gravityUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "depthOffset": {
+          "type": "number",
+          "format": "double"
+        },
+        "depthOffsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "depthP1": {
+          "type": "number",
+          "format": "double"
+        },
+        "depthP1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "depthP2": {
+          "type": "number",
+          "format": "double"
+        },
+        "depthP2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "depthB": {
+          "type": "number",
+          "format": "double"
+        },
+        "depthBUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightOffset": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightOffsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightP1": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightP1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightP2": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightP2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightAslOffset": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightAslOffsetUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightAslP1": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightAslP1UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightAslP2": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightAslP2UnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightAslA": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightAslAUnitId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "heightAslB": {
+          "type": "number",
+          "format": "double"
+        },
+        "heightAslBUnitId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "description": "Bearer token",
+      "name": "Authorization",
+      "in": "header",
+      "authorizationUrl": ""
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ]
+}

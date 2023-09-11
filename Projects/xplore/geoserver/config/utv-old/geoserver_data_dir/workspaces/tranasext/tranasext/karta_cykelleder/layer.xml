@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_cykelleder</name>
+  <id>LayerInfoImpl-12368770:30fbb8d7c19:-b361</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-78ecad03:e0e90313a31:-a9ac</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

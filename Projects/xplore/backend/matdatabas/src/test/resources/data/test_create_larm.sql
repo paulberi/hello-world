@@ -1,0 +1,26 @@
+SET search_path TO matdatabas;
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (2, 1, 2, 2, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (1, 1, 1, 1, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (3, 2, 3, 3, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (4, 2, 4, 4, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (5, 3, 5, 5, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (6, 3, 6, 6, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (7, 4, 7, 7, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (8, 4, 8, 8, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (9, 5, 9, 9, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (10, 5, 10, 10, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (11, 6, 11, 11, 0, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (12, 6, 12, 12, 0, 1, 1, 1, 0, 0);
+
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (13, 1, 1, 13, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (14, 1, 2, 14, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (15, 2, 3, 15, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (16, 2, 4, 16, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (17, 3, 5, 17, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (18, 3, 6, 18, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (19, 4, 7, 19, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (20, 4, 8, 20, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (21, 5, 9, 21, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (22, 5, 10, 22, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (23, 6, 11, 23, 1, 1, 1, 1, 0, 0);
+INSERT INTO larm (id, matobjekt_id, gransvarde_id, matning_id, status, larmniva_id, gransvarde, anvandargrupp_id, varde, typ_av_kontroll) VALUES (24, 6, 12, 24, 1, 1, 1, 1, 0, 0);

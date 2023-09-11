@@ -1,0 +1,19 @@
+<layer>
+  <name>intrang_extent_geom</name>
+  <id>LayerInfoImpl--1033da80:17955965d64:23b1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--1033da80:17955965d64:23b9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1033da80:17955965d64:23b0</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-25 15:23:52.728 UTC</dateCreated>
+  <dateModified>2021-05-18 10:58:54.75 UTC</dateModified>
+</layer>

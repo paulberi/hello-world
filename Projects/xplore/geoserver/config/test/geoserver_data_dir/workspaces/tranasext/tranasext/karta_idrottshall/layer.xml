@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_idrottshall</name>
+  <id>LayerInfoImpl-476c5e71:17450cea171:-9c30</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-c054b8c7:024f1b010c9:-84a3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,44 @@
+<form [formGroup]="form">
+  <h2>{{ "mk.bilagor.uploadBilaga" | transloco }}</h2>
+  <div class="row col-6">
+    <xp-dropzone formControlName="fil"></xp-dropzone>
+  </div>
+  <mat-form-field>
+    <mat-label>{{ "mk.bilagor.category" | transloco }}</mat-label>
+    <mat-select formControlName="kategori">
+      <mat-option *ngFor="let typ of bilagaTyper" [value]="typ">{{ typ | prefix:"mk.bilagaTyp." | transloco }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button type="submit" color="primary" [disabled]="!canSave()" (click)="save()">{{ "mk.bilagor.uploadBilaga" | transloco }}</button>
+</form>
+<table mat-table matSort [dataSource]="bilagor" (matSortChange)="sortChange.emit($event)">
+  <ng-container matColumnDef="bilaga">
+    <th mat-header-cell mat-sort-header="filnamn" *matHeaderCellDef>{{ "mk.bilagor.bilaga" | transloco }}</th>
+    <td mat-cell *matCellDef="let bilaga">
+      <button mat-icon-button (click)="removeBilaga.emit(bilaga.id)">
+        <mat-icon>remove_circle_outline</mat-icon>
+      </button>
+      {{ bilaga.fil.filnamn }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="uppladdat">
+    <th mat-header-cell mat-sort-header="skapadDatum" *matHeaderCellDef>{{ "mk.bilagor.uploaded" | transloco }}</th>
+    <td mat-cell *matCellDef="let bilaga">{{ bilaga.fil.skapadDatum | date:"yyyy-MM-dd HH:mm:ss" }}</td>
+  </ng-container>
+  <ng-container matColumnDef="kategori">
+    <th mat-header-cell mat-sort-header="typ" *matHeaderCellDef>{{ "mk.bilagor.category" | transloco }}</th>
+    <td mat-cell *matCellDef="let bilaga">{{ bilaga.typ | prefix:"mk.bilagaTyp." | transloco }}</td>
+  </ng-container>
+  <ng-container matColumnDef="laddaHem">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let bilaga">
+      <span class="ladda-hem">
+        <button mat-button color="accent" (click)="downloadBilaga.emit(bilaga.fil.id)">
+          {{ "mk.bilagor.download" | transloco }}
+        </button>
+      </span>
+    </td>
+  </ng-container>
+  <tr mat-row *matRowDef="let bilaga; columns: columns;"></tr>
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+</table>

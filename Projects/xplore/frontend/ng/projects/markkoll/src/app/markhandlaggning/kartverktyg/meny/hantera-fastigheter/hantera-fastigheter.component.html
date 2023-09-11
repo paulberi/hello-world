@@ -1,0 +1,49 @@
+<div id="wrapper">
+  <div *ngIf="addedFastigheter.size === 0 && removedFastigheter.size === 0">
+    <h2>{{ "xp.kartverktyg.hanteraFastigheter.addOrRemove" | transloco }}</h2>
+    <p>{{ "xp.kartverktyg.hanteraFastigheter.clickToSelect" | transloco }}</p>
+
+    <div class="text-with-icon">
+      <mat-icon>help_outline</mat-icon>
+      <span>{{ "xp.kartverktyg.hanteraFastigheter.info" | transloco }}</span>
+   </div>
+  </div>
+  
+
+  <div *ngIf="addedFastigheter.size > 0" class="fastighet-list">
+    <h2><b>{{ "xp.kartverktyg.hanteraFastigheter.addedFastigheter" | transloco }}</b></h2>
+    <div *ngFor="let fastighet of addedFastighetsbeteckningar">
+      <div>
+        <button mat-icon-button (click)="fastighetSelected(fastighet[0])">
+          <mat-icon class="remove-button-icon">remove_circle_outline</mat-icon>
+        </button>
+        {{ fastighet[1] }}
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+  <div *ngIf="removedFastigheter.size > 0" class="fastighet-list">
+    <h2><b>{{ "xp.kartverktyg.hanteraFastigheter.removedFastigheter" | transloco }}</b></h2>
+    <div *ngFor="let fastighet of removedFastighetsbeteckningar">
+      <div>
+        <button mat-icon-button (click)="fastighetSelected(fastighet[0])">
+          <mat-icon class="remove-button-icon">remove_circle_outline</mat-icon>
+        </button>
+        {{ fastighet[1] }}
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+  <div class="actions" *ngIf="addedFastigheter.size > 0 || removedFastigheter.size > 0">
+    <button mat-button color="warn" class="cancel-button" (click)="cancel()">{{"xp.common.revert" | transloco}}</button>
+    <button mat-raised-button color="primary" (click)="save()">{{"xp.common.save" | transloco}}</button>
+  </div>
+</div>
+
+<ng-template #cancelDialog>
+  <p>{{ "xp.kartverktyg.cancelChanges" | transloco }}</p>
+  <mat-dialog-actions align="end">
+    <button mat-flat-button color="primary" mat-dialog-close>{{ "xp.common.cancel" | transloco }}</button>
+    <button mat-raised-button [mat-dialog-close]="true">{{ "xp.common.ok" | transloco }}</button>
+  </mat-dialog-actions>
+</ng-template>

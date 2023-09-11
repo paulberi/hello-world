@@ -1,0 +1,15 @@
+<layer>
+  <name>intrang_mittpunkt</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:intrang_mittpunkt</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:intrang_mittpunkt</name>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-05-23 12:51:07.756 UTC</dateCreated>
+</layer>

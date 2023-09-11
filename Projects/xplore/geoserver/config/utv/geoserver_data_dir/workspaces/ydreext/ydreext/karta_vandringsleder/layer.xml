@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_vandringsleder</name>
+  <id>LayerInfoImpl--192f91bd:16e7d528ba7:-3fe2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-297bac16:1798af1b433:-7e42</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--192f91bd:16e7d528ba7:-3fe3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateModified>2021-05-21 07:35:06.837 UTC</dateModified>
+</layer>

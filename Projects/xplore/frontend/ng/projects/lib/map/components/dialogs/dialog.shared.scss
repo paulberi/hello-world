@@ -1,0 +1,32 @@
+.modal-dialog {
+  padding: 20px 20px 30px 20px;
+  overflow: hidden;
+}
+
+.title-row {
+  display: inline-block;
+  width: 100%;
+}
+
+#content-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -ms-overflow-style: none;
+}
+
+h1, h2, h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#logo {
+  height: 32px;
+  width: 32px;
+  float: right;
+}
+
+@media only screen and (max-height: 600px) {
+  .mat-dialog-content{
+    max-height: 50vh;
+  }
+}

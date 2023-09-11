@@ -1,0 +1,47 @@
+.today {
+  border: solid 1px white;
+}
+
+.day-date {
+  background: #08496d;
+  display: flex;
+  max-width: 80px;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  margin:3px;
+  border-radius: 8px;
+  color: white;
+}
+
+.meals-content {
+  display: rows;
+  width: 100%;
+}
+
+.day-meals {
+  background: #08496d;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: left;
+  align-items: center;
+  margin: 5px;
+  border-radius: 8px;
+  color: white;
+}
+
+.day-content {
+  background: #063249;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  max-width: 800px;
+  min-width: 800px;
+  max-height: 140px;
+  min-height: 140px;
+  border-radius: 8px;
+  margin: 3px;
+  padding: 20px;
+}

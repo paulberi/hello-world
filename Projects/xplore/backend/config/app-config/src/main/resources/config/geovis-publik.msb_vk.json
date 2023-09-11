@@ -1,0 +1,235 @@
+{
+  "app": {
+    "sok": {
+      "allowedModes": [
+        "Address"
+      ]
+    },
+    "logo": {
+      "url": "https://msb.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-dark-theme",
+    "copyright": "© Lantmäteriet, © Metria",
+    "rightBottomPanelElements": {
+      "egenHjalp_Path": "/storage/html/help-msb-vk.html",
+      "omKarta_Path": "/storage/html/about-dialog-msb-vk.html",
+      "infoOmFastighetsgranser": "",
+      "laddaNedKartmaterial": [
+        {
+          "mapName": "Maxtemperatur_2017_2022",
+          "title": "Maxtemperatur_2017_2022",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/LST_maxtemp_2017_2022.zip",
+          "lanCatalogPath": "",
+          "kommunCatalogPath": "",
+          "raster": false,
+          "vector": false
+        },
+        {
+          "mapName": "Maxtemperatur_2020_2022",
+          "title": "Maxtemperatur_2020_2022",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/LST_maxtemp_2020_2022.zip",
+          "lanCatalogPath": "",
+          "kommunCatalogPath": "",
+          "raster": false,
+          "vector": false
+        },
+        {
+          "mapName": "Maxtemperatur_2019_2021",
+          "title": "Maxtemperatur_2019_2021",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/LST_maxtemp_2019_2021.zip",
+          "lanCatalogPath": "",
+          "kommunCatalogPath": "",
+          "raster": false,
+          "vector": false
+        },
+        {
+          "mapName": "Maxtemperatur_2018_2020",
+          "title": "Maxtemperatur_2018_2020",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/LST_maxtemp_2018_2020.zip",
+          "lanCatalogPath": "",
+          "kommunCatalogPath": "",
+          "raster": false,
+          "vector": false
+        },
+        {
+          "mapName": "Maxtemperatur_2017_2019",
+          "title": "Maxtemperatur_2017_2019",
+          "helaSverigeZipFileRasterPath": "/storage/zipfiler/helasverige/LST_maxtemp_2017_2019.zip",
+          "lanCatalogPath": "",
+          "kommunCatalogPath": "",
+          "raster": false,
+          "vector": false
+        },
+        {
+          "mapName": "Värmekarta",
+          "title": "Värmekarta",
+          "lanCatalogPath": "/storage/zipfiler/varmekarta/lan/",
+          "kommunCatalogPath": "/storage/zipfiler/varmekarta/kommuner/",
+          "raster": true
+        }
+      ],
+      "exporteraKarta": true
+    },
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ]
+    },
+    "uistates": {
+      "measureUnit": "hectare"
+    }
+  },
+  "zoom": 0.7,
+  "center": [
+    496000,
+    6894000
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "thumbnailCoordinates": [
+    516987,
+    6409208
+  ],
+  "groups": [
+    {
+      "name": "temperatur",
+      "title": "Temperatur",
+      "expanded": true
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "import": "msb:LST_maxtemp_2017_2022@mm-export",
+      "group": "temperatur",
+      "abstract": {
+        "text": "Ett heltäckande raster (30 m cellstorlek) med maxtemperatur mellan 2017-06-02 och 2022-08-24."
+      }
+    },
+    {
+      "import": "msb:LST_maxtemp_2020_2022@mm-export",
+      "group": "temperatur",
+      "abstract": {
+        "text": "Ett heltäckande raster (30 m cellstorlek) med maxtemperatur mellan 2020-06-01 och 2022-08-24."
+      }
+    },
+    {
+      "import": "msb:LST_maxtemp_2019_2021@mm-export",
+      "group": "temperatur",
+      "abstract": {
+        "text": "Ett heltäckande raster (30 m cellstorlek) med maxtemperatur mellan 2019-06-01 och 2021-08-30."
+      }
+    },
+    {
+      "import": "msb:LST_maxtemp_2018_2020@mm-export",
+      "group": "temperatur",
+      "abstract": {
+        "text": "Ett heltäckande raster (30 m cellstorlek) med maxtemperatur mellan 2018-06-01 och 2020-07-29."
+      }
+    },
+    {
+      "import": "msb:LST_maxtemp_2017_2019@mm-export",
+      "group": "temperatur",
+      "abstract": {
+        "text": "Ett heltäckande raster (30 m cellstorlek) med maxtemperatur mellan 2017-06-02 och 2019-08-30."
+      }
+    },
+    {
+      "import": "topowebb@lantmateriet-export",
+      "group": "background",
+      "visible": true,
+      "mapKey": {
+        "visible": false
+      }
+    },
+    {
+      "import": "topowebb_nedtonad@lantmateriet-export",
+      "group": "background",
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      }
+    },
+    {
+      "import": "Ortofoto_0.5_och_Ortofoto_0.25@lantmateriet-export",
+      "group": "background",
+      "visible": false,
+      "mapKey": {
+        "visible": false
+      }
+    }
+  ],
+  "tileSize": [
+    256,
+    256
+  ],
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    2293.7599999999998,
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "infoTemplates": {},
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}
+
+

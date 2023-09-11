@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>{{ "mk.agareConfirmationDialog.getMarkagare" | transloco }}</h2>
+
+<div mat-dialog-content>
+  <p>{{ "mk.agareConfirmationDialog.fetchingOwners" | transloco: { fastigheter: numOfFastigheter } }}</p>
+  <p>{{ "mk.agareConfirmationDialog.confirmMessage" | transloco }}</p>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">{{ "xp.common.cancel" | transloco }}</button>
+  <xp-spinner-button (spinnerButtonClick)="onConfirm()" [isLoading]="isFetchingAgare" color="secondary">
+    {{ "xp.common.ok" | transloco }}
+  </xp-spinner-button>
+</div>

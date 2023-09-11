@@ -1,0 +1,22 @@
+<div class="row">
+  <span class="col-6"></span>
+  <div class="col-6">
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>{{ "mk.projektlista.filterOn" | transloco }}</mat-label>
+        <mat-select [multiple]="true" formControlName="filter">
+          <mat-option *ngFor="let f of filter" [value]="f">{{ ("mk.projektloggFilter." + f) | transloco }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+<mk-projektlogg [projektlogg]="projektloggPage?.content"
+                (filDownload)="filDownload.emit($event)"
+                (sortDirectionChange)="sortDirectionChange.emit($event)">
+</mk-projektlogg>
+<mat-paginator [length]="projektloggPage?.totalElements"
+               [pageIndex]="projektloggPage?.number"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="this.pageChange.emit($event)">
+</mat-paginator>

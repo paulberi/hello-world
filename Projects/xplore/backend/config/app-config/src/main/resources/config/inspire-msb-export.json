@@ -1,0 +1,52 @@
+{
+  "layers": [
+    {
+      "id": "US_civilProtectionSite",
+      "type": "tile",
+      "group": "allmant",
+      "title": "Skyddsrum",
+      "source": {
+        "url": "https://inspire.msb.se/geoserver/wms?",
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "US_civilProtectionSite",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "queryable": true,
+      "infoTemplate": "skyddsrum-info"
+    }
+  ],
+  "infoTemplates": {
+    "skyddsrum-info": {
+      "properties": [
+        {
+          "name": "name",
+          "label": "Skyddsrum"
+        },
+        {
+          "name": "numberofoccupants",
+          "label": "Antal platser"
+        },
+        {
+          "name": "servicelocationbyadress",
+          "label": "Adress"
+        },
+        {
+          "name": "additionallocationdescription",
+          "label": "Fastighet"
+        },
+        {
+          "name": "servicelocationbymunicipality",
+          "label": "Kommun"
+        },
+        {
+          "name": "pointofcontact",
+          "label": "Kontakt"
+        }
+      ]
+    }
+  }
+}

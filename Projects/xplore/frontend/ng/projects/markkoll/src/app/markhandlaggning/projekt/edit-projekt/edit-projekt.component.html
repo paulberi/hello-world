@@ -1,0 +1,116 @@
+<form [formGroup]="form">
+  <div class="row">
+    <mat-form-field>
+      <mat-label>{{"mk.createProjekt.projektName" | transloco}}</mat-label>
+      <input matInput formControlName="namn" required>
+      <mat-error *ngIf="form.controls.namn.hasError('required')">
+        {{"xp.common.fieldMandatory" | transloco}}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Projektnummer</mat-label>
+      <input matInput formControlName="projektnummer" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Uppdragsnummer</mat-label>
+      <input matInput formControlName="uppdragsnummer" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>{{ "mk.fiberInfo.ort" | transloco }}</mat-label>
+      <input matInput formControlName="ort" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <mat-form-field>
+        <mat-label>{{"mk.createProjekt.projektType" | transloco}}</mat-label>
+        <mat-select formControlName="projektTyp" required>
+          <mat-option *ngFor="let projekttyp of projektTypOptions()" [value]="projekttyp">
+            {{ ("mk.projekttyp." + projekttyp) | transloco}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.controls.projektTyp.hasError('required')">
+          {{"xp.common.fieldMandatory" | transloco}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-6">
+      <mat-form-field class="right">
+        <mat-label>{{ "mk.fiberInfo.startDate" | transloco }}</mat-label>
+        <input
+          matInput
+          formControlName="startDatum"
+          [matDatepicker]="picker"
+          placeholder="YYYY-MM-DD"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker color="accent"></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Ledningssträcka</mat-label>
+      <input matInput formControlName="ledningsstracka"/>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>{{ "mk.projektinformation.createAgreementFor" | transloco }}</mat-label>
+      <mat-select formControlName="utskicksstrategi" required>
+        <mat-option *ngFor="let option of utskicksstrategiOptions" [value]="option">
+          {{ option | prefix:"mk.utskicksstrategi." | transloco }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Utbetalningskonto</mat-label>
+      <input matInput formControlName="utbetalningskonto" />
+    </mat-form-field>
+  </div>
+  <div class="row checkboxes" *ngIf="isFiberProjekt()">
+    <mat-checkbox formControlName="bidragsprojekt" class="col-3">Bidragsprojekt</mat-checkbox>
+    <mat-checkbox formControlName="varderingsprotokoll" class="col-3">Värderingsprotokoll</mat-checkbox>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ "mk.fiberInfo.description" | transloco }}</mat-label>
+      <textarea matInput rows="7" formControlName="beskrivning"> </textarea>
+    </mat-form-field>
+  </div>
+  <div class="row" *ngIf="ledningsagareOptions?.length > 0">
+    <mat-form-field>
+      <mat-label>{{ "mk.fiberInfo.ledningsagare" | transloco }}</mat-label>
+      <mat-select formControlName="ledningsagare">
+        <mat-option *ngFor="let ag of ledningsagareOptions" [value]="ag">{{ ag }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Beställare</mat-label>
+      <input matInput formControlName="bestallare" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Ansvarig projektledare</mat-label>
+      <input matInput formControlName="ansvarigProjektledare" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Ansvarig konstruktör</mat-label>
+      <input matInput formControlName="ansvarigKonstruktor" />
+    </mat-form-field>
+  </div>
+</form>

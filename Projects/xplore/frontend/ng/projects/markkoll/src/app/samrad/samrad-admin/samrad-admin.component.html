@@ -1,0 +1,44 @@
+<mk-samrad-karta *ngIf="projektId" [projektId]="projektId"></mk-samrad-karta>
+<div class="row justify-center main-content-container">
+    <div class="col-11 main-content">
+      <div class="top">
+        <div class="d-flex">
+          <p class="tillbaka">
+            <a class="tillbaka-link" [routerLink]="goBackRouterLink" routerLinkActive="router-link-active">
+              <mat-icon class="icon" inline="true">chevron_left</mat-icon>
+              {{ "xp.common.back" | transloco }}
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <h1>{{ projektnamn }}: {{ "mk.samrad.samrad" | transloco}}
+        <div class="efter-rubrik">
+
+          <div class="utkast" *ngIf="status==='UTKAST'">
+            <img src="../../../assets/utkast.svg" alt="utkast">
+            <p>{{ "mk.samrad.utkast" | transloco}}</p>
+          </div>
+
+          <div class="publicerat" *ngIf="status==='PUBLICERAD'">
+            <mat-icon>cloud_upload</mat-icon>
+            <p>{{ "mk.samrad.publicerat" | transloco}}</p>
+          </div>
+
+          <div class="arkiverat" *ngIf="status==='ARKIVERAD'">
+            <mat-icon>unpublished</mat-icon>
+            <p>{{ "mk.samrad.arkiverat" | transloco}}</p>
+          </div>
+
+        </div>
+      </h1>
+
+      <mat-tab-group>
+        <mat-tab label="{{'mk.samrad.samradNu' | transloco}}">
+          <mk-samrad-projekt *ngIf="loadingDone" [kundId]="kundId" [markkollProjekt]="markkollProjekt" [samradProjekt]="samradProjekt" [kundInformation]="kundInformation" (updateSamrad)="updateSamrad($event)"></mk-samrad-projekt>
+        </mat-tab>
+      </mat-tab-group>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+

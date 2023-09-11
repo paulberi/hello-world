@@ -1,0 +1,17 @@
+query activeAdministrator {
+  activeAdministrator @namedClient(name: "adminApi") {
+    id
+  }
+}
+
+mutation authenticate ($token: String!) {
+  authenticate(input: { mittMetriaStrategy: { token: $token } }) @namedClient(name: "adminApi") {
+    __typename
+  }
+}
+
+mutation logout {
+  logout @namedClient(name: "adminApi")  {
+    success
+  }
+}

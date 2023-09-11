@@ -1,0 +1,11 @@
+/generated
+/.angular/cache
+/build_tmp
+test-report.html
+junit.xml
+frontend.code-workspace
+debug.log
+coverage/
+documentation.json
+build-storybook.log
+*.generated.ts*

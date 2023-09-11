@@ -1,0 +1,23 @@
+<layer>
+  <name>utredningsomrade</name>
+  <id>LayerInfoImpl--44886edc:170678e9d2f:b34</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--44886edc:170678e9d2f:b3e</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+    </style>
+    <style>
+      <id>StyleInfoImpl--44886edc:170678e9d2f:b3e</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--44886edc:170678e9d2f:b33</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

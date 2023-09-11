@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_fiskekort</name>
+  <id>LayerInfoImpl-b115b681:c7991852f91:-b46a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-cd58c1db:71cf076b736:-696a</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

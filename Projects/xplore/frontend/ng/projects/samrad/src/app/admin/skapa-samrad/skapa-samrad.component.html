@@ -1,0 +1,113 @@
+<div *ngIf="deleteSamradWarning">
+  <xp-message
+  severity="warning"
+  text="{{'sr.info.bekraftaTabort' | transloco}}"
+  [isClosable]="true"
+  [isActionable]="true"
+  actionLabel="OK"
+  (onClose)="onClose($event)"
+  (onAction)="onAction($event)"
+></xp-message>
+</div>
+<div *ngIf="cannotBeDeleted">
+  <xp-message
+severity="error"
+text="{{'sr.info.kanInteTaBortSamrad' | transloco}}"
+[isClosable]="true"
+(onClose)="onClose($event)"
+></xp-message>
+</div>
+<div class="centered-content">
+        <button (click)="returnToAdmin()" mat-button class="bdirection" >
+            <span class="material-icons tillbakaKnappIcon">chevron_left</span>
+            <span class="tillbakaKnappNamn" >{{"sr.knappar.tillbaka" | transloco}}</span>
+        </button>
+    
+        <form [formGroup]="form">
+        <h1>{{(editMode ? "sr.info.uppdateraSamrad" : "sr.info.samrad") | transloco}}</h1>
+
+        <div class="row" style="display: flex; flex-direction:column;">
+            <mat-form-field required class="col-6">
+              <mat-label>{{'sr.label.namn' | transloco}}</mat-label>
+              <input matInput formControlName="namn"/>
+            </mat-form-field>
+            <mat-error *ngIf="!form.controls['namn'].valid && form.controls['namn'].touched || ingenNamn">
+              {{ 'sr.formError.requiredForms' | transloco }}
+            </mat-error>
+          </div>
+
+          <div class="row">
+            <mat-form-field appearance="fill" class="ingress underline">
+              <mat-label>{{ "sr.label.ingress"  | transloco}}</mat-label>
+              <textarea matInput rows="5" formControlName="ingress" cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"></textarea>
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <mat-form-field appearance="fill" class="brodtext underline">
+              <mat-label>{{ "sr.label.brodtext" | transloco}}</mat-label>
+              <textarea matInput rows="10" formControlName="brodtext" cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"> </textarea>
+            </mat-form-field>
+          </div>
+
+            <div class="upload" >
+              <xp-dropzone formControlName="picture" 
+                  color="#c7dedb"
+                  [isMultipleFilesAllowed]="true"
+                  label="{{'sr.label.dropzone' | transloco}}"
+                  (change)="onFileChanged($event)"
+              ></xp-dropzone>
+           </div>
+
+           <div *ngIf="uploadHeader">
+            <h2 >{{"sr.info.laddaupp" | transloco}}</h2>
+            <div class="listaAvUppladdningar" *ngFor="let file of fileList">
+              <button *ngIf="file.name" mat-button class="uploadButton" id="uploadButton" (click)="angraUppladdning($event)">
+                <span class="material-icons uploadKnappIcon">
+                  highlight_off
+                </span><span class="uploadKnappNamn">{{file.name}}</span>
+                </button>
+            </div>
+
+
+          <div>
+            <span layout="row"><hr flex/></span>
+          </div>
+        </div>
+
+           <div class="buttons">
+
+            <xp-spinner-button *ngIf="editMode"
+            id="tabort-knapp"
+            color="secondary"
+            type="flat"
+            (spinnerButtonClick)="onDelete()">
+            {{"sr.knappar.tabort" | transloco}}
+            </xp-spinner-button>
+
+            <xp-spinner-button *ngIf="editMode"
+            id="avpublicera-knapp"
+            color="secondary"
+            (spinnerButtonClick)="avpubliceraSamrad()">
+            {{"sr.knappar.avpublicera" | transloco}}
+            </xp-spinner-button>
+
+            <xp-spinner-button
+            id="publiceraknapp"
+            color="secondary"
+            [isDisabled]="isDisabled">
+            {{"sr.knappar.publicera" | transloco}}
+            </xp-spinner-button>
+
+            <xp-spinner-button 
+            class="sparaknapp"
+            [isDisabled]="isDisabled"
+            (spinnerButtonClick)="submit()">
+            {{"sr.knappar.spara" | transloco}}
+            </xp-spinner-button >
+            
+           </div>
+    </form>
+</div>

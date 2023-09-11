@@ -1,0 +1,21 @@
+.card {
+    margin-top: 100px;
+}
+
+.delete {
+    background-color: rgb(178, 87, 87);
+}
+
+.edit {
+    background-color: rgb(57, 127, 127);
+}
+
+.createUser {
+    margin-top: 3%;
+    margin-left: 89%;
+}
+
+.createUserButton {
+    border-radius: 5px;
+    background-color: rgb(57, 127, 127);
+}

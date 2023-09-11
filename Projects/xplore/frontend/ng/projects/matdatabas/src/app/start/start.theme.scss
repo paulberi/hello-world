@@ -1,0 +1,42 @@
+@import '@angular/material/theming';
+
+@mixin start-theme($theme, $information-background, $information-color) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $gray: #f5f2ed;
+  $green: #88bb39;
+
+  mdb-start {
+    .menu-header {
+      background: mat-color($primary);
+      color: mat-color($primary, default-contrast);
+    }
+
+    .content-box {
+      background: white;
+      border-color: #c3c3c3;
+    }
+
+    .quick-menu-container {
+      background: mat-color($primary);
+      color: mat-color($primary, default-contrast);
+    }
+
+    .quick-menu-container .mat-divider {
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .quick-menu-container a {
+      color: mat-color($primary, default-contrast);
+    }
+
+    .information-container {
+      background: $information-background;
+      color: $information-color;
+    }
+
+    .information-container .mat-divider {
+      border-top-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

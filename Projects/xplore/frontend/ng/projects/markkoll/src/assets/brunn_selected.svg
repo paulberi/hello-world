@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="40"
+   height="40"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="svg278"
+   sodipodi:docname="Group 617.svg"
+   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs282" />
+  <sodipodi:namedview
+     id="namedview280"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="5.6190476"
+     inkscape:cx="21.088983"
+     inkscape:cy="21"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg278" />
+  <g
+     id="Group_617"
+     data-name="Group 617"
+     transform="matrix(0.95238095,0,0,0.95238095,-921.61904,-234.28572)">
+    <circle
+       id="Ellipse_259"
+       data-name="Ellipse 259"
+       cx="20"
+       cy="20"
+       r="20"
+       transform="translate(968.7,247)"
+       fill="#8d08ef"
+       stroke="#000000"
+       stroke-width="2" />
+    <g
+       id="Group_608"
+       data-name="Group 608"
+       transform="translate(837.87,85.775)">
+      <g
+         id="Group_607"
+         data-name="Group 607"
+         transform="rotate(17,-478.46727,545.77355)">
+        <g
+           id="Path_406"
+           data-name="Path 406"
+           transform="matrix(0.891,-0.454,0.454,0.891,0,12.629)">
+          <path
+             id="Path_418"
+             data-name="Path 418"
+             d="M 8.18,0 23.68,2.733 27.818,15.891 0,10.987 Z"
+             fill="none" />
+          <path
+             id="Path_419"
+             data-name="Path 419"
+             d="M 9,2.056 3.334,9.662 25.091,13.5 22.226,4.39 9,2.056 M 8.181,0 23.681,2.733 27.819,15.892 0,10.986 Z"
+             fill="#f8f8f8" />
+        </g>
+        <path
+           id="Path_407"
+           data-name="Path 407"
+           d="M 0,5.06 16.548,0"
+           transform="translate(7.935,8.471)"
+           fill="none"
+           stroke="#f8f8f8"
+           stroke-width="1" />
+        <path
+           id="Path_408"
+           data-name="Path 408"
+           d="M 0,5.98 19.56,0"
+           transform="translate(7.177,10.557)"
+           fill="none"
+           stroke="#f8f8f8"
+           stroke-width="1" />
+        <path
+           id="Path_409"
+           data-name="Path 409"
+           d="M 0.124,0 0,10.545"
+           transform="translate(12.909,8.513)"
+           fill="none"
+           stroke="#f8f8f8"
+           stroke-width="1" />
+        <path
+           id="Path_410"
+           data-name="Path 410"
+           d="M 0,0 6.172,8.538"
+           transform="translate(17.126,7.264)"
+           fill="none"
+           stroke="#f8f8f8"
+           stroke-width="1" />
+      </g>
+    </g>
+  </g>
+</svg>

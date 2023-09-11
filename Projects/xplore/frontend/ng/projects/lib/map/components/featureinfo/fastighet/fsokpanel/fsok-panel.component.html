@@ -1,0 +1,66 @@
+<ng-container *ngIf="this.resultat.fastigheter.length > 0 || this.resultat.ritadYta">
+  <mat-expansion-panel class="mat-expansion-panel-no-padding mat-elevation-z" [togglePosition]="'before'"
+                       (expandedChange)="this.expanded = !this.expanded" [expanded]="true" ngDefaultControl>
+    <mat-expansion-panel-header class="left-indicator" collapsedHeight="'auto'" expandedHeight="'auto'">
+        <h3>Metria &nbsp;<span style="color: rgb(251, 90, 50)">|</span> &nbsp; FastighetSök</h3>
+      <div *ngIf="expanded" class="buttons">
+        <div class="toolbar-button" [class.active]="showSettings" (click)="onSettingsButtonClick($event)"
+             [ngClass]="{'contrast-background': showSettings, 'contrast-background-border': showSettings}">
+          <mat-icon>settings</mat-icon>
+        </div>
+        <div *ngIf="showExport||showOwnerList" class="toolbar-button" [class.active]="saveDialogRef"
+             (click)="onSaveButtonClick($event)" [matMenuTriggerFor]="saveMenu" matTooltip="Nedladdningsalternativ">
+          <mat-icon>save_alt</mat-icon>
+        </div>
+        <mat-menu #saveMenu="matMenu" class="mat-menu">
+          <button *ngIf="showExport" mat-menu-item (click)="onExportButtonClick($event)">
+            Exportera valda fastigheter
+          </button>
+          <button  *ngIf="showOwnerList" mat-menu-item (click)="onListButtonClick($event, null)">
+            Ägarförteckning för valda fastigheter 
+          </button>
+          <button  *ngIf="showOwnerList" mat-menu-item (click)="onAddressButtonClick($event)">
+            Adressetiketter för valda fastigheter
+          </button>
+        </mat-menu>
+      </div>
+    </mat-expansion-panel-header>
+    <ng-container *ngIf="expanded">
+      <div *ngIf="showSettings" class="contrast-background contrast-background-border settings-content">
+        <mat-checkbox (change)="onVisaFastighetsgranserCheckboxChange($event)"
+                      [checked]="visaFastighetsgranser">Markera valda fastigheter
+        </mat-checkbox>
+        <div><mat-checkbox (change)="onInverteraFastigheterCheckboxChange($event)"
+                      [checked]="inverteraFastigheter">Dölj omgivning
+        </mat-checkbox></div>
+        <div>
+          <span>Opacitet:</span>
+          <mat-slider [value]="currOpacity" [min]="0" [max]="1" [step]="0.01"
+                      (input)="onOpacityChange($event)"></mat-slider>
+        </div>
+      </div>
+      <ng-container *ngIf="grupperaFastigheter; else noGrouping">
+        <ng-container *ngFor="let fastighet of this.resultat.fastigheter">
+          <xp-fastighetsnamn-panel [objektId]="fastighet.objektId"
+                                   [beteckning]="fastighet.beteckning"
+                                   [delomraden]="fastighet.delomraden"
+                                   [externId]="fastighet.externId"
+                                   [detaljtyp]="fastighet.detaljTyp"
+                                   [visaDelomraden]="true"
+                                   [(expanded)]="extendedStateFastigheter[fastighet.objektId]"
+                                   (removeFastighet)="onRemoveFastighet($event)"
+                                   (removeDelomrade)="onRemoveDelomrade($event)"
+                                   (removeEgetRitatOmrade)="onRemoveEgetRitatOmrade()">
+          </xp-fastighetsnamn-panel>
+        </ng-container>
+      </ng-container>
+      <ng-template #noGrouping>
+        <ng-container *ngFor="let delomrade of this.resultat.delomraden">
+          <xp-fastighetsnamn-panel [objektId]="delomrade.objektId"
+                                   [beteckning]="delomrade.beteckning"
+                                   [delomraden]="[delomrade]"></xp-fastighetsnamn-panel>
+        </ng-container>
+      </ng-template>
+    </ng-container>
+  </mat-expansion-panel>
+</ng-container>

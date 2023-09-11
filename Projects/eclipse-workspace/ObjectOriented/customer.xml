@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <array class="java.lang.Object" length="1">
+    <void index="0">
+     <object class="uppgift5.Account">
+      <void property="balans">
+       <string>9008.0</string>
+      </void>
+      <void property="balans1">
+       <string>9000</string>
+      </void>
+      <void property="spar">
+       <string>8</string>
+      </void>
+      <void property="uttag">
+       <string>0</string>
+      </void>
+     </object>
+    </void>
+   </array>
+  </void>
+  <void method="add">
+   <array class="java.lang.Object" length="1">
+    <void index="0">
+     <object class="uppgift5.LoginInfor">
+      <void property="dob">
+       <string>hu</string>
+      </void>
+      <void property="kontoNr">
+       <string></string>
+      </void>
+      <void property="name">
+       <string>hello</string>
+      </void>
+      <void property="passWord">
+       <string></string>
+      </void>
+      <void property="userName">
+       <string></string>
+      </void>
+     </object>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

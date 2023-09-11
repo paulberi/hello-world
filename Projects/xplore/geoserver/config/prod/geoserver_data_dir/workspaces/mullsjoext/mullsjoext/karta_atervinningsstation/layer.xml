@@ -1,0 +1,17 @@
+<layer>
+  <name>karta_atervinningsstation</name>
+  <id>LayerInfoImpl--73452c24:178407ea4e2:-1cc6</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--73452c24:178407ea4e2:-1cc7</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-17 15:44:39.831 UTC</dateCreated>
+  <dateModified>2021-03-18 00:08:23.514 UTC</dateModified>
+</layer>

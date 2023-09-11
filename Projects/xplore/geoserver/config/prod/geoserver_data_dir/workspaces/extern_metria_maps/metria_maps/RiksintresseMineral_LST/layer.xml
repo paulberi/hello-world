@@ -1,0 +1,15 @@
+<layer>
+  <name>RiksintresseMineral_LST</name>
+  <id>LayerInfoImpl-60a6ef78:174f8b84431:-6c1d</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffb</id>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl-60a6ef78:174f8b84431:-6c1e</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

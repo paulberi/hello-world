@@ -1,0 +1,32 @@
+mat-tab-group{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.mat-h1{
+    margin-top: 2em;
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    cursor: pointer;
+}
+a:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+a:active{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+p{
+    margin-left: 10px;
+}
+.container{
+    margin-top: 3.5em;
+}
+.more {
+    float: right;
+  }
+.row{
+    width: 100%;
+}

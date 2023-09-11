@@ -1,0 +1,53 @@
+.title-background {
+  background-image: url("/assets/skapaprojekt.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+
+  h1 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba($color: black, $alpha: 1);
+  }
+}
+
+.onboarding {  
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.main-content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.file-upload {
+  margin-top: 24px;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+::ng-deep .xp-message {
+  margin-bottom: 16px;
+} 
+
+::ng-deep .mat-vertical-content {
+  padding: 16px 24px 16px 24px !important;
+}
+
+.spinner ::ng-deep .mat-spinner {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.mat-button {
+  font-weight: 600;
+}
+
+.add-users {
+  padding-bottom: 1rem;
+}

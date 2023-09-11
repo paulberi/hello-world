@@ -1,0 +1,16 @@
+<layer>
+  <name>FM_Paverkansomrade_Stoppomrade_for_vindkraftverk_MB3kap9</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-6955</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6956</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 13:40:39.954 UTC</dateCreated>
+</layer>

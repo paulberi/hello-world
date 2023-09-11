@@ -1,0 +1,91 @@
+<!-- Desktop/Tablet -->
+<div class="products-wrapper" *ngIf="(isMobile$ | async) === false">
+    <!-- STICKY SÖK OCH FILTRERING -->
+    <div class="sticky filter-wrapper">
+        <mm-product-filter [facetValues]="facetValues" [activeFacetValueIds]="activeFacetValueIds$ | async"
+            [totalResults]="totalItems">
+        </mm-product-filter>
+    </div>
+    <div class="wrapper custom-wrapper">
+        <!-- BANNER -->
+        <mm-banner [fullImage]="bannerImageSource + '?preset=large'"
+            [tabletOrMobileImage]="bannerImageSource + '?preset=medium'" [altText]="bannerImageName"></mm-banner>
+
+        <div class="grey-background" *ngIf="!isLoading; else loading">
+
+            <!-- CHIPS -->
+            <div class="chips">
+                <mm-product-filter-chips [searchTerm]="{id: searchTerm, title: 'Sökresultat' , text: searchTerm}"
+                    [activeFacets]="activeFacets">
+                </mm-product-filter-chips>
+            </div>
+
+            <!-- PRODUKTER OCH FETCH MORE-KNAPP -->
+            <div class="products" *ngIf="products?.length; else noProducts">
+                <mm-product-list [products]="products"
+                    [showLoadMore]="products?.length && products?.length < totalItems"
+                    loadMoreButtonText="{{ 'mm.products.loadMore' | transloco }}" (loadMore)="fetchMore()"
+                    (selectedProduct)="navigateToProduct($event)">
+                </mm-product-list>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Mobile -->
+<mat-sidenav-container *ngIf="isMobile$ | async" class="sidenav-container container">
+    <mat-sidenav class="layout-sidenav from-bottom" #drawer position="end" fixedInViewPort>
+        <!-- Filtering -->
+        <mat-nav-list>
+            <mm-product-filter [facetValues]="facetValues" [activeFacetValueIds]="activeFacetValueIds$ | async"
+                [totalResults]="totalItems">
+            </mm-product-filter>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="container">
+
+        <mat-toolbar id="filter-toolbar">
+            <div class="mobile-filter-toggle-wrapper" (click)="drawer.toggle()">
+                <!-- *ÖPPNA FILTERMENYN* -->
+                <button type="button" color="accent" aria-label="Öppna filtering" mat-icon-button>
+                    <mat-icon>filter_alt</mat-icon>
+                </button>
+                <span>Filtrera</span>
+            </div>
+
+            <!-- CHIPS -->
+            <div class="chips" *ngIf="activeFacets?.length || searchTerm?.length">
+                <mm-product-filter-chips [searchTerm]="{id: searchTerm, title: 'Sökresultat', text: searchTerm}"
+                    [activeFacets]="activeFacets"></mm-product-filter-chips>
+            </div>
+        </mat-toolbar>
+
+        <!-- BANNER -->
+        <mm-banner [fullImage]="bannerImageSource + '?preset=large'"
+            [tabletOrMobileImage]="bannerImageSource + '?preset=medium'" [altText]="bannerImageName"></mm-banner>
+        <!-- PRODUKTER -->
+        <div class="grey-background wrapper" *ngIf="!isLoading; else loading">
+            <!-- PRODUKTER OCH FETCH MORE-KNAPP -->
+            <div *ngIf="products?.length; else noProducts">
+                <mm-product-list [products]="products"
+                    [showLoadMore]="products?.length && products?.length < totalItems"
+                    loadMoreButtonText="Visa fler produkter" (loadMore)="fetchMore()"
+                    (selectedProduct)="navigateToProduct($event)">
+                </mm-product-list>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #noProducts>
+    <div class="flex-center">
+        <h2 class="noProducts">{{ "mm.products.noProducts" | transloco }}</h2>
+    </div>
+</ng-template>
+
+<ng-template #loading>
+    <div class="flex-center">
+        <mat-spinner [diameter]="48"></mat-spinner>
+    </div>
+</ng-template>

@@ -1,0 +1,16 @@
+<layer>
+  <name>ramark_region</name>
+  <id>LayerInfoImpl--11b87d8d:175e78fb785:-63c9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--11b87d8d:175e78fb785:-63ca</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-02-16 16:57:33.700 UTC</dateCreated>
+</layer>

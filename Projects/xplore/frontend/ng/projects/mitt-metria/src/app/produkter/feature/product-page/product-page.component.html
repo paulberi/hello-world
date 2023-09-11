@@ -1,0 +1,26 @@
+<div class="background-image">
+  <div class="product-page-wrapper">
+    <mm-banner [fullImage]="productBannerImage + '?preset=large'"
+      [tabletOrMobileImage]="productBannerImage + '?preset=medium'" [altText]="productBannerName">
+    </mm-banner>
+    <div class="breadcrumbs">
+      <mm-breadcrumbs [items]="breadcrumbs"></mm-breadcrumbs>
+    </div>
+    <mat-divider></mat-divider>
+
+
+    <div *ngIf="orderStarted">
+      <div [ngSwitch]="configurationType">
+        <mm-konfigurationstyp-a *ngSwitchCase="'a'" [productId]="productId" [productName]="productName" (cancelOrder)="cancelOrder()"></mm-konfigurationstyp-a>
+        <mm-konfigurationstyp-b *ngSwitchCase="'b'" [productId]="productId" [productName]="productName" (cancelOrder)="cancelOrder()"></mm-konfigurationstyp-b>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+
+    <mm-product-information [productName]="productName" [productDescription]="productDescription"
+      [productPreamble]="productPreamble" [productDocuments]="productDocuments" [productImages]="productImages"
+      (startOrder)="startOrder()" (downloadDocument)="downloadDocument($event)"
+      [isButtonVisibleInHeader]="!orderStarted">
+    </mm-product-information>
+  </div>
+</div>

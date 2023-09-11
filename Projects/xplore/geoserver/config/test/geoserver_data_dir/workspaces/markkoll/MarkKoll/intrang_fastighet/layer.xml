@@ -1,0 +1,24 @@
+<layer>
+  <name>intrang_fastighet</name>
+  <id>LayerInfoImpl--1033da80:17955965d64:23b3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--1033da80:17955965d64:23b8</id>
+  </defaultStyle>
+  <styles class="linked-hash-set">
+    <style>
+      <id>StyleInfoImpl--1033da80:17955965d64:23b8</id>
+    </style>
+  </styles>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1033da80:17955965d64:23b2</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-04 10:04:29.667 UTC</dateCreated>
+  <dateModified>2021-05-18 10:58:59.289 UTC</dateModified>
+</layer>

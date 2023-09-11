@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h1>{{ "mm.orderHistory.myOrders" | transloco }}</h1>
+  <div *ngIf="!hasError; else error">
+    <div *ngIf="orders?.length || isLoading; else noOrders">
+      <mm-order-history [orders]="orders" [totalItems]="totalItems" [isLoading]="isLoading" [customer]="true"
+        [labelMatPaginator]="'Ordrar per sida'">
+      </mm-order-history>
+      <div [hidden]="isLoading">
+        <mat-paginator [length]="totalItems" [pageSize]="10" [pageSizeOptions]="[10, 20, 30]"
+          (page)="pageChange($event)">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noOrders>
+  <h2>{{ "mm.orderHistory.noOrders" | transloco }}</h2>
+</ng-template>
+
+<ng-template #error>
+  <xp-message severity="warning" [isClosable]="false">
+    <p>{{ this.errorMsg }}</p>
+  </xp-message>
+</ng-template>

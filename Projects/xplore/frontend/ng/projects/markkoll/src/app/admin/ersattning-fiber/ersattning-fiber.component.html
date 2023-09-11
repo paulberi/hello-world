@@ -1,0 +1,63 @@
+<xp-message severity="information" [isClosable]="false" [isActionable]="true" (onAction)="closeInfoMessage()" class="message-container" *ngIf="!infoClosed">
+  <h3>{{ "mk.admin.ersattningFiber.messageTitle" | transloco}}</h3>
+  <p>{{ "mk.admin.ersattningFiber.messageText" | transloco}}</p>
+</xp-message>
+<div class="row justify-center title">
+  <div class="col-11">
+    <h2>{{"mk.admin.ersattningFiber.title" | transloco}}</h2>
+    <div class="mk-ersattning-fiber-form">
+      <mk-ersattning-fiber-form *ngIf="kundDefaultConfig" [kundDefault]="true" [fiberConfig]="kundDefaultConfig" (fiberVarderingConfigChange)="defaultFiberVarderingConfigChange.emit($event.fiberVarderingConfig)"></mk-ersattning-fiber-form>
+    </div>
+  </div>
+</div>
+<div class="row createConfig justify-center">
+  <div class="col-11">
+    <h2>{{"mk.admin.ersattningFiber.ownerWithSpecialCompensation" | transloco}}</h2>
+    <div class="row">
+      <div class="col-5">
+        <form class="row" [formGroup]="form">
+          <div class="col-6">
+            <mat-form-field floatLabel="always">
+              <mat-label>{{'mk.admin.ersattningFiber.namn' | transloco}}</mat-label>
+              <input type="text" matInput formControlName="namn">
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field class="right" floatLabel="always">
+              <mat-label>{{'mk.admin.ersattningFiber.personEllerOrgNummer' | transloco}}</mat-label>
+              <input type="text" matInput formControlName="personEllerOrgNummer">
+            </mat-form-field>
+          </div>
+          
+        </form>
+        <div class="row justify-end">
+          <button mat-button color="warn">{{'xp.common.cancel' | transloco}}</button>
+          <button mat-button color="accent" (click)="submit()">{{'xp.common.add' | transloco}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-center">
+  <div class="col-12">
+    <mat-accordion>
+      <mat-expansion-panel class="expansion-panel mat-elevation-z3"
+                          *ngFor="let config of kundAvtalspartConfig" #mep>
+        <mat-expansion-panel-header> 
+          <mat-panel-title class="d-flex">
+            <span class="mat-h2 col-3 panel-title" >{{ config.namn }}</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+          <div class="mk-ersattning-fiber-form row justify-center">
+            <div class="col-11">
+              <h2>{{"mk.admin.ersattningFiber.specificCompensationForOwner" | transloco}}</h2>
+              <mk-ersattning-fiber-form [fiberConfig]="config" (fiberVarderingConfigDelete)="fiberVarderingConfigDelete.emit($event)" (fiberVarderingConfigChange)="fiberVarderingConfigChange.emit($event)" (cancel)="mep.expanded = false;"></mk-ersattning-fiber-form>
+            </div>
+          </div>
+        </ng-template>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<layer>
+  <name>resultat_mb</name>
+  <id>LayerInfoImpl--dac4a42:16a01c8aa52:-7f7a</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--76836d4a:16b88b21634:b5b</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--dac4a42:16a01c8aa52:-7f7b</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

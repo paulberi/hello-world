@@ -1,0 +1,16 @@
+<layer>
+  <name>HAV_Riksintresse_Yrkesfiske_sjoar_MB3kap5</name>
+  <id>LayerInfoImpl--16ee1b80:174d9943373:-696f</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--16ee1b80:174d9943373:-6970</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2020-10-06 13:19:41.124 UTC</dateCreated>
+</layer>

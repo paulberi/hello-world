@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_livsmedelsbutik</name>
+  <id>LayerInfoImpl--6027819f:1799ececb1b:7fd1</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--6027819f:1799ececb1b:7fd0</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-25 13:17:17.920 UTC</dateCreated>
+</layer>

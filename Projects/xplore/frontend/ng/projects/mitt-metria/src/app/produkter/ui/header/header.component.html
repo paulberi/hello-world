@@ -1,0 +1,4 @@
+<div class="row justify-space-between" id="header">
+    <h1>{{ header }}</h1>
+    <button id="button" *ngIf="isButtonVisible" mat-flat-button [color]="buttonColor" (click)="buttonClick.emit()">{{ buttonText }}</button>
+</div>

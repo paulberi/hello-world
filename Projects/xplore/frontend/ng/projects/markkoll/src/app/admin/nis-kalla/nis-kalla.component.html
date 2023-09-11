@@ -1,0 +1,21 @@
+<mat-card *ngIf="form">
+  <h2>{{ "mk.admin.NISCard.title" | transloco }}</h2>
+  <p>{{ "mk.admin.NISCard.body" | transloco }}</p>
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-6">
+      <h2>{{ "mk.admin.NISCard.elnat" | transloco }}</h2>
+        <div>
+          <mat-slide-toggle formControlName="dpPower">dpPower</mat-slide-toggle>
+        </div>
+        <div>
+          <mat-slide-toggle formControlName="trimble">Trimble</mat-slide-toggle>
+        </div>
+      </div>
+      <div class="col-6">
+        <h2>{{ "mk.admin.NISCard.fiber" | transloco }}</h2>
+        <mat-slide-toggle formControlName="dpCom">dpCom</mat-slide-toggle>
+      </div>
+    </div>
+  </form>
+</mat-card>

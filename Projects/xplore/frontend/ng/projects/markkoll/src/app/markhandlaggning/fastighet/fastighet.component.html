@@ -1,0 +1,205 @@
+<mat-tab-group dynamicHeight mat-align-tabs="start" [selectedIndex]="tabIndex">
+  <mat-tab [label]="'mk.fastighetsinformation.avtalTitle' | transloco">
+    <!-- Om man byter tab så kommer alla animationer i den här tabben att hamna i ett void-state, vilket orsakar problem då man kan hamna
+    i "fel" state när man byter tillbaka till tabben. Vi slipper det om vi lazyloadar innehållet i tabben med matTabContent. -->
+    <ng-template matTabContent>
+      <div class="tab-content">
+        <ng-container *ngTemplateOutlet="avtalTab"></ng-container>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab [label]="'mk.fastighetsinformation.varderingTitle' | transloco" *ngIf="projekt && showVarderingsprotokoll">
+    <div class="varderingsprotokoll">
+      <mk-varderingsprotokoll
+        *ngIf="vp && avtal"
+        [vp]="vp"
+        [avtalMetadata]="avtal.metadata"
+        [uppdragsnummer]="uppdragsnummer"
+        [projektId]="projektId"
+        [avtalId]="avtal.id"
+      ></mk-varderingsprotokoll>
+      <mk-varderingsprotokoll-fiber
+        *ngIf="fiberVp && avtal"
+        [vp]="fiberVp"
+        [avtalMetadata]="avtal.metadata"
+        [uppdragsnummer]="uppdragsnummer"
+        [projektId]="projektId"
+        [avtalId]="avtal.id"
+      ></mk-varderingsprotokoll-fiber>
+    </div>
+  </mat-tab>
+
+  <mat-tab [label]="'mk.fastighetsinformation.loggbokTitle' | transloco">
+    <mk-loggbok-tab [loggbok]="avtal?.loggbok"
+                    [anteckningar]="avtal?.anteckning"
+                    [savingAnteckningar]="isSavingAnteckningar"
+                    (anteckningarChange)="anteckningarChange.emit($event)">
+    </mk-loggbok-tab>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+
+<ng-template #avtalTab>
+
+  <!-- Bekräfta versionsändring-->
+  <xp-message class="message-container" *ngIf="versionMessage"
+    [severity]="versionMessage.severity"
+    [isClosable]="false" [isActionable]="true"
+    (onAction)="confirmVersionChange.emit()"
+    [actionLabel]="versionMessage.actionLabel">
+  <h3>{{ versionMessage.title }}</h3>
+  <p>{{ versionMessage.text }}</p>
+  </xp-message>
+
+  <xp-message *ngIf="avtal?.outredd" severity="information" [isClosable]="false" [isActionable]="false" class="message-container">
+    <p>{{ "mk.fastighetsinformation.outreddfastighet" | transloco}}</p>
+  </xp-message>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-container">
+    <mk-avtal-progress-bar [avtalsstatus]="avtal?.status"></mk-avtal-progress-bar>
+  </div>
+
+  <!-- Xp-message -->
+  <div>
+    <xp-message *ngIf="andelIsFelaktig()" severity="warning" [isClosable]="false" [isActionable]="false" class="message-container">
+      <p>{{ "mk.fastighetsinformation.felaktigAndel" | transloco}}</p>
+    </xp-message>
+  </div>
+
+  <ng-container *ngIf="avtal && !avtal.outredd">
+
+    <!-- Lagfarna ägare -->
+    <mk-agare-table class="agare-table-container"
+                    [agare]="avtal?.lagfarnaAgare"
+                    [title]="'mk.fastighetsagaretable.owner' | transloco"
+                    [isSigneraAvtalVisible]="hasMultipleAgare()"
+                    (agareChange)="agareChange.emit($event)">
+      <ng-template let-element>
+        <mk-agare-edit [agare]="element"
+                       [showKontaktperson]="showKontaktperson()"
+                       [kontaktpersonTooltip]="'mk.fastighetsinformation.contactPersonTooltip' | transloco"
+                       (agareChange)="agareChange.emit($event)">
+        </mk-agare-edit>
+      </ng-template>
+    </mk-agare-table>
+    <div *ngIf="!hasLagfarnaAgare()" class="no-agare">
+      <p>{{ "mk.fastighetsinformation.markagarlistaMessage" | transloco }}</p>
+      <hr>
+    </div>
+
+    <!-- Tomträttsinnehavare -->
+    <mk-agare-table class="agare-table-container"
+                    *ngIf="hasTomtrattsinnehavare()"
+                    [agare]="avtal?.tomtrattsinnehavare"
+                    [title]="'mk.fastighetsagaretable.tomtratt' | transloco"
+                    [isSigneraAvtalVisible]="hasMultipleAgare()"
+                    [showHeaders]="false"
+                    (agareChange)="agareChange.emit($event)">
+      <ng-template let-element>
+        <mk-agare-edit [agare]="element" (agareChange)="agareChange.emit($event)"></mk-agare-edit>
+      </ng-template>
+    </mk-agare-table>
+
+    <!-- Ombud -->
+    <mk-agare-table class="agare-table-container"
+                    *ngIf="hasOmbud()"
+                    [agare]="avtal?.ombud"
+                    [title]="'mk.fastighetsagaretable.ombud' | transloco"
+                    [isSigneraAvtalVisible]="hasMultipleAgare()"
+                    [showHeaders]="false"
+                    (agareChange)="agareChange.emit($event)">
+      <ng-template let-element>
+        <mk-ombud-edit [ombud]="element"
+                       [showKontaktperson]="showKontaktperson()"
+                       [kontaktpersonTooltip]="'mk.fastighetsinformation.contactPersonTooltip' | transloco"
+                       (ombudChange)="agareChange.emit($event)"
+                       (delete)="ombudDelete.emit(element)">
+        </mk-ombud-edit>
+      </ng-template>
+    </mk-agare-table>
+
+    <!-- Lägg till ombud -->
+    <div class="row action-container justify-end">
+      <div class="col-3">
+        <div class="add-ombud">
+          <div [@expandOmbud]="ombudFormVisible? true : false" class="add-ombud-form">
+            <mk-ombud-add (ombudChange)="createOmbud($event)"
+                          (cancel)="cancelCreateOmbud()"
+                          [hidden]="!ombudFormVisible">
+            </mk-ombud-add>
+          </div>
+          <button class="add-ombud-button"
+                  mat-stroked-button
+                  *ngIf="!ombudFormVisible"
+                  (click)="ombudFormVisible = true"
+                  [disabled]="!hasLagfarnaAgare()">{{ "mk.fastighetsinformation.addOmbud" | transloco }}
+          </button>
+        </div>
+      </div>
+
+      <div class="col-9 actions-right">
+
+        <!-- Sätt avtalsstatus -->
+        <div class="avtalsstatus-container">
+          <span [ngClass]="{'disabled': !isAvtalsstatusEnabled()}">{{ "mk.fastighetsinformation.setFastighetStatus" | transloco }}:</span>
+          <mat-form-field>
+            <mat-label>{{"mk.fastighetslista.valjFranListan" | transloco}}</mat-label>
+            <mat-select (selectionChange)="avtalStatusChange.emit($event.value)" [disabled]="!isAvtalsstatusEnabled()">
+              <mat-option *ngFor="let status of avtalsstatusOptions" [value]="status">{{ status | prefix:"mk.avtal." | transloco }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Markera alla -->
+        <div class="check-all-container" *ngIf="hasMultipleAgare()">
+          <mat-checkbox
+            labelPosition="before"
+            [checked]="allAgareChecked()"
+            [indeterminate]="someAgareChecked()"
+            (change)="signAvtalCheckAllChange.emit($event.checked)"
+            >{{ 'xp.common.checkAll' | transloco }}</mat-checkbox>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skapa avtal -->
+    <div class="row skapa-avtal-container justify-end">
+      <xp-spinner-button [isLoading]="isGeneratingAvtal"
+                         (spinnerButtonClick)="onSkapaAvtal()"
+                         [isDisabled]="!isSkapaAvtalEnabled()">
+        {{ 'mk.fastighetsinformation.createPDF' | transloco }}
+      </xp-spinner-button>
+    </div>
+
+  </ng-container>
+
+  <div class="row intrang-karta-container">
+
+    <!-- Intrångsinformation -->
+    <div class="col-3 vertical-flex">
+      <mk-intrang *ngIf="isFiberProjekt && !showVarderingsprotokoll"
+                  class="intrangsinformation"
+                  [intrang]="avtal?.intrang"
+                  [ersattning]="avtal?.ersattning"
+                  (intrangChange)="intrangChange.emit($event)"
+                  [isSaving]="isSavingIntrang">
+      </mk-intrang>
+      <mk-virkesinlosen [skogligVardering]="this.avtal?.skogsfastighet"
+                        (skogligVarderingChange)="onSkogligVarderingChange()"
+                        [tillvaratagandeTyp]="this.avtal?.tillvaratagandeTyp"
+                        [rotnetto]="this.vp?.rotnetto"
+                        [egetTillvaratagande]="this.avtal?.egetTillvaratagande"
+                        [projektId]="this.projektId"
+                        [fastighetId]="this.fastighetId">
+      </mk-virkesinlosen>
+    </div>
+
+    <!-- Avtalskarta -->
+    <div class="col-5">
+      <mk-avtalskarta *ngIf="avtal?.avtalskarta" [avtalskarta]="avtal?.avtalskarta"></mk-avtalskarta>
+    </div>
+  </div>
+</ng-template>

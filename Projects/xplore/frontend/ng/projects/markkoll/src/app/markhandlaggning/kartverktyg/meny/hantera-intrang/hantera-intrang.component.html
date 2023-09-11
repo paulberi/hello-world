@@ -1,0 +1,42 @@
+<div class="row top-row" id="wrapper">
+  <h2 class="m0">{{ "mk.kartverktyg.hanteraIntrang.tabTitle" | transloco }}</h2>
+  <button mat-raised-button (click)="openToolbox()" [disabled]="verktygslada.isOpen$ | async">
+    <mat-icon svgIcon="open_panel" class="open-panel"></mat-icon>
+    <span>{{ "mk.kartverktyg.hanteraIntrang.openToolbox" | transloco }}</span>
+  </button>
+</div>
+
+<div id="wrapper">
+  <mat-tab-group>
+    <mat-tab [label]="'mk.kartverktyg.hanteraIntrang.editIntrang' | transloco">
+      <div class="tab-content">
+        <ng-template mkIntrangVerktygHost></ng-template>
+
+        <h3 class="m0">{{ "mk.kartverktyg.hanteraIntrang.yourChanges" |transloco }}</h3>
+        <div class="no-changes" *ngIf="changeLog?.length === 0">
+          <p>{{ "mk.kartverktyg.hanteraIntrang.noChanges" | transloco }}</p>
+          <img src="../../../../assets/inga_andringar.png" alt="No changes made yet">
+        </div>
+
+        <div class="added-change-row" *ngFor="let log of changeLog">
+          <p class="added-change-text m0"><b>{{ log.timestamp | date:'HH:mm:ss' }}</b> <span>{{ log.message }}</span></p>
+          <mat-divider></mat-divider>
+        </div>
+
+        <div class="col-12 actions save-actions">
+          <button mat-button (click)="onCancelChanges()" color="warn">{{ "xp.common.cancel" | transloco }}</button>
+          <button mat-raised-button (click)="onSaveChanges()" color="primary" [disabled]="changeLog?.length === 0">
+            {{ "xp.common.save" | transloco }}
+          </button>
+        </div>
+
+      </div>
+    </mat-tab>
+    <mat-tab [label]="'mk.kartverktyg.hanteraIntrang.teckenforklaring' | transloco">
+      <div class="teckenforklaring">
+        <h2>Under konstruktion</h2>
+        <img src="../../../../assets/under_construction.png" alt="Features coming soon">
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

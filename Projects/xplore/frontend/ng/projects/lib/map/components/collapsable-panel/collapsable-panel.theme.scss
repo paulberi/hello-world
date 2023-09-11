@@ -1,0 +1,24 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '../../../../../node_modules/@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin collapsable-panel-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  #collapse-button {
+    color: mat-color($foreground, text);
+    background-color: mat-color($background, background);
+  }
+
+  .collapse-panel {
+    background-color: mat-color($background, background);
+    color: mat-color($foreground, text);
+  }
+
+  #close-button {
+    color: mat-color($foreground, text);
+  }
+}

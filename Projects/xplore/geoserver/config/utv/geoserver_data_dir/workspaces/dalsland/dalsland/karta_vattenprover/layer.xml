@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_vattenprover</name>
+  <id>LayerInfoImpl--57951a1e:17c266dcf24:68bc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--57951a1e:17c266dcf24:68bb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-11-10 10:26:53.431 UTC</dateCreated>
+</layer>

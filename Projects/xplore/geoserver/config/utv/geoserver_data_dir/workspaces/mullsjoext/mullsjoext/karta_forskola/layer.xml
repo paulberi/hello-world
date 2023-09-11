@@ -1,0 +1,16 @@
+<layer>
+  <name>karta_forskola</name>
+  <id>LayerInfoImpl-363cc6e4:17821818b8e:288</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-363cc6e4:17821818b8e:287</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-03-12 10:13:43.558 UTC</dateCreated>
+</layer>

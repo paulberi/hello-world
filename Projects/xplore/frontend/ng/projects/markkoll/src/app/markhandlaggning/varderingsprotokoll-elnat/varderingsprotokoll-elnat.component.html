@@ -1,0 +1,425 @@
+<xp-message severity="information" [isClosable]="false" [isActionable]="false" class="message-container">
+  <h3>{{ "mk.varderingsprotokoll.messageTitle" | transloco}}</h3>
+  <p>{{ "mk.varderingsprotokoll.messageText" | transloco}}</p>
+</xp-message>
+<div class="row">
+  <div class="col-12">
+    <form [formGroup]="form" (keydown.enter)="$event.preventDefault()">
+      <div class="row">
+        <ng-container formGroupName="vpForm">
+          <mat-form-field class="fg-4">
+            <mat-label>{{"mk.varderingsprotokoll.uppdragsnummer" | transloco}}</mat-label>
+            <input matInput formControlName="uppdragsnummer" tabindex="-1"/>
+          </mat-form-field>
+
+          <mat-form-field class="fg-5" formGroupName="metadata">
+            <mat-label>{{"mk.varderingsprotokoll.ansvarigVarderareForetag" | transloco}}</mat-label>
+            <input matInput formControlName="varderingsmanOchForetag"/>
+          </mat-form-field>
+        </ng-container>
+      </div>
+
+      <div class="row">
+        <ng-container formGroupName="vpForm">
+          <mat-form-field class="fg-2" formGroupName="metadata">
+            <mat-label>{{"mk.varderingsprotokoll.spanningsniva" | transloco}}</mat-label>
+            <input matInput formControlName="spanningsniva" tabindex="-1"/>
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container class="fg-2" formGroupName="vpForm">
+          <mat-form-field formGroupName="metadata">
+            <mat-label>{{"mk.varderingsprotokoll.littera" | transloco}}</mat-label>
+            <input matInput formControlName="ledning"/>
+          </mat-form-field>
+        </ng-container>
+
+        <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+          <mat-label>{{"mk.varderingsprotokoll.markslag" | transloco}}</mat-label>
+          <input matInput formControlName="markslag"/>
+        </mat-form-field>
+        <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+          <mat-label>{{"mk.varderingsprotokoll.feedingStation" | transloco}}</mat-label>
+          <input matInput formControlName="matandeStation"/>
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+          <mat-label>{{"mk.varderingsprotokoll.stationName" | transloco}}</mat-label>
+          <input matInput formControlName="stationsnamn"/>
+        </mat-form-field>
+
+        <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+          <mat-label>{{"mk.varderingsprotokoll.fromStation" | transloco}}</mat-label>
+          <input matInput formControlName="franStation"/>
+        </mat-form-field>
+
+        <mat-form-field class="fg-3" formGroupName="avtalMetadataForm">
+          <mat-label>{{"mk.varderingsprotokoll.toStation" | transloco}}</mat-label>
+          <input matInput formControlName="tillStation"/>
+        </mat-form-field>
+      </div>
+
+      <!-- Är tänkt att finnas på plats innan release, så låter denna ligga kvar -->
+      <!-- <div class="row markera-alla">
+        <mat-checkbox><span class="radnr"></span>{{"mk.varderingsprotokoll.markAll" | transloco}}</mat-checkbox>
+      </div> -->
+
+      <div formGroupName="vpForm">
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.markledning)"
+                        (change)="onCheckboxChange($event.checked, vp?.markledning, markledningPush.bind(this))">
+            <span class="radnr">1.</span>{{"mk.varderingsprotokoll.schablonersattningMarkledning" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row" formArrayName="markledning">
+          <div class="col-12">
+            <div *ngFor="let markledning of markledningArray; let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.markledning, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput
+                        formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="fg-3">
+                  <mat-label>{{"mk.varderingsprotokoll.length" | transloco}}</mat-label>
+                  <input matInput
+                        type="number"
+                        min="0"
+                        formControlName="langd"/>
+                </mat-form-field>
+                <mat-form-field class="w-150">
+                  <mat-label>{{"mk.varderingsprotokoll.width" | transloco}}</mat-label>
+                  <mat-select formControlName="bredd">
+                    <mat-option *ngFor="let bredd of breddOptions" [value]="bredd">
+                      {{ bredd }}m
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="ersattning">
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input
+                        tabindex="-1"
+                        [readonly]="true"
+                        class="ersattning-falt"
+                        formControlName="ersattning"
+                        matInput/>
+                        <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.markledning?.length <= 3" class="add-row" mat-flat-button (click)="markledningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.punktersattning)"
+                        (change)="onCheckboxChange($event.checked, vp?.punktersattning, punkersattningPush.bind(this))">
+            <span class="radnr">2.</span>{{"mk.varderingsprotokoll.schablonersattningNatstationer" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row" formArrayName="punktersattning">
+          <div class="col-12">
+            <div *ngFor="let punktersattning of punktersattningArray; let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.punktersattning, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput
+                        formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="fg-3">
+                  <mat-label>{{"mk.varderingsprotokoll.type" | transloco}}</mat-label>
+                  <mat-select formControlName="typ">
+                    <mat-option *ngFor="let typ of punktersattningsTyp" [value]="typ">
+                      {{ typ | prefix:"mk.varderingsprotokoll.punktersattningsTyp." | transloco }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="w-150">
+                  <mat-label>{{"mk.varderingsprotokoll.quantity" | transloco}}</mat-label>
+                  <input matInput
+                        type="number"
+                        min="0"
+                        formControlName="antal"/>
+                </mat-form-field>
+                <mat-form-field class="ersattning">
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input
+                        formControlName="ersattning"
+                        tabindex="-1"
+                        [readonly]="true"
+                        class="ersattning-falt"
+                        matInput/>
+                        <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.punktersattning?.length <= 3" class="add-row" mat-flat-button (click)="punkersattningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+        <div class="row vp-rad">
+          <span class="radnr title-without-checkbox">3.</span>{{"mk.varderingsprotokoll.ersattningHinderAkermark" | transloco}}
+        </div>
+        <div class="row" formArrayName="hinderAkermark">
+          <div class="col-12">
+            <div *ngIf="vp?.hinderAkermark?.length === 0" class="hinder-akermark-info">
+              <i>{{ "mk.varderingsprotokoll.uploadAkermarkMessage" | transloco }}</i>
+            </div>
+            <div *ngFor="let hinderAkermark of hinderAkermarkArray let i=index">
+              <div [formGroupName]="i" class="row hinder-akermark">
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput formControlName="beskrivning" [errorStateMatcher]="matcher"/>
+                  <mat-error>{{ "mk.varderingsprotokoll.hinderAkermarkMissing" | transloco }}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="ersattning">
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input matInput type=number class="ersattning-falt" formControlName="ersattning" readonly/>
+                  <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.ledningSkogsmark)"
+                        (change)="onCheckboxChange($event.checked, vp?.ledningSkogsmark, ledningSkogsmarkPush.bind(this))">
+            <span class="radnr">4a.</span>{{"mk.varderingsprotokoll.ersattningLedningSkogsmark" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row" formArrayName="ledningSkogsmark">
+          <div class="col-12">
+            <div *ngFor="let ledningSkogsmark of ledningSkogsmarkArray let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.ledningSkogsmark, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput
+                        formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="ersattning" >
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input matInput
+                        type=number
+                        min="0"
+                        class="ersattning-falt"
+                        formControlName="ersattning"/>
+                        <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.ledningSkogsmark?.length <= 1" class="add-row" mat-flat-button (click)="ledningSkogsmarkPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+        <div class="row vp-rad">
+          <span class="radnr title-without-checkbox">4b.</span>{{"mk.varderingsprotokoll.rotnetto" | transloco}}
+        </div>
+        <div class="row">
+          <mat-form-field class="ersattning rotnetto">
+            <mat-label>{{"mk.varderingsprotokoll.sum" | transloco}}</mat-label>
+            <input class="right-align"
+                  matInput
+                  type="number"
+                  min="0"
+                  formControlName="rotnetto"/>
+            <span matSuffix>{{ 'mk.fastighetsinformation.currency' | transloco }}</span>
+          </mat-form-field>
+        </div>
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.ovrigtIntrang)"
+                        (change)="onCheckboxChange($event.checked, vp?.ovrigtIntrang, ovrigErsattningPush.bind(this))">
+            <span class="radnr">5.</span>{{"mk.varderingsprotokoll.ersattningOvrigtIntrang" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row" formArrayName="ovrigtIntrang">
+          <div class="col-12">
+            <div *ngFor="let ovrigtIntrang of ovrigtIntrangArray; let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.ovrigtIntrang, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="ersattning" >
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input matInput class="ersattning-falt" formControlName="ersattning" type=number/>
+                  <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.ovrigtIntrang?.length <= 1" class="add-row" mat-flat-button (click)="ovrigErsattningPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.ssbSkogsmark)"
+                        (change)="onCheckboxChange($event.checked, vp?.ssbSkogsmark, skogsmarkSSBPush.bind(this))">
+            <span class="radnr">6a.</span>{{"mk.varderingsprotokoll.ersattningLedningSsbSkogsmark" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field class="fg-1 prisomrade">
+              <mat-label>Prisområde</mat-label>
+              <mat-select formControlName="prisomrade">
+                <mat-option *ngFor="let prisomrade of prisomraden" [value]="prisomrade">
+                  {{ prisomrade | prefix:"mk.varderingsprotokoll.prisomrade." | transloco }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row" formArrayName="ssbSkogsmark">
+          <div class="col-12">
+            <div *ngFor="let ssbSkogsmark of ssbSkogsmarkArray; let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.ssbSkogsmark, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput
+                        formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="fg-2">
+                  <mat-label>{{"mk.varderingsprotokoll.length" | transloco}}</mat-label>
+                  <input matInput
+                        type="number"
+                        min="0"
+                        formControlName="langd"/>
+                </mat-form-field>
+                <mat-form-field class="fg-1">
+                  <mat-label>{{"mk.varderingsprotokoll.width" | transloco}}</mat-label>
+                  <input matInput
+                        type="number"
+                        min="0"
+                        formControlName="bredd"/>
+                </mat-form-field>
+                <mat-form-field class="ersattning" >
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input
+                        formControlName="ersattning"
+                        tabindex="-1"
+                        [readonly]="true"
+                        class="ersattning-falt"
+                        matInput/>
+                        <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.ssbSkogsmark?.length <= 3" class="add-row" mat-flat-button (click)="skogsmarkSSBPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+
+        <div class="row vp-rad">
+          <mat-checkbox [checked]="!isEmpty(vp?.ssbVaganlaggning)"
+                        (change)="onCheckboxChange($event.checked, vp?.ssbVaganlaggning, vaganlaggningSSBPush.bind(this))">
+            <span class="radnr">6b.</span>{{"mk.varderingsprotokoll.ersattningIntrangSsbVaganlaggning" | transloco}}
+          </mat-checkbox>
+        </div>
+        <div class="row" formArrayName="ssbVaganlaggning">
+          <div class="col-12">
+            <div *ngFor="let ssbVaganlaggning of ssbVaganlaggningArray; let i=index">
+              <div [formGroupName]="i" class="row">
+                <button mat-icon-button class="remove-row-button" (click)="removeAtIndex(vp.ssbVaganlaggning, i)">
+                  <mat-icon class="remove-row-icon">remove_circle_outline</mat-icon>
+                </button>
+                <mat-form-field class="fg-6">
+                  <mat-label>{{"mk.varderingsprotokoll.description" | transloco}}</mat-label>
+                  <input matInput
+                        formControlName="beskrivning"/>
+                </mat-form-field>
+                <mat-form-field class="fg-2">
+                  <mat-label>{{"mk.varderingsprotokoll.length" | transloco}}</mat-label>
+                  <input matInput
+                        type="number"
+                        min="0"
+                        formControlName="langd"/>
+                </mat-form-field>
+                <mat-form-field class="fg-1">
+                  <mat-label>{{"mk.varderingsprotokoll.zone" | transloco}}</mat-label>
+                  <mat-select formControlName="zon">
+                    <mat-option *ngFor="let zon of zon" [value]="zon">
+                      {{ zon | prefix:"mk.varderingsprotokoll.zon." | transloco }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="ersattning" >
+                  <mat-label>{{"mk.varderingsprotokoll.compensation" | transloco}}</mat-label>
+                  <input
+                        formControlName="ersattning"
+                        tabindex="-1"
+                        [readonly]="true"
+                        class="ersattning-falt"
+                        matInput/>
+                        <span class="suffixKr" matSuffix> kr</span>
+                </mat-form-field>
+              </div>
+            </div>
+            <button *ngIf="vp?.ssbVaganlaggning?.length <= 1" class="add-row" mat-flat-button (click)="vaganlaggningSSBPush()">+ {{"mk.varderingsprotokoll.addNewRow" | transloco}}</button>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="sammanstallning"><span class="radnr">7.</span>{{"mk.varderingsprotokoll.summary" | transloco}}</h3>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div formGroupName="config">
+              <mat-checkbox formControlName="forhojdMinimumersattning" class="config-checkbox">{{"mk.varderingsprotokoll.higherMinimiersattning" | transloco}}</mat-checkbox>
+              <mat-checkbox formControlName="ingenGrundersattning" class="config-checkbox">{{"mk.varderingsprotokoll.noGrundersattning" | transloco}}</mat-checkbox>
+              <mat-checkbox formControlName="lagspanning" class="config-checkbox">{{"mk.varderingsprotokoll.lagspanningIfNoMUA" | transloco}}</mat-checkbox>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="row justify-end">
+              <mat-form-field class="ersattning">
+                <mat-label>{{"mk.varderingsprotokoll.sumIntrangCompensation" | transloco}}</mat-label>
+                <input
+                      [value]="summering.intrangsErsattning > 0 ? summering.intrangsErsattning : ' '"
+                      tabindex="-1"
+                      [readonly]="true"
+                      class="ersattning-falt"
+                      matInput/>
+                      <span class="suffixKr" *ngIf="summering.intrangsErsattning > 0" matSuffix> kr</span>
+              </mat-form-field>
+            </div>
+            <div class="row summary-row">
+              <span class="fg-1">{{"mk.varderingsprotokoll.additionAsPerExpropriationslagen" | transloco}}</span>
+              <span class="ersattning">{{summering.tillaggExpropriationslagen}} kr</span>
+            </div>
+            <div class="row summary-row">
+              <span class="fg-1">{{"mk.varderingsprotokoll.specialCompensationAtAgreement" | transloco}}</span>
+              <span class="ersattning">{{summering.sarskildErsattning}} kr</span>
+            </div>
+            <div class="row summary-row">
+              <span class="fg-1">{{"mk.varderingsprotokoll.baseCompensationAtAgreement" | transloco}}</span>
+              <span class="ersattning">{{summering.grundersattning}} kr</span>
+            </div>
+            <div class="row summary-row total-ersattning-row">
+              <span class="total-ersattning fg-1">{{"mk.varderingsprotokoll.totalCompensation" | transloco}}</span>
+              <span class="ersattning">{{summering.totalErsattning}} kr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row col-12">
+    <mk-bilagor class="bilagor"
+                [projektId]="projektId"
+                [varderingsprotokollId]="vp?.id"
+                (bilagorChange)="bilagorChange.emit()">
+    </mk-bilagor>
+  </div>
+</div>

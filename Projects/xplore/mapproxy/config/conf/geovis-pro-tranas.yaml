@@ -1,0 +1,204 @@
+base: [../mapproxy.yaml, ../sources/kommuner.yaml]
+
+layers:
+- name: TranasFastigheter
+  title: Tranås fastigheter
+  sources: ['tranas_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+- name: TranasRattigheter
+  title: Tranås rättigheter
+  sources: ['tranas_mm:PBR_rattigheter']
+- name: TranasDistrikt
+  title: Tranås Distrikt
+  sources: ['tranas_mm:Distrikt']
+- name: TranasPBR_fornlamningar_bestammelser
+  title: Tranås Bestämmelser och fornlämningar
+  sources: ['tranas_mm:PBR_fornlamningar_bestammelser']
+- name: TranasAdministrativasymboler_FK
+  title: Tranås Administrativa symboler (FK)
+  sources: ['tranas_mm:Administrativasymboler_FK']
+- name: TranasMittlinjeredovisadesamfalligheter_FK
+  title: Tranås Mittlinjeredovisade samfalligheter (FK)
+  sources: ['tranas_mm:Mittlinjeredovisadesamfalligheter_FK']
+- name: TranasFastighetsgranspunkter_FK
+  title: Tranås Fastighetsgränspunkter (FK)
+  sources: ['tranas_mm:Fastighetsgranspunkter_FK']
+- name: TranasHillshade_z3
+  title: Tranås Hillshade_z3
+  sources: ['tranas_mm:Hillshade_z3']
+- name: TranasGaFastighetsgranserKvalitetsmarkta
+  title: Tranås Ga Fastighetsgränser - Kvalitetsmärkta
+  sources: ['tranas_ga_fgk:0,1']
+- name: TranasGaPagaendeDetaljplaner
+  title: Tranås Ga Pågående Detaljplaner
+  sources: ['tranas_ga_pdp:5']
+- name: TranasLsRiksintresseYrkesfiske_3_5
+  title: Tranås Ls Riksintresse - Yrkesfiske 3:5
+  sources: ['tranas_ls_riyf_3_5:HAV_Riksintresse_Yrkesfiske_hamn_MB3kap5,HAV_Riksintresse_Yrkesfiske_vattendrag_MB3kap5,HAV_Riksintresse_Yrkesfiske_sjoar_MB3kap5,HAV_Riksintresse_Yrkesfiske_hav_MB3kap5']
+- name: TranasLsRiksintresseKulturmiljovard_3_6
+  title: Tranås Ls Riksintresse - Kulturmiljövård 3:6
+  sources: ['tranas_ls_rikmv_3_6:RAA_Riksintresse_Kulturmiljovard_MB3kap6']
+- name: TranasLsRiksintresseNaturvard_3_6
+  title: Tranås Ls Riksintresse - Naturvård 3:6
+  sources: ['tranas_ls_rinv_3_6:NV_Riksintresse_Naturvard_LST_Harmonisering_MB3kap6,NV_Riksintresse_Friluftsliv_MB3kap6']
+- name: TranasNvRiksintresseFriluftsliv_3_6
+  title: Tranås NV Riksintresse - Friluftsliv 3:6
+  sources: ['tranas_nv_andra_skydd:Riksintresse_Friluftsliv']
+- name: TranasLsRiksintresseEnergiproduktion_3_8
+  title: Tranås Ls Riksintresse - Energiproduktion 3:8
+  sources: ['tranas_ls_riep_3_8:LST_Intresseomrade_till_riksintresse_vattenforsorjningMB3kap8,LST_Riksintresse_Slutforvaring_av_karnbransle_och_avfal_ MB3kap8,LST_Riksintresse_Industriell_produktion_MB3kap8,LST_Riksintresse_Energiproduktion_MB3kap8_kraftvarme,STEM_Riksintresse_Energiproduktion_MB3kap8_vindbruk_2015,LST_Riksintresse_Energiproduktion_MB3kap8_vattenkraft']
+- name: TranasTvRiksintresseKommunikationer_3_8
+  title: Tranås Tv Riksintresse - Kommunikationer 3:8
+  sources: ['tranas_tv_rik_3_8:jarnvag_framtida,jarnvag_planerad,farled,ankarplatser,djupaskyddankaromr,hamn_utvomr_preciserat,hamn_planerad_preciserat,hamn_befintlig_preciserat,hamn_befintlig,flygplats_planerad,flygplats_befintlig,flygplatsrullbana_planeradframtida,flygplatsrullbana_befintlig,flygplats_buller70,flygplats_buller55,flygplats_markbuller_6_18,flygplats_markbuller_18_22,flygplats_hinder,flygplats_msaytor,vagnat_framtida,vagnat_planerad,vagnat_befintlig,jarnvag_befintlig,jarnvaganlaggning_befintlig,jarnvaganlaggning_framtida_planerad,jarnvagstation_planerad,jarnvagstation_befintlig']
+- name: TranasLsPotentielltFororenadeOmraden
+  title: Tranås Ls Potentiellt förorenade omraden
+  sources: ['tranas_ls_pfo:LST_Potentiellt_fororenade_omraden']
+- name: TranasLmOrto2018
+  title: Tranås Lm Ortofoto 2018
+  sources: ['tranas_lm_ofa:orto_2018']
+- name: TranasLmOrto2018Fs
+  title: Tranås Lm Ortofoto 2018 fs
+  sources: ['tranas_lm_ofa:orto_2018_fs']
+- name: TranasLmOrto2017
+  title: Tranås Lm Ortofoto 2017
+  sources: ['tranas_lm_ofa:orto_2017']
+- name: TranasLmOrto2017Fs
+  title: Tranås Lm Ortofoto 2017 fs
+  sources: ['tranas_lm_ofa:orto_2017_fs']
+- name: TranasLmOrto2016
+  title: Tranås Lm Ortofoto 2016
+  sources: ['tranas_lm_ofa:orto_2016']
+- name: TranasLmOrto2016s
+  title: Tranås Lm Ortofoto 2016 fs
+  sources: ['tranas_lm_ofa:orto_2016fs']
+- name: TranasLmOrto2015
+  title: Tranås Lm Ortofoto 2015
+  sources: ['tranas_lm_ofa:orto_2015']
+- name: TranasLmOrto2015Fs
+  title: Tranås Lm Ortofoto 2015 fs
+  sources: ['tranas_lm_ofa:orto_2015_fs']
+- name: TranasLmOrto2014
+  title: Tranås Lm Ortofoto 2014
+  sources: ['tranas_lm_ofa:orto_2014']
+- name: TranasLmOrto2014Fs
+  title: Tranås Lm Ortofoto 2014 fs
+  sources: ['tranas_lm_ofa:orto_2014_fs']
+- name: TranasLmOrto2013
+  title: Tranås Lm Ortofoto 2013
+  sources: ['tranas_lm_ofa:orto_2013']
+- name: TranasLmOrto2013Fs
+  title: Tranås Lm Ortofoto 2013 fs
+  sources: ['tranas_lm_ofa:orto_2013_fs']
+- name: TranasLmOrto2012
+  title: Tranås Lm Ortofoto 2012
+  sources: ['tranas_lm_ofa:orto_2012']
+- name: TranasLmOrto2012s
+  title: Tranås Lm Ortofoto 2012 fs
+  sources: ['tranas_lm_ofa:orto_2012fs']
+- name: TranasLmOrto2011
+  title: Tranås Lm Ortofoto 2011
+  sources: ['tranas_lm_ofa:orto_2011']
+- name: TranasLmOrto2011Fs
+  title: Tranås Lm Ortofoto 2011 fs
+  sources: ['tranas_lm_ofa:orto_2011_fs']
+- name: TranasLmOrto2010
+  title: Tranås Lm Ortofoto 2010
+  sources: ['tranas_lm_ofa:orto_2010']
+- name: TranasLmOrto2010Fs
+  title: Tranås Lm Ortofoto 2010 fs
+  sources: ['tranas_lm_ofa:orto_2010_fs']
+- name: TranasLmOrto2009
+  title: Tranås Lm Ortofoto 2009
+  sources: ['tranas_lm_ofa:orto_2009']
+- name: TranasLmOrto2008
+  title: Tranås Lm Ortofoto 2008
+  sources: ['tranas_lm_ofa:orto_2008']
+- name: TranasLmOrto2007
+  title: Tranås Lm Ortofoto 2007
+  sources: ['tranas_lm_ofa:orto_2007']
+- name: TranasLmOrto2006
+  title: Tranås Lm Ortofoto 2006
+  sources: ['tranas_lm_ofa:orto_2006']
+- name: TranasPK
+  title: Tranås primärkarta
+  sources: [tranas_pk_cache]
+
+caches:
+  tranas_pk_cache:
+    grids: [sweref99tm]
+    sources: [tranas_pk]
+    format: image/png
+
+parts:
+  default_coverage: &coverage
+    clip: true
+    datasource: ../coverages/tranas_kommun.geojson
+    srs: 'EPSG:3006'
+
+sources:
+  tranas_ls_riyf_3_5:
+    type: wms
+    req:
+      url: https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_WMS_riksintressen_3_5_hav/mapserver/wmsserver?
+      transparent: true
+  tranas_ls_rikmv_3_6:
+    type: wms
+    req:
+      url: https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_WMS_riksintressen_3_6_raa/mapserver/wmsserver?
+      transparent: true
+    coverage: *coverage
+  tranas_ls_rinv_3_6:
+    type: wms
+    req:
+      url: https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_WMS_riksintressen_3_6_nv/mapserver/wmsserver?
+      transparent: true
+    coverage: *coverage
+  tranas_ls_riep_3_8:
+    type: wms
+    req:
+      url: https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_WMS_riksintressen_3_8_lst/mapserver/wmsserver?
+      transparent: true
+  tranas_ls_pfo:
+    type: wms
+    req:
+      url: https://ext-geodata.lansstyrelsen.se/arcgis/services/WMS/LST_wms_miljodata/MapServer/WMSServer?en
+      transparent: true
+    coverage: *coverage
+  tranas_nv_andra_skydd:
+    type: wms
+    req:
+      url: http://nvpub.vic-metria.nu/arcgis/services/Andra_skydd/MapServer/WmsServer?
+      version: 1.3.0
+      transparent: true
+    coverage: *coverage
+  tranas_tv_rik_3_8:
+    type: wms
+    req:
+      url: http://geo-ri.trafikverket.se/MapService/wms.axd/Riksintressen2012?
+      transparent: true
+    coverage: *coverage
+  tranas_lm_ofa:
+    type: wms
+    req:
+      url: http://tran0001:P5On0nk98Q4MDv@maps.lantmateriet.se/ortofoto-ar/wms/v1.1?
+      transparent: true
+    coverage: *coverage
+  tranas_ga_fgk:
+    type: wms
+    req:
+      url: https://vic-metria\kobwms:GG2936vh@gawms.vic-metria.nu/arcgis/services/Kob/kobyta_fkkvalitet/MapServer/WMSServer?
+      transparent: true
+    coverage: *coverage
+  tranas_ga_pdp:
+    type: wms
+    req:
+      url: https://vic-metria\kobwms:GG2936vh@gawms.vic-metria.nu/ArcGIS/services/Kob/Tranas_QGIS_2018/MapServer/WMSServer?
+      transparent: true
+    coverage: *coverage
+  tranas_pk:
+    type: wms
+    req:
+      url: https://vic-metria\testpkexplorer:G65Vw4AA@gawms.vic-metria.nu/arcgis/services/Kob/kobyta_pk/MapServer/WMSServer
+      layers: 0,1,2,5,11,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,51,52,53,54,55,57,58,59,60,61
+      version: 1.3.0
+      transparent: true
+    coverage: *coverage

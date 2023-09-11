@@ -1,0 +1,1525 @@
+{
+  "app": {
+    "logo": {
+      "url": "https://telia.se",
+      "icon": "/storage/logo/logo.png"
+    },
+    "theme": "metria-light-theme",
+    "copyright": "© Metria",
+    "components": {
+      "toolbars": [
+        {
+          "tooltip": "Selekteringsverktyg",
+          "icon_name": "crop_free",
+          "base_component": "base",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "click"
+              },
+              "tooltip": "Välj objekt",
+              "icon_name": "touch_app"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonintersection"
+              },
+              "tooltip": "Välj det som berör en polygon",
+              "icon_name": "border_clear"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawpolygonwithin"
+              },
+              "tooltip": "Välj det som ligger helt innanför en polygon",
+              "icon_name": "border_outer"
+            },
+            {
+              "mode": {
+                "actionMode": "select",
+                "featureSelectionMode": "drawlineintersection"
+              },
+              "tooltip": "Välj det som berör en linje",
+              "icon_name": "border_vertical"
+            }
+          ],
+          "allowDeselect": true,
+          "showSettings": true
+        },
+        {
+          "tooltip": "Mätverktyg",
+          "icon_name": "timeline",
+          "base_component": "measure",
+          "tools": [
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "area"
+              },
+              "tooltip": "Mät område",
+              "icon_name": "format_shapes"
+            },
+            {
+              "mode": {
+                "actionMode": "measure",
+                "measureMode": "distance"
+              },
+              "tooltip": "Mät avstånd",
+              "icon_name": "timeline"
+            }
+          ],
+          "allowDeselect": true
+        }
+      ],
+      "fsok-panel": {
+        "export": {
+          "visible": true
+        },
+        "ownerList": {
+          "visible": true
+        }
+      }
+    },
+    "uistates": {
+      "visaFastighetsgranser": true,
+      "grupperaFastigheter": true
+    }
+  },
+  "zoom": 0,
+  "center": [
+    496000,
+    6894000
+  ],
+  "extent": [
+    190000,
+    6100000,
+    950000,
+    7700000
+  ],
+  "groups": [
+    {
+      "name": "actix-one",
+      "title": "Actix One",
+      "expanded": false
+    },
+    {
+      "name": "atoll",
+      "title": "Atoll",
+      "expanded": false
+    },
+    {
+      "name": "igs-t",
+      "title": "IGS-T",
+      "expanded": false
+    },
+    {
+      "name": "kartsok",
+      "title": "Kartsök",
+      "expanded": false
+    },
+    {
+      "name": "nview",
+      "title": "NView",
+      "expanded": false
+    },
+    {
+      "name": "teknetw",
+      "title": "TekNetW",
+      "expanded": false
+    },
+    {
+      "name": "span",
+      "title": "SPAN",
+      "expanded": false
+    },
+    {
+      "name": "websystem",
+      "title": "Websystem",
+      "expanded": false
+    },
+    {
+      "name": "background",
+      "type": "radio",
+      "title": "Bakgrundskartor",
+      "expanded": true
+    }
+  ],
+  "layers": [
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "Byggnader (FK)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Byggnad_topo10",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetOverFinfo",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetOverHK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver2",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetOverDiv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver3",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetSkaC",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "MetriaFastighetSkaC",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "MetriaFastighetSkaD",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSkaD",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "Orto_farg_google",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_google",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "actix-one",
+      "title": "Orto_kombinerad_google",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_kombinerad_google",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "Byggnader (FK)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Byggnad_topo10",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "MetriaFastighetOverFinfo",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "MetriaFastighetOverHK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver2",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "MetriaFastighetOverDiv",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetOver3",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "metria:MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "MetriaFastighetSkaC",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "MetriaFastighetSkaC",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "metria:MetriaFastighetSkaD",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "MetriaFastighetSkaD",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "Hillshade_z3",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hillshade_z3",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "atoll",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Karta_teknet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Karta_teknet",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaFastighet40",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighet40",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaFastighetPlus",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetPlus",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaFastighetSkaD",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSkaD",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaFastighetSkarp",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSkarp",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "import": "fastighetsytor@mm-export",
+      "id": "fastighetsytor",
+      "group": "igs-t",
+      "title": "Fastighetsytor stor (FK)",
+      "visible": false
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Fastighetsytor Gränser (FK)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:FastighetsytorGranser",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Naturvård_yta (FK)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Naturvard_yta_FK",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "MetriaTatortPlus",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaTatortPlus",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Metria_vf_fast",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Metria_vf_fast",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Metria_vf_fast",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Metria_vf_fast",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Metria_vf_orto",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Metria_vf_orto",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "igs-t",
+      "title": "Ortokarta",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "Ortokarta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "kartsok",
+      "title": "Fastighetsytor WFS",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsytor_WFS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "kartsok",
+      "title": "MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "kartsok",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "MetriaFastighetSkaC",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "MetriaFastighetSkaC",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "MetriaFastighetSkaD",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSkaD",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "PBR_fornlamningar_bestammelser",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_fornlamningar_bestammelser",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "bestbet",
+            "label": "Bestämmelsebeteckning"
+          },
+          {
+            "name": "besttyp",
+            "label": "Bestämmelsetyp"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "PBR_planer",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_planer",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "planbet",
+            "label": "Planbeteckning",
+            "linkRef": "fsok_plan_link"
+          },
+          {
+            "id": "fsok_plan_link",
+            "name": "planbet",
+            "type": "url",
+            "template": "{{env.fsokPlanUrl}}{{planbet}}"
+          },
+          {
+            "name": "plantyp",
+            "label": "Plantyp"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "nview",
+      "title": "PBR_rattigheter",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:PBR_rattigheter",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": {
+        "properties": [
+          {
+            "name": "externid",
+            "label": "Beteckning",
+            "linkRef": "fsok-link"
+          },
+          {
+            "name": "detaljtyp",
+            "label": "Detaljtyp"
+          },
+          {
+            "id": "fsok-link",
+            "name": "objekt_id",
+            "type": "url",
+            "template": "{{env.fsokUrl}}{{objekt_id}}"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "ByggnadOffentlig_teknet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:ByggnadOffentlig_teknet",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Fastighetspunkter_FK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:registerenhet_punkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Fastighetsytor_teknet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsytor",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Fastighetsytor WFS",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsytor_WFS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "GSD Ortnamn Lnkn Ucase",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:GSD_ORTNAMN_LNKN_UCASE",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Hojdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hojdkurvor",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Karta_teknet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Karta_teknet",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "teknetw",
+      "title": "Symboler_teknet",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Symboler_teknet",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "EL_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:plan_begransningslinje",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "EO_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:bestammelse_linje",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "EP_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:bestammelse_idpunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "ES_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:bestammelse_punkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "ET_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:plan_bestammelse_text",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "EY_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:bestammelse_yta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Fastighetsytor (FK)",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsytor",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Fastighetsytor WFS",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Fastighetsytor_WFS",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "GranserKommun",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:GranserKommun",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "GranserLan",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:GranserLan",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "GS_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:kultur_lamning_punkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "GY_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:kultur_lamning_yta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Hojdkurvor",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Hojdkurvor",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "LS_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:fornlamning_punkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "LY_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:fornlamning_yta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "queryable": true,
+      "infoTemplate": "default"
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "MB_TRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:Bebyggelseytor_TRK",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Orto_farg_kombinerad",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:orto_farg_kombinerad",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "PP_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:plan_idpunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "PY_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:plan_yta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "RO_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:rattighet_ga_linje",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "RP_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:rattighet_ga_idpunkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "RS_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:rattighet_ga_punkt",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "RY_DRK",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:rattighet_ga_yta",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Grävbarhetsklassning",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "vt:Smahallar",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "span",
+      "title": "Småhällar",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "vt:Smahallar",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "type": "tile",
+      "group": "websystem",
+      "title": "MetriaFastighetSka1",
+      "source": {
+        "type": "tilewms",
+        "params": {
+          "LAYERS": "metria:MetriaFastighetSka1",
+          "FORMAT": "image/png",
+          "TRANSPARENT": true
+        },
+        "discardLowResolutionTiles": true
+      },
+      "visible": false,
+      "infoTemplate": null
+    },
+    {
+      "import": "metria:MetriaFastighetGra@mm-export",
+      "group": "background",
+      "title": "MetriaFastighetGrå",
+      "visible": true
+    },
+    {
+      "import": "metria:orto_farg_kombinerad@mm-export",
+      "group": "background",
+      "title": "Ortofoto"
+    }
+  ],
+  "styles": {
+  },
+  "proj4Defs": [
+    {
+      "code": "EPSG:3006",
+      "alias": "urn:ogc:def:crs:EPSG:3006",
+      "projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+      "projectionExtent": [
+        190000,
+        6100000,
+        950000,
+        7700000
+      ]
+    }
+  ],
+  "resolutions": [
+    1146.8799999999999,
+    573.4399999999999,
+    286.71999999999997,
+    143.35999999999999,
+    71.67999999999999,
+    35.839999999999996,
+    17.919999999999998,
+    8.959999999999999,
+    4.4799999999999995,
+    2.2399999999999998,
+    1.1199999999999999,
+    0.5599999999999999,
+    0.27999999999999997,
+    0.13999999999999999,
+    0.06999999999999999
+  ],
+  "tileSize": [
+    512,
+    512
+  ],
+  "infoTemplates": {
+    "default": {
+      "properties": [
+        {
+          "name": "DETALJTYP",
+          "label": "detaljtyp"
+        },
+        {
+          "name": "FASTIGHET",
+          "label": "Fastighet"
+        },
+        {
+          "name": "OBJEKT_ID",
+          "label": "Objekt-ID"
+        },
+        {
+          "name": "FNR_FDS",
+          "label": "FNR_FDS"
+        },
+        {
+          "name": "KOMMUNNAMN",
+          "label": "Kommun"
+        }
+      ]
+    }
+  },
+  "projectionCode": "EPSG:3006",
+  "backgroundColor": "#ffffff",
+  "geolocateOnStartup": false
+}

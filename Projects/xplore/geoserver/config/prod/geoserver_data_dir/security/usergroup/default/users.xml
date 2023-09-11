@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<userRegistry xmlns="http://www.geoserver.org/security/users" version="1.0">
+<users>
+<user enabled="true" name="admin" password="crypt1:Pm72ys2mVBRh5bKW17PFVA=="/>
+<user enabled="true" name="aneby_admin" password="crypt1:wxg8faLNVR9NtvF8IVUhNGXrJgU4ePCbOwANnJ4UVOE="/>
+<user enabled="true" name="aneby_read" password="crypt1:q5nHCcA6whEl3VKGBwYfNfzqJBQRDq+Z4XNFKLig9o0="/>
+<user enabled="true" name="aneby_write" password="crypt1:r//93SFdJrRSRbhSGT/ERLEFYy7kuV9jk5H/IW6mRiU="/>
+<user enabled="true" name="norra_skogsagarna" password="crypt1:rZErwwDY8+yNAcb/42cuew=="/>
+<user enabled="true" name="splan_norra" password="digest1:fW2k2MXkArPXM9XVTjgd9nWVEtTV42i+O0vvaM5eASLOFSoNUlkG1P+CFB/TkBCI"/>
+</users>
+<groups/>
+</userRegistry>

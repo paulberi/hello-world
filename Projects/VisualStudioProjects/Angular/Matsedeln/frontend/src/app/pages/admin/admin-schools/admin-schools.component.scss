@@ -1,0 +1,41 @@
+.add-content {
+  justify-content: center;
+  display: flex;
+  flex-direction: columns;
+}
+
+.manage-menu-button {
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+    transform: translateY(4px);
+  }
+  cursor: pointer;
+  padding: 20px;
+  margin: 30px;
+}
+
+.menuName {
+  max-width: 200px;
+  color: white;
+  padding: 20px;
+  margin: 30px;
+}
+
+.navbar-item {
+  margin-top: 3px;
+  cursor: pointer;
+  .navbar-link {
+      color: hsl(0, 0%, 100%);
+      background: transparent;
+      &:hover {
+          color: #1775b8;
+      }
+  }
+  max-width: 250px;
+}
+
+.navbar-dropdown {
+  height: 250px;
+}

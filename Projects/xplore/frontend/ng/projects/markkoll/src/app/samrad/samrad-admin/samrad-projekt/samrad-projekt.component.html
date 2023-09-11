@@ -1,0 +1,62 @@
+<div class="col-12">
+  <div class="row">
+    <mk-expansion-panel
+      icon="info"
+      [title]="'mk.samrad.grundinformation' | transloco"
+      class="col-12"
+      [expanded]="true"
+    >
+      <mk-samrad-edit-projekt
+        [samradProjekt]="samradProjekt"
+        [markkollProjekt]="markkollProjekt"
+        [kundId]="kundId"
+        (updateProjekt)="onUpdateProjekt($event)"
+        (hasUnsavedChanges)="setHasUnsavedChanges($event)"
+      ></mk-samrad-edit-projekt>
+    </mk-expansion-panel>
+
+    <div class="box">
+      <xp-spinner-button
+        *ngIf="status === 'UTKAST' || status === undefined"
+        class="button"
+        color="primary"
+        [isDisabled]="!canSave"
+        (spinnerButtonClick)="onSubmit()"
+      >
+        {{ "mk.samrad.spara" | transloco }}
+      </xp-spinner-button>
+
+      <xp-spinner-button
+        *ngIf="status === 'UTKAST' || status === 'PUBLICERAD' || status === 'ARKIVERAD'"
+        class="button"
+        color="accent"
+        [isDisabled]="isPubliceraButtonDisabled()"
+        (spinnerButtonClick)="onPublicera()"
+      >
+        {{ "mk.samrad.publicera" | transloco }}
+      </xp-spinner-button>
+
+      <xp-spinner-button
+        *ngIf="status === 'UTKAST'"
+        class="button"
+        color="error"
+        type="flat"
+        [isDisabled]="isDisabled"
+        (spinnerButtonClick)="onDelete()"
+      >
+        {{ "mk.samrad.taBort" | transloco }}
+      </xp-spinner-button>
+
+      <xp-spinner-button
+        *ngIf="status === 'PUBLICERAD' || status === 'ARKIVERAD'"
+        class="button"
+        color="error"
+        type="flat"
+        [isDisabled]="status === 'ARKIVERAD'"
+        (spinnerButtonClick)="onArkivera()"
+      >
+        {{ "mk.samrad.arkivera" | transloco }}
+      </xp-spinner-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.1" class="java.beans.XMLDecoder">
+ <object class="XMLtest.Student">
+  <void property="courses">
+   <string>biology</string>
+  </void>
+  <void property="name">
+   <string>hello</string>
+  </void>
+ </object>
+</java>

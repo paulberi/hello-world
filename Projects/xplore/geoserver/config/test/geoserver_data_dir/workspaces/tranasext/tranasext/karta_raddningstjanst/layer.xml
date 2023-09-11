@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_raddningstjanst</name>
+  <id>LayerInfoImpl-166123e5:336122e7581:-3936</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-5ee7de28:fccf1ecaaa5:-d2dc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

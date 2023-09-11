@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" side="LEFT" stylesheets="@../style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DashboardController">
+	<tabs>
+		<Tab fx:id="actorTab">
+			<fx:include fx:id="actor" source="Actor.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Actor">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="6.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="addressTab">
+			<fx:include fx:id="address" source="Address.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Address">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="7.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="cityTab">
+			<fx:include fx:id="city" source="City.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="City">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets bottom="15.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="customerTab">
+			<fx:include fx:id="customer" source="Customer.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Customer">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="30.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="filmTab">
+			<fx:include fx:id="film" source="Film.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Film">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets bottom="10.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="filmActorTab">
+			<fx:include fx:id="filmActor" source="FilmActor.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Film Actor">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="30.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="filmCatTab">
+			<fx:include fx:id="filmCategory" source="FilmCategory.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label prefHeight="41.0" prefWidth="95.0" text="Film Category">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="55.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="inventoryTab">
+			<fx:include fx:id="inventory" source="Inventory.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Inventory">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="25.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="paymentTab">
+			<fx:include fx:id="payment" source="Payment.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Payment">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="20.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="rentalTab">
+			<fx:include fx:id="rental" source="Rental.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Rental">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets top="6.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="staffTab">
+			<fx:include fx:id="staff" source="Staff.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Staff">
+							<font>
+								<Font size="15.0" />
+							</font>
+							<padding>
+								<Insets bottom="15.0" />
+							</padding>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+
+		<Tab fx:id="storeTab">
+			<fx:include fx:id="store" source="Store.fxml" />
+			<graphic>
+				<Group>
+					<children>
+						<Label text="Store">
+							<font>
+								<Font size="15.0" />
+							</font>
+						</Label>
+					</children>
+				</Group>
+			</graphic>
+		</Tab>
+	</tabs>
+</TabPane>

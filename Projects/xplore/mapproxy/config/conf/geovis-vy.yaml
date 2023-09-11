@@ -1,0 +1,152 @@
+base: ../mapproxy.yaml
+
+layers:
+- name: GotaKanalbolagKombo
+  title: Göta Kanalbolag bakgrundskarta kombo
+  sources: [gotakanalbolag_kombo]
+- name: GotaKanalbolagFastigheter
+  title: Göta Kanalbolag fastigheter
+  sources: ['gotakanalbolag_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+- name: GotaKanalbolagMittlinjeredovisadesamfalligheter_FK
+  title: Göta Kanalbolag Mittlinjeredovisade samfalligheter (FK)
+  sources: ['gotakanalbolag_mm:Mittlinjeredovisadesamfalligheter_FK']
+
+- name: VBEnergiKombo
+  title: VB Energi bakgrundskarta kombo
+  sources: [vbenergi_kombo]
+- name: VBEnergiFastigheter
+  title: VB Energi fastigheter
+  sources: ['vbenergi_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+
+- name: VarmdoSotningsDistriktKombo
+  title: Värmdö Sotningsdistrikt bakgrundskarta kombo
+  sources: [varmdosotningsdistrikt_kombo]
+- name: VarmdoSotningsDistriktFastigheter
+  title: Värmdö Sotningsdistrikt fastigheter
+  sources: ['varmdosotningsdistrikt_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+
+- name: SollentunahemKombo
+  title: Sollentunahem bakgrundskarta kombo
+  sources: [sollentunahem_kombo]
+- name: SollentunahemFastighet
+  title: Sollentunahem fastighet
+  sources: ['sollentunahem_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+- name: SollentunahemPB
+  title: Sollentunahem planer och bestämmelser
+  sources: ['sollentunahem_mm:PBR_planer']
+- name: SollentunahemR
+  title: Sollentunahem rättigheter
+  sources: ['sollentunahem_mm:PBR_rattigheter']
+
+- name: SkargardsstiftelsenKombo
+  title: Skärgårdsstiftelsen bakgrundskarta kombo
+  sources: [skargardsstiftelsen_kombo]
+- name: SkargardsstiftelsenOrto
+  title: Skärrgardsstiftelsen_orto_cache
+  sources: [skargardsstiftelsen_orto_cache]
+- name: SkargardsstiftelsenFastighet
+  title: Skärgårdsstiftelsen fastighet
+  sources: ['skargardsstiftelsen_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+- name: SkargardsstiftelsenP
+  title: Skärgårdsstiftelsen planer och bestämmelser
+  sources: ['skargardsstiftelsen_mm:PBR_planer']
+- name: SkargardsstiftelsenB
+  title: Skärgårdsstiftelsen planer och bestämmelser
+  sources: ['skargardsstiftelsen_mm:PBR_fornlamningar_bestammelser']
+- name: SkargardsstiftelsenR
+  title: Skärgårdsstiftelsen rättigheter
+  sources: ['skargardsstiftelsen_mm:PBR_rattigheter']
+
+- name: JamtkraftKombo
+  title: Jämtkraft bakgrundskarta kombo
+  sources: [jamtkraft_kombo]
+- name: JamtkraftFastigheter
+  title: Jämtkraft fastigheter
+  sources: ['jamtkraft_mm:metria:Fastighetsytor40_FK,metria:Fastighetsidpunkter_FK,metria:Fastighetstextstad_FK,metria:Administrativagranser40_FK']
+- name: JamtkraftHansyn
+  title: Jämtkraft Hänsyn
+  sources: ['jamtkraft_mm:Hansyn']
+
+caches:
+  gotakanalbolag_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'gotakanalbolag_mm:MetriaFastighetPlus']
+    format: image/png
+
+  varmdosotningsdistrikt_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'varmdosotningsdistrikt_mm:MetriaFastighetPlus']
+    format: image/png
+
+  vbenergi_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'vbenergi_mm:MetriaFastighetPlus']
+    format: image/png
+
+  sollentunahem_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'sollentunahem_mm:MetriaFastighetPlus']
+    format: image/png
+
+  skargardsstiftelsen_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'skargardsstiftelsen_mm:MetriaFastighetPlus']
+    format: image/png
+  skargardsstiftelsen_orto_cache:
+    grids: [sweref99tm]
+    sources: ['skargardsstiftelsen_mm:orto_farg_25']
+    format: image/png
+
+  jamtkraft_kombo:
+    grids: [sweref99tm]
+    sources: [under, 'jamtkraft_mm:MetriaFastighetPlus']
+    format: image/png
+
+parts:
+  mm_source: &default_mm_source
+    type: wms
+    req:
+      url: http://xplore:Endastutforskning2019@testmaps.metria.se/geoserver/wms?
+      transparent: true
+    wms_opts:
+      featureinfo: true
+  coverage: &default_coverage
+    clip: true
+    srs: 'EPSG:3006'
+
+sources:
+  gotakanalbolag_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/gotakanalbolag.geojson
+
+  varmdosotningsdistrikt_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/varmdosotningsdistrikt.geojson
+
+  vbenergi_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/vb_energi.geojson
+
+  sollentunahem_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/sollentunahem.geojson
+
+  skargardsstiftelsen_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/skargardsstiftelsen.geojson
+
+  jamtkraft_mm:
+    <<: *default_mm_source
+    coverage:
+      <<: *default_coverage
+      datasource: ../coverages/jamtkraft.geojson

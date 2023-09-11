@@ -1,0 +1,88 @@
+.column-titles {
+  display: flex;
+  padding: 0 32px 8px 24px;
+
+  th {
+    display: flex;
+    flex: 1 1 0px;
+    margin-right: 0 16px;
+  }
+}
+
+.receipt {
+  text-decoration: underline;
+}
+
+.mat-expansion-panel-header {
+  height: fit-content;
+  min-height: 48px;
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  flex: 1 1 0px;
+  align-self: center;
+}
+
+.overflow-hidden {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-line {
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.customer-order-header {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0px;
+}
+
+.display-attributes {
+  width: 30%;
+}
+
+.order-line-state {
+  
+  .mat-button {
+    margin-left: 12px;
+  }
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+.shipping-address {
+  margin: 0 0 15px 0;
+}
+
+.no-margin {
+  margin: 0 0 10px 0;
+}
+
+.chips {
+  margin-left: 10px;
+}
+
+.chip-accent {
+  background-color: var(--accent-variant);
+  color: var(--on-accent-variant);
+}
+
+.chip-primary {
+  background-color: var(--primary-variant);
+  color: var(--on-primary-variant);
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}

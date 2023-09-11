@@ -1,0 +1,20 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-ffefddf:173e162d784:4976</id>
+  <name>s_3</name>
+  <description>Hämtar lager från testkund_gamaps_ledare</description>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-ffefddf:173e162d784:4790</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <capabilitiesURL>http://gamaps.vic-metria.nu/arcgis/services/Kob/kobyta_pktest/MapServer/WMSServer?</capabilitiesURL>
+  <user>vic-metria\kobwms</user>
+  <password>crypt1:se5FjnWP2ie51dldUIPMDe7ykYZP8ojD</password>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>

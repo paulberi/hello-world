@@ -1,0 +1,39 @@
+.mat-form-field {
+  width: 100%;
+}
+
+.slug-container {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.mat-icon {
+  cursor: pointer;
+}
+
+
+.editor {
+  position: relative;
+  border: 1px solid var(--on-primary);
+  border-radius: 2px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.files {
+  align-items: center;
+  border-bottom: 1px var(--accent-variant) solid;
+
+  span {
+      margin-left: 0.2em;
+      padding: 0.5em;
+      cursor: pointer;
+  }
+}
+
+.image-menu {
+  display: flex;
+  align-items: center;
+}

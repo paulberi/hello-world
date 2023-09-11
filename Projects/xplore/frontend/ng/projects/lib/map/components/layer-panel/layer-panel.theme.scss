@@ -1,0 +1,31 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '../../../../../node_modules/@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin layer-panel-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  // Use mat-color to extract individual colors from a palette as necessary.
+  .layer-panel .tools, .layer-panel .hide-icon {
+    color: mat-color($foreground, secondary-text)
+  }
+
+  .layer-panel .tools .active, .layer-panel .hide-icon.active {
+    color: mat-color($foreground, text)
+  }
+
+  .layer-panel-description {
+    color: mat-color($foreground, text);
+    background-color: mat-color($background, dialog);
+  }
+
+  .layer-panel-description h2 {
+    color: mat-color($foreground, secondary-text);
+  }
+
+  .layer-panel-description .attribution {
+    color: mat-color($foreground, secondary-text);
+  }
+}

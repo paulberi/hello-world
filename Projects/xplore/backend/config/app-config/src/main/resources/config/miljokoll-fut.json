@@ -1,0 +1,119 @@
+{
+	"app": {
+		"configName": "Region Stockholm FUT",
+		"mapConfigId": "Stockholm",
+		"backgroundLayerUrl": "https://openmap.stockholm.se/bios/wms/app/baggis/web/WMS_STHLM_STOCKHOLMSKARTA_GRA_FORENKLAD_NT",
+		"projectionDescription": "SWEREF 99 18 00 i plan \nRH 2000 i höjd",
+		"layerParameter": {
+			"TRANSPARENT": false,
+			"TILED": true,
+			"VERSION": "1.1.1"
+		},
+		"startPageHeaderText": "Region Stockholm",
+		"startPageFooterText": "Har du frågor, funderingar eller stöter på problem, vänd dig till FUT:s interna support via e-post: miljokoll.fut@regionstockholm.se ",
+		"reportEmailTemplate": "Hej, \nDu har fått detta mail från Miljökoll då du står som mottagare för utskick av mätdata. \n\nBifogat finner du en sammanställning av efterfrågad mätdata. \n\nOm du inte vill ha dessa utskick eller om du har andra frågor vänligen kontakta oss på miljokoll.fut@regionstockholm.se . \n\nVänliga hälsningar \n\nFörvaltningen för utbyggd tunnelbana, Region Stockholm.",
+		"reportLogoUrl": "./assets/sll_logo.png",
+		"reportHeaderText": "Förvaltning för utbyggd tunnelbana\n",
+		"reportFooterTextLeft": "Region Stockholm \n\nFörvaltning för utbyggd tunnelbana \nBox 22550 \n104 22 Stockholm",
+		"reportFooterTextCenter": "Telefon: 08-737 25 00 \nE-post: nyatunnelbanan@sll.se \nwww.nyatunnelbanan.sll.se",
+		"reportFooterTextRight": "Säte: Stockholm \nOrg.nr: 232100-0016 \n",
+		"reportFooterTextBottom:": "Besök oss: Norra stationsgatan 69 Kommunikationer: T-bana Sankt Eriksplan, Buss 3, 70, och 77 \n",
+		"supportEmail":"miljokoll.fut@regionstockholm.se ",
+		"supportName": "Förvaltningen för utbyggd tunnelbana, Region Stockholm.",
+		"documents": [
+			{
+				"name": "Manual - Mätrapportör",
+				"url": "/files/manual_metria_miljokoll_matrapportor.pdf"
+			},
+			{
+				"name": "Manual - Tillståndshandläggare",
+				"url": "/files/manual_metria_miljokoll_tillstandshandlaggare.pdf"
+			},
+			{
+				"name": "Mall - grunduppgifter grundvatten",
+				"url": "/files/Mall grunduppgifter grundvatten.xlsx"
+			},
+			{
+				"name": "Mall - grunduppgifter infiltration",
+				"url": "/files/Mall grunduppgifter infiltration.xlsx"
+			},
+			{
+				"name": "Mall - grunduppgifter rörelse",
+				"url": "/files/Mall grunduppgifter rörelse.xlsx"
+			},
+			{
+				"name": "Mall - grunduppgifter tunnelvatten",
+				"url": "/files/Mall grunduppgifter tunnelvatten.xlsx"
+			},
+			{
+				"name": "Mall - Import",
+				"url": "/files/Mall Import.csv"
+			}
+		]
+	},
+	"zoom": 4,
+	"center": [
+		155625,
+		6581875
+	],
+	"extent": [
+		135000.0,
+		6565000.0,
+		165000.0,
+		6595000.0
+	],
+	"groups": [
+		{
+			"name": "background",
+			"type": "radio",
+			"title": "Bakgrundskartor",
+			"expanded": true
+		}
+	],
+	"layers": [],
+	"styles": {},
+	"tileSize": [
+		256,
+		256
+	],
+	"proj4Defs": [
+		{
+			"code": "EPSG:5850",
+			"projection": "+proj=tmerc +lat_0=0 +lon_0=18 +k=1 +x_0=150000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +no_defs",
+			"projectionExtent": [
+				96603.44,
+				6505161.9,
+				237927.37,
+				6733143.0
+			]
+		},
+		{
+			"code": "EPSG:3006",
+			"alias": "urn:ogc:def:crs:EPSG:3006",
+			"projection": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +axis=neu",
+			"projectionExtent": [
+				181896.33,
+				6101648.07,
+				864416.0,
+				7689478.31
+			]
+		}
+	],
+	"resolutions": [
+		117.1875,
+		58.59375,
+		29.296875,
+		14.6484375,
+		7.32421875,
+		3.662109375,
+		1.8310546875,
+		0.91552734375,
+		0.457763671875,
+		0.2288818359375,
+		0.11444091796875
+	],
+	"infoTemplates": {},
+	"projectionCode": "EPSG:5850",
+	"backgroundColor": "#ffffff",
+	"geolocateOnStartup": false
+}

@@ -1,0 +1,15 @@
+<layer>
+  <name>1</name>
+  <id>LayerInfoImpl-ffefddf:173e162d784:3fad</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffb</id>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl-ffefddf:173e162d784:3fac</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

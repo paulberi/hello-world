@@ -1,0 +1,39 @@
+#tillbaka{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.kundlista{
+  padding:0 40px;
+}
+
+.kundinfo{
+  padding-left: 15px;
+}
+
+.top{
+  margin: 1.5em 0 2em 0;
+}
+
+.create-more{
+  padding: 15px 0;
+}
+
+.wrapper{
+  padding: 2rem calc(100% / 24);
+}
+
+h2{
+  margin: 0;
+  font-size: 18px;
+}
+
+.imgcontainer{
+  width: 100%;
+  height: 200px;
+  background-image: url(../../assets/images/default_header.jpg);
+}
+
+a{
+  color: var(--primary);
+}

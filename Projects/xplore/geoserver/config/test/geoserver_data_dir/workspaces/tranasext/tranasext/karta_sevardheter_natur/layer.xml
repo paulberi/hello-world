@@ -1,0 +1,15 @@
+<layer>
+  <name>karta_sevardheter_natur</name>
+  <id>LayerInfoImpl-bd1404f8:3f24a120ffb:-2419</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-408bcc44:1672ba1c508:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-914ec077:05f4311c7c2:-335f</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProsonaRealestateExchangeService.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProsonaPartnerSelection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaPartnerSelection" nillable="true" type="tns:ProsonaPartnerSelection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProsonaPartnerSelection" nillable="true" type="tns:ArrayOfProsonaPartnerSelection" />
+  <xs:complexType name="ProsonaPartnerSelection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RealestateSelection" nillable="true" type="tns:ArrayOfProsonaRealestate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaPartnerSelection" nillable="true" type="tns:ProsonaPartnerSelection" />
+  <xs:complexType name="ArrayOfProsonaRealestate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestate" nillable="true" type="tns:ProsonaRealestate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProsonaRealestate" nillable="true" type="tns:ArrayOfProsonaRealestate" />
+  <xs:complexType name="ProsonaRealestate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adresser" nillable="true" type="tns:ArrayOfProsonaRealestateAddress" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enhet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fnr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KomKod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kommun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lagfart" nillable="true" type="tns:ArrayOfProsonaRealestateOwner" />
+      <xs:element minOccurs="0" name="LanKod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LansNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tkn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trakt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Typ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaRealestate" nillable="true" type="tns:ProsonaRealestate" />
+  <xs:complexType name="ArrayOfProsonaRealestateAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestateAddress" nillable="true" type="tns:ProsonaRealestateAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProsonaRealestateAddress" nillable="true" type="tns:ArrayOfProsonaRealestateAddress" />
+  <xs:complexType name="ProsonaRealestateAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdrOmrade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdrPlats" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdrplTyp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GardsNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KomKod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanKod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PopNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostNr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOrt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PunktTyp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XKoord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YKoord" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaRealestateAddress" nillable="true" type="tns:ProsonaRealestateAddress" />
+  <xs:complexType name="ArrayOfProsonaRealestateOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestateOwner" nillable="true" type="tns:ProsonaRealestateOwner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProsonaRealestateOwner" nillable="true" type="tns:ArrayOfProsonaRealestateOwner" />
+  <xs:complexType name="ProsonaRealestateOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adresser" nillable="true" type="tns:ArrayOfProsonaRealestatePersonAddress" />
+      <xs:element minOccurs="0" name="EfterNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ForNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsOrganisation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MellanNamn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonOrgNummer" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaRealestateOwner" nillable="true" type="tns:ProsonaRealestateOwner" />
+  <xs:complexType name="ArrayOfProsonaRealestatePersonAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProsonaRealestatePersonAddress" nillable="true" type="tns:ProsonaRealestatePersonAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProsonaRealestatePersonAddress" nillable="true" type="tns:ArrayOfProsonaRealestatePersonAddress" />
+  <xs:complexType name="ProsonaRealestatePersonAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Land" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Namn_Co" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostNummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostOrt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Typ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UtdelningsAdr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UtdelningsAdr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UtdelningsAdr3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaRealestatePersonAddress" nillable="true" type="tns:ProsonaRealestatePersonAddress" />
+  <xs:complexType name="ProsonaFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExceptionMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProsonaFault" nillable="true" type="tns:ProsonaFault" />
+</xs:schema>

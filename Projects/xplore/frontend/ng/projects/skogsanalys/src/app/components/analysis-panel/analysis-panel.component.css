@@ -1,0 +1,41 @@
+h3 {
+  margin-bottom: 0;
+  float: left;
+}
+
+.hidden {
+  display: none;
+}
+
+.group-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.group-title mat-icon {
+  position: relative;
+  top: 5px;
+}
+
+.report-button {
+  clear: both;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.group-list {
+  clear: left;
+}
+
+.group-contents {
+  margin-left: 10px;
+}
+
+.group-title mat-spinner {
+  display: inline-block;
+}
+
+.border-btn {
+  border: 2px solid;
+}

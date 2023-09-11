@@ -1,0 +1,12 @@
+<xp-layout-ui
+  [loggedInUserInfo]="loggedInUserInfo"
+  appName="{{'sr.common.appName' | transloco}}"
+  [isFooterVisible]="true"
+  [isHelpVisible]="true"
+  [menuItems]="menuItems"
+  (logoutClick)="logoutClick()"
+  (helpClick)="helpClick($event)"
+  (pageChange)="changePage($event)"
+>
+<router-outlet></router-outlet>
+</xp-layout-ui>

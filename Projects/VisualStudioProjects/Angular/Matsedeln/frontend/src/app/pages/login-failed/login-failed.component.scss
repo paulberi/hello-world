@@ -1,0 +1,47 @@
+.centered-content {
+  height: 100%;
+  vertical-align: center;
+}
+
+.login-content {
+  background: #063249;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  max-width: 360px;
+  min-width: 360px;
+  max-height: 160px;
+  min-height: 160px;
+  border-radius: 8px;
+  margin: 3px;
+  padding: 20px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button {
+  border: 0px;
+  background: transparent;
+  color: white;
+  &:active {
+    transform: translateY(4px);
+  }
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-left: 160px;
+}
+
+.logout-label {
+  color: white;
+  margin-left: 20px;
+  margin-top: 30px;
+}

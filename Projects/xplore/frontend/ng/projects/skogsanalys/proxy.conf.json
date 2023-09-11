@@ -1,0 +1,22 @@
+{
+  "/configAuthIssuer": {
+    "target": "https://skogsanalys-utv.metria.se",
+    "changeOrigin": true
+  },
+  "/skogsanalys": {
+    "target": "http://localhost:9016",
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/skogsanalys": "/api"
+    },
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://skogsanalys-utv.metria.se",
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}

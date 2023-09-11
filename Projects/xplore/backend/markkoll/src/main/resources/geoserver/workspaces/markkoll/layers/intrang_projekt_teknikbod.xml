@@ -1,0 +1,17 @@
+<layer>
+  <name>intrang_projekt_teknikbod</name>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <name>markkoll:intrang_teknikbod</name>
+  </defaultStyle>
+  <resource class="featureType">
+    <name>markkoll:intrang_projekt_teknikbod</name>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2022-03-10 11:01:17.56 UTC</dateCreated>
+</layer>

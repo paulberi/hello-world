@@ -1,0 +1,21 @@
+<div class="choices-content">
+  <form class="add-content">
+
+    <div class="test">
+      <input class="input-field" type="text" placeholder="Ange matsedelns namn: " #menuName>
+
+      <div class="dates">
+        <label class="date-label" for="start">Startdatum: </label>
+        <input class="date-input" type="date" id="start" name="start-date" [value]="currentDate | date:'yyyy-MM-dd'" min="2021-01-01" max="2030-12-31" #startDate>
+
+        <label class="date-label" for="start">Slutdatum: </label>
+        <input class="date-input" type="date" id="end" name="end-date" [value]="currentDate | date:'yyyy-MM-dd'" min="2021-01-01" max="2030-12-31" #endDate>
+      </div>
+    </div>
+  </form>
+  <div class="button-test">
+    <button class="manage-menu-button" (click)="createMenu(menuName.value, startDate.value, endDate.value)">
+      Skapa matsedel
+    </button>
+  </div>
+</div>

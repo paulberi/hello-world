@@ -1,0 +1,51 @@
+.chip {
+  padding-left: 6px;
+  background-color:rgba($color: white, $alpha: 0.0);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.chip-color-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.chip-color-accent {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip-color-warn {
+  color: var(--error);
+  border-color: var(--error);
+}
+
+.chip-text {
+  font-size: 18px;
+}
+
+.chip-icon {
+  height: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mat-standard-chip:hover::after {
+  opacity: 0;
+}
+
+.mat-standard-chip:focus::after {
+  opacity: 0;
+}
+
+mat-expansion-panel {
+  background-color: var(--background) !important;
+
+  mat-expansion-panel-header:hover span {
+    color: inherit !important;
+  }
+
+  mat-expansion-panel-header:focus span {
+    color: inherit !important;
+  }
+}

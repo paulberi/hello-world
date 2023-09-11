@@ -1,0 +1,36 @@
+.chip {
+  padding-left: 6px;
+}
+
+.chip-color-primary {
+  color: var(--primary);
+  background-color: #dfdfdf;
+}
+
+.chip-color-accent {
+  color: var(--accent);
+  background-color: var(--accent-variant);
+}
+
+.chip-color-warn {
+  color: var(--error);
+  background-color: var(--error-variant);
+}
+
+.chip-text {
+  font-size: 18px;
+}
+
+.chip-icon {
+  height: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mat-standard-chip:hover::after {
+  opacity: 0;
+}
+
+.mat-standard-chip:focus::after {
+  opacity: 0;
+}

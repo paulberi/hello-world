@@ -1,0 +1,67 @@
+@import '~@angular/material/theming';
+@import "./xp-material-design-color.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+@import "../../layout/layout.shared.scss";
+
+:root{
+
+    // Basfärger, används endast internt
+    --gray: #707070;
+    --gray-dark: #333333;
+    --gray-light: #f8f8f8;
+    --teal: #007565;
+    --teal-light: #C7DEDB;
+    --orange: #BB4E00;
+    --orange-light: #ecd7cb;
+    --purple: #846272;
+    --purple-light: #BDACB4;
+
+    // CSS-variabler att använda i applikationen
+    --primary: var(--gray-dark);
+    --on-primary: var(--gray-light);
+    --primary-variant: var(--gray);
+    --on-primary-variant: var(--gray-light);
+    --accent: var(--teal);
+    --on-accent: var(--gray-light);
+    --accent-variant: var(--teal-light);
+    --on-accent-variant: var(--gray-dark);
+    --error: var(--orange);
+    --on-error: var(--gray-light);
+    --error-variant: var(--orange-light);
+    --on-error-variant: var(--gray-dark);
+    --background: var(--gray-light);
+    --on-background: var(--gray-dark);
+    --surface: var(--gray-light);
+    --on-surface: var(--gray-dark);
+
+    // Basfärger rgb
+    --gray-dark-rgb: 51, 51, 51;
+
+    // CSS-variabler med alpha
+    --primary-with-alpha: rgba(var(--gray-dark-rgb), 0.7)
+}
+
+$custom-typography: mat-typography-config(
+    $font-family: '"Nunito Sans", sans-serif;',
+    $headline: mat-typography-level(24px, 30px, $font-weight: 300),
+    $title: mat-typography-level(18px, 23px, $font-weight: 300),
+    $body-1: mat-typography-level(16px, 20px, $font-weight: 300));
+@include angular-material-typography($custom-typography);
+@include mat-form-field-typography($custom-typography);
+@include mat-input-typography($custom-typography);
+@include mat-core($custom-typography);
+
+$xp-light-primary: mat-palette($light-theme-primary);
+$xp-light-accent: mat-palette($light-theme-accent);
+
+// The warn palette is optional (defaults to red).
+$xp-light-warn: mat-palette($xp-warn);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$xp-light-theme: mat-light-theme($xp-light-primary, $xp-light-accent, $xp-light-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($xp-light-theme);

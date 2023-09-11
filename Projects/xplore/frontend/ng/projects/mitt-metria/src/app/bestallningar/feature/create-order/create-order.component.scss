@@ -1,0 +1,34 @@
+h2 {
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.forms {
+  width: 60%;
+}
+
+.cart {
+  width: 40%;
+}
+
+.mat-divider {
+  margin: 40px;
+}
+
+.actions {
+  float: right;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: auto auto;
+}
+
+.order-btns {
+  margin-top: 20px;
+  float: right;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: auto auto;
+}

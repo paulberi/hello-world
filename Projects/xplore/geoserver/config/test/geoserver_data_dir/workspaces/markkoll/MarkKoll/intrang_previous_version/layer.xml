@@ -1,0 +1,19 @@
+<layer>
+  <name>intrang_previous_version</name>
+  <id>LayerInfoImpl--1033da80:17955965d64:23b5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--1033da80:17955965d64:23ba</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1033da80:17955965d64:23b4</id>
+  </resource>
+  <queryable>true</queryable>
+  <opaque>false</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-06 13:13:24.923 UTC</dateCreated>
+  <dateModified>2021-05-18 10:59:00.583 UTC</dateModified>
+</layer>

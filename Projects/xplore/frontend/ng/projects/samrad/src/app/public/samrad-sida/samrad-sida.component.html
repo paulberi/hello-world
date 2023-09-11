@@ -1,0 +1,25 @@
+<div class="col-12 row">
+  <!-- Vänster Sida -->
+  <div class="col-6 samrad-content">
+    <div class="row justify-center">
+      <div class="col-11">
+        <article class="col-12">
+          <button (click)="navigateBack()" mat-button class="navigation-btn">
+            <span class="material-icons">chevron_left</span>
+            {{ "sr.knappar.tillbaka" | transloco }}
+          </button>
+          <h1>{{ samrad?.rubrik }}</h1>
+          <p [innerHTML]="samrad?.brodtext"></p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- Höger Sida -->
+  <div class="col-6 map-container">
+    <div class="row justify-center">
+      <div class="col-11 map-content">
+        <sr-projektkarta *ngIf="projektId" [projektId]="projektId"></sr-projektkarta>
+      </div>
+    </div>
+  </div>
+</div>

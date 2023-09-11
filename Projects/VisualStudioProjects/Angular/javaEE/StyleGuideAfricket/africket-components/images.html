@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="form.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Images</h1>
+    <h3>Uploading images</h3>
+
+    <p>This shall be the only image upploader for the website applicable when uploading ad pictures and profile pictures and other media</p>
+    <div>
+        <p>Configure to allow only jpg, png and jpeg files with a max file size of 5mb</p>
+        <div id="drop-area">
+            <form class="my-form">
+                <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+                <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Select some files</label>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
